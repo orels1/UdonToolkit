@@ -28,7 +28,12 @@ namespace UdonToolkit {
 
     public static void RenderSectionHeader(string name) {
       GUI.backgroundColor = new Color(0.5f , 0.5f, 0.5f);
+      var textColor = EditorGUIUtility.isProSkin ? new Color(0.6f, 0.6f, 0.6f) : new Color(0.2f, 0.2f, 0.2f);
       EditorGUILayout.LabelField(new GUIContent(name), new GUIStyle(EditorStyles.helpBox) {
+        normal = new GUIStyleState() {
+          textColor = textColor,
+          background = EditorStyles.helpBox.normal.background
+        },
         stretchWidth = true,
       });
       GUI.backgroundColor = Color.white;
@@ -45,12 +50,17 @@ namespace UdonToolkit {
     // based on https://github.com/Xiexe/Xiexes-Unity-Shaders/blob/master/Editor/XSStyles.cs#L275
     public static bool FoldoutHeader(string text, bool value) {
       var shown = value;
+      var textColor = EditorGUIUtility.isProSkin ? new Color(0.6f, 0.6f, 0.6f) : new Color(0.1f, 0.1f, 0.1f);
       GUI.backgroundColor = new Color(0.8f , 0.8f, 0.8f);
       var style = new GUIStyle(EditorStyles.helpBox) {
         stretchWidth = true,
         font = new GUIStyle(EditorStyles.label).font,
         fontSize = 10,
-        contentOffset = new Vector2(20f, 0f)
+        contentOffset = new Vector2(20f, 0f),
+        normal = new GUIStyleState() {
+          textColor = textColor,
+          background = EditorStyles.helpBox.normal.background
+        }
       };
       var rect = GUILayoutUtility.GetRect(16f, 20, style);
       EditorGUI.LabelField(rect, new GUIContent(text), style);
@@ -70,23 +80,25 @@ namespace UdonToolkit {
     }
 
     public static void RenderNote(string text) {
+      var textColor = EditorGUIUtility.isProSkin ? new Color(1f, 1f, 1f, 0.5f) : new Color(0f, 0f, 0f, 0.8f);
       EditorGUILayout.LabelField(text, new GUIStyle(EditorStyles.helpBox) {
         fontSize = 10,
         stretchWidth = true,
         normal = new GUIStyleState {
           background = EditorStyles.helpBox.normal.background,
-          textColor = new Color(1, 1, 1, 0.5f)
+          textColor = textColor
         }
       });
     }
     
     public static void RenderNote(ref Rect position, string text) {
+      var textColor = EditorGUIUtility.isProSkin ? new Color(1f, 1f, 1f, 0.5f) : new Color(0f, 0f, 0f, 0.8f);
       EditorGUI.LabelField(position, text, new GUIStyle(EditorStyles.helpBox) {
         fontSize = 10,
         stretchWidth = true,
         normal = new GUIStyleState {
           background = EditorStyles.helpBox.normal.background,
-          textColor = new Color(1, 1, 1, 0.5f)
+          textColor = textColor
         }
       });
     }
