@@ -1,0 +1,4539 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
+  m_Name: Fog Adjustment Udon C# Program Asset
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: fec8848506d887c4bb47692863202b03,
+    type: 2}
+  udonAssembly: ".data_start\n\n    .export defaultFogColor\n    .export defaultFogDensity\n
+    \   .export defaultFogStart\n    .export defaultFogEnd\n    .export activeFogColor\n
+    \   .export activeFogDensity\n    .export activeFogStart\n    .export activeFogEnd\n
+    \   .export fogFadeTime\n    .export startActive\n    .export setInitialState\n\n
+    \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:
+    %SystemString, null\n    setInitialState: %SystemBoolean, null\n    startActive:
+    %SystemBoolean, null\n    activeFogColor: %UnityEngineColor, null\n    defaultFogColor:
+    %UnityEngineColor, null\n    activeFogDensity: %SystemSingle, null\n    activeFogEnd:
+    %SystemSingle, null\n    activeFogStart: %SystemSingle, null\n    defaultFogDensity:
+    %SystemSingle, null\n    defaultFogEnd: %SystemSingle, null\n    defaultFogStart:
+    %SystemSingle, null\n    fogFadeTime: %SystemSingle, null\n    active: %SystemBoolean,
+    null\n    initial: %SystemBoolean, null\n    lerping: %SystemBoolean, null\n    mode:
+    %UnityEngineFogMode, null\n    lerpEnd: %SystemSingle, null\n    player: %VRCSDKBaseVRCPlayerApi,
+    null\n    __0_color_Color: %UnityEngineColor, null\n    __0_eColor_Color: %UnityEngineColor,
+    null\n    __0_sColor_Color: %UnityEngineColor, null\n    __1_color_Color: %UnityEngineColor,
+    null\n    __1_eColor_Color: %UnityEngineColor, null\n    __1_sColor_Color: %UnityEngineColor,
+    null\n    __0_alpha_Single: %SystemSingle, null\n    __0_density_Single: %SystemSingle,
+    null\n    __0_eDensity_Single: %SystemSingle, null\n    __0_eEnd_Single: %SystemSingle,
+    null\n    __0_end_Single: %SystemSingle, null\n    __0_eStart_Single: %SystemSingle,
+    null\n    __0_sDensity_Single: %SystemSingle, null\n    __0_sEnd_Single: %SystemSingle,
+    null\n    __0_sStart_Single: %SystemSingle, null\n    __0_start_Single: %SystemSingle,
+    null\n    __1_alpha_Single: %SystemSingle, null\n    __2_alpha_Single: %SystemSingle,
+    null\n    __0_const_intnl_SystemBoolean: %SystemBoolean, null\n    __1_const_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __0_const_intnl_UnityEngineFogMode: %UnityEngineFogMode,
+    null\n    __0_const_intnl_SystemInt32: %SystemInt32, null\n    __0_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\n    __1_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\n    __10_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
+    \   __11_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n    __12_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\n    __13_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
+    \   __14_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n    __2_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\n    __3_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
+    \   __4_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n    __5_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\n    __6_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
+    \   __7_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n    __8_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\n    __9_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
+    \   __0_intnl_SystemBoolean: %SystemBoolean, null\n    __1_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __10_intnl_SystemBoolean: %SystemBoolean, null\n    __11_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __12_intnl_SystemBoolean: %SystemBoolean, null\n    __13_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __14_intnl_SystemBoolean: %SystemBoolean, null\n    __15_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __16_intnl_SystemBoolean: %SystemBoolean, null\n    __17_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __18_intnl_SystemBoolean: %SystemBoolean, null\n    __2_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __3_intnl_SystemBoolean: %SystemBoolean, null\n    __4_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __5_intnl_SystemBoolean: %SystemBoolean, null\n    __6_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __7_intnl_SystemBoolean: %SystemBoolean, null\n    __8_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __9_intnl_SystemBoolean: %SystemBoolean, null\n    __0_intnl_UnityEngineColor:
+    %UnityEngineColor, null\n    __1_intnl_UnityEngineColor: %UnityEngineColor, null\n
+    \   __2_intnl_UnityEngineColor: %UnityEngineColor, null\n    __3_intnl_UnityEngineColor:
+    %UnityEngineColor, null\n    __4_intnl_UnityEngineColor: %UnityEngineColor, null\n
+    \   __5_intnl_UnityEngineColor: %UnityEngineColor, null\n    __0_intnl_SystemSingle:
+    %SystemSingle, null\n    __1_intnl_SystemSingle: %SystemSingle, null\n    __10_intnl_SystemSingle:
+    %SystemSingle, null\n    __11_intnl_SystemSingle: %SystemSingle, null\n    __12_intnl_SystemSingle:
+    %SystemSingle, null\n    __13_intnl_SystemSingle: %SystemSingle, null\n    __14_intnl_SystemSingle:
+    %SystemSingle, null\n    __15_intnl_SystemSingle: %SystemSingle, null\n    __16_intnl_SystemSingle:
+    %SystemSingle, null\n    __17_intnl_SystemSingle: %SystemSingle, null\n    __18_intnl_SystemSingle:
+    %SystemSingle, null\n    __2_intnl_SystemSingle: %SystemSingle, null\n    __3_intnl_SystemSingle:
+    %SystemSingle, null\n    __4_intnl_SystemSingle: %SystemSingle, null\n    __5_intnl_SystemSingle:
+    %SystemSingle, null\n    __6_intnl_SystemSingle: %SystemSingle, null\n    __7_intnl_SystemSingle:
+    %SystemSingle, null\n    __8_intnl_SystemSingle: %SystemSingle, null\n    __9_intnl_SystemSingle:
+    %SystemSingle, null\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\n\n.data_end\n\n.code_start\n
+    \   .export _start\n        \n    _start:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       PUSH, mode\n        EXTERN, \"UnityEngineRenderSettings.__get_fogMode__UnityEngineFogMode\"\n
+    \       PUSH, startActive\n        PUSH, __0_intnl_SystemBoolean\n        COPY\n
+    \       PUSH, __0_intnl_SystemBoolean\n        PUSH, __1_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
+    \       PUSH, __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000000E0\n        PUSH,
+    startActive\n        PUSH, __2_intnl_SystemBoolean\n        COPY\n        PUSH,
+    __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000000AC\n        PUSH, __2_intnl_SystemBoolean\n
+    \       PUSH, setInitialState\n        PUSH, __3_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\n
+    \       PUSH, __3_intnl_SystemBoolean\n        PUSH, __2_intnl_SystemBoolean\n
+    \       COPY\n        PUSH, __0_intnl_SystemBoolean\n        PUSH, __2_intnl_SystemBoolean\n
+    \       PUSH, __4_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\n
+    \       PUSH, __4_intnl_SystemBoolean\n        PUSH, __0_intnl_SystemBoolean\n
+    \       COPY\n        PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000011C\n
+    \       PUSH, __0_const_intnl_SystemBoolean\n        PUSH, initial\n        COPY\n
+    \       PUSH, __0_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x000003B4\n        JUMP,
+    0x00000150\n        PUSH, setInitialState\n        JUMP_IF_FALSE, 0x00000150\n
+    \       PUSH, __0_const_intnl_SystemBoolean\n        PUSH, initial\n        COPY\n
+    \       PUSH, __1_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000618\n        PUSH,
+    player\n        EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    StartLerping:\n
+    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __0_const_intnl_SystemBoolean\n
+    \       PUSH, lerping\n        COPY\n        PUSH, __0_intnl_SystemSingle\n        EXTERN,
+    \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, __0_intnl_SystemSingle\n
+    \       PUSH, fogFadeTime\n        PUSH, lerpEnd\n        EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    SetFog:\n
+    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __0_color_Color\n
+    \       EXTERN, \"UnityEngineRenderSettings.__set_fogColor__UnityEngineColor__SystemVoid\"\n
+    \       PUSH, __0_density_Single\n        EXTERN, \"UnityEngineRenderSettings.__set_fogDensity__SystemSingle__SystemVoid\"\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    SetFogLinear:\n
+    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __1_color_Color\n
+    \       EXTERN, \"UnityEngineRenderSettings.__set_fogColor__UnityEngineColor__SystemVoid\"\n
+    \       PUSH, __0_start_Single\n        EXTERN, \"UnityEngineRenderSettings.__set_fogStartDistance__SystemSingle__SystemVoid\"\n
+    \       PUSH, __0_end_Single\n        EXTERN, \"UnityEngineRenderSettings.__set_fogEndDistance__SystemSingle__SystemVoid\"\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    LerpFog:\n
+    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __0_sColor_Color\n
+    \       PUSH, __0_eColor_Color\n        PUSH, __0_alpha_Single\n        PUSH,
+    __0_intnl_UnityEngineColor\n        EXTERN, \"UnityEngineColor.__Lerp__UnityEngineColor_UnityEngineColor_SystemSingle__UnityEngineColor\"\n
+    \       PUSH, __0_intnl_UnityEngineColor\n        EXTERN, \"UnityEngineRenderSettings.__set_fogColor__UnityEngineColor__SystemVoid\"\n
+    \       PUSH, __0_sDensity_Single\n        PUSH, __0_eDensity_Single\n        PUSH,
+    __0_alpha_Single\n        PUSH, __1_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, __1_intnl_SystemSingle\n        EXTERN, \"UnityEngineRenderSettings.__set_fogDensity__SystemSingle__SystemVoid\"\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    LerpFogLinear:\n
+    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __1_sColor_Color\n
+    \       PUSH, __1_eColor_Color\n        PUSH, __1_alpha_Single\n        PUSH,
+    __1_intnl_UnityEngineColor\n        EXTERN, \"UnityEngineColor.__Lerp__UnityEngineColor_UnityEngineColor_SystemSingle__UnityEngineColor\"\n
+    \       PUSH, __1_intnl_UnityEngineColor\n        EXTERN, \"UnityEngineRenderSettings.__set_fogColor__UnityEngineColor__SystemVoid\"\n
+    \       PUSH, __0_sStart_Single\n        PUSH, __0_eStart_Single\n        PUSH,
+    __1_alpha_Single\n        PUSH, __2_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, __2_intnl_SystemSingle\n        EXTERN, \"UnityEngineRenderSettings.__set_fogStartDistance__SystemSingle__SystemVoid\"\n
+    \       PUSH, __0_sEnd_Single\n        PUSH, __0_eEnd_Single\n        PUSH, __1_alpha_Single\n
+    \       PUSH, __3_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, __3_intnl_SystemSingle\n        EXTERN, \"UnityEngineRenderSettings.__set_fogEndDistance__SystemSingle__SystemVoid\"\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export ActivateFog\n
+    \       \n    ActivateFog:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       PUSH, __1_const_intnl_SystemBoolean\n        PUSH, active\n        COPY\n
+    \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __4_intnl_SystemSingle\n
+    \       EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH,
+    fogFadeTime\n        PUSH, __4_intnl_SystemSingle\n        PUSH, __6_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
+    \       PUSH, __6_intnl_SystemBoolean\n        PUSH, __5_intnl_SystemBoolean\n
+    \       COPY\n        PUSH, __5_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000470\n
+    \       PUSH, initial\n        PUSH, __7_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __5_intnl_SystemBoolean\n        PUSH, __7_intnl_SystemBoolean\n        PUSH,
+    __8_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\n
+    \       PUSH, __8_intnl_SystemBoolean\n        PUSH, __5_intnl_SystemBoolean\n
+    \       COPY\n        PUSH, __5_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000004A4\n
+    \       PUSH, __2_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x0000017C\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\n        PUSH, mode\n        PUSH, __0_const_intnl_UnityEngineFogMode\n
+    \       PUSH, __9_intnl_SystemBoolean\n        EXTERN, \"SystemObject.__Equals__SystemObject_SystemObject__SystemBoolean\"\n
+    \       PUSH, __9_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000564\n        PUSH,
+    activeFogColor\n        PUSH, __1_color_Color\n        COPY\n        PUSH, activeFogStart\n
+    \       PUSH, __0_start_Single\n        COPY\n        PUSH, activeFogEnd\n        PUSH,
+    __0_end_Single\n        COPY\n        PUSH, activeFogColor\n        PUSH, __2_intnl_UnityEngineColor\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, activeFogStart\n
+    \       PUSH, __5_intnl_SystemSingle\n        COPY # Copy-on-write symbol value
+    dirtied\n        PUSH, activeFogEnd\n        PUSH, __6_intnl_SystemSingle\n        COPY
+    # Copy-on-write symbol value dirtied\n        PUSH, __3_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x00000218\n        JUMP, 0x000005C4\n        PUSH, activeFogColor\n
+    \       PUSH, __0_color_Color\n        COPY\n        PUSH, activeFogDensity\n
+    \       PUSH, __0_density_Single\n        COPY\n        PUSH, activeFogColor\n
+    \       PUSH, __2_intnl_UnityEngineColor\n        COPY # Copy-on-write symbol
+    value dirtied\n        PUSH, activeFogDensity\n        PUSH, __5_intnl_SystemSingle\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, __4_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x000001DC\n        PUSH, initial\n        JUMP_IF_FALSE, 0x000005E8\n
+    \       PUSH, __1_const_intnl_SystemBoolean\n        PUSH, initial\n        COPY\n
+    \       PUSH, __0_const_intnl_SystemBoolean\n        PUSH, active\n        COPY\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export DeactivateFog\n
+    \       \n    DeactivateFog:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       PUSH, __0_const_intnl_SystemBoolean\n        PUSH, active\n        COPY\n
+    \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __7_intnl_SystemSingle\n
+    \       EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH,
+    fogFadeTime\n        PUSH, __7_intnl_SystemSingle\n        PUSH, __11_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
+    \       PUSH, __11_intnl_SystemBoolean\n        PUSH, __10_intnl_SystemBoolean\n
+    \       COPY\n        PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000006D4\n
+    \       PUSH, initial\n        PUSH, __12_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __10_intnl_SystemBoolean\n        PUSH, __12_intnl_SystemBoolean\n        PUSH,
+    __13_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\n
+    \       PUSH, __13_intnl_SystemBoolean\n        PUSH, __10_intnl_SystemBoolean\n
+    \       COPY\n        PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000708\n
+    \       PUSH, __5_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x0000017C\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\n        PUSH, mode\n        PUSH, __0_const_intnl_UnityEngineFogMode\n
+    \       PUSH, __14_intnl_SystemBoolean\n        EXTERN, \"SystemObject.__Equals__SystemObject_SystemObject__SystemBoolean\"\n
+    \       PUSH, __14_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000007C8\n        PUSH,
+    defaultFogColor\n        PUSH, __1_color_Color\n        COPY\n        PUSH, defaultFogStart\n
+    \       PUSH, __0_start_Single\n        COPY\n        PUSH, defaultFogEnd\n        PUSH,
+    __0_end_Single\n        COPY\n        PUSH, defaultFogColor\n        PUSH, __3_intnl_UnityEngineColor\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, defaultFogStart\n
+    \       PUSH, __8_intnl_SystemSingle\n        COPY # Copy-on-write symbol value
+    dirtied\n        PUSH, defaultFogEnd\n        PUSH, __9_intnl_SystemSingle\n        COPY
+    # Copy-on-write symbol value dirtied\n        PUSH, __6_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x00000218\n        JUMP, 0x00000828\n        PUSH, defaultFogColor\n
+    \       PUSH, __0_color_Color\n        COPY\n        PUSH, defaultFogDensity\n
+    \       PUSH, __0_density_Single\n        COPY\n        PUSH, defaultFogColor\n
+    \       PUSH, __3_intnl_UnityEngineColor\n        COPY # Copy-on-write symbol
+    value dirtied\n        PUSH, defaultFogDensity\n        PUSH, __8_intnl_SystemSingle\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, __7_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x000001DC\n        PUSH, initial\n        JUMP_IF_FALSE, 0x0000084C\n
+    \       PUSH, __1_const_intnl_SystemBoolean\n        PUSH, initial\n        COPY\n
+    \       PUSH, __1_const_intnl_SystemBoolean\n        PUSH, active\n        COPY\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export Trigger\n
+    \       \n    Trigger:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __10_intnl_SystemSingle\n
+    \       EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH,
+    fogFadeTime\n        PUSH, __10_intnl_SystemSingle\n        PUSH, __15_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
+    \       PUSH, __15_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000008E8\n        PUSH,
+    __8_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x0000017C\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Explicit return sequence\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
+    \       PUSH, active\n        JUMP_IF_FALSE, 0x0000091C\n        PUSH, __9_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x00000618\n        PUSH, __0_intnl_returnTarget_UInt32 #Explicit
+    return sequence\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
+    \       PUSH, __10_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x000003B4\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export _update\n
+    \       \n    _update:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       PUSH, lerping\n        PUSH, __16_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __16_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000984\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Explicit return sequence\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
+    \       PUSH, __11_intnl_SystemSingle\n        EXTERN, \"UnityEngineTime.__get_time__SystemSingle\"\n
+    \       PUSH, lerpEnd\n        PUSH, fogFadeTime\n        PUSH, __12_intnl_SystemSingle\n
+    \       EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, __11_intnl_SystemSingle\n        PUSH, __12_intnl_SystemSingle\n
+    \       PUSH, __13_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, __13_intnl_SystemSingle\n        PUSH, fogFadeTime\n        PUSH,
+    __14_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Division__SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, __14_intnl_SystemSingle\n        PUSH, __2_alpha_Single\n        COPY\n
+    \       PUSH, active\n        JUMP_IF_FALSE, 0x00000C30\n        PUSH, mode\n
+    \       PUSH, __0_const_intnl_UnityEngineFogMode\n        PUSH, __17_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemObject.__Equals__SystemObject_SystemObject__SystemBoolean\"\n
+    \       PUSH, __17_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000B64\n        PUSH,
+    activeFogColor\n        PUSH, __1_sColor_Color\n        COPY\n        PUSH, defaultFogColor\n
+    \       PUSH, __1_eColor_Color\n        COPY\n        PUSH, activeFogStart\n        PUSH,
+    __0_sStart_Single\n        COPY\n        PUSH, defaultFogStart\n        PUSH,
+    __0_eStart_Single\n        COPY\n        PUSH, activeFogEnd\n        PUSH, __0_sEnd_Single\n
+    \       COPY\n        PUSH, defaultFogEnd\n        PUSH, __0_eEnd_Single\n        COPY\n
+    \       PUSH, __2_alpha_Single\n        PUSH, __1_alpha_Single\n        COPY\n
+    \       PUSH, defaultFogColor\n        PUSH, __4_intnl_UnityEngineColor\n        COPY
+    # Copy-on-write symbol value dirtied\n        PUSH, defaultFogStart\n        PUSH,
+    __15_intnl_SystemSingle\n        COPY # Copy-on-write symbol value dirtied\n        PUSH,
+    defaultFogEnd\n        PUSH, __16_intnl_SystemSingle\n        COPY # Copy-on-write
+    symbol value dirtied\n        PUSH, activeFogColor\n        PUSH, __5_intnl_UnityEngineColor\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, activeFogStart\n
+    \       PUSH, __17_intnl_SystemSingle\n        COPY # Copy-on-write symbol value
+    dirtied\n        PUSH, activeFogEnd\n        PUSH, __18_intnl_SystemSingle\n        COPY
+    # Copy-on-write symbol value dirtied\n        PUSH, __11_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x000002F0\n        JUMP, 0x00000C28\n        PUSH, activeFogColor\n
+    \       PUSH, __0_sColor_Color\n        COPY\n        PUSH, defaultFogColor\n
+    \       PUSH, __0_eColor_Color\n        COPY\n        PUSH, activeFogDensity\n
+    \       PUSH, __0_sDensity_Single\n        COPY\n        PUSH, defaultFogDensity\n
+    \       PUSH, __0_eDensity_Single\n        COPY\n        PUSH, __2_alpha_Single\n
+    \       PUSH, __0_alpha_Single\n        COPY\n        PUSH, defaultFogColor\n
+    \       PUSH, __4_intnl_UnityEngineColor\n        COPY # Copy-on-write symbol
+    value dirtied\n        PUSH, defaultFogDensity\n        PUSH, __15_intnl_SystemSingle\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, activeFogColor\n
+    \       PUSH, __5_intnl_UnityEngineColor\n        COPY # Copy-on-write symbol
+    value dirtied\n        PUSH, activeFogDensity\n        PUSH, __16_intnl_SystemSingle\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, __12_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x00000264\n        JUMP, 0x00000E40\n        PUSH, mode\n        PUSH,
+    __0_const_intnl_UnityEngineFogMode\n        PUSH, __17_intnl_SystemBoolean\n        EXTERN,
+    \"SystemObject.__Equals__SystemObject_SystemObject__SystemBoolean\"\n        PUSH,
+    __17_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000D7C\n        PUSH, defaultFogColor\n
+    \       PUSH, __1_sColor_Color\n        COPY\n        PUSH, activeFogColor\n        PUSH,
+    __1_eColor_Color\n        COPY\n        PUSH, defaultFogStart\n        PUSH, __0_sStart_Single\n
+    \       COPY\n        PUSH, activeFogStart\n        PUSH, __0_eStart_Single\n
+    \       COPY\n        PUSH, defaultFogEnd\n        PUSH, __0_sEnd_Single\n        COPY\n
+    \       PUSH, activeFogEnd\n        PUSH, __0_eEnd_Single\n        COPY\n        PUSH,
+    __2_alpha_Single\n        PUSH, __1_alpha_Single\n        COPY\n        PUSH,
+    defaultFogColor\n        PUSH, __4_intnl_UnityEngineColor\n        COPY # Copy-on-write
+    symbol value dirtied\n        PUSH, defaultFogStart\n        PUSH, __15_intnl_SystemSingle\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, defaultFogEnd\n
+    \       PUSH, __16_intnl_SystemSingle\n        COPY # Copy-on-write symbol value
+    dirtied\n        PUSH, activeFogColor\n        PUSH, __5_intnl_UnityEngineColor\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, activeFogStart\n
+    \       PUSH, __17_intnl_SystemSingle\n        COPY # Copy-on-write symbol value
+    dirtied\n        PUSH, activeFogEnd\n        PUSH, __18_intnl_SystemSingle\n        COPY
+    # Copy-on-write symbol value dirtied\n        PUSH, __13_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x000002F0\n        JUMP, 0x00000E40\n        PUSH, defaultFogColor\n
+    \       PUSH, __0_sColor_Color\n        COPY\n        PUSH, activeFogColor\n        PUSH,
+    __0_eColor_Color\n        COPY\n        PUSH, defaultFogDensity\n        PUSH,
+    __0_sDensity_Single\n        COPY\n        PUSH, activeFogDensity\n        PUSH,
+    __0_eDensity_Single\n        COPY\n        PUSH, __2_alpha_Single\n        PUSH,
+    __0_alpha_Single\n        COPY\n        PUSH, defaultFogColor\n        PUSH, __4_intnl_UnityEngineColor\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, defaultFogDensity\n
+    \       PUSH, __15_intnl_SystemSingle\n        COPY # Copy-on-write symbol value
+    dirtied\n        PUSH, activeFogColor\n        PUSH, __5_intnl_UnityEngineColor\n
+    \       COPY # Copy-on-write symbol value dirtied\n        PUSH, activeFogDensity\n
+    \       PUSH, __16_intnl_SystemSingle\n        COPY # Copy-on-write symbol value
+    dirtied\n        PUSH, __14_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000264\n
+    \       PUSH, __15_intnl_SystemSingle\n        EXTERN, \"UnityEngineTime.__get_time__SystemSingle\"\n
+    \       PUSH, __15_intnl_SystemSingle\n        PUSH, lerpEnd\n        PUSH, __17_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
+    \       PUSH, __17_intnl_SystemBoolean\n        PUSH, __18_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
+    \       PUSH, __18_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000EAC\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\n        PUSH, __1_const_intnl_SystemBoolean\n        PUSH,
+    lerping\n        COPY\n        PUSH, active\n        PUSH, active\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\n        \n.code_end\n"
+  assemblyError: 
+  sourceCsScript: {fileID: 11500000, guid: 6e0aae98177babd4297419783bbf84e6, type: 3}
+  behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
+  compileErrors: []
+  debugInfo:
+    serializedDebugSpans:
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 0
+      line: 0
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 0
+      line: 0
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 6
+      line: 0
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 6
+      endSourceChar: 15
+      line: 0
+      lineChar: 6
+      spanCodeSection: "System;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 15
+      endSourceChar: 21
+      line: 1
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 21
+      endSourceChar: 33
+      line: 1
+      lineChar: 6
+      spanCodeSection: "UdonSharp;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 33
+      endSourceChar: 39
+      line: 2
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 39
+      endSourceChar: 53
+      line: 2
+      lineChar: 6
+      spanCodeSection: "UnityEngine;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 53
+      endSourceChar: 59
+      line: 3
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 59
+      endSourceChar: 59
+      line: 3
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 59
+      endSourceChar: 63
+      line: 3
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 63
+      endSourceChar: 73
+      line: 3
+      lineChar: 10
+      spanCodeSection: "SDKBase;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 73
+      endSourceChar: 79
+      line: 4
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 79
+      line: 4
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 83
+      line: 4
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 83
+      endSourceChar: 92
+      line: 4
+      lineChar: 10
+      spanCodeSection: "Udon;\r\n\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 92
+      endSourceChar: 119
+      line: 6
+      lineChar: 0
+      spanCodeSection: 'public class FogAdjustment '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 119
+      endSourceChar: 121
+      line: 6
+      lineChar: 27
+      spanCodeSection: ': '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 121
+      endSourceChar: 121
+      line: 6
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 121
+      endSourceChar: 145
+      line: 6
+      lineChar: 29
+      spanCodeSection: "UdonSharpBehaviour {\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 145
+      endSourceChar: 152
+      line: 7
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 152
+      endSourceChar: 152
+      line: 7
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 152
+      endSourceChar: 178
+      line: 7
+      lineChar: 9
+      spanCodeSection: "Color defaultFogColor;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 178
+      endSourceChar: 185
+      line: 8
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 185
+      endSourceChar: 185
+      line: 8
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 185
+      endSourceChar: 213
+      line: 8
+      lineChar: 9
+      spanCodeSection: "float defaultFogDensity;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 213
+      endSourceChar: 220
+      line: 9
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 220
+      endSourceChar: 220
+      line: 9
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 220
+      endSourceChar: 246
+      line: 9
+      lineChar: 9
+      spanCodeSection: "float defaultFogStart;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 246
+      endSourceChar: 253
+      line: 10
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 253
+      endSourceChar: 253
+      line: 10
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 253
+      endSourceChar: 277
+      line: 10
+      lineChar: 9
+      spanCodeSection: "float defaultFogEnd;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 277
+      endSourceChar: 284
+      line: 11
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 284
+      endSourceChar: 284
+      line: 11
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 284
+      endSourceChar: 309
+      line: 11
+      lineChar: 9
+      spanCodeSection: "Color activeFogColor;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 309
+      endSourceChar: 316
+      line: 12
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 316
+      endSourceChar: 316
+      line: 12
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 316
+      endSourceChar: 343
+      line: 12
+      lineChar: 9
+      spanCodeSection: "float activeFogDensity;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 343
+      endSourceChar: 350
+      line: 13
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 350
+      endSourceChar: 350
+      line: 13
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 350
+      endSourceChar: 375
+      line: 13
+      lineChar: 9
+      spanCodeSection: "float activeFogStart;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 375
+      endSourceChar: 382
+      line: 14
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 382
+      endSourceChar: 382
+      line: 14
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 382
+      endSourceChar: 405
+      line: 14
+      lineChar: 9
+      spanCodeSection: "float activeFogEnd;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 405
+      endSourceChar: 412
+      line: 15
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 412
+      endSourceChar: 412
+      line: 15
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 412
+      endSourceChar: 434
+      line: 15
+      lineChar: 9
+      spanCodeSection: "float fogFadeTime;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 434
+      endSourceChar: 441
+      line: 16
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 441
+      endSourceChar: 441
+      line: 16
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 441
+      endSourceChar: 462
+      line: 16
+      lineChar: 9
+      spanCodeSection: "bool startActive;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 462
+      endSourceChar: 469
+      line: 17
+      lineChar: 2
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 469
+      endSourceChar: 469
+      line: 17
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 469
+      endSourceChar: 496
+      line: 17
+      lineChar: 9
+      spanCodeSection: "bool setInitialState;\r\n\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 496
+      endSourceChar: 504
+      line: 19
+      lineChar: 2
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 504
+      endSourceChar: 504
+      line: 19
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 504
+      endSourceChar: 550
+      line: 19
+      lineChar: 10
+      spanCodeSection: "FogMode mode = FogMode.ExponentialSquared;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 550
+      endSourceChar: 558
+      line: 20
+      lineChar: 2
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 558
+      endSourceChar: 558
+      line: 20
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 558
+      endSourceChar: 574
+      line: 20
+      lineChar: 10
+      spanCodeSection: "bool active;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 574
+      endSourceChar: 582
+      line: 21
+      lineChar: 2
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 582
+      endSourceChar: 582
+      line: 21
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 582
+      endSourceChar: 599
+      line: 21
+      lineChar: 10
+      spanCodeSection: "bool initial;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 599
+      endSourceChar: 607
+      line: 22
+      lineChar: 2
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 607
+      endSourceChar: 607
+      line: 22
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 607
+      endSourceChar: 624
+      line: 22
+      lineChar: 10
+      spanCodeSection: "bool lerping;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 624
+      endSourceChar: 632
+      line: 23
+      lineChar: 2
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 632
+      endSourceChar: 632
+      line: 23
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 632
+      endSourceChar: 650
+      line: 23
+      lineChar: 10
+      spanCodeSection: "float lerpEnd;\r\n  "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 650
+      endSourceChar: 658
+      line: 24
+      lineChar: 2
+      spanCodeSection: 'private '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 658
+      endSourceChar: 658
+      line: 24
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 658
+      endSourceChar: 684
+      line: 24
+      lineChar: 10
+      spanCodeSection: "VRCPlayerApi player;\r\n\r\n  "
+    - startInstruction: 0
+      endInstruction: 7
+      startSourceChar: 684
+      endSourceChar: 697
+      line: 26
+      lineChar: 2
+      spanCodeSection: 'void Start() '
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 697
+      endSourceChar: 704
+      line: 26
+      lineChar: 15
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 704
+      endSourceChar: 704
+      line: 27
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 704
+      endSourceChar: 704
+      line: 27
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 704
+      endSourceChar: 711
+      line: 27
+      lineChar: 4
+      spanCodeSection: 'mode = '
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 711
+      endSourceChar: 711
+      line: 27
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 711
+      endSourceChar: 726
+      line: 27
+      lineChar: 11
+      spanCodeSection: RenderSettings.
+    - startInstruction: 8
+      endInstruction: 23
+      startSourceChar: 726
+      endSourceChar: 740
+      line: 27
+      lineChar: 26
+      spanCodeSection: "fogMode;\r\n    "
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 740
+      endSourceChar: 744
+      line: 28
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 744
+      endSourceChar: 744
+      line: 28
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 24
+      endInstruction: 83
+      startSourceChar: 744
+      endSourceChar: 759
+      line: 28
+      lineChar: 8
+      spanCodeSection: 'startActive || '
+    - startInstruction: 84
+      endInstruction: 83
+      startSourceChar: 759
+      endSourceChar: 759
+      line: 28
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 84
+      endInstruction: 119
+      startSourceChar: 759
+      endSourceChar: 774
+      line: 28
+      lineChar: 23
+      spanCodeSection: 'startActive && '
+    - startInstruction: 120
+      endInstruction: 239
+      startSourceChar: 774
+      endSourceChar: 791
+      line: 28
+      lineChar: 38
+      spanCodeSection: 'setInitialState) '
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 791
+      endSourceChar: 800
+      line: 28
+      lineChar: 55
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 800
+      endSourceChar: 800
+      line: 29
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 800
+      endSourceChar: 800
+      line: 29
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 800
+      endSourceChar: 810
+      line: 29
+      lineChar: 6
+      spanCodeSection: 'initial = '
+    - startInstruction: 240
+      endInstruction: 259
+      startSourceChar: 810
+      endSourceChar: 823
+      line: 29
+      lineChar: 16
+      spanCodeSection: "true;\r\n      "
+    - startInstruction: 260
+      endInstruction: 259
+      startSourceChar: 823
+      endSourceChar: 823
+      line: 30
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 260
+      endInstruction: 259
+      startSourceChar: 823
+      endSourceChar: 823
+      line: 30
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 260
+      endInstruction: 283
+      startSourceChar: 823
+      endSourceChar: 850
+      line: 30
+      lineChar: 6
+      spanCodeSection: "ActivateFog();\r\n    }\r\n    "
+    - startInstruction: 284
+      endInstruction: 283
+      startSourceChar: 850
+      endSourceChar: 855
+      line: 32
+      lineChar: 4
+      spanCodeSection: 'else '
+    - startInstruction: 284
+      endInstruction: 283
+      startSourceChar: 855
+      endSourceChar: 859
+      line: 32
+      lineChar: 9
+      spanCodeSection: if (
+    - startInstruction: 284
+      endInstruction: 299
+      startSourceChar: 859
+      endSourceChar: 876
+      line: 32
+      lineChar: 13
+      spanCodeSection: 'setInitialState) '
+    - startInstruction: 300
+      endInstruction: 299
+      startSourceChar: 876
+      endSourceChar: 885
+      line: 32
+      lineChar: 30
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 300
+      endInstruction: 299
+      startSourceChar: 885
+      endSourceChar: 885
+      line: 33
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 300
+      endInstruction: 299
+      startSourceChar: 885
+      endSourceChar: 885
+      line: 33
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 300
+      endInstruction: 299
+      startSourceChar: 885
+      endSourceChar: 895
+      line: 33
+      lineChar: 6
+      spanCodeSection: 'initial = '
+    - startInstruction: 300
+      endInstruction: 319
+      startSourceChar: 895
+      endSourceChar: 908
+      line: 33
+      lineChar: 16
+      spanCodeSection: "true;\r\n      "
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 908
+      endSourceChar: 908
+      line: 34
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 319
+      startSourceChar: 908
+      endSourceChar: 908
+      line: 34
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 320
+      endInstruction: 335
+      startSourceChar: 908
+      endSourceChar: 941
+      line: 34
+      lineChar: 6
+      spanCodeSection: "DeactivateFog();\r\n    }\r\n\r\n\r\n    "
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 941
+      endSourceChar: 941
+      line: 38
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 941
+      endSourceChar: 941
+      line: 38
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 941
+      endSourceChar: 950
+      line: 38
+      lineChar: 4
+      spanCodeSection: 'player = '
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 950
+      endSourceChar: 950
+      line: 38
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 950
+      endSourceChar: 961
+      line: 38
+      lineChar: 13
+      spanCodeSection: Networking.
+    - startInstruction: 336
+      endInstruction: 371
+      startSourceChar: 961
+      endSourceChar: 984
+      line: 38
+      lineChar: 24
+      spanCodeSection: "LocalPlayer;\r\n  }\r\n\r\n  "
+    - startInstruction: 372
+      endInstruction: 379
+      startSourceChar: 984
+      endSourceChar: 1012
+      line: 41
+      lineChar: 2
+      spanCodeSection: 'private void StartLerping() '
+    - startInstruction: 380
+      endInstruction: 379
+      startSourceChar: 1012
+      endSourceChar: 1019
+      line: 41
+      lineChar: 30
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 380
+      endInstruction: 379
+      startSourceChar: 1019
+      endSourceChar: 1019
+      line: 42
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 380
+      endInstruction: 379
+      startSourceChar: 1019
+      endSourceChar: 1019
+      line: 42
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 380
+      endInstruction: 379
+      startSourceChar: 1019
+      endSourceChar: 1029
+      line: 42
+      lineChar: 4
+      spanCodeSection: 'lerping = '
+    - startInstruction: 380
+      endInstruction: 399
+      startSourceChar: 1029
+      endSourceChar: 1040
+      line: 42
+      lineChar: 14
+      spanCodeSection: "true;\r\n    "
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1040
+      endSourceChar: 1040
+      line: 43
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1040
+      endSourceChar: 1040
+      line: 43
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1040
+      endSourceChar: 1050
+      line: 43
+      lineChar: 4
+      spanCodeSection: 'lerpEnd = '
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1050
+      endSourceChar: 1050
+      line: 43
+      lineChar: 14
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1050
+      endSourceChar: 1050
+      line: 43
+      lineChar: 14
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1050
+      endSourceChar: 1055
+      line: 43
+      lineChar: 14
+      spanCodeSection: Time.
+    - startInstruction: 400
+      endInstruction: 415
+      startSourceChar: 1055
+      endSourceChar: 1062
+      line: 43
+      lineChar: 19
+      spanCodeSection: 'time + '
+    - startInstruction: 416
+      endInstruction: 467
+      startSourceChar: 1062
+      endSourceChar: 1085
+      line: 43
+      lineChar: 26
+      spanCodeSection: "fogFadeTime;\r\n  }\r\n\r\n  "
+    - startInstruction: 468
+      endInstruction: 467
+      startSourceChar: 1085
+      endSourceChar: 1105
+      line: 46
+      lineChar: 2
+      spanCodeSection: private void SetFog(
+    - startInstruction: 468
+      endInstruction: 467
+      startSourceChar: 1105
+      endSourceChar: 1118
+      line: 46
+      lineChar: 22
+      spanCodeSection: 'Color color, '
+    - startInstruction: 468
+      endInstruction: 475
+      startSourceChar: 1118
+      endSourceChar: 1133
+      line: 46
+      lineChar: 35
+      spanCodeSection: 'float density) '
+    - startInstruction: 476
+      endInstruction: 475
+      startSourceChar: 1133
+      endSourceChar: 1140
+      line: 46
+      lineChar: 50
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 476
+      endInstruction: 475
+      startSourceChar: 1140
+      endSourceChar: 1140
+      line: 47
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 476
+      endInstruction: 475
+      startSourceChar: 1140
+      endSourceChar: 1140
+      line: 47
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 476
+      endInstruction: 475
+      startSourceChar: 1140
+      endSourceChar: 1140
+      line: 47
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 476
+      endInstruction: 475
+      startSourceChar: 1140
+      endSourceChar: 1155
+      line: 47
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 476
+      endInstruction: 475
+      startSourceChar: 1155
+      endSourceChar: 1166
+      line: 47
+      lineChar: 19
+      spanCodeSection: 'fogColor = '
+    - startInstruction: 476
+      endInstruction: 491
+      startSourceChar: 1166
+      endSourceChar: 1178
+      line: 47
+      lineChar: 30
+      spanCodeSection: "color;\r\n    "
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 1178
+      endSourceChar: 1178
+      line: 48
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 1178
+      endSourceChar: 1178
+      line: 48
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 1178
+      endSourceChar: 1178
+      line: 48
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 1178
+      endSourceChar: 1193
+      line: 48
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 1193
+      endSourceChar: 1206
+      line: 48
+      lineChar: 19
+      spanCodeSection: 'fogDensity = '
+    - startInstruction: 492
+      endInstruction: 527
+      startSourceChar: 1206
+      endSourceChar: 1225
+      line: 48
+      lineChar: 32
+      spanCodeSection: "density;\r\n  }\r\n\r\n  "
+    - startInstruction: 528
+      endInstruction: 527
+      startSourceChar: 1225
+      endSourceChar: 1251
+      line: 51
+      lineChar: 2
+      spanCodeSection: private void SetFogLinear(
+    - startInstruction: 528
+      endInstruction: 527
+      startSourceChar: 1251
+      endSourceChar: 1264
+      line: 51
+      lineChar: 28
+      spanCodeSection: 'Color color, '
+    - startInstruction: 528
+      endInstruction: 527
+      startSourceChar: 1264
+      endSourceChar: 1277
+      line: 51
+      lineChar: 41
+      spanCodeSection: 'float start, '
+    - startInstruction: 528
+      endInstruction: 535
+      startSourceChar: 1277
+      endSourceChar: 1288
+      line: 51
+      lineChar: 54
+      spanCodeSection: 'float end) '
+    - startInstruction: 536
+      endInstruction: 535
+      startSourceChar: 1288
+      endSourceChar: 1295
+      line: 51
+      lineChar: 65
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 536
+      endInstruction: 535
+      startSourceChar: 1295
+      endSourceChar: 1295
+      line: 52
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 536
+      endInstruction: 535
+      startSourceChar: 1295
+      endSourceChar: 1295
+      line: 52
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 536
+      endInstruction: 535
+      startSourceChar: 1295
+      endSourceChar: 1295
+      line: 52
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 536
+      endInstruction: 535
+      startSourceChar: 1295
+      endSourceChar: 1310
+      line: 52
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 536
+      endInstruction: 535
+      startSourceChar: 1310
+      endSourceChar: 1321
+      line: 52
+      lineChar: 19
+      spanCodeSection: 'fogColor = '
+    - startInstruction: 536
+      endInstruction: 551
+      startSourceChar: 1321
+      endSourceChar: 1333
+      line: 52
+      lineChar: 30
+      spanCodeSection: "color;\r\n    "
+    - startInstruction: 552
+      endInstruction: 551
+      startSourceChar: 1333
+      endSourceChar: 1333
+      line: 53
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 552
+      endInstruction: 551
+      startSourceChar: 1333
+      endSourceChar: 1333
+      line: 53
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 552
+      endInstruction: 551
+      startSourceChar: 1333
+      endSourceChar: 1333
+      line: 53
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 552
+      endInstruction: 551
+      startSourceChar: 1333
+      endSourceChar: 1348
+      line: 53
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 552
+      endInstruction: 551
+      startSourceChar: 1348
+      endSourceChar: 1367
+      line: 53
+      lineChar: 19
+      spanCodeSection: 'fogStartDistance = '
+    - startInstruction: 552
+      endInstruction: 567
+      startSourceChar: 1367
+      endSourceChar: 1379
+      line: 53
+      lineChar: 38
+      spanCodeSection: "start;\r\n    "
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1379
+      endSourceChar: 1379
+      line: 54
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1379
+      endSourceChar: 1379
+      line: 54
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1379
+      endSourceChar: 1379
+      line: 54
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1379
+      endSourceChar: 1394
+      line: 54
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 568
+      endInstruction: 567
+      startSourceChar: 1394
+      endSourceChar: 1411
+      line: 54
+      lineChar: 19
+      spanCodeSection: 'fogEndDistance = '
+    - startInstruction: 568
+      endInstruction: 603
+      startSourceChar: 1411
+      endSourceChar: 1426
+      line: 54
+      lineChar: 36
+      spanCodeSection: "end;\r\n  }\r\n\r\n  "
+    - startInstruction: 604
+      endInstruction: 603
+      startSourceChar: 1426
+      endSourceChar: 1447
+      line: 57
+      lineChar: 2
+      spanCodeSection: private void LerpFog(
+    - startInstruction: 604
+      endInstruction: 603
+      startSourceChar: 1447
+      endSourceChar: 1461
+      line: 57
+      lineChar: 23
+      spanCodeSection: 'Color sColor, '
+    - startInstruction: 604
+      endInstruction: 603
+      startSourceChar: 1461
+      endSourceChar: 1475
+      line: 57
+      lineChar: 37
+      spanCodeSection: 'Color eColor, '
+    - startInstruction: 604
+      endInstruction: 603
+      startSourceChar: 1475
+      endSourceChar: 1491
+      line: 57
+      lineChar: 51
+      spanCodeSection: 'float sDensity, '
+    - startInstruction: 604
+      endInstruction: 603
+      startSourceChar: 1491
+      endSourceChar: 1507
+      line: 57
+      lineChar: 67
+      spanCodeSection: 'float eDensity, '
+    - startInstruction: 604
+      endInstruction: 611
+      startSourceChar: 1507
+      endSourceChar: 1520
+      line: 57
+      lineChar: 83
+      spanCodeSection: 'float alpha) '
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1520
+      endSourceChar: 1527
+      line: 57
+      lineChar: 96
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1527
+      endSourceChar: 1527
+      line: 58
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1527
+      endSourceChar: 1527
+      line: 58
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1527
+      endSourceChar: 1527
+      line: 58
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1527
+      endSourceChar: 1542
+      line: 58
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1542
+      endSourceChar: 1553
+      line: 58
+      lineChar: 19
+      spanCodeSection: 'fogColor = '
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1553
+      endSourceChar: 1553
+      line: 58
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1553
+      endSourceChar: 1553
+      line: 58
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1553
+      endSourceChar: 1559
+      line: 58
+      lineChar: 30
+      spanCodeSection: Color.
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1559
+      endSourceChar: 1564
+      line: 58
+      lineChar: 36
+      spanCodeSection: Lerp(
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1564
+      endSourceChar: 1572
+      line: 58
+      lineChar: 41
+      spanCodeSection: 'sColor, '
+    - startInstruction: 612
+      endInstruction: 611
+      startSourceChar: 1572
+      endSourceChar: 1580
+      line: 58
+      lineChar: 49
+      spanCodeSection: 'eColor, '
+    - startInstruction: 612
+      endInstruction: 667
+      startSourceChar: 1580
+      endSourceChar: 1593
+      line: 58
+      lineChar: 57
+      spanCodeSection: "alpha);\r\n    "
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1593
+      endSourceChar: 1593
+      line: 59
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1593
+      endSourceChar: 1593
+      line: 59
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1593
+      endSourceChar: 1593
+      line: 59
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1593
+      endSourceChar: 1608
+      line: 59
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1608
+      endSourceChar: 1621
+      line: 59
+      lineChar: 19
+      spanCodeSection: 'fogDensity = '
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1621
+      endSourceChar: 1621
+      line: 59
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1621
+      endSourceChar: 1621
+      line: 59
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1621
+      endSourceChar: 1627
+      line: 59
+      lineChar: 32
+      spanCodeSection: Mathf.
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1627
+      endSourceChar: 1632
+      line: 59
+      lineChar: 38
+      spanCodeSection: Lerp(
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1632
+      endSourceChar: 1642
+      line: 59
+      lineChar: 43
+      spanCodeSection: 'sDensity, '
+    - startInstruction: 668
+      endInstruction: 667
+      startSourceChar: 1642
+      endSourceChar: 1652
+      line: 59
+      lineChar: 53
+      spanCodeSection: 'eDensity, '
+    - startInstruction: 668
+      endInstruction: 743
+      startSourceChar: 1652
+      endSourceChar: 1670
+      line: 59
+      lineChar: 63
+      spanCodeSection: "alpha);\r\n  }\r\n\r\n  "
+    - startInstruction: 744
+      endInstruction: 743
+      startSourceChar: 1670
+      endSourceChar: 1697
+      line: 62
+      lineChar: 2
+      spanCodeSection: private void LerpFogLinear(
+    - startInstruction: 744
+      endInstruction: 743
+      startSourceChar: 1697
+      endSourceChar: 1711
+      line: 62
+      lineChar: 29
+      spanCodeSection: 'Color sColor, '
+    - startInstruction: 744
+      endInstruction: 743
+      startSourceChar: 1711
+      endSourceChar: 1725
+      line: 62
+      lineChar: 43
+      spanCodeSection: 'Color eColor, '
+    - startInstruction: 744
+      endInstruction: 743
+      startSourceChar: 1725
+      endSourceChar: 1739
+      line: 62
+      lineChar: 57
+      spanCodeSection: 'float sStart, '
+    - startInstruction: 744
+      endInstruction: 743
+      startSourceChar: 1739
+      endSourceChar: 1753
+      line: 62
+      lineChar: 71
+      spanCodeSection: 'float eStart, '
+    - startInstruction: 744
+      endInstruction: 743
+      startSourceChar: 1753
+      endSourceChar: 1765
+      line: 62
+      lineChar: 85
+      spanCodeSection: 'float sEnd, '
+    - startInstruction: 744
+      endInstruction: 743
+      startSourceChar: 1765
+      endSourceChar: 1782
+      line: 62
+      lineChar: 97
+      spanCodeSection: "float eEnd,\r\n    "
+    - startInstruction: 744
+      endInstruction: 751
+      startSourceChar: 1782
+      endSourceChar: 1795
+      line: 63
+      lineChar: 4
+      spanCodeSection: 'float alpha) '
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1795
+      endSourceChar: 1802
+      line: 63
+      lineChar: 17
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1802
+      endSourceChar: 1802
+      line: 64
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1802
+      endSourceChar: 1802
+      line: 64
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1802
+      endSourceChar: 1802
+      line: 64
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1802
+      endSourceChar: 1817
+      line: 64
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1817
+      endSourceChar: 1828
+      line: 64
+      lineChar: 19
+      spanCodeSection: 'fogColor = '
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1828
+      endSourceChar: 1828
+      line: 64
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1828
+      endSourceChar: 1828
+      line: 64
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1828
+      endSourceChar: 1834
+      line: 64
+      lineChar: 30
+      spanCodeSection: Color.
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1834
+      endSourceChar: 1839
+      line: 64
+      lineChar: 36
+      spanCodeSection: Lerp(
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1839
+      endSourceChar: 1847
+      line: 64
+      lineChar: 41
+      spanCodeSection: 'sColor, '
+    - startInstruction: 752
+      endInstruction: 751
+      startSourceChar: 1847
+      endSourceChar: 1855
+      line: 64
+      lineChar: 49
+      spanCodeSection: 'eColor, '
+    - startInstruction: 752
+      endInstruction: 807
+      startSourceChar: 1855
+      endSourceChar: 1868
+      line: 64
+      lineChar: 57
+      spanCodeSection: "alpha);\r\n    "
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1868
+      endSourceChar: 1868
+      line: 65
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1868
+      endSourceChar: 1868
+      line: 65
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1868
+      endSourceChar: 1868
+      line: 65
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1868
+      endSourceChar: 1883
+      line: 65
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1883
+      endSourceChar: 1902
+      line: 65
+      lineChar: 19
+      spanCodeSection: 'fogStartDistance = '
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1902
+      endSourceChar: 1902
+      line: 65
+      lineChar: 38
+      spanCodeSection: 
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1902
+      endSourceChar: 1902
+      line: 65
+      lineChar: 38
+      spanCodeSection: 
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1902
+      endSourceChar: 1908
+      line: 65
+      lineChar: 38
+      spanCodeSection: Mathf.
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1908
+      endSourceChar: 1913
+      line: 65
+      lineChar: 44
+      spanCodeSection: Lerp(
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1913
+      endSourceChar: 1921
+      line: 65
+      lineChar: 49
+      spanCodeSection: 'sStart, '
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 1921
+      endSourceChar: 1929
+      line: 65
+      lineChar: 57
+      spanCodeSection: 'eStart, '
+    - startInstruction: 808
+      endInstruction: 863
+      startSourceChar: 1929
+      endSourceChar: 1942
+      line: 65
+      lineChar: 65
+      spanCodeSection: "alpha);\r\n    "
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1942
+      endSourceChar: 1942
+      line: 66
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1942
+      endSourceChar: 1942
+      line: 66
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1942
+      endSourceChar: 1942
+      line: 66
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1942
+      endSourceChar: 1957
+      line: 66
+      lineChar: 4
+      spanCodeSection: RenderSettings.
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1957
+      endSourceChar: 1974
+      line: 66
+      lineChar: 19
+      spanCodeSection: 'fogEndDistance = '
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1974
+      endSourceChar: 1974
+      line: 66
+      lineChar: 36
+      spanCodeSection: 
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1974
+      endSourceChar: 1974
+      line: 66
+      lineChar: 36
+      spanCodeSection: 
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1974
+      endSourceChar: 1980
+      line: 66
+      lineChar: 36
+      spanCodeSection: Mathf.
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1980
+      endSourceChar: 1985
+      line: 66
+      lineChar: 42
+      spanCodeSection: Lerp(
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1985
+      endSourceChar: 1991
+      line: 66
+      lineChar: 47
+      spanCodeSection: 'sEnd, '
+    - startInstruction: 864
+      endInstruction: 863
+      startSourceChar: 1991
+      endSourceChar: 1997
+      line: 66
+      lineChar: 53
+      spanCodeSection: 'eEnd, '
+    - startInstruction: 864
+      endInstruction: 939
+      startSourceChar: 1997
+      endSourceChar: 2015
+      line: 66
+      lineChar: 59
+      spanCodeSection: "alpha);\r\n  }\r\n\r\n  "
+    - startInstruction: 940
+      endInstruction: 947
+      startSourceChar: 2015
+      endSourceChar: 2041
+      line: 69
+      lineChar: 2
+      spanCodeSection: 'public void ActivateFog() '
+    - startInstruction: 948
+      endInstruction: 947
+      startSourceChar: 2041
+      endSourceChar: 2048
+      line: 69
+      lineChar: 28
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 948
+      endInstruction: 947
+      startSourceChar: 2048
+      endSourceChar: 2048
+      line: 70
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 948
+      endInstruction: 947
+      startSourceChar: 2048
+      endSourceChar: 2048
+      line: 70
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 948
+      endInstruction: 947
+      startSourceChar: 2048
+      endSourceChar: 2057
+      line: 70
+      lineChar: 4
+      spanCodeSection: 'active = '
+    - startInstruction: 948
+      endInstruction: 967
+      startSourceChar: 2057
+      endSourceChar: 2069
+      line: 70
+      lineChar: 13
+      spanCodeSection: "false;\r\n    "
+    - startInstruction: 968
+      endInstruction: 967
+      startSourceChar: 2069
+      endSourceChar: 2073
+      line: 71
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 968
+      endInstruction: 967
+      startSourceChar: 2073
+      endSourceChar: 2073
+      line: 71
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 968
+      endInstruction: 967
+      startSourceChar: 2073
+      endSourceChar: 2073
+      line: 71
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 968
+      endInstruction: 967
+      startSourceChar: 2073
+      endSourceChar: 2087
+      line: 71
+      lineChar: 8
+      spanCodeSection: 'fogFadeTime > '
+    - startInstruction: 968
+      endInstruction: 1059
+      startSourceChar: 2087
+      endSourceChar: 2092
+      line: 71
+      lineChar: 22
+      spanCodeSection: '0 && '
+    - startInstruction: 1060
+      endInstruction: 1059
+      startSourceChar: 2092
+      endSourceChar: 2093
+      line: 71
+      lineChar: 27
+      spanCodeSection: '!'
+    - startInstruction: 1060
+      endInstruction: 1151
+      startSourceChar: 2093
+      endSourceChar: 2102
+      line: 71
+      lineChar: 28
+      spanCodeSection: 'initial) '
+    - startInstruction: 1152
+      endInstruction: 1151
+      startSourceChar: 2102
+      endSourceChar: 2111
+      line: 71
+      lineChar: 37
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 1152
+      endInstruction: 1151
+      startSourceChar: 2111
+      endSourceChar: 2111
+      line: 72
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1152
+      endInstruction: 1151
+      startSourceChar: 2111
+      endSourceChar: 2111
+      line: 72
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1152
+      endInstruction: 1167
+      startSourceChar: 2111
+      endSourceChar: 2134
+      line: 72
+      lineChar: 6
+      spanCodeSection: "StartLerping();\r\n      "
+    - startInstruction: 1168
+      endInstruction: 1187
+      startSourceChar: 2134
+      endSourceChar: 2156
+      line: 73
+      lineChar: 6
+      spanCodeSection: "return;\r\n    }\r\n\r\n    "
+    - startInstruction: 1188
+      endInstruction: 1187
+      startSourceChar: 2156
+      endSourceChar: 2160
+      line: 76
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 1188
+      endInstruction: 1187
+      startSourceChar: 2160
+      endSourceChar: 2160
+      line: 76
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1188
+      endInstruction: 1187
+      startSourceChar: 2160
+      endSourceChar: 2168
+      line: 76
+      lineChar: 8
+      spanCodeSection: 'mode == '
+    - startInstruction: 1188
+      endInstruction: 1187
+      startSourceChar: 2168
+      endSourceChar: 2168
+      line: 76
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 1188
+      endInstruction: 1187
+      startSourceChar: 2168
+      endSourceChar: 2176
+      line: 76
+      lineChar: 16
+      spanCodeSection: FogMode.
+    - startInstruction: 1188
+      endInstruction: 1235
+      startSourceChar: 2176
+      endSourceChar: 2184
+      line: 76
+      lineChar: 24
+      spanCodeSection: 'Linear) '
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2184
+      endSourceChar: 2193
+      line: 76
+      lineChar: 32
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2193
+      endSourceChar: 2193
+      line: 77
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2193
+      endSourceChar: 2193
+      line: 77
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2193
+      endSourceChar: 2206
+      line: 77
+      lineChar: 6
+      spanCodeSection: SetFogLinear(
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2206
+      endSourceChar: 2222
+      line: 77
+      lineChar: 19
+      spanCodeSection: 'activeFogColor, '
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2222
+      endSourceChar: 2238
+      line: 77
+      lineChar: 35
+      spanCodeSection: 'activeFogStart, '
+    - startInstruction: 1236
+      endInstruction: 1379
+      startSourceChar: 2238
+      endSourceChar: 2265
+      line: 77
+      lineChar: 51
+      spanCodeSection: "activeFogEnd);\r\n    }\r\n    "
+    - startInstruction: 1380
+      endInstruction: 1379
+      startSourceChar: 2265
+      endSourceChar: 2270
+      line: 79
+      lineChar: 4
+      spanCodeSection: 'else '
+    - startInstruction: 1380
+      endInstruction: 1379
+      startSourceChar: 2270
+      endSourceChar: 2279
+      line: 79
+      lineChar: 9
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 1380
+      endInstruction: 1379
+      startSourceChar: 2279
+      endSourceChar: 2279
+      line: 80
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1380
+      endInstruction: 1379
+      startSourceChar: 2279
+      endSourceChar: 2279
+      line: 80
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1380
+      endInstruction: 1379
+      startSourceChar: 2279
+      endSourceChar: 2286
+      line: 80
+      lineChar: 6
+      spanCodeSection: SetFog(
+    - startInstruction: 1380
+      endInstruction: 1379
+      startSourceChar: 2286
+      endSourceChar: 2302
+      line: 80
+      lineChar: 13
+      spanCodeSection: 'activeFogColor, '
+    - startInstruction: 1380
+      endInstruction: 1475
+      startSourceChar: 2302
+      endSourceChar: 2335
+      line: 80
+      lineChar: 29
+      spanCodeSection: "activeFogDensity);\r\n    }\r\n\r\n    "
+    - startInstruction: 1476
+      endInstruction: 1475
+      startSourceChar: 2335
+      endSourceChar: 2339
+      line: 83
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 1476
+      endInstruction: 1491
+      startSourceChar: 2339
+      endSourceChar: 2348
+      line: 83
+      lineChar: 8
+      spanCodeSection: 'initial) '
+    - startInstruction: 1492
+      endInstruction: 1491
+      startSourceChar: 2348
+      endSourceChar: 2357
+      line: 83
+      lineChar: 17
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 1492
+      endInstruction: 1491
+      startSourceChar: 2357
+      endSourceChar: 2357
+      line: 84
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1492
+      endInstruction: 1491
+      startSourceChar: 2357
+      endSourceChar: 2357
+      line: 84
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1492
+      endInstruction: 1491
+      startSourceChar: 2357
+      endSourceChar: 2367
+      line: 84
+      lineChar: 6
+      spanCodeSection: 'initial = '
+    - startInstruction: 1492
+      endInstruction: 1511
+      startSourceChar: 2367
+      endSourceChar: 2388
+      line: 84
+      lineChar: 16
+      spanCodeSection: "false;\r\n    }\r\n\r\n    "
+    - startInstruction: 1512
+      endInstruction: 1511
+      startSourceChar: 2388
+      endSourceChar: 2388
+      line: 87
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 1512
+      endInstruction: 1511
+      startSourceChar: 2388
+      endSourceChar: 2388
+      line: 87
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 1512
+      endInstruction: 1511
+      startSourceChar: 2388
+      endSourceChar: 2397
+      line: 87
+      lineChar: 4
+      spanCodeSection: 'active = '
+    - startInstruction: 1512
+      endInstruction: 1551
+      startSourceChar: 2397
+      endSourceChar: 2413
+      line: 87
+      lineChar: 13
+      spanCodeSection: "true;\r\n  }\r\n\r\n  "
+    - startInstruction: 1552
+      endInstruction: 1559
+      startSourceChar: 2413
+      endSourceChar: 2441
+      line: 90
+      lineChar: 2
+      spanCodeSection: 'public void DeactivateFog() '
+    - startInstruction: 1560
+      endInstruction: 1559
+      startSourceChar: 2441
+      endSourceChar: 2448
+      line: 90
+      lineChar: 30
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 1560
+      endInstruction: 1559
+      startSourceChar: 2448
+      endSourceChar: 2448
+      line: 91
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 1560
+      endInstruction: 1559
+      startSourceChar: 2448
+      endSourceChar: 2448
+      line: 91
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 1560
+      endInstruction: 1559
+      startSourceChar: 2448
+      endSourceChar: 2457
+      line: 91
+      lineChar: 4
+      spanCodeSection: 'active = '
+    - startInstruction: 1560
+      endInstruction: 1579
+      startSourceChar: 2457
+      endSourceChar: 2468
+      line: 91
+      lineChar: 13
+      spanCodeSection: "true;\r\n    "
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2468
+      endSourceChar: 2472
+      line: 92
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2472
+      endSourceChar: 2472
+      line: 92
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2472
+      endSourceChar: 2472
+      line: 92
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2472
+      endSourceChar: 2486
+      line: 92
+      lineChar: 8
+      spanCodeSection: 'fogFadeTime > '
+    - startInstruction: 1580
+      endInstruction: 1671
+      startSourceChar: 2486
+      endSourceChar: 2491
+      line: 92
+      lineChar: 22
+      spanCodeSection: '0 && '
+    - startInstruction: 1672
+      endInstruction: 1671
+      startSourceChar: 2491
+      endSourceChar: 2492
+      line: 92
+      lineChar: 27
+      spanCodeSection: '!'
+    - startInstruction: 1672
+      endInstruction: 1763
+      startSourceChar: 2492
+      endSourceChar: 2501
+      line: 92
+      lineChar: 28
+      spanCodeSection: 'initial) '
+    - startInstruction: 1764
+      endInstruction: 1763
+      startSourceChar: 2501
+      endSourceChar: 2510
+      line: 92
+      lineChar: 37
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 1764
+      endInstruction: 1763
+      startSourceChar: 2510
+      endSourceChar: 2510
+      line: 93
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1764
+      endInstruction: 1763
+      startSourceChar: 2510
+      endSourceChar: 2510
+      line: 93
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1764
+      endInstruction: 1779
+      startSourceChar: 2510
+      endSourceChar: 2533
+      line: 93
+      lineChar: 6
+      spanCodeSection: "StartLerping();\r\n      "
+    - startInstruction: 1780
+      endInstruction: 1799
+      startSourceChar: 2533
+      endSourceChar: 2555
+      line: 94
+      lineChar: 6
+      spanCodeSection: "return;\r\n    }\r\n\r\n    "
+    - startInstruction: 1800
+      endInstruction: 1799
+      startSourceChar: 2555
+      endSourceChar: 2559
+      line: 97
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 1800
+      endInstruction: 1799
+      startSourceChar: 2559
+      endSourceChar: 2559
+      line: 97
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1800
+      endInstruction: 1799
+      startSourceChar: 2559
+      endSourceChar: 2567
+      line: 97
+      lineChar: 8
+      spanCodeSection: 'mode == '
+    - startInstruction: 1800
+      endInstruction: 1799
+      startSourceChar: 2567
+      endSourceChar: 2567
+      line: 97
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 1800
+      endInstruction: 1799
+      startSourceChar: 2567
+      endSourceChar: 2575
+      line: 97
+      lineChar: 16
+      spanCodeSection: FogMode.
+    - startInstruction: 1800
+      endInstruction: 1847
+      startSourceChar: 2575
+      endSourceChar: 2583
+      line: 97
+      lineChar: 24
+      spanCodeSection: 'Linear) '
+    - startInstruction: 1848
+      endInstruction: 1847
+      startSourceChar: 2583
+      endSourceChar: 2592
+      line: 97
+      lineChar: 32
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 1848
+      endInstruction: 1847
+      startSourceChar: 2592
+      endSourceChar: 2592
+      line: 98
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1848
+      endInstruction: 1847
+      startSourceChar: 2592
+      endSourceChar: 2592
+      line: 98
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1848
+      endInstruction: 1847
+      startSourceChar: 2592
+      endSourceChar: 2605
+      line: 98
+      lineChar: 6
+      spanCodeSection: SetFogLinear(
+    - startInstruction: 1848
+      endInstruction: 1847
+      startSourceChar: 2605
+      endSourceChar: 2622
+      line: 98
+      lineChar: 19
+      spanCodeSection: 'defaultFogColor, '
+    - startInstruction: 1848
+      endInstruction: 1847
+      startSourceChar: 2622
+      endSourceChar: 2639
+      line: 98
+      lineChar: 36
+      spanCodeSection: 'defaultFogStart, '
+    - startInstruction: 1848
+      endInstruction: 1991
+      startSourceChar: 2639
+      endSourceChar: 2667
+      line: 98
+      lineChar: 53
+      spanCodeSection: "defaultFogEnd);\r\n    }\r\n    "
+    - startInstruction: 1992
+      endInstruction: 1991
+      startSourceChar: 2667
+      endSourceChar: 2672
+      line: 100
+      lineChar: 4
+      spanCodeSection: 'else '
+    - startInstruction: 1992
+      endInstruction: 1991
+      startSourceChar: 2672
+      endSourceChar: 2681
+      line: 100
+      lineChar: 9
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 1992
+      endInstruction: 1991
+      startSourceChar: 2681
+      endSourceChar: 2681
+      line: 101
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1992
+      endInstruction: 1991
+      startSourceChar: 2681
+      endSourceChar: 2681
+      line: 101
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 1992
+      endInstruction: 1991
+      startSourceChar: 2681
+      endSourceChar: 2688
+      line: 101
+      lineChar: 6
+      spanCodeSection: SetFog(
+    - startInstruction: 1992
+      endInstruction: 1991
+      startSourceChar: 2688
+      endSourceChar: 2705
+      line: 101
+      lineChar: 13
+      spanCodeSection: 'defaultFogColor, '
+    - startInstruction: 1992
+      endInstruction: 2087
+      startSourceChar: 2705
+      endSourceChar: 2739
+      line: 101
+      lineChar: 30
+      spanCodeSection: "defaultFogDensity);\r\n    }\r\n\r\n    "
+    - startInstruction: 2088
+      endInstruction: 2087
+      startSourceChar: 2739
+      endSourceChar: 2743
+      line: 104
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 2088
+      endInstruction: 2103
+      startSourceChar: 2743
+      endSourceChar: 2752
+      line: 104
+      lineChar: 8
+      spanCodeSection: 'initial) '
+    - startInstruction: 2104
+      endInstruction: 2103
+      startSourceChar: 2752
+      endSourceChar: 2761
+      line: 104
+      lineChar: 17
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 2104
+      endInstruction: 2103
+      startSourceChar: 2761
+      endSourceChar: 2761
+      line: 105
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 2104
+      endInstruction: 2103
+      startSourceChar: 2761
+      endSourceChar: 2761
+      line: 105
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 2104
+      endInstruction: 2103
+      startSourceChar: 2761
+      endSourceChar: 2771
+      line: 105
+      lineChar: 6
+      spanCodeSection: 'initial = '
+    - startInstruction: 2104
+      endInstruction: 2123
+      startSourceChar: 2771
+      endSourceChar: 2792
+      line: 105
+      lineChar: 16
+      spanCodeSection: "false;\r\n    }\r\n\r\n    "
+    - startInstruction: 2124
+      endInstruction: 2123
+      startSourceChar: 2792
+      endSourceChar: 2792
+      line: 108
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 2124
+      endInstruction: 2123
+      startSourceChar: 2792
+      endSourceChar: 2792
+      line: 108
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 2124
+      endInstruction: 2123
+      startSourceChar: 2792
+      endSourceChar: 2801
+      line: 108
+      lineChar: 4
+      spanCodeSection: 'active = '
+    - startInstruction: 2124
+      endInstruction: 2163
+      startSourceChar: 2801
+      endSourceChar: 2818
+      line: 108
+      lineChar: 13
+      spanCodeSection: "false;\r\n  }\r\n\r\n  "
+    - startInstruction: 2164
+      endInstruction: 2171
+      startSourceChar: 2818
+      endSourceChar: 2840
+      line: 111
+      lineChar: 2
+      spanCodeSection: 'public void Trigger() '
+    - startInstruction: 2172
+      endInstruction: 2171
+      startSourceChar: 2840
+      endSourceChar: 2847
+      line: 111
+      lineChar: 24
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 2172
+      endInstruction: 2171
+      startSourceChar: 2847
+      endSourceChar: 2851
+      line: 112
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 2172
+      endInstruction: 2171
+      startSourceChar: 2851
+      endSourceChar: 2851
+      line: 112
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2172
+      endInstruction: 2171
+      startSourceChar: 2851
+      endSourceChar: 2865
+      line: 112
+      lineChar: 8
+      spanCodeSection: 'fogFadeTime > '
+    - startInstruction: 2172
+      endInstruction: 2243
+      startSourceChar: 2865
+      endSourceChar: 2868
+      line: 112
+      lineChar: 22
+      spanCodeSection: '0) '
+    - startInstruction: 2244
+      endInstruction: 2243
+      startSourceChar: 2868
+      endSourceChar: 2877
+      line: 112
+      lineChar: 25
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 2244
+      endInstruction: 2243
+      startSourceChar: 2877
+      endSourceChar: 2877
+      line: 113
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 2244
+      endInstruction: 2243
+      startSourceChar: 2877
+      endSourceChar: 2877
+      line: 113
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 2244
+      endInstruction: 2259
+      startSourceChar: 2877
+      endSourceChar: 2900
+      line: 113
+      lineChar: 6
+      spanCodeSection: "StartLerping();\r\n      "
+    - startInstruction: 2260
+      endInstruction: 2279
+      startSourceChar: 2900
+      endSourceChar: 2922
+      line: 114
+      lineChar: 6
+      spanCodeSection: "return;\r\n    }\r\n\r\n    "
+    - startInstruction: 2280
+      endInstruction: 2279
+      startSourceChar: 2922
+      endSourceChar: 2926
+      line: 117
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 2280
+      endInstruction: 2295
+      startSourceChar: 2926
+      endSourceChar: 2934
+      line: 117
+      lineChar: 8
+      spanCodeSection: 'active) '
+    - startInstruction: 2296
+      endInstruction: 2295
+      startSourceChar: 2934
+      endSourceChar: 2943
+      line: 117
+      lineChar: 16
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 2296
+      endInstruction: 2295
+      startSourceChar: 2943
+      endSourceChar: 2943
+      line: 118
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 2296
+      endInstruction: 2295
+      startSourceChar: 2943
+      endSourceChar: 2943
+      line: 118
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 2296
+      endInstruction: 2311
+      startSourceChar: 2943
+      endSourceChar: 2967
+      line: 118
+      lineChar: 6
+      spanCodeSection: "DeactivateFog();\r\n      "
+    - startInstruction: 2312
+      endInstruction: 2331
+      startSourceChar: 2967
+      endSourceChar: 2989
+      line: 119
+      lineChar: 6
+      spanCodeSection: "return;\r\n    }\r\n\r\n    "
+    - startInstruction: 2332
+      endInstruction: 2331
+      startSourceChar: 2989
+      endSourceChar: 2989
+      line: 122
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 2332
+      endInstruction: 2331
+      startSourceChar: 2989
+      endSourceChar: 2989
+      line: 122
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 2332
+      endInstruction: 2367
+      startSourceChar: 2989
+      endSourceChar: 3014
+      line: 122
+      lineChar: 4
+      spanCodeSection: "ActivateFog();\r\n  }\r\n\r\n  "
+    - startInstruction: 2368
+      endInstruction: 2375
+      startSourceChar: 3014
+      endSourceChar: 3036
+      line: 125
+      lineChar: 2
+      spanCodeSection: 'private void Update() '
+    - startInstruction: 2376
+      endInstruction: 2375
+      startSourceChar: 3036
+      endSourceChar: 3043
+      line: 125
+      lineChar: 24
+      spanCodeSection: "{\r\n    "
+    - startInstruction: 2376
+      endInstruction: 2375
+      startSourceChar: 3043
+      endSourceChar: 3047
+      line: 126
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 2376
+      endInstruction: 2375
+      startSourceChar: 3047
+      endSourceChar: 3048
+      line: 126
+      lineChar: 8
+      spanCodeSection: '!'
+    - startInstruction: 2376
+      endInstruction: 2415
+      startSourceChar: 3048
+      endSourceChar: 3057
+      line: 126
+      lineChar: 9
+      spanCodeSection: 'lerping) '
+    - startInstruction: 2416
+      endInstruction: 2435
+      startSourceChar: 3057
+      endSourceChar: 3070
+      line: 126
+      lineChar: 18
+      spanCodeSection: "return;\r\n    "
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3070
+      endSourceChar: 3070
+      line: 127
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3070
+      endSourceChar: 3070
+      line: 127
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3070
+      endSourceChar: 3080
+      line: 127
+      lineChar: 4
+      spanCodeSection: 'var alpha '
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3080
+      endSourceChar: 3082
+      line: 127
+      lineChar: 14
+      spanCodeSection: '= '
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3082
+      endSourceChar: 3082
+      line: 127
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3082
+      endSourceChar: 3083
+      line: 127
+      lineChar: 16
+      spanCodeSection: (
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3083
+      endSourceChar: 3083
+      line: 127
+      lineChar: 17
+      spanCodeSection: 
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3083
+      endSourceChar: 3083
+      line: 127
+      lineChar: 17
+      spanCodeSection: 
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3083
+      endSourceChar: 3088
+      line: 127
+      lineChar: 17
+      spanCodeSection: Time.
+    - startInstruction: 2436
+      endInstruction: 2451
+      startSourceChar: 3088
+      endSourceChar: 3095
+      line: 127
+      lineChar: 22
+      spanCodeSection: 'time - '
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3095
+      endSourceChar: 3096
+      line: 127
+      lineChar: 29
+      spanCodeSection: (
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3096
+      endSourceChar: 3096
+      line: 127
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3096
+      endSourceChar: 3106
+      line: 127
+      lineChar: 30
+      spanCodeSection: 'lerpEnd - '
+    - startInstruction: 2452
+      endInstruction: 2515
+      startSourceChar: 3106
+      endSourceChar: 3122
+      line: 127
+      lineChar: 40
+      spanCodeSection: 'fogFadeTime)) / '
+    - startInstruction: 2516
+      endInstruction: 2567
+      startSourceChar: 3122
+      endSourceChar: 3181
+      line: 127
+      lineChar: 56
+      spanCodeSection: "fogFadeTime;\r\n    // if currently active - lerp down;\r\n
+        \   "
+    - startInstruction: 2568
+      endInstruction: 2567
+      startSourceChar: 3181
+      endSourceChar: 3185
+      line: 129
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 2568
+      endInstruction: 2583
+      startSourceChar: 3185
+      endSourceChar: 3193
+      line: 129
+      lineChar: 8
+      spanCodeSection: 'active) '
+    - startInstruction: 2584
+      endInstruction: 2583
+      startSourceChar: 3193
+      endSourceChar: 3202
+      line: 129
+      lineChar: 16
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 2584
+      endInstruction: 2583
+      startSourceChar: 3202
+      endSourceChar: 3206
+      line: 130
+      lineChar: 6
+      spanCodeSection: if (
+    - startInstruction: 2584
+      endInstruction: 2583
+      startSourceChar: 3206
+      endSourceChar: 3206
+      line: 130
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 2584
+      endInstruction: 2583
+      startSourceChar: 3206
+      endSourceChar: 3214
+      line: 130
+      lineChar: 10
+      spanCodeSection: 'mode == '
+    - startInstruction: 2584
+      endInstruction: 2583
+      startSourceChar: 3214
+      endSourceChar: 3214
+      line: 130
+      lineChar: 18
+      spanCodeSection: 
+    - startInstruction: 2584
+      endInstruction: 2583
+      startSourceChar: 3214
+      endSourceChar: 3222
+      line: 130
+      lineChar: 18
+      spanCodeSection: FogMode.
+    - startInstruction: 2584
+      endInstruction: 2631
+      startSourceChar: 3222
+      endSourceChar: 3230
+      line: 130
+      lineChar: 26
+      spanCodeSection: 'Linear) '
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3230
+      endSourceChar: 3241
+      line: 130
+      lineChar: 34
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3241
+      endSourceChar: 3241
+      line: 131
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3241
+      endSourceChar: 3241
+      line: 131
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3241
+      endSourceChar: 3255
+      line: 131
+      lineChar: 8
+      spanCodeSection: LerpFogLinear(
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3255
+      endSourceChar: 3271
+      line: 131
+      lineChar: 22
+      spanCodeSection: 'activeFogColor, '
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3271
+      endSourceChar: 3288
+      line: 131
+      lineChar: 38
+      spanCodeSection: 'defaultFogColor, '
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3288
+      endSourceChar: 3304
+      line: 131
+      lineChar: 55
+      spanCodeSection: 'activeFogStart, '
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3304
+      endSourceChar: 3321
+      line: 131
+      lineChar: 71
+      spanCodeSection: 'defaultFogStart, '
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3321
+      endSourceChar: 3335
+      line: 131
+      lineChar: 88
+      spanCodeSection: 'activeFogEnd, '
+    - startInstruction: 2632
+      endInstruction: 2631
+      startSourceChar: 3335
+      endSourceChar: 3361
+      line: 131
+      lineChar: 102
+      spanCodeSection: "defaultFogEnd,\r\n          "
+    - startInstruction: 2632
+      endInstruction: 2915
+      startSourceChar: 3361
+      endSourceChar: 3385
+      line: 132
+      lineChar: 10
+      spanCodeSection: "alpha);\r\n      }\r\n      "
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3385
+      endSourceChar: 3390
+      line: 134
+      lineChar: 6
+      spanCodeSection: 'else '
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3390
+      endSourceChar: 3401
+      line: 134
+      lineChar: 11
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3401
+      endSourceChar: 3401
+      line: 135
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3401
+      endSourceChar: 3401
+      line: 135
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3401
+      endSourceChar: 3409
+      line: 135
+      lineChar: 8
+      spanCodeSection: LerpFog(
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3409
+      endSourceChar: 3425
+      line: 135
+      lineChar: 16
+      spanCodeSection: 'activeFogColor, '
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3425
+      endSourceChar: 3442
+      line: 135
+      lineChar: 32
+      spanCodeSection: 'defaultFogColor, '
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3442
+      endSourceChar: 3460
+      line: 135
+      lineChar: 49
+      spanCodeSection: 'activeFogDensity, '
+    - startInstruction: 2916
+      endInstruction: 2915
+      startSourceChar: 3460
+      endSourceChar: 3479
+      line: 135
+      lineChar: 67
+      spanCodeSection: 'defaultFogDensity, '
+    - startInstruction: 2916
+      endInstruction: 3119
+      startSourceChar: 3479
+      endSourceChar: 3532
+      line: 135
+      lineChar: 86
+      spanCodeSection: "alpha);\r\n      }\r\n    } // otherwise - lerp up;\r\n    "
+    - startInstruction: 3120
+      endInstruction: 3119
+      startSourceChar: 3532
+      endSourceChar: 3537
+      line: 138
+      lineChar: 4
+      spanCodeSection: 'else '
+    - startInstruction: 3120
+      endInstruction: 3119
+      startSourceChar: 3537
+      endSourceChar: 3546
+      line: 138
+      lineChar: 9
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 3120
+      endInstruction: 3119
+      startSourceChar: 3546
+      endSourceChar: 3550
+      line: 139
+      lineChar: 6
+      spanCodeSection: if (
+    - startInstruction: 3120
+      endInstruction: 3119
+      startSourceChar: 3550
+      endSourceChar: 3550
+      line: 139
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 3120
+      endInstruction: 3119
+      startSourceChar: 3550
+      endSourceChar: 3558
+      line: 139
+      lineChar: 10
+      spanCodeSection: 'mode == '
+    - startInstruction: 3120
+      endInstruction: 3119
+      startSourceChar: 3558
+      endSourceChar: 3558
+      line: 139
+      lineChar: 18
+      spanCodeSection: 
+    - startInstruction: 3120
+      endInstruction: 3119
+      startSourceChar: 3558
+      endSourceChar: 3566
+      line: 139
+      lineChar: 18
+      spanCodeSection: FogMode.
+    - startInstruction: 3120
+      endInstruction: 3167
+      startSourceChar: 3566
+      endSourceChar: 3574
+      line: 139
+      lineChar: 26
+      spanCodeSection: 'Linear) '
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3574
+      endSourceChar: 3585
+      line: 139
+      lineChar: 34
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3585
+      endSourceChar: 3585
+      line: 140
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3585
+      endSourceChar: 3585
+      line: 140
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3585
+      endSourceChar: 3599
+      line: 140
+      lineChar: 8
+      spanCodeSection: LerpFogLinear(
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3599
+      endSourceChar: 3616
+      line: 140
+      lineChar: 22
+      spanCodeSection: 'defaultFogColor, '
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3616
+      endSourceChar: 3632
+      line: 140
+      lineChar: 39
+      spanCodeSection: 'activeFogColor, '
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3632
+      endSourceChar: 3649
+      line: 140
+      lineChar: 55
+      spanCodeSection: 'defaultFogStart, '
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3649
+      endSourceChar: 3665
+      line: 140
+      lineChar: 72
+      spanCodeSection: 'activeFogStart, '
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3665
+      endSourceChar: 3680
+      line: 140
+      lineChar: 88
+      spanCodeSection: 'defaultFogEnd, '
+    - startInstruction: 3168
+      endInstruction: 3167
+      startSourceChar: 3680
+      endSourceChar: 3705
+      line: 140
+      lineChar: 103
+      spanCodeSection: "activeFogEnd,\r\n          "
+    - startInstruction: 3168
+      endInstruction: 3451
+      startSourceChar: 3705
+      endSourceChar: 3729
+      line: 141
+      lineChar: 10
+      spanCodeSection: "alpha);\r\n      }\r\n      "
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3729
+      endSourceChar: 3734
+      line: 143
+      lineChar: 6
+      spanCodeSection: 'else '
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3734
+      endSourceChar: 3745
+      line: 143
+      lineChar: 11
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3745
+      endSourceChar: 3745
+      line: 144
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3745
+      endSourceChar: 3745
+      line: 144
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3745
+      endSourceChar: 3753
+      line: 144
+      lineChar: 8
+      spanCodeSection: LerpFog(
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3753
+      endSourceChar: 3770
+      line: 144
+      lineChar: 16
+      spanCodeSection: 'defaultFogColor, '
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3770
+      endSourceChar: 3786
+      line: 144
+      lineChar: 33
+      spanCodeSection: 'activeFogColor, '
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3786
+      endSourceChar: 3805
+      line: 144
+      lineChar: 49
+      spanCodeSection: 'defaultFogDensity, '
+    - startInstruction: 3452
+      endInstruction: 3451
+      startSourceChar: 3805
+      endSourceChar: 3823
+      line: 144
+      lineChar: 68
+      spanCodeSection: 'activeFogDensity, '
+    - startInstruction: 3452
+      endInstruction: 3647
+      startSourceChar: 3823
+      endSourceChar: 3854
+      line: 144
+      lineChar: 86
+      spanCodeSection: "alpha);\r\n      }\r\n    }\r\n\r\n    "
+    - startInstruction: 3648
+      endInstruction: 3647
+      startSourceChar: 3854
+      endSourceChar: 3858
+      line: 148
+      lineChar: 4
+      spanCodeSection: if (
+    - startInstruction: 3648
+      endInstruction: 3647
+      startSourceChar: 3858
+      endSourceChar: 3859
+      line: 148
+      lineChar: 8
+      spanCodeSection: '!'
+    - startInstruction: 3648
+      endInstruction: 3647
+      startSourceChar: 3859
+      endSourceChar: 3860
+      line: 148
+      lineChar: 9
+      spanCodeSection: (
+    - startInstruction: 3648
+      endInstruction: 3647
+      startSourceChar: 3860
+      endSourceChar: 3860
+      line: 148
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 3648
+      endInstruction: 3647
+      startSourceChar: 3860
+      endSourceChar: 3860
+      line: 148
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 3648
+      endInstruction: 3647
+      startSourceChar: 3860
+      endSourceChar: 3865
+      line: 148
+      lineChar: 10
+      spanCodeSection: Time.
+    - startInstruction: 3648
+      endInstruction: 3663
+      startSourceChar: 3865
+      endSourceChar: 3872
+      line: 148
+      lineChar: 15
+      spanCodeSection: 'time > '
+    - startInstruction: 3664
+      endInstruction: 3735
+      startSourceChar: 3872
+      endSourceChar: 3882
+      line: 148
+      lineChar: 22
+      spanCodeSection: 'lerpEnd)) '
+    - startInstruction: 3736
+      endInstruction: 3755
+      startSourceChar: 3882
+      endSourceChar: 3895
+      line: 148
+      lineChar: 32
+      spanCodeSection: "return;\r\n    "
+    - startInstruction: 3756
+      endInstruction: 3755
+      startSourceChar: 3895
+      endSourceChar: 3895
+      line: 149
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 3756
+      endInstruction: 3755
+      startSourceChar: 3895
+      endSourceChar: 3895
+      line: 149
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 3756
+      endInstruction: 3755
+      startSourceChar: 3895
+      endSourceChar: 3905
+      line: 149
+      lineChar: 4
+      spanCodeSection: 'lerping = '
+    - startInstruction: 3756
+      endInstruction: 3775
+      startSourceChar: 3905
+      endSourceChar: 3917
+      line: 149
+      lineChar: 14
+      spanCodeSection: "false;\r\n    "
+    - startInstruction: 3776
+      endInstruction: 3775
+      startSourceChar: 3917
+      endSourceChar: 3917
+      line: 150
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 3776
+      endInstruction: 3775
+      startSourceChar: 3917
+      endSourceChar: 3917
+      line: 150
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 3776
+      endInstruction: 3775
+      startSourceChar: 3917
+      endSourceChar: 3926
+      line: 150
+      lineChar: 4
+      spanCodeSection: 'active = '
+    - startInstruction: 3776
+      endInstruction: 3775
+      startSourceChar: 3926
+      endSourceChar: 3927
+      line: 150
+      lineChar: 13
+      spanCodeSection: '!'
+    - startInstruction: 3776
+      endInstruction: 3776
+      startSourceChar: 3927
+      endSourceChar: 3927
+      line: 150
+      lineChar: 14
+      spanCodeSection: 
+  hasInteractEvent: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: fieldDefinitions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+        UdonSharp.Editor]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 17
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: defaultFogColor
+    - Name: $v
+      Entry: 7
+      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineColor
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: defaultFogColor
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: defaultFogColor
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: defaultFogDensity
+    - Name: $v
+      Entry: 7
+      Data: 6|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 7|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 8|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Single, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: defaultFogDensity
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: defaultFogDensity
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: defaultFogStart
+    - Name: $v
+      Entry: 7
+      Data: 10|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 11|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: defaultFogStart
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: defaultFogStart
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 12|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: defaultFogEnd
+    - Name: $v
+      Entry: 7
+      Data: 13|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 14|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: defaultFogEnd
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: defaultFogEnd
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: activeFogColor
+    - Name: $v
+      Entry: 7
+      Data: 16|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 17|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineColor
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: activeFogColor
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: activeFogColor
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 18|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: activeFogDensity
+    - Name: $v
+      Entry: 7
+      Data: 19|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 20|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: activeFogDensity
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: activeFogDensity
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: activeFogStart
+    - Name: $v
+      Entry: 7
+      Data: 22|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 23|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: activeFogStart
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: activeFogStart
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 24|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: activeFogEnd
+    - Name: $v
+      Entry: 7
+      Data: 25|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 26|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: activeFogEnd
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: activeFogEnd
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 27|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: fogFadeTime
+    - Name: $v
+      Entry: 7
+      Data: 28|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 29|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: fogFadeTime
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: fogFadeTime
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 30|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: startActive
+    - Name: $v
+      Entry: 7
+      Data: 31|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 32|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 33|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Boolean, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: startActive
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: startActive
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 34|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: setInitialState
+    - Name: $v
+      Entry: 7
+      Data: 35|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 36|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 33
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: setInitialState
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: setInitialState
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 37|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: mode
+    - Name: $v
+      Entry: 7
+      Data: 38|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 39|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 40|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.FogMode, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineFogMode
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: mode
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: mode
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 41|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: active
+    - Name: $v
+      Entry: 7
+      Data: 42|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 43|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 33
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: active
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: active
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 44|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: initial
+    - Name: $v
+      Entry: 7
+      Data: 45|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 46|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 33
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: initial
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: initial
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 47|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: lerping
+    - Name: $v
+      Entry: 7
+      Data: 48|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 49|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 33
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: lerping
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: lerping
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 50|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: lerpEnd
+    - Name: $v
+      Entry: 7
+      Data: 51|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 52|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: lerpEnd
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: lerpEnd
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 53|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: player
+    - Name: $v
+      Entry: 7
+      Data: 54|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 55|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 56|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: VRC.SDKBase.VRCPlayerApi, VRCSDKBase
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: VRCSDKBaseVRCPlayerApi
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: player
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: player
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 57|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
