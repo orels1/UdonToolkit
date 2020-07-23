@@ -19,12 +19,12 @@ MonoBehaviour:
     \   .export defaultVector3Names\n    .export defaultVector3Values\n    .export
     activeSkybox\n    .export activeFloatNames\n    .export activeFloatValues\n    .export
     activeColorNames\n    .export activeColorValues\n    .export activeVector3Names\n
-    \   .export activeVector3Values\n    .export instantTransition\n    .export lerpTime\n\n
+    \   .export activeVector3Values\n    .export instantTransition\n    .export transitionTime\n\n
     \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:
     %SystemString, null\n    instantTransition: %SystemBoolean, null\n    activeColorValues:
     %UnityEngineColorArray, null\n    defaultColorValues: %UnityEngineColorArray,
     null\n    activeSkybox: %UnityEngineMaterial, null\n    defaultSkybox: %UnityEngineMaterial,
-    null\n    lerpTime: %SystemSingle, null\n    activeFloatValues: %SystemSingleArray,
+    null\n    transitionTime: %SystemSingle, null\n    activeFloatValues: %SystemSingleArray,
     null\n    defaultFloatValues: %SystemSingleArray, null\n    activeColorNames:
     %SystemStringArray, null\n    activeFloatNames: %SystemStringArray, null\n    activeVector3Names:
     %SystemStringArray, null\n    defaultColorNames: %SystemStringArray, null\n    defaultFloatNames:
@@ -51,6 +51,8 @@ MonoBehaviour:
     \   __0_const_intnl_SystemUInt32: %SystemUInt32, null\n    __1_const_intnl_exitJumpLoc_UInt32:
     %SystemUInt32, null\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
     \   __0_intnl_SystemBoolean: %SystemBoolean, null\n    __1_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __10_intnl_SystemBoolean: %SystemBoolean, null\n    __11_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __12_intnl_SystemBoolean: %SystemBoolean, null\n    __13_intnl_SystemBoolean:
     %SystemBoolean, null\n    __2_intnl_SystemBoolean: %SystemBoolean, null\n    __3_intnl_SystemBoolean:
     %SystemBoolean, null\n    __4_intnl_SystemBoolean: %SystemBoolean, null\n    __5_intnl_SystemBoolean:
     %SystemBoolean, null\n    __6_intnl_SystemBoolean: %SystemBoolean, null\n    __7_intnl_SystemBoolean:
@@ -64,114 +66,125 @@ MonoBehaviour:
     %SystemInt32, null\n    __2_intnl_SystemInt32: %SystemInt32, null\n    __3_intnl_SystemInt32:
     %SystemInt32, null\n    __0_intnl_UnityEngineMaterial: %UnityEngineMaterial, null\n
     \   __1_intnl_UnityEngineMaterial: %UnityEngineMaterial, null\n    __0_intnl_SystemSingle:
-    %SystemSingle, null\n    __1_intnl_SystemSingle: %SystemSingle, null\n    __2_intnl_SystemSingle:
-    %SystemSingle, null\n    __3_intnl_SystemSingle: %SystemSingle, null\n    __4_intnl_SystemSingle:
-    %SystemSingle, null\n    __5_intnl_SystemSingle: %SystemSingle, null\n    __6_intnl_SystemSingle:
-    %SystemSingle, null\n    __7_intnl_SystemSingle: %SystemSingle, null\n    __8_intnl_SystemSingle:
-    %SystemSingle, null\n    __9_intnl_SystemSingle: %SystemSingle, null\n    __0_intnl_SystemSingleArray:
-    %SystemSingleArray, null\n    __1_intnl_SystemSingleArray: %SystemSingleArray,
-    null\n    __2_intnl_SystemSingleArray: %SystemSingleArray, null\n    __0_intnl_SystemString:
-    %SystemString, null\n    __1_intnl_SystemString: %SystemString, null\n    __0_intnl_SystemStringArray:
-    %SystemStringArray, null\n    __1_intnl_SystemStringArray: %SystemStringArray,
-    null\n    __2_intnl_SystemStringArray: %SystemStringArray, null\n    __3_intnl_SystemStringArray:
-    %SystemStringArray, null\n    __4_intnl_SystemStringArray: %SystemStringArray,
-    null\n    __5_intnl_SystemStringArray: %SystemStringArray, null\n    __0_intnl_returnTarget_UInt32:
-    %SystemUInt32, null\n    __0_intnl_UnityEngineVector3: %UnityEngineVector3, null\n
-    \   __1_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __2_intnl_UnityEngineVector3:
-    %UnityEngineVector3, null\n    __3_intnl_UnityEngineVector3: %UnityEngineVector3,
-    null\n    __0_intnl_UnityEngineVector3Array: %UnityEngineVector3Array, null\n
-    \   __1_intnl_UnityEngineVector3Array: %UnityEngineVector3Array, null\n    __2_intnl_UnityEngineVector3Array:
-    %UnityEngineVector3Array, null\n    __0_intnl_UnityEngineVector4: %UnityEngineVector4,
-    null\n    __1_intnl_UnityEngineVector4: %UnityEngineVector4, null\n\n.data_end\n\n.code_start\n
-    \   .export Trigger\n        \n    Trigger:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, instantTransition\n        JUMP_IF_FALSE, 0x000000A4\n        PUSH,
-    active\n        JUMP_IF_FALSE, 0x00000044\n        PUSH, defaultSkybox\n        PUSH,
-    __0_intnl_UnityEngineMaterial\n        COPY\n        JUMP, 0x00000058\n        PUSH,
-    activeSkybox\n        PUSH, __0_intnl_UnityEngineMaterial\n        COPY\n        PUSH,
-    __0_intnl_UnityEngineMaterial\n        EXTERN, \"UnityEngineRenderSettings.__set_skybox__UnityEngineMaterial__SystemVoid\"\n
-    \       PUSH, __0_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000890\n        PUSH,
+    %SystemSingle, null\n    __1_intnl_SystemSingle: %SystemSingle, null\n    __10_intnl_SystemSingle:
+    %SystemSingle, null\n    __2_intnl_SystemSingle: %SystemSingle, null\n    __3_intnl_SystemSingle:
+    %SystemSingle, null\n    __4_intnl_SystemSingle: %SystemSingle, null\n    __5_intnl_SystemSingle:
+    %SystemSingle, null\n    __6_intnl_SystemSingle: %SystemSingle, null\n    __7_intnl_SystemSingle:
+    %SystemSingle, null\n    __8_intnl_SystemSingle: %SystemSingle, null\n    __9_intnl_SystemSingle:
+    %SystemSingle, null\n    __0_intnl_SystemSingleArray: %SystemSingleArray, null\n
+    \   __1_intnl_SystemSingleArray: %SystemSingleArray, null\n    __2_intnl_SystemSingleArray:
+    %SystemSingleArray, null\n    __0_intnl_SystemString: %SystemString, null\n    __1_intnl_SystemString:
+    %SystemString, null\n    __0_intnl_SystemStringArray: %SystemStringArray, null\n
+    \   __1_intnl_SystemStringArray: %SystemStringArray, null\n    __2_intnl_SystemStringArray:
+    %SystemStringArray, null\n    __3_intnl_SystemStringArray: %SystemStringArray,
+    null\n    __4_intnl_SystemStringArray: %SystemStringArray, null\n    __5_intnl_SystemStringArray:
+    %SystemStringArray, null\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\n
+    \   __0_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __1_intnl_UnityEngineVector3:
+    %UnityEngineVector3, null\n    __2_intnl_UnityEngineVector3: %UnityEngineVector3,
+    null\n    __3_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __0_intnl_UnityEngineVector3Array:
+    %UnityEngineVector3Array, null\n    __1_intnl_UnityEngineVector3Array: %UnityEngineVector3Array,
+    null\n    __2_intnl_UnityEngineVector3Array: %UnityEngineVector3Array, null\n
+    \   __0_intnl_UnityEngineVector4: %UnityEngineVector4, null\n    __1_intnl_UnityEngineVector4:
+    %UnityEngineVector4, null\n\n.data_end\n\n.code_start\n    .export Trigger\n        \n
+    \   Trigger:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH,
+    instantTransition\n        PUSH, __0_intnl_SystemBoolean\n        COPY\n        PUSH,
+    __0_intnl_SystemBoolean\n        PUSH, __1_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000000B0\n        PUSH, __0_const_intnl_SystemInt32\n
+    \       PUSH, __0_intnl_SystemSingle\n        EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n
+    \       PUSH, transitionTime\n        PUSH, __0_intnl_SystemSingle\n        PUSH,
+    __2_intnl_SystemBoolean\n        EXTERN, \"SystemSingle.__op_LessThanOrEqual__SystemSingle_SystemSingle__SystemBoolean\"\n
+    \       PUSH, __0_intnl_SystemBoolean\n        PUSH, __2_intnl_SystemBoolean\n
+    \       PUSH, __3_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\n
+    \       PUSH, __3_intnl_SystemBoolean\n        PUSH, __0_intnl_SystemBoolean\n
+    \       COPY\n        PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000014C\n
+    \       PUSH, active\n        JUMP_IF_FALSE, 0x000000EC\n        PUSH, defaultSkybox\n
+    \       PUSH, __0_intnl_UnityEngineMaterial\n        COPY\n        JUMP, 0x00000100\n
+    \       PUSH, activeSkybox\n        PUSH, __0_intnl_UnityEngineMaterial\n        COPY\n
+    \       PUSH, __0_intnl_UnityEngineMaterial\n        EXTERN, \"UnityEngineRenderSettings.__set_skybox__UnityEngineMaterial__SystemVoid\"\n
+    \       PUSH, __0_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000938\n        PUSH,
     active\n        PUSH, active\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __0_const_intnl_SystemBoolean\n
-    \       PUSH, lerping\n        COPY\n        PUSH, __0_intnl_SystemSingle\n        EXTERN,
-    \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, __0_intnl_SystemSingle\n
-    \       PUSH, lerpTime\n        PUSH, lerpEnd\n        EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, lerping\n        COPY\n        PUSH, __1_intnl_SystemSingle\n        EXTERN,
+    \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, __1_intnl_SystemSingle\n
+    \       PUSH, transitionTime\n        PUSH, lerpEnd\n        EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    LerpValues:\n
     \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, defaultSkybox\n
     \       PUSH, __0_mat_Material\n        COPY\n        PUSH, active\n        PUSH,
-    __0_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000015C\n        PUSH,
+    __4_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
+    \       PUSH, __4_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000204\n        PUSH,
     defaultFloatNames\n        PUSH, __0_intnl_SystemStringArray\n        COPY\n        JUMP,
-    0x00000170\n        PUSH, activeFloatNames\n        PUSH, __0_intnl_SystemStringArray\n
+    0x00000218\n        PUSH, activeFloatNames\n        PUSH, __0_intnl_SystemStringArray\n
     \       COPY\n        PUSH, __0_intnl_SystemStringArray\n        PUSH, __0_sFloatNames_StringArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __1_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000001C8\n        PUSH, defaultFloatValues\n
-    \       PUSH, __0_intnl_SystemSingleArray\n        COPY\n        JUMP, 0x000001DC\n
-    \       PUSH, activeFloatValues\n        PUSH, __0_intnl_SystemSingleArray\n        COPY\n
-    \       PUSH, __0_intnl_SystemSingleArray\n        PUSH, __0_sFloatVals_SingleArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __2_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000234\n        PUSH, defaultColorNames\n
-    \       PUSH, __1_intnl_SystemStringArray\n        COPY\n        JUMP, 0x00000248\n
-    \       PUSH, activeColorNames\n        PUSH, __1_intnl_SystemStringArray\n        COPY\n
-    \       PUSH, __1_intnl_SystemStringArray\n        PUSH, __0_sColorNames_StringArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __3_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __3_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000002A0\n        PUSH, defaultColorValues\n
-    \       PUSH, __0_intnl_UnityEngineColorArray\n        COPY\n        JUMP, 0x000002B4\n
-    \       PUSH, activeColorValues\n        PUSH, __0_intnl_UnityEngineColorArray\n
-    \       COPY\n        PUSH, __0_intnl_UnityEngineColorArray\n        PUSH, __0_sColorVals_ColorArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __4_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __4_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000030C\n        PUSH, defaultVector3Names\n
-    \       PUSH, __2_intnl_SystemStringArray\n        COPY\n        JUMP, 0x00000320\n
-    \       PUSH, activeVector3Names\n        PUSH, __2_intnl_SystemStringArray\n
-    \       COPY\n        PUSH, __2_intnl_SystemStringArray\n        PUSH, __0_sVectorNames_StringArray\n
     \       COPY\n        PUSH, active\n        PUSH, __5_intnl_SystemBoolean\n        EXTERN,
     \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __5_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000378\n        PUSH, defaultVector3Values\n
-    \       PUSH, __0_intnl_UnityEngineVector3Array\n        COPY\n        JUMP, 0x0000038C\n
+    __5_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000270\n        PUSH, defaultFloatValues\n
+    \       PUSH, __0_intnl_SystemSingleArray\n        COPY\n        JUMP, 0x00000284\n
+    \       PUSH, activeFloatValues\n        PUSH, __0_intnl_SystemSingleArray\n        COPY\n
+    \       PUSH, __0_intnl_SystemSingleArray\n        PUSH, __0_sFloatVals_SingleArray\n
+    \       COPY\n        PUSH, active\n        PUSH, __6_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000002DC\n        PUSH, defaultColorNames\n
+    \       PUSH, __1_intnl_SystemStringArray\n        COPY\n        JUMP, 0x000002F0\n
+    \       PUSH, activeColorNames\n        PUSH, __1_intnl_SystemStringArray\n        COPY\n
+    \       PUSH, __1_intnl_SystemStringArray\n        PUSH, __0_sColorNames_StringArray\n
+    \       COPY\n        PUSH, active\n        PUSH, __7_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __7_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000348\n        PUSH, defaultColorValues\n
+    \       PUSH, __0_intnl_UnityEngineColorArray\n        COPY\n        JUMP, 0x0000035C\n
+    \       PUSH, activeColorValues\n        PUSH, __0_intnl_UnityEngineColorArray\n
+    \       COPY\n        PUSH, __0_intnl_UnityEngineColorArray\n        PUSH, __0_sColorVals_ColorArray\n
+    \       COPY\n        PUSH, active\n        PUSH, __8_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __8_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000003B4\n        PUSH, defaultVector3Names\n
+    \       PUSH, __2_intnl_SystemStringArray\n        COPY\n        JUMP, 0x000003C8\n
+    \       PUSH, activeVector3Names\n        PUSH, __2_intnl_SystemStringArray\n
+    \       COPY\n        PUSH, __2_intnl_SystemStringArray\n        PUSH, __0_sVectorNames_StringArray\n
+    \       COPY\n        PUSH, active\n        PUSH, __9_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __9_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000420\n        PUSH, defaultVector3Values\n
+    \       PUSH, __0_intnl_UnityEngineVector3Array\n        COPY\n        JUMP, 0x00000434\n
     \       PUSH, activeVector3Values\n        PUSH, __0_intnl_UnityEngineVector3Array\n
     \       COPY\n        PUSH, __0_intnl_UnityEngineVector3Array\n        PUSH, __0_sVectorVals_Vector3Array\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x000003CC\n        PUSH,
-    defaultFloatValues\n        PUSH, __1_intnl_SystemSingleArray\n        COPY\n
-    \       JUMP, 0x000003E0\n        PUSH, activeFloatValues\n        PUSH, __1_intnl_SystemSingleArray\n
-    \       COPY\n        PUSH, __1_intnl_SystemSingleArray\n        PUSH, __0_eFloatVals_SingleArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000420\n        PUSH,
-    defaultColorValues\n        PUSH, __1_intnl_UnityEngineColorArray\n        COPY\n
-    \       JUMP, 0x00000434\n        PUSH, activeColorValues\n        PUSH, __1_intnl_UnityEngineColorArray\n
-    \       COPY\n        PUSH, __1_intnl_UnityEngineColorArray\n        PUSH, __0_eColorVals_ColorArray\n
     \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000474\n        PUSH,
+    defaultFloatValues\n        PUSH, __1_intnl_SystemSingleArray\n        COPY\n
+    \       JUMP, 0x00000488\n        PUSH, activeFloatValues\n        PUSH, __1_intnl_SystemSingleArray\n
+    \       COPY\n        PUSH, __1_intnl_SystemSingleArray\n        PUSH, __0_eFloatVals_SingleArray\n
+    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x000004C8\n        PUSH,
+    defaultColorValues\n        PUSH, __1_intnl_UnityEngineColorArray\n        COPY\n
+    \       JUMP, 0x000004DC\n        PUSH, activeColorValues\n        PUSH, __1_intnl_UnityEngineColorArray\n
+    \       COPY\n        PUSH, __1_intnl_UnityEngineColorArray\n        PUSH, __0_eColorVals_ColorArray\n
+    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x0000051C\n        PUSH,
     defaultVector3Values\n        PUSH, __1_intnl_UnityEngineVector3Array\n        COPY\n
-    \       JUMP, 0x00000488\n        PUSH, activeVector3Values\n        PUSH, __1_intnl_UnityEngineVector3Array\n
+    \       JUMP, 0x00000530\n        PUSH, activeVector3Values\n        PUSH, __1_intnl_UnityEngineVector3Array\n
     \       COPY\n        PUSH, __1_intnl_UnityEngineVector3Array\n        PUSH, __0_eVectorVals_Vector3Array\n
     \       COPY\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH, __0_i_Int32\n
     \       COPY\n        PUSH, __0_sFloatNames_StringArray\n        PUSH, __0_intnl_SystemInt32\n
     \       EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n        PUSH,
-    __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH, __6_intnl_SystemBoolean\n
+    __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH, __10_intnl_SystemBoolean\n
     \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000005DC\n        PUSH,
+    \       PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000684\n        PUSH,
     __0_sFloatNames_StringArray\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemString\n
     \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_sFloatVals_SingleArray\n        PUSH, __0_i_Int32\n        PUSH, __1_intnl_SystemSingle\n
+    __0_sFloatVals_SingleArray\n        PUSH, __0_i_Int32\n        PUSH, __2_intnl_SystemSingle\n
     \       EXTERN, \"SystemSingleArray.__Get__SystemInt32__SystemSingle\"\n        PUSH,
-    __0_eFloatVals_SingleArray\n        PUSH, __0_i_Int32\n        PUSH, __2_intnl_SystemSingle\n
+    __0_eFloatVals_SingleArray\n        PUSH, __0_i_Int32\n        PUSH, __3_intnl_SystemSingle\n
     \       EXTERN, \"SystemSingleArray.__Get__SystemInt32__SystemSingle\"\n        PUSH,
-    __1_intnl_SystemSingle\n        PUSH, __2_intnl_SystemSingle\n        PUSH, __0_alpha_Single\n
-    \       PUSH, __3_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
+    __2_intnl_SystemSingle\n        PUSH, __3_intnl_SystemSingle\n        PUSH, __0_alpha_Single\n
+    \       PUSH, __4_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
     \       PUSH, __0_mat_Material\n        PUSH, __0_intnl_SystemString\n        PUSH,
-    __3_intnl_SystemSingle\n        EXTERN, \"UnityEngineMaterial.__SetFloat__SystemString_SystemSingle__SystemVoid\"\n
+    __4_intnl_SystemSingle\n        EXTERN, \"UnityEngineMaterial.__SetFloat__SystemString_SystemSingle__SystemVoid\"\n
     \       PUSH, __0_i_Int32\n        PUSH, __1_intnl_SystemInt32\n        COPY\n
     \       PUSH, __0_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __0_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x000004B0\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
+    \       JUMP, 0x00000558\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
     __0_i_Int32\n        COPY\n        PUSH, __0_sColorNames_StringArray\n        PUSH,
     __0_intnl_SystemInt32\n        EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n
     \       PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH,
-    __6_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000071C\n        PUSH,
+    __10_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
+    \       PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000007C4\n        PUSH,
     __0_sColorNames_StringArray\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemString\n
     \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
     __0_sColorVals_ColorArray\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_UnityEngineColor\n
@@ -186,12 +199,12 @@ MonoBehaviour:
     \       PUSH, __0_i_Int32\n        PUSH, __1_intnl_SystemInt32\n        COPY\n
     \       PUSH, __0_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __0_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x000005F0\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
+    \       JUMP, 0x00000698\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
     __0_i_Int32\n        COPY\n        PUSH, __0_sVectorNames_StringArray\n        PUSH,
     __0_intnl_SystemInt32\n        EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n
     \       PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH,
-    __6_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000874\n        PUSH,
+    __10_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
+    \       PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000091C\n        PUSH,
     __0_sVectorNames_StringArray\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemString\n
     \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
     __0_sVectorVals_Vector3Array\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_UnityEngineVector3\n
@@ -208,58 +221,58 @@ MonoBehaviour:
     \       PUSH, __0_i_Int32\n        PUSH, __1_intnl_SystemInt32\n        COPY\n
     \       PUSH, __0_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __0_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000730\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    \       JUMP, 0x000007D8\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
     \       \n    SetFinalValues:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, active\n        JUMP_IF_FALSE, 0x000008BC\n        PUSH, defaultFloatNames\n
-    \       PUSH, __3_intnl_SystemStringArray\n        COPY\n        JUMP, 0x000008D0\n
+    \       PUSH, active\n        JUMP_IF_FALSE, 0x00000964\n        PUSH, defaultFloatNames\n
+    \       PUSH, __3_intnl_SystemStringArray\n        COPY\n        JUMP, 0x00000978\n
     \       PUSH, activeFloatNames\n        PUSH, __3_intnl_SystemStringArray\n        COPY\n
     \       PUSH, __3_intnl_SystemStringArray\n        PUSH, __0_floatNames_StringArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000910\n        PUSH,
-    defaultFloatValues\n        PUSH, __2_intnl_SystemSingleArray\n        COPY\n
-    \       JUMP, 0x00000924\n        PUSH, activeFloatValues\n        PUSH, __2_intnl_SystemSingleArray\n
-    \       COPY\n        PUSH, __2_intnl_SystemSingleArray\n        PUSH, __0_floatVals_SingleArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000964\n        PUSH,
-    defaultColorNames\n        PUSH, __4_intnl_SystemStringArray\n        COPY\n        JUMP,
-    0x00000978\n        PUSH, activeColorNames\n        PUSH, __4_intnl_SystemStringArray\n
-    \       COPY\n        PUSH, __4_intnl_SystemStringArray\n        PUSH, __0_colorNames_StringArray\n
     \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x000009B8\n        PUSH,
-    defaultColorValues\n        PUSH, __2_intnl_UnityEngineColorArray\n        COPY\n
-    \       JUMP, 0x000009CC\n        PUSH, activeColorValues\n        PUSH, __2_intnl_UnityEngineColorArray\n
-    \       COPY\n        PUSH, __2_intnl_UnityEngineColorArray\n        PUSH, __0_colorVals_ColorArray\n
+    defaultFloatValues\n        PUSH, __2_intnl_SystemSingleArray\n        COPY\n
+    \       JUMP, 0x000009CC\n        PUSH, activeFloatValues\n        PUSH, __2_intnl_SystemSingleArray\n
+    \       COPY\n        PUSH, __2_intnl_SystemSingleArray\n        PUSH, __0_floatVals_SingleArray\n
     \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000A0C\n        PUSH,
-    defaultVector3Names\n        PUSH, __5_intnl_SystemStringArray\n        COPY\n
-    \       JUMP, 0x00000A20\n        PUSH, activeVector3Names\n        PUSH, __5_intnl_SystemStringArray\n
-    \       COPY\n        PUSH, __5_intnl_SystemStringArray\n        PUSH, __0_vectorNames_StringArray\n
+    defaultColorNames\n        PUSH, __4_intnl_SystemStringArray\n        COPY\n        JUMP,
+    0x00000A20\n        PUSH, activeColorNames\n        PUSH, __4_intnl_SystemStringArray\n
+    \       COPY\n        PUSH, __4_intnl_SystemStringArray\n        PUSH, __0_colorNames_StringArray\n
     \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000A60\n        PUSH,
-    defaultVector3Values\n        PUSH, __2_intnl_UnityEngineVector3Array\n        COPY\n
-    \       JUMP, 0x00000A74\n        PUSH, activeVector3Values\n        PUSH, __2_intnl_UnityEngineVector3Array\n
-    \       COPY\n        PUSH, __2_intnl_UnityEngineVector3Array\n        PUSH, __0_vectorVals_Vector3Array\n
+    defaultColorValues\n        PUSH, __2_intnl_UnityEngineColorArray\n        COPY\n
+    \       JUMP, 0x00000A74\n        PUSH, activeColorValues\n        PUSH, __2_intnl_UnityEngineColorArray\n
+    \       COPY\n        PUSH, __2_intnl_UnityEngineColorArray\n        PUSH, __0_colorVals_ColorArray\n
     \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000AB4\n        PUSH,
+    defaultVector3Names\n        PUSH, __5_intnl_SystemStringArray\n        COPY\n
+    \       JUMP, 0x00000AC8\n        PUSH, activeVector3Names\n        PUSH, __5_intnl_SystemStringArray\n
+    \       COPY\n        PUSH, __5_intnl_SystemStringArray\n        PUSH, __0_vectorNames_StringArray\n
+    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000B08\n        PUSH,
+    defaultVector3Values\n        PUSH, __2_intnl_UnityEngineVector3Array\n        COPY\n
+    \       JUMP, 0x00000B1C\n        PUSH, activeVector3Values\n        PUSH, __2_intnl_UnityEngineVector3Array\n
+    \       COPY\n        PUSH, __2_intnl_UnityEngineVector3Array\n        PUSH, __0_vectorVals_Vector3Array\n
+    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000B5C\n        PUSH,
     defaultSkybox\n        PUSH, __1_intnl_UnityEngineMaterial\n        COPY\n        JUMP,
-    0x00000AC8\n        PUSH, activeSkybox\n        PUSH, __1_intnl_UnityEngineMaterial\n
+    0x00000B70\n        PUSH, activeSkybox\n        PUSH, __1_intnl_UnityEngineMaterial\n
     \       COPY\n        PUSH, __1_intnl_UnityEngineMaterial\n        PUSH, __1_mat_Material\n
     \       COPY\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH, __1_i_Int32\n
     \       COPY\n        PUSH, __0_floatNames_StringArray\n        PUSH, __2_intnl_SystemInt32\n
     \       EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n        PUSH,
-    __1_i_Int32\n        PUSH, __2_intnl_SystemInt32\n        PUSH, __7_intnl_SystemBoolean\n
+    __1_i_Int32\n        PUSH, __2_intnl_SystemInt32\n        PUSH, __11_intnl_SystemBoolean\n
     \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __7_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000BD4\n        PUSH,
+    \       PUSH, __11_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000C7C\n        PUSH,
     __0_floatNames_StringArray\n        PUSH, __1_i_Int32\n        PUSH, __1_intnl_SystemString\n
     \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_floatVals_SingleArray\n        PUSH, __1_i_Int32\n        PUSH, __4_intnl_SystemSingle\n
+    __0_floatVals_SingleArray\n        PUSH, __1_i_Int32\n        PUSH, __5_intnl_SystemSingle\n
     \       EXTERN, \"SystemSingleArray.__Get__SystemInt32__SystemSingle\"\n        PUSH,
-    __1_mat_Material\n        PUSH, __1_intnl_SystemString\n        PUSH, __4_intnl_SystemSingle\n
+    __1_mat_Material\n        PUSH, __1_intnl_SystemString\n        PUSH, __5_intnl_SystemSingle\n
     \       EXTERN, \"UnityEngineMaterial.__SetFloat__SystemString_SystemSingle__SystemVoid\"\n
     \       PUSH, __1_i_Int32\n        PUSH, __3_intnl_SystemInt32\n        COPY\n
     \       PUSH, __1_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __1_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000AF0\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
+    \       JUMP, 0x00000B98\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
     __1_i_Int32\n        COPY\n        PUSH, __0_colorNames_StringArray\n        PUSH,
     __2_intnl_SystemInt32\n        EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n
     \       PUSH, __1_i_Int32\n        PUSH, __2_intnl_SystemInt32\n        PUSH,
-    __7_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __7_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000CCC\n        PUSH,
+    __11_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
+    \       PUSH, __11_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000D74\n        PUSH,
     __0_colorNames_StringArray\n        PUSH, __1_i_Int32\n        PUSH, __1_intnl_SystemString\n
     \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
     __0_colorVals_ColorArray\n        PUSH, __1_i_Int32\n        PUSH, __3_intnl_UnityEngineColor\n
@@ -269,12 +282,12 @@ MonoBehaviour:
     \       PUSH, __1_i_Int32\n        PUSH, __3_intnl_SystemInt32\n        COPY\n
     \       PUSH, __1_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __1_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000BE8\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
+    \       JUMP, 0x00000C90\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
     __1_i_Int32\n        COPY\n        PUSH, __0_vectorNames_StringArray\n        PUSH,
     __2_intnl_SystemInt32\n        EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n
     \       PUSH, __1_i_Int32\n        PUSH, __2_intnl_SystemInt32\n        PUSH,
-    __7_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __7_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000DDC\n        PUSH,
+    __11_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
+    \       PUSH, __11_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000E84\n        PUSH,
     __0_vectorNames_StringArray\n        PUSH, __1_i_Int32\n        PUSH, __1_intnl_SystemString\n
     \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
     __0_vectorVals_Vector3Array\n        PUSH, __1_i_Int32\n        PUSH, __3_intnl_UnityEngineVector3\n
@@ -286,33 +299,33 @@ MonoBehaviour:
     \       PUSH, __1_i_Int32\n        PUSH, __3_intnl_SystemInt32\n        COPY\n
     \       PUSH, __1_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __1_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000CE0\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    \       JUMP, 0x00000D88\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
     \       \n    .export _update\n        \n    _update:\n        \n        PUSH,
-    __0_const_intnl_SystemUInt32\n        PUSH, lerping\n        PUSH, __8_intnl_SystemBoolean\n
+    __0_const_intnl_SystemUInt32\n        PUSH, lerping\n        PUSH, __12_intnl_SystemBoolean\n
     \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __8_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000E34\n        PUSH,
+    \       PUSH, __12_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000EDC\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\n        PUSH, __5_intnl_SystemSingle\n        EXTERN,
-    \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, __5_intnl_SystemSingle\n
-    \       PUSH, lerpEnd\n        PUSH, __9_intnl_SystemBoolean\n        EXTERN,
+    __0_intnl_returnTarget_UInt32\n        PUSH, __6_intnl_SystemSingle\n        EXTERN,
+    \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, __6_intnl_SystemSingle\n
+    \       PUSH, lerpEnd\n        PUSH, __13_intnl_SystemBoolean\n        EXTERN,
     \"SystemSingle.__op_GreaterThanOrEqual__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __9_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000EC4\n        PUSH,
-    __1_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000890\n        PUSH, __1_const_intnl_SystemBoolean\n
+    \       PUSH, __13_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000F6C\n        PUSH,
+    __1_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000938\n        PUSH, __1_const_intnl_SystemBoolean\n
     \       PUSH, lerping\n        COPY\n        PUSH, active\n        PUSH, active\n
     \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __6_intnl_SystemSingle\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __7_intnl_SystemSingle\n
     \       EXTERN, \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, lerpEnd\n
-    \       PUSH, lerpTime\n        PUSH, __7_intnl_SystemSingle\n        EXTERN,
+    \       PUSH, transitionTime\n        PUSH, __8_intnl_SystemSingle\n        EXTERN,
     \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n        PUSH,
-    __6_intnl_SystemSingle\n        PUSH, __7_intnl_SystemSingle\n        PUSH, __8_intnl_SystemSingle\n
+    __7_intnl_SystemSingle\n        PUSH, __8_intnl_SystemSingle\n        PUSH, __9_intnl_SystemSingle\n
     \       EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __8_intnl_SystemSingle\n        PUSH, lerpTime\n        PUSH, __9_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingle.__op_Division__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __9_intnl_SystemSingle\n        PUSH, __0_lerpAlpha_Single\n        COPY\n
+    \       PUSH, __9_intnl_SystemSingle\n        PUSH, transitionTime\n        PUSH,
+    __10_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Division__SystemSingle_SystemSingle__SystemSingle\"\n
+    \       PUSH, __10_intnl_SystemSingle\n        PUSH, __0_lerpAlpha_Single\n        COPY\n
     \       PUSH, __0_lerpAlpha_Single\n        PUSH, __0_alpha_Single\n        COPY\n
-    \       PUSH, __2_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000104\n        PUSH,
+    \       PUSH, __2_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x000001AC\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n        JUMP_INDIRECT,
     __0_intnl_returnTarget_UInt32\n        \n.code_end\n"
   assemblyError: 
@@ -884,2877 +897,2905 @@ MonoBehaviour:
     - startInstruction: 0
       endInstruction: -1
       startSourceChar: 822
-      endSourceChar: 847
+      endSourceChar: 853
       line: 25
       lineChar: 13
-      spanCodeSection: "float lerpTime;\r\n\r\n      "
+      spanCodeSection: "float transitionTime;\r\n\r\n      "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 847
-      endSourceChar: 855
+      startSourceChar: 853
+      endSourceChar: 861
       line: 27
       lineChar: 6
       spanCodeSection: 'private '
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 855
-      endSourceChar: 855
+      startSourceChar: 861
+      endSourceChar: 861
       line: 27
       lineChar: 14
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 855
-      endSourceChar: 875
+      startSourceChar: 861
+      endSourceChar: 881
       line: 27
       lineChar: 14
       spanCodeSection: "bool active;\r\n      "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 875
-      endSourceChar: 883
+      startSourceChar: 881
+      endSourceChar: 889
       line: 28
       lineChar: 6
       spanCodeSection: 'private '
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 883
-      endSourceChar: 883
+      startSourceChar: 889
+      endSourceChar: 889
       line: 28
       lineChar: 14
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 883
-      endSourceChar: 904
+      startSourceChar: 889
+      endSourceChar: 910
       line: 28
       lineChar: 14
       spanCodeSection: "bool lerping;\r\n      "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 904
-      endSourceChar: 912
+      startSourceChar: 910
+      endSourceChar: 918
       line: 29
       lineChar: 6
       spanCodeSection: 'private '
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 912
-      endSourceChar: 912
+      startSourceChar: 918
+      endSourceChar: 918
       line: 29
       lineChar: 14
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 912
-      endSourceChar: 936
+      startSourceChar: 918
+      endSourceChar: 942
       line: 29
       lineChar: 14
       spanCodeSection: "float lerpEnd;\r\n\r\n      "
     - startInstruction: 0
       endInstruction: 7
-      startSourceChar: 936
-      endSourceChar: 958
+      startSourceChar: 942
+      endSourceChar: 964
       line: 31
       lineChar: 6
       spanCodeSection: 'public void Trigger() '
     - startInstruction: 8
       endInstruction: 7
-      startSourceChar: 958
-      endSourceChar: 969
+      startSourceChar: 964
+      endSourceChar: 975
       line: 31
       lineChar: 28
       spanCodeSection: "{\r\n        "
     - startInstruction: 8
       endInstruction: 7
-      startSourceChar: 969
-      endSourceChar: 973
+      startSourceChar: 975
+      endSourceChar: 979
       line: 32
       lineChar: 8
       spanCodeSection: if (
     - startInstruction: 8
-      endInstruction: 23
-      startSourceChar: 973
-      endSourceChar: 992
+      endInstruction: 7
+      startSourceChar: 979
+      endSourceChar: 979
       line: 32
       lineChar: 12
-      spanCodeSection: 'instantTransition) '
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 992
-      endSourceChar: 1005
+      spanCodeSection: 
+    - startInstruction: 8
+      endInstruction: 67
+      startSourceChar: 979
+      endSourceChar: 1000
       line: 32
-      lineChar: 31
+      lineChar: 12
+      spanCodeSection: 'instantTransition || '
+    - startInstruction: 68
+      endInstruction: 67
+      startSourceChar: 1000
+      endSourceChar: 1000
+      line: 32
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 68
+      endInstruction: 67
+      startSourceChar: 1000
+      endSourceChar: 1018
+      line: 32
+      lineChar: 33
+      spanCodeSection: 'transitionTime <= '
+    - startInstruction: 68
+      endInstruction: 191
+      startSourceChar: 1018
+      endSourceChar: 1021
+      line: 32
+      lineChar: 51
+      spanCodeSection: '0) '
+    - startInstruction: 192
+      endInstruction: 191
+      startSourceChar: 1021
+      endSourceChar: 1034
+      line: 32
+      lineChar: 54
       spanCodeSection: "{\r\n          "
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1005
-      endSourceChar: 1005
+    - startInstruction: 192
+      endInstruction: 191
+      startSourceChar: 1034
+      endSourceChar: 1034
       line: 33
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1005
-      endSourceChar: 1005
+    - startInstruction: 192
+      endInstruction: 191
+      startSourceChar: 1034
+      endSourceChar: 1034
       line: 33
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1005
-      endSourceChar: 1005
+    - startInstruction: 192
+      endInstruction: 191
+      startSourceChar: 1034
+      endSourceChar: 1034
       line: 33
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1005
-      endSourceChar: 1020
+    - startInstruction: 192
+      endInstruction: 191
+      startSourceChar: 1034
+      endSourceChar: 1049
       line: 33
       lineChar: 10
       spanCodeSection: RenderSettings.
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1020
-      endSourceChar: 1029
+    - startInstruction: 192
+      endInstruction: 191
+      startSourceChar: 1049
+      endSourceChar: 1058
       line: 33
       lineChar: 25
       spanCodeSection: 'skybox = '
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1029
-      endSourceChar: 1029
+    - startInstruction: 192
+      endInstruction: 191
+      startSourceChar: 1058
+      endSourceChar: 1058
       line: 33
       lineChar: 34
       spanCodeSection: 
-    - startInstruction: 24
-      endInstruction: 39
-      startSourceChar: 1029
-      endSourceChar: 1038
+    - startInstruction: 192
+      endInstruction: 207
+      startSourceChar: 1058
+      endSourceChar: 1067
       line: 33
       lineChar: 34
       spanCodeSection: 'active ? '
-    - startInstruction: 40
-      endInstruction: 67
-      startSourceChar: 1038
-      endSourceChar: 1054
+    - startInstruction: 208
+      endInstruction: 235
+      startSourceChar: 1067
+      endSourceChar: 1083
       line: 33
       lineChar: 43
       spanCodeSection: 'defaultSkybox : '
-    - startInstruction: 68
-      endInstruction: 103
-      startSourceChar: 1054
-      endSourceChar: 1079
+    - startInstruction: 236
+      endInstruction: 271
+      startSourceChar: 1083
+      endSourceChar: 1108
       line: 33
       lineChar: 59
       spanCodeSection: "activeSkybox;\r\n          "
-    - startInstruction: 104
-      endInstruction: 103
-      startSourceChar: 1079
-      endSourceChar: 1079
-      line: 34
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 104
-      endInstruction: 103
-      startSourceChar: 1079
-      endSourceChar: 1079
-      line: 34
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 104
-      endInstruction: 119
-      startSourceChar: 1079
+    - startInstruction: 272
+      endInstruction: 271
+      startSourceChar: 1108
       endSourceChar: 1108
+      line: 34
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 272
+      endInstruction: 271
+      startSourceChar: 1108
+      endSourceChar: 1108
+      line: 34
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 272
+      endInstruction: 287
+      startSourceChar: 1108
+      endSourceChar: 1137
       line: 34
       lineChar: 10
       spanCodeSection: "SetFinalValues();\r\n          "
-    - startInstruction: 120
-      endInstruction: 119
-      startSourceChar: 1108
-      endSourceChar: 1108
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1137
+      endSourceChar: 1137
       line: 35
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 120
-      endInstruction: 119
-      startSourceChar: 1108
-      endSourceChar: 1108
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1137
+      endSourceChar: 1137
       line: 35
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 120
-      endInstruction: 119
-      startSourceChar: 1108
-      endSourceChar: 1117
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1137
+      endSourceChar: 1146
       line: 35
       lineChar: 10
       spanCodeSection: 'active = '
-    - startInstruction: 120
-      endInstruction: 119
-      startSourceChar: 1117
-      endSourceChar: 1118
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1146
+      endSourceChar: 1147
       line: 35
       lineChar: 19
       spanCodeSection: '!'
-    - startInstruction: 120
-      endInstruction: 143
-      startSourceChar: 1118
-      endSourceChar: 1137
+    - startInstruction: 288
+      endInstruction: 311
+      startSourceChar: 1147
+      endSourceChar: 1166
       line: 35
       lineChar: 20
       spanCodeSection: "active;\r\n          "
-    - startInstruction: 144
-      endInstruction: 163
-      startSourceChar: 1137
-      endSourceChar: 1167
+    - startInstruction: 312
+      endInstruction: 331
+      startSourceChar: 1166
+      endSourceChar: 1196
       line: 36
       lineChar: 10
       spanCodeSection: "return;\r\n        }\r\n\r\n        "
-    - startInstruction: 164
-      endInstruction: 163
-      startSourceChar: 1167
-      endSourceChar: 1167
+    - startInstruction: 332
+      endInstruction: 331
+      startSourceChar: 1196
+      endSourceChar: 1196
       line: 39
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 164
-      endInstruction: 163
-      startSourceChar: 1167
-      endSourceChar: 1167
+    - startInstruction: 332
+      endInstruction: 331
+      startSourceChar: 1196
+      endSourceChar: 1196
       line: 39
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 164
-      endInstruction: 163
-      startSourceChar: 1167
-      endSourceChar: 1177
+    - startInstruction: 332
+      endInstruction: 331
+      startSourceChar: 1196
+      endSourceChar: 1206
       line: 39
       lineChar: 8
       spanCodeSection: 'lerping = '
-    - startInstruction: 164
-      endInstruction: 183
-      startSourceChar: 1177
-      endSourceChar: 1192
+    - startInstruction: 332
+      endInstruction: 351
+      startSourceChar: 1206
+      endSourceChar: 1221
       line: 39
       lineChar: 18
       spanCodeSection: "true;\r\n        "
-    - startInstruction: 184
-      endInstruction: 183
-      startSourceChar: 1192
-      endSourceChar: 1192
+    - startInstruction: 352
+      endInstruction: 351
+      startSourceChar: 1221
+      endSourceChar: 1221
       line: 40
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 184
-      endInstruction: 183
-      startSourceChar: 1192
-      endSourceChar: 1192
+    - startInstruction: 352
+      endInstruction: 351
+      startSourceChar: 1221
+      endSourceChar: 1221
       line: 40
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 184
-      endInstruction: 183
-      startSourceChar: 1192
-      endSourceChar: 1202
+    - startInstruction: 352
+      endInstruction: 351
+      startSourceChar: 1221
+      endSourceChar: 1231
       line: 40
       lineChar: 8
       spanCodeSection: 'lerpEnd = '
-    - startInstruction: 184
-      endInstruction: 183
-      startSourceChar: 1202
-      endSourceChar: 1202
+    - startInstruction: 352
+      endInstruction: 351
+      startSourceChar: 1231
+      endSourceChar: 1231
       line: 40
       lineChar: 18
       spanCodeSection: 
-    - startInstruction: 184
-      endInstruction: 183
-      startSourceChar: 1202
-      endSourceChar: 1202
+    - startInstruction: 352
+      endInstruction: 351
+      startSourceChar: 1231
+      endSourceChar: 1231
       line: 40
       lineChar: 18
       spanCodeSection: 
-    - startInstruction: 184
-      endInstruction: 183
-      startSourceChar: 1202
-      endSourceChar: 1207
+    - startInstruction: 352
+      endInstruction: 351
+      startSourceChar: 1231
+      endSourceChar: 1236
       line: 40
       lineChar: 18
       spanCodeSection: Time.
-    - startInstruction: 184
-      endInstruction: 199
-      startSourceChar: 1207
-      endSourceChar: 1214
+    - startInstruction: 352
+      endInstruction: 367
+      startSourceChar: 1236
+      endSourceChar: 1243
       line: 40
       lineChar: 23
       spanCodeSection: 'time + '
-    - startInstruction: 200
-      endInstruction: 251
-      startSourceChar: 1214
-      endSourceChar: 1242
+    - startInstruction: 368
+      endInstruction: 419
+      startSourceChar: 1243
+      endSourceChar: 1277
       line: 40
       lineChar: 30
-      spanCodeSection: "lerpTime;\r\n      }\r\n\r\n      "
-    - startInstruction: 252
-      endInstruction: 251
-      startSourceChar: 1242
-      endSourceChar: 1266
+      spanCodeSection: "transitionTime;\r\n      }\r\n\r\n      "
+    - startInstruction: 420
+      endInstruction: 419
+      startSourceChar: 1277
+      endSourceChar: 1301
       line: 43
       lineChar: 6
       spanCodeSection: private void LerpValues(
-    - startInstruction: 252
-      endInstruction: 259
-      startSourceChar: 1266
-      endSourceChar: 1279
+    - startInstruction: 420
+      endInstruction: 427
+      startSourceChar: 1301
+      endSourceChar: 1314
       line: 43
       lineChar: 30
       spanCodeSection: 'float alpha) '
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1279
-      endSourceChar: 1290
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 1314
+      endSourceChar: 1325
       line: 43
       lineChar: 43
       spanCodeSection: "{\r\n        "
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1290
-      endSourceChar: 1290
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 1325
+      endSourceChar: 1325
       line: 44
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1290
-      endSourceChar: 1290
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 1325
+      endSourceChar: 1325
       line: 44
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1290
-      endSourceChar: 1298
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 1325
+      endSourceChar: 1333
       line: 44
       lineChar: 8
       spanCodeSection: 'var mat '
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1298
-      endSourceChar: 1300
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 1333
+      endSourceChar: 1335
       line: 44
       lineChar: 16
       spanCodeSection: '= '
-    - startInstruction: 260
-      endInstruction: 279
-      startSourceChar: 1300
-      endSourceChar: 1324
+    - startInstruction: 428
+      endInstruction: 447
+      startSourceChar: 1335
+      endSourceChar: 1359
       line: 44
       lineChar: 18
       spanCodeSection: "defaultSkybox;\r\n        "
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1324
-      endSourceChar: 1324
+    - startInstruction: 448
+      endInstruction: 447
+      startSourceChar: 1359
+      endSourceChar: 1359
       line: 45
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1324
-      endSourceChar: 1324
+    - startInstruction: 448
+      endInstruction: 447
+      startSourceChar: 1359
+      endSourceChar: 1359
       line: 45
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1324
-      endSourceChar: 1340
+    - startInstruction: 448
+      endInstruction: 447
+      startSourceChar: 1359
+      endSourceChar: 1375
       line: 45
       lineChar: 8
       spanCodeSection: 'var sFloatNames '
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1340
-      endSourceChar: 1342
+    - startInstruction: 448
+      endInstruction: 447
+      startSourceChar: 1375
+      endSourceChar: 1377
       line: 45
       lineChar: 24
       spanCodeSection: '= '
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1342
-      endSourceChar: 1342
+    - startInstruction: 448
+      endInstruction: 447
+      startSourceChar: 1377
+      endSourceChar: 1377
       line: 45
       lineChar: 26
       spanCodeSection: 
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1342
-      endSourceChar: 1343
+    - startInstruction: 448
+      endInstruction: 447
+      startSourceChar: 1377
+      endSourceChar: 1378
       line: 45
       lineChar: 26
       spanCodeSection: '!'
-    - startInstruction: 280
-      endInstruction: 319
-      startSourceChar: 1343
-      endSourceChar: 1352
+    - startInstruction: 448
+      endInstruction: 487
+      startSourceChar: 1378
+      endSourceChar: 1387
       line: 45
       lineChar: 27
       spanCodeSection: 'active ? '
-    - startInstruction: 320
-      endInstruction: 347
-      startSourceChar: 1352
-      endSourceChar: 1372
+    - startInstruction: 488
+      endInstruction: 515
+      startSourceChar: 1387
+      endSourceChar: 1407
       line: 45
       lineChar: 36
       spanCodeSection: 'defaultFloatNames : '
-    - startInstruction: 348
-      endInstruction: 387
-      startSourceChar: 1372
-      endSourceChar: 1399
+    - startInstruction: 516
+      endInstruction: 555
+      startSourceChar: 1407
+      endSourceChar: 1434
       line: 45
       lineChar: 56
       spanCodeSection: "activeFloatNames;\r\n        "
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 1399
-      endSourceChar: 1399
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1434
+      endSourceChar: 1434
       line: 46
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 1399
-      endSourceChar: 1399
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1434
+      endSourceChar: 1434
       line: 46
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 1399
-      endSourceChar: 1414
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1434
+      endSourceChar: 1449
       line: 46
       lineChar: 8
       spanCodeSection: 'var sFloatVals '
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 1414
-      endSourceChar: 1416
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1449
+      endSourceChar: 1451
       line: 46
       lineChar: 23
       spanCodeSection: '= '
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 1416
-      endSourceChar: 1416
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1451
+      endSourceChar: 1451
       line: 46
       lineChar: 25
       spanCodeSection: 
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 1416
-      endSourceChar: 1417
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1451
+      endSourceChar: 1452
       line: 46
       lineChar: 25
       spanCodeSection: '!'
-    - startInstruction: 388
-      endInstruction: 427
-      startSourceChar: 1417
-      endSourceChar: 1426
+    - startInstruction: 556
+      endInstruction: 595
+      startSourceChar: 1452
+      endSourceChar: 1461
       line: 46
       lineChar: 26
       spanCodeSection: 'active ? '
-    - startInstruction: 428
-      endInstruction: 455
-      startSourceChar: 1426
-      endSourceChar: 1447
+    - startInstruction: 596
+      endInstruction: 623
+      startSourceChar: 1461
+      endSourceChar: 1482
       line: 46
       lineChar: 35
       spanCodeSection: 'defaultFloatValues : '
-    - startInstruction: 456
-      endInstruction: 495
-      startSourceChar: 1447
-      endSourceChar: 1475
+    - startInstruction: 624
+      endInstruction: 663
+      startSourceChar: 1482
+      endSourceChar: 1510
       line: 46
       lineChar: 56
       spanCodeSection: "activeFloatValues;\r\n        "
-    - startInstruction: 496
-      endInstruction: 495
-      startSourceChar: 1475
-      endSourceChar: 1475
+    - startInstruction: 664
+      endInstruction: 663
+      startSourceChar: 1510
+      endSourceChar: 1510
       line: 47
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 496
-      endInstruction: 495
-      startSourceChar: 1475
-      endSourceChar: 1475
+    - startInstruction: 664
+      endInstruction: 663
+      startSourceChar: 1510
+      endSourceChar: 1510
       line: 47
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 496
-      endInstruction: 495
-      startSourceChar: 1475
-      endSourceChar: 1491
+    - startInstruction: 664
+      endInstruction: 663
+      startSourceChar: 1510
+      endSourceChar: 1526
       line: 47
       lineChar: 8
       spanCodeSection: 'var sColorNames '
-    - startInstruction: 496
-      endInstruction: 495
-      startSourceChar: 1491
-      endSourceChar: 1493
+    - startInstruction: 664
+      endInstruction: 663
+      startSourceChar: 1526
+      endSourceChar: 1528
       line: 47
       lineChar: 24
       spanCodeSection: '= '
-    - startInstruction: 496
-      endInstruction: 495
-      startSourceChar: 1493
-      endSourceChar: 1493
+    - startInstruction: 664
+      endInstruction: 663
+      startSourceChar: 1528
+      endSourceChar: 1528
       line: 47
       lineChar: 26
       spanCodeSection: 
-    - startInstruction: 496
-      endInstruction: 495
-      startSourceChar: 1493
-      endSourceChar: 1494
+    - startInstruction: 664
+      endInstruction: 663
+      startSourceChar: 1528
+      endSourceChar: 1529
       line: 47
       lineChar: 26
       spanCodeSection: '!'
-    - startInstruction: 496
-      endInstruction: 535
-      startSourceChar: 1494
-      endSourceChar: 1503
+    - startInstruction: 664
+      endInstruction: 703
+      startSourceChar: 1529
+      endSourceChar: 1538
       line: 47
       lineChar: 27
       spanCodeSection: 'active ? '
-    - startInstruction: 536
-      endInstruction: 563
-      startSourceChar: 1503
-      endSourceChar: 1523
+    - startInstruction: 704
+      endInstruction: 731
+      startSourceChar: 1538
+      endSourceChar: 1558
       line: 47
       lineChar: 36
       spanCodeSection: 'defaultColorNames : '
-    - startInstruction: 564
-      endInstruction: 603
-      startSourceChar: 1523
-      endSourceChar: 1550
+    - startInstruction: 732
+      endInstruction: 771
+      startSourceChar: 1558
+      endSourceChar: 1585
       line: 47
       lineChar: 56
       spanCodeSection: "activeColorNames;\r\n        "
-    - startInstruction: 604
-      endInstruction: 603
-      startSourceChar: 1550
-      endSourceChar: 1550
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1585
+      endSourceChar: 1585
       line: 48
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 604
-      endInstruction: 603
-      startSourceChar: 1550
-      endSourceChar: 1550
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1585
+      endSourceChar: 1585
       line: 48
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 604
-      endInstruction: 603
-      startSourceChar: 1550
-      endSourceChar: 1565
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1585
+      endSourceChar: 1600
       line: 48
       lineChar: 8
       spanCodeSection: 'var sColorVals '
-    - startInstruction: 604
-      endInstruction: 603
-      startSourceChar: 1565
-      endSourceChar: 1567
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1600
+      endSourceChar: 1602
       line: 48
       lineChar: 23
       spanCodeSection: '= '
-    - startInstruction: 604
-      endInstruction: 603
-      startSourceChar: 1567
-      endSourceChar: 1567
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1602
+      endSourceChar: 1602
       line: 48
       lineChar: 25
       spanCodeSection: 
-    - startInstruction: 604
-      endInstruction: 603
-      startSourceChar: 1567
-      endSourceChar: 1568
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1602
+      endSourceChar: 1603
       line: 48
       lineChar: 25
       spanCodeSection: '!'
-    - startInstruction: 604
-      endInstruction: 643
-      startSourceChar: 1568
-      endSourceChar: 1577
+    - startInstruction: 772
+      endInstruction: 811
+      startSourceChar: 1603
+      endSourceChar: 1612
       line: 48
       lineChar: 26
       spanCodeSection: 'active ? '
-    - startInstruction: 644
-      endInstruction: 671
-      startSourceChar: 1577
-      endSourceChar: 1598
+    - startInstruction: 812
+      endInstruction: 839
+      startSourceChar: 1612
+      endSourceChar: 1633
       line: 48
       lineChar: 35
       spanCodeSection: 'defaultColorValues : '
-    - startInstruction: 672
-      endInstruction: 711
-      startSourceChar: 1598
-      endSourceChar: 1626
+    - startInstruction: 840
+      endInstruction: 879
+      startSourceChar: 1633
+      endSourceChar: 1661
       line: 48
       lineChar: 56
       spanCodeSection: "activeColorValues;\r\n        "
-    - startInstruction: 712
-      endInstruction: 711
-      startSourceChar: 1626
-      endSourceChar: 1626
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 1661
+      endSourceChar: 1661
       line: 49
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 712
-      endInstruction: 711
-      startSourceChar: 1626
-      endSourceChar: 1626
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 1661
+      endSourceChar: 1661
       line: 49
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 712
-      endInstruction: 711
-      startSourceChar: 1626
-      endSourceChar: 1643
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 1661
+      endSourceChar: 1678
       line: 49
       lineChar: 8
       spanCodeSection: 'var sVectorNames '
-    - startInstruction: 712
-      endInstruction: 711
-      startSourceChar: 1643
-      endSourceChar: 1645
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 1678
+      endSourceChar: 1680
       line: 49
       lineChar: 25
       spanCodeSection: '= '
-    - startInstruction: 712
-      endInstruction: 711
-      startSourceChar: 1645
-      endSourceChar: 1645
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 1680
+      endSourceChar: 1680
       line: 49
       lineChar: 27
       spanCodeSection: 
-    - startInstruction: 712
-      endInstruction: 711
-      startSourceChar: 1645
-      endSourceChar: 1646
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 1680
+      endSourceChar: 1681
       line: 49
       lineChar: 27
       spanCodeSection: '!'
-    - startInstruction: 712
-      endInstruction: 751
-      startSourceChar: 1646
-      endSourceChar: 1655
+    - startInstruction: 880
+      endInstruction: 919
+      startSourceChar: 1681
+      endSourceChar: 1690
       line: 49
       lineChar: 28
       spanCodeSection: 'active ? '
-    - startInstruction: 752
-      endInstruction: 779
-      startSourceChar: 1655
-      endSourceChar: 1677
+    - startInstruction: 920
+      endInstruction: 947
+      startSourceChar: 1690
+      endSourceChar: 1712
       line: 49
       lineChar: 37
       spanCodeSection: 'defaultVector3Names : '
-    - startInstruction: 780
-      endInstruction: 819
-      startSourceChar: 1677
-      endSourceChar: 1706
+    - startInstruction: 948
+      endInstruction: 987
+      startSourceChar: 1712
+      endSourceChar: 1741
       line: 49
       lineChar: 59
       spanCodeSection: "activeVector3Names;\r\n        "
-    - startInstruction: 820
-      endInstruction: 819
-      startSourceChar: 1706
-      endSourceChar: 1706
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 1741
+      endSourceChar: 1741
       line: 50
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 820
-      endInstruction: 819
-      startSourceChar: 1706
-      endSourceChar: 1706
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 1741
+      endSourceChar: 1741
       line: 50
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 820
-      endInstruction: 819
-      startSourceChar: 1706
-      endSourceChar: 1722
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 1741
+      endSourceChar: 1757
       line: 50
       lineChar: 8
       spanCodeSection: 'var sVectorVals '
-    - startInstruction: 820
-      endInstruction: 819
-      startSourceChar: 1722
-      endSourceChar: 1724
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 1757
+      endSourceChar: 1759
       line: 50
       lineChar: 24
       spanCodeSection: '= '
-    - startInstruction: 820
-      endInstruction: 819
-      startSourceChar: 1724
-      endSourceChar: 1724
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 1759
+      endSourceChar: 1759
       line: 50
       lineChar: 26
       spanCodeSection: 
-    - startInstruction: 820
-      endInstruction: 819
-      startSourceChar: 1724
-      endSourceChar: 1725
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 1759
+      endSourceChar: 1760
       line: 50
       lineChar: 26
       spanCodeSection: '!'
-    - startInstruction: 820
-      endInstruction: 859
-      startSourceChar: 1725
-      endSourceChar: 1734
+    - startInstruction: 988
+      endInstruction: 1027
+      startSourceChar: 1760
+      endSourceChar: 1769
       line: 50
       lineChar: 27
       spanCodeSection: 'active ? '
-    - startInstruction: 860
-      endInstruction: 887
-      startSourceChar: 1734
-      endSourceChar: 1757
+    - startInstruction: 1028
+      endInstruction: 1055
+      startSourceChar: 1769
+      endSourceChar: 1792
       line: 50
       lineChar: 36
       spanCodeSection: 'defaultVector3Values : '
-    - startInstruction: 888
-      endInstruction: 927
-      startSourceChar: 1757
-      endSourceChar: 1797
+    - startInstruction: 1056
+      endInstruction: 1095
+      startSourceChar: 1792
+      endSourceChar: 1832
       line: 50
       lineChar: 59
       spanCodeSection: "activeVector3Values;\r\n        \r\n        "
-    - startInstruction: 928
-      endInstruction: 927
-      startSourceChar: 1797
-      endSourceChar: 1797
+    - startInstruction: 1096
+      endInstruction: 1095
+      startSourceChar: 1832
+      endSourceChar: 1832
       line: 52
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 928
-      endInstruction: 927
-      startSourceChar: 1797
-      endSourceChar: 1797
+    - startInstruction: 1096
+      endInstruction: 1095
+      startSourceChar: 1832
+      endSourceChar: 1832
       line: 52
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 928
-      endInstruction: 927
-      startSourceChar: 1797
-      endSourceChar: 1812
+    - startInstruction: 1096
+      endInstruction: 1095
+      startSourceChar: 1832
+      endSourceChar: 1847
       line: 52
       lineChar: 8
       spanCodeSection: 'var eFloatVals '
-    - startInstruction: 928
-      endInstruction: 927
-      startSourceChar: 1812
-      endSourceChar: 1814
+    - startInstruction: 1096
+      endInstruction: 1095
+      startSourceChar: 1847
+      endSourceChar: 1849
       line: 52
       lineChar: 23
       spanCodeSection: '= '
-    - startInstruction: 928
-      endInstruction: 927
-      startSourceChar: 1814
-      endSourceChar: 1814
+    - startInstruction: 1096
+      endInstruction: 1095
+      startSourceChar: 1849
+      endSourceChar: 1849
       line: 52
       lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 928
-      endInstruction: 943
-      startSourceChar: 1814
-      endSourceChar: 1823
-      line: 52
-      lineChar: 25
-      spanCodeSection: 'active ? '
-    - startInstruction: 944
-      endInstruction: 971
-      startSourceChar: 1823
-      endSourceChar: 1844
-      line: 52
-      lineChar: 34
-      spanCodeSection: 'defaultFloatValues : '
-    - startInstruction: 972
-      endInstruction: 1011
-      startSourceChar: 1844
-      endSourceChar: 1872
-      line: 52
-      lineChar: 55
-      spanCodeSection: "activeFloatValues;\r\n        "
-    - startInstruction: 1012
-      endInstruction: 1011
-      startSourceChar: 1872
-      endSourceChar: 1872
-      line: 53
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1012
-      endInstruction: 1011
-      startSourceChar: 1872
-      endSourceChar: 1872
-      line: 53
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1012
-      endInstruction: 1011
-      startSourceChar: 1872
-      endSourceChar: 1887
-      line: 53
-      lineChar: 8
-      spanCodeSection: 'var eColorVals '
-    - startInstruction: 1012
-      endInstruction: 1011
-      startSourceChar: 1887
-      endSourceChar: 1889
-      line: 53
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 1012
-      endInstruction: 1011
-      startSourceChar: 1889
-      endSourceChar: 1889
-      line: 53
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 1012
-      endInstruction: 1027
-      startSourceChar: 1889
-      endSourceChar: 1898
-      line: 53
-      lineChar: 25
-      spanCodeSection: 'active ? '
-    - startInstruction: 1028
-      endInstruction: 1055
-      startSourceChar: 1898
-      endSourceChar: 1919
-      line: 53
-      lineChar: 34
-      spanCodeSection: 'defaultColorValues : '
-    - startInstruction: 1056
-      endInstruction: 1095
-      startSourceChar: 1919
-      endSourceChar: 1947
-      line: 53
-      lineChar: 55
-      spanCodeSection: "activeColorValues;\r\n        "
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1947
-      endSourceChar: 1947
-      line: 54
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1947
-      endSourceChar: 1947
-      line: 54
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1947
-      endSourceChar: 1963
-      line: 54
-      lineChar: 8
-      spanCodeSection: 'var eVectorVals '
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1963
-      endSourceChar: 1965
-      line: 54
-      lineChar: 24
-      spanCodeSection: '= '
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1965
-      endSourceChar: 1965
-      line: 54
-      lineChar: 26
       spanCodeSection: 
     - startInstruction: 1096
       endInstruction: 1111
-      startSourceChar: 1965
-      endSourceChar: 1974
-      line: 54
-      lineChar: 26
+      startSourceChar: 1849
+      endSourceChar: 1858
+      line: 52
+      lineChar: 25
       spanCodeSection: 'active ? '
     - startInstruction: 1112
       endInstruction: 1139
-      startSourceChar: 1974
-      endSourceChar: 1997
+      startSourceChar: 1858
+      endSourceChar: 1879
+      line: 52
+      lineChar: 34
+      spanCodeSection: 'defaultFloatValues : '
+    - startInstruction: 1140
+      endInstruction: 1179
+      startSourceChar: 1879
+      endSourceChar: 1907
+      line: 52
+      lineChar: 55
+      spanCodeSection: "activeFloatValues;\r\n        "
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 1907
+      endSourceChar: 1907
+      line: 53
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 1907
+      endSourceChar: 1907
+      line: 53
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 1907
+      endSourceChar: 1922
+      line: 53
+      lineChar: 8
+      spanCodeSection: 'var eColorVals '
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 1922
+      endSourceChar: 1924
+      line: 53
+      lineChar: 23
+      spanCodeSection: '= '
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 1924
+      endSourceChar: 1924
+      line: 53
+      lineChar: 25
+      spanCodeSection: 
+    - startInstruction: 1180
+      endInstruction: 1195
+      startSourceChar: 1924
+      endSourceChar: 1933
+      line: 53
+      lineChar: 25
+      spanCodeSection: 'active ? '
+    - startInstruction: 1196
+      endInstruction: 1223
+      startSourceChar: 1933
+      endSourceChar: 1954
+      line: 53
+      lineChar: 34
+      spanCodeSection: 'defaultColorValues : '
+    - startInstruction: 1224
+      endInstruction: 1263
+      startSourceChar: 1954
+      endSourceChar: 1982
+      line: 53
+      lineChar: 55
+      spanCodeSection: "activeColorValues;\r\n        "
+    - startInstruction: 1264
+      endInstruction: 1263
+      startSourceChar: 1982
+      endSourceChar: 1982
+      line: 54
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1264
+      endInstruction: 1263
+      startSourceChar: 1982
+      endSourceChar: 1982
+      line: 54
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1264
+      endInstruction: 1263
+      startSourceChar: 1982
+      endSourceChar: 1998
+      line: 54
+      lineChar: 8
+      spanCodeSection: 'var eVectorVals '
+    - startInstruction: 1264
+      endInstruction: 1263
+      startSourceChar: 1998
+      endSourceChar: 2000
+      line: 54
+      lineChar: 24
+      spanCodeSection: '= '
+    - startInstruction: 1264
+      endInstruction: 1263
+      startSourceChar: 2000
+      endSourceChar: 2000
+      line: 54
+      lineChar: 26
+      spanCodeSection: 
+    - startInstruction: 1264
+      endInstruction: 1279
+      startSourceChar: 2000
+      endSourceChar: 2009
+      line: 54
+      lineChar: 26
+      spanCodeSection: 'active ? '
+    - startInstruction: 1280
+      endInstruction: 1307
+      startSourceChar: 2009
+      endSourceChar: 2032
       line: 54
       lineChar: 35
       spanCodeSection: 'defaultVector3Values : '
-    - startInstruction: 1140
-      endInstruction: 1179
-      startSourceChar: 1997
-      endSourceChar: 2037
+    - startInstruction: 1308
+      endInstruction: 1347
+      startSourceChar: 2032
+      endSourceChar: 2072
       line: 54
       lineChar: 58
       spanCodeSection: "activeVector3Values;\r\n        \r\n        "
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 2037
-      endSourceChar: 2042
+    - startInstruction: 1348
+      endInstruction: 1347
+      startSourceChar: 2072
+      endSourceChar: 2077
       line: 56
       lineChar: 8
       spanCodeSection: for (
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 2042
-      endSourceChar: 2042
+    - startInstruction: 1348
+      endInstruction: 1347
+      startSourceChar: 2077
+      endSourceChar: 2077
       line: 56
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 2042
-      endSourceChar: 2042
+    - startInstruction: 1348
+      endInstruction: 1347
+      startSourceChar: 2077
+      endSourceChar: 2077
       line: 56
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 2042
-      endSourceChar: 2048
+    - startInstruction: 1348
+      endInstruction: 1347
+      startSourceChar: 2077
+      endSourceChar: 2083
       line: 56
       lineChar: 13
       spanCodeSection: 'int i '
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 2048
-      endSourceChar: 2050
+    - startInstruction: 1348
+      endInstruction: 1347
+      startSourceChar: 2083
+      endSourceChar: 2085
       line: 56
       lineChar: 19
       spanCodeSection: '= '
-    - startInstruction: 1180
-      endInstruction: 1199
-      startSourceChar: 2050
-      endSourceChar: 2053
+    - startInstruction: 1348
+      endInstruction: 1367
+      startSourceChar: 2085
+      endSourceChar: 2088
       line: 56
       lineChar: 21
       spanCodeSection: '0; '
-    - startInstruction: 1200
-      endInstruction: 1199
-      startSourceChar: 2053
-      endSourceChar: 2053
+    - startInstruction: 1368
+      endInstruction: 1367
+      startSourceChar: 2088
+      endSourceChar: 2088
       line: 56
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 1200
-      endInstruction: 1199
-      startSourceChar: 2053
-      endSourceChar: 2057
+    - startInstruction: 1368
+      endInstruction: 1367
+      startSourceChar: 2088
+      endSourceChar: 2092
       line: 56
       lineChar: 24
       spanCodeSection: 'i < '
-    - startInstruction: 1200
-      endInstruction: 1199
-      startSourceChar: 2057
-      endSourceChar: 2057
+    - startInstruction: 1368
+      endInstruction: 1367
+      startSourceChar: 2092
+      endSourceChar: 2092
       line: 56
       lineChar: 28
       spanCodeSection: 
-    - startInstruction: 1200
-      endInstruction: 1199
-      startSourceChar: 2057
-      endSourceChar: 2069
+    - startInstruction: 1368
+      endInstruction: 1367
+      startSourceChar: 2092
+      endSourceChar: 2104
       line: 56
       lineChar: 28
       spanCodeSection: sFloatNames.
-    - startInstruction: 1200
-      endInstruction: 1271
-      startSourceChar: 2069
-      endSourceChar: 2082
+    - startInstruction: 1368
+      endInstruction: 1439
+      startSourceChar: 2104
+      endSourceChar: 2117
       line: 56
       lineChar: 40
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2082
-      endSourceChar: 2095
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2117
+      endSourceChar: 2130
       line: 56
       lineChar: 53
       spanCodeSection: "{\r\n          "
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2095
-      endSourceChar: 2095
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2130
+      endSourceChar: 2130
       line: 57
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2095
-      endSourceChar: 2095
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2130
+      endSourceChar: 2130
       line: 57
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2095
-      endSourceChar: 2095
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2130
+      endSourceChar: 2130
       line: 57
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2095
-      endSourceChar: 2099
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2130
+      endSourceChar: 2134
       line: 57
       lineChar: 10
       spanCodeSection: mat.
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2099
-      endSourceChar: 2108
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2134
+      endSourceChar: 2143
       line: 57
       lineChar: 14
       spanCodeSection: SetFloat(
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2108
-      endSourceChar: 2108
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2143
+      endSourceChar: 2143
       line: 57
       lineChar: 23
       spanCodeSection: 
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2108
-      endSourceChar: 2120
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2143
+      endSourceChar: 2155
       line: 57
       lineChar: 23
       spanCodeSection: sFloatNames[
-    - startInstruction: 1272
-      endInstruction: 1271
-      startSourceChar: 2120
-      endSourceChar: 2120
+    - startInstruction: 1440
+      endInstruction: 1439
+      startSourceChar: 2155
+      endSourceChar: 2155
       line: 57
       lineChar: 35
       spanCodeSection: 
-    - startInstruction: 1272
-      endInstruction: 1303
-      startSourceChar: 2120
-      endSourceChar: 2124
+    - startInstruction: 1440
+      endInstruction: 1471
+      startSourceChar: 2155
+      endSourceChar: 2159
       line: 57
       lineChar: 35
       spanCodeSection: 'i], '
-    - startInstruction: 1304
-      endInstruction: 1303
-      startSourceChar: 2124
-      endSourceChar: 2124
+    - startInstruction: 1472
+      endInstruction: 1471
+      startSourceChar: 2159
+      endSourceChar: 2159
       line: 57
       lineChar: 39
       spanCodeSection: 
-    - startInstruction: 1304
-      endInstruction: 1303
-      startSourceChar: 2124
-      endSourceChar: 2124
+    - startInstruction: 1472
+      endInstruction: 1471
+      startSourceChar: 2159
+      endSourceChar: 2159
       line: 57
       lineChar: 39
       spanCodeSection: 
-    - startInstruction: 1304
-      endInstruction: 1303
-      startSourceChar: 2124
-      endSourceChar: 2130
+    - startInstruction: 1472
+      endInstruction: 1471
+      startSourceChar: 2159
+      endSourceChar: 2165
       line: 57
       lineChar: 39
       spanCodeSection: Mathf.
-    - startInstruction: 1304
-      endInstruction: 1303
-      startSourceChar: 2130
-      endSourceChar: 2135
+    - startInstruction: 1472
+      endInstruction: 1471
+      startSourceChar: 2165
+      endSourceChar: 2170
       line: 57
       lineChar: 45
       spanCodeSection: Lerp(
-    - startInstruction: 1304
-      endInstruction: 1303
-      startSourceChar: 2135
-      endSourceChar: 2135
+    - startInstruction: 1472
+      endInstruction: 1471
+      startSourceChar: 2170
+      endSourceChar: 2170
       line: 57
       lineChar: 50
       spanCodeSection: 
-    - startInstruction: 1304
-      endInstruction: 1303
-      startSourceChar: 2135
-      endSourceChar: 2146
+    - startInstruction: 1472
+      endInstruction: 1471
+      startSourceChar: 2170
+      endSourceChar: 2181
       line: 57
       lineChar: 50
       spanCodeSection: sFloatVals[
-    - startInstruction: 1304
-      endInstruction: 1303
-      startSourceChar: 2146
-      endSourceChar: 2146
+    - startInstruction: 1472
+      endInstruction: 1471
+      startSourceChar: 2181
+      endSourceChar: 2181
       line: 57
       lineChar: 61
       spanCodeSection: 
-    - startInstruction: 1304
-      endInstruction: 1335
-      startSourceChar: 2146
-      endSourceChar: 2150
+    - startInstruction: 1472
+      endInstruction: 1503
+      startSourceChar: 2181
+      endSourceChar: 2185
       line: 57
       lineChar: 61
       spanCodeSection: 'i], '
-    - startInstruction: 1336
-      endInstruction: 1335
-      startSourceChar: 2150
-      endSourceChar: 2150
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2185
+      endSourceChar: 2185
       line: 57
       lineChar: 65
       spanCodeSection: 
-    - startInstruction: 1336
-      endInstruction: 1335
-      startSourceChar: 2150
-      endSourceChar: 2161
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2185
+      endSourceChar: 2196
       line: 57
       lineChar: 65
       spanCodeSection: eFloatVals[
-    - startInstruction: 1336
-      endInstruction: 1335
-      startSourceChar: 2161
-      endSourceChar: 2161
+    - startInstruction: 1504
+      endInstruction: 1503
+      startSourceChar: 2196
+      endSourceChar: 2196
       line: 57
       lineChar: 76
       spanCodeSection: 
-    - startInstruction: 1336
-      endInstruction: 1367
-      startSourceChar: 2161
-      endSourceChar: 2165
+    - startInstruction: 1504
+      endInstruction: 1535
+      startSourceChar: 2196
+      endSourceChar: 2200
       line: 57
       lineChar: 76
       spanCodeSection: 'i], '
-    - startInstruction: 1368
-      endInstruction: 1499
-      startSourceChar: 2165
-      endSourceChar: 2194
+    - startInstruction: 1536
+      endInstruction: 1667
+      startSourceChar: 2200
+      endSourceChar: 2229
       line: 57
       lineChar: 80
       spanCodeSection: "alpha));\r\n        }\r\n        "
-    - startInstruction: 1500
-      endInstruction: 1499
-      startSourceChar: 2194
-      endSourceChar: 2199
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2229
+      endSourceChar: 2234
       line: 59
       lineChar: 8
       spanCodeSection: for (
-    - startInstruction: 1500
-      endInstruction: 1499
-      startSourceChar: 2199
-      endSourceChar: 2199
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2234
+      endSourceChar: 2234
       line: 59
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 1500
-      endInstruction: 1499
-      startSourceChar: 2199
-      endSourceChar: 2199
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2234
+      endSourceChar: 2234
       line: 59
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 1500
-      endInstruction: 1499
-      startSourceChar: 2199
-      endSourceChar: 2205
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2234
+      endSourceChar: 2240
       line: 59
       lineChar: 13
       spanCodeSection: 'int i '
-    - startInstruction: 1500
-      endInstruction: 1499
-      startSourceChar: 2205
-      endSourceChar: 2207
+    - startInstruction: 1668
+      endInstruction: 1667
+      startSourceChar: 2240
+      endSourceChar: 2242
       line: 59
       lineChar: 19
       spanCodeSection: '= '
-    - startInstruction: 1500
-      endInstruction: 1519
-      startSourceChar: 2207
-      endSourceChar: 2210
+    - startInstruction: 1668
+      endInstruction: 1687
+      startSourceChar: 2242
+      endSourceChar: 2245
       line: 59
       lineChar: 21
       spanCodeSection: '0; '
-    - startInstruction: 1520
-      endInstruction: 1519
-      startSourceChar: 2210
-      endSourceChar: 2210
+    - startInstruction: 1688
+      endInstruction: 1687
+      startSourceChar: 2245
+      endSourceChar: 2245
       line: 59
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 1520
-      endInstruction: 1519
-      startSourceChar: 2210
-      endSourceChar: 2214
+    - startInstruction: 1688
+      endInstruction: 1687
+      startSourceChar: 2245
+      endSourceChar: 2249
       line: 59
       lineChar: 24
       spanCodeSection: 'i < '
-    - startInstruction: 1520
-      endInstruction: 1519
-      startSourceChar: 2214
-      endSourceChar: 2214
+    - startInstruction: 1688
+      endInstruction: 1687
+      startSourceChar: 2249
+      endSourceChar: 2249
       line: 59
       lineChar: 28
       spanCodeSection: 
-    - startInstruction: 1520
-      endInstruction: 1519
-      startSourceChar: 2214
-      endSourceChar: 2226
+    - startInstruction: 1688
+      endInstruction: 1687
+      startSourceChar: 2249
+      endSourceChar: 2261
       line: 59
       lineChar: 28
       spanCodeSection: sColorNames.
-    - startInstruction: 1520
-      endInstruction: 1591
-      startSourceChar: 2226
-      endSourceChar: 2239
+    - startInstruction: 1688
+      endInstruction: 1759
+      startSourceChar: 2261
+      endSourceChar: 2274
       line: 59
       lineChar: 40
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2239
-      endSourceChar: 2252
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2274
+      endSourceChar: 2287
       line: 59
       lineChar: 53
       spanCodeSection: "{\r\n          "
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2252
-      endSourceChar: 2252
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2287
+      endSourceChar: 2287
       line: 60
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2252
-      endSourceChar: 2252
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2287
+      endSourceChar: 2287
       line: 60
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2252
-      endSourceChar: 2252
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2287
+      endSourceChar: 2287
       line: 60
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2252
-      endSourceChar: 2256
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2287
+      endSourceChar: 2291
       line: 60
       lineChar: 10
       spanCodeSection: mat.
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2256
-      endSourceChar: 2265
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2291
+      endSourceChar: 2300
       line: 60
       lineChar: 14
       spanCodeSection: SetColor(
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2265
-      endSourceChar: 2265
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2300
+      endSourceChar: 2300
       line: 60
       lineChar: 23
       spanCodeSection: 
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2265
-      endSourceChar: 2277
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2300
+      endSourceChar: 2312
       line: 60
       lineChar: 23
       spanCodeSection: sColorNames[
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2277
-      endSourceChar: 2277
+    - startInstruction: 1760
+      endInstruction: 1759
+      startSourceChar: 2312
+      endSourceChar: 2312
       line: 60
       lineChar: 35
       spanCodeSection: 
-    - startInstruction: 1592
-      endInstruction: 1623
-      startSourceChar: 2277
-      endSourceChar: 2281
+    - startInstruction: 1760
+      endInstruction: 1791
+      startSourceChar: 2312
+      endSourceChar: 2316
       line: 60
       lineChar: 35
       spanCodeSection: 'i], '
-    - startInstruction: 1624
-      endInstruction: 1623
-      startSourceChar: 2281
-      endSourceChar: 2281
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2316
+      endSourceChar: 2316
       line: 60
       lineChar: 39
       spanCodeSection: 
-    - startInstruction: 1624
-      endInstruction: 1623
-      startSourceChar: 2281
-      endSourceChar: 2281
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2316
+      endSourceChar: 2316
       line: 60
       lineChar: 39
       spanCodeSection: 
-    - startInstruction: 1624
-      endInstruction: 1623
-      startSourceChar: 2281
-      endSourceChar: 2287
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2316
+      endSourceChar: 2322
       line: 60
       lineChar: 39
       spanCodeSection: Color.
-    - startInstruction: 1624
-      endInstruction: 1623
-      startSourceChar: 2287
-      endSourceChar: 2292
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2322
+      endSourceChar: 2327
       line: 60
       lineChar: 45
       spanCodeSection: Lerp(
-    - startInstruction: 1624
-      endInstruction: 1623
-      startSourceChar: 2292
-      endSourceChar: 2292
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2327
+      endSourceChar: 2327
       line: 60
       lineChar: 50
       spanCodeSection: 
-    - startInstruction: 1624
-      endInstruction: 1623
-      startSourceChar: 2292
-      endSourceChar: 2303
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2327
+      endSourceChar: 2338
       line: 60
       lineChar: 50
       spanCodeSection: sColorVals[
-    - startInstruction: 1624
-      endInstruction: 1623
-      startSourceChar: 2303
-      endSourceChar: 2303
+    - startInstruction: 1792
+      endInstruction: 1791
+      startSourceChar: 2338
+      endSourceChar: 2338
       line: 60
       lineChar: 61
       spanCodeSection: 
-    - startInstruction: 1624
-      endInstruction: 1655
-      startSourceChar: 2303
-      endSourceChar: 2307
+    - startInstruction: 1792
+      endInstruction: 1823
+      startSourceChar: 2338
+      endSourceChar: 2342
       line: 60
       lineChar: 61
       spanCodeSection: 'i], '
-    - startInstruction: 1656
-      endInstruction: 1655
-      startSourceChar: 2307
-      endSourceChar: 2307
+    - startInstruction: 1824
+      endInstruction: 1823
+      startSourceChar: 2342
+      endSourceChar: 2342
       line: 60
       lineChar: 65
       spanCodeSection: 
-    - startInstruction: 1656
-      endInstruction: 1655
-      startSourceChar: 2307
-      endSourceChar: 2318
+    - startInstruction: 1824
+      endInstruction: 1823
+      startSourceChar: 2342
+      endSourceChar: 2353
       line: 60
       lineChar: 65
       spanCodeSection: eColorVals[
-    - startInstruction: 1656
-      endInstruction: 1655
-      startSourceChar: 2318
-      endSourceChar: 2318
+    - startInstruction: 1824
+      endInstruction: 1823
+      startSourceChar: 2353
+      endSourceChar: 2353
       line: 60
       lineChar: 76
       spanCodeSection: 
-    - startInstruction: 1656
-      endInstruction: 1687
-      startSourceChar: 2318
-      endSourceChar: 2322
+    - startInstruction: 1824
+      endInstruction: 1855
+      startSourceChar: 2353
+      endSourceChar: 2357
       line: 60
       lineChar: 76
       spanCodeSection: 'i], '
-    - startInstruction: 1688
-      endInstruction: 1819
-      startSourceChar: 2322
-      endSourceChar: 2351
+    - startInstruction: 1856
+      endInstruction: 1987
+      startSourceChar: 2357
+      endSourceChar: 2386
       line: 60
       lineChar: 80
       spanCodeSection: "alpha));\r\n        }\r\n        "
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2351
-      endSourceChar: 2356
+    - startInstruction: 1988
+      endInstruction: 1987
+      startSourceChar: 2386
+      endSourceChar: 2391
       line: 62
       lineChar: 8
       spanCodeSection: for (
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2356
-      endSourceChar: 2356
+    - startInstruction: 1988
+      endInstruction: 1987
+      startSourceChar: 2391
+      endSourceChar: 2391
       line: 62
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2356
-      endSourceChar: 2356
+    - startInstruction: 1988
+      endInstruction: 1987
+      startSourceChar: 2391
+      endSourceChar: 2391
       line: 62
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2356
-      endSourceChar: 2362
+    - startInstruction: 1988
+      endInstruction: 1987
+      startSourceChar: 2391
+      endSourceChar: 2397
       line: 62
       lineChar: 13
       spanCodeSection: 'int i '
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2362
-      endSourceChar: 2364
+    - startInstruction: 1988
+      endInstruction: 1987
+      startSourceChar: 2397
+      endSourceChar: 2399
       line: 62
       lineChar: 19
       spanCodeSection: '= '
-    - startInstruction: 1820
-      endInstruction: 1839
-      startSourceChar: 2364
-      endSourceChar: 2367
+    - startInstruction: 1988
+      endInstruction: 2007
+      startSourceChar: 2399
+      endSourceChar: 2402
       line: 62
       lineChar: 21
       spanCodeSection: '0; '
-    - startInstruction: 1840
-      endInstruction: 1839
-      startSourceChar: 2367
-      endSourceChar: 2367
+    - startInstruction: 2008
+      endInstruction: 2007
+      startSourceChar: 2402
+      endSourceChar: 2402
       line: 62
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 1840
-      endInstruction: 1839
-      startSourceChar: 2367
-      endSourceChar: 2371
+    - startInstruction: 2008
+      endInstruction: 2007
+      startSourceChar: 2402
+      endSourceChar: 2406
       line: 62
       lineChar: 24
       spanCodeSection: 'i < '
-    - startInstruction: 1840
-      endInstruction: 1839
-      startSourceChar: 2371
-      endSourceChar: 2371
+    - startInstruction: 2008
+      endInstruction: 2007
+      startSourceChar: 2406
+      endSourceChar: 2406
       line: 62
       lineChar: 28
       spanCodeSection: 
-    - startInstruction: 1840
-      endInstruction: 1839
-      startSourceChar: 2371
-      endSourceChar: 2384
+    - startInstruction: 2008
+      endInstruction: 2007
+      startSourceChar: 2406
+      endSourceChar: 2419
       line: 62
       lineChar: 28
       spanCodeSection: sVectorNames.
-    - startInstruction: 1840
-      endInstruction: 1911
-      startSourceChar: 2384
-      endSourceChar: 2397
+    - startInstruction: 2008
+      endInstruction: 2079
+      startSourceChar: 2419
+      endSourceChar: 2432
       line: 62
       lineChar: 41
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2397
-      endSourceChar: 2410
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2432
+      endSourceChar: 2445
       line: 62
       lineChar: 54
       spanCodeSection: "{\r\n          "
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2410
-      endSourceChar: 2410
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2445
+      endSourceChar: 2445
       line: 63
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2410
-      endSourceChar: 2410
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2445
+      endSourceChar: 2445
       line: 63
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2410
-      endSourceChar: 2410
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2445
+      endSourceChar: 2445
       line: 63
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2410
-      endSourceChar: 2414
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2445
+      endSourceChar: 2449
       line: 63
       lineChar: 10
       spanCodeSection: mat.
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2414
-      endSourceChar: 2424
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2449
+      endSourceChar: 2459
       line: 63
       lineChar: 14
       spanCodeSection: SetVector(
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2424
-      endSourceChar: 2424
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2459
+      endSourceChar: 2459
       line: 63
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2424
-      endSourceChar: 2437
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2459
+      endSourceChar: 2472
       line: 63
       lineChar: 24
       spanCodeSection: sVectorNames[
-    - startInstruction: 1912
-      endInstruction: 1911
-      startSourceChar: 2437
-      endSourceChar: 2437
+    - startInstruction: 2080
+      endInstruction: 2079
+      startSourceChar: 2472
+      endSourceChar: 2472
       line: 63
       lineChar: 37
       spanCodeSection: 
-    - startInstruction: 1912
-      endInstruction: 1943
-      startSourceChar: 2437
-      endSourceChar: 2441
+    - startInstruction: 2080
+      endInstruction: 2111
+      startSourceChar: 2472
+      endSourceChar: 2476
       line: 63
       lineChar: 37
       spanCodeSection: 'i], '
-    - startInstruction: 1944
-      endInstruction: 1943
-      startSourceChar: 2441
-      endSourceChar: 2441
+    - startInstruction: 2112
+      endInstruction: 2111
+      startSourceChar: 2476
+      endSourceChar: 2476
       line: 63
       lineChar: 41
       spanCodeSection: 
-    - startInstruction: 1944
-      endInstruction: 1943
-      startSourceChar: 2441
-      endSourceChar: 2441
+    - startInstruction: 2112
+      endInstruction: 2111
+      startSourceChar: 2476
+      endSourceChar: 2476
       line: 63
       lineChar: 41
       spanCodeSection: 
-    - startInstruction: 1944
-      endInstruction: 1943
-      startSourceChar: 2441
-      endSourceChar: 2449
+    - startInstruction: 2112
+      endInstruction: 2111
+      startSourceChar: 2476
+      endSourceChar: 2484
       line: 63
       lineChar: 41
       spanCodeSection: Vector3.
-    - startInstruction: 1944
-      endInstruction: 1943
-      startSourceChar: 2449
-      endSourceChar: 2454
+    - startInstruction: 2112
+      endInstruction: 2111
+      startSourceChar: 2484
+      endSourceChar: 2489
       line: 63
       lineChar: 49
       spanCodeSection: Lerp(
-    - startInstruction: 1944
-      endInstruction: 1943
-      startSourceChar: 2454
-      endSourceChar: 2454
+    - startInstruction: 2112
+      endInstruction: 2111
+      startSourceChar: 2489
+      endSourceChar: 2489
       line: 63
       lineChar: 54
       spanCodeSection: 
-    - startInstruction: 1944
-      endInstruction: 1943
-      startSourceChar: 2454
-      endSourceChar: 2466
+    - startInstruction: 2112
+      endInstruction: 2111
+      startSourceChar: 2489
+      endSourceChar: 2501
       line: 63
       lineChar: 54
       spanCodeSection: sVectorVals[
-    - startInstruction: 1944
-      endInstruction: 1943
-      startSourceChar: 2466
-      endSourceChar: 2466
+    - startInstruction: 2112
+      endInstruction: 2111
+      startSourceChar: 2501
+      endSourceChar: 2501
       line: 63
       lineChar: 66
       spanCodeSection: 
-    - startInstruction: 1944
-      endInstruction: 1975
-      startSourceChar: 2466
-      endSourceChar: 2470
+    - startInstruction: 2112
+      endInstruction: 2143
+      startSourceChar: 2501
+      endSourceChar: 2505
       line: 63
       lineChar: 66
       spanCodeSection: 'i], '
-    - startInstruction: 1976
-      endInstruction: 1975
-      startSourceChar: 2470
-      endSourceChar: 2470
+    - startInstruction: 2144
+      endInstruction: 2143
+      startSourceChar: 2505
+      endSourceChar: 2505
       line: 63
       lineChar: 70
       spanCodeSection: 
-    - startInstruction: 1976
-      endInstruction: 1975
-      startSourceChar: 2470
-      endSourceChar: 2482
+    - startInstruction: 2144
+      endInstruction: 2143
+      startSourceChar: 2505
+      endSourceChar: 2517
       line: 63
       lineChar: 70
       spanCodeSection: eVectorVals[
-    - startInstruction: 1976
-      endInstruction: 1975
-      startSourceChar: 2482
-      endSourceChar: 2482
+    - startInstruction: 2144
+      endInstruction: 2143
+      startSourceChar: 2517
+      endSourceChar: 2517
       line: 63
       lineChar: 82
       spanCodeSection: 
-    - startInstruction: 1976
-      endInstruction: 2007
-      startSourceChar: 2482
-      endSourceChar: 2486
+    - startInstruction: 2144
+      endInstruction: 2175
+      startSourceChar: 2517
+      endSourceChar: 2521
       line: 63
       lineChar: 82
       spanCodeSection: 'i], '
-    - startInstruction: 2008
-      endInstruction: 2183
-      startSourceChar: 2486
-      endSourceChar: 2524
+    - startInstruction: 2176
+      endInstruction: 2351
+      startSourceChar: 2521
+      endSourceChar: 2559
       line: 63
       lineChar: 86
       spanCodeSection: "alpha));\r\n        }\r\n      }\r\n\r\n      "
-    - startInstruction: 2184
-      endInstruction: 2191
-      startSourceChar: 2524
-      endSourceChar: 2554
+    - startInstruction: 2352
+      endInstruction: 2359
+      startSourceChar: 2559
+      endSourceChar: 2589
       line: 67
       lineChar: 6
       spanCodeSection: 'private void SetFinalValues() '
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2554
-      endSourceChar: 2565
+    - startInstruction: 2360
+      endInstruction: 2359
+      startSourceChar: 2589
+      endSourceChar: 2600
       line: 67
       lineChar: 36
       spanCodeSection: "{\r\n        "
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2565
-      endSourceChar: 2565
+    - startInstruction: 2360
+      endInstruction: 2359
+      startSourceChar: 2600
+      endSourceChar: 2600
       line: 68
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2565
-      endSourceChar: 2565
+    - startInstruction: 2360
+      endInstruction: 2359
+      startSourceChar: 2600
+      endSourceChar: 2600
       line: 68
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2565
-      endSourceChar: 2580
+    - startInstruction: 2360
+      endInstruction: 2359
+      startSourceChar: 2600
+      endSourceChar: 2615
       line: 68
       lineChar: 8
       spanCodeSection: 'var floatNames '
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2580
-      endSourceChar: 2582
+    - startInstruction: 2360
+      endInstruction: 2359
+      startSourceChar: 2615
+      endSourceChar: 2617
       line: 68
       lineChar: 23
       spanCodeSection: '= '
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2582
-      endSourceChar: 2582
+    - startInstruction: 2360
+      endInstruction: 2359
+      startSourceChar: 2617
+      endSourceChar: 2617
       line: 68
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 2192
-      endInstruction: 2207
-      startSourceChar: 2582
-      endSourceChar: 2591
-      line: 68
-      lineChar: 25
-      spanCodeSection: 'active ? '
-    - startInstruction: 2208
-      endInstruction: 2235
-      startSourceChar: 2591
-      endSourceChar: 2611
-      line: 68
-      lineChar: 34
-      spanCodeSection: 'defaultFloatNames : '
-    - startInstruction: 2236
-      endInstruction: 2275
-      startSourceChar: 2611
-      endSourceChar: 2638
-      line: 68
-      lineChar: 54
-      spanCodeSection: "activeFloatNames;\r\n        "
-    - startInstruction: 2276
-      endInstruction: 2275
-      startSourceChar: 2638
-      endSourceChar: 2638
-      line: 69
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2276
-      endInstruction: 2275
-      startSourceChar: 2638
-      endSourceChar: 2638
-      line: 69
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2276
-      endInstruction: 2275
-      startSourceChar: 2638
-      endSourceChar: 2652
-      line: 69
-      lineChar: 8
-      spanCodeSection: 'var floatVals '
-    - startInstruction: 2276
-      endInstruction: 2275
-      startSourceChar: 2652
-      endSourceChar: 2654
-      line: 69
-      lineChar: 22
-      spanCodeSection: '= '
-    - startInstruction: 2276
-      endInstruction: 2275
-      startSourceChar: 2654
-      endSourceChar: 2654
-      line: 69
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 2276
-      endInstruction: 2291
-      startSourceChar: 2654
-      endSourceChar: 2663
-      line: 69
-      lineChar: 24
-      spanCodeSection: 'active ? '
-    - startInstruction: 2292
-      endInstruction: 2319
-      startSourceChar: 2663
-      endSourceChar: 2684
-      line: 69
-      lineChar: 33
-      spanCodeSection: 'defaultFloatValues : '
-    - startInstruction: 2320
-      endInstruction: 2359
-      startSourceChar: 2684
-      endSourceChar: 2712
-      line: 69
-      lineChar: 54
-      spanCodeSection: "activeFloatValues;\r\n        "
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2712
-      endSourceChar: 2712
-      line: 70
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2712
-      endSourceChar: 2712
-      line: 70
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2712
-      endSourceChar: 2727
-      line: 70
-      lineChar: 8
-      spanCodeSection: 'var colorNames '
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2727
-      endSourceChar: 2729
-      line: 70
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2729
-      endSourceChar: 2729
-      line: 70
       lineChar: 25
       spanCodeSection: 
     - startInstruction: 2360
       endInstruction: 2375
-      startSourceChar: 2729
-      endSourceChar: 2738
-      line: 70
+      startSourceChar: 2617
+      endSourceChar: 2626
+      line: 68
       lineChar: 25
       spanCodeSection: 'active ? '
     - startInstruction: 2376
       endInstruction: 2403
-      startSourceChar: 2738
-      endSourceChar: 2758
-      line: 70
+      startSourceChar: 2626
+      endSourceChar: 2646
+      line: 68
       lineChar: 34
-      spanCodeSection: 'defaultColorNames : '
+      spanCodeSection: 'defaultFloatNames : '
     - startInstruction: 2404
       endInstruction: 2443
-      startSourceChar: 2758
-      endSourceChar: 2785
-      line: 70
+      startSourceChar: 2646
+      endSourceChar: 2673
+      line: 68
       lineChar: 54
-      spanCodeSection: "activeColorNames;\r\n        "
+      spanCodeSection: "activeFloatNames;\r\n        "
     - startInstruction: 2444
       endInstruction: 2443
-      startSourceChar: 2785
-      endSourceChar: 2785
-      line: 71
+      startSourceChar: 2673
+      endSourceChar: 2673
+      line: 69
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 2444
       endInstruction: 2443
-      startSourceChar: 2785
-      endSourceChar: 2785
-      line: 71
+      startSourceChar: 2673
+      endSourceChar: 2673
+      line: 69
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 2444
       endInstruction: 2443
-      startSourceChar: 2785
-      endSourceChar: 2799
-      line: 71
+      startSourceChar: 2673
+      endSourceChar: 2687
+      line: 69
       lineChar: 8
-      spanCodeSection: 'var colorVals '
+      spanCodeSection: 'var floatVals '
     - startInstruction: 2444
       endInstruction: 2443
-      startSourceChar: 2799
-      endSourceChar: 2801
-      line: 71
+      startSourceChar: 2687
+      endSourceChar: 2689
+      line: 69
       lineChar: 22
       spanCodeSection: '= '
     - startInstruction: 2444
       endInstruction: 2443
-      startSourceChar: 2801
-      endSourceChar: 2801
-      line: 71
+      startSourceChar: 2689
+      endSourceChar: 2689
+      line: 69
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 2444
       endInstruction: 2459
-      startSourceChar: 2801
-      endSourceChar: 2810
-      line: 71
+      startSourceChar: 2689
+      endSourceChar: 2698
+      line: 69
       lineChar: 24
       spanCodeSection: 'active ? '
     - startInstruction: 2460
       endInstruction: 2487
-      startSourceChar: 2810
-      endSourceChar: 2831
-      line: 71
+      startSourceChar: 2698
+      endSourceChar: 2719
+      line: 69
       lineChar: 33
-      spanCodeSection: 'defaultColorValues : '
+      spanCodeSection: 'defaultFloatValues : '
     - startInstruction: 2488
       endInstruction: 2527
-      startSourceChar: 2831
-      endSourceChar: 2859
-      line: 71
+      startSourceChar: 2719
+      endSourceChar: 2747
+      line: 69
       lineChar: 54
-      spanCodeSection: "activeColorValues;\r\n        "
+      spanCodeSection: "activeFloatValues;\r\n        "
     - startInstruction: 2528
       endInstruction: 2527
-      startSourceChar: 2859
-      endSourceChar: 2859
-      line: 72
+      startSourceChar: 2747
+      endSourceChar: 2747
+      line: 70
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 2528
       endInstruction: 2527
-      startSourceChar: 2859
-      endSourceChar: 2859
-      line: 72
+      startSourceChar: 2747
+      endSourceChar: 2747
+      line: 70
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 2528
       endInstruction: 2527
-      startSourceChar: 2859
-      endSourceChar: 2875
-      line: 72
+      startSourceChar: 2747
+      endSourceChar: 2762
+      line: 70
       lineChar: 8
-      spanCodeSection: 'var vectorNames '
+      spanCodeSection: 'var colorNames '
     - startInstruction: 2528
       endInstruction: 2527
-      startSourceChar: 2875
-      endSourceChar: 2877
-      line: 72
-      lineChar: 24
+      startSourceChar: 2762
+      endSourceChar: 2764
+      line: 70
+      lineChar: 23
       spanCodeSection: '= '
     - startInstruction: 2528
       endInstruction: 2527
-      startSourceChar: 2877
-      endSourceChar: 2877
-      line: 72
-      lineChar: 26
+      startSourceChar: 2764
+      endSourceChar: 2764
+      line: 70
+      lineChar: 25
       spanCodeSection: 
     - startInstruction: 2528
       endInstruction: 2543
-      startSourceChar: 2877
-      endSourceChar: 2886
-      line: 72
-      lineChar: 26
+      startSourceChar: 2764
+      endSourceChar: 2773
+      line: 70
+      lineChar: 25
       spanCodeSection: 'active ? '
     - startInstruction: 2544
       endInstruction: 2571
-      startSourceChar: 2886
-      endSourceChar: 2908
-      line: 72
-      lineChar: 35
-      spanCodeSection: 'defaultVector3Names : '
+      startSourceChar: 2773
+      endSourceChar: 2793
+      line: 70
+      lineChar: 34
+      spanCodeSection: 'defaultColorNames : '
     - startInstruction: 2572
       endInstruction: 2611
-      startSourceChar: 2908
-      endSourceChar: 2937
-      line: 72
-      lineChar: 57
-      spanCodeSection: "activeVector3Names;\r\n        "
+      startSourceChar: 2793
+      endSourceChar: 2820
+      line: 70
+      lineChar: 54
+      spanCodeSection: "activeColorNames;\r\n        "
     - startInstruction: 2612
       endInstruction: 2611
-      startSourceChar: 2937
-      endSourceChar: 2937
-      line: 73
+      startSourceChar: 2820
+      endSourceChar: 2820
+      line: 71
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 2612
       endInstruction: 2611
-      startSourceChar: 2937
-      endSourceChar: 2937
-      line: 73
+      startSourceChar: 2820
+      endSourceChar: 2820
+      line: 71
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 2612
       endInstruction: 2611
-      startSourceChar: 2937
-      endSourceChar: 2952
-      line: 73
+      startSourceChar: 2820
+      endSourceChar: 2834
+      line: 71
       lineChar: 8
-      spanCodeSection: 'var vectorVals '
+      spanCodeSection: 'var colorVals '
     - startInstruction: 2612
       endInstruction: 2611
-      startSourceChar: 2952
-      endSourceChar: 2954
-      line: 73
-      lineChar: 23
+      startSourceChar: 2834
+      endSourceChar: 2836
+      line: 71
+      lineChar: 22
       spanCodeSection: '= '
     - startInstruction: 2612
       endInstruction: 2611
-      startSourceChar: 2954
-      endSourceChar: 2954
-      line: 73
-      lineChar: 25
+      startSourceChar: 2836
+      endSourceChar: 2836
+      line: 71
+      lineChar: 24
       spanCodeSection: 
     - startInstruction: 2612
       endInstruction: 2627
-      startSourceChar: 2954
-      endSourceChar: 2963
-      line: 73
-      lineChar: 25
+      startSourceChar: 2836
+      endSourceChar: 2845
+      line: 71
+      lineChar: 24
       spanCodeSection: 'active ? '
     - startInstruction: 2628
       endInstruction: 2655
-      startSourceChar: 2963
-      endSourceChar: 2986
-      line: 73
-      lineChar: 34
-      spanCodeSection: 'defaultVector3Values : '
+      startSourceChar: 2845
+      endSourceChar: 2866
+      line: 71
+      lineChar: 33
+      spanCodeSection: 'defaultColorValues : '
     - startInstruction: 2656
       endInstruction: 2695
-      startSourceChar: 2986
-      endSourceChar: 3016
-      line: 73
-      lineChar: 57
-      spanCodeSection: "activeVector3Values;\r\n        "
+      startSourceChar: 2866
+      endSourceChar: 2894
+      line: 71
+      lineChar: 54
+      spanCodeSection: "activeColorValues;\r\n        "
     - startInstruction: 2696
       endInstruction: 2695
-      startSourceChar: 3016
-      endSourceChar: 3016
-      line: 74
+      startSourceChar: 2894
+      endSourceChar: 2894
+      line: 72
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 2696
       endInstruction: 2695
-      startSourceChar: 3016
-      endSourceChar: 3016
-      line: 74
+      startSourceChar: 2894
+      endSourceChar: 2894
+      line: 72
       lineChar: 8
       spanCodeSection: 
     - startInstruction: 2696
       endInstruction: 2695
-      startSourceChar: 3016
-      endSourceChar: 3024
-      line: 74
+      startSourceChar: 2894
+      endSourceChar: 2910
+      line: 72
       lineChar: 8
-      spanCodeSection: 'var mat '
+      spanCodeSection: 'var vectorNames '
     - startInstruction: 2696
       endInstruction: 2695
-      startSourceChar: 3024
-      endSourceChar: 3026
-      line: 74
-      lineChar: 16
+      startSourceChar: 2910
+      endSourceChar: 2912
+      line: 72
+      lineChar: 24
       spanCodeSection: '= '
     - startInstruction: 2696
       endInstruction: 2695
-      startSourceChar: 3026
-      endSourceChar: 3026
-      line: 74
-      lineChar: 18
+      startSourceChar: 2912
+      endSourceChar: 2912
+      line: 72
+      lineChar: 26
       spanCodeSection: 
     - startInstruction: 2696
       endInstruction: 2711
-      startSourceChar: 3026
-      endSourceChar: 3035
-      line: 74
-      lineChar: 18
+      startSourceChar: 2912
+      endSourceChar: 2921
+      line: 72
+      lineChar: 26
       spanCodeSection: 'active ? '
     - startInstruction: 2712
       endInstruction: 2739
-      startSourceChar: 3035
+      startSourceChar: 2921
+      endSourceChar: 2943
+      line: 72
+      lineChar: 35
+      spanCodeSection: 'defaultVector3Names : '
+    - startInstruction: 2740
+      endInstruction: 2779
+      startSourceChar: 2943
+      endSourceChar: 2972
+      line: 72
+      lineChar: 57
+      spanCodeSection: "activeVector3Names;\r\n        "
+    - startInstruction: 2780
+      endInstruction: 2779
+      startSourceChar: 2972
+      endSourceChar: 2972
+      line: 73
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2780
+      endInstruction: 2779
+      startSourceChar: 2972
+      endSourceChar: 2972
+      line: 73
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2780
+      endInstruction: 2779
+      startSourceChar: 2972
+      endSourceChar: 2987
+      line: 73
+      lineChar: 8
+      spanCodeSection: 'var vectorVals '
+    - startInstruction: 2780
+      endInstruction: 2779
+      startSourceChar: 2987
+      endSourceChar: 2989
+      line: 73
+      lineChar: 23
+      spanCodeSection: '= '
+    - startInstruction: 2780
+      endInstruction: 2779
+      startSourceChar: 2989
+      endSourceChar: 2989
+      line: 73
+      lineChar: 25
+      spanCodeSection: 
+    - startInstruction: 2780
+      endInstruction: 2795
+      startSourceChar: 2989
+      endSourceChar: 2998
+      line: 73
+      lineChar: 25
+      spanCodeSection: 'active ? '
+    - startInstruction: 2796
+      endInstruction: 2823
+      startSourceChar: 2998
+      endSourceChar: 3021
+      line: 73
+      lineChar: 34
+      spanCodeSection: 'defaultVector3Values : '
+    - startInstruction: 2824
+      endInstruction: 2863
+      startSourceChar: 3021
       endSourceChar: 3051
+      line: 73
+      lineChar: 57
+      spanCodeSection: "activeVector3Values;\r\n        "
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3051
+      endSourceChar: 3051
+      line: 74
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3051
+      endSourceChar: 3051
+      line: 74
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3051
+      endSourceChar: 3059
+      line: 74
+      lineChar: 8
+      spanCodeSection: 'var mat '
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3059
+      endSourceChar: 3061
+      line: 74
+      lineChar: 16
+      spanCodeSection: '= '
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3061
+      endSourceChar: 3061
+      line: 74
+      lineChar: 18
+      spanCodeSection: 
+    - startInstruction: 2864
+      endInstruction: 2879
+      startSourceChar: 3061
+      endSourceChar: 3070
+      line: 74
+      lineChar: 18
+      spanCodeSection: 'active ? '
+    - startInstruction: 2880
+      endInstruction: 2907
+      startSourceChar: 3070
+      endSourceChar: 3086
       line: 74
       lineChar: 27
       spanCodeSection: 'defaultSkybox : '
-    - startInstruction: 2740
-      endInstruction: 2779
-      startSourceChar: 3051
-      endSourceChar: 3074
+    - startInstruction: 2908
+      endInstruction: 2947
+      startSourceChar: 3086
+      endSourceChar: 3109
       line: 74
       lineChar: 43
       spanCodeSection: "activeSkybox;\r\n        "
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 3074
-      endSourceChar: 3079
+    - startInstruction: 2948
+      endInstruction: 2947
+      startSourceChar: 3109
+      endSourceChar: 3114
       line: 75
       lineChar: 8
       spanCodeSection: for (
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 3079
-      endSourceChar: 3079
+    - startInstruction: 2948
+      endInstruction: 2947
+      startSourceChar: 3114
+      endSourceChar: 3114
       line: 75
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 3079
-      endSourceChar: 3079
+    - startInstruction: 2948
+      endInstruction: 2947
+      startSourceChar: 3114
+      endSourceChar: 3114
       line: 75
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 3079
-      endSourceChar: 3085
+    - startInstruction: 2948
+      endInstruction: 2947
+      startSourceChar: 3114
+      endSourceChar: 3120
       line: 75
       lineChar: 13
       spanCodeSection: 'int i '
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 3085
-      endSourceChar: 3087
+    - startInstruction: 2948
+      endInstruction: 2947
+      startSourceChar: 3120
+      endSourceChar: 3122
       line: 75
       lineChar: 19
       spanCodeSection: '= '
-    - startInstruction: 2780
-      endInstruction: 2799
-      startSourceChar: 3087
-      endSourceChar: 3090
+    - startInstruction: 2948
+      endInstruction: 2967
+      startSourceChar: 3122
+      endSourceChar: 3125
       line: 75
       lineChar: 21
       spanCodeSection: '0; '
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3090
-      endSourceChar: 3090
+    - startInstruction: 2968
+      endInstruction: 2967
+      startSourceChar: 3125
+      endSourceChar: 3125
       line: 75
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3090
-      endSourceChar: 3094
+    - startInstruction: 2968
+      endInstruction: 2967
+      startSourceChar: 3125
+      endSourceChar: 3129
       line: 75
       lineChar: 24
       spanCodeSection: 'i < '
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3094
-      endSourceChar: 3094
+    - startInstruction: 2968
+      endInstruction: 2967
+      startSourceChar: 3129
+      endSourceChar: 3129
       line: 75
       lineChar: 28
       spanCodeSection: 
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3094
-      endSourceChar: 3105
+    - startInstruction: 2968
+      endInstruction: 2967
+      startSourceChar: 3129
+      endSourceChar: 3140
       line: 75
       lineChar: 28
       spanCodeSection: floatNames.
-    - startInstruction: 2800
-      endInstruction: 2871
-      startSourceChar: 3105
-      endSourceChar: 3118
+    - startInstruction: 2968
+      endInstruction: 3039
+      startSourceChar: 3140
+      endSourceChar: 3153
       line: 75
       lineChar: 39
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3118
-      endSourceChar: 3131
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3153
+      endSourceChar: 3166
       line: 75
       lineChar: 52
       spanCodeSection: "{\r\n          "
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3131
-      endSourceChar: 3131
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3166
+      endSourceChar: 3166
       line: 76
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3131
-      endSourceChar: 3131
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3166
+      endSourceChar: 3166
       line: 76
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3131
-      endSourceChar: 3131
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3166
+      endSourceChar: 3166
       line: 76
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3131
-      endSourceChar: 3135
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3166
+      endSourceChar: 3170
       line: 76
       lineChar: 10
       spanCodeSection: mat.
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3135
-      endSourceChar: 3144
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3170
+      endSourceChar: 3179
       line: 76
       lineChar: 14
       spanCodeSection: SetFloat(
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3144
-      endSourceChar: 3144
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3179
+      endSourceChar: 3179
       line: 76
       lineChar: 23
       spanCodeSection: 
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3144
-      endSourceChar: 3155
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3179
+      endSourceChar: 3190
       line: 76
       lineChar: 23
       spanCodeSection: floatNames[
-    - startInstruction: 2872
-      endInstruction: 2871
-      startSourceChar: 3155
-      endSourceChar: 3155
+    - startInstruction: 3040
+      endInstruction: 3039
+      startSourceChar: 3190
+      endSourceChar: 3190
       line: 76
       lineChar: 34
       spanCodeSection: 
-    - startInstruction: 2872
-      endInstruction: 2903
-      startSourceChar: 3155
-      endSourceChar: 3159
+    - startInstruction: 3040
+      endInstruction: 3071
+      startSourceChar: 3190
+      endSourceChar: 3194
       line: 76
       lineChar: 34
       spanCodeSection: 'i], '
-    - startInstruction: 2904
-      endInstruction: 2903
-      startSourceChar: 3159
-      endSourceChar: 3159
+    - startInstruction: 3072
+      endInstruction: 3071
+      startSourceChar: 3194
+      endSourceChar: 3194
       line: 76
       lineChar: 38
       spanCodeSection: 
-    - startInstruction: 2904
-      endInstruction: 2903
-      startSourceChar: 3159
-      endSourceChar: 3169
+    - startInstruction: 3072
+      endInstruction: 3071
+      startSourceChar: 3194
+      endSourceChar: 3204
       line: 76
       lineChar: 38
       spanCodeSection: floatVals[
-    - startInstruction: 2904
-      endInstruction: 2903
-      startSourceChar: 3169
-      endSourceChar: 3169
+    - startInstruction: 3072
+      endInstruction: 3071
+      startSourceChar: 3204
+      endSourceChar: 3204
       line: 76
       lineChar: 48
       spanCodeSection: 
-    - startInstruction: 2904
-      endInstruction: 3027
-      startSourceChar: 3169
-      endSourceChar: 3194
+    - startInstruction: 3072
+      endInstruction: 3195
+      startSourceChar: 3204
+      endSourceChar: 3229
       line: 76
       lineChar: 48
       spanCodeSection: "i]);\r\n        }\r\n        "
-    - startInstruction: 3028
-      endInstruction: 3027
-      startSourceChar: 3194
-      endSourceChar: 3199
+    - startInstruction: 3196
+      endInstruction: 3195
+      startSourceChar: 3229
+      endSourceChar: 3234
       line: 78
       lineChar: 8
       spanCodeSection: for (
-    - startInstruction: 3028
-      endInstruction: 3027
-      startSourceChar: 3199
-      endSourceChar: 3199
+    - startInstruction: 3196
+      endInstruction: 3195
+      startSourceChar: 3234
+      endSourceChar: 3234
       line: 78
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 3028
-      endInstruction: 3027
-      startSourceChar: 3199
-      endSourceChar: 3199
+    - startInstruction: 3196
+      endInstruction: 3195
+      startSourceChar: 3234
+      endSourceChar: 3234
       line: 78
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 3028
-      endInstruction: 3027
-      startSourceChar: 3199
-      endSourceChar: 3205
+    - startInstruction: 3196
+      endInstruction: 3195
+      startSourceChar: 3234
+      endSourceChar: 3240
       line: 78
       lineChar: 13
       spanCodeSection: 'int i '
-    - startInstruction: 3028
-      endInstruction: 3027
-      startSourceChar: 3205
-      endSourceChar: 3207
+    - startInstruction: 3196
+      endInstruction: 3195
+      startSourceChar: 3240
+      endSourceChar: 3242
       line: 78
       lineChar: 19
       spanCodeSection: '= '
-    - startInstruction: 3028
-      endInstruction: 3047
-      startSourceChar: 3207
-      endSourceChar: 3210
+    - startInstruction: 3196
+      endInstruction: 3215
+      startSourceChar: 3242
+      endSourceChar: 3245
       line: 78
       lineChar: 21
       spanCodeSection: '0; '
-    - startInstruction: 3048
-      endInstruction: 3047
-      startSourceChar: 3210
-      endSourceChar: 3210
+    - startInstruction: 3216
+      endInstruction: 3215
+      startSourceChar: 3245
+      endSourceChar: 3245
       line: 78
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 3048
-      endInstruction: 3047
-      startSourceChar: 3210
-      endSourceChar: 3214
+    - startInstruction: 3216
+      endInstruction: 3215
+      startSourceChar: 3245
+      endSourceChar: 3249
       line: 78
       lineChar: 24
       spanCodeSection: 'i < '
-    - startInstruction: 3048
-      endInstruction: 3047
-      startSourceChar: 3214
-      endSourceChar: 3214
+    - startInstruction: 3216
+      endInstruction: 3215
+      startSourceChar: 3249
+      endSourceChar: 3249
       line: 78
       lineChar: 28
       spanCodeSection: 
-    - startInstruction: 3048
-      endInstruction: 3047
-      startSourceChar: 3214
-      endSourceChar: 3225
+    - startInstruction: 3216
+      endInstruction: 3215
+      startSourceChar: 3249
+      endSourceChar: 3260
       line: 78
       lineChar: 28
       spanCodeSection: colorNames.
-    - startInstruction: 3048
-      endInstruction: 3119
-      startSourceChar: 3225
-      endSourceChar: 3238
+    - startInstruction: 3216
+      endInstruction: 3287
+      startSourceChar: 3260
+      endSourceChar: 3273
       line: 78
       lineChar: 39
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3238
-      endSourceChar: 3251
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3273
+      endSourceChar: 3286
       line: 78
       lineChar: 52
       spanCodeSection: "{\r\n          "
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3251
-      endSourceChar: 3251
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3286
+      endSourceChar: 3286
       line: 79
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3251
-      endSourceChar: 3251
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3286
+      endSourceChar: 3286
       line: 79
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3251
-      endSourceChar: 3251
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3286
+      endSourceChar: 3286
       line: 79
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3251
-      endSourceChar: 3255
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3286
+      endSourceChar: 3290
       line: 79
       lineChar: 10
       spanCodeSection: mat.
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3255
-      endSourceChar: 3264
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3290
+      endSourceChar: 3299
       line: 79
       lineChar: 14
       spanCodeSection: SetColor(
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3264
-      endSourceChar: 3264
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3299
+      endSourceChar: 3299
       line: 79
       lineChar: 23
       spanCodeSection: 
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3264
-      endSourceChar: 3275
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3299
+      endSourceChar: 3310
       line: 79
       lineChar: 23
       spanCodeSection: colorNames[
-    - startInstruction: 3120
-      endInstruction: 3119
-      startSourceChar: 3275
-      endSourceChar: 3275
+    - startInstruction: 3288
+      endInstruction: 3287
+      startSourceChar: 3310
+      endSourceChar: 3310
       line: 79
       lineChar: 34
       spanCodeSection: 
-    - startInstruction: 3120
-      endInstruction: 3151
-      startSourceChar: 3275
-      endSourceChar: 3279
+    - startInstruction: 3288
+      endInstruction: 3319
+      startSourceChar: 3310
+      endSourceChar: 3314
       line: 79
       lineChar: 34
       spanCodeSection: 'i], '
-    - startInstruction: 3152
-      endInstruction: 3151
-      startSourceChar: 3279
-      endSourceChar: 3279
+    - startInstruction: 3320
+      endInstruction: 3319
+      startSourceChar: 3314
+      endSourceChar: 3314
       line: 79
       lineChar: 38
       spanCodeSection: 
-    - startInstruction: 3152
-      endInstruction: 3151
-      startSourceChar: 3279
-      endSourceChar: 3289
+    - startInstruction: 3320
+      endInstruction: 3319
+      startSourceChar: 3314
+      endSourceChar: 3324
       line: 79
       lineChar: 38
       spanCodeSection: colorVals[
-    - startInstruction: 3152
-      endInstruction: 3151
-      startSourceChar: 3289
-      endSourceChar: 3289
+    - startInstruction: 3320
+      endInstruction: 3319
+      startSourceChar: 3324
+      endSourceChar: 3324
       line: 79
       lineChar: 48
       spanCodeSection: 
-    - startInstruction: 3152
-      endInstruction: 3275
-      startSourceChar: 3289
-      endSourceChar: 3314
+    - startInstruction: 3320
+      endInstruction: 3443
+      startSourceChar: 3324
+      endSourceChar: 3349
       line: 79
       lineChar: 48
       spanCodeSection: "i]);\r\n        }\r\n        "
-    - startInstruction: 3276
-      endInstruction: 3275
-      startSourceChar: 3314
-      endSourceChar: 3319
+    - startInstruction: 3444
+      endInstruction: 3443
+      startSourceChar: 3349
+      endSourceChar: 3354
       line: 81
       lineChar: 8
       spanCodeSection: for (
-    - startInstruction: 3276
-      endInstruction: 3275
-      startSourceChar: 3319
-      endSourceChar: 3319
+    - startInstruction: 3444
+      endInstruction: 3443
+      startSourceChar: 3354
+      endSourceChar: 3354
       line: 81
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 3276
-      endInstruction: 3275
-      startSourceChar: 3319
-      endSourceChar: 3319
+    - startInstruction: 3444
+      endInstruction: 3443
+      startSourceChar: 3354
+      endSourceChar: 3354
       line: 81
       lineChar: 13
       spanCodeSection: 
-    - startInstruction: 3276
-      endInstruction: 3275
-      startSourceChar: 3319
-      endSourceChar: 3325
+    - startInstruction: 3444
+      endInstruction: 3443
+      startSourceChar: 3354
+      endSourceChar: 3360
       line: 81
       lineChar: 13
       spanCodeSection: 'int i '
-    - startInstruction: 3276
-      endInstruction: 3275
-      startSourceChar: 3325
-      endSourceChar: 3327
+    - startInstruction: 3444
+      endInstruction: 3443
+      startSourceChar: 3360
+      endSourceChar: 3362
       line: 81
       lineChar: 19
       spanCodeSection: '= '
-    - startInstruction: 3276
-      endInstruction: 3295
-      startSourceChar: 3327
-      endSourceChar: 3330
+    - startInstruction: 3444
+      endInstruction: 3463
+      startSourceChar: 3362
+      endSourceChar: 3365
       line: 81
       lineChar: 21
       spanCodeSection: '0; '
-    - startInstruction: 3296
-      endInstruction: 3295
-      startSourceChar: 3330
-      endSourceChar: 3330
+    - startInstruction: 3464
+      endInstruction: 3463
+      startSourceChar: 3365
+      endSourceChar: 3365
       line: 81
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 3296
-      endInstruction: 3295
-      startSourceChar: 3330
-      endSourceChar: 3334
+    - startInstruction: 3464
+      endInstruction: 3463
+      startSourceChar: 3365
+      endSourceChar: 3369
       line: 81
       lineChar: 24
       spanCodeSection: 'i < '
-    - startInstruction: 3296
-      endInstruction: 3295
-      startSourceChar: 3334
-      endSourceChar: 3334
+    - startInstruction: 3464
+      endInstruction: 3463
+      startSourceChar: 3369
+      endSourceChar: 3369
       line: 81
       lineChar: 28
       spanCodeSection: 
-    - startInstruction: 3296
-      endInstruction: 3295
-      startSourceChar: 3334
-      endSourceChar: 3346
+    - startInstruction: 3464
+      endInstruction: 3463
+      startSourceChar: 3369
+      endSourceChar: 3381
       line: 81
       lineChar: 28
       spanCodeSection: vectorNames.
-    - startInstruction: 3296
-      endInstruction: 3367
-      startSourceChar: 3346
-      endSourceChar: 3359
+    - startInstruction: 3464
+      endInstruction: 3535
+      startSourceChar: 3381
+      endSourceChar: 3394
       line: 81
       lineChar: 40
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3359
-      endSourceChar: 3372
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3394
+      endSourceChar: 3407
       line: 81
       lineChar: 53
       spanCodeSection: "{\r\n          "
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3372
-      endSourceChar: 3372
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3407
+      endSourceChar: 3407
       line: 82
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3372
-      endSourceChar: 3372
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3407
+      endSourceChar: 3407
       line: 82
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3372
-      endSourceChar: 3372
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3407
+      endSourceChar: 3407
       line: 82
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3372
-      endSourceChar: 3376
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3407
+      endSourceChar: 3411
       line: 82
       lineChar: 10
       spanCodeSection: mat.
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3376
-      endSourceChar: 3386
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3411
+      endSourceChar: 3421
       line: 82
       lineChar: 14
       spanCodeSection: SetVector(
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3386
-      endSourceChar: 3386
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3421
+      endSourceChar: 3421
       line: 82
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3386
-      endSourceChar: 3398
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3421
+      endSourceChar: 3433
       line: 82
       lineChar: 24
       spanCodeSection: vectorNames[
-    - startInstruction: 3368
-      endInstruction: 3367
-      startSourceChar: 3398
-      endSourceChar: 3398
+    - startInstruction: 3536
+      endInstruction: 3535
+      startSourceChar: 3433
+      endSourceChar: 3433
       line: 82
       lineChar: 36
       spanCodeSection: 
-    - startInstruction: 3368
-      endInstruction: 3399
-      startSourceChar: 3398
-      endSourceChar: 3402
+    - startInstruction: 3536
+      endInstruction: 3567
+      startSourceChar: 3433
+      endSourceChar: 3437
       line: 82
       lineChar: 36
       spanCodeSection: 'i], '
-    - startInstruction: 3400
-      endInstruction: 3399
-      startSourceChar: 3402
-      endSourceChar: 3402
+    - startInstruction: 3568
+      endInstruction: 3567
+      startSourceChar: 3437
+      endSourceChar: 3437
       line: 82
       lineChar: 40
       spanCodeSection: 
-    - startInstruction: 3400
-      endInstruction: 3399
-      startSourceChar: 3402
-      endSourceChar: 3413
+    - startInstruction: 3568
+      endInstruction: 3567
+      startSourceChar: 3437
+      endSourceChar: 3448
       line: 82
       lineChar: 40
       spanCodeSection: vectorVals[
-    - startInstruction: 3400
-      endInstruction: 3399
-      startSourceChar: 3413
-      endSourceChar: 3413
+    - startInstruction: 3568
+      endInstruction: 3567
+      startSourceChar: 3448
+      endSourceChar: 3448
       line: 82
       lineChar: 51
       spanCodeSection: 
-    - startInstruction: 3400
-      endInstruction: 3567
-      startSourceChar: 3413
-      endSourceChar: 3447
+    - startInstruction: 3568
+      endInstruction: 3735
+      startSourceChar: 3448
+      endSourceChar: 3482
       line: 82
       lineChar: 51
       spanCodeSection: "i]);\r\n        }\r\n      }\r\n\r\n      "
-    - startInstruction: 3568
-      endInstruction: 3575
-      startSourceChar: 3447
-      endSourceChar: 3469
+    - startInstruction: 3736
+      endInstruction: 3743
+      startSourceChar: 3482
+      endSourceChar: 3504
       line: 86
       lineChar: 6
       spanCodeSection: 'private void Update() '
-    - startInstruction: 3576
-      endInstruction: 3575
-      startSourceChar: 3469
-      endSourceChar: 3480
+    - startInstruction: 3744
+      endInstruction: 3743
+      startSourceChar: 3504
+      endSourceChar: 3515
       line: 86
       lineChar: 28
       spanCodeSection: "{\r\n        "
-    - startInstruction: 3576
-      endInstruction: 3575
-      startSourceChar: 3480
-      endSourceChar: 3484
+    - startInstruction: 3744
+      endInstruction: 3743
+      startSourceChar: 3515
+      endSourceChar: 3519
       line: 87
       lineChar: 8
       spanCodeSection: if (
-    - startInstruction: 3576
-      endInstruction: 3575
-      startSourceChar: 3484
-      endSourceChar: 3485
+    - startInstruction: 3744
+      endInstruction: 3743
+      startSourceChar: 3519
+      endSourceChar: 3520
       line: 87
       lineChar: 12
       spanCodeSection: '!'
-    - startInstruction: 3576
-      endInstruction: 3615
-      startSourceChar: 3485
-      endSourceChar: 3494
+    - startInstruction: 3744
+      endInstruction: 3783
+      startSourceChar: 3520
+      endSourceChar: 3529
       line: 87
       lineChar: 13
       spanCodeSection: 'lerping) '
-    - startInstruction: 3616
-      endInstruction: 3635
-      startSourceChar: 3494
-      endSourceChar: 3511
+    - startInstruction: 3784
+      endInstruction: 3803
+      startSourceChar: 3529
+      endSourceChar: 3546
       line: 87
       lineChar: 22
       spanCodeSection: "return;\r\n        "
-    - startInstruction: 3636
-      endInstruction: 3635
-      startSourceChar: 3511
-      endSourceChar: 3515
+    - startInstruction: 3804
+      endInstruction: 3803
+      startSourceChar: 3546
+      endSourceChar: 3550
       line: 88
       lineChar: 8
       spanCodeSection: if (
-    - startInstruction: 3636
-      endInstruction: 3635
-      startSourceChar: 3515
-      endSourceChar: 3515
+    - startInstruction: 3804
+      endInstruction: 3803
+      startSourceChar: 3550
+      endSourceChar: 3550
       line: 88
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 3636
-      endInstruction: 3635
-      startSourceChar: 3515
-      endSourceChar: 3515
+    - startInstruction: 3804
+      endInstruction: 3803
+      startSourceChar: 3550
+      endSourceChar: 3550
       line: 88
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 3636
-      endInstruction: 3635
-      startSourceChar: 3515
-      endSourceChar: 3520
+    - startInstruction: 3804
+      endInstruction: 3803
+      startSourceChar: 3550
+      endSourceChar: 3555
       line: 88
       lineChar: 12
       spanCodeSection: Time.
-    - startInstruction: 3636
-      endInstruction: 3651
-      startSourceChar: 3520
-      endSourceChar: 3528
+    - startInstruction: 3804
+      endInstruction: 3819
+      startSourceChar: 3555
+      endSourceChar: 3563
       line: 88
       lineChar: 17
       spanCodeSection: 'time >= '
-    - startInstruction: 3652
-      endInstruction: 3699
-      startSourceChar: 3528
-      endSourceChar: 3537
+    - startInstruction: 3820
+      endInstruction: 3867
+      startSourceChar: 3563
+      endSourceChar: 3572
       line: 88
       lineChar: 25
       spanCodeSection: 'lerpEnd) '
-    - startInstruction: 3700
-      endInstruction: 3699
-      startSourceChar: 3537
-      endSourceChar: 3550
+    - startInstruction: 3868
+      endInstruction: 3867
+      startSourceChar: 3572
+      endSourceChar: 3585
       line: 88
       lineChar: 34
       spanCodeSection: "{\r\n          "
-    - startInstruction: 3700
-      endInstruction: 3699
-      startSourceChar: 3550
-      endSourceChar: 3550
+    - startInstruction: 3868
+      endInstruction: 3867
+      startSourceChar: 3585
+      endSourceChar: 3585
       line: 89
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3700
-      endInstruction: 3699
-      startSourceChar: 3550
-      endSourceChar: 3550
+    - startInstruction: 3868
+      endInstruction: 3867
+      startSourceChar: 3585
+      endSourceChar: 3585
       line: 89
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3700
-      endInstruction: 3715
-      startSourceChar: 3550
-      endSourceChar: 3579
+    - startInstruction: 3868
+      endInstruction: 3883
+      startSourceChar: 3585
+      endSourceChar: 3614
       line: 89
       lineChar: 10
       spanCodeSection: "SetFinalValues();\r\n          "
-    - startInstruction: 3716
-      endInstruction: 3715
-      startSourceChar: 3579
-      endSourceChar: 3579
+    - startInstruction: 3884
+      endInstruction: 3883
+      startSourceChar: 3614
+      endSourceChar: 3614
       line: 90
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3716
-      endInstruction: 3715
-      startSourceChar: 3579
-      endSourceChar: 3579
+    - startInstruction: 3884
+      endInstruction: 3883
+      startSourceChar: 3614
+      endSourceChar: 3614
       line: 90
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3716
-      endInstruction: 3715
-      startSourceChar: 3579
-      endSourceChar: 3589
+    - startInstruction: 3884
+      endInstruction: 3883
+      startSourceChar: 3614
+      endSourceChar: 3624
       line: 90
       lineChar: 10
       spanCodeSection: 'lerping = '
-    - startInstruction: 3716
-      endInstruction: 3735
-      startSourceChar: 3589
-      endSourceChar: 3607
+    - startInstruction: 3884
+      endInstruction: 3903
+      startSourceChar: 3624
+      endSourceChar: 3642
       line: 90
       lineChar: 20
       spanCodeSection: "false;\r\n          "
-    - startInstruction: 3736
-      endInstruction: 3735
-      startSourceChar: 3607
-      endSourceChar: 3607
+    - startInstruction: 3904
+      endInstruction: 3903
+      startSourceChar: 3642
+      endSourceChar: 3642
       line: 91
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3736
-      endInstruction: 3735
-      startSourceChar: 3607
-      endSourceChar: 3607
+    - startInstruction: 3904
+      endInstruction: 3903
+      startSourceChar: 3642
+      endSourceChar: 3642
       line: 91
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 3736
-      endInstruction: 3735
-      startSourceChar: 3607
-      endSourceChar: 3616
+    - startInstruction: 3904
+      endInstruction: 3903
+      startSourceChar: 3642
+      endSourceChar: 3651
       line: 91
       lineChar: 10
       spanCodeSection: 'active = '
-    - startInstruction: 3736
-      endInstruction: 3735
-      startSourceChar: 3616
-      endSourceChar: 3617
+    - startInstruction: 3904
+      endInstruction: 3903
+      startSourceChar: 3651
+      endSourceChar: 3652
       line: 91
       lineChar: 19
       spanCodeSection: '!'
-    - startInstruction: 3736
-      endInstruction: 3759
-      startSourceChar: 3617
-      endSourceChar: 3636
+    - startInstruction: 3904
+      endInstruction: 3927
+      startSourceChar: 3652
+      endSourceChar: 3671
       line: 91
       lineChar: 20
       spanCodeSection: "active;\r\n          "
-    - startInstruction: 3760
-      endInstruction: 3779
-      startSourceChar: 3636
-      endSourceChar: 3664
+    - startInstruction: 3928
+      endInstruction: 3947
+      startSourceChar: 3671
+      endSourceChar: 3699
       line: 92
       lineChar: 10
       spanCodeSection: "return;\r\n        }\r\n        "
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3664
-      endSourceChar: 3664
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3699
+      endSourceChar: 3699
       line: 94
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3664
-      endSourceChar: 3664
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3699
+      endSourceChar: 3699
       line: 94
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3664
-      endSourceChar: 3678
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3699
+      endSourceChar: 3713
       line: 94
       lineChar: 8
       spanCodeSection: 'var lerpAlpha '
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3678
-      endSourceChar: 3680
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3713
+      endSourceChar: 3715
       line: 94
       lineChar: 22
       spanCodeSection: '= '
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3680
-      endSourceChar: 3680
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3715
+      endSourceChar: 3715
       line: 94
       lineChar: 24
       spanCodeSection: 
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3680
-      endSourceChar: 3681
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3715
+      endSourceChar: 3716
       line: 94
       lineChar: 24
       spanCodeSection: (
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3681
-      endSourceChar: 3681
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3716
+      endSourceChar: 3716
       line: 94
       lineChar: 25
       spanCodeSection: 
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3681
-      endSourceChar: 3681
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3716
+      endSourceChar: 3716
       line: 94
       lineChar: 25
       spanCodeSection: 
-    - startInstruction: 3780
-      endInstruction: 3779
-      startSourceChar: 3681
-      endSourceChar: 3686
+    - startInstruction: 3948
+      endInstruction: 3947
+      startSourceChar: 3716
+      endSourceChar: 3721
       line: 94
       lineChar: 25
       spanCodeSection: Time.
-    - startInstruction: 3780
-      endInstruction: 3795
-      startSourceChar: 3686
-      endSourceChar: 3693
+    - startInstruction: 3948
+      endInstruction: 3963
+      startSourceChar: 3721
+      endSourceChar: 3728
       line: 94
       lineChar: 30
       spanCodeSection: 'time - '
-    - startInstruction: 3796
-      endInstruction: 3795
-      startSourceChar: 3693
-      endSourceChar: 3694
+    - startInstruction: 3964
+      endInstruction: 3963
+      startSourceChar: 3728
+      endSourceChar: 3729
       line: 94
       lineChar: 37
       spanCodeSection: (
-    - startInstruction: 3796
-      endInstruction: 3795
-      startSourceChar: 3694
-      endSourceChar: 3694
+    - startInstruction: 3964
+      endInstruction: 3963
+      startSourceChar: 3729
+      endSourceChar: 3729
       line: 94
       lineChar: 38
       spanCodeSection: 
-    - startInstruction: 3796
-      endInstruction: 3795
-      startSourceChar: 3694
-      endSourceChar: 3704
+    - startInstruction: 3964
+      endInstruction: 3963
+      startSourceChar: 3729
+      endSourceChar: 3739
       line: 94
       lineChar: 38
       spanCodeSection: 'lerpEnd - '
-    - startInstruction: 3796
-      endInstruction: 3859
-      startSourceChar: 3704
-      endSourceChar: 3717
+    - startInstruction: 3964
+      endInstruction: 4027
+      startSourceChar: 3739
+      endSourceChar: 3758
       line: 94
       lineChar: 48
-      spanCodeSection: 'lerpTime)) / '
-    - startInstruction: 3860
-      endInstruction: 3911
-      startSourceChar: 3717
-      endSourceChar: 3736
+      spanCodeSection: 'transitionTime)) / '
+    - startInstruction: 4028
+      endInstruction: 4079
+      startSourceChar: 3758
+      endSourceChar: 3783
       line: 94
-      lineChar: 61
-      spanCodeSection: "lerpTime;\r\n        "
-    - startInstruction: 3912
-      endInstruction: 3911
-      startSourceChar: 3736
-      endSourceChar: 3736
+      lineChar: 67
+      spanCodeSection: "transitionTime;\r\n        "
+    - startInstruction: 4080
+      endInstruction: 4079
+      startSourceChar: 3783
+      endSourceChar: 3783
       line: 95
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 3912
-      endInstruction: 3911
-      startSourceChar: 3736
-      endSourceChar: 3736
+    - startInstruction: 4080
+      endInstruction: 4079
+      startSourceChar: 3783
+      endSourceChar: 3783
       line: 95
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 3912
-      endInstruction: 3911
-      startSourceChar: 3736
-      endSourceChar: 3747
+    - startInstruction: 4080
+      endInstruction: 4079
+      startSourceChar: 3783
+      endSourceChar: 3794
       line: 95
       lineChar: 8
       spanCodeSection: LerpValues(
-    - startInstruction: 3912
-      endInstruction: 3912
-      startSourceChar: 3747
-      endSourceChar: 3747
+    - startInstruction: 4080
+      endInstruction: 4080
+      startSourceChar: 3794
+      endSourceChar: 3794
       line: 95
       lineChar: 19
       spanCodeSection: 
@@ -4678,7 +4719,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: lerpTime
+      Data: transitionTime
     - Name: $v
       Entry: 7
       Data: 53|UdonSharp.FieldDefinition, UdonSharp.Editor
@@ -4705,10 +4746,10 @@ MonoBehaviour:
       Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: lerpTime
+      Data: transitionTime
     - Name: symbolUniqueName
       Entry: 1
-      Data: lerpTime
+      Data: transitionTime
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
