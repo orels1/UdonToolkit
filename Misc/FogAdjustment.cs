@@ -13,7 +13,7 @@ public class FogAdjustment : UdonSharpBehaviour {
   public float activeFogDensity;
   public float activeFogStart;
   public float activeFogEnd;
-  public float fogFadeTime;
+  public float fogTransitionTime;
   public bool startActive;
   public bool setInitialState;
 
@@ -41,7 +41,7 @@ public class FogAdjustment : UdonSharpBehaviour {
 
   private void StartLerping() {
     lerping = true;
-    lerpEnd = Time.time + fogFadeTime;
+    lerpEnd = Time.time + fogTransitionTime;
   }
 
   private void SetFog(Color color, float density) {
@@ -69,7 +69,7 @@ public class FogAdjustment : UdonSharpBehaviour {
 
   public void ActivateFog() {
     active = false;
-    if (fogFadeTime > 0 && !initial) {
+    if (fogTransitionTime > 0 && !initial) {
       StartLerping();
       return;
     }
@@ -90,7 +90,7 @@ public class FogAdjustment : UdonSharpBehaviour {
 
   public void DeactivateFog() {
     active = true;
-    if (fogFadeTime > 0 && !initial) {
+    if (fogTransitionTime > 0 && !initial) {
       StartLerping();
       return;
     }
@@ -110,7 +110,7 @@ public class FogAdjustment : UdonSharpBehaviour {
   }
 
   public void Trigger() {
-    if (fogFadeTime > 0) {
+    if (fogTransitionTime > 0) {
       StartLerping();
       return;
     }
@@ -125,7 +125,7 @@ public class FogAdjustment : UdonSharpBehaviour {
 
   private void Update() {
     if (!lerping) return;
-    var alpha = (Time.time - (lerpEnd - fogFadeTime)) / fogFadeTime;
+    var alpha = (Time.time - (lerpEnd - fogTransitionTime)) / fogTransitionTime;
     // if currently active - lerp down;
     if (active) {
       if (mode == FogMode.Linear) {

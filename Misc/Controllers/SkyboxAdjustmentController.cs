@@ -122,8 +122,13 @@ namespace UdonToolkit {
       activeSkybox = defaultSkybox;
     }
 
-    [HelpBox("Lerping only aplies to material properties, as lerping between materials is not possible. Active Skybox material field is set to be the same as default.", "@!instantTransition")]
-    [UdonPublic] public float lerpTime;
+    [HelpBox("Transition only applies to material properties, as smooth transition between materials is not possible. Active Skybox material field is set to be the same as default.", "@!instantTransition")]
+    [HelpBox("Transition time cannot be negative", "CheckValidTransition")]
+    [UdonPublic] public float transitionTime;
+
+    public bool CheckValidTransition() {
+      return transitionTime < 0;
+    }
     
     public override void SetupController() {
       if (defaultSkybox != null) return;

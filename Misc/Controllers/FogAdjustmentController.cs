@@ -27,7 +27,12 @@ namespace UdonToolkit {
     public float activeFogStart;
     [HideIf("@!isLinear")][UdonPublic]
     public float activeFogEnd;
-    [UdonPublic] [Tooltip("0 - Instant")] public float fogFadeTime;
+    [HelpBox("Transition time cannot be negative", "CheckValidTransition")]
+    [UdonPublic] [Tooltip("0 - Instant")] public float fogTransitionTime;
+    
+    public bool CheckValidTransition() {
+      return fogTransitionTime < 0;
+    }
 
     [SectionHeader("Extras")] [UdonPublic] public bool startActive;
 

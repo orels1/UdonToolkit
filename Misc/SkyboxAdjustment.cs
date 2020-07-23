@@ -23,14 +23,14 @@ namespace UdonToolkit {
       public Vector3[] activeVector3Values;
 
       public bool instantTransition = true;
-      public float lerpTime;
+      public float transitionTime;
 
       private bool active;
       private bool lerping;
       private float lerpEnd;
 
       public void Trigger() {
-        if (instantTransition) {
+        if (instantTransition || transitionTime <= 0) {
           RenderSettings.skybox = active ? defaultSkybox : activeSkybox;
           SetFinalValues();
           active = !active;
@@ -38,7 +38,7 @@ namespace UdonToolkit {
         }
 
         lerping = true;
-        lerpEnd = Time.time + lerpTime;
+        lerpEnd = Time.time + transitionTime;
       }
 
       private void LerpValues(float alpha) {
@@ -92,7 +92,7 @@ namespace UdonToolkit {
           active = !active;
           return;
         }
-        var lerpAlpha = (Time.time - (lerpEnd - lerpTime)) / lerpTime;
+        var lerpAlpha = (Time.time - (lerpEnd - transitionTime)) / transitionTime;
         LerpValues(lerpAlpha);
       }
     }
