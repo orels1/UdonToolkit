@@ -74,6 +74,22 @@ namespace UdonToolkit {
         t.SyncValues();
       }
       
+      // Sync Toggles
+      UTStyles.RenderSectionHeader("Udon Sync");
+      if (t.uB != null) {
+        var uBo = new SerializedObject(t.uB);
+        uBo.Update();
+        EditorGUI.BeginChangeCheck();
+        EditorGUILayout.PropertyField(uBo.FindProperty("SynchronizePosition"));
+        var col = t.gameObject.GetComponent<Collider>();
+        if (col != null) {
+          EditorGUILayout.PropertyField(uBo.FindProperty("AllowCollisionOwnershipTransfer"), new GUIContent("Collision Owner Transfer"));
+        }
+        if (EditorGUI.EndChangeCheck()) {
+          uBo.ApplyModifiedProperties();
+        }
+      }
+
       // Extra Methods
       var methods = t.GetType().GetMethods().Where(i => i.GetCustomAttribute<ButtonAttribute>() != null)
         .ToArray();
