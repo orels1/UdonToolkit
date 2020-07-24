@@ -207,7 +207,7 @@ namespace UdonToolkit {
         if (RenderRemoveControls(i, new[] {prop})) {
           if (changedCallback != null) {
             t.GetType().GetMethod(changedCallback)?.Invoke(t,
-              new object[] {null, null, i});
+              new object[] {null, i});
           }
 
           break;
@@ -329,7 +329,7 @@ namespace UdonToolkit {
       if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
         if (changedCallback != null) {
           t.GetType().GetMethod(changedCallback)?.Invoke(t,
-            new object[] {null, null, prop.arraySize});
+            new object[] {prop.GetArrayElementAtIndex(prop.arraySize), otherProp.GetArrayElementAtIndex(prop.arraySize), prop.arraySize});
         }
       }
     }
@@ -427,7 +427,7 @@ namespace UdonToolkit {
       if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
         if (changedCallback != null) {
           t.GetType().GetMethod(changedCallback)?.Invoke(t,
-            new object[] {null, null, prop.arraySize});
+            new object[] {prop.GetArrayElementAtIndex(prop.arraySize), otherProp.GetArrayElementAtIndex(prop.arraySize), prop.arraySize});
         }
       }
     }
