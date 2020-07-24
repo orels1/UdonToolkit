@@ -81,9 +81,14 @@ namespace UdonToolkit{
     public override bool BeforeGUI(ref Rect position, SerializedProperty property, GUIContent label, bool visible) {
       if (!visible) return false;
       if (isInList) return true;
+      var lRect = GUILayoutUtility.GetLastRect();
       var rect = EditorGUI.IndentedRect(position);
+      var fullWidth = EditorGUIUtility.currentViewWidth;
+      rect.width = EditorGUIUtility.currentViewWidth;
+      if (Math.Abs(fullWidth - lRect.width) > 0.1f) {
+        rect.width -= fullWidth - lRect.width;
+      }
       rect.height = mHeight;
-      rect.width = EditorGUIUtility.currentViewWidth - 20;
       var fields = property.serializedObject.targetObject.GetType().GetFields()
         .Where(f => f.GetAttribute<SectionHeaderAttribute>() != null);
       var fieldsForSection = fields.Where(f => f.GetAttribute<SectionHeaderAttribute>().text == text);
@@ -135,13 +140,31 @@ namespace UdonToolkit{
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      if (min > max) {
+        EditorGUI.PropertyField(position, property, label);
+        return;
+      }
       switch (property.type) {
         case "float":
+          if (property.floatValue < min) {
+            property.floatValue = min;
+          }
+
+          if (property.floatValue > max) {
+            property.floatValue = max;
+          }
           EditorGUI.Slider(position, property, min, max, label);
           break;
         case "int":
           var intMin = Convert.ToInt32(Mathf.Round(min));
           var intMax = Convert.ToInt32(Mathf.Round(max));
+          if (property.intValue < intMin) {
+            property.intValue = intMin;
+          }
+
+          if (property.intValue > intMax) {
+            property.intValue = intMax;
+          }
           EditorGUI.IntSlider(position, property, intMin, intMax, label);
           break;
         default:
@@ -353,7 +376,7 @@ namespace UdonToolkit{
       var finalLabel = hideLabel ? new GUIContent() : label;
 
       selectedIndex = options.ToList().FindIndex(i => i.text == property.stringValue);
-      if (selectedIndex >= options.Length) {
+      if (selectedIndex >= options.Length || selectedIndex < 0) {
         selectedIndex = 0;
       }
       selectedIndex = EditorGUI.Popup(position, finalLabel, selectedIndex, options);
