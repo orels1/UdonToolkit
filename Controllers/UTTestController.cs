@@ -13,14 +13,23 @@ namespace UdonToolkit {
     [SectionHeader("Some other thing")] [UdonPublic("someCustomUdonVar")]
     public int someOtherVal;
 
+    [SectionHeader("Range Slider")]
+    [RangeSlider(10, 20)] [UdonPublic]
+    public float floatValue;
+
+    [RangeSlider(1, 10)] [UdonPublic]
+    public int intValue;
+
     [SectionHeader("SFX Controls")] [Toggle("Add SFX")]
     public bool hasSFX;
-
+    
     [OnValueChanged("TestChange")]
     [HelpBox("Some helpful text", "TestBoxCondition")]
     [HideIf("@!hasSFX")]
     [RangeSlider(0, 10)]
     public float someThirdVar;
+
+    [Toggle("Custom Label")] [UdonPublic] public bool extraToggle;
 
     [SectionHeader("Horizontal Group")] [Horizontal("Group")] [HideLabel]
     public GameObject varA;
@@ -54,9 +63,9 @@ namespace UdonToolkit {
     public void EventAdded(object leftVal, object rightVal, int index) {
     }
 
-    [ListView("Udon Triggers List")] public UdonBehaviour[] udonTargets;
+    [ListView("Udon Events List")] public UdonBehaviour[] udonTargets;
 
-    [ListView("Udon Triggers List")] [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@udonTargets", true)]
+    [ListView("Udon Events List")] [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@udonTargets", true)]
     public string[] udonEvents;
 
     public void AddEvent() {
@@ -105,6 +114,13 @@ namespace UdonToolkit {
       }
 
       return new[] {"no triggers found"};
+    }
+
+    [SectionHeader("Popups")] [Popup("GetOptions")] [UdonPublic]
+    public string popupVar;
+
+    public string[] GetOptions() {
+      return new [] { "foo", "bar", "fizz", "buzz" };
     }
   }
 }
