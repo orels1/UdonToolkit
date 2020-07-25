@@ -198,7 +198,7 @@ namespace UdonToolkit{
         .GetValue(property.serializedObject.targetObject);
       if (oldValue != null && oldValue.Equals(newValue)) return;
       property.serializedObject.targetObject.GetType().GetMethod(methodName).Invoke(property.serializedObject.targetObject, new[] {
-        newValue
+        (object) property
       });
       oldValue = newValue;
     }
