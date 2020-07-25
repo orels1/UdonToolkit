@@ -5,12 +5,16 @@ using UnityEditor;
 using UnityEngine;
 using VRC.Udon;
 
+// This is a UTController based example that showcases all of the current attributes in action, as well as combinations of them
+// Use this as a reference for the documentation available on github: https://github.com/orels1/UdonToolkit/wiki/Attributes
+
 namespace UdonToolkit {
+  [CustomName("Custom UI Sample")]
   public class UTTestController : UTController {
-    [SectionHeader("Something")] [UdonPublic]
+    [SectionHeader("Section Header")] [UdonPublic]
     public string someVal;
 
-    [SectionHeader("Some other thing")] [UdonPublic("someCustomUdonVar")]
+    [UdonPublic("someCustomUdonVar")]
     public int someOtherVal;
 
     [SectionHeader("Range Slider")]
@@ -20,7 +24,7 @@ namespace UdonToolkit {
     [RangeSlider(1, 10)] [UdonPublic]
     public int intValue;
 
-    [SectionHeader("SFX Controls")] [Toggle("Add SFX")]
+    [SectionHeader("Toggles")] [Toggle("Add SFX")]
     public bool hasSFX;
     
     [OnValueChanged("TestChange")]
@@ -29,25 +33,52 @@ namespace UdonToolkit {
     [RangeSlider(0, 10)]
     public float someThirdVar;
 
-    [Toggle("Custom Label")] [UdonPublic] public bool extraToggle;
+    [Toggle("Custom Label")] [UdonPublic]
+    public bool extraToggle;
 
-    [SectionHeader("Horizontal Group")] [Horizontal("Group")] [HideLabel]
+    [SectionHeader("Help Box")]
+    [HelpBox("This checkbox shows extra options via [HideIf] attribute")]
+    [UdonPublic]
+    public bool helpBoxCheck;
+
+    [HelpBox("This is only visible when option is checked", "@helpBoxExtra")]
+    [HideIf("@!helpBoxCheck")]
+    [UdonPublic]
+    public bool helpBoxExtra;
+
+    [SectionHeader("On Value Changed")]
+    [OnValueChanged("UpdateDiffValue")]
+    [HelpBox("This slider will update an editor only checkbox below")]
+    [RangeSlider(0, 10)]
+    [UdonPublic]
+    public float valueChangeSlider;
+
+    [UTEditor]
+    public bool isAbove5;
+
+    public void UpdateDiffValue(object value) {
+      var casted = ((SerializedProperty) value)?.floatValue;
+      if (casted == null) return;
+      isAbove5 = casted > 5;
+    }
+
+    [SectionHeader("Horizontal")] [Horizontal("Group")] [HideLabel]
     public GameObject varA;
 
     [Horizontal("Group")] [HideLabel] public string varB;
 
-    [SectionHeader("Other Horizontal Group")] [Horizontal("OtherGroup")] [UTEditor]
+    [Horizontal("OtherGroup")] [UTEditor]
     public int varC;
 
     [Horizontal("OtherGroup")] [UTEditor] public int varD;
 
-    [SectionHeader("Animation Triggers")] [Horizontal("AnimationTrigger")] [HideLabel] [UdonPublic]
+    [SectionHeader("Popup")] [Horizontal("AnimationTrigger")] [HideLabel] [UdonPublic]
     public Animator animator;
 
     [Horizontal("AnimationTrigger")] [Popup(PopupAttribute.PopupSource.Animator, "@animator", true)]
     public string somePopupVar;
 
-    [SectionHeader("Behaviour Triggers")] [Horizontal("BehaviourTrigger")] [HideLabel] [UdonPublic]
+    [Horizontal("BehaviourTrigger")] [HideLabel] [UdonPublic]
     public UdonBehaviour behaviour;
 
     [Horizontal("BehaviourTrigger")] [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@behaviour", true)]
@@ -78,6 +109,8 @@ namespace UdonToolkit {
       targets = newTargets.ToArray();
     }
 
+    [Horizontal("Regular Arrays")]
+    [HelpBox("UTController also automatically updates array editors with reordering and per item removal UI")]
     [OnValueChanged("BasicChanged")] public string[] basicArray;
 
     public void BasicChanged(object value, int index) {
@@ -90,7 +123,8 @@ namespace UdonToolkit {
     }
 
     public void TestChange(object value) {
-      var actualVal = Convert.ToSingle(value);
+      var casted = ((SerializedProperty) value)?.floatValue;
+      var actualVal = Convert.ToSingle(casted);
     }
 
     public bool TestBoxCondition() {
@@ -122,6 +156,12 @@ namespace UdonToolkit {
     public string[] GetOptions() {
       return new [] { "foo", "bar", "fizz", "buzz" };
     }
+
+    [Button("Helper Button")]
+    public void CustomButton() {
+      Debug.Log("Pressed the Helper Button");
+    }
+    
   }
 }
 #endif
