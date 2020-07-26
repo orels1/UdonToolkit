@@ -1,4 +1,5 @@
-<h1 align="center">🕶 Udon Toolkit 🕶</h1>
+![](https://cdn.vrchat.sh/ut/promo/github_banner.png)
+<hr>
 <p align="center">
   <strong>Purpose-built Udon Behaviours and tools to make your own</strong>
 </p>
