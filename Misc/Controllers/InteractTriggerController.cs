@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR
 
+using UnityEditor;
 using UnityEngine;
 using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
@@ -25,7 +26,7 @@ namespace UdonToolkit {
     public float proximity = 2f;
 
     public void SetDistance(object value) {
-      var val = (float) value;
+      var val = ((SerializedProperty) value).floatValue;
       if (uB == null) return;
       uB.proximity = val;
     }
