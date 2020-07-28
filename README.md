@@ -11,7 +11,7 @@
     contributors
   </a>
   </sub>
-</p>'
+</p>
 
 ## Quick Start Guide
 
