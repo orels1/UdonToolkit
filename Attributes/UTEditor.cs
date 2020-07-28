@@ -1,12 +1,10 @@
 ﻿#if UNITY_EDITOR
 
 using System;
-using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using UnityEditor;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using VRC.Udon;
 using VRC.Udon.Editor.ProgramSources;
