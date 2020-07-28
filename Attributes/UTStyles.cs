@@ -7,6 +7,7 @@ namespace UdonToolkit {
   public class UTStyles {
     public static Texture2D ComponentBG = (Texture2D) EditorGUIUtility.Load("Assets/UdonToolkit/Resources/Component BG.png");
     public static Texture Arrow = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Resources/Arrow.png");
+    public static Texture2D Splash = (Texture2D) EditorGUIUtility.Load("Assets/UdonToolkit/Resources/github_banner.png");
     
     public static GUIStyle Header = new GUIStyle(EditorStyles.helpBox) {
       stretchWidth = true,
