@@ -11,12 +11,26 @@
     contributors
   </a>
   </sub>
-</p>
+</p>'
 
-## [Check out the wiki for all information](https://github.com/orels1/UdonToolkit/wiki)
+## Quick Start Guide
+
+### Requirements
+
+- [VRC SDK3 with Udon](https://vrchat.com/home/download)
+- [Udon Sharp Compiler](https://github.com/Merlin-san/UdonSharp)
+
+### Installation
+
+- Grab the latest package [from releases](https://github.com/orels1/UdonToolkit/releases/tag/v0.1.1)
+- Import it into the project
+- A welcome screen will appear with links to documentation
+- Take a look at the Demo scene for more usage examples
+
+### [Check out the wiki for all the information](https://github.com/orels1/UdonToolkit/wiki)
 
 ## Copyright
 
-Copyright (c) 2020
+Copyright (c) 2020 orels1
 
 Licensed under the [MIT license](LICENSE).
