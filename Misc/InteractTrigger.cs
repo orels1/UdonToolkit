@@ -20,7 +20,7 @@ namespace UdonToolkit {
         col = gameObject.GetComponent<Collider>();
       }
 
-      public void Interact() {
+      public override void Interact() {
         if (!active) return;
         FireTriggers();
       }
