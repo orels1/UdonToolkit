@@ -17,7 +17,7 @@ namespace UdonToolkit {
     public string interactionText = "Use";
 
     public void SetInteract(object value) {
-      var val = value as string;
+      var val = ((SerializedProperty) value).stringValue;
       if (uB == null) return;
       uB.interactText = val;
     }
