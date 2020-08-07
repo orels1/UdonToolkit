@@ -186,6 +186,7 @@ using UdonToolkit;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using VRC.SDK3.Components;
 using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
