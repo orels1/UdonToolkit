@@ -13,13 +13,26 @@ namespace UdonToolkit {
   public class UniversalTrackerController : UTController {
     [SectionHeader("Tracking Target")] [UdonPublic]
     public bool trackBone;
+    [UdonPublic]
+    public bool trackPlayerBase;
+    [UdonPublic] public bool trackPlayspace;
 
-    [HideIf("@trackBone")] [UdonPublic]
+    public bool HideTrackDataDropdown() {
+      return trackBone || trackPlayerBase || trackPlayspace;
+    }
+
+    public bool HideTrackBoneDropdown() {
+      return !trackBone || trackPlayerBase || trackPlayspace;
+    }
+
+    [HideIf("HideTrackDataDropdown")] [UdonPublic]
     public VRCPlayerApi.TrackingDataType trackingTarget = VRCPlayerApi.TrackingDataType.Head;
 
-    [HideIf("@!trackBone")] [UdonPublic] public HumanBodyBones bone = HumanBodyBones.Hips;
+    [HideIf("HideTrackBoneDropdown")] [UdonPublic] public HumanBodyBones bone = HumanBodyBones.Hips;
     [UdonPublic] public Transform targetTransform;
+    [HideIf("@trackPlayspace")]
     [UdonPublic] public bool trackPosition = true;
+    [HideIf("@trackPlayspace")]
     [UdonPublic] public bool trackRotation = true;
 
     [SectionHeader("Tracking Correction")]
