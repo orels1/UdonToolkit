@@ -52,7 +52,9 @@ namespace CustomControllers {
     [UdonPublic] public GameObject viewSphere;
     [UdonPublic] public GameObject cameraObject;
     [UdonPublic] public GameObject visuals;
+    [UdonPublic] public MeshRenderer fingerSphere;
     [UdonPublic] public Image autoFocusIcon;
+    [UdonPublic] public Image alwaysOnIcon;
     [UdonPublic] public Color activeControlColor;
     
     [SectionHeader("Snapping and Position")]
@@ -60,6 +62,24 @@ namespace CustomControllers {
     [UdonPublic] public UdonBehaviour playspaceTracker;
 
 
+    [Button("Interact")]
+    public void Interact() {
+      if (uB == null) return;
+      uB.Interact();
+    }
+    
+    [Button("Pickup")]
+    public void Pickup() {
+      if (uB == null) return;
+      uB.OnPickup();
+    }
+    
+    [Button("Drop")]
+    public void Drop() {
+      if (uB == null) return;
+      uB.OnDrop();
+    }
+    
     [Button("SwitchPosition")]
     public void SwitchPosition() {
       if (uB == null) return;

@@ -121,6 +121,70 @@ namespace UdonToolkit {
       var field = tType.GetField(prop.name, flags);
       return field != null ? field.GetCustomAttributes(typeof(T), true) : null;
     }
+    
+    private static Dictionary<int, int> masksByLayer;
+
+    public static void GetLayerMasks() {
+      masksByLayer = new Dictionary<int, int>();
+      for (int i = 0; i < 32; i++) {
+        int mask = 0;
+        for (int j = 0; j < 32; j++) {
+          if (!Physics.GetIgnoreLayerCollision(i, j)) {
+            mask |= 1 << j;
+          }
+        }
+
+        masksByLayer.Add(i, mask);
+      }
+    }
+
+    public static int MaskForLayer(int layer) {
+      return masksByLayer[layer];
+    }
+
+    public static void CreateLayer(string name) {
+      var tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
+      var layerProps = tagManager.FindProperty("layers");
+      var propCount = layerProps.arraySize;
+
+      SerializedProperty firstEmptyProp = null;
+
+      for (var i = 0; i < propCount; i++) {
+        var layerProp = layerProps.GetArrayElementAtIndex(i);
+
+        var stringValue = layerProp.stringValue;
+
+        if (stringValue == name) return;
+
+        if (i < 8 || stringValue != string.Empty) continue;
+
+        if (firstEmptyProp == null)
+          firstEmptyProp = layerProp;
+      }
+
+      if (firstEmptyProp == null) {
+        UnityEngine.Debug.LogError("Maximum limit of " + propCount + " layers exceeded. Layer \"" + name +
+                                   "\" not created.");
+        return;
+      }
+
+      firstEmptyProp.stringValue = name;
+      tagManager.ApplyModifiedProperties();
+    }
+
+    public static void CreateLayer(string name, int index) {
+      var tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
+      var layerProps = tagManager.FindProperty("layers");
+
+      var layerProp = layerProps.GetArrayElementAtIndex(index);
+
+      var stringValue = layerProp.stringValue;
+
+      if (stringValue == name) return;
+
+      layerProp.stringValue = name;
+      tagManager.ApplyModifiedProperties();
+    }
   }
 }
 

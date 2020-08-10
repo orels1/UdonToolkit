@@ -8,7 +8,20 @@ namespace UdonToolkit {
     public static Texture2D ComponentBG = (Texture2D) EditorGUIUtility.Load("Assets/UdonToolkit/Resources/Component BG.png");
     public static Texture Arrow = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Resources/Arrow.png");
     public static Texture2D Splash = (Texture2D) EditorGUIUtility.Load("Assets/UdonToolkit/Resources/github_banner.png");
-    
+
+    public static GUIStyle CreatePreviewStyle(Texture2D bg) {
+      return new GUIStyle(EditorStyles.helpBox) {
+        stretchWidth = true,
+        fixedHeight = 150,
+        padding = new RectOffset(10, 0, 0, 0),
+        alignment = TextAnchor.MiddleCenter,
+        border = new RectOffset(0, 0, 0, 0),
+        normal = new GUIStyleState() {
+          background = bg
+        }
+      };
+    }
+
     public static GUIStyle Header = new GUIStyle(EditorStyles.helpBox) {
       stretchWidth = true,
       font = (Font) EditorGUIUtility.Load("Assets/UdonToolkit/Resources/Nunito-SemiBold.ttf"),
@@ -114,6 +127,23 @@ namespace UdonToolkit {
       result.SetPixels(pix);
       result.Apply();
       return result;
+    }
+
+    private static readonly GUIStyle horizontalLine = new GUIStyle {
+      normal = {background = EditorGUIUtility.whiteTexture},
+      margin = new RectOffset(6, 6, 4, 4),
+      fixedHeight = 1
+    };
+
+    public static void HorizontalLine(Color color) {
+      var c = GUI.color;
+      GUI.color = color;
+      GUILayout.Box(GUIContent.none, horizontalLine);
+      GUI.color = c;
+    }
+
+    public static void HorizontalLine() {
+      HorizontalLine(new Color(0.5f, 0.5f, 0.5f, 0.5f));
     }
   }
 }

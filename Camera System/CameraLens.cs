@@ -97,6 +97,7 @@ namespace UdonToolkit {
         constraint = gameObject.GetComponent<ParentConstraint>();
         cR = visuals.GetComponent<MeshRenderer>();
         sR = viewSphere.GetComponent<MeshRenderer>();
+        fingerSphere.gameObject.SetActive(false);
         var player = Networking.LocalPlayer;
         if (player == null) return;
         if (player.IsUserInVR()) {
@@ -119,6 +120,7 @@ namespace UdonToolkit {
         cameraObject.SetActive(true);
         if (!isDesktop) {
           viewSphere.SetActive(true);
+          fingerSphere.gameObject.SetActive(true);
           fingerSphere.SetPropertyBlock(fingerSphereOn);
         }
         cameraAnimator.SetBool("UIShown", true);
@@ -135,6 +137,7 @@ namespace UdonToolkit {
           cameraObject.SetActive(false);
           viewSphere.SetActive(false);
         }
+        fingerSphere.gameObject.SetActive(false);
         fingerSphere.SetPropertyBlock(fingerSphereOff);
         constraint.weight = 0;
         constraint.enabled = false;
