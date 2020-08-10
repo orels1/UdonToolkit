@@ -221,7 +221,6 @@ namespace UdonToolkit {
       var childCount = instancedCamera.transform.childCount;
       for (int i = 0; i < childCount; i++) {
         var child = instancedCamera.transform.GetChild(0);
-        Debug.LogFormat("Unpacking child {0}", child.name);
         child.parent = null;
         Undo.RegisterCreatedObjectUndo(child.gameObject, "Spawn Camera Lens");
       }
