@@ -22,7 +22,7 @@
 
 ### Installation
 
-- Grab the latest package [from releases](https://github.com/orels1/UdonToolkit/releases/tag/v0.1.1)
+- Grab the latest package [from releases](https://github.com/orels1/UdonToolkit/releases)
 - Import it into the project
 - A welcome screen will appear with links to documentation
 - Take a look at the Demo scene for more usage examples
