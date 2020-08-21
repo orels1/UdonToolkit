@@ -25,6 +25,9 @@ namespace UdonToolkit {
     private static string bootKey = "UT/boot";
 
     public static void Boot() {
+      #if !UNITY_POST_PROCESSING_STACK_V2
+      Debug.LogWarning("PostProcessing is not installed in the project. For UdonToolkit CameraSystem to work please import PostProcessing from Window -> Package Manager");
+      #endif
       var shouldBoot = true;
       if (EditorPrefs.HasKey(bootKey)) {
         shouldBoot = EditorPrefs.GetBool(bootKey);

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
+#if UNITY_POST_PROCESSING_STACK_V2
 using UnityEngine.Rendering.PostProcessing;
+#endif
+using VRC.Udon;
 using Object = UnityEngine.Object;
 
 namespace UdonToolkit {
@@ -11,7 +14,7 @@ namespace UdonToolkit {
     [MenuItem("Window/UdonToolkit/Camera System Setup")]
     public static void ShowWindow() {
       var pos = new Vector2(0, 0);
-      var size = new Vector2(450, 700);
+      var size = new Vector2(450, 750);
       var window = GetWindowWithRect(typeof(CameraSystemSetup), new Rect(pos, size),  true, "Camera System Setup") as CameraSystemSetup;
       window.Show();
     }
@@ -52,6 +55,7 @@ namespace UdonToolkit {
     private UnityEditor.Editor standObjEditor;
     private int emptyLayer;
 
+    #if UNITY_POST_PROCESSING_STACK_V2
     private void OnGUI() {
       emptyLayer = 0;
       UTUtils.GetLayerMasks();
@@ -140,6 +144,20 @@ namespace UdonToolkit {
       if (GUILayout.Button("Create Camera System", GUILayout.Height(30))) {
         RunCameraSetup();  
       }
+
+      if (GUILayout.Button("Add Guide Stand Only", GUILayout.Height(20))) {
+        AddGuide();
+      }
+    }
+
+    private void AddGuide() {
+      var standPath = guideStyle == GuideStyle.Futuristic ? SciFiStandPath : TikiStandPath;
+      var standPrefab = AssetDatabase.LoadAssetAtPath(standPath, typeof(GameObject));
+      var instancedStand = PrefabUtility.InstantiatePrefab(standPrefab) as GameObject;
+      instancedStand.transform.position = cameraSpot.position + Vector3.down * 0.275f + cameraSpot.forward * -0.110f + cameraSpot.right * -0.043f;
+      instancedStand.transform.rotation = cameraSpot.rotation;
+      PrefabUtility.UnpackPrefabInstance(instancedStand, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
+      Undo.RegisterCreatedObjectUndo(instancedStand, "Spawn Camera Stand");
     }
 
     private void SetupLayers() {
@@ -167,13 +185,7 @@ namespace UdonToolkit {
 
       // spawn stand
       if (addGuide) {
-        var standPath = guideStyle == GuideStyle.Futuristic ? SciFiStandPath : TikiStandPath;
-        var standPrefab = AssetDatabase.LoadAssetAtPath(standPath, typeof(GameObject));
-        var instancedStand = PrefabUtility.InstantiatePrefab(standPrefab) as GameObject;
-        instancedStand.transform.position = cameraSpot.position + Vector3.down * 0.275f + cameraSpot.forward * -0.110f + cameraSpot.right * -0.043f;
-        instancedStand.transform.rotation = cameraSpot.rotation;
-        PrefabUtility.UnpackPrefabInstance(instancedStand, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
-        Undo.RegisterCreatedObjectUndo(instancedStand, "Spawn Camera Stand");
+        AddGuide();
       }
       
       // spawn camera
@@ -197,13 +209,25 @@ namespace UdonToolkit {
       var vrControls = cameraObject.transform.Find("VR Controls");
       for (int i = 0; i < vrControls.childCount; i++) {
         var child = vrControls.GetChild(i).gameObject;
-        Undo.RecordObject(child, "Adjust Camera Lens Control Layer");
+        Undo.RecordObject(child, "Adjust Camera Lens Control Layer");{}
+        var mask = (LayerMask) LayerMask.GetMask(LayerMask.LayerToName(cameraControlsLayer));
+        var uB = child.GetComponent<UdonBehaviour>();
+        uB.publicVariables.TrySetVariableValue("collideWith", mask);
+        var cont = child.GetComponent<AreaTriggerController>();
+        cont.collideWith = mask;
         child.layer = cameraControlsLayer;
       }
 
       var startSphere = cameraObject.transform.Find("Start Sphere").gameObject;
       Undo.RecordObjects(new Object[]{ startSphere, startSphere.transform.GetChild(0).gameObject}, "Adjust Camera Lens Controls Layers");
       startSphere.layer = cameraControlsLayer;
+      {
+        var mask = (LayerMask) LayerMask.GetMask(LayerMask.LayerToName(cameraControlsLayer));
+        var uB = startSphere.GetComponent<UdonBehaviour>();
+        uB.publicVariables.TrySetVariableValue("collideWith", mask);
+        var cont = startSphere.GetComponent<AreaTriggerController>();
+        cont.collideWith = mask;
+      }
       startSphere.transform.GetChild(0).gameObject.layer = cameraControlsLayer;
 
       var fingerTracker = instancedCameraRoot.Find("Camera Left Finger").gameObject;
@@ -243,5 +267,11 @@ namespace UdonToolkit {
       Undo.CollapseUndoOperations(group);
       setup = true;
     }
+    #else
+    private void OnGUI() {
+      UTStyles.RenderHeader("Camera System Setup");
+      EditorGUILayout.HelpBox("Camera System requires PostProcessing, please install it by searching for PostProcessing in Window -> Package Manager", MessageType.Error);
+    }
+    #endif
   }
 }
