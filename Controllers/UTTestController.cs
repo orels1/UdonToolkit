@@ -109,7 +109,7 @@ namespace UdonToolkit {
       targets = newTargets.ToArray();
     }
 
-    [Horizontal("Regular Arrays")]
+    [SectionHeader("Regular Arrays")]
     [HelpBox("UTController also automatically updates array editors with reordering and per item removal UI")]
     [OnValueChanged("BasicChanged")] public string[] basicArray;
 
@@ -117,6 +117,12 @@ namespace UdonToolkit {
       Debug.Log(index);
       Debug.Log(((SerializedProperty) value)?.stringValue);
     }
+
+    [HelpBox("Hide If also works on array types")] [UdonPublic]
+    public bool showRegularArray;
+
+    [HideIf("@!showRegularArray")] [UdonPublic] 
+    public string[] regularArray;
 
     public bool HideThirdVar() {
       return true;

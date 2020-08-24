@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR
+#if UNITY_EDITOR
 
 using System;
 using System.Linq;
@@ -137,11 +137,17 @@ namespace UdonToolkit {
 
     private void HandleArray(SerializedProperty prop) {
       var attrs = UTUtils.GetPropertyAttributes(prop);
+      var modifierAttrs = UTUtils.GetPropertyAttributes<Attribute>(prop);
       var isGroup = attrs.Where(a => a is ListViewAttribute).ToArray().Length > 0;
       var groupAttribute = attrs.Select(a => a as ListViewAttribute).ToArray();
       var onValueChangedAttribute = UTUtils.GetPropertyAttribute<OnValueChangedAttribute>(prop);
+      
+      // hideIf attribute
+      var hideIfAttribute = modifierAttrs.OfType<HideIfAttribute>().ToArray();
+      var isHidden = hideIfAttribute.Length > 0 && UTUtils.GetVisibleThroughAttribute(prop, hideIfAttribute[0].methodName, false);
       // handling for regular arrays, make nicer down the line
       if (!isGroup) {
+        if (isHidden) return;
         RenderArray(prop,  onValueChangedAttribute?.methodName);
         RenderHelpBox(prop);
         return;
@@ -153,6 +159,7 @@ namespace UdonToolkit {
         .ToList();
       // fast exit on 1 element with list view
       if (items.Count < 2) {
+        if (isHidden) return;
         RenderArray(prop, onValueChangedAttribute?.methodName);
         RenderHelpBox(prop);
         return;
@@ -167,6 +174,8 @@ namespace UdonToolkit {
       if (sectionHeaderAttribute != null) {
         UTStyles.RenderSectionHeader(sectionHeaderAttribute.text);
       }
+
+      if (isHidden) return;
 
       var otherProp = serializedObject.FindProperty(items[1].Name);
       var leftPopupAttribute = UTUtils.GetPropertyAttribute<PopupAttribute>(prop);
