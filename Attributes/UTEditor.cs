@@ -1,6 +1,7 @@
 ﻿#if UNITY_EDITOR
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -192,6 +193,34 @@ namespace UdonToolkit {
       RenderHelpBox(prop);
     }
 
+    private void HandleChangeCallback(UTController t, string changedCallback, SerializedProperty prop, SerializedProperty otherProp, object[] output) {
+      if (changedCallback == null) return;
+      var m = t.GetType().GetMethod(changedCallback);
+      if (m == null) return;
+      var arrVal = new List<SerializedProperty>();
+      var otherArrVal = new List<SerializedProperty>();
+      
+      for (int j = 0; j < prop.arraySize; j++) {
+        arrVal.Add(prop.GetArrayElementAtIndex(j));
+      }
+
+      if (otherProp == null) {
+        m.Invoke(t,
+          m.GetParameters().Length > 1
+            ? output
+            : new object[] {arrVal.ToArray()});
+        return;
+      }
+      
+      for (int j = 0; j < otherProp.arraySize; j++) {
+        otherArrVal.Add(otherProp.GetArrayElementAtIndex(j));
+      }
+      m.Invoke(t,
+      m.GetParameters().Length > 2
+        ? output
+        : new object[] {arrVal.ToArray(), otherArrVal.ToArray()});
+    }
+    
     private void RenderArray(SerializedProperty prop, string changedCallback) {
       var formatted = Regex.Split(prop.name, @"(?<!^)(?=[A-Z])");
       formatted[0] = formatted[0].Substring(0, 1).ToUpper() + formatted[0].Substring(1);
@@ -205,28 +234,18 @@ namespace UdonToolkit {
         EditorGUI.BeginChangeCheck();
         EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
         if (EditorGUI.EndChangeCheck()) {
-          if (changedCallback != null) {
-            t.GetType().GetMethod(changedCallback)?.Invoke(t,
-              new object[] {prop.GetArrayElementAtIndex(i), i});
-          }
+          HandleChangeCallback(t, changedCallback, prop, null, new object[] {prop.GetArrayElementAtIndex(i), i});
         }
 
         if (RenderRemoveControls(i, new[] {prop})) {
-          if (changedCallback != null) {
-            t.GetType().GetMethod(changedCallback)?.Invoke(t,
-              new object[] {null, i});
-          }
-
+          HandleChangeCallback(t, changedCallback, prop, null, new object[] {null, i});
           break;
         }
         EditorGUILayout.EndHorizontal();
       }
 
       if (RenderAddControls(new[] {prop}, "Add Element", null)) {
-        if (changedCallback != null) {
-          t.GetType().GetMethod(changedCallback)?.Invoke(t,
-            new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), prop.arraySize - 1});
-        }
+        HandleChangeCallback(t, changedCallback, prop, null, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), prop.arraySize - 1});
       }
     }
 
@@ -316,17 +335,11 @@ namespace UdonToolkit {
         EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
         EditorGUILayout.PropertyField(otherProp.GetArrayElementAtIndex(i), new GUIContent());
         if (EditorGUI.EndChangeCheck()) {
-          if (changedCallback != null) {
-            t.GetType().GetMethod(changedCallback)?.Invoke(t,
-              new object[] {prop.GetArrayElementAtIndex(i), otherProp.GetArrayElementAtIndex(i), i});
-          }
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(i), otherProp.GetArrayElementAtIndex(i), i});
         }
 
         if (RenderRemoveControls(i, new[] {prop, otherProp})) {
-          if (changedCallback != null) {
-            t.GetType().GetMethod(changedCallback)?.Invoke(t,
-              new object[] {null, null, i});
-          }
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {null, null, i});
           break;
         }
 
@@ -334,10 +347,7 @@ namespace UdonToolkit {
       }
 
       if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
-        if (changedCallback != null) {
-          t.GetType().GetMethod(changedCallback)?.Invoke(t,
-            new object[] {prop.GetArrayElementAtIndex(prop.arraySize), otherProp.GetArrayElementAtIndex(prop.arraySize), prop.arraySize});
-        }
+        HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), otherProp.GetArrayElementAtIndex(otherProp.arraySize - 1), prop.arraySize - 1});
       }
     }
 
@@ -423,15 +433,25 @@ namespace UdonToolkit {
         
         if (EditorGUI.EndChangeCheck()) {
           if (changedCallback != null) {
-            t.GetType().GetMethod(changedCallback)?.Invoke(t,
-              new object[] {prop.GetArrayElementAtIndex(i), otherProp.GetArrayElementAtIndex(i), i});
+            var m = t.GetType().GetMethod(changedCallback);
+            if (m != null) {
+              m.Invoke(t,
+                m.GetParameters().Length > 2
+                  ? new object[] {prop.GetArrayElementAtIndex(i), otherProp.GetArrayElementAtIndex(i), i}
+                  : new object[] {prop, otherProp});
+            }
           }
         }
 
         if (RenderRemoveControls(i, new[] {prop, otherProp})) {
           if (changedCallback != null) {
-            t.GetType().GetMethod(changedCallback)?.Invoke(t,
-              new object[] {null, null, i});
+            var m = t.GetType().GetMethod(changedCallback);
+            if (m != null) {
+              m.Invoke(t,
+                m.GetParameters().Length > 2
+                  ? new object[] {null, null, i}
+                  : new object[] {prop, otherProp});
+            }
           }
           break;
         }
@@ -441,8 +461,13 @@ namespace UdonToolkit {
 
       if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
         if (changedCallback != null) {
-          t.GetType().GetMethod(changedCallback)?.Invoke(t,
-            new object[] {prop.GetArrayElementAtIndex(prop.arraySize), otherProp.GetArrayElementAtIndex(prop.arraySize), prop.arraySize});
+          var m = t.GetType().GetMethod(changedCallback);
+          if (m != null) {
+            m.Invoke(t,
+              m.GetParameters().Length > 2
+                ? new object[] {prop.GetArrayElementAtIndex(prop.arraySize), otherProp.GetArrayElementAtIndex(prop.arraySize), prop.arraySize}
+                : new object[] {prop, otherProp});
+          }
         }
       }
     }

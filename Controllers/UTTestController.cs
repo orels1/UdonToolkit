@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -62,6 +63,16 @@ namespace UdonToolkit {
       isAbove5 = casted > 5;
     }
 
+    [OnValueChanged("LogArrayValues")]
+    [HelpBox("OnValueChanged has a separate signature for ListView and Array types you can use")]
+    [UdonPublic]
+    public float[] valueChangeArray;
+
+    public void LogArrayValues(object value) {
+      var casted = (value as SerializedProperty[]).ToList();
+      Debug.LogFormat("Values: {0}", string.Join(", ", casted.Select(i => i.floatValue).ToArray()));
+    }
+
     [SectionHeader("Horizontal")] [Horizontal("Group")] [HideLabel]
     public GameObject varA;
 
@@ -91,7 +102,17 @@ namespace UdonToolkit {
 
     [ListView("EventsList")] public UdonBehaviour[] targets;
 
-    public void EventAdded(object leftVal, object rightVal, int index) {
+    public void EventAdded(object leftVal, object rightVal) {
+      var cLeft = (leftVal as SerializedProperty[]).ToList();
+      var cRight = (rightVal as SerializedProperty[]).ToList();
+      var eventNames = new List<string>();
+      for (int i = 0; i < cLeft.Count; i++) {
+        var behName = cRight[i].objectReferenceValue != null
+          ? (cRight[i].objectReferenceValue as UdonBehaviour).name
+          : "null";
+        eventNames.Add($"Event: {cLeft[i].stringValue}, Target: {behName}");
+      }
+      Debug.Log(string.Join("\n", eventNames));
     }
 
     [ListView("Udon Events List")] public UdonBehaviour[] udonTargets;
