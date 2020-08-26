@@ -333,11 +333,19 @@ namespace UdonToolkit{
     private GUIContent[] options;
     private bool hideLabel;
     public PopupSource sourceType;
+    public ShaderPropType shaderPropType = ShaderPropType.Float;
 
     public enum PopupSource {
       Method,
       Animator,
-      UdonBehaviour
+      UdonBehaviour,
+      Shader
+    }
+
+    public enum ShaderPropType {
+      Float,
+      Color,
+      Vector
     }
     
     public PopupAttribute(string methodName) {
@@ -350,9 +358,22 @@ namespace UdonToolkit{
       this.methodName = methodName;
     }
 
+    public PopupAttribute(PopupSource sourceType, string methodName, ShaderPropType shaderPropType) {
+      this.sourceType = sourceType;
+      this.methodName = methodName;
+      this.shaderPropType = shaderPropType;
+    }
+
     public PopupAttribute(PopupSource sourceType, string methodName, bool hideLabel) {
       this.sourceType = sourceType;
       this.methodName = methodName;
+      this.hideLabel = hideLabel;
+    }
+    
+    public PopupAttribute(PopupSource sourceType, string methodName, ShaderPropType shaderPropType, bool hideLabel) {
+      this.sourceType = sourceType;
+      this.methodName = methodName;
+      this.shaderPropType = shaderPropType;
       this.hideLabel = hideLabel;
     }
 
@@ -369,6 +390,9 @@ namespace UdonToolkit{
       }
       else if (sourceType == PopupSource.UdonBehaviour) {
         options = UTUtils.GetUdonEvents(source as UdonBehaviour).Select(o => new GUIContent(o)).ToArray();
+      }
+      else if (sourceType == PopupSource.Shader) {
+        options = UTUtils.GetShaderPropertiesByType(source as Shader, shaderPropType).Select(o => new GUIContent(o)).ToArray();
       }
       else {
         options = ((string[]) source).Select(o => new GUIContent(o)).ToArray();

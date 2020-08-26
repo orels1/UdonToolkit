@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Light Bridge
+  m_Shader: {fileID: 4800000, guid: cb44910778d94804392531d89b0cd217, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _FadeDistance: 0.75
+    - _Metallic: 0.604
+    - _Smoothness: 0.996
+    - _StartDistance: 0.31
+    - __dirty: 0
+    m_Colors:
+    - _Albedo: {r: 0.04298683, g: 0.20381375, b: 0.4339623, a: 0.7254902}
+    - _Emission: {r: 22.086275, g: 118.462746, b: 219.85883, a: 0}
+    - _InputPosition: {r: 0, g: 0, b: 0, a: 0}

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pulse
+  m_Shader: {fileID: 4800000, guid: 0fa056b1ceb64b247a98e8e948fdb3cb, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _CutoffActive: 0
+    - _CutoffHeight: 0
+    - _CutoffRange: 1
+    - _CycleLength: 0
+    - _CycleStart: 0
+    - _HueShift: 0
+    - _JumpScale: 0.2
+    - _Metallic: 1
+    - _SceneStart: 0
+    - _Smoothness: 0.6
+    - __dirty: 0
+    m_Colors:
+    - _Albedo: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0}
+    - _Color0: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0}
+    - _PulseColor: {r: 0.75392663, g: 2.3874342, b: 7.999999, a: 0}

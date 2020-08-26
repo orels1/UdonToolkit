@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 
 using System;
 using System.Linq;
@@ -372,6 +372,10 @@ namespace UdonToolkit {
           else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
             options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonBehaviour);
           }
+          else if (sourceType == PopupAttribute.PopupSource.Shader) {
+            var propsSource = UTUtils.GetValueThroughAttribute(source, leftPopup.methodName, out _);
+            options = UTUtils.GetShaderPropertiesByType(propsSource as Shader, leftPopup.shaderPropType);
+          }
           else {
             options = (string[]) UTUtils.GetValueThroughAttribute(prop, leftPopup.methodName, out _);
           }
@@ -399,6 +403,10 @@ namespace UdonToolkit {
           }
           else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
             options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonBehaviour);
+          }
+          else if (sourceType == PopupAttribute.PopupSource.Shader) {
+            var propsSource = UTUtils.GetValueThroughAttribute(source, rightPopup.methodName, out _);
+            options = UTUtils.GetShaderPropertiesByType(propsSource as Shader, rightPopup.shaderPropType);
           }
           else {
             options = (string[]) UTUtils.GetValueThroughAttribute(otherProp, rightPopup.methodName, out _);

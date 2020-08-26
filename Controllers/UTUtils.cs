@@ -185,6 +185,38 @@ namespace UdonToolkit {
       layerProp.stringValue = name;
       tagManager.ApplyModifiedProperties();
     }
+
+    private static Dictionary<PopupAttribute.ShaderPropType, List<ShaderUtil.ShaderPropertyType>> propTypeMapping =
+      new Dictionary<PopupAttribute.ShaderPropType, List<ShaderUtil.ShaderPropertyType>> {
+        {
+          PopupAttribute.ShaderPropType.Float,
+          new List<ShaderUtil.ShaderPropertyType>
+            {ShaderUtil.ShaderPropertyType.Float, ShaderUtil.ShaderPropertyType.Range}
+        }, {
+          PopupAttribute.ShaderPropType.Color,
+          new List<ShaderUtil.ShaderPropertyType> {ShaderUtil.ShaderPropertyType.Color}
+        }, {
+          PopupAttribute.ShaderPropType.Vector,
+          new List<ShaderUtil.ShaderPropertyType> {ShaderUtil.ShaderPropertyType.Vector}
+        }
+      };
+    
+    public static string[] GetShaderPropertiesByType(Shader source, PopupAttribute.ShaderPropType valid) {
+      if (source == null) {
+        return new[] {"-- no shader provided --"};
+      }
+
+      var types = propTypeMapping[valid];
+      var res = new List<string>();
+      for (int i = 0; i < ShaderUtil.GetPropertyCount(source); i++) {
+        var type = ShaderUtil.GetPropertyType(source, i);
+        if (types.Contains(type)) {
+          res.Add(ShaderUtil.GetPropertyName(source, i));
+        }
+      }
+      
+      return res.Count == 0 ? new[] {"no valid properties"} : res.ToArray();
+    }
   }
 }
 
