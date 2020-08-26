@@ -19,6 +19,7 @@
 
 - [VRC SDK3 with Udon](https://vrchat.com/home/download)
 - [Udon Sharp Compiler](https://github.com/Merlin-san/UdonSharp)
+- [Optional] PostProcessing from Unity Package Manager (required for the Camera System)
 
 ### Installation
 
