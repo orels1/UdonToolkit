@@ -18,52 +18,63 @@ MonoBehaviour:
     delayLength\n    .export fireAnimationTriggers\n    .export animators\n    .export
     animatorTriggers\n    .export fireUdonEvents\n    .export networked\n    .export
     networkTarget\n    .export udonTargets\n    .export udonEvents\n    .export fireObjectToggles\n
-    \   .export goTargets\n    .export goToggleEvents\n    .export fireAudioEvents\n
+    \   .export goTargets\n    .export goToggleEvents\n    .export fireColliderToggles\n
+    \   .export colliderTargets\n    .export colliderToggleEvents\n    .export fireAudioEvents\n
     \   .export audioSources\n    .export audioClips\n    .export delayExpire\n\n
     \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:
     %SystemString, null\n    animators: %UnityEngineAnimatorArray, null\n    audioClips:
     %UnityEngineAudioClipArray, null\n    audioSources: %UnityEngineAudioSourceArray,
     null\n    active: %SystemBoolean, null\n    fireAfterDelay: %SystemBoolean, null\n
     \   fireAnimationTriggers: %SystemBoolean, null\n    fireAudioEvents: %SystemBoolean,
-    null\n    fireObjectToggles: %SystemBoolean, null\n    fireUdonEvents: %SystemBoolean,
-    null\n    networked: %SystemBoolean, null\n    udonTargets: %UnityEngineComponentArray,
+    null\n    fireColliderToggles: %SystemBoolean, null\n    fireObjectToggles: %SystemBoolean,
+    null\n    fireUdonEvents: %SystemBoolean, null\n    networked: %SystemBoolean,
+    null\n    colliderTargets: %UnityEngineColliderArray, null\n    udonTargets: %UnityEngineComponentArray,
     null\n    goTargets: %UnityEngineGameObjectArray, null\n    networkTarget: %VRCUdonCommonInterfacesNetworkEventTarget,
     null\n    delayExpire: %SystemSingle, null\n    delayLength: %SystemSingle, null\n
-    \   animatorTriggers: %SystemStringArray, null\n    goToggleEvents: %SystemStringArray,
-    null\n    udonEvents: %SystemStringArray, null\n    delayActive: %SystemBoolean,
-    null\n    __0_state_Boolean: %SystemBoolean, null\n    __0_i_Int32: %SystemInt32,
+    \   animatorTriggers: %SystemStringArray, null\n    colliderToggleEvents: %SystemStringArray,
+    null\n    goToggleEvents: %SystemStringArray, null\n    udonEvents: %SystemStringArray,
+    null\n    delayActive: %SystemBoolean, null\n    __0_state_Boolean: %SystemBoolean,
+    null\n    __1_state_Boolean: %SystemBoolean, null\n    __0_i_Int32: %SystemInt32,
     null\n    __1_i_Int32: %SystemInt32, null\n    __2_i_Int32: %SystemInt32, null\n
-    \   __3_i_Int32: %SystemInt32, null\n    __0_uB_UdonBehaviour: %VRCUdonUdonBehaviour,
-    null\n    __0_const_intnl_SystemBoolean: %SystemBoolean, null\n    __1_const_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __0_const_intnl_SystemInt32: %SystemInt32, null\n    __1_const_intnl_SystemInt32:
-    %SystemInt32, null\n    __0_const_intnl_SystemString: %SystemString, null\n    __1_const_intnl_SystemString:
-    %SystemString, null\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
-    \   __0_const_intnl_SystemUInt32: %SystemUInt32, null\n    __1_const_intnl_exitJumpLoc_UInt32:
+    \   __3_i_Int32: %SystemInt32, null\n    __4_i_Int32: %SystemInt32, null\n    __0_uB_UdonBehaviour:
+    %VRCUdonUdonBehaviour, null\n    __0_const_intnl_SystemBoolean: %SystemBoolean,
+    null\n    __1_const_intnl_SystemBoolean: %SystemBoolean, null\n    __0_const_intnl_SystemInt32:
+    %SystemInt32, null\n    __1_const_intnl_SystemInt32: %SystemInt32, null\n    __0_const_intnl_SystemString:
+    %SystemString, null\n    __1_const_intnl_SystemString: %SystemString, null\n    __2_const_intnl_SystemString:
+    %SystemString, null\n    __3_const_intnl_SystemString: %SystemString, null\n    __0_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\n    __1_const_intnl_exitJumpLoc_UInt32:
     %SystemUInt32, null\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
     \   __3_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n    __4_const_intnl_exitJumpLoc_UInt32:
     %SystemUInt32, null\n    __5_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
     \   __6_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n    __7_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\n    __0_intnl_UnityEngineAnimator: %UnityEngineAnimator,
-    null\n    __0_intnl_UnityEngineAudioClip: %UnityEngineAudioClip, null\n    __0_intnl_UnityEngineAudioSource:
-    %UnityEngineAudioSource, null\n    __0_intnl_SystemBoolean: %SystemBoolean, null\n
-    \   __1_intnl_SystemBoolean: %SystemBoolean, null\n    __10_intnl_SystemBoolean:
+    %SystemUInt32, null\n    __8_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
+    \   __9_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n    __0_intnl_UnityEngineAnimator:
+    %UnityEngineAnimator, null\n    __0_intnl_UnityEngineAudioClip: %UnityEngineAudioClip,
+    null\n    __0_intnl_UnityEngineAudioSource: %UnityEngineAudioSource, null\n    __0_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __1_intnl_SystemBoolean: %SystemBoolean, null\n    __10_intnl_SystemBoolean:
     %SystemBoolean, null\n    __11_intnl_SystemBoolean: %SystemBoolean, null\n    __12_intnl_SystemBoolean:
     %SystemBoolean, null\n    __13_intnl_SystemBoolean: %SystemBoolean, null\n    __14_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __2_intnl_SystemBoolean: %SystemBoolean, null\n    __3_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __4_intnl_SystemBoolean: %SystemBoolean, null\n    __5_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __6_intnl_SystemBoolean: %SystemBoolean, null\n    __7_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __8_intnl_SystemBoolean: %SystemBoolean, null\n    __9_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __0_intnl_UnityEngineComponent: %UnityEngineComponent,
-    null\n    __0_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\n    __1_intnl_UnityEngineGameObject:
-    %UnityEngineGameObject, null\n    __0_intnl_SystemInt32: %SystemInt32, null\n
-    \   __1_intnl_SystemInt32: %SystemInt32, null\n    __2_intnl_SystemInt32: %SystemInt32,
-    null\n    __3_intnl_SystemInt32: %SystemInt32, null\n    __4_intnl_SystemInt32:
-    %SystemInt32, null\n    __5_intnl_SystemInt32: %SystemInt32, null\n    __6_intnl_SystemInt32:
-    %SystemInt32, null\n    __7_intnl_SystemInt32: %SystemInt32, null\n    __0_intnl_VRCUdonCommonInterfacesNetworkEventTarget:
-    %VRCUdonCommonInterfacesNetworkEventTarget, null\n    __0_intnl_SystemSingle:
-    %SystemSingle, null\n    __1_intnl_SystemSingle: %SystemSingle, null\n    __0_intnl_SystemString:
-    %SystemString, null\n    __1_intnl_SystemString: %SystemString, null\n    __2_intnl_SystemString:
-    %SystemString, null\n    __3_intnl_SystemString: %SystemString, null\n    __0_intnl_VRCUdonCommonInterfacesIUdonEventReceiver:
+    %SystemBoolean, null\n    __15_intnl_SystemBoolean: %SystemBoolean, null\n    __16_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __17_intnl_SystemBoolean: %SystemBoolean, null\n    __18_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __19_intnl_SystemBoolean: %SystemBoolean, null\n    __2_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __3_intnl_SystemBoolean: %SystemBoolean, null\n    __4_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __5_intnl_SystemBoolean: %SystemBoolean, null\n    __6_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __7_intnl_SystemBoolean: %SystemBoolean, null\n    __8_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __9_intnl_SystemBoolean: %SystemBoolean, null\n    __0_intnl_UnityEngineCollider:
+    %UnityEngineCollider, null\n    __1_intnl_UnityEngineCollider: %UnityEngineCollider,
+    null\n    __0_intnl_UnityEngineComponent: %UnityEngineComponent, null\n    __0_intnl_UnityEngineGameObject:
+    %UnityEngineGameObject, null\n    __1_intnl_UnityEngineGameObject: %UnityEngineGameObject,
+    null\n    __0_intnl_SystemInt32: %SystemInt32, null\n    __1_intnl_SystemInt32:
+    %SystemInt32, null\n    __2_intnl_SystemInt32: %SystemInt32, null\n    __3_intnl_SystemInt32:
+    %SystemInt32, null\n    __4_intnl_SystemInt32: %SystemInt32, null\n    __5_intnl_SystemInt32:
+    %SystemInt32, null\n    __6_intnl_SystemInt32: %SystemInt32, null\n    __7_intnl_SystemInt32:
+    %SystemInt32, null\n    __8_intnl_SystemInt32: %SystemInt32, null\n    __9_intnl_SystemInt32:
+    %SystemInt32, null\n    __0_intnl_VRCUdonCommonInterfacesNetworkEventTarget: %VRCUdonCommonInterfacesNetworkEventTarget,
+    null\n    __0_intnl_SystemSingle: %SystemSingle, null\n    __1_intnl_SystemSingle:
+    %SystemSingle, null\n    __0_intnl_SystemString: %SystemString, null\n    __1_intnl_SystemString:
+    %SystemString, null\n    __2_intnl_SystemString: %SystemString, null\n    __3_intnl_SystemString:
+    %SystemString, null\n    __4_intnl_SystemString: %SystemString, null\n    __5_intnl_SystemString:
+    %SystemString, null\n    __0_intnl_VRCUdonCommonInterfacesIUdonEventReceiver:
     %VRCUdonUdonBehaviour, null\n    __0_intnl_returnTarget_UInt32: %SystemUInt32,
     null\n\n.data_end\n\n.code_start\n    .export Activate\n        \n    Activate:\n
     \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __0_const_intnl_SystemBoolean\n
@@ -78,50 +89,54 @@ MonoBehaviour:
     \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export Trigger\n
     \       \n    Trigger:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       PUSH, __0_const_intnl_SystemString\n        EXTERN, \"UnityEngineDebug.__Log__SystemObject__SystemVoid\"\n
     \       PUSH, active\n        PUSH, __0_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000000D8\n        PUSH,
+    \       PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000000E8\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
     __0_intnl_returnTarget_UInt32\n        PUSH, fireAfterDelay\n        JUMP_IF_FALSE,
-    0x00000140\n        PUSH, __0_intnl_SystemSingle\n        EXTERN, \"UnityEngineTime.__get_time__SystemSingle\"\n
+    0x00000150\n        PUSH, __0_intnl_SystemSingle\n        EXTERN, \"UnityEngineTime.__get_time__SystemSingle\"\n
     \       PUSH, __0_intnl_SystemSingle\n        PUSH, delayLength\n        PUSH,
     delayExpire\n        EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\n
     \       PUSH, __0_const_intnl_SystemBoolean\n        PUSH, delayActive\n        COPY\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __0_const_intnl_exitJumpLoc_UInt32\n
-    \       JUMP, 0x000002C4\n        PUSH, __1_const_intnl_exitJumpLoc_UInt32\n        JUMP,
-    0x0000040C\n        PUSH, __2_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x000005E8\n
-    \       PUSH, __3_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000844\n        PUSH,
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __1_const_intnl_SystemString\n
+    \       EXTERN, \"UnityEngineDebug.__Log__SystemObject__SystemVoid\"\n        PUSH,
+    __0_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000304\n        PUSH, __1_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x0000044C\n        PUSH, __2_const_intnl_exitJumpLoc_UInt32\n        JUMP,
+    0x00000628\n        PUSH, __3_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000884\n
+    \       PUSH, __4_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000AE0\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n        JUMP_INDIRECT,
     __0_intnl_returnTarget_UInt32\n        \n    .export _update\n        \n    _update:\n
     \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, active\n        PUSH,
     __1_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000001D8\n        PUSH,
+    \       PUSH, __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000208\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
     __0_intnl_returnTarget_UInt32\n        PUSH, delayActive\n        PUSH, __2_intnl_SystemBoolean\n
     \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000214\n        PUSH,
+    \       PUSH, __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000244\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
     __0_intnl_returnTarget_UInt32\n        PUSH, __1_intnl_SystemSingle\n        EXTERN,
     \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, __1_intnl_SystemSingle\n
     \       PUSH, delayExpire\n        PUSH, __3_intnl_SystemBoolean\n        EXTERN,
     \"SystemSingle.__op_GreaterThanOrEqual__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __3_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000002A8\n        PUSH,
-    __4_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x000002C4\n        PUSH, __5_const_intnl_exitJumpLoc_UInt32\n
-    \       JUMP, 0x0000040C\n        PUSH, __6_const_intnl_exitJumpLoc_UInt32\n        JUMP,
-    0x000005E8\n        PUSH, __7_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000844\n
-    \       PUSH, __1_const_intnl_SystemBoolean\n        PUSH, delayActive\n        COPY\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    FireAnimationTriggers:\n
-    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, fireAnimationTriggers\n
+    \       PUSH, __3_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000002E8\n        PUSH,
+    __5_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000304\n        PUSH, __6_const_intnl_exitJumpLoc_UInt32\n
+    \       JUMP, 0x0000044C\n        PUSH, __7_const_intnl_exitJumpLoc_UInt32\n        JUMP,
+    0x00000628\n        PUSH, __8_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000884\n
+    \       PUSH, __9_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000AE0\n        PUSH,
+    __1_const_intnl_SystemBoolean\n        PUSH, delayActive\n        COPY\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\n        \n    FireAnimationTriggers:\n        \n
+    \       PUSH, __0_const_intnl_SystemUInt32\n        PUSH, fireAnimationTriggers\n
     \       PUSH, __4_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __4_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000300\n        PUSH,
+    \       PUSH, __4_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000340\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
     __0_intnl_returnTarget_UInt32\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
     __0_i_Int32\n        COPY\n        PUSH, animators\n        PUSH, __0_intnl_SystemInt32\n
     \       EXTERN, \"UnityEngineAnimatorArray.__get_Length__SystemInt32\"\n        PUSH,
     __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH, __5_intnl_SystemBoolean\n
     \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __5_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000003F0\n        PUSH,
+    \       PUSH, __5_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000430\n        PUSH,
     animators\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_UnityEngineAnimator\n
     \       EXTERN, \"UnityEngineAnimatorArray.__Get__SystemInt32__UnityEngineAnimator\"\n
     \       PUSH, animatorTriggers\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemString\n
@@ -131,55 +146,55 @@ MonoBehaviour:
     __0_i_Int32\n        PUSH, __1_intnl_SystemInt32\n        COPY\n        PUSH,
     __0_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH, __0_i_Int32\n
     \       EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000314\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    \       JUMP, 0x00000354\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
     \       \n    FireUdonEvents:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
     \       PUSH, fireUdonEvents\n        PUSH, __6_intnl_SystemBoolean\n        EXTERN,
     \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000448\n        PUSH, __0_intnl_returnTarget_UInt32
+    __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000488\n        PUSH, __0_intnl_returnTarget_UInt32
     #Explicit return sequence\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
     \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __1_i_Int32\n        COPY\n
     \       PUSH, udonTargets\n        PUSH, __2_intnl_SystemInt32\n        EXTERN,
     \"UnityEngineComponentArray.__get_Length__SystemInt32\"\n        PUSH, __1_i_Int32\n
     \       PUSH, __2_intnl_SystemInt32\n        PUSH, __7_intnl_SystemBoolean\n        EXTERN,
     \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n        PUSH,
-    __7_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000005CC\n        PUSH, udonTargets\n
+    __7_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000060C\n        PUSH, udonTargets\n
     \       PUSH, __1_i_Int32\n        PUSH, __0_intnl_UnityEngineComponent\n        EXTERN,
     \"UnityEngineComponentArray.__Get__SystemInt32__UnityEngineComponent\"\n        PUSH,
     __0_intnl_UnityEngineComponent\n        PUSH, __0_intnl_VRCUdonCommonInterfacesIUdonEventReceiver\n
     \       COPY\n        PUSH, __0_intnl_VRCUdonCommonInterfacesIUdonEventReceiver\n
     \       PUSH, __0_uB_UdonBehaviour\n        COPY\n        PUSH, networked\n        JUMP_IF_FALSE,
-    0x00000558\n        PUSH, udonEvents\n        PUSH, __1_i_Int32\n        PUSH,
+    0x00000598\n        PUSH, udonEvents\n        PUSH, __1_i_Int32\n        PUSH,
     __1_intnl_SystemString\n        EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n
     \       PUSH, __0_uB_UdonBehaviour\n        PUSH, networkTarget\n        PUSH,
     __0_intnl_VRCUdonCommonInterfacesNetworkEventTarget\n        COPY # Copy-on-write
     symbol value dirtied\n        PUSH, networkTarget\n        PUSH, __1_intnl_SystemString\n
     \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\n
-    \       JUMP, 0x00000590\n        PUSH, udonEvents\n        PUSH, __1_i_Int32\n
+    \       JUMP, 0x000005D0\n        PUSH, udonEvents\n        PUSH, __1_i_Int32\n
     \       PUSH, __1_intnl_SystemString\n        EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n
     \       PUSH, __0_uB_UdonBehaviour\n        PUSH, __1_intnl_SystemString\n        EXTERN,
     \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\n
     \       PUSH, __1_i_Int32\n        PUSH, __3_intnl_SystemInt32\n        COPY\n
     \       PUSH, __1_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __1_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x0000045C\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    \       JUMP, 0x0000049C\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
     \       \n    FireObjectToggles:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
     \       PUSH, fireObjectToggles\n        PUSH, __8_intnl_SystemBoolean\n        EXTERN,
     \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __8_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000624\n        PUSH, __0_intnl_returnTarget_UInt32
+    __8_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000664\n        PUSH, __0_intnl_returnTarget_UInt32
     #Explicit return sequence\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
     \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __2_i_Int32\n        COPY\n
     \       PUSH, goTargets\n        PUSH, __4_intnl_SystemInt32\n        EXTERN,
     \"UnityEngineGameObjectArray.__get_Length__SystemInt32\"\n        PUSH, __2_i_Int32\n
     \       PUSH, __4_intnl_SystemInt32\n        PUSH, __9_intnl_SystemBoolean\n        EXTERN,
     \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n        PUSH,
-    __9_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000828\n        PUSH, goToggleEvents\n
+    __9_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000868\n        PUSH, goToggleEvents\n
     \       PUSH, __2_i_Int32\n        PUSH, __2_intnl_SystemString\n        EXTERN,
     \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH, __2_intnl_SystemString\n
-    \       PUSH, __0_const_intnl_SystemString\n        PUSH, __10_intnl_SystemBoolean\n
+    \       PUSH, __2_const_intnl_SystemString\n        PUSH, __10_intnl_SystemBoolean\n
     \       EXTERN, \"SystemString.__op_Equality__SystemString_SystemString__SystemBoolean\"\n
-    \       PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000760\n        PUSH,
+    \       PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000007A0\n        PUSH,
     goTargets\n        PUSH, __2_i_Int32\n        PUSH, __0_intnl_UnityEngineGameObject\n
     \       EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\n
     \       PUSH, goTargets\n        PUSH, __2_i_Int32\n        PUSH, __1_intnl_UnityEngineGameObject\n
@@ -190,9 +205,9 @@ MonoBehaviour:
     \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
     __0_intnl_UnityEngineGameObject\n        PUSH, __12_intnl_SystemBoolean\n        EXTERN,
     \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\n        JUMP,
-    0x000007EC\n        PUSH, goToggleEvents\n        PUSH, __2_i_Int32\n        PUSH,
+    0x0000082C\n        PUSH, goToggleEvents\n        PUSH, __2_i_Int32\n        PUSH,
     __3_intnl_SystemString\n        EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n
-    \       PUSH, __3_intnl_SystemString\n        PUSH, __1_const_intnl_SystemString\n
+    \       PUSH, __3_intnl_SystemString\n        PUSH, __3_const_intnl_SystemString\n
     \       PUSH, __11_intnl_SystemBoolean\n        EXTERN, \"SystemString.__op_Equality__SystemString_SystemString__SystemBoolean\"\n
     \       PUSH, __11_intnl_SystemBoolean\n        PUSH, __0_state_Boolean\n        COPY\n
     \       PUSH, goTargets\n        PUSH, __2_i_Int32\n        PUSH, __0_intnl_UnityEngineGameObject\n
@@ -202,29 +217,69 @@ MonoBehaviour:
     \       PUSH, __2_i_Int32\n        PUSH, __5_intnl_SystemInt32\n        COPY\n
     \       PUSH, __2_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __2_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000638\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    \       JUMP, 0x00000678\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
-    \       \n    FireAudioEvents:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, fireAudioEvents\n        PUSH, __13_intnl_SystemBoolean\n        EXTERN,
+    \       \n    FireColliderToggles:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       PUSH, fireColliderToggles\n        PUSH, __13_intnl_SystemBoolean\n        EXTERN,
     \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __13_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000880\n        PUSH, __0_intnl_returnTarget_UInt32
+    __13_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000008C0\n        PUSH, __0_intnl_returnTarget_UInt32
     #Explicit return sequence\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
     \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __3_i_Int32\n        COPY\n
-    \       PUSH, audioSources\n        PUSH, __6_intnl_SystemInt32\n        EXTERN,
-    \"UnityEngineAudioSourceArray.__get_Length__SystemInt32\"\n        PUSH, __3_i_Int32\n
+    \       PUSH, colliderTargets\n        PUSH, __6_intnl_SystemInt32\n        EXTERN,
+    \"UnityEngineColliderArray.__get_Length__SystemInt32\"\n        PUSH, __3_i_Int32\n
     \       PUSH, __6_intnl_SystemInt32\n        PUSH, __14_intnl_SystemBoolean\n
     \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __14_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000970\n        PUSH,
-    audioSources\n        PUSH, __3_i_Int32\n        PUSH, __0_intnl_UnityEngineAudioSource\n
-    \       EXTERN, \"UnityEngineAudioSourceArray.__Get__SystemInt32__UnityEngineAudioSource\"\n
-    \       PUSH, audioClips\n        PUSH, __3_i_Int32\n        PUSH, __0_intnl_UnityEngineAudioClip\n
-    \       EXTERN, \"UnityEngineAudioClipArray.__Get__SystemInt32__UnityEngineAudioClip\"\n
-    \       PUSH, __0_intnl_UnityEngineAudioSource\n        PUSH, __0_intnl_UnityEngineAudioClip\n
-    \       EXTERN, \"UnityEngineAudioSource.__PlayOneShot__UnityEngineAudioClip__SystemVoid\"\n
+    \       PUSH, __14_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000AC4\n        PUSH,
+    colliderToggleEvents\n        PUSH, __3_i_Int32\n        PUSH, __4_intnl_SystemString\n
+    \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
+    __4_intnl_SystemString\n        PUSH, __2_const_intnl_SystemString\n        PUSH,
+    __15_intnl_SystemBoolean\n        EXTERN, \"SystemString.__op_Equality__SystemString_SystemString__SystemBoolean\"\n
+    \       PUSH, __15_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000009FC\n        PUSH,
+    colliderTargets\n        PUSH, __3_i_Int32\n        PUSH, __0_intnl_UnityEngineCollider\n
+    \       EXTERN, \"UnityEngineColliderArray.__Get__SystemInt32__UnityEngineCollider\"\n
+    \       PUSH, colliderTargets\n        PUSH, __3_i_Int32\n        PUSH, __1_intnl_UnityEngineCollider\n
+    \       EXTERN, \"UnityEngineColliderArray.__Get__SystemInt32__UnityEngineCollider\"\n
+    \       PUSH, __1_intnl_UnityEngineCollider\n        PUSH, __16_intnl_SystemBoolean\n
+    \       EXTERN, \"UnityEngineCollider.__get_enabled__SystemBoolean\"\n        PUSH,
+    __16_intnl_SystemBoolean\n        PUSH, __17_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __0_intnl_UnityEngineCollider\n        PUSH, __17_intnl_SystemBoolean\n        EXTERN,
+    \"UnityEngineCollider.__set_enabled__SystemBoolean__SystemVoid\"\n        JUMP,
+    0x00000A88\n        PUSH, colliderToggleEvents\n        PUSH, __3_i_Int32\n        PUSH,
+    __5_intnl_SystemString\n        EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n
+    \       PUSH, __5_intnl_SystemString\n        PUSH, __3_const_intnl_SystemString\n
+    \       PUSH, __16_intnl_SystemBoolean\n        EXTERN, \"SystemString.__op_Equality__SystemString_SystemString__SystemBoolean\"\n
+    \       PUSH, __16_intnl_SystemBoolean\n        PUSH, __1_state_Boolean\n        COPY\n
+    \       PUSH, colliderTargets\n        PUSH, __3_i_Int32\n        PUSH, __0_intnl_UnityEngineCollider\n
+    \       EXTERN, \"UnityEngineColliderArray.__Get__SystemInt32__UnityEngineCollider\"\n
+    \       PUSH, __0_intnl_UnityEngineCollider\n        PUSH, __1_state_Boolean\n
+    \       EXTERN, \"UnityEngineCollider.__set_enabled__SystemBoolean__SystemVoid\"\n
     \       PUSH, __3_i_Int32\n        PUSH, __7_intnl_SystemInt32\n        COPY\n
     \       PUSH, __3_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
     __3_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000894\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    \       JUMP, 0x000008D4\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
+    \       \n    FireAudioEvents:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       PUSH, fireAudioEvents\n        PUSH, __18_intnl_SystemBoolean\n        EXTERN,
+    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
+    __18_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000B1C\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Explicit return sequence\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
+    \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __4_i_Int32\n        COPY\n
+    \       PUSH, audioSources\n        PUSH, __8_intnl_SystemInt32\n        EXTERN,
+    \"UnityEngineAudioSourceArray.__get_Length__SystemInt32\"\n        PUSH, __4_i_Int32\n
+    \       PUSH, __8_intnl_SystemInt32\n        PUSH, __19_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
+    \       PUSH, __19_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000C0C\n        PUSH,
+    audioSources\n        PUSH, __4_i_Int32\n        PUSH, __0_intnl_UnityEngineAudioSource\n
+    \       EXTERN, \"UnityEngineAudioSourceArray.__Get__SystemInt32__UnityEngineAudioSource\"\n
+    \       PUSH, audioClips\n        PUSH, __4_i_Int32\n        PUSH, __0_intnl_UnityEngineAudioClip\n
+    \       EXTERN, \"UnityEngineAudioClipArray.__Get__SystemInt32__UnityEngineAudioClip\"\n
+    \       PUSH, __0_intnl_UnityEngineAudioSource\n        PUSH, __0_intnl_UnityEngineAudioClip\n
+    \       EXTERN, \"UnityEngineAudioSource.__PlayOneShot__UnityEngineAudioClip__SystemVoid\"\n
+    \       PUSH, __4_i_Int32\n        PUSH, __9_intnl_SystemInt32\n        COPY\n
+    \       PUSH, __4_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
+    __4_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
+    \       JUMP, 0x00000B30\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
     \       \n.code_end\n"
   assemblyError: 
@@ -789,1905 +844,2535 @@ MonoBehaviour:
     - startInstruction: 0
       endInstruction: -1
       startSourceChar: 713
-      endSourceChar: 740
+      endSourceChar: 744
       line: 23
+      lineChar: 11
+      spanCodeSection: "bool fireColliderToggles;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 744
+      endSourceChar: 751
+      line: 24
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 751
+      endSourceChar: 751
+      line: 24
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 751
+      endSourceChar: 751
+      line: 24
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 751
+      endSourceChar: 784
+      line: 24
+      lineChar: 11
+      spanCodeSection: "Collider[] colliderTargets;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 784
+      endSourceChar: 791
+      line: 25
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 791
+      endSourceChar: 791
+      line: 25
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 791
+      endSourceChar: 791
+      line: 25
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 791
+      endSourceChar: 827
+      line: 25
+      lineChar: 11
+      spanCodeSection: "string[] colliderToggleEvents;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 827
+      endSourceChar: 834
+      line: 26
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 834
+      endSourceChar: 834
+      line: 26
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 834
+      endSourceChar: 861
+      line: 26
       lineChar: 11
       spanCodeSection: "bool fireAudioEvents;\r\n    "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 740
-      endSourceChar: 747
-      line: 24
+      startSourceChar: 861
+      endSourceChar: 868
+      line: 27
       lineChar: 4
       spanCodeSection: 'public '
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 747
-      endSourceChar: 747
-      line: 24
+      startSourceChar: 868
+      endSourceChar: 868
+      line: 27
       lineChar: 11
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 747
-      endSourceChar: 747
-      line: 24
+      startSourceChar: 868
+      endSourceChar: 868
+      line: 27
       lineChar: 11
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 747
-      endSourceChar: 780
-      line: 24
+      startSourceChar: 868
+      endSourceChar: 901
+      line: 27
       lineChar: 11
       spanCodeSection: "AudioSource[] audioSources;\r\n    "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 780
-      endSourceChar: 787
-      line: 25
+      startSourceChar: 901
+      endSourceChar: 908
+      line: 28
       lineChar: 4
       spanCodeSection: 'public '
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 787
-      endSourceChar: 787
-      line: 25
+      startSourceChar: 908
+      endSourceChar: 908
+      line: 28
       lineChar: 11
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 787
-      endSourceChar: 787
-      line: 25
+      startSourceChar: 908
+      endSourceChar: 908
+      line: 28
       lineChar: 11
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 787
-      endSourceChar: 818
-      line: 25
+      startSourceChar: 908
+      endSourceChar: 939
+      line: 28
       lineChar: 11
       spanCodeSection: "AudioClip[] audioClips;\r\n\r\n    "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 818
-      endSourceChar: 826
-      line: 27
+      startSourceChar: 939
+      endSourceChar: 947
+      line: 30
       lineChar: 4
       spanCodeSection: 'private '
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 826
-      endSourceChar: 826
-      line: 27
+      startSourceChar: 947
+      endSourceChar: 947
+      line: 30
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 826
-      endSourceChar: 849
-      line: 27
+      startSourceChar: 947
+      endSourceChar: 970
+      line: 30
       lineChar: 12
       spanCodeSection: "bool delayActive;\r\n    "
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 849
-      endSourceChar: 856
-      line: 28
+      startSourceChar: 970
+      endSourceChar: 977
+      line: 31
       lineChar: 4
       spanCodeSection: 'public '
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 856
-      endSourceChar: 856
-      line: 28
+      startSourceChar: 977
+      endSourceChar: 977
+      line: 31
       lineChar: 11
       spanCodeSection: 
     - startInstruction: 0
       endInstruction: -1
-      startSourceChar: 856
-      endSourceChar: 882
-      line: 28
+      startSourceChar: 977
+      endSourceChar: 1003
+      line: 31
       lineChar: 11
       spanCodeSection: "float delayExpire;\r\n\r\n    "
     - startInstruction: 0
       endInstruction: 7
-      startSourceChar: 882
-      endSourceChar: 905
-      line: 30
+      startSourceChar: 1003
+      endSourceChar: 1026
+      line: 33
       lineChar: 4
       spanCodeSection: 'public void Activate() '
     - startInstruction: 8
       endInstruction: 7
-      startSourceChar: 905
-      endSourceChar: 914
-      line: 30
+      startSourceChar: 1026
+      endSourceChar: 1035
+      line: 33
       lineChar: 27
       spanCodeSection: "{\r\n      "
     - startInstruction: 8
       endInstruction: 7
-      startSourceChar: 914
-      endSourceChar: 914
-      line: 31
+      startSourceChar: 1035
+      endSourceChar: 1035
+      line: 34
       lineChar: 6
       spanCodeSection: 
     - startInstruction: 8
       endInstruction: 7
-      startSourceChar: 914
-      endSourceChar: 914
-      line: 31
+      startSourceChar: 1035
+      endSourceChar: 1035
+      line: 34
       lineChar: 6
       spanCodeSection: 
     - startInstruction: 8
       endInstruction: 7
-      startSourceChar: 914
-      endSourceChar: 923
-      line: 31
+      startSourceChar: 1035
+      endSourceChar: 1044
+      line: 34
       lineChar: 6
       spanCodeSection: 'active = '
     - startInstruction: 8
       endInstruction: 47
-      startSourceChar: 923
-      endSourceChar: 943
-      line: 31
+      startSourceChar: 1044
+      endSourceChar: 1064
+      line: 34
       lineChar: 15
       spanCodeSection: "true;\r\n    }\r\n\r\n    "
     - startInstruction: 48
       endInstruction: 55
-      startSourceChar: 943
-      endSourceChar: 968
-      line: 34
+      startSourceChar: 1064
+      endSourceChar: 1089
+      line: 37
       lineChar: 4
       spanCodeSection: 'public void Deactivate() '
     - startInstruction: 56
       endInstruction: 55
-      startSourceChar: 968
-      endSourceChar: 977
-      line: 34
+      startSourceChar: 1089
+      endSourceChar: 1098
+      line: 37
       lineChar: 29
       spanCodeSection: "{\r\n      "
     - startInstruction: 56
       endInstruction: 55
-      startSourceChar: 977
-      endSourceChar: 977
-      line: 35
+      startSourceChar: 1098
+      endSourceChar: 1098
+      line: 38
       lineChar: 6
       spanCodeSection: 
     - startInstruction: 56
       endInstruction: 55
-      startSourceChar: 977
-      endSourceChar: 977
-      line: 35
+      startSourceChar: 1098
+      endSourceChar: 1098
+      line: 38
       lineChar: 6
       spanCodeSection: 
     - startInstruction: 56
       endInstruction: 55
-      startSourceChar: 977
-      endSourceChar: 986
-      line: 35
+      startSourceChar: 1098
+      endSourceChar: 1107
+      line: 38
       lineChar: 6
       spanCodeSection: 'active = '
     - startInstruction: 56
       endInstruction: 95
-      startSourceChar: 986
-      endSourceChar: 1007
-      line: 35
+      startSourceChar: 1107
+      endSourceChar: 1128
+      line: 38
       lineChar: 15
       spanCodeSection: "false;\r\n    }\r\n\r\n    "
     - startInstruction: 96
       endInstruction: 103
-      startSourceChar: 1007
-      endSourceChar: 1028
-      line: 38
+      startSourceChar: 1128
+      endSourceChar: 1149
+      line: 41
       lineChar: 4
       spanCodeSection: 'public void Toggle() '
     - startInstruction: 104
       endInstruction: 103
-      startSourceChar: 1028
-      endSourceChar: 1037
-      line: 38
+      startSourceChar: 1149
+      endSourceChar: 1158
+      line: 41
       lineChar: 25
       spanCodeSection: "{\r\n      "
     - startInstruction: 104
       endInstruction: 103
-      startSourceChar: 1037
-      endSourceChar: 1037
-      line: 39
+      startSourceChar: 1158
+      endSourceChar: 1158
+      line: 42
       lineChar: 6
       spanCodeSection: 
     - startInstruction: 104
       endInstruction: 103
-      startSourceChar: 1037
-      endSourceChar: 1037
-      line: 39
+      startSourceChar: 1158
+      endSourceChar: 1158
+      line: 42
       lineChar: 6
       spanCodeSection: 
     - startInstruction: 104
       endInstruction: 103
-      startSourceChar: 1037
-      endSourceChar: 1046
-      line: 39
+      startSourceChar: 1158
+      endSourceChar: 1167
+      line: 42
       lineChar: 6
       spanCodeSection: 'active = '
     - startInstruction: 104
       endInstruction: 103
-      startSourceChar: 1046
-      endSourceChar: 1047
-      line: 39
+      startSourceChar: 1167
+      endSourceChar: 1168
+      line: 42
       lineChar: 15
       spanCodeSection: '!'
     - startInstruction: 104
       endInstruction: 147
-      startSourceChar: 1047
-      endSourceChar: 1069
-      line: 39
+      startSourceChar: 1168
+      endSourceChar: 1190
+      line: 42
       lineChar: 16
       spanCodeSection: "active;\r\n    }\r\n\r\n    "
     - startInstruction: 148
       endInstruction: 155
-      startSourceChar: 1069
-      endSourceChar: 1091
-      line: 42
+      startSourceChar: 1190
+      endSourceChar: 1212
+      line: 45
       lineChar: 4
       spanCodeSection: 'public void Trigger() '
     - startInstruction: 156
       endInstruction: 155
-      startSourceChar: 1091
-      endSourceChar: 1100
-      line: 42
+      startSourceChar: 1212
+      endSourceChar: 1221
+      line: 45
       lineChar: 26
       spanCodeSection: "{\r\n      "
     - startInstruction: 156
       endInstruction: 155
-      startSourceChar: 1100
-      endSourceChar: 1104
-      line: 43
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 156
-      endInstruction: 155
-      startSourceChar: 1104
-      endSourceChar: 1105
-      line: 43
-      lineChar: 10
-      spanCodeSection: '!'
-    - startInstruction: 156
-      endInstruction: 195
-      startSourceChar: 1105
-      endSourceChar: 1113
-      line: 43
-      lineChar: 11
-      spanCodeSection: 'active) '
-    - startInstruction: 196
-      endInstruction: 215
-      startSourceChar: 1113
-      endSourceChar: 1128
-      line: 43
-      lineChar: 19
-      spanCodeSection: "return;\r\n      "
-    - startInstruction: 216
-      endInstruction: 215
-      startSourceChar: 1128
-      endSourceChar: 1132
-      line: 44
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 216
-      endInstruction: 231
-      startSourceChar: 1132
-      endSourceChar: 1148
-      line: 44
-      lineChar: 10
-      spanCodeSection: 'fireAfterDelay) '
-    - startInstruction: 232
-      endInstruction: 231
-      startSourceChar: 1148
-      endSourceChar: 1159
-      line: 44
-      lineChar: 26
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 232
-      endInstruction: 231
-      startSourceChar: 1159
-      endSourceChar: 1159
-      line: 45
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 232
-      endInstruction: 231
-      startSourceChar: 1159
-      endSourceChar: 1159
-      line: 45
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 232
-      endInstruction: 231
-      startSourceChar: 1159
-      endSourceChar: 1173
-      line: 45
-      lineChar: 8
-      spanCodeSection: 'delayExpire = '
-    - startInstruction: 232
-      endInstruction: 231
-      startSourceChar: 1173
-      endSourceChar: 1173
-      line: 45
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 232
-      endInstruction: 231
-      startSourceChar: 1173
-      endSourceChar: 1173
-      line: 45
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 232
-      endInstruction: 231
-      startSourceChar: 1173
-      endSourceChar: 1178
-      line: 45
-      lineChar: 22
-      spanCodeSection: Time.
-    - startInstruction: 232
-      endInstruction: 247
-      startSourceChar: 1178
-      endSourceChar: 1185
-      line: 45
-      lineChar: 27
-      spanCodeSection: 'time + '
-    - startInstruction: 248
-      endInstruction: 279
-      startSourceChar: 1185
-      endSourceChar: 1207
-      line: 45
-      lineChar: 34
-      spanCodeSection: "delayLength;\r\n        "
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1207
-      endSourceChar: 1207
-      line: 46
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1207
-      endSourceChar: 1207
-      line: 46
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 280
-      endInstruction: 279
-      startSourceChar: 1207
+      startSourceChar: 1221
       endSourceChar: 1221
       line: 46
-      lineChar: 8
-      spanCodeSection: 'delayActive = '
-    - startInstruction: 280
-      endInstruction: 299
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 156
+      endInstruction: 155
       startSourceChar: 1221
-      endSourceChar: 1236
+      endSourceChar: 1221
       line: 46
-      lineChar: 22
-      spanCodeSection: "true;\r\n        "
-    - startInstruction: 300
-      endInstruction: 319
-      startSourceChar: 1236
-      endSourceChar: 1260
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 156
+      endInstruction: 155
+      startSourceChar: 1221
+      endSourceChar: 1221
+      line: 46
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 156
+      endInstruction: 155
+      startSourceChar: 1221
+      endSourceChar: 1227
+      line: 46
+      lineChar: 6
+      spanCodeSection: Debug.
+    - startInstruction: 156
+      endInstruction: 155
+      startSourceChar: 1227
+      endSourceChar: 1231
+      line: 46
+      lineChar: 12
+      spanCodeSection: Log(
+    - startInstruction: 156
+      endInstruction: 171
+      startSourceChar: 1231
+      endSourceChar: 1269
+      line: 46
+      lineChar: 16
+      spanCodeSection: "\"checking if should trigger\");\r\n      "
+    - startInstruction: 172
+      endInstruction: 171
+      startSourceChar: 1269
+      endSourceChar: 1273
       line: 47
-      lineChar: 8
-      spanCodeSection: "return;\r\n      }\r\n      "
-    - startInstruction: 320
-      endInstruction: 319
-      startSourceChar: 1260
-      endSourceChar: 1260
-      line: 49
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 320
-      endInstruction: 319
-      startSourceChar: 1260
-      endSourceChar: 1260
-      line: 49
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 320
-      endInstruction: 335
-      startSourceChar: 1260
-      endSourceChar: 1292
-      line: 49
-      lineChar: 6
-      spanCodeSection: "FireAnimationTriggers();\r\n      "
-    - startInstruction: 336
-      endInstruction: 335
-      startSourceChar: 1292
-      endSourceChar: 1292
-      line: 50
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 336
-      endInstruction: 335
-      startSourceChar: 1292
-      endSourceChar: 1292
-      line: 50
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 336
-      endInstruction: 351
-      startSourceChar: 1292
-      endSourceChar: 1317
-      line: 50
-      lineChar: 6
-      spanCodeSection: "FireUdonEvents();\r\n      "
-    - startInstruction: 352
-      endInstruction: 351
-      startSourceChar: 1317
-      endSourceChar: 1317
-      line: 51
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 352
-      endInstruction: 351
-      startSourceChar: 1317
-      endSourceChar: 1317
-      line: 51
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 352
-      endInstruction: 367
-      startSourceChar: 1317
-      endSourceChar: 1345
-      line: 51
-      lineChar: 6
-      spanCodeSection: "FireObjectToggles();\r\n      "
-    - startInstruction: 368
-      endInstruction: 367
-      startSourceChar: 1345
-      endSourceChar: 1345
-      line: 52
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 368
-      endInstruction: 367
-      startSourceChar: 1345
-      endSourceChar: 1345
-      line: 52
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 368
-      endInstruction: 403
-      startSourceChar: 1345
-      endSourceChar: 1378
-      line: 52
-      lineChar: 6
-      spanCodeSection: "FireAudioEvents();\r\n    }\r\n\r\n    "
-    - startInstruction: 404
-      endInstruction: 411
-      startSourceChar: 1378
-      endSourceChar: 1399
-      line: 55
-      lineChar: 4
-      spanCodeSection: 'public void Update() '
-    - startInstruction: 412
-      endInstruction: 411
-      startSourceChar: 1399
-      endSourceChar: 1408
-      line: 55
-      lineChar: 25
-      spanCodeSection: "{\r\n      "
-    - startInstruction: 412
-      endInstruction: 411
-      startSourceChar: 1408
-      endSourceChar: 1412
-      line: 56
       lineChar: 6
       spanCodeSection: if (
-    - startInstruction: 412
-      endInstruction: 411
-      startSourceChar: 1412
-      endSourceChar: 1413
-      line: 56
+    - startInstruction: 172
+      endInstruction: 171
+      startSourceChar: 1273
+      endSourceChar: 1274
+      line: 47
       lineChar: 10
       spanCodeSection: '!'
-    - startInstruction: 412
-      endInstruction: 451
-      startSourceChar: 1413
-      endSourceChar: 1421
-      line: 56
+    - startInstruction: 172
+      endInstruction: 211
+      startSourceChar: 1274
+      endSourceChar: 1282
+      line: 47
       lineChar: 11
       spanCodeSection: 'active) '
-    - startInstruction: 452
-      endInstruction: 471
-      startSourceChar: 1421
-      endSourceChar: 1436
-      line: 56
+    - startInstruction: 212
+      endInstruction: 231
+      startSourceChar: 1282
+      endSourceChar: 1297
+      line: 47
       lineChar: 19
       spanCodeSection: "return;\r\n      "
-    - startInstruction: 472
-      endInstruction: 471
-      startSourceChar: 1436
-      endSourceChar: 1440
-      line: 57
+    - startInstruction: 232
+      endInstruction: 231
+      startSourceChar: 1297
+      endSourceChar: 1301
+      line: 48
       lineChar: 6
       spanCodeSection: if (
-    - startInstruction: 472
-      endInstruction: 471
-      startSourceChar: 1440
-      endSourceChar: 1441
-      line: 57
+    - startInstruction: 232
+      endInstruction: 247
+      startSourceChar: 1301
+      endSourceChar: 1317
+      line: 48
       lineChar: 10
-      spanCodeSection: '!'
-    - startInstruction: 472
-      endInstruction: 511
-      startSourceChar: 1441
-      endSourceChar: 1454
-      line: 57
-      lineChar: 11
-      spanCodeSection: 'delayActive) '
-    - startInstruction: 512
-      endInstruction: 531
-      startSourceChar: 1454
-      endSourceChar: 1469
-      line: 57
-      lineChar: 24
-      spanCodeSection: "return;\r\n      "
-    - startInstruction: 532
-      endInstruction: 531
-      startSourceChar: 1469
-      endSourceChar: 1473
-      line: 58
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 532
-      endInstruction: 531
-      startSourceChar: 1473
-      endSourceChar: 1473
-      line: 58
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 532
-      endInstruction: 531
-      startSourceChar: 1473
-      endSourceChar: 1473
-      line: 58
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 532
-      endInstruction: 531
-      startSourceChar: 1473
-      endSourceChar: 1478
-      line: 58
-      lineChar: 10
-      spanCodeSection: Time.
-    - startInstruction: 532
-      endInstruction: 547
-      startSourceChar: 1478
-      endSourceChar: 1486
-      line: 58
-      lineChar: 15
-      spanCodeSection: 'time >= '
-    - startInstruction: 548
-      endInstruction: 595
-      startSourceChar: 1486
-      endSourceChar: 1499
-      line: 58
-      lineChar: 23
-      spanCodeSection: 'delayExpire) '
-    - startInstruction: 596
-      endInstruction: 595
-      startSourceChar: 1499
-      endSourceChar: 1510
-      line: 58
-      lineChar: 36
+      spanCodeSection: 'fireAfterDelay) '
+    - startInstruction: 248
+      endInstruction: 247
+      startSourceChar: 1317
+      endSourceChar: 1328
+      line: 48
+      lineChar: 26
       spanCodeSection: "{\r\n        "
-    - startInstruction: 596
-      endInstruction: 595
-      startSourceChar: 1510
-      endSourceChar: 1510
-      line: 59
+    - startInstruction: 248
+      endInstruction: 247
+      startSourceChar: 1328
+      endSourceChar: 1328
+      line: 49
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 596
-      endInstruction: 595
-      startSourceChar: 1510
-      endSourceChar: 1510
-      line: 59
+    - startInstruction: 248
+      endInstruction: 247
+      startSourceChar: 1328
+      endSourceChar: 1328
+      line: 49
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 596
-      endInstruction: 611
-      startSourceChar: 1510
-      endSourceChar: 1544
-      line: 59
+    - startInstruction: 248
+      endInstruction: 247
+      startSourceChar: 1328
+      endSourceChar: 1342
+      line: 49
       lineChar: 8
-      spanCodeSection: "FireAnimationTriggers();\r\n        "
-    - startInstruction: 612
-      endInstruction: 611
-      startSourceChar: 1544
-      endSourceChar: 1544
-      line: 60
+      spanCodeSection: 'delayExpire = '
+    - startInstruction: 248
+      endInstruction: 247
+      startSourceChar: 1342
+      endSourceChar: 1342
+      line: 49
+      lineChar: 22
+      spanCodeSection: 
+    - startInstruction: 248
+      endInstruction: 247
+      startSourceChar: 1342
+      endSourceChar: 1342
+      line: 49
+      lineChar: 22
+      spanCodeSection: 
+    - startInstruction: 248
+      endInstruction: 247
+      startSourceChar: 1342
+      endSourceChar: 1347
+      line: 49
+      lineChar: 22
+      spanCodeSection: Time.
+    - startInstruction: 248
+      endInstruction: 263
+      startSourceChar: 1347
+      endSourceChar: 1354
+      line: 49
+      lineChar: 27
+      spanCodeSection: 'time + '
+    - startInstruction: 264
+      endInstruction: 295
+      startSourceChar: 1354
+      endSourceChar: 1376
+      line: 49
+      lineChar: 34
+      spanCodeSection: "delayLength;\r\n        "
+    - startInstruction: 296
+      endInstruction: 295
+      startSourceChar: 1376
+      endSourceChar: 1376
+      line: 50
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 612
-      endInstruction: 611
-      startSourceChar: 1544
-      endSourceChar: 1544
-      line: 60
+    - startInstruction: 296
+      endInstruction: 295
+      startSourceChar: 1376
+      endSourceChar: 1376
+      line: 50
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 612
-      endInstruction: 627
-      startSourceChar: 1544
-      endSourceChar: 1571
-      line: 60
-      lineChar: 8
-      spanCodeSection: "FireUdonEvents();\r\n        "
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1571
-      endSourceChar: 1571
-      line: 61
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1571
-      endSourceChar: 1571
-      line: 61
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 628
-      endInstruction: 643
-      startSourceChar: 1571
-      endSourceChar: 1601
-      line: 61
-      lineChar: 8
-      spanCodeSection: "FireObjectToggles();\r\n        "
-    - startInstruction: 644
-      endInstruction: 643
-      startSourceChar: 1601
-      endSourceChar: 1601
-      line: 62
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 644
-      endInstruction: 643
-      startSourceChar: 1601
-      endSourceChar: 1601
-      line: 62
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 644
-      endInstruction: 659
-      startSourceChar: 1601
-      endSourceChar: 1629
-      line: 62
-      lineChar: 8
-      spanCodeSection: "FireAudioEvents();\r\n        "
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1629
-      endSourceChar: 1629
-      line: 63
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1629
-      endSourceChar: 1629
-      line: 63
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1629
-      endSourceChar: 1643
-      line: 63
+    - startInstruction: 296
+      endInstruction: 295
+      startSourceChar: 1376
+      endSourceChar: 1390
+      line: 50
       lineChar: 8
       spanCodeSection: 'delayActive = '
-    - startInstruction: 660
-      endInstruction: 699
+    - startInstruction: 296
+      endInstruction: 315
+      startSourceChar: 1390
+      endSourceChar: 1405
+      line: 50
+      lineChar: 22
+      spanCodeSection: "true;\r\n        "
+    - startInstruction: 316
+      endInstruction: 335
+      startSourceChar: 1405
+      endSourceChar: 1429
+      line: 51
+      lineChar: 8
+      spanCodeSection: "return;\r\n      }\r\n      "
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1429
+      endSourceChar: 1429
+      line: 53
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1429
+      endSourceChar: 1429
+      line: 53
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1429
+      endSourceChar: 1429
+      line: 53
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1429
+      endSourceChar: 1435
+      line: 53
+      lineChar: 6
+      spanCodeSection: Debug.
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1435
+      endSourceChar: 1439
+      line: 53
+      lineChar: 12
+      spanCodeSection: Log(
+    - startInstruction: 336
+      endInstruction: 351
+      startSourceChar: 1439
+      endSourceChar: 1461
+      line: 53
+      lineChar: 16
+      spanCodeSection: "\"Triggering\");\r\n      "
+    - startInstruction: 352
+      endInstruction: 351
+      startSourceChar: 1461
+      endSourceChar: 1461
+      line: 54
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 352
+      endInstruction: 351
+      startSourceChar: 1461
+      endSourceChar: 1461
+      line: 54
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 352
+      endInstruction: 367
+      startSourceChar: 1461
+      endSourceChar: 1493
+      line: 54
+      lineChar: 6
+      spanCodeSection: "FireAnimationTriggers();\r\n      "
+    - startInstruction: 368
+      endInstruction: 367
+      startSourceChar: 1493
+      endSourceChar: 1493
+      line: 55
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 368
+      endInstruction: 367
+      startSourceChar: 1493
+      endSourceChar: 1493
+      line: 55
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 368
+      endInstruction: 383
+      startSourceChar: 1493
+      endSourceChar: 1518
+      line: 55
+      lineChar: 6
+      spanCodeSection: "FireUdonEvents();\r\n      "
+    - startInstruction: 384
+      endInstruction: 383
+      startSourceChar: 1518
+      endSourceChar: 1518
+      line: 56
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 384
+      endInstruction: 383
+      startSourceChar: 1518
+      endSourceChar: 1518
+      line: 56
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 384
+      endInstruction: 399
+      startSourceChar: 1518
+      endSourceChar: 1546
+      line: 56
+      lineChar: 6
+      spanCodeSection: "FireObjectToggles();\r\n      "
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1546
+      endSourceChar: 1546
+      line: 57
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1546
+      endSourceChar: 1546
+      line: 57
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 415
+      startSourceChar: 1546
+      endSourceChar: 1576
+      line: 57
+      lineChar: 6
+      spanCodeSection: "FireColliderToggles();\r\n      "
+    - startInstruction: 416
+      endInstruction: 415
+      startSourceChar: 1576
+      endSourceChar: 1576
+      line: 58
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 416
+      endInstruction: 415
+      startSourceChar: 1576
+      endSourceChar: 1576
+      line: 58
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 416
+      endInstruction: 451
+      startSourceChar: 1576
+      endSourceChar: 1609
+      line: 58
+      lineChar: 6
+      spanCodeSection: "FireAudioEvents();\r\n    }\r\n\r\n    "
+    - startInstruction: 452
+      endInstruction: 459
+      startSourceChar: 1609
+      endSourceChar: 1630
+      line: 61
+      lineChar: 4
+      spanCodeSection: 'public void Update() '
+    - startInstruction: 460
+      endInstruction: 459
+      startSourceChar: 1630
+      endSourceChar: 1639
+      line: 61
+      lineChar: 25
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 460
+      endInstruction: 459
+      startSourceChar: 1639
+      endSourceChar: 1643
+      line: 62
+      lineChar: 6
+      spanCodeSection: if (
+    - startInstruction: 460
+      endInstruction: 459
       startSourceChar: 1643
-      endSourceChar: 1673
+      endSourceChar: 1644
+      line: 62
+      lineChar: 10
+      spanCodeSection: '!'
+    - startInstruction: 460
+      endInstruction: 499
+      startSourceChar: 1644
+      endSourceChar: 1652
+      line: 62
+      lineChar: 11
+      spanCodeSection: 'active) '
+    - startInstruction: 500
+      endInstruction: 519
+      startSourceChar: 1652
+      endSourceChar: 1667
+      line: 62
+      lineChar: 19
+      spanCodeSection: "return;\r\n      "
+    - startInstruction: 520
+      endInstruction: 519
+      startSourceChar: 1667
+      endSourceChar: 1671
       line: 63
+      lineChar: 6
+      spanCodeSection: if (
+    - startInstruction: 520
+      endInstruction: 519
+      startSourceChar: 1671
+      endSourceChar: 1672
+      line: 63
+      lineChar: 10
+      spanCodeSection: '!'
+    - startInstruction: 520
+      endInstruction: 559
+      startSourceChar: 1672
+      endSourceChar: 1685
+      line: 63
+      lineChar: 11
+      spanCodeSection: 'delayActive) '
+    - startInstruction: 560
+      endInstruction: 579
+      startSourceChar: 1685
+      endSourceChar: 1700
+      line: 63
+      lineChar: 24
+      spanCodeSection: "return;\r\n      "
+    - startInstruction: 580
+      endInstruction: 579
+      startSourceChar: 1700
+      endSourceChar: 1704
+      line: 64
+      lineChar: 6
+      spanCodeSection: if (
+    - startInstruction: 580
+      endInstruction: 579
+      startSourceChar: 1704
+      endSourceChar: 1704
+      line: 64
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 580
+      endInstruction: 579
+      startSourceChar: 1704
+      endSourceChar: 1704
+      line: 64
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 580
+      endInstruction: 579
+      startSourceChar: 1704
+      endSourceChar: 1709
+      line: 64
+      lineChar: 10
+      spanCodeSection: Time.
+    - startInstruction: 580
+      endInstruction: 595
+      startSourceChar: 1709
+      endSourceChar: 1717
+      line: 64
+      lineChar: 15
+      spanCodeSection: 'time >= '
+    - startInstruction: 596
+      endInstruction: 643
+      startSourceChar: 1717
+      endSourceChar: 1730
+      line: 64
+      lineChar: 23
+      spanCodeSection: 'delayExpire) '
+    - startInstruction: 644
+      endInstruction: 643
+      startSourceChar: 1730
+      endSourceChar: 1741
+      line: 64
+      lineChar: 36
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 644
+      endInstruction: 643
+      startSourceChar: 1741
+      endSourceChar: 1741
+      line: 65
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 644
+      endInstruction: 643
+      startSourceChar: 1741
+      endSourceChar: 1741
+      line: 65
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 644
+      endInstruction: 659
+      startSourceChar: 1741
+      endSourceChar: 1775
+      line: 65
+      lineChar: 8
+      spanCodeSection: "FireAnimationTriggers();\r\n        "
+    - startInstruction: 660
+      endInstruction: 659
+      startSourceChar: 1775
+      endSourceChar: 1775
+      line: 66
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 660
+      endInstruction: 659
+      startSourceChar: 1775
+      endSourceChar: 1775
+      line: 66
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 660
+      endInstruction: 675
+      startSourceChar: 1775
+      endSourceChar: 1802
+      line: 66
+      lineChar: 8
+      spanCodeSection: "FireUdonEvents();\r\n        "
+    - startInstruction: 676
+      endInstruction: 675
+      startSourceChar: 1802
+      endSourceChar: 1802
+      line: 67
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 676
+      endInstruction: 675
+      startSourceChar: 1802
+      endSourceChar: 1802
+      line: 67
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 676
+      endInstruction: 691
+      startSourceChar: 1802
+      endSourceChar: 1832
+      line: 67
+      lineChar: 8
+      spanCodeSection: "FireObjectToggles();\r\n        "
+    - startInstruction: 692
+      endInstruction: 691
+      startSourceChar: 1832
+      endSourceChar: 1832
+      line: 68
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 692
+      endInstruction: 691
+      startSourceChar: 1832
+      endSourceChar: 1832
+      line: 68
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 692
+      endInstruction: 707
+      startSourceChar: 1832
+      endSourceChar: 1864
+      line: 68
+      lineChar: 8
+      spanCodeSection: "FireColliderToggles();\r\n        "
+    - startInstruction: 708
+      endInstruction: 707
+      startSourceChar: 1864
+      endSourceChar: 1864
+      line: 69
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 708
+      endInstruction: 707
+      startSourceChar: 1864
+      endSourceChar: 1864
+      line: 69
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 708
+      endInstruction: 723
+      startSourceChar: 1864
+      endSourceChar: 1892
+      line: 69
+      lineChar: 8
+      spanCodeSection: "FireAudioEvents();\r\n        "
+    - startInstruction: 724
+      endInstruction: 723
+      startSourceChar: 1892
+      endSourceChar: 1892
+      line: 70
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 724
+      endInstruction: 723
+      startSourceChar: 1892
+      endSourceChar: 1892
+      line: 70
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 724
+      endInstruction: 723
+      startSourceChar: 1892
+      endSourceChar: 1906
+      line: 70
+      lineChar: 8
+      spanCodeSection: 'delayActive = '
+    - startInstruction: 724
+      endInstruction: 763
+      startSourceChar: 1906
+      endSourceChar: 1936
+      line: 70
       lineChar: 22
       spanCodeSection: "false;\r\n      }\r\n    }\r\n\r\n    "
-    - startInstruction: 700
-      endInstruction: 707
-      startSourceChar: 1673
-      endSourceChar: 1710
-      line: 67
+    - startInstruction: 764
+      endInstruction: 771
+      startSourceChar: 1936
+      endSourceChar: 1973
+      line: 74
       lineChar: 4
       spanCodeSection: 'private void FireAnimationTriggers() '
-    - startInstruction: 708
-      endInstruction: 707
-      startSourceChar: 1710
-      endSourceChar: 1719
-      line: 67
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1973
+      endSourceChar: 1982
+      line: 74
       lineChar: 41
       spanCodeSection: "{\r\n      "
-    - startInstruction: 708
-      endInstruction: 707
-      startSourceChar: 1719
-      endSourceChar: 1723
-      line: 68
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1982
+      endSourceChar: 1986
+      line: 75
       lineChar: 6
       spanCodeSection: if (
-    - startInstruction: 708
-      endInstruction: 707
-      startSourceChar: 1723
-      endSourceChar: 1724
-      line: 68
+    - startInstruction: 772
+      endInstruction: 771
+      startSourceChar: 1986
+      endSourceChar: 1987
+      line: 75
       lineChar: 10
       spanCodeSection: '!'
-    - startInstruction: 708
-      endInstruction: 747
-      startSourceChar: 1724
-      endSourceChar: 1747
-      line: 68
+    - startInstruction: 772
+      endInstruction: 811
+      startSourceChar: 1987
+      endSourceChar: 2010
+      line: 75
       lineChar: 11
       spanCodeSection: 'fireAnimationTriggers) '
-    - startInstruction: 748
-      endInstruction: 767
-      startSourceChar: 1747
-      endSourceChar: 1762
-      line: 68
+    - startInstruction: 812
+      endInstruction: 831
+      startSourceChar: 2010
+      endSourceChar: 2025
+      line: 75
       lineChar: 34
       spanCodeSection: "return;\r\n      "
-    - startInstruction: 768
-      endInstruction: 767
-      startSourceChar: 1762
-      endSourceChar: 1767
-      line: 69
+    - startInstruction: 832
+      endInstruction: 831
+      startSourceChar: 2025
+      endSourceChar: 2030
+      line: 76
       lineChar: 6
       spanCodeSection: for (
-    - startInstruction: 768
-      endInstruction: 767
-      startSourceChar: 1767
-      endSourceChar: 1767
-      line: 69
+    - startInstruction: 832
+      endInstruction: 831
+      startSourceChar: 2030
+      endSourceChar: 2030
+      line: 76
       lineChar: 11
       spanCodeSection: 
-    - startInstruction: 768
-      endInstruction: 767
-      startSourceChar: 1767
-      endSourceChar: 1767
-      line: 69
+    - startInstruction: 832
+      endInstruction: 831
+      startSourceChar: 2030
+      endSourceChar: 2030
+      line: 76
       lineChar: 11
       spanCodeSection: 
-    - startInstruction: 768
-      endInstruction: 767
-      startSourceChar: 1767
-      endSourceChar: 1773
-      line: 69
+    - startInstruction: 832
+      endInstruction: 831
+      startSourceChar: 2030
+      endSourceChar: 2036
+      line: 76
       lineChar: 11
       spanCodeSection: 'int i '
-    - startInstruction: 768
-      endInstruction: 767
-      startSourceChar: 1773
-      endSourceChar: 1775
-      line: 69
+    - startInstruction: 832
+      endInstruction: 831
+      startSourceChar: 2036
+      endSourceChar: 2038
+      line: 76
       lineChar: 17
       spanCodeSection: '= '
-    - startInstruction: 768
-      endInstruction: 787
-      startSourceChar: 1775
-      endSourceChar: 1778
-      line: 69
+    - startInstruction: 832
+      endInstruction: 851
+      startSourceChar: 2038
+      endSourceChar: 2041
+      line: 76
       lineChar: 19
       spanCodeSection: '0; '
-    - startInstruction: 788
-      endInstruction: 787
-      startSourceChar: 1778
-      endSourceChar: 1778
-      line: 69
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 2041
+      endSourceChar: 2041
+      line: 76
       lineChar: 22
       spanCodeSection: 
-    - startInstruction: 788
-      endInstruction: 787
-      startSourceChar: 1778
-      endSourceChar: 1782
-      line: 69
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 2041
+      endSourceChar: 2045
+      line: 76
       lineChar: 22
       spanCodeSection: 'i < '
-    - startInstruction: 788
-      endInstruction: 787
-      startSourceChar: 1782
-      endSourceChar: 1782
-      line: 69
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 2045
+      endSourceChar: 2045
+      line: 76
       lineChar: 26
       spanCodeSection: 
-    - startInstruction: 788
-      endInstruction: 787
-      startSourceChar: 1782
-      endSourceChar: 1792
-      line: 69
+    - startInstruction: 852
+      endInstruction: 851
+      startSourceChar: 2045
+      endSourceChar: 2055
+      line: 76
       lineChar: 26
       spanCodeSection: animators.
-    - startInstruction: 788
-      endInstruction: 859
-      startSourceChar: 1792
-      endSourceChar: 1805
-      line: 69
+    - startInstruction: 852
+      endInstruction: 923
+      startSourceChar: 2055
+      endSourceChar: 2068
+      line: 76
       lineChar: 36
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 860
-      endInstruction: 859
-      startSourceChar: 1805
-      endSourceChar: 1816
-      line: 69
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2068
+      endSourceChar: 2079
+      line: 76
       lineChar: 49
       spanCodeSection: "{\r\n        "
-    - startInstruction: 860
-      endInstruction: 859
-      startSourceChar: 1816
-      endSourceChar: 1816
-      line: 70
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2079
+      endSourceChar: 2079
+      line: 77
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 860
-      endInstruction: 859
-      startSourceChar: 1816
-      endSourceChar: 1816
-      line: 70
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2079
+      endSourceChar: 2079
+      line: 77
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 860
-      endInstruction: 859
-      startSourceChar: 1816
-      endSourceChar: 1816
-      line: 70
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2079
+      endSourceChar: 2079
+      line: 77
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 860
-      endInstruction: 859
-      startSourceChar: 1816
-      endSourceChar: 1816
-      line: 70
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2079
+      endSourceChar: 2079
+      line: 77
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 860
-      endInstruction: 859
-      startSourceChar: 1816
-      endSourceChar: 1826
-      line: 70
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2079
+      endSourceChar: 2089
+      line: 77
       lineChar: 8
       spanCodeSection: animators[
-    - startInstruction: 860
-      endInstruction: 859
-      startSourceChar: 1826
-      endSourceChar: 1826
-      line: 70
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2089
+      endSourceChar: 2089
+      line: 77
       lineChar: 18
       spanCodeSection: 
-    - startInstruction: 860
-      endInstruction: 859
-      startSourceChar: 1826
-      endSourceChar: 1829
-      line: 70
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2089
+      endSourceChar: 2092
+      line: 77
       lineChar: 18
       spanCodeSection: i].
-    - startInstruction: 860
-      endInstruction: 891
-      startSourceChar: 1829
-      endSourceChar: 1840
-      line: 70
+    - startInstruction: 924
+      endInstruction: 955
+      startSourceChar: 2092
+      endSourceChar: 2103
+      line: 77
       lineChar: 21
       spanCodeSection: SetTrigger(
-    - startInstruction: 892
-      endInstruction: 891
-      startSourceChar: 1840
-      endSourceChar: 1840
-      line: 70
+    - startInstruction: 956
+      endInstruction: 955
+      startSourceChar: 2103
+      endSourceChar: 2103
+      line: 77
       lineChar: 32
       spanCodeSection: 
-    - startInstruction: 892
-      endInstruction: 891
-      startSourceChar: 1840
-      endSourceChar: 1857
-      line: 70
+    - startInstruction: 956
+      endInstruction: 955
+      startSourceChar: 2103
+      endSourceChar: 2120
+      line: 77
       lineChar: 32
       spanCodeSection: animatorTriggers[
-    - startInstruction: 892
-      endInstruction: 891
-      startSourceChar: 1857
-      endSourceChar: 1857
-      line: 70
+    - startInstruction: 956
+      endInstruction: 955
+      startSourceChar: 2120
+      endSourceChar: 2120
+      line: 77
       lineChar: 49
       spanCodeSection: 
-    - startInstruction: 892
-      endInstruction: 1027
-      startSourceChar: 1857
-      endSourceChar: 1885
-      line: 70
+    - startInstruction: 956
+      endInstruction: 1091
+      startSourceChar: 2120
+      endSourceChar: 2148
+      line: 77
       lineChar: 49
       spanCodeSection: "i]);\r\n      }\r\n    }\r\n\r\n    "
-    - startInstruction: 1028
-      endInstruction: 1035
-      startSourceChar: 1885
-      endSourceChar: 1915
-      line: 74
+    - startInstruction: 1092
+      endInstruction: 1099
+      startSourceChar: 2148
+      endSourceChar: 2178
+      line: 81
       lineChar: 4
       spanCodeSection: 'private void FireUdonEvents() '
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 1915
-      endSourceChar: 1924
-      line: 74
+    - startInstruction: 1100
+      endInstruction: 1099
+      startSourceChar: 2178
+      endSourceChar: 2187
+      line: 81
       lineChar: 34
       spanCodeSection: "{\r\n      "
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 1924
-      endSourceChar: 1928
-      line: 75
+    - startInstruction: 1100
+      endInstruction: 1099
+      startSourceChar: 2187
+      endSourceChar: 2191
+      line: 82
       lineChar: 6
       spanCodeSection: if (
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 1928
-      endSourceChar: 1929
-      line: 75
+    - startInstruction: 1100
+      endInstruction: 1099
+      startSourceChar: 2191
+      endSourceChar: 2192
+      line: 82
       lineChar: 10
       spanCodeSection: '!'
-    - startInstruction: 1036
-      endInstruction: 1075
-      startSourceChar: 1929
-      endSourceChar: 1945
-      line: 75
+    - startInstruction: 1100
+      endInstruction: 1139
+      startSourceChar: 2192
+      endSourceChar: 2208
+      line: 82
       lineChar: 11
       spanCodeSection: 'fireUdonEvents) '
-    - startInstruction: 1076
-      endInstruction: 1095
-      startSourceChar: 1945
-      endSourceChar: 1960
-      line: 75
+    - startInstruction: 1140
+      endInstruction: 1159
+      startSourceChar: 2208
+      endSourceChar: 2223
+      line: 82
       lineChar: 27
       spanCodeSection: "return;\r\n      "
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1960
-      endSourceChar: 1965
-      line: 76
+    - startInstruction: 1160
+      endInstruction: 1159
+      startSourceChar: 2223
+      endSourceChar: 2228
+      line: 83
       lineChar: 6
       spanCodeSection: for (
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1965
-      endSourceChar: 1965
-      line: 76
+    - startInstruction: 1160
+      endInstruction: 1159
+      startSourceChar: 2228
+      endSourceChar: 2228
+      line: 83
       lineChar: 11
       spanCodeSection: 
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1965
-      endSourceChar: 1965
-      line: 76
+    - startInstruction: 1160
+      endInstruction: 1159
+      startSourceChar: 2228
+      endSourceChar: 2228
+      line: 83
       lineChar: 11
       spanCodeSection: 
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1965
-      endSourceChar: 1971
-      line: 76
+    - startInstruction: 1160
+      endInstruction: 1159
+      startSourceChar: 2228
+      endSourceChar: 2234
+      line: 83
       lineChar: 11
       spanCodeSection: 'int i '
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1971
-      endSourceChar: 1973
-      line: 76
+    - startInstruction: 1160
+      endInstruction: 1159
+      startSourceChar: 2234
+      endSourceChar: 2236
+      line: 83
       lineChar: 17
       spanCodeSection: '= '
-    - startInstruction: 1096
-      endInstruction: 1115
-      startSourceChar: 1973
-      endSourceChar: 1976
-      line: 76
+    - startInstruction: 1160
+      endInstruction: 1179
+      startSourceChar: 2236
+      endSourceChar: 2239
+      line: 83
       lineChar: 19
       spanCodeSection: '0; '
-    - startInstruction: 1116
-      endInstruction: 1115
-      startSourceChar: 1976
-      endSourceChar: 1976
-      line: 76
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 2239
+      endSourceChar: 2239
+      line: 83
       lineChar: 22
       spanCodeSection: 
-    - startInstruction: 1116
-      endInstruction: 1115
-      startSourceChar: 1976
-      endSourceChar: 1980
-      line: 76
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 2239
+      endSourceChar: 2243
+      line: 83
       lineChar: 22
       spanCodeSection: 'i < '
-    - startInstruction: 1116
-      endInstruction: 1115
-      startSourceChar: 1980
-      endSourceChar: 1980
-      line: 76
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 2243
+      endSourceChar: 2243
+      line: 83
       lineChar: 26
       spanCodeSection: 
-    - startInstruction: 1116
-      endInstruction: 1115
-      startSourceChar: 1980
-      endSourceChar: 1992
-      line: 76
+    - startInstruction: 1180
+      endInstruction: 1179
+      startSourceChar: 2243
+      endSourceChar: 2255
+      line: 83
       lineChar: 26
       spanCodeSection: udonTargets.
-    - startInstruction: 1116
-      endInstruction: 1187
-      startSourceChar: 1992
-      endSourceChar: 2005
-      line: 76
+    - startInstruction: 1180
+      endInstruction: 1251
+      startSourceChar: 2255
+      endSourceChar: 2268
+      line: 83
       lineChar: 38
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2005
-      endSourceChar: 2016
-      line: 76
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2268
+      endSourceChar: 2279
+      line: 83
       lineChar: 51
       spanCodeSection: "{\r\n        "
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2016
-      endSourceChar: 2016
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2279
+      endSourceChar: 2279
+      line: 84
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2016
-      endSourceChar: 2016
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2279
+      endSourceChar: 2279
+      line: 84
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2016
-      endSourceChar: 2023
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2279
+      endSourceChar: 2286
+      line: 84
       lineChar: 8
       spanCodeSection: 'var uB '
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2023
-      endSourceChar: 2025
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2286
+      endSourceChar: 2288
+      line: 84
       lineChar: 15
       spanCodeSection: '= '
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2025
-      endSourceChar: 2041
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2288
+      endSourceChar: 2304
+      line: 84
       lineChar: 17
       spanCodeSection: '(UdonBehaviour) '
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2041
-      endSourceChar: 2041
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2304
+      endSourceChar: 2304
+      line: 84
       lineChar: 33
       spanCodeSection: 
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2041
-      endSourceChar: 2053
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2304
+      endSourceChar: 2316
+      line: 84
       lineChar: 33
       spanCodeSection: udonTargets[
-    - startInstruction: 1188
-      endInstruction: 1187
-      startSourceChar: 2053
-      endSourceChar: 2053
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1251
+      startSourceChar: 2316
+      endSourceChar: 2316
+      line: 84
       lineChar: 45
       spanCodeSection: 
-    - startInstruction: 1188
-      endInstruction: 1259
-      startSourceChar: 2053
-      endSourceChar: 2066
-      line: 77
+    - startInstruction: 1252
+      endInstruction: 1323
+      startSourceChar: 2316
+      endSourceChar: 2329
+      line: 84
       lineChar: 45
       spanCodeSection: "i];\r\n        "
-    - startInstruction: 1260
-      endInstruction: 1259
-      startSourceChar: 2066
-      endSourceChar: 2070
-      line: 78
+    - startInstruction: 1324
+      endInstruction: 1323
+      startSourceChar: 2329
+      endSourceChar: 2333
+      line: 85
       lineChar: 8
       spanCodeSection: if (
-    - startInstruction: 1260
-      endInstruction: 1275
-      startSourceChar: 2070
-      endSourceChar: 2081
-      line: 78
+    - startInstruction: 1324
+      endInstruction: 1339
+      startSourceChar: 2333
+      endSourceChar: 2344
+      line: 85
       lineChar: 12
       spanCodeSection: 'networked) '
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2081
-      endSourceChar: 2094
-      line: 78
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2344
+      endSourceChar: 2357
+      line: 85
       lineChar: 23
       spanCodeSection: "{\r\n          "
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2094
-      endSourceChar: 2094
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2357
+      endSourceChar: 2357
+      line: 86
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2094
-      endSourceChar: 2094
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2357
+      endSourceChar: 2357
+      line: 86
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2094
-      endSourceChar: 2094
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2357
+      endSourceChar: 2357
+      line: 86
       lineChar: 10
       spanCodeSection: 
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2094
-      endSourceChar: 2097
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2357
+      endSourceChar: 2360
+      line: 86
       lineChar: 10
       spanCodeSection: uB.
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2097
-      endSourceChar: 2120
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2360
+      endSourceChar: 2383
+      line: 86
       lineChar: 13
       spanCodeSection: SendCustomNetworkEvent(
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2120
-      endSourceChar: 2135
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2383
+      endSourceChar: 2398
+      line: 86
       lineChar: 36
       spanCodeSection: 'networkTarget, '
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2135
-      endSourceChar: 2135
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2398
+      endSourceChar: 2398
+      line: 86
       lineChar: 51
       spanCodeSection: 
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2135
-      endSourceChar: 2146
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2398
+      endSourceChar: 2409
+      line: 86
       lineChar: 51
       spanCodeSection: udonEvents[
-    - startInstruction: 1276
-      endInstruction: 1275
-      startSourceChar: 2146
-      endSourceChar: 2146
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1339
+      startSourceChar: 2409
+      endSourceChar: 2409
+      line: 86
       lineChar: 62
       spanCodeSection: 
-    - startInstruction: 1276
-      endInstruction: 1359
-      startSourceChar: 2146
-      endSourceChar: 2162
-      line: 79
+    - startInstruction: 1340
+      endInstruction: 1423
+      startSourceChar: 2409
+      endSourceChar: 2425
+      line: 86
       lineChar: 62
       spanCodeSection: "i]);\r\n          "
-    - startInstruction: 1360
-      endInstruction: 1367
-      startSourceChar: 2162
-      endSourceChar: 2192
-      line: 80
+    - startInstruction: 1424
+      endInstruction: 1431
+      startSourceChar: 2425
+      endSourceChar: 2455
+      line: 87
       lineChar: 10
       spanCodeSection: "continue;\r\n        }\r\n        "
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2192
-      endSourceChar: 2192
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1431
+      startSourceChar: 2455
+      endSourceChar: 2455
+      line: 89
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2192
-      endSourceChar: 2192
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1431
+      startSourceChar: 2455
+      endSourceChar: 2455
+      line: 89
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2192
-      endSourceChar: 2192
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1431
+      startSourceChar: 2455
+      endSourceChar: 2455
+      line: 89
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2192
-      endSourceChar: 2195
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1431
+      startSourceChar: 2455
+      endSourceChar: 2458
+      line: 89
       lineChar: 8
       spanCodeSection: uB.
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2195
-      endSourceChar: 2211
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1431
+      startSourceChar: 2458
+      endSourceChar: 2474
+      line: 89
       lineChar: 11
       spanCodeSection: SendCustomEvent(
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2211
-      endSourceChar: 2211
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1431
+      startSourceChar: 2474
+      endSourceChar: 2474
+      line: 89
       lineChar: 27
       spanCodeSection: 
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2211
-      endSourceChar: 2222
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1431
+      startSourceChar: 2474
+      endSourceChar: 2485
+      line: 89
       lineChar: 27
       spanCodeSection: udonEvents[
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2222
-      endSourceChar: 2222
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1431
+      startSourceChar: 2485
+      endSourceChar: 2485
+      line: 89
       lineChar: 38
       spanCodeSection: 
-    - startInstruction: 1368
-      endInstruction: 1503
-      startSourceChar: 2222
-      endSourceChar: 2250
-      line: 82
+    - startInstruction: 1432
+      endInstruction: 1567
+      startSourceChar: 2485
+      endSourceChar: 2513
+      line: 89
       lineChar: 38
       spanCodeSection: "i]);\r\n      }\r\n    }\r\n\r\n    "
-    - startInstruction: 1504
-      endInstruction: 1511
-      startSourceChar: 2250
-      endSourceChar: 2283
-      line: 86
+    - startInstruction: 1568
+      endInstruction: 1575
+      startSourceChar: 2513
+      endSourceChar: 2546
+      line: 93
       lineChar: 4
       spanCodeSection: 'private void FireObjectToggles() '
-    - startInstruction: 1512
-      endInstruction: 1511
-      startSourceChar: 2283
-      endSourceChar: 2292
-      line: 86
+    - startInstruction: 1576
+      endInstruction: 1575
+      startSourceChar: 2546
+      endSourceChar: 2555
+      line: 93
       lineChar: 37
       spanCodeSection: "{\r\n      "
-    - startInstruction: 1512
-      endInstruction: 1511
-      startSourceChar: 2292
-      endSourceChar: 2296
-      line: 87
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 1512
-      endInstruction: 1511
-      startSourceChar: 2296
-      endSourceChar: 2297
-      line: 87
-      lineChar: 10
-      spanCodeSection: '!'
-    - startInstruction: 1512
-      endInstruction: 1551
-      startSourceChar: 2297
-      endSourceChar: 2316
-      line: 87
-      lineChar: 11
-      spanCodeSection: 'fireObjectToggles) '
-    - startInstruction: 1552
-      endInstruction: 1571
-      startSourceChar: 2316
-      endSourceChar: 2331
-      line: 87
-      lineChar: 30
-      spanCodeSection: "return;\r\n      "
-    - startInstruction: 1572
-      endInstruction: 1571
-      startSourceChar: 2331
-      endSourceChar: 2336
-      line: 88
-      lineChar: 6
-      spanCodeSection: for (
-    - startInstruction: 1572
-      endInstruction: 1571
-      startSourceChar: 2336
-      endSourceChar: 2336
-      line: 88
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 1572
-      endInstruction: 1571
-      startSourceChar: 2336
-      endSourceChar: 2336
-      line: 88
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 1572
-      endInstruction: 1571
-      startSourceChar: 2336
-      endSourceChar: 2342
-      line: 88
-      lineChar: 11
-      spanCodeSection: 'int i '
-    - startInstruction: 1572
-      endInstruction: 1571
-      startSourceChar: 2342
-      endSourceChar: 2344
-      line: 88
-      lineChar: 17
-      spanCodeSection: '= '
-    - startInstruction: 1572
-      endInstruction: 1591
-      startSourceChar: 2344
-      endSourceChar: 2347
-      line: 88
-      lineChar: 19
-      spanCodeSection: '0; '
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2347
-      endSourceChar: 2347
-      line: 88
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2347
-      endSourceChar: 2351
-      line: 88
-      lineChar: 22
-      spanCodeSection: 'i < '
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2351
-      endSourceChar: 2351
-      line: 88
-      lineChar: 26
-      spanCodeSection: 
-    - startInstruction: 1592
-      endInstruction: 1591
-      startSourceChar: 2351
-      endSourceChar: 2361
-      line: 88
-      lineChar: 26
-      spanCodeSection: goTargets.
-    - startInstruction: 1592
-      endInstruction: 1663
-      startSourceChar: 2361
-      endSourceChar: 2374
-      line: 88
-      lineChar: 36
-      spanCodeSection: 'Length; i++) '
-    - startInstruction: 1664
-      endInstruction: 1663
-      startSourceChar: 2374
-      endSourceChar: 2385
-      line: 88
-      lineChar: 49
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 1664
-      endInstruction: 1663
-      startSourceChar: 2385
-      endSourceChar: 2389
-      line: 89
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 1664
-      endInstruction: 1663
-      startSourceChar: 2389
-      endSourceChar: 2389
-      line: 89
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 1664
-      endInstruction: 1663
-      startSourceChar: 2389
-      endSourceChar: 2389
-      line: 89
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 1664
-      endInstruction: 1663
-      startSourceChar: 2389
-      endSourceChar: 2404
-      line: 89
-      lineChar: 12
-      spanCodeSection: goToggleEvents[
-    - startInstruction: 1664
-      endInstruction: 1663
-      startSourceChar: 2404
-      endSourceChar: 2404
-      line: 89
-      lineChar: 27
-      spanCodeSection: 
-    - startInstruction: 1664
-      endInstruction: 1695
-      startSourceChar: 2404
-      endSourceChar: 2410
-      line: 89
-      lineChar: 27
-      spanCodeSection: 'i] == '
-    - startInstruction: 1696
-      endInstruction: 1743
-      startSourceChar: 2410
-      endSourceChar: 2420
-      line: 89
-      lineChar: 33
-      spanCodeSection: '"Toggle") '
-    - startInstruction: 1744
-      endInstruction: 1743
-      startSourceChar: 2420
-      endSourceChar: 2433
-      line: 89
-      lineChar: 43
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 1744
-      endInstruction: 1743
-      startSourceChar: 2433
-      endSourceChar: 2433
-      line: 90
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1744
-      endInstruction: 1743
-      startSourceChar: 2433
-      endSourceChar: 2433
-      line: 90
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1744
-      endInstruction: 1743
-      startSourceChar: 2433
-      endSourceChar: 2433
-      line: 90
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1744
-      endInstruction: 1743
-      startSourceChar: 2433
-      endSourceChar: 2433
-      line: 90
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1744
-      endInstruction: 1743
-      startSourceChar: 2433
-      endSourceChar: 2443
-      line: 90
-      lineChar: 10
-      spanCodeSection: goTargets[
-    - startInstruction: 1744
-      endInstruction: 1743
-      startSourceChar: 2443
-      endSourceChar: 2443
-      line: 90
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1744
-      endInstruction: 1743
-      startSourceChar: 2443
-      endSourceChar: 2446
-      line: 90
-      lineChar: 20
-      spanCodeSection: i].
-    - startInstruction: 1744
-      endInstruction: 1775
-      startSourceChar: 2446
-      endSourceChar: 2456
-      line: 90
-      lineChar: 23
-      spanCodeSection: SetActive(
-    - startInstruction: 1776
-      endInstruction: 1775
-      startSourceChar: 2456
-      endSourceChar: 2457
-      line: 90
-      lineChar: 33
-      spanCodeSection: '!'
-    - startInstruction: 1776
-      endInstruction: 1775
-      startSourceChar: 2457
-      endSourceChar: 2457
-      line: 90
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 1776
-      endInstruction: 1775
-      startSourceChar: 2457
-      endSourceChar: 2457
-      line: 90
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 1776
-      endInstruction: 1775
-      startSourceChar: 2457
-      endSourceChar: 2467
-      line: 90
-      lineChar: 34
-      spanCodeSection: goTargets[
-    - startInstruction: 1776
-      endInstruction: 1775
-      startSourceChar: 2467
-      endSourceChar: 2467
-      line: 90
-      lineChar: 44
-      spanCodeSection: 
-    - startInstruction: 1776
-      endInstruction: 1775
-      startSourceChar: 2467
-      endSourceChar: 2470
-      line: 90
-      lineChar: 44
-      spanCodeSection: i].
-    - startInstruction: 1776
-      endInstruction: 1879
-      startSourceChar: 2470
-      endSourceChar: 2494
-      line: 90
-      lineChar: 47
-      spanCodeSection: "activeSelf);\r\n          "
-    - startInstruction: 1880
-      endInstruction: 1887
-      startSourceChar: 2494
-      endSourceChar: 2526
-      line: 91
-      lineChar: 10
-      spanCodeSection: "continue;\r\n        }\r\n\r\n        "
-    - startInstruction: 1888
-      endInstruction: 1887
-      startSourceChar: 2526
-      endSourceChar: 2526
-      line: 94
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1888
-      endInstruction: 1887
-      startSourceChar: 2526
-      endSourceChar: 2526
-      line: 94
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1888
-      endInstruction: 1887
-      startSourceChar: 2526
-      endSourceChar: 2536
-      line: 94
-      lineChar: 8
-      spanCodeSection: 'var state '
-    - startInstruction: 1888
-      endInstruction: 1887
-      startSourceChar: 2536
-      endSourceChar: 2538
-      line: 94
-      lineChar: 18
-      spanCodeSection: '= '
-    - startInstruction: 1888
-      endInstruction: 1887
-      startSourceChar: 2538
-      endSourceChar: 2538
-      line: 94
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1888
-      endInstruction: 1887
-      startSourceChar: 2538
-      endSourceChar: 2538
-      line: 94
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1888
-      endInstruction: 1887
-      startSourceChar: 2538
-      endSourceChar: 2553
-      line: 94
-      lineChar: 20
-      spanCodeSection: goToggleEvents[
-    - startInstruction: 1888
-      endInstruction: 1887
-      startSourceChar: 2553
-      endSourceChar: 2553
-      line: 94
-      lineChar: 35
-      spanCodeSection: 
-    - startInstruction: 1888
-      endInstruction: 1919
-      startSourceChar: 2553
+    - startInstruction: 1576
+      endInstruction: 1575
+      startSourceChar: 2555
       endSourceChar: 2559
       line: 94
-      lineChar: 35
-      spanCodeSection: 'i] == '
-    - startInstruction: 1920
-      endInstruction: 1971
-      startSourceChar: 2559
-      endSourceChar: 2578
-      line: 94
-      lineChar: 41
-      spanCodeSection: "\"Enable\";\r\n        "
-    - startInstruction: 1972
-      endInstruction: 1971
-      startSourceChar: 2578
-      endSourceChar: 2578
-      line: 95
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1972
-      endInstruction: 1971
-      startSourceChar: 2578
-      endSourceChar: 2578
-      line: 95
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1972
-      endInstruction: 1971
-      startSourceChar: 2578
-      endSourceChar: 2578
-      line: 95
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1972
-      endInstruction: 1971
-      startSourceChar: 2578
-      endSourceChar: 2578
-      line: 95
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1972
-      endInstruction: 1971
-      startSourceChar: 2578
-      endSourceChar: 2588
-      line: 95
-      lineChar: 8
-      spanCodeSection: goTargets[
-    - startInstruction: 1972
-      endInstruction: 1971
-      startSourceChar: 2588
-      endSourceChar: 2588
-      line: 95
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 1972
-      endInstruction: 1971
-      startSourceChar: 2588
-      endSourceChar: 2591
-      line: 95
-      lineChar: 18
-      spanCodeSection: i].
-    - startInstruction: 1972
-      endInstruction: 2003
-      startSourceChar: 2591
-      endSourceChar: 2601
-      line: 95
-      lineChar: 21
-      spanCodeSection: SetActive(
-    - startInstruction: 2004
-      endInstruction: 2107
-      startSourceChar: 2601
-      endSourceChar: 2632
-      line: 95
-      lineChar: 31
-      spanCodeSection: "state);\r\n      }\r\n    }\r\n\r\n    "
-    - startInstruction: 2108
-      endInstruction: 2115
-      startSourceChar: 2632
-      endSourceChar: 2663
-      line: 99
-      lineChar: 4
-      spanCodeSection: 'private void FireAudioEvents() '
-    - startInstruction: 2116
-      endInstruction: 2115
-      startSourceChar: 2663
-      endSourceChar: 2672
-      line: 99
-      lineChar: 35
-      spanCodeSection: "{\r\n      "
-    - startInstruction: 2116
-      endInstruction: 2115
-      startSourceChar: 2672
-      endSourceChar: 2676
-      line: 100
       lineChar: 6
       spanCodeSection: if (
-    - startInstruction: 2116
-      endInstruction: 2115
-      startSourceChar: 2676
-      endSourceChar: 2677
-      line: 100
+    - startInstruction: 1576
+      endInstruction: 1575
+      startSourceChar: 2559
+      endSourceChar: 2560
+      line: 94
       lineChar: 10
       spanCodeSection: '!'
-    - startInstruction: 2116
-      endInstruction: 2155
-      startSourceChar: 2677
-      endSourceChar: 2694
-      line: 100
+    - startInstruction: 1576
+      endInstruction: 1615
+      startSourceChar: 2560
+      endSourceChar: 2579
+      line: 94
       lineChar: 11
-      spanCodeSection: 'fireAudioEvents) '
-    - startInstruction: 2156
-      endInstruction: 2175
-      startSourceChar: 2694
-      endSourceChar: 2709
-      line: 100
-      lineChar: 28
+      spanCodeSection: 'fireObjectToggles) '
+    - startInstruction: 1616
+      endInstruction: 1635
+      startSourceChar: 2579
+      endSourceChar: 2594
+      line: 94
+      lineChar: 30
       spanCodeSection: "return;\r\n      "
-    - startInstruction: 2176
-      endInstruction: 2175
-      startSourceChar: 2709
-      endSourceChar: 2714
-      line: 101
+    - startInstruction: 1636
+      endInstruction: 1635
+      startSourceChar: 2594
+      endSourceChar: 2599
+      line: 95
       lineChar: 6
       spanCodeSection: for (
-    - startInstruction: 2176
-      endInstruction: 2175
-      startSourceChar: 2714
-      endSourceChar: 2714
-      line: 101
+    - startInstruction: 1636
+      endInstruction: 1635
+      startSourceChar: 2599
+      endSourceChar: 2599
+      line: 95
       lineChar: 11
       spanCodeSection: 
-    - startInstruction: 2176
-      endInstruction: 2175
-      startSourceChar: 2714
-      endSourceChar: 2714
-      line: 101
+    - startInstruction: 1636
+      endInstruction: 1635
+      startSourceChar: 2599
+      endSourceChar: 2599
+      line: 95
       lineChar: 11
       spanCodeSection: 
-    - startInstruction: 2176
-      endInstruction: 2175
-      startSourceChar: 2714
-      endSourceChar: 2720
-      line: 101
+    - startInstruction: 1636
+      endInstruction: 1635
+      startSourceChar: 2599
+      endSourceChar: 2605
+      line: 95
       lineChar: 11
       spanCodeSection: 'int i '
-    - startInstruction: 2176
-      endInstruction: 2175
-      startSourceChar: 2720
-      endSourceChar: 2722
-      line: 101
+    - startInstruction: 1636
+      endInstruction: 1635
+      startSourceChar: 2605
+      endSourceChar: 2607
+      line: 95
       lineChar: 17
       spanCodeSection: '= '
-    - startInstruction: 2176
-      endInstruction: 2195
-      startSourceChar: 2722
-      endSourceChar: 2725
-      line: 101
+    - startInstruction: 1636
+      endInstruction: 1655
+      startSourceChar: 2607
+      endSourceChar: 2610
+      line: 95
       lineChar: 19
       spanCodeSection: '0; '
-    - startInstruction: 2196
-      endInstruction: 2195
-      startSourceChar: 2725
-      endSourceChar: 2725
-      line: 101
+    - startInstruction: 1656
+      endInstruction: 1655
+      startSourceChar: 2610
+      endSourceChar: 2610
+      line: 95
       lineChar: 22
       spanCodeSection: 
-    - startInstruction: 2196
-      endInstruction: 2195
-      startSourceChar: 2725
-      endSourceChar: 2729
-      line: 101
+    - startInstruction: 1656
+      endInstruction: 1655
+      startSourceChar: 2610
+      endSourceChar: 2614
+      line: 95
       lineChar: 22
       spanCodeSection: 'i < '
-    - startInstruction: 2196
-      endInstruction: 2195
-      startSourceChar: 2729
-      endSourceChar: 2729
-      line: 101
+    - startInstruction: 1656
+      endInstruction: 1655
+      startSourceChar: 2614
+      endSourceChar: 2614
+      line: 95
       lineChar: 26
       spanCodeSection: 
-    - startInstruction: 2196
-      endInstruction: 2195
-      startSourceChar: 2729
-      endSourceChar: 2742
+    - startInstruction: 1656
+      endInstruction: 1655
+      startSourceChar: 2614
+      endSourceChar: 2624
+      line: 95
+      lineChar: 26
+      spanCodeSection: goTargets.
+    - startInstruction: 1656
+      endInstruction: 1727
+      startSourceChar: 2624
+      endSourceChar: 2637
+      line: 95
+      lineChar: 36
+      spanCodeSection: 'Length; i++) '
+    - startInstruction: 1728
+      endInstruction: 1727
+      startSourceChar: 2637
+      endSourceChar: 2648
+      line: 95
+      lineChar: 49
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1728
+      endInstruction: 1727
+      startSourceChar: 2648
+      endSourceChar: 2652
+      line: 96
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 1728
+      endInstruction: 1727
+      startSourceChar: 2652
+      endSourceChar: 2652
+      line: 96
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1728
+      endInstruction: 1727
+      startSourceChar: 2652
+      endSourceChar: 2652
+      line: 96
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1728
+      endInstruction: 1727
+      startSourceChar: 2652
+      endSourceChar: 2667
+      line: 96
+      lineChar: 12
+      spanCodeSection: goToggleEvents[
+    - startInstruction: 1728
+      endInstruction: 1727
+      startSourceChar: 2667
+      endSourceChar: 2667
+      line: 96
+      lineChar: 27
+      spanCodeSection: 
+    - startInstruction: 1728
+      endInstruction: 1759
+      startSourceChar: 2667
+      endSourceChar: 2673
+      line: 96
+      lineChar: 27
+      spanCodeSection: 'i] == '
+    - startInstruction: 1760
+      endInstruction: 1807
+      startSourceChar: 2673
+      endSourceChar: 2683
+      line: 96
+      lineChar: 33
+      spanCodeSection: '"Toggle") '
+    - startInstruction: 1808
+      endInstruction: 1807
+      startSourceChar: 2683
+      endSourceChar: 2696
+      line: 96
+      lineChar: 43
+      spanCodeSection: "{\r\n          "
+    - startInstruction: 1808
+      endInstruction: 1807
+      startSourceChar: 2696
+      endSourceChar: 2696
+      line: 97
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1808
+      endInstruction: 1807
+      startSourceChar: 2696
+      endSourceChar: 2696
+      line: 97
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1808
+      endInstruction: 1807
+      startSourceChar: 2696
+      endSourceChar: 2696
+      line: 97
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1808
+      endInstruction: 1807
+      startSourceChar: 2696
+      endSourceChar: 2696
+      line: 97
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1808
+      endInstruction: 1807
+      startSourceChar: 2696
+      endSourceChar: 2706
+      line: 97
+      lineChar: 10
+      spanCodeSection: goTargets[
+    - startInstruction: 1808
+      endInstruction: 1807
+      startSourceChar: 2706
+      endSourceChar: 2706
+      line: 97
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1808
+      endInstruction: 1807
+      startSourceChar: 2706
+      endSourceChar: 2709
+      line: 97
+      lineChar: 20
+      spanCodeSection: i].
+    - startInstruction: 1808
+      endInstruction: 1839
+      startSourceChar: 2709
+      endSourceChar: 2719
+      line: 97
+      lineChar: 23
+      spanCodeSection: SetActive(
+    - startInstruction: 1840
+      endInstruction: 1839
+      startSourceChar: 2719
+      endSourceChar: 2720
+      line: 97
+      lineChar: 33
+      spanCodeSection: '!'
+    - startInstruction: 1840
+      endInstruction: 1839
+      startSourceChar: 2720
+      endSourceChar: 2720
+      line: 97
+      lineChar: 34
+      spanCodeSection: 
+    - startInstruction: 1840
+      endInstruction: 1839
+      startSourceChar: 2720
+      endSourceChar: 2720
+      line: 97
+      lineChar: 34
+      spanCodeSection: 
+    - startInstruction: 1840
+      endInstruction: 1839
+      startSourceChar: 2720
+      endSourceChar: 2730
+      line: 97
+      lineChar: 34
+      spanCodeSection: goTargets[
+    - startInstruction: 1840
+      endInstruction: 1839
+      startSourceChar: 2730
+      endSourceChar: 2730
+      line: 97
+      lineChar: 44
+      spanCodeSection: 
+    - startInstruction: 1840
+      endInstruction: 1839
+      startSourceChar: 2730
+      endSourceChar: 2733
+      line: 97
+      lineChar: 44
+      spanCodeSection: i].
+    - startInstruction: 1840
+      endInstruction: 1943
+      startSourceChar: 2733
+      endSourceChar: 2757
+      line: 97
+      lineChar: 47
+      spanCodeSection: "activeSelf);\r\n          "
+    - startInstruction: 1944
+      endInstruction: 1951
+      startSourceChar: 2757
+      endSourceChar: 2789
+      line: 98
+      lineChar: 10
+      spanCodeSection: "continue;\r\n        }\r\n\r\n        "
+    - startInstruction: 1952
+      endInstruction: 1951
+      startSourceChar: 2789
+      endSourceChar: 2789
       line: 101
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1952
+      endInstruction: 1951
+      startSourceChar: 2789
+      endSourceChar: 2789
+      line: 101
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 1952
+      endInstruction: 1951
+      startSourceChar: 2789
+      endSourceChar: 2799
+      line: 101
+      lineChar: 8
+      spanCodeSection: 'var state '
+    - startInstruction: 1952
+      endInstruction: 1951
+      startSourceChar: 2799
+      endSourceChar: 2801
+      line: 101
+      lineChar: 18
+      spanCodeSection: '= '
+    - startInstruction: 1952
+      endInstruction: 1951
+      startSourceChar: 2801
+      endSourceChar: 2801
+      line: 101
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1952
+      endInstruction: 1951
+      startSourceChar: 2801
+      endSourceChar: 2801
+      line: 101
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1952
+      endInstruction: 1951
+      startSourceChar: 2801
+      endSourceChar: 2816
+      line: 101
+      lineChar: 20
+      spanCodeSection: goToggleEvents[
+    - startInstruction: 1952
+      endInstruction: 1951
+      startSourceChar: 2816
+      endSourceChar: 2816
+      line: 101
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1952
+      endInstruction: 1983
+      startSourceChar: 2816
+      endSourceChar: 2822
+      line: 101
+      lineChar: 35
+      spanCodeSection: 'i] == '
+    - startInstruction: 1984
+      endInstruction: 2035
+      startSourceChar: 2822
+      endSourceChar: 2841
+      line: 101
+      lineChar: 41
+      spanCodeSection: "\"Enable\";\r\n        "
+    - startInstruction: 2036
+      endInstruction: 2035
+      startSourceChar: 2841
+      endSourceChar: 2841
+      line: 102
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2036
+      endInstruction: 2035
+      startSourceChar: 2841
+      endSourceChar: 2841
+      line: 102
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2036
+      endInstruction: 2035
+      startSourceChar: 2841
+      endSourceChar: 2841
+      line: 102
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2036
+      endInstruction: 2035
+      startSourceChar: 2841
+      endSourceChar: 2841
+      line: 102
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2036
+      endInstruction: 2035
+      startSourceChar: 2841
+      endSourceChar: 2851
+      line: 102
+      lineChar: 8
+      spanCodeSection: goTargets[
+    - startInstruction: 2036
+      endInstruction: 2035
+      startSourceChar: 2851
+      endSourceChar: 2851
+      line: 102
+      lineChar: 18
+      spanCodeSection: 
+    - startInstruction: 2036
+      endInstruction: 2035
+      startSourceChar: 2851
+      endSourceChar: 2854
+      line: 102
+      lineChar: 18
+      spanCodeSection: i].
+    - startInstruction: 2036
+      endInstruction: 2067
+      startSourceChar: 2854
+      endSourceChar: 2864
+      line: 102
+      lineChar: 21
+      spanCodeSection: SetActive(
+    - startInstruction: 2068
+      endInstruction: 2171
+      startSourceChar: 2864
+      endSourceChar: 2899
+      line: 102
+      lineChar: 31
+      spanCodeSection: "state);\r\n      }\r\n    }\r\n    \r\n    "
+    - startInstruction: 2172
+      endInstruction: 2179
+      startSourceChar: 2899
+      endSourceChar: 2934
+      line: 106
+      lineChar: 4
+      spanCodeSection: 'private void FireColliderToggles() '
+    - startInstruction: 2180
+      endInstruction: 2179
+      startSourceChar: 2934
+      endSourceChar: 2943
+      line: 106
+      lineChar: 39
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 2180
+      endInstruction: 2179
+      startSourceChar: 2943
+      endSourceChar: 2947
+      line: 107
+      lineChar: 6
+      spanCodeSection: if (
+    - startInstruction: 2180
+      endInstruction: 2179
+      startSourceChar: 2947
+      endSourceChar: 2948
+      line: 107
+      lineChar: 10
+      spanCodeSection: '!'
+    - startInstruction: 2180
+      endInstruction: 2219
+      startSourceChar: 2948
+      endSourceChar: 2969
+      line: 107
+      lineChar: 11
+      spanCodeSection: 'fireColliderToggles) '
+    - startInstruction: 2220
+      endInstruction: 2239
+      startSourceChar: 2969
+      endSourceChar: 2984
+      line: 107
+      lineChar: 32
+      spanCodeSection: "return;\r\n      "
+    - startInstruction: 2240
+      endInstruction: 2239
+      startSourceChar: 2984
+      endSourceChar: 2989
+      line: 108
+      lineChar: 6
+      spanCodeSection: for (
+    - startInstruction: 2240
+      endInstruction: 2239
+      startSourceChar: 2989
+      endSourceChar: 2989
+      line: 108
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 2240
+      endInstruction: 2239
+      startSourceChar: 2989
+      endSourceChar: 2989
+      line: 108
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 2240
+      endInstruction: 2239
+      startSourceChar: 2989
+      endSourceChar: 2995
+      line: 108
+      lineChar: 11
+      spanCodeSection: 'int i '
+    - startInstruction: 2240
+      endInstruction: 2239
+      startSourceChar: 2995
+      endSourceChar: 2997
+      line: 108
+      lineChar: 17
+      spanCodeSection: '= '
+    - startInstruction: 2240
+      endInstruction: 2259
+      startSourceChar: 2997
+      endSourceChar: 3000
+      line: 108
+      lineChar: 19
+      spanCodeSection: '0; '
+    - startInstruction: 2260
+      endInstruction: 2259
+      startSourceChar: 3000
+      endSourceChar: 3000
+      line: 108
+      lineChar: 22
+      spanCodeSection: 
+    - startInstruction: 2260
+      endInstruction: 2259
+      startSourceChar: 3000
+      endSourceChar: 3004
+      line: 108
+      lineChar: 22
+      spanCodeSection: 'i < '
+    - startInstruction: 2260
+      endInstruction: 2259
+      startSourceChar: 3004
+      endSourceChar: 3004
+      line: 108
+      lineChar: 26
+      spanCodeSection: 
+    - startInstruction: 2260
+      endInstruction: 2259
+      startSourceChar: 3004
+      endSourceChar: 3020
+      line: 108
+      lineChar: 26
+      spanCodeSection: colliderTargets.
+    - startInstruction: 2260
+      endInstruction: 2331
+      startSourceChar: 3020
+      endSourceChar: 3033
+      line: 108
+      lineChar: 42
+      spanCodeSection: 'Length; i++) '
+    - startInstruction: 2332
+      endInstruction: 2331
+      startSourceChar: 3033
+      endSourceChar: 3044
+      line: 108
+      lineChar: 55
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 2332
+      endInstruction: 2331
+      startSourceChar: 3044
+      endSourceChar: 3048
+      line: 109
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 2332
+      endInstruction: 2331
+      startSourceChar: 3048
+      endSourceChar: 3048
+      line: 109
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 2332
+      endInstruction: 2331
+      startSourceChar: 3048
+      endSourceChar: 3048
+      line: 109
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 2332
+      endInstruction: 2331
+      startSourceChar: 3048
+      endSourceChar: 3069
+      line: 109
+      lineChar: 12
+      spanCodeSection: colliderToggleEvents[
+    - startInstruction: 2332
+      endInstruction: 2331
+      startSourceChar: 3069
+      endSourceChar: 3069
+      line: 109
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 2332
+      endInstruction: 2363
+      startSourceChar: 3069
+      endSourceChar: 3075
+      line: 109
+      lineChar: 33
+      spanCodeSection: 'i] == '
+    - startInstruction: 2364
+      endInstruction: 2411
+      startSourceChar: 3075
+      endSourceChar: 3085
+      line: 109
+      lineChar: 39
+      spanCodeSection: '"Toggle") '
+    - startInstruction: 2412
+      endInstruction: 2411
+      startSourceChar: 3085
+      endSourceChar: 3098
+      line: 109
+      lineChar: 49
+      spanCodeSection: "{\r\n          "
+    - startInstruction: 2412
+      endInstruction: 2411
+      startSourceChar: 3098
+      endSourceChar: 3098
+      line: 110
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 2412
+      endInstruction: 2411
+      startSourceChar: 3098
+      endSourceChar: 3098
+      line: 110
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 2412
+      endInstruction: 2411
+      startSourceChar: 3098
+      endSourceChar: 3098
+      line: 110
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 2412
+      endInstruction: 2411
+      startSourceChar: 3098
+      endSourceChar: 3098
+      line: 110
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 2412
+      endInstruction: 2411
+      startSourceChar: 3098
+      endSourceChar: 3114
+      line: 110
+      lineChar: 10
+      spanCodeSection: colliderTargets[
+    - startInstruction: 2412
+      endInstruction: 2411
+      startSourceChar: 3114
+      endSourceChar: 3114
+      line: 110
+      lineChar: 26
+      spanCodeSection: 
+    - startInstruction: 2412
+      endInstruction: 2411
+      startSourceChar: 3114
+      endSourceChar: 3117
+      line: 110
+      lineChar: 26
+      spanCodeSection: i].
+    - startInstruction: 2412
+      endInstruction: 2443
+      startSourceChar: 3117
+      endSourceChar: 3127
+      line: 110
+      lineChar: 29
+      spanCodeSection: 'enabled = '
+    - startInstruction: 2444
+      endInstruction: 2443
+      startSourceChar: 3127
+      endSourceChar: 3128
+      line: 110
+      lineChar: 39
+      spanCodeSection: '!'
+    - startInstruction: 2444
+      endInstruction: 2443
+      startSourceChar: 3128
+      endSourceChar: 3128
+      line: 110
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2444
+      endInstruction: 2443
+      startSourceChar: 3128
+      endSourceChar: 3128
+      line: 110
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2444
+      endInstruction: 2443
+      startSourceChar: 3128
+      endSourceChar: 3144
+      line: 110
+      lineChar: 40
+      spanCodeSection: colliderTargets[
+    - startInstruction: 2444
+      endInstruction: 2443
+      startSourceChar: 3144
+      endSourceChar: 3144
+      line: 110
+      lineChar: 56
+      spanCodeSection: 
+    - startInstruction: 2444
+      endInstruction: 2443
+      startSourceChar: 3144
+      endSourceChar: 3147
+      line: 110
+      lineChar: 56
+      spanCodeSection: i].
+    - startInstruction: 2444
+      endInstruction: 2547
+      startSourceChar: 3147
+      endSourceChar: 3167
+      line: 110
+      lineChar: 59
+      spanCodeSection: "enabled;\r\n          "
+    - startInstruction: 2548
+      endInstruction: 2555
+      startSourceChar: 3167
+      endSourceChar: 3207
+      line: 111
+      lineChar: 10
+      spanCodeSection: "continue;\r\n        }\r\n        \r\n        "
+    - startInstruction: 2556
+      endInstruction: 2555
+      startSourceChar: 3207
+      endSourceChar: 3207
+      line: 114
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2556
+      endInstruction: 2555
+      startSourceChar: 3207
+      endSourceChar: 3207
+      line: 114
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2556
+      endInstruction: 2555
+      startSourceChar: 3207
+      endSourceChar: 3217
+      line: 114
+      lineChar: 8
+      spanCodeSection: 'var state '
+    - startInstruction: 2556
+      endInstruction: 2555
+      startSourceChar: 3217
+      endSourceChar: 3219
+      line: 114
+      lineChar: 18
+      spanCodeSection: '= '
+    - startInstruction: 2556
+      endInstruction: 2555
+      startSourceChar: 3219
+      endSourceChar: 3219
+      line: 114
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 2556
+      endInstruction: 2555
+      startSourceChar: 3219
+      endSourceChar: 3219
+      line: 114
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 2556
+      endInstruction: 2555
+      startSourceChar: 3219
+      endSourceChar: 3240
+      line: 114
+      lineChar: 20
+      spanCodeSection: colliderToggleEvents[
+    - startInstruction: 2556
+      endInstruction: 2555
+      startSourceChar: 3240
+      endSourceChar: 3240
+      line: 114
+      lineChar: 41
+      spanCodeSection: 
+    - startInstruction: 2556
+      endInstruction: 2587
+      startSourceChar: 3240
+      endSourceChar: 3246
+      line: 114
+      lineChar: 41
+      spanCodeSection: 'i] == '
+    - startInstruction: 2588
+      endInstruction: 2639
+      startSourceChar: 3246
+      endSourceChar: 3265
+      line: 114
+      lineChar: 47
+      spanCodeSection: "\"Enable\";\r\n        "
+    - startInstruction: 2640
+      endInstruction: 2639
+      startSourceChar: 3265
+      endSourceChar: 3265
+      line: 115
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2640
+      endInstruction: 2639
+      startSourceChar: 3265
+      endSourceChar: 3265
+      line: 115
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2640
+      endInstruction: 2639
+      startSourceChar: 3265
+      endSourceChar: 3265
+      line: 115
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2640
+      endInstruction: 2639
+      startSourceChar: 3265
+      endSourceChar: 3265
+      line: 115
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 2640
+      endInstruction: 2639
+      startSourceChar: 3265
+      endSourceChar: 3281
+      line: 115
+      lineChar: 8
+      spanCodeSection: colliderTargets[
+    - startInstruction: 2640
+      endInstruction: 2639
+      startSourceChar: 3281
+      endSourceChar: 3281
+      line: 115
+      lineChar: 24
+      spanCodeSection: 
+    - startInstruction: 2640
+      endInstruction: 2639
+      startSourceChar: 3281
+      endSourceChar: 3284
+      line: 115
+      lineChar: 24
+      spanCodeSection: i].
+    - startInstruction: 2640
+      endInstruction: 2671
+      startSourceChar: 3284
+      endSourceChar: 3294
+      line: 115
+      lineChar: 27
+      spanCodeSection: 'enabled = '
+    - startInstruction: 2672
+      endInstruction: 2775
+      startSourceChar: 3294
+      endSourceChar: 3324
+      line: 115
+      lineChar: 37
+      spanCodeSection: "state;\r\n      }\r\n    }\r\n\r\n    "
+    - startInstruction: 2776
+      endInstruction: 2783
+      startSourceChar: 3324
+      endSourceChar: 3355
+      line: 119
+      lineChar: 4
+      spanCodeSection: 'private void FireAudioEvents() '
+    - startInstruction: 2784
+      endInstruction: 2783
+      startSourceChar: 3355
+      endSourceChar: 3364
+      line: 119
+      lineChar: 35
+      spanCodeSection: "{\r\n      "
+    - startInstruction: 2784
+      endInstruction: 2783
+      startSourceChar: 3364
+      endSourceChar: 3368
+      line: 120
+      lineChar: 6
+      spanCodeSection: if (
+    - startInstruction: 2784
+      endInstruction: 2783
+      startSourceChar: 3368
+      endSourceChar: 3369
+      line: 120
+      lineChar: 10
+      spanCodeSection: '!'
+    - startInstruction: 2784
+      endInstruction: 2823
+      startSourceChar: 3369
+      endSourceChar: 3386
+      line: 120
+      lineChar: 11
+      spanCodeSection: 'fireAudioEvents) '
+    - startInstruction: 2824
+      endInstruction: 2843
+      startSourceChar: 3386
+      endSourceChar: 3401
+      line: 120
+      lineChar: 28
+      spanCodeSection: "return;\r\n      "
+    - startInstruction: 2844
+      endInstruction: 2843
+      startSourceChar: 3401
+      endSourceChar: 3406
+      line: 121
+      lineChar: 6
+      spanCodeSection: for (
+    - startInstruction: 2844
+      endInstruction: 2843
+      startSourceChar: 3406
+      endSourceChar: 3406
+      line: 121
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 2844
+      endInstruction: 2843
+      startSourceChar: 3406
+      endSourceChar: 3406
+      line: 121
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 2844
+      endInstruction: 2843
+      startSourceChar: 3406
+      endSourceChar: 3412
+      line: 121
+      lineChar: 11
+      spanCodeSection: 'int i '
+    - startInstruction: 2844
+      endInstruction: 2843
+      startSourceChar: 3412
+      endSourceChar: 3414
+      line: 121
+      lineChar: 17
+      spanCodeSection: '= '
+    - startInstruction: 2844
+      endInstruction: 2863
+      startSourceChar: 3414
+      endSourceChar: 3417
+      line: 121
+      lineChar: 19
+      spanCodeSection: '0; '
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3417
+      endSourceChar: 3417
+      line: 121
+      lineChar: 22
+      spanCodeSection: 
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3417
+      endSourceChar: 3421
+      line: 121
+      lineChar: 22
+      spanCodeSection: 'i < '
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3421
+      endSourceChar: 3421
+      line: 121
+      lineChar: 26
+      spanCodeSection: 
+    - startInstruction: 2864
+      endInstruction: 2863
+      startSourceChar: 3421
+      endSourceChar: 3434
+      line: 121
       lineChar: 26
       spanCodeSection: audioSources.
-    - startInstruction: 2196
-      endInstruction: 2267
-      startSourceChar: 2742
-      endSourceChar: 2755
-      line: 101
+    - startInstruction: 2864
+      endInstruction: 2935
+      startSourceChar: 3434
+      endSourceChar: 3447
+      line: 121
       lineChar: 39
       spanCodeSection: 'Length; i++) '
-    - startInstruction: 2268
-      endInstruction: 2267
-      startSourceChar: 2755
-      endSourceChar: 2766
-      line: 101
+    - startInstruction: 2936
+      endInstruction: 2935
+      startSourceChar: 3447
+      endSourceChar: 3458
+      line: 121
       lineChar: 52
       spanCodeSection: "{\r\n        "
-    - startInstruction: 2268
-      endInstruction: 2267
-      startSourceChar: 2766
-      endSourceChar: 2766
-      line: 102
+    - startInstruction: 2936
+      endInstruction: 2935
+      startSourceChar: 3458
+      endSourceChar: 3458
+      line: 122
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 2268
-      endInstruction: 2267
-      startSourceChar: 2766
-      endSourceChar: 2766
-      line: 102
+    - startInstruction: 2936
+      endInstruction: 2935
+      startSourceChar: 3458
+      endSourceChar: 3458
+      line: 122
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 2268
-      endInstruction: 2267
-      startSourceChar: 2766
-      endSourceChar: 2766
-      line: 102
+    - startInstruction: 2936
+      endInstruction: 2935
+      startSourceChar: 3458
+      endSourceChar: 3458
+      line: 122
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 2268
-      endInstruction: 2267
-      startSourceChar: 2766
-      endSourceChar: 2766
-      line: 102
+    - startInstruction: 2936
+      endInstruction: 2935
+      startSourceChar: 3458
+      endSourceChar: 3458
+      line: 122
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 2268
-      endInstruction: 2267
-      startSourceChar: 2766
-      endSourceChar: 2779
-      line: 102
+    - startInstruction: 2936
+      endInstruction: 2935
+      startSourceChar: 3458
+      endSourceChar: 3471
+      line: 122
       lineChar: 8
       spanCodeSection: audioSources[
-    - startInstruction: 2268
-      endInstruction: 2267
-      startSourceChar: 2779
-      endSourceChar: 2779
-      line: 102
+    - startInstruction: 2936
+      endInstruction: 2935
+      startSourceChar: 3471
+      endSourceChar: 3471
+      line: 122
       lineChar: 21
       spanCodeSection: 
-    - startInstruction: 2268
-      endInstruction: 2267
-      startSourceChar: 2779
-      endSourceChar: 2782
-      line: 102
+    - startInstruction: 2936
+      endInstruction: 2935
+      startSourceChar: 3471
+      endSourceChar: 3474
+      line: 122
       lineChar: 21
       spanCodeSection: i].
-    - startInstruction: 2268
-      endInstruction: 2299
-      startSourceChar: 2782
-      endSourceChar: 2794
-      line: 102
+    - startInstruction: 2936
+      endInstruction: 2967
+      startSourceChar: 3474
+      endSourceChar: 3486
+      line: 122
       lineChar: 24
       spanCodeSection: PlayOneShot(
-    - startInstruction: 2300
-      endInstruction: 2299
-      startSourceChar: 2794
-      endSourceChar: 2794
-      line: 102
+    - startInstruction: 2968
+      endInstruction: 2967
+      startSourceChar: 3486
+      endSourceChar: 3486
+      line: 122
       lineChar: 36
       spanCodeSection: 
-    - startInstruction: 2300
-      endInstruction: 2299
-      startSourceChar: 2794
-      endSourceChar: 2805
-      line: 102
+    - startInstruction: 2968
+      endInstruction: 2967
+      startSourceChar: 3486
+      endSourceChar: 3497
+      line: 122
       lineChar: 36
       spanCodeSection: audioClips[
-    - startInstruction: 2300
-      endInstruction: 2299
-      startSourceChar: 2805
-      endSourceChar: 2805
-      line: 102
+    - startInstruction: 2968
+      endInstruction: 2967
+      startSourceChar: 3497
+      endSourceChar: 3497
+      line: 122
       lineChar: 47
       spanCodeSection: 
-    - startInstruction: 2300
-      endInstruction: 2300
-      startSourceChar: 2805
-      endSourceChar: 2805
-      line: 102
+    - startInstruction: 2968
+      endInstruction: 2968
+      startSourceChar: 3497
+      endSourceChar: 3497
+      line: 122
       lineChar: 47
       spanCodeSection: 
   hasInteractEvent: 0
@@ -2713,7 +3398,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 19
+      Data: 22
     - Name: 
       Entry: 7
       Data: 
@@ -3559,7 +4244,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: fireAudioEvents
+      Data: fireColliderToggles
     - Name: $v
       Entry: 7
       Data: 51|UdonSharp.FieldDefinition, UdonSharp.Editor
@@ -3580,10 +4265,10 @@ MonoBehaviour:
       Data: SystemBoolean
     - Name: symbolOriginalName
       Entry: 1
-      Data: fireAudioEvents
+      Data: fireColliderToggles
     - Name: symbolUniqueName
       Entry: 1
-      Data: fireAudioEvents
+      Data: fireColliderToggles
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3616,7 +4301,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: audioSources
+      Data: colliderTargets
     - Name: $v
       Entry: 7
       Data: 54|UdonSharp.FieldDefinition, UdonSharp.Editor
@@ -3628,7 +4313,7 @@ MonoBehaviour:
       Data: 56|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UnityEngine.AudioSource[], UnityEngine.AudioModule
+      Data: UnityEngine.Collider[], UnityEngine.PhysicsModule
     - Name: 
       Entry: 8
       Data: 
@@ -3640,13 +4325,13 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: UnityEngineAudioSourceArray
+      Data: UnityEngineColliderArray
     - Name: symbolOriginalName
       Entry: 1
-      Data: audioSources
+      Data: colliderTargets
     - Name: symbolUniqueName
       Entry: 1
-      Data: audioSources
+      Data: colliderTargets
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3679,7 +4364,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: audioClips
+      Data: colliderToggleEvents
     - Name: $v
       Entry: 7
       Data: 58|UdonSharp.FieldDefinition, UdonSharp.Editor
@@ -3687,8 +4372,185 @@ MonoBehaviour:
       Entry: 7
       Data: 59|UdonSharp.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
+      Entry: 9
+      Data: 22
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemStringArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: colliderToggleEvents
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: colliderToggleEvents
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
       Entry: 7
-      Data: 60|System.RuntimeType, mscorlib
+      Data: 60|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: fireAudioEvents
+    - Name: $v
+      Entry: 7
+      Data: 61|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 62|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: fireAudioEvents
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: fireAudioEvents
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 63|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: audioSources
+    - Name: $v
+      Entry: 7
+      Data: 64|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 65|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 66|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.AudioSource[], UnityEngine.AudioModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineAudioSourceArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: audioSources
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: audioSources
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 67|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: audioClips
+    - Name: $v
+      Entry: 7
+      Data: 68|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 69|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 70|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.AudioClip[], UnityEngine.AudioModule
@@ -3718,7 +4580,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 61|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 71|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -3745,10 +4607,10 @@ MonoBehaviour:
       Data: delayActive
     - Name: $v
       Entry: 7
-      Data: 62|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 72|UdonSharp.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 63|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 73|UdonSharp.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -3775,7 +4637,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 64|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 74|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -3802,10 +4664,10 @@ MonoBehaviour:
       Data: delayExpire
     - Name: $v
       Entry: 7
-      Data: 65|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 75|UdonSharp.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 66|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 76|UdonSharp.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 11
@@ -3832,7 +4694,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 67|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 77|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

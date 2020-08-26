@@ -21,6 +21,9 @@ namespace UdonToolkit {
     public bool fireObjectToggles;
     public GameObject[] goTargets;
     public string[] goToggleEvents;
+    public bool fireColliderToggles;
+    public Collider[] colliderTargets;
+    public string[] colliderToggleEvents;
     public bool fireAudioEvents;
     public AudioSource[] audioSources;
     public AudioClip[] audioClips;
@@ -50,6 +53,7 @@ namespace UdonToolkit {
       FireAnimationTriggers();
       FireUdonEvents();
       FireObjectToggles();
+      FireColliderToggles();
       FireAudioEvents();
     }
 
@@ -60,6 +64,7 @@ namespace UdonToolkit {
         FireAnimationTriggers();
         FireUdonEvents();
         FireObjectToggles();
+        FireColliderToggles();
         FireAudioEvents();
         delayActive = false;
       }
@@ -94,6 +99,19 @@ namespace UdonToolkit {
 
         var state = goToggleEvents[i] == "Enable";
         goTargets[i].SetActive(state);
+      }
+    }
+    
+    private void FireColliderToggles() {
+      if (!fireColliderToggles) return;
+      for (int i = 0; i < colliderTargets.Length; i++) {
+        if (colliderToggleEvents[i] == "Toggle") {
+          colliderTargets[i].enabled = !colliderTargets[i].enabled;
+          continue;
+        }
+        
+        var state = colliderToggleEvents[i] == "Enable";
+        colliderTargets[i].enabled = state;
       }
     }
 

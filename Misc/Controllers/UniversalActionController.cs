@@ -62,6 +62,21 @@ namespace UdonToolkit {
       "Disable",
       "Toggle"
     };
+    
+    [SectionHeader("Collider Toggles")] [UdonPublic]
+    public bool fireColliderToggles;
+
+    [ListView("Colliders List")] [UdonPublic]
+    public Collider[] colliderTargets;
+
+    [ListView("Colliders List")] [Popup(PopupAttribute.PopupSource.Method, "@colliderToggleOptions", true)] [UdonPublic]
+    public string[] colliderToggleEvents;
+
+    [HideInInspector] public string[] colliderToggleOptions = {
+      "Enable",
+      "Disable",
+      "Toggle"
+    };
 
     [SectionHeader("Audio")] [UdonPublic] public bool fireAudioEvents;
 
