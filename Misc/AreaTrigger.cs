@@ -18,6 +18,7 @@ namespace UdonToolkit {
 
       private int playerLayer = 9;
       private int playerLocalLayer = 10;
+      private int collidersIn;
       
       public void Activate() {
         active = true;
@@ -36,12 +37,20 @@ namespace UdonToolkit {
         if (other == null) {
           if (collideWith == (collideWith | (1 << playerLayer)) ||
               collideWith == (collideWith | (1 << playerLocalLayer))) {
-            FireTriggers("enter");
+            if (collidersIn == 0) {
+              FireTriggers("enter");
+            }
+            collidersIn++;
             return;
           }
+
+          return;
         }
         if (collideWith == (collideWith | (1 << other.gameObject.layer))) {
-          FireTriggers("enter");
+          if (collidersIn == 0) {
+            FireTriggers("enter");
+          }
+          collidersIn++;
         }
       }
 
@@ -50,12 +59,20 @@ namespace UdonToolkit {
         if (other == null) {
           if (collideWith == (collideWith | (1 << playerLayer)) ||
               collideWith == (collideWith | (1 << playerLocalLayer))) {
-            FireTriggers("exit");
+            if (collidersIn == 1) {
+              FireTriggers("exit");
+            }
+            collidersIn--;
             return;
           }
+
+          return;
         }
         if (collideWith == (collideWith | (1 << other.gameObject.layer))) {
-          FireTriggers("exit");
+          if (collidersIn == 1) {
+            FireTriggers("exit");
+          }
+          collidersIn--;
         }
       }
 
