@@ -176,6 +176,9 @@ namespace UdonToolkit {
     private static readonly string SciFiStandPath = "Assets/UdonToolkit/Camera System/Camera Stand.prefab";
     private static readonly string TikiStandPath = "Assets/UdonToolkit/Camera System/Camera Stand Tiki.prefab";
     private static readonly string CameraSystemPath = "Assets/UdonToolkit/Camera System/UT Camera System.prefab";
+    private static readonly string DefaultPPProfilePath = "Assets/UdonToolkit/Camera System/Assets/Camera Lens PP.asset";
+    private static readonly string FocusFarPPProfilePath = "Assets/UdonToolkit/Camera System/Assets/Camera Lens PP Far.asset";
+    private static readonly string FocalNearPPProfilePath = "Assets/UdonToolkit/Camera System/Assets/Camera Lens PP Focal.asset";
 
     private void RunCameraSetup() {
       setup = false;
@@ -204,8 +207,7 @@ namespace UdonToolkit {
       
       var cameraObject = instancedCameraRoot.Find("Camera Lens").gameObject;
       var cameraLens = cameraObject.transform.Find("Lens Camera").gameObject;
-      Undo.RecordObjects(new Object[] { cameraObject, cameraLens}, "Adjusted Camera Lens PP Layer");
-      cameraLens.GetComponent<PostProcessLayer>().volumeLayer = LayerMask.GetMask(LayerMask.LayerToName(cameraPPLayer));
+      Undo.RecordObjects(new Object[] { cameraObject, cameraLens }, "Adjusted Camera Lens PP Layer");
       var vrControls = cameraObject.transform.Find("VR Controls");
       for (int i = 0; i < vrControls.childCount; i++) {
         var child = vrControls.GetChild(i).gameObject;
@@ -240,6 +242,33 @@ namespace UdonToolkit {
         var overlaySphere = instancedCameraRoot.Find("Camera Tracker").Find("Sphere");
         overlaySphere.GetComponent<MeshRenderer>().sharedMaterial.SetTexture("_WatermarkImage", watermark);
       }
+      
+      // add PP stuff, we have to do it manually as having these scripts in a prefab causes build time erorrs
+      // TODO: extract this into a function
+      var cameraPPComp = cameraLens.AddComponent<PostProcessLayer>();
+      cameraPPComp.volumeTrigger = cameraLens.transform;
+      cameraPPComp.volumeLayer = LayerMask.GetMask(LayerMask.LayerToName(cameraPPLayer));
+      var defaultPPVolumeGo = profilesParent.GetChild(0).gameObject;
+      var focusFarPPVolumeGo = profilesParent.GetChild(1).gameObject;
+      var focalNearPPVolumeGo = profilesParent.GetChild(2).gameObject;
+      Undo.RecordObjects(new Object[] { defaultPPVolumeGo, focusFarPPVolumeGo, focalNearPPVolumeGo }, "Add PP Volume Components");
+      var defaultPPVolume = defaultPPVolumeGo.AddComponent<PostProcessVolume>();
+      var focusFarPPVolume = focusFarPPVolumeGo.AddComponent<PostProcessVolume>();
+      var focalNearPPVolume = focalNearPPVolumeGo.AddComponent<PostProcessVolume>();
+      defaultPPVolume.isGlobal = true;
+      defaultPPVolume.weight = 1;
+      defaultPPVolume.sharedProfile =
+        (PostProcessProfile) AssetDatabase.LoadAssetAtPath(DefaultPPProfilePath, typeof(PostProcessProfile));
+      focusFarPPVolume.isGlobal = true;
+      focusFarPPVolume.weight = 0;
+      focusFarPPVolume.priority = 1;
+      focusFarPPVolume.sharedProfile =
+        (PostProcessProfile) AssetDatabase.LoadAssetAtPath(FocusFarPPProfilePath, typeof(PostProcessProfile));
+      focalNearPPVolume.isGlobal = true;
+      focalNearPPVolume.weight = 0;
+      focalNearPPVolume.priority = 1;
+      focalNearPPVolume.sharedProfile =
+        (PostProcessProfile) AssetDatabase.LoadAssetAtPath(FocalNearPPProfilePath, typeof(PostProcessProfile));
 
       // move to root
       var childCount = instancedCamera.transform.childCount;
