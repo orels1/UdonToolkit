@@ -17,10 +17,17 @@ namespace UdonToolkit {
     private string undoString = "Change controller properties";
     private UTController t;
     private UdonProgramAsset uB;
+    private bool copiedValues;
 
 
     public override void OnInspectorGUI() {
       t = (UTController) target;
+      // Copy current values
+      if (!copiedValues) {
+        t.SyncBack();
+        copiedValues = true;
+      }
+
       // Header
       var customNameAttr = t.GetType().GetCustomAttributes(typeof(CustomNameAttribute))
         .Select(i => i as CustomNameAttribute).ToArray();
@@ -32,7 +39,7 @@ namespace UdonToolkit {
       
       // Extra pre-gui actions
       t.SetupController();
-      
+
       // Auto UB Addition
       if (t.GetComponent<UdonBehaviour>() == null) {
         if (uB) {
@@ -104,6 +111,16 @@ namespace UdonToolkit {
         }
         EditorGUI.EndDisabledGroup();
       }
+      UTStyles.RenderSectionHeader("Manual Value Sync");
+      EditorGUILayout.BeginHorizontal();
+      if (GUILayout.Button("Copy to Udon")) {
+        t.SyncValues();
+      }
+
+      if (GUILayout.Button("Copy from Udon")) {
+        t.SyncBack();
+      }
+      EditorGUILayout.EndHorizontal();
     }
 
     protected virtual void DrawGUI(UTController t) {
