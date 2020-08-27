@@ -102,14 +102,26 @@ namespace UdonToolkit {
       var buttons = t.GetType().GetMethods().Select(i => i.GetCustomAttribute<ButtonAttribute>()).Where(i => i != null)
         .ToArray();
       if (buttons.Any()) {
-        EditorGUI.BeginDisabledGroup(!Application.isPlaying);
         UTStyles.RenderSectionHeader("Methods");
-        foreach ((var button, var i) in buttons.WithIndex()) {
+        var rowBreak = Mathf.Max(1, Mathf.Min(3, buttons.Length - 1));
+        var rowEndI = -100;
+        foreach (var (button, i) in buttons.WithIndex()) {
+          if (i == rowEndI && i != buttons.Length - 1) {
+            EditorGUILayout.EndHorizontal();
+          }
+          if (i % rowBreak == 0 && i != buttons.Length - 1) {
+            EditorGUILayout.BeginHorizontal();
+            rowEndI = Math.Min(i + rowBreak, buttons.Length - 1);
+          }
+          EditorGUI.BeginDisabledGroup(!Application.isPlaying && !button.activeInEditMode);
           if (GUILayout.Button(button.text)) {
             t.Invoke(methods[i].Name, 0);
           }
+          EditorGUI.EndDisabledGroup();
+          if (i == buttons.Length - 1 && rowEndI != -100) {
+            EditorGUILayout.EndHorizontal();
+          }
         }
-        EditorGUI.EndDisabledGroup();
       }
       UTStyles.RenderSectionHeader("Manual Value Sync");
       EditorGUILayout.BeginHorizontal();
@@ -237,6 +249,8 @@ namespace UdonToolkit {
         ? output
         : new object[] {arrVal.ToArray(), otherArrVal.ToArray()});
     }
+
+    #region ArrayHandling
     
     private void RenderArray(SerializedProperty prop, string changedCallback) {
       var formatted = Regex.Split(prop.name, @"(?<!^)(?=[A-Z])");
@@ -488,6 +502,7 @@ namespace UdonToolkit {
         }
       }
     }
+    #endregion
   }
 }
 

@@ -470,9 +470,15 @@ namespace UdonToolkit{
   [AttributeUsage(AttributeTargets.Method)]
   public class ButtonAttribute : Attribute {
     public string text;
+    public bool activeInEditMode;
 
     public ButtonAttribute(string text) {
       this.text = text;
+    }
+
+    public ButtonAttribute(string text, bool activeInEditMode) {
+      this.text = text;
+      this.activeInEditMode = activeInEditMode;
     }
   }
 }
