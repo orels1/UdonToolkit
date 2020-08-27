@@ -499,7 +499,7 @@ namespace UdonToolkit {
 
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class OnValueChangedAttribute : Attribute {
-    public OnValueChangedAttribute(string methodName) {
+    public OnValueChangedAttribute(object a) {
     }
   }
 
@@ -511,19 +511,28 @@ namespace UdonToolkit {
 
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class ListViewAttribute : Attribute {
-    public ListViewAttribute(string name) {
+    public ListViewAttribute(object a) {
+    }
+
+    public ListViewAttribute(object a, object b) {
+    }
+
+    public ListViewAttribute(object a, object b, object c) {
     }
   }
 
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class PopupAttribute : Attribute {
-    public enum PopupSource {
-      Method,
-      Animator,
-      Shader,
-      UdonBehaviour
+    public PopupAttribute(object a) {
     }
+
+    public PopupAttribute(object a, object b) {
+    }
+
     public PopupAttribute(object a, object b, object c) {
+    }
+
+    public PopupAttribute(object a, object b, object c, object d) {
     }
   }
 
@@ -545,6 +554,42 @@ namespace UdonToolkit {
     }
 
     public HelpBoxAttribute(object a, object b) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  public class RangeSliderAttribute : Attribute {
+    public RangeSliderAttribute(object a, object b){
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  public class HideIfAttribute : Attribute {
+    public HideIfAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  public class HorizontalAttribute : Attribute {
+    public HorizontalAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  public class HideLabelAttribute: Attribute {
+    public HideLabelAttribute(){
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Class)]
+  public class CustomNameAttribute: Attribute {
+    public CustomNameAttribute(object a){
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Class)]
+  public class HelpMessageAttribute: Attribute {
+    public HelpMessageAttribute(object a) {
     }
   }
 }
