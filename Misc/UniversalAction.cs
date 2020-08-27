@@ -6,43 +6,116 @@ using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
+  [CustomName("Universal Action")]
+  [HelpMessage(
+    "This component expects a \"Trigger\" event to fire.")]
+  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#universal-action")]
   public class UniversalAction : UdonSharpBehaviour {
+    [SectionHeader("General")] [UTEditor]
     public bool active = true;
+    
+    [HelpBox("Make sure this game object is always enabled when using delays.", "@fireAfterDelay")]
+    [UTEditor]
     public bool fireAfterDelay;
+    
+    [HideIf("@!fireAfterDelay")]
+    [Tooltip("Delay in seconds")]
+    [UTEditor]
     public float delayLength;
+    
+    [SectionHeader("Animations")][UTEditor]
     public bool fireAnimationTriggers;
+    
+    [ListView("Animator Triggers List")][UTEditor]
     public Animator[] animators;
+    [ListView("Animator Triggers List")]
+    #if !COMPILER_UDONSHARP && UNITY_EDITOR
+    [Popup(PopupAttribute.PopupSource.Animator, "@animators", true)]
+    #endif
+    [UTEditor]
     public string[] animatorTriggers;
+    
+    [SectionHeader("Udon Events")] [UTEditor]
     public bool fireUdonEvents;
+    
+    [HelpBox("Only use this option if you are invoking this action locally, e.g. from a UI Button, otherwise it will cause oversync.", "@networked")]
+    [UTEditor]
     public bool networked;
+    
+    [HideIf("@!networked")]
+    [UTEditor]
     public NetworkEventTarget networkTarget;
+    
+    [ListView("Udon Events List")] [UTEditor]
     public Component[] udonTargets;
+    
+    [ListView("Udon Events List")]
+    #if !COMPILER_UDONSHARP && UNITY_EDITOR
+    [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@udonTargets", true)]
+    #endif
+    [UTEditor]
     public string[] udonEvents;
+    
+    [SectionHeader("Game Object Toggles")] [UTEditor]
     public bool fireObjectToggles;
+    
+    [ListView("Game Objects List")] [UTEditor]
     public GameObject[] goTargets;
+    
+    [ListView("Game Objects List")]
+    #if !COMPILER_UDONSHARP && UNITY_EDITOR
+    [Popup(PopupAttribute.PopupSource.Method, "@goToggleOptions", true)]
+    #endif
+    [UTEditor]
     public string[] goToggleEvents;
+
+    [HideInInspector] public string[] goToggleOptions = {
+      "Enable",
+      "Disable",
+      "Toggle"
+    };
+
+    [SectionHeader("Collider Toggles")] [UTEditor]
     public bool fireColliderToggles;
+    
+    [ListView("Colliders List")] [UTEditor]
     public Collider[] colliderTargets;
+    
+    [ListView("Colliders List")]
+    #if !COMPILER_UDONSHARP && UNITY_EDITOR
+    [Popup(PopupAttribute.PopupSource.Method, "@goToggleOptions", true)]
+    #endif
+    [UTEditor]
     public string[] colliderToggleEvents;
+    
+    [SectionHeader("Audio")] [UTEditor]
     public bool fireAudioEvents;
+    
+    [HelpBox("Playing many audio clips at once is performance heavy, please be considerate when using these.")]
+    [ListView("Audio List")] [UTEditor]
     public AudioSource[] audioSources;
+    [ListView("Audio List")] [UTEditor]
     public AudioClip[] audioClips;
 
     private bool delayActive;
-    public float delayExpire;
+    private float delayExpire;
 
+    [Button("Activate")]
     public void Activate() {
       active = true;
     }
 
+    [Button("Deactivate")]
     public void Deactivate() {
       active = false;
     }
 
+    [Button("Toggle")]
     public void Toggle() {
       active = !active;
     }
 
+    [Button("Trigger")]
     public void Trigger() {
       if (!active) return;
       if (fireAfterDelay) {
