@@ -61,16 +61,20 @@ namespace UdonToolkit{
 
   public class SectionHeaderAttribute : PropertyModifierAttribute {
     public string text;
-    private float mHeight;
+    private float mHeight = 20;
     private bool isInList;
+    private bool savedHeight;
 
     public SectionHeaderAttribute(string text) {
       this.text = text;
-      var size = EditorStyles.helpBox.CalcSize(new GUIContent(text));
-      mHeight = size.y;
     }
 
     public override float GetHeight(SerializedProperty property, GUIContent label, float height) {
+      if (!savedHeight) {
+        var size = EditorStyles.helpBox.CalcSize(new GUIContent(text));
+        mHeight = size.y;
+        savedHeight = true;
+      }
       if (property.name == "data" && property.depth > 0) {
         isInList = true;
         return height;
@@ -479,6 +483,68 @@ namespace UdonToolkit{
     public ButtonAttribute(string text, bool activeInEditMode) {
       this.text = text;
       this.activeInEditMode = activeInEditMode;
+    }
+  }
+}
+#else
+using System;
+using UnityEditor;
+
+namespace UdonToolkit {
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class SectionHeaderAttribute: Attribute {
+    public SectionHeaderAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class OnValueChangedAttribute : Attribute {
+    public OnValueChangedAttribute(string methodName) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class UTEditorAttribute : Attribute {
+    public UTEditorAttribute() {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class ListViewAttribute : Attribute {
+    public ListViewAttribute(string name) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class PopupAttribute : Attribute {
+    public enum PopupSource {
+      Method,
+      Animator,
+      Shader,
+      UdonBehaviour
+    }
+    public PopupAttribute(object a, object b, object c) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class ToggleAttribute : Attribute {
+    public ToggleAttribute() {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  public class ButtonAttribute : Attribute {
+    public ButtonAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class HelpBoxAttribute : Attribute {
+    public HelpBoxAttribute(object a) {
+    }
+
+    public HelpBoxAttribute(object a, object b) {
     }
   }
 }
