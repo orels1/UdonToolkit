@@ -12,7 +12,6 @@ namespace UdonToolkit {
   [HelpMessage("This component tracks if objects cross ALL or ANY of the boundaries specified, " +
                "useful for checking if something is above / below a global threshold.\n" +
                "This will fire once and disable itself, send an \"Enable\" event to this component to re-enable the check")]
-  [ControlledBehaviour(typeof(ObjectBoundaryTrigger))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#object-boundary-trigger")]
   public class ObjectBoundaryTriggerController: UTController {
     [SectionHeader("General")] [UdonPublic]

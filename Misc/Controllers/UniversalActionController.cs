@@ -7,7 +7,6 @@ namespace UdonToolkit {
   [CustomName("Universal Action")]
   [HelpMessage(
     "This component expects a \"Trigger\" event to fire.")]
-  [ControlledBehaviour(typeof(UniversalAction))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#universal-action")]
   public class UniversalActionController : UTController {
     [SectionHeader("General")][UdonPublic] public bool active = true;

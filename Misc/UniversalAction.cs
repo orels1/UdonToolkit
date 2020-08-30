@@ -47,7 +47,7 @@ namespace UdonToolkit {
     public NetworkEventTarget networkTarget;
     
     [ListView("Udon Events List")] [UTEditor]
-    public Component[] udonTargets;
+    public UdonSharpBehaviour[] udonTargets;
     
     [ListView("Udon Events List")]
     #if !COMPILER_UDONSHARP && UNITY_EDITOR
@@ -153,7 +153,7 @@ namespace UdonToolkit {
     private void FireUdonEvents() {
       if (!fireUdonEvents) return;
       for (int i = 0; i < udonTargets.Length; i++) {
-        var uB = (UdonBehaviour) udonTargets[i];
+        var uB = udonTargets[i];
         if (networked) {
           uB.SendCustomNetworkEvent(networkTarget, udonEvents[i]);
           continue;

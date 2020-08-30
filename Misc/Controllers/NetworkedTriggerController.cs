@@ -8,7 +8,6 @@ namespace UdonToolkit {
   [HelpMessage(
     "This component waits for a \"Trigger\" custom event, e.g. from a UI Button, and calls a network event on all the provided behaviours. " +
     "You can disable this object safely to save a bit of performance - it will still work as expected.")]
-  [ControlledBehaviour(typeof(NetworkedTrigger))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#networked-trigger")]
   public class NetworkedTriggerController : UTController {
     [SectionHeader("General")] [UdonPublic]

@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace UdonToolkit {
   [CustomName("Fog Adjustment")]
-  [ControlledBehaviour(typeof(FogAdjustment))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#fog-adjustment")]
   public class FogAdjustmentController : UTController {
     [HideInInspector] public bool isLinear;

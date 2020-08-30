@@ -3,28 +3,47 @@ using UnityEngine;
 using VRC.SDKBase;
 
 namespace UdonToolkit {
-  [AddComponentMenu("")]
+  [CustomName("Universal Tracker")]
+  [HelpMessage(
+    "This component will take the specified Bone or Tracking Target and copy its position/rotation to the specified Target Transform. " +
+    "You can attach all sorts of objects to the player in that way.")]
+  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#universal-tracker")]
   public class UniversalTracker : UdonSharpBehaviour {
-    [Header("Tracking Data")] public Transform targetTransform;
-    public VRCPlayerApi.TrackingDataType trackingTarget;
+    [SectionHeader("Tracking Target")] [UTEditor]
+    public Transform targetTransform;
+    public bool trackBone;
+    public bool trackPlayerBase;
+    public bool trackPlayspace;
+    
+    #if !COMPILER_UDONSHARP && UNITY_EDITOR
+    public bool HideTrackDataDropdown() {
+      return trackBone || trackPlayerBase || trackPlayspace;
+    }
 
-    [Space(10f)] [Header("Bone Tracking")] public bool trackBone;
+    public bool HideTrackBoneDropdown() {
+      return !trackBone || trackPlayerBase || trackPlayspace;
+    }
+    #endif
+
+    [HideIf("HideTrackDataDropdown")] [UTEditor]
+    public VRCPlayerApi.TrackingDataType trackingTarget;
+    
+    [HideIf("HideTrackBoneDropdown")] [UTEditor]
     public HumanBodyBones bone = HumanBodyBones.Hips;
 
-    public bool trackPlayerBase;
-
-    [Space(10f)] public bool trackPosition = true;
+    [HideIf("@trackPlayspace")][UTEditor]
+    public bool trackPosition = true;
+    [HideIf("@trackPlayspace")][UTEditor]
     public bool trackRotation = true;
-    public bool trackPlayspace;
 
+    [SectionHeader("Tracking Correction")]
+    [HelpBox("The target transform will be rotated by this angles after copying source transforms.")]
+    [UTEditor]
     public Vector3 rotateBy = new Vector3(0, 45f, 0);
-
-    [Space(15f)] [Header("Editor Hacks")] public bool followMainCamera;
 
     private VRCPlayerApi player;
     private bool isEditor = true;
     private VRCPlayerApi.TrackingData trackingData;
-    private GameObject mainCamera;
     private Vector3 offsetPos;
     private float oldRot;
     private float offsetRot;
@@ -32,8 +51,7 @@ namespace UdonToolkit {
     private void Start() {
       player = Networking.LocalPlayer;
       if (player == null) {
-        if (!followMainCamera) return;
-        mainCamera = GameObject.Find("Main Camera");
+        return;
       }
       if (trackPlayspace) {
         var targetPos = player.GetPosition();
@@ -54,10 +72,6 @@ namespace UdonToolkit {
 
     private void Update() {
       if (isEditor) {
-        if (!followMainCamera) return;
-        var cameraPos = mainCamera.transform.position;
-        var cameraRot = mainCamera.transform.rotation;
-        targetTransform.SetPositionAndRotation(cameraPos, cameraRot);
         return;
       }
 

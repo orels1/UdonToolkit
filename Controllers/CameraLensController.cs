@@ -9,7 +9,6 @@ using VRC.Udon.Common.Interfaces;
 
 namespace CustomControllers {
   [CustomName("Camera Lens")]
-  [ControlledBehaviour(typeof(CameraLens))]
   public class CameraLensController : UTController {
     [SectionHeader("General")]
     [UdonPublic] public bool active;

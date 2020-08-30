@@ -8,7 +8,6 @@ using VRC.Udon.Common.Interfaces;
 namespace UdonToolkit {
   [CustomName("Area Trigger")]
   [HelpMessage("It is recommended to put Area Triggers on a MirrorReflection layer unless they need a custom layer.")]
-  [ControlledBehaviour(typeof(AreaTrigger))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#area-trigger")]
   public class AreaTriggerController : UTController {
     [SectionHeader("General")]

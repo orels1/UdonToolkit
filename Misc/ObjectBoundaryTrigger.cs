@@ -6,17 +6,63 @@ using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
+  [CustomName("Object Boundary Trigger")]
+  [HelpMessage("This component tracks if objects cross ALL or ANY of the boundaries specified, " +
+               "useful for checking if something is above / below a global threshold.\n" +
+               "This will fire once and disable itself, send an \"Enable\" event to this component to re-enable the check")]
+  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#object-boundary-trigger")]
     public class ObjectBoundaryTrigger : UdonSharpBehaviour {
+      [SectionHeader("General")] [UTEditor]
       public bool active = true;
       public Transform target;
+      
+      [HelpBox("Enabling cross mode will make the trigger run every time the setup conditions are met or not met anymore.\nThis is useful if you want to toggle something when the target object goes below some Y position and agan - when it comes back")]
+      [UTEditor]
       public bool crossMode;
+      
+      #if !COMPILER_UDONSHARP && UNITY_EDITOR
+      [NonSerialized] public string[] testOptions = {
+        "ALL",
+        "ANY"
+      };
+      
+      [Popup(PopupAttribute.PopupSource.Method, "@testOptions")]
+      #endif
+      [UTEditor]
       public string testMode = "ALL";
+      
+      [ListView("Boundary List")]
+      #if !COMPILER_UDONSHARP && UNITY_EDITOR
+      [Popup(PopupAttribute.PopupSource.Method, "@compareOptions", true)]
+      #endif
+      [UTEditor]
       public string[] boundaryCompares;
+      
+      #if !COMPILER_UDONSHARP && UNITY_EDITOR
+      [NonSerialized] public string[] compareOptions = {
+        "Above X",
+        "Above Y",
+        "Above Z",
+        "Below X",
+        "Below Y",
+        "Below Z"
+      };
+      #endif
+      
+      [ListView("Boundary List")][UTEditor]
       public float[] boundaryCoords;
 
       public bool networked;
       public NetworkEventTarget networkTarget;
-      public Component[] udonTargets;
+      
+      [ListView("Udon Events List")]
+      public UdonSharpBehaviour[] udonTargets;
+      
+      [ListView("Udon Events List")]
+      #if !COMPILER_UDONSHARP && UNITY_EDITOR
+      [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@udonTargets", true)]
+      #endif
+      [UTEditor]
       public string[] udonEvents;
 
       private bool oldResult;
@@ -49,14 +95,17 @@ namespace UdonToolkit {
         Deactivate();
       }
 
+      [Button("Activate")]
       public void Activate() {
         active = true;
       }
 
+      [Button("Deactivate")]
       public void Deactivate() {
         active = false;
       }
 
+      [Button("Toggle")]
       public void Toggle() {
         active = !active;
       }
@@ -80,13 +129,14 @@ namespace UdonToolkit {
         }
       }
 
+      [Button("Trigger")]
       public void Trigger() {
         FireTriggers();
       }
       
       private void FireTriggers() {
         for (int i = 0; i < udonTargets.Length; i++) {
-          var uB = (UdonBehaviour) udonTargets[i];
+          var uB = udonTargets[i];
           if (!networked) {
             uB.SendCustomEvent(udonEvents[i]);
             continue;

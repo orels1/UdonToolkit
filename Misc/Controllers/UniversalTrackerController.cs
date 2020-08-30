@@ -8,7 +8,6 @@ namespace UdonToolkit {
   [HelpMessage(
     "This component will take the specified Bone or Tracking Target and copy its position/rotation to the specified Target Transform. " +
     "You can attach all sorts of objects to the player in that way.")]
-  [ControlledBehaviour(typeof(UniversalTracker))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#universal-tracker")]
   public class UniversalTrackerController : UTController {
     [SectionHeader("Tracking Target")] [UdonPublic]

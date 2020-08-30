@@ -9,7 +9,6 @@ using VRC.Udon;
 
 namespace UdonToolkit {
   [CustomName("UI Readout")]
-  [ControlledBehaviour(typeof(UIReadout))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#ui-readout")]
   public class UIReadoutController: UTController {
     [SectionHeader("General")] [UdonPublic]

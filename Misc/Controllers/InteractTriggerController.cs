@@ -7,7 +7,6 @@ using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
   [CustomName("Interact Trigger")]
-  [ControlledBehaviour(typeof(InteractTrigger))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#interact-trigger")]
   public class InteractTriggerController : UTController {
     [SectionHeader("General")] [UdonPublic]

@@ -14,1354 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedUdonProgramAsset: {fileID: 11400000, guid: 4c5ed029f59e8924bbf1d7e9db1ae071,
     type: 2}
-  udonAssembly: ".data_start\n\n    .export active\n    .export networked\n    .export
-    networkTarget\n    .export udonTargets\n    .export udonEvents\n\n    __refl_const_intnl_udonTypeID:
-    %SystemInt64, null\n    __refl_const_intnl_udonTypeName: %SystemString, null\n
-    \   active: %SystemBoolean, null\n    networked: %SystemBoolean, null\n    udonTargets:
-    %UnityEngineComponentArray, null\n    networkTarget: %VRCUdonCommonInterfacesNetworkEventTarget,
-    null\n    udonEvents: %SystemStringArray, null\n    col: %UnityEngineCollider,
-    null\n    __0_this_intnl_UnityEngineGameObject: %UnityEngineGameObject, this\n
-    \   __0_i_Int32: %SystemInt32, null\n    __0_uB_UdonBehaviour: %VRCUdonUdonBehaviour,
-    null\n    __0_const_intnl_SystemBoolean: %SystemBoolean, null\n    __1_const_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __0_const_intnl_SystemInt32: %SystemInt32, null\n    __1_const_intnl_SystemInt32:
-    %SystemInt32, null\n    __0_const_intnl_SystemObject: %SystemObject, null\n    __0_const_intnl_SystemType:
-    %SystemType, null\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
-    \   __0_const_intnl_SystemUInt32: %SystemUInt32, null\n    __0_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __1_intnl_SystemBoolean: %SystemBoolean, null\n    __2_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __3_intnl_SystemBoolean: %SystemBoolean, null\n    __4_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __5_intnl_SystemBoolean: %SystemBoolean, null\n    __6_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __7_intnl_SystemBoolean: %SystemBoolean, null\n    __0_intnl_UnityEngineComponent:
-    %UnityEngineComponent, null\n    __0_intnl_SystemInt32: %SystemInt32, null\n    __1_intnl_SystemInt32:
-    %SystemInt32, null\n    __0_intnl_VRCUdonCommonInterfacesNetworkEventTarget: %VRCUdonCommonInterfacesNetworkEventTarget,
-    null\n    __0_intnl_SystemObject: %SystemObject, null\n    __1_intnl_SystemObject:
-    %SystemObject, null\n    __2_intnl_SystemObject: %SystemObject, null\n    __0_intnl_SystemString:
-    %SystemString, null\n    __0_intnl_UnityEngineTransform: %UnityEngineTransform,
-    null\n    __0_intnl_VRCUdonCommonInterfacesIUdonEventReceiver: %VRCUdonUdonBehaviour,
-    null\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\n\n.data_end\n\n.code_start\n
-    \   .export _start\n        \n    _start:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, __0_this_intnl_UnityEngineGameObject\n        PUSH, __0_intnl_UnityEngineTransform\n
-    \       EXTERN, \"UnityEngineGameObject.__get_transform__UnityEngineTransform\"\n
-    \       PUSH, __0_intnl_UnityEngineTransform\n        PUSH, __0_const_intnl_SystemType\n
-    \       PUSH, col\n        EXTERN, \"UnityEngineCollider.__GetComponent__T\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export _interact\n
-    \       \n    _interact:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, active\n        PUSH, __0_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000098\n        PUSH,
-    __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\n        PUSH, __0_const_intnl_exitJumpLoc_UInt32\n
-    \       JUMP, 0x0000029C\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
-    \       \n    .export Activate\n        \n    Activate:\n        \n        PUSH,
-    __0_const_intnl_SystemUInt32\n        PUSH, col\n        PUSH, __0_intnl_SystemObject\n
-    \       COPY\n        PUSH, __0_intnl_SystemObject\n        PUSH, __0_const_intnl_SystemObject\n
-    \       PUSH, __1_intnl_SystemBoolean\n        EXTERN, \"SystemObject.__op_Inequality__SystemObject_SystemObject__SystemBoolean\"\n
-    \       PUSH, __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000120\n        PUSH,
-    col\n        PUSH, __0_const_intnl_SystemBoolean\n        EXTERN, \"UnityEngineCollider.__set_enabled__SystemBoolean__SystemVoid\"\n
-    \       PUSH, __0_const_intnl_SystemBoolean\n        PUSH, active\n        COPY\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export Deactivate\n
-    \       \n    Deactivate:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, col\n        PUSH, __1_intnl_SystemObject\n        COPY\n        PUSH,
-    __1_intnl_SystemObject\n        PUSH, __0_const_intnl_SystemObject\n        PUSH,
-    __2_intnl_SystemBoolean\n        EXTERN, \"SystemObject.__op_Inequality__SystemObject_SystemObject__SystemBoolean\"\n
-    \       PUSH, __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000001AC\n        PUSH,
-    col\n        PUSH, __1_const_intnl_SystemBoolean\n        EXTERN, \"UnityEngineCollider.__set_enabled__SystemBoolean__SystemVoid\"\n
-    \       PUSH, __1_const_intnl_SystemBoolean\n        PUSH, active\n        COPY\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export Toggle\n
-    \       \n    Toggle:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, col\n        PUSH, __2_intnl_SystemObject\n        COPY\n        PUSH,
-    __2_intnl_SystemObject\n        PUSH, __0_const_intnl_SystemObject\n        PUSH,
-    __3_intnl_SystemBoolean\n        EXTERN, \"SystemObject.__op_Inequality__SystemObject_SystemObject__SystemBoolean\"\n
-    \       PUSH, __3_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000268\n        PUSH,
-    col\n        PUSH, __4_intnl_SystemBoolean\n        EXTERN, \"UnityEngineCollider.__get_enabled__SystemBoolean\"\n
-    \       PUSH, __4_intnl_SystemBoolean\n        PUSH, __5_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, col\n        PUSH, __5_intnl_SystemBoolean\n        EXTERN, \"UnityEngineCollider.__set_enabled__SystemBoolean__SystemVoid\"\n
-    \       PUSH, active\n        PUSH, active\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    FireTriggers:\n
-    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __0_const_intnl_SystemInt32\n
-    \       PUSH, __0_i_Int32\n        COPY\n        PUSH, udonTargets\n        PUSH,
-    __0_intnl_SystemInt32\n        EXTERN, \"UnityEngineComponentArray.__get_Length__SystemInt32\"\n
-    \       PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH,
-    __6_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000438\n        PUSH,
-    udonTargets\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_UnityEngineComponent\n
-    \       EXTERN, \"UnityEngineComponentArray.__Get__SystemInt32__UnityEngineComponent\"\n
-    \       PUSH, __0_intnl_UnityEngineComponent\n        PUSH, __0_intnl_VRCUdonCommonInterfacesIUdonEventReceiver\n
-    \       COPY\n        PUSH, __0_intnl_VRCUdonCommonInterfacesIUdonEventReceiver\n
-    \       PUSH, __0_uB_UdonBehaviour\n        COPY\n        PUSH, networked\n        PUSH,
-    __7_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __7_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000003A8\n        PUSH,
-    udonEvents\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemString\n
-    \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_uB_UdonBehaviour\n        PUSH, __0_intnl_SystemString\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\n
-    \       JUMP, 0x000003FC\n        PUSH, udonEvents\n        PUSH, __0_i_Int32\n
-    \       PUSH, __0_intnl_SystemString\n        EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n
-    \       PUSH, __0_uB_UdonBehaviour\n        PUSH, networkTarget\n        PUSH,
-    __0_intnl_VRCUdonCommonInterfacesNetworkEventTarget\n        COPY # Copy-on-write
-    symbol value dirtied\n        PUSH, networkTarget\n        PUSH, __0_intnl_SystemString\n
-    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\n
-    \       PUSH, __0_i_Int32\n        PUSH, __1_intnl_SystemInt32\n        COPY\n
-    \       PUSH, __0_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
-    __0_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x000002B0\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
-    \       \n.code_end\n"
+  udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 241ef64bc304fa94a96989e3168a1fea, type: 3}
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
-  debugInfo:
-    serializedDebugSpans:
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 0
-      line: 0
-      lineChar: 0
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 0
-      line: 0
-      lineChar: 0
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 6
-      line: 0
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 6
-      endSourceChar: 15
-      line: 0
-      lineChar: 6
-      spanCodeSection: "System;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 15
-      endSourceChar: 21
-      line: 1
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 21
-      endSourceChar: 33
-      line: 1
-      lineChar: 6
-      spanCodeSection: "UdonSharp;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 33
-      endSourceChar: 39
-      line: 2
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 39
-      endSourceChar: 53
-      line: 2
-      lineChar: 6
-      spanCodeSection: "UnityEngine;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 53
-      endSourceChar: 59
-      line: 3
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 59
-      endSourceChar: 59
-      line: 3
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 59
-      endSourceChar: 71
-      line: 3
-      lineChar: 6
-      spanCodeSection: UnityEngine.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 71
-      endSourceChar: 76
-      line: 3
-      lineChar: 18
-      spanCodeSection: "UI;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 76
-      endSourceChar: 82
-      line: 4
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 82
-      endSourceChar: 82
-      line: 4
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 82
-      endSourceChar: 86
-      line: 4
-      lineChar: 6
-      spanCodeSection: VRC.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 86
-      endSourceChar: 96
-      line: 4
-      lineChar: 10
-      spanCodeSection: "SDKBase;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 96
-      endSourceChar: 102
-      line: 5
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 102
-      endSourceChar: 102
-      line: 5
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 102
-      endSourceChar: 106
-      line: 5
-      lineChar: 6
-      spanCodeSection: VRC.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 106
-      endSourceChar: 113
-      line: 5
-      lineChar: 10
-      spanCodeSection: "Udon;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 113
-      endSourceChar: 119
-      line: 6
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 119
-      endSourceChar: 119
-      line: 6
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 119
-      endSourceChar: 119
-      line: 6
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 119
-      endSourceChar: 119
-      line: 6
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 119
-      endSourceChar: 123
-      line: 6
-      lineChar: 6
-      spanCodeSection: VRC.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 123
-      endSourceChar: 128
-      line: 6
-      lineChar: 10
-      spanCodeSection: Udon.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 128
-      endSourceChar: 135
-      line: 6
-      lineChar: 15
-      spanCodeSection: Common.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 135
-      endSourceChar: 150
-      line: 6
-      lineChar: 22
-      spanCodeSection: "Interfaces;\r\n\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 150
-      endSourceChar: 179
-      line: 8
-      lineChar: 0
-      spanCodeSection: "namespace UdonToolkit {\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 179
-      endSourceChar: 208
-      line: 9
-      lineChar: 4
-      spanCodeSection: 'public class InteractTrigger '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 208
-      endSourceChar: 210
-      line: 9
-      lineChar: 33
-      spanCodeSection: ': '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 210
-      endSourceChar: 210
-      line: 9
-      lineChar: 35
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 210
-      endSourceChar: 238
-      line: 9
-      lineChar: 35
-      spanCodeSection: "UdonSharpBehaviour {\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 238
-      endSourceChar: 245
-      line: 10
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 245
-      endSourceChar: 245
-      line: 10
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 245
-      endSourceChar: 272
-      line: 10
-      lineChar: 13
-      spanCodeSection: "bool active = true;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 272
-      endSourceChar: 279
-      line: 11
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 279
-      endSourceChar: 279
-      line: 11
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 279
-      endSourceChar: 302
-      line: 11
-      lineChar: 13
-      spanCodeSection: "bool networked;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 302
-      endSourceChar: 309
-      line: 12
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 309
-      endSourceChar: 309
-      line: 12
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 309
-      endSourceChar: 350
-      line: 12
-      lineChar: 13
-      spanCodeSection: "NetworkEventTarget networkTarget;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 350
-      endSourceChar: 357
-      line: 13
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 357
-      endSourceChar: 357
-      line: 13
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 357
-      endSourceChar: 357
-      line: 13
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 357
-      endSourceChar: 389
-      line: 13
-      lineChar: 13
-      spanCodeSection: "Component[] udonTargets;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 389
-      endSourceChar: 396
-      line: 14
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 396
-      endSourceChar: 396
-      line: 14
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 396
-      endSourceChar: 396
-      line: 14
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 396
-      endSourceChar: 426
-      line: 14
-      lineChar: 13
-      spanCodeSection: "string[] udonEvents;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 426
-      endSourceChar: 434
-      line: 16
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 434
-      endSourceChar: 434
-      line: 16
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 434
-      endSourceChar: 457
-      line: 16
-      lineChar: 14
-      spanCodeSection: "Collider col;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: 7
-      startSourceChar: 457
-      endSourceChar: 478
-      line: 18
-      lineChar: 6
-      spanCodeSection: 'private void Start() '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 478
-      endSourceChar: 489
-      line: 18
-      lineChar: 27
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 489
-      endSourceChar: 489
-      line: 19
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 489
-      endSourceChar: 489
-      line: 19
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 489
-      endSourceChar: 495
-      line: 19
-      lineChar: 8
-      spanCodeSection: 'col = '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 495
-      endSourceChar: 495
-      line: 19
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 495
-      endSourceChar: 495
-      line: 19
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 495
-      endSourceChar: 506
-      line: 19
-      lineChar: 14
-      spanCodeSection: gameObject.
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 506
-      endSourceChar: 518
-      line: 19
-      lineChar: 25
-      spanCodeSection: GetComponent
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 518
-      endSourceChar: 519
-      line: 19
-      lineChar: 37
-      spanCodeSection: <
-    - startInstruction: 8
-      endInstruction: 83
-      startSourceChar: 519
-      endSourceChar: 550
-      line: 19
-      lineChar: 38
-      spanCodeSection: "Collider>();\r\n      }\r\n\r\n      "
-    - startInstruction: 84
-      endInstruction: 91
-      startSourceChar: 550
-      endSourceChar: 582
-      line: 22
-      lineChar: 6
-      spanCodeSection: 'public override void Interact() '
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 582
-      endSourceChar: 593
-      line: 22
-      lineChar: 38
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 593
-      endSourceChar: 597
-      line: 23
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 92
-      endInstruction: 91
-      startSourceChar: 597
-      endSourceChar: 598
-      line: 23
-      lineChar: 12
-      spanCodeSection: '!'
-    - startInstruction: 92
-      endInstruction: 131
-      startSourceChar: 598
-      endSourceChar: 606
-      line: 23
-      lineChar: 13
-      spanCodeSection: 'active) '
-    - startInstruction: 132
-      endInstruction: 151
-      startSourceChar: 606
-      endSourceChar: 623
-      line: 23
-      lineChar: 21
-      spanCodeSection: "return;\r\n        "
-    - startInstruction: 152
-      endInstruction: 151
-      startSourceChar: 623
-      endSourceChar: 623
-      line: 24
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 152
-      endInstruction: 151
-      startSourceChar: 623
-      endSourceChar: 623
-      line: 24
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 152
-      endInstruction: 187
-      startSourceChar: 623
-      endSourceChar: 657
-      line: 24
-      lineChar: 8
-      spanCodeSection: "FireTriggers();\r\n      }\r\n\r\n      "
-    - startInstruction: 188
-      endInstruction: 195
-      startSourceChar: 657
-      endSourceChar: 680
-      line: 27
-      lineChar: 6
-      spanCodeSection: 'public void Activate() '
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 680
-      endSourceChar: 691
-      line: 27
-      lineChar: 29
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 691
-      endSourceChar: 695
-      line: 28
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 695
-      endSourceChar: 695
-      line: 28
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 695
-      endSourceChar: 704
-      line: 28
-      lineChar: 12
-      spanCodeSection: '(object) '
-    - startInstruction: 196
-      endInstruction: 215
-      startSourceChar: 704
-      endSourceChar: 711
-      line: 28
-      lineChar: 21
-      spanCodeSection: 'col != '
-    - startInstruction: 216
-      endInstruction: 263
-      startSourceChar: 711
-      endSourceChar: 717
-      line: 28
-      lineChar: 28
-      spanCodeSection: 'null) '
-    - startInstruction: 264
-      endInstruction: 263
-      startSourceChar: 717
-      endSourceChar: 730
-      line: 28
-      lineChar: 34
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 264
-      endInstruction: 263
-      startSourceChar: 730
-      endSourceChar: 730
-      line: 29
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 264
-      endInstruction: 263
-      startSourceChar: 730
-      endSourceChar: 730
-      line: 29
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 264
-      endInstruction: 263
-      startSourceChar: 730
-      endSourceChar: 730
-      line: 29
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 264
-      endInstruction: 263
-      startSourceChar: 730
-      endSourceChar: 734
-      line: 29
-      lineChar: 10
-      spanCodeSection: col.
-    - startInstruction: 264
-      endInstruction: 263
-      startSourceChar: 734
-      endSourceChar: 744
-      line: 29
-      lineChar: 14
-      spanCodeSection: 'enabled = '
-    - startInstruction: 264
-      endInstruction: 287
-      startSourceChar: 744
-      endSourceChar: 770
-      line: 29
-      lineChar: 24
-      spanCodeSection: "true;\r\n        }\r\n        "
-    - startInstruction: 288
-      endInstruction: 287
-      startSourceChar: 770
-      endSourceChar: 770
-      line: 31
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 288
-      endInstruction: 287
-      startSourceChar: 770
-      endSourceChar: 770
-      line: 31
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 288
-      endInstruction: 287
-      startSourceChar: 770
-      endSourceChar: 779
-      line: 31
-      lineChar: 8
-      spanCodeSection: 'active = '
-    - startInstruction: 288
-      endInstruction: 327
-      startSourceChar: 779
-      endSourceChar: 803
-      line: 31
-      lineChar: 17
-      spanCodeSection: "true;\r\n      }\r\n\r\n      "
-    - startInstruction: 328
-      endInstruction: 335
-      startSourceChar: 803
-      endSourceChar: 828
-      line: 34
-      lineChar: 6
-      spanCodeSection: 'public void Deactivate() '
-    - startInstruction: 336
-      endInstruction: 335
-      startSourceChar: 828
-      endSourceChar: 839
-      line: 34
-      lineChar: 31
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 336
-      endInstruction: 335
-      startSourceChar: 839
-      endSourceChar: 843
-      line: 35
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 336
-      endInstruction: 335
-      startSourceChar: 843
-      endSourceChar: 843
-      line: 35
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 336
-      endInstruction: 335
-      startSourceChar: 843
-      endSourceChar: 852
-      line: 35
-      lineChar: 12
-      spanCodeSection: '(object) '
-    - startInstruction: 336
-      endInstruction: 355
-      startSourceChar: 852
-      endSourceChar: 859
-      line: 35
-      lineChar: 21
-      spanCodeSection: 'col != '
-    - startInstruction: 356
-      endInstruction: 403
-      startSourceChar: 859
-      endSourceChar: 865
-      line: 35
-      lineChar: 28
-      spanCodeSection: 'null) '
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 865
-      endSourceChar: 878
-      line: 35
-      lineChar: 34
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 878
-      endSourceChar: 878
-      line: 36
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 878
-      endSourceChar: 878
-      line: 36
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 878
-      endSourceChar: 878
-      line: 36
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 878
-      endSourceChar: 882
-      line: 36
-      lineChar: 10
-      spanCodeSection: col.
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 882
-      endSourceChar: 892
-      line: 36
-      lineChar: 14
-      spanCodeSection: 'enabled = '
-    - startInstruction: 404
-      endInstruction: 427
-      startSourceChar: 892
-      endSourceChar: 919
-      line: 36
-      lineChar: 24
-      spanCodeSection: "false;\r\n        }\r\n        "
-    - startInstruction: 428
-      endInstruction: 427
-      startSourceChar: 919
-      endSourceChar: 919
-      line: 38
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 428
-      endInstruction: 427
-      startSourceChar: 919
-      endSourceChar: 919
-      line: 38
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 428
-      endInstruction: 427
-      startSourceChar: 919
-      endSourceChar: 928
-      line: 38
-      lineChar: 8
-      spanCodeSection: 'active = '
-    - startInstruction: 428
-      endInstruction: 467
-      startSourceChar: 928
-      endSourceChar: 953
-      line: 38
-      lineChar: 17
-      spanCodeSection: "false;\r\n      }\r\n\r\n      "
-    - startInstruction: 468
-      endInstruction: 475
-      startSourceChar: 953
-      endSourceChar: 974
-      line: 41
-      lineChar: 6
-      spanCodeSection: 'public void Toggle() '
-    - startInstruction: 476
-      endInstruction: 475
-      startSourceChar: 974
-      endSourceChar: 985
-      line: 41
-      lineChar: 27
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 476
-      endInstruction: 475
-      startSourceChar: 985
-      endSourceChar: 989
-      line: 42
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 476
-      endInstruction: 475
-      startSourceChar: 989
-      endSourceChar: 989
-      line: 42
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 476
-      endInstruction: 475
-      startSourceChar: 989
-      endSourceChar: 998
-      line: 42
-      lineChar: 12
-      spanCodeSection: '(object) '
-    - startInstruction: 476
-      endInstruction: 495
-      startSourceChar: 998
-      endSourceChar: 1005
-      line: 42
-      lineChar: 21
-      spanCodeSection: 'col != '
-    - startInstruction: 496
-      endInstruction: 543
-      startSourceChar: 1005
-      endSourceChar: 1011
-      line: 42
-      lineChar: 28
-      spanCodeSection: 'null) '
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1011
-      endSourceChar: 1024
-      line: 42
-      lineChar: 34
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1024
-      endSourceChar: 1024
-      line: 43
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1024
-      endSourceChar: 1024
-      line: 43
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1024
-      endSourceChar: 1024
-      line: 43
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1024
-      endSourceChar: 1028
-      line: 43
-      lineChar: 10
-      spanCodeSection: col.
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1028
-      endSourceChar: 1038
-      line: 43
-      lineChar: 14
-      spanCodeSection: 'enabled = '
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1038
-      endSourceChar: 1039
-      line: 43
-      lineChar: 24
-      spanCodeSection: '!'
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1039
-      endSourceChar: 1039
-      line: 43
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1039
-      endSourceChar: 1043
-      line: 43
-      lineChar: 25
-      spanCodeSection: col.
-    - startInstruction: 544
-      endInstruction: 615
-      startSourceChar: 1043
-      endSourceChar: 1072
-      line: 43
-      lineChar: 29
-      spanCodeSection: "enabled;\r\n        }\r\n        "
-    - startInstruction: 616
-      endInstruction: 615
-      startSourceChar: 1072
-      endSourceChar: 1072
-      line: 45
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 616
-      endInstruction: 615
-      startSourceChar: 1072
-      endSourceChar: 1072
-      line: 45
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 616
-      endInstruction: 615
-      startSourceChar: 1072
-      endSourceChar: 1081
-      line: 45
-      lineChar: 8
-      spanCodeSection: 'active = '
-    - startInstruction: 616
-      endInstruction: 615
-      startSourceChar: 1081
-      endSourceChar: 1082
-      line: 45
-      lineChar: 17
-      spanCodeSection: '!'
-    - startInstruction: 616
-      endInstruction: 659
-      startSourceChar: 1082
-      endSourceChar: 1114
-      line: 45
-      lineChar: 18
-      spanCodeSection: "active;\r\n      }\r\n      \r\n      "
-    - startInstruction: 660
-      endInstruction: 667
-      startSourceChar: 1114
-      endSourceChar: 1142
-      line: 48
-      lineChar: 6
-      spanCodeSection: 'private void FireTriggers() '
-    - startInstruction: 668
-      endInstruction: 667
-      startSourceChar: 1142
-      endSourceChar: 1153
-      line: 48
-      lineChar: 34
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 668
-      endInstruction: 667
-      startSourceChar: 1153
-      endSourceChar: 1158
-      line: 49
-      lineChar: 8
-      spanCodeSection: for (
-    - startInstruction: 668
-      endInstruction: 667
-      startSourceChar: 1158
-      endSourceChar: 1158
-      line: 49
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 668
-      endInstruction: 667
-      startSourceChar: 1158
-      endSourceChar: 1158
-      line: 49
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 668
-      endInstruction: 667
-      startSourceChar: 1158
-      endSourceChar: 1164
-      line: 49
-      lineChar: 13
-      spanCodeSection: 'int i '
-    - startInstruction: 668
-      endInstruction: 667
-      startSourceChar: 1164
-      endSourceChar: 1166
-      line: 49
-      lineChar: 19
-      spanCodeSection: '= '
-    - startInstruction: 668
-      endInstruction: 687
-      startSourceChar: 1166
-      endSourceChar: 1169
-      line: 49
-      lineChar: 21
-      spanCodeSection: '0; '
-    - startInstruction: 688
-      endInstruction: 687
-      startSourceChar: 1169
-      endSourceChar: 1169
-      line: 49
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 688
-      endInstruction: 687
-      startSourceChar: 1169
-      endSourceChar: 1173
-      line: 49
-      lineChar: 24
-      spanCodeSection: 'i < '
-    - startInstruction: 688
-      endInstruction: 687
-      startSourceChar: 1173
-      endSourceChar: 1173
-      line: 49
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 688
-      endInstruction: 687
-      startSourceChar: 1173
-      endSourceChar: 1185
-      line: 49
-      lineChar: 28
-      spanCodeSection: udonTargets.
-    - startInstruction: 688
-      endInstruction: 759
-      startSourceChar: 1185
-      endSourceChar: 1198
-      line: 49
-      lineChar: 40
-      spanCodeSection: 'Length; i++) '
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1198
-      endSourceChar: 1211
-      line: 49
-      lineChar: 53
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1211
-      endSourceChar: 1211
-      line: 50
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1211
-      endSourceChar: 1211
-      line: 50
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1211
-      endSourceChar: 1218
-      line: 50
-      lineChar: 10
-      spanCodeSection: 'var uB '
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1218
-      endSourceChar: 1220
-      line: 50
-      lineChar: 17
-      spanCodeSection: '= '
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1220
-      endSourceChar: 1236
-      line: 50
-      lineChar: 19
-      spanCodeSection: '(UdonBehaviour) '
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1236
-      endSourceChar: 1236
-      line: 50
-      lineChar: 35
-      spanCodeSection: 
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1236
-      endSourceChar: 1248
-      line: 50
-      lineChar: 35
-      spanCodeSection: udonTargets[
-    - startInstruction: 760
-      endInstruction: 759
-      startSourceChar: 1248
-      endSourceChar: 1248
-      line: 50
-      lineChar: 47
-      spanCodeSection: 
-    - startInstruction: 760
-      endInstruction: 831
-      startSourceChar: 1248
-      endSourceChar: 1263
-      line: 50
-      lineChar: 47
-      spanCodeSection: "i];\r\n          "
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 1263
-      endSourceChar: 1267
-      line: 51
-      lineChar: 10
-      spanCodeSection: if (
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 1267
-      endSourceChar: 1268
-      line: 51
-      lineChar: 14
-      spanCodeSection: '!'
-    - startInstruction: 832
-      endInstruction: 871
-      startSourceChar: 1268
-      endSourceChar: 1279
-      line: 51
-      lineChar: 15
-      spanCodeSection: 'networked) '
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1279
-      endSourceChar: 1294
-      line: 51
-      lineChar: 26
-      spanCodeSection: "{\r\n            "
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1294
-      endSourceChar: 1294
-      line: 52
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1294
-      endSourceChar: 1294
-      line: 52
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1294
-      endSourceChar: 1294
-      line: 52
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1294
-      endSourceChar: 1297
-      line: 52
-      lineChar: 12
-      spanCodeSection: uB.
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1297
-      endSourceChar: 1313
-      line: 52
-      lineChar: 15
-      spanCodeSection: SendCustomEvent(
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1313
-      endSourceChar: 1313
-      line: 52
-      lineChar: 31
-      spanCodeSection: 
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1313
-      endSourceChar: 1324
-      line: 52
-      lineChar: 31
-      spanCodeSection: udonEvents[
-    - startInstruction: 872
-      endInstruction: 871
-      startSourceChar: 1324
-      endSourceChar: 1324
-      line: 52
-      lineChar: 42
-      spanCodeSection: 
-    - startInstruction: 872
-      endInstruction: 927
-      startSourceChar: 1324
-      endSourceChar: 1342
-      line: 52
-      lineChar: 42
-      spanCodeSection: "i]);\r\n            "
-    - startInstruction: 928
-      endInstruction: 935
-      startSourceChar: 1342
-      endSourceChar: 1376
-      line: 53
-      lineChar: 12
-      spanCodeSection: "continue;\r\n          }\r\n          "
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1376
-      endSourceChar: 1376
-      line: 55
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1376
-      endSourceChar: 1376
-      line: 55
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1376
-      endSourceChar: 1376
-      line: 55
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1376
-      endSourceChar: 1379
-      line: 55
-      lineChar: 10
-      spanCodeSection: uB.
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1379
-      endSourceChar: 1402
-      line: 55
-      lineChar: 13
-      spanCodeSection: SendCustomNetworkEvent(
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1402
-      endSourceChar: 1417
-      line: 55
-      lineChar: 36
-      spanCodeSection: 'networkTarget, '
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1417
-      endSourceChar: 1417
-      line: 55
-      lineChar: 51
-      spanCodeSection: 
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1417
-      endSourceChar: 1428
-      line: 55
-      lineChar: 51
-      spanCodeSection: udonEvents[
-    - startInstruction: 936
-      endInstruction: 935
-      startSourceChar: 1428
-      endSourceChar: 1428
-      line: 55
-      lineChar: 62
-      spanCodeSection: 
-    - startInstruction: 936
-      endInstruction: 936
-      startSourceChar: 1428
-      endSourceChar: 1428
-      line: 55
-      lineChar: 62
-      spanCodeSection: 
   hasInteractEvent: 1
   serializationData:
     SerializedFormat: 2
@@ -1374,7 +31,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: fieldDefinitions
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.Compiler.FieldDefinition,
         UdonSharp.Editor]], mscorlib
     - Name: comparer
       Entry: 7
@@ -1394,10 +51,10 @@ MonoBehaviour:
       Data: active
     - Name: $v
       Entry: 7
-      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 2|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 3|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 4|System.RuntimeType, mscorlib
@@ -1433,7 +90,25 @@ MonoBehaviour:
       Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: General
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -1457,10 +132,10 @@ MonoBehaviour:
       Data: networked
     - Name: $v
       Entry: 7
-      Data: 6|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 8|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 7|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 9|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -1487,10 +162,28 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 10|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 11|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: Udon Events
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -1514,13 +207,13 @@ MonoBehaviour:
       Data: networkTarget
     - Name: $v
       Entry: 7
-      Data: 9|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 13|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 10|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 14|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 11|System.RuntimeType, mscorlib
+      Data: 15|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: VRC.Udon.Common.Interfaces.NetworkEventTarget, VRC.Udon.Common
@@ -1542,69 +235,6 @@ MonoBehaviour:
     - Name: symbolUniqueName
       Entry: 1
       Data: networkTarget
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 12|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: udonTargets
-    - Name: $v
-      Entry: 7
-      Data: 13|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 14|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 7
-      Data: 15|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: UnityEngine.Component[], UnityEngine.CoreModule
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: UnityEngineComponentArray
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: udonTargets
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: udonTargets
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -1637,16 +267,106 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: udonEvents
+      Data: udonTargets
     - Name: $v
       Entry: 7
-      Data: 17|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 17|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 18|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 18|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 19|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UdonSharp.UdonSharpBehaviour[], UdonSharp.Runtime
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineComponentArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: udonTargets
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: udonTargets
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 20|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 21|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Udon Events List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 22|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: udonEvents
+    - Name: $v
+      Entry: 7
+      Data: 23|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 24|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 25|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.String[], mscorlib
@@ -1676,10 +396,37 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 20|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 26|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 27|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Udon Events List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 28|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -1703,13 +450,13 @@ MonoBehaviour:
       Data: col
     - Name: $v
       Entry: 7
-      Data: 21|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 29|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 22|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 30|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 23|System.RuntimeType, mscorlib
+      Data: 31|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.Collider, UnityEngine.PhysicsModule
@@ -1739,7 +486,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 24|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 32|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

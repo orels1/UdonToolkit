@@ -7,7 +7,6 @@ using UnityEngine.UI;
 namespace UdonToolkit {
   [CustomName("Shader Feeder")]
   [HelpMessage("This is an advanced behaviour, its highly recommended to check out the docs by clicking the blue manual icon in the corner above. This behaviour might not play nicely with animations that touch materials")]
-  [ControlledBehaviour(typeof(ShaderFeeder))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#shader-feeder")]
   public class ShaderFeederController : UTController {
     [SectionHeader("General")] [UdonPublic]

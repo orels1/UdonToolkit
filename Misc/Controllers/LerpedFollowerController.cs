@@ -6,7 +6,6 @@ namespace UdonToolkit {
   [CustomName("Lerped Follower")]
   [HelpMessage("This component makes the Target Transform follow the Source Transform with linear interpolation. " +
                "Use this to make an object smoothly follow your target.")]
-  [ControlledBehaviour(typeof(LerpedFollower))]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#lerped-follower")]
   public class LerpedFollowerController : UTController {
     [SectionHeader("General")] [UdonPublic]
