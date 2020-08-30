@@ -5,25 +5,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using UdonSharp;
 using UdonSharpEditor;
+using UdonToolkit;
 using UnityEditor;
 using UnityEngine;
 using VRC.Udon;
 using VRC.Udon.Editor.ProgramSources;
 using VRC.Udon.Serialization.OdinSerializer.Utilities;
 
+
+[assembly:DefaultUdonSharpBehaviourEditor(typeof(UTEditor), "UdonToolkit Editor")]
+
 namespace UdonToolkit {
-  [CustomEditor(typeof(AreaTrigger), true), CanEditMultipleObjects]
+  [CustomEditor(typeof(UdonSharpBehaviour), true), CanEditMultipleObjects]
   public class UTEditor : UnityEditor.Editor {
     private string undoString = "Change UdonBehaviour properties";
-    private AreaTrigger t;
+    private UdonSharpBehaviour t;
     private Type cT;
-    private UdonProgramAsset uB;
-    private bool copiedValues;
+    private bool isPlaying;
 
 
     public override void OnInspectorGUI() {
-      t = (AreaTrigger) target;
+      isPlaying = !Application.isPlaying;
+      t = (UdonSharpBehaviour) target;
       if (cT == null) {
         cT = t.GetType();
         undoString = $"Update {cT.Name}";
@@ -48,23 +53,6 @@ namespace UdonToolkit {
       EditorGUI.BeginChangeCheck();
       serializedObject.Update();
 
-      // Auto UB Addition
-      if (t.GetComponent<UdonBehaviour>() == null) {
-        if (uB) {
-          var comp = t.gameObject.AddComponent<UdonBehaviour>();
-          comp.programSource = uB;
-        }
-        else {
-          var controlledBehAttr = cT.GetCustomAttributes(typeof(ControlledBehaviourAttribute))
-            .Select(i => i as ControlledBehaviourAttribute).ToArray();
-          if (controlledBehAttr.Any()) {
-            var comp = t.gameObject.AddComponent<UdonBehaviour>();
-            uB = controlledBehAttr[0].uB;
-            comp.programSource = uB;
-          }
-        }
-      }
-      
       // Help Box
       var helpBoxAttr = cT.GetCustomAttributes(typeof(HelpMessageAttribute))
         .Select(i => i as HelpMessageAttribute).ToArray();
@@ -88,9 +76,10 @@ namespace UdonToolkit {
       }
 
       // Extra Methods
-      var methods = cT.GetMethods().Where(i => i.GetCustomAttribute<ButtonAttribute>() != null)
-        .ToArray();
-      var buttons = cT.GetMethods().Select(i => i.GetCustomAttribute<ButtonAttribute>()).Where(i => i != null)
+      var methods = cT.GetMethods().Where(i => i.GetCustomAttribute<ButtonAttribute>() != null).ToArray();
+      var buttons = methods
+        .Select(i => i.GetCustomAttribute<ButtonAttribute>())
+        .Where(i => i != null)
         .ToArray();
       if (buttons.Any()) {
         UTStyles.RenderSectionHeader("Methods");
@@ -104,9 +93,14 @@ namespace UdonToolkit {
             EditorGUILayout.BeginHorizontal();
             rowEndI = Math.Min(i + rowBreak, buttons.Length - 1);
           }
-          EditorGUI.BeginDisabledGroup(!Application.isPlaying && !button.activeInEditMode);
+          EditorGUI.BeginDisabledGroup(isPlaying && !button.activeInEditMode);
           if (GUILayout.Button(button.text)) {
-            t.Invoke(methods[i].Name, 0);
+            if (button.activeInEditMode) {
+              methods[i].Invoke(t, new object[] {});
+            }
+            else {
+              UdonSharpEditorUtility.GetBackingUdonBehaviour(t).SendCustomEvent(methods[i].Name);
+            }
           }
           EditorGUI.EndDisabledGroup();
           if (i == buttons.Length - 1 && rowEndI != -100) {
@@ -116,7 +110,7 @@ namespace UdonToolkit {
       }
     }
 
-    protected virtual void DrawGUI(AreaTrigger t) {
+    protected virtual void DrawGUI(UdonSharpBehaviour t) {
       var property = serializedObject.GetIterator();
       var next = property.NextVisible(true);
       if (next) {
@@ -203,7 +197,7 @@ namespace UdonToolkit {
       RenderHelpBox(prop);
     }
 
-    private void HandleChangeCallback(AreaTrigger t, string changedCallback, SerializedProperty prop, SerializedProperty otherProp, object[] output) {
+    private void HandleChangeCallback(UdonSharpBehaviour t, string changedCallback, SerializedProperty prop, SerializedProperty otherProp, object[] output) {
       if (changedCallback == null) return;
       var m = cT.GetMethod(changedCallback);
       if (m == null) return;
@@ -394,7 +388,7 @@ namespace UdonToolkit {
             options = UTUtils.GetAnimatorTriggers(source.objectReferenceValue as Animator);
           }
           else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonBehaviour);
+            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
           }
           else if (sourceType == PopupAttribute.PopupSource.Shader) {
             var propsSource = UTUtils.GetValueThroughAttribute(source, leftPopup.methodName, out _);
@@ -426,7 +420,7 @@ namespace UdonToolkit {
             options = UTUtils.GetAnimatorTriggers(source.objectReferenceValue as Animator);
           }
           else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonBehaviour);
+            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
           }
           else if (sourceType == PopupAttribute.PopupSource.Shader) {
             var propsSource = UTUtils.GetValueThroughAttribute(source, rightPopup.methodName, out _);

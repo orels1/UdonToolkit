@@ -393,7 +393,7 @@ namespace UdonToolkit{
         options = UTUtils.GetAnimatorTriggers(source as Animator).Select(o => new GUIContent(o)).ToArray();
       }
       else if (sourceType == PopupSource.UdonBehaviour) {
-        options = UTUtils.GetUdonEvents(source as UdonBehaviour).Select(o => new GUIContent(o)).ToArray();
+        options = UTUtils.GetUdonEvents(source as UdonSharpBehaviour).Select(o => new GUIContent(o)).ToArray();
       }
       else if (sourceType == PopupSource.Shader) {
         options = UTUtils.GetShaderPropertiesByType(source as Shader, shaderPropType).Select(o => new GUIContent(o)).ToArray();
@@ -451,26 +451,6 @@ namespace UdonToolkit{
     }
   }
 
-  [AttributeUsage(AttributeTargets.Class)]
-  public class ControlledBehaviourAttribute : Attribute {
-    public UdonProgramAsset uB;
-
-    public ControlledBehaviourAttribute(Type T) {
-      var assets = Resources.FindObjectsOfTypeAll(typeof(UdonSharpProgramAsset))
-        .Select(a => a as UdonSharpProgramAsset).ToArray();
-      foreach (var asset in assets) {
-        try {
-          if (asset != null && asset.sourceCsScript.GetClass() == T) {
-            uB = asset;
-          }
-        }
-        catch {
-          // ignored
-        }
-      }
-    }
-  }
-
   [AttributeUsage(AttributeTargets.Method)]
   public class ButtonAttribute : Attribute {
     public string text;
@@ -483,6 +463,12 @@ namespace UdonToolkit{
     public ButtonAttribute(string text, bool activeInEditMode) {
       this.text = text;
       this.activeInEditMode = activeInEditMode;
+    }
+  }
+  
+  [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
+  public class UBArrayAttribute : Attribute {
+    public UBArrayAttribute() {
     }
   }
 }
@@ -557,25 +543,25 @@ namespace UdonToolkit {
     }
   }
 
-  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class RangeSliderAttribute : Attribute {
     public RangeSliderAttribute(object a, object b){
     }
   }
 
-  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class HideIfAttribute : Attribute {
     public HideIfAttribute(object a) {
     }
   }
 
-  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class HorizontalAttribute : Attribute {
     public HorizontalAttribute(object a) {
     }
   }
 
-  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class HideLabelAttribute: Attribute {
     public HideLabelAttribute(){
     }
@@ -590,6 +576,12 @@ namespace UdonToolkit {
   [AttributeUsage(AttributeTargets.Class)]
   public class HelpMessageAttribute: Attribute {
     public HelpMessageAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class UBArrayAttribute: Attribute {
+    public UBArrayAttribute() {
     }
   }
 }

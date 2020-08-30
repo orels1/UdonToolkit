@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UdonSharp;
+using UdonSharpEditor;
 using UnityEditor;
 using UnityEngine;
 using VRC.Udon;
@@ -84,10 +85,10 @@ namespace UdonToolkit {
       return new[] {"no triggers found"};
     }
 
-    public static string[] GetUdonEvents(UdonBehaviour source) {
-      var events = new[] {"no events found "};
+    public static string[] GetUdonEvents(UdonSharpBehaviour source) {
+      var events = new[] {"no events found"};
       if (source != null) {
-        var uPa =source.programSource as UdonSharpProgramAsset;
+        var uPa = UdonSharpEditorUtility.GetUdonSharpProgramAsset(source);
         if (uPa != null) {
           var methods = uPa.sourceCsScript.GetClass().GetMethods();
           var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
