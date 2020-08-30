@@ -24,6 +24,7 @@ namespace UdonToolkit {
     private UdonSharpBehaviour t;
     private Type cT;
     private bool isPlaying;
+    private BindingFlags methodFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
 
 
     public override void OnInspectorGUI() {
@@ -76,7 +77,7 @@ namespace UdonToolkit {
       }
 
       // Extra Methods
-      var methods = cT.GetMethods().Where(i => i.GetCustomAttribute<ButtonAttribute>() != null).ToArray();
+      var methods = cT.GetMethods(methodFlags).Where(i => i.GetCustomAttribute<ButtonAttribute>() != null).ToArray();
       var buttons = methods
         .Select(i => i.GetCustomAttribute<ButtonAttribute>())
         .Where(i => i != null)
@@ -199,7 +200,7 @@ namespace UdonToolkit {
 
     private void HandleChangeCallback(UdonSharpBehaviour t, string changedCallback, SerializedProperty prop, SerializedProperty otherProp, object[] output) {
       if (changedCallback == null) return;
-      var m = cT.GetMethod(changedCallback);
+      var m = cT.GetMethod(changedCallback, methodFlags);
       if (m == null) return;
       var arrVal = new List<SerializedProperty>();
       var otherArrVal = new List<SerializedProperty>();
@@ -392,7 +393,7 @@ namespace UdonToolkit {
           }
           else if (sourceType == PopupAttribute.PopupSource.Shader) {
             var propsSource = UTUtils.GetValueThroughAttribute(source, leftPopup.methodName, out _);
-            options = UTUtils.GetShaderPropertiesByType(propsSource as Shader, leftPopup.shaderPropType);
+            options = UTUtils.GetShaderPropertiesByType(propsSource, leftPopup.shaderPropType);
           }
           else {
             options = (string[]) UTUtils.GetValueThroughAttribute(prop, leftPopup.methodName, out _);
@@ -424,7 +425,7 @@ namespace UdonToolkit {
           }
           else if (sourceType == PopupAttribute.PopupSource.Shader) {
             var propsSource = UTUtils.GetValueThroughAttribute(source, rightPopup.methodName, out _);
-            options = UTUtils.GetShaderPropertiesByType(propsSource as Shader, rightPopup.shaderPropType);
+            options = UTUtils.GetShaderPropertiesByType(propsSource, rightPopup.shaderPropType);
           }
           else {
             options = (string[]) UTUtils.GetValueThroughAttribute(otherProp, rightPopup.methodName, out _);
