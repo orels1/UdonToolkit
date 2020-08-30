@@ -201,9 +201,17 @@ namespace UdonToolkit{
       var newValue = property.serializedObject.targetObject.GetType().GetField(property.name)
         .GetValue(property.serializedObject.targetObject);
       if (oldValue != null && oldValue.Equals(newValue)) return;
-      property.serializedObject.targetObject.GetType().GetMethod(methodName).Invoke(property.serializedObject.targetObject, new[] {
-        (object) property
-      });
+      var m = property.serializedObject.targetObject.GetType().GetMethod(methodName, UTUtils.flags);
+      if (m.GetParameters().Length > 1) {
+        m.Invoke(
+          property.serializedObject.targetObject, new object[] {
+            property.serializedObject, property
+          });
+      }
+      else {
+        m.Invoke(
+          property.serializedObject.targetObject, new object[] {property});
+      }
       oldValue = newValue;
     }
   }
@@ -338,6 +346,17 @@ namespace UdonToolkit{
     private bool hideLabel;
     public PopupSource sourceType;
     public ShaderPropType shaderPropType = ShaderPropType.Float;
+    private Dictionary<string, PopupSource> sourcesMap = new Dictionary<string, PopupSource>() {
+      {"method", PopupSource.Method},
+      {"animator", PopupSource.Animator},
+      {"behaviour", PopupSource.UdonBehaviour},
+      {"shader", PopupSource.Shader}
+    };
+    private Dictionary<string, ShaderPropType> shaderPropsMap = new Dictionary<string, ShaderPropType>() {
+      {"float", ShaderPropType.Float},
+      {"color", ShaderPropType.Color},
+      {"vector", ShaderPropType.Vector}
+    };
 
     public enum PopupSource {
       Method,
@@ -351,6 +370,7 @@ namespace UdonToolkit{
       Color,
       Vector
     }
+
     
     public PopupAttribute(string methodName) {
       sourceType = PopupSource.Method;
@@ -381,6 +401,55 @@ namespace UdonToolkit{
       this.hideLabel = hideLabel;
     }
 
+    /// <summary>
+    /// An alternative [Popup] signature that avoids enums to compile with U#
+    /// </summary>
+    /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
+    /// <param name="methodName"></param>
+    public PopupAttribute(string sourceType, string methodName) {
+      this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
+      this.methodName = methodName;
+    }
+    
+    /// <summary>
+    /// An alternative [Popup] signature that avoids enums to compile with U#
+    /// </summary>
+    /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
+    /// <param name="methodName"></param>
+    /// <param name="shaderPropType">Can be "float", "color" or "vector"</param>
+    public PopupAttribute(string sourceType, string methodName, string shaderPropType) {
+      this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
+      this.shaderPropType = shaderPropsMap.ContainsKey(shaderPropType) ? shaderPropsMap[shaderPropType] : ShaderPropType.Float;
+      this.methodName = methodName;
+    }
+    
+    /// <summary>
+    /// An alternative [Popup] signature that avoids enums to compile with U#
+    /// </summary>
+    /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
+    /// <param name="methodName"></param>
+    /// <param name="hideLabel"></param>
+    public PopupAttribute(string sourceType, string methodName, bool hideLabel) {
+      this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
+      this.hideLabel = hideLabel;
+      this.methodName = methodName;
+    }
+    
+    /// <summary>
+    /// An alternative [Popup] signature that avoids enums to compile with U#
+    /// </summary>
+    /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
+    /// <param name="methodName"></param>
+    /// <param name="hideLabel"></param>
+    /// <param name="shaderPropType">Can be "float", "color" or "vector"</param>
+    public PopupAttribute(string sourceType, string methodName, string shaderPropType, bool hideLabel) {
+      this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
+      this.shaderPropType = shaderPropsMap.ContainsKey(shaderPropType) ? shaderPropsMap[shaderPropType] : ShaderPropType.Float;
+      this.hideLabel = hideLabel;
+      this.methodName = methodName;
+    }
+
+
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
       var fieldType = property.serializedObject.targetObject.GetType().GetField(property.name).FieldType;
       var source = UTUtils.GetValueThroughAttribute(property, methodName, out var sourceValType);
@@ -396,7 +465,7 @@ namespace UdonToolkit{
         options = UTUtils.GetUdonEvents(source as UdonSharpBehaviour).Select(o => new GUIContent(o)).ToArray();
       }
       else if (sourceType == PopupSource.Shader) {
-        options = UTUtils.GetShaderPropertiesByType(source as Shader, shaderPropType).Select(o => new GUIContent(o)).ToArray();
+        options = UTUtils.GetShaderPropertiesByType(source , shaderPropType).Select(o => new GUIContent(o)).ToArray();
       }
       else {
         options = ((string[]) source).Select(o => new GUIContent(o)).ToArray();
@@ -463,12 +532,6 @@ namespace UdonToolkit{
     public ButtonAttribute(string text, bool activeInEditMode) {
       this.text = text;
       this.activeInEditMode = activeInEditMode;
-    }
-  }
-  
-  [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
-  public class UBArrayAttribute : Attribute {
-    public UBArrayAttribute() {
     }
   }
 }
@@ -576,12 +639,6 @@ namespace UdonToolkit {
   [AttributeUsage(AttributeTargets.Class)]
   public class HelpMessageAttribute: Attribute {
     public HelpMessageAttribute(object a) {
-    }
-  }
-
-  [AttributeUsage(AttributTargets.Field, Inherited = true, AllowMultiple = true)]
-  public class UBArrayAttribute: Attribute {
-    public UBArrayAttribute() {
     }
   }
 }
