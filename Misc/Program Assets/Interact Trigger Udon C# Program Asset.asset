@@ -399,7 +399,7 @@ MonoBehaviour:
       Data: 26|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 27|UdonToolkit.ListViewAttribute, Assembly-CSharp
@@ -420,7 +420,25 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 28|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+      Data: 28|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: '@udonTargets'
+    - Name: sourceType
+      Entry: 3
+      Data: 2
+    - Name: shaderPropType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 29|UdonToolkit.UTEditorAttribute, Assembly-CSharp
     - Name: modifiers
       Entry: 6
       Data: 
@@ -450,13 +468,13 @@ MonoBehaviour:
       Data: col
     - Name: $v
       Entry: 7
-      Data: 29|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 30|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 30|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 31|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 31|System.RuntimeType, mscorlib
+      Data: 32|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.Collider, UnityEngine.PhysicsModule
@@ -486,7 +504,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 32|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 33|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

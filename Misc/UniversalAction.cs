@@ -29,9 +29,7 @@ namespace UdonToolkit {
     [ListView("Animator Triggers List")][UTEditor]
     public Animator[] animators;
     [ListView("Animator Triggers List")]
-    #if !COMPILER_UDONSHARP && UNITY_EDITOR
-    [Popup(PopupAttribute.PopupSource.Animator, "@animators", true)]
-    #endif
+    [Popup("animator", "@animators", true)]
     [UTEditor]
     public string[] animatorTriggers;
     
@@ -50,9 +48,7 @@ namespace UdonToolkit {
     public UdonSharpBehaviour[] udonTargets;
     
     [ListView("Udon Events List")]
-    #if !COMPILER_UDONSHARP && UNITY_EDITOR
-    [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@udonTargets", true)]
-    #endif
+    [Popup("behaviour", "@udonTargets", true)]
     [UTEditor]
     public string[] udonEvents;
     
@@ -63,9 +59,7 @@ namespace UdonToolkit {
     public GameObject[] goTargets;
     
     [ListView("Game Objects List")]
-    #if !COMPILER_UDONSHARP && UNITY_EDITOR
-    [Popup(PopupAttribute.PopupSource.Method, "@goToggleOptions", true)]
-    #endif
+    [Popup("method", "@goToggleOptions", true)]
     [UTEditor]
     public string[] goToggleEvents;
 

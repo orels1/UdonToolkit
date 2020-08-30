@@ -12,7 +12,6 @@ namespace UdonToolkit {
       public bool active;
       public Animator lensAnimator;
       public Animator cameraAnimator;
-      public VRC_Pickup pickup;
       [Space(5)]
       public GameObject desktopUI;
       public GameObject vrUI;
@@ -48,6 +47,7 @@ namespace UdonToolkit {
       public Transform dropTarget;
       public UniversalTracker playspaceTracker;
 
+      private VRC_Pickup pickup;
       private ParentConstraint constraint;
       private BoxCollider col;
       private bool isDesktop = true;
@@ -98,6 +98,7 @@ namespace UdonToolkit {
         cR = visuals.GetComponent<MeshRenderer>();
         sR = viewSphere.GetComponent<MeshRenderer>();
         fingerSphere.gameObject.SetActive(false);
+        pickup = gameObject.GetComponent<VRC_Pickup>();
         var player = Networking.LocalPlayer;
         if (player == null) return;
         if (player.IsUserInVR()) {

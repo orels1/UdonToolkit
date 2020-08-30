@@ -19,9 +19,7 @@ namespace UdonToolkit {
       public UdonSharpBehaviour[] udonTargets;
       
       [ListView("Udon Events List")]
-      #if !COMPILER_UDONSHARP && UNITY_EDITOR
-      [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@udonTargets", true)]
-      #endif
+      [Popup("behaviour", "@udonTargets", true)]
       [UTEditor]
       public string[] udonEvents;
 

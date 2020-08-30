@@ -50,6 +50,11 @@ namespace UdonToolkit {
     private float lerpEnd;
     private VRCPlayerApi player;
 
+    private Color fromColor;
+    private float fromDensity;
+    private float fromStart;
+    private float fromEnd;
+
     void Start() {
       mode = RenderSettings.fogMode;
       if (startActive || startActive && setInitialState) {
@@ -68,7 +73,10 @@ namespace UdonToolkit {
     private void StartLerping() {
       lerping = true;
       lerpEnd = Time.time + fogTransitionTime;
-      Debug.LogFormat("lerping {0} until {1}, current {2}", lerping, lerpEnd, Time.time);
+      fromColor = RenderSettings.fogColor;
+      fromDensity = RenderSettings.fogDensity;
+      fromStart = RenderSettings.fogStartDistance;
+      fromEnd = RenderSettings.fogEndDistance;
     }
 
     private void SetFog(Color color, float density) {
@@ -154,29 +162,27 @@ namespace UdonToolkit {
     }
 
     private void Update() {
-      Debug.LogFormat("updating, {0}", lerping);
       if (!lerping) return;
       var alpha = (Time.time - (lerpEnd - fogTransitionTime)) / fogTransitionTime;
-      Debug.LogFormat("Lerping in Update, {0}", alpha);
       // if currently active - lerp down;
       if (active) {
         Debug.Log("lerping down");
         if (mode == FogMode.Linear) {
-          LerpFogLinear(activeFogColor, defaultFogColor, activeFogStart, defaultFogStart, activeFogEnd, defaultFogEnd,
+          LerpFogLinear(fromColor, defaultFogColor, fromStart, defaultFogStart, fromEnd, defaultFogEnd,
             alpha);
         }
         else {
-          LerpFog(activeFogColor, defaultFogColor, activeFogDensity, defaultFogDensity, alpha);
+          LerpFog(fromColor, defaultFogColor, fromDensity, defaultFogDensity, alpha);
         }
       } // otherwise - lerp up;
       else {
         Debug.Log("lerping up");
         if (mode == FogMode.Linear) {
-          LerpFogLinear(defaultFogColor, activeFogColor, defaultFogStart, activeFogStart, defaultFogEnd, activeFogEnd,
+          LerpFogLinear(fromColor, activeFogColor, fromStart, activeFogStart, fromEnd, activeFogEnd,
             alpha);
         }
         else {
-          LerpFog(defaultFogColor, activeFogColor, defaultFogDensity, activeFogDensity, alpha);
+          LerpFog(fromColor, activeFogColor, fromDensity, activeFogDensity, alpha);
         }
       }
 

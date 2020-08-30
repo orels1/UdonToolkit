@@ -261,7 +261,7 @@ MonoBehaviour:
       Data: 17|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 18|UdonToolkit.ListViewAttribute, Assembly-CSharp
@@ -282,7 +282,25 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 19|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+      Data: 19|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: '@udonTargets'
+    - Name: sourceType
+      Entry: 3
+      Data: 2
+    - Name: shaderPropType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|UdonToolkit.UTEditorAttribute, Assembly-CSharp
     - Name: modifiers
       Entry: 6
       Data: 

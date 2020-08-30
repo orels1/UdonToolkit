@@ -13,12 +13,10 @@ namespace UdonToolkit {
       [UTEditor]
       public bool active = true;
       
-      #if !COMPILER_UDONSHARP
-      public bool CheckCollider() {
+      private bool CheckCollider() {
         var col = gameObject.GetComponent<Collider>();
         return col == null || !col.isTrigger;
       }
-      #endif
 
       [HelpBox(
         "It is impossible to distinguish between Local and Remote Players without putting the Area Trigger on a special layer that collides with either of those, keep that in mind when planning your triggers.",
@@ -27,13 +25,13 @@ namespace UdonToolkit {
       [UTEditor]
       public LayerMask collideWith;
       
-      #if !COMPILER_UDONSHARP
-      public bool CheckCollisionLayers() {
+      #if !COMPILER_UDONSHARP && UNITY_EDITOR
+      private bool CheckCollisionLayers() {
         var check = LayerMask.NameToLayer("Default");
         return collideWith == (collideWith | (1 << check)) || collideWith.value == ~0;
       }
 
-      public bool PlayerLayerWarnings() {
+      private bool PlayerLayerWarnings() {
         var player = LayerMask.NameToLayer("Player");
         var playerLocal = LayerMask.NameToLayer("PlayerLocal");
         var currL = gameObject.layer;
@@ -41,7 +39,7 @@ namespace UdonToolkit {
                currL <= 22 && !(collideWith == (collideWith | (1 << player)) && collideWith == (collideWith | (1 << playerLocal)));
       }
       #endif
-      
+
       [SectionHeader("Udon Events")]
       [HelpBox("Do not use Networked option with target All when colliding with Player layer, as it will cause oversync.",
         "CheckNetworkedValidity")]
@@ -49,30 +47,24 @@ namespace UdonToolkit {
       public bool networked;
       public NetworkEventTarget networkTarget;
       
-      #if !COMPILER_UDONSHARP
-      public bool CheckNetworkedValidity() {
+      private bool CheckNetworkedValidity() {
         var player = LayerMask.NameToLayer("Player");
         return collideWith == (collideWith | (1 << player)) && networked && networkTarget == NetworkEventTarget.All;
       }
-      #endif
-      
+
       [ListView("Enter Events List")] [UTEditor]
-      public Component[] enterTargets;
+      public UdonSharpBehaviour[] enterTargets;
       
       [ListView("Enter Events List")]
-      #if !COMPILER_UDONSHARP && UNITY_EDITOR
-      [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@enterTargets", true)]
-      #endif
+      [Popup("behaviour", "@enterTargets", true)]
       [UTEditor]
       public string[] enterEvents;
 
       [ListView("Exit Events List")] [UTEditor]
-      public Component[] exitTargets;
+      public UdonSharpBehaviour[] exitTargets;
       
       [ListView("Exit Events List")]
-      #if !COMPILER_UDONSHARP && UNITY_EDITOR
-      [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@exitTargets", true)]
-      #endif
+      [Popup("behaviour", "@exitTargets", true)]
       [UTEditor]
       public string[] exitEvents;
 
@@ -143,7 +135,7 @@ namespace UdonToolkit {
         var udonTargets = type == "enter" ? enterTargets : exitTargets;
         var udonEvents = type == "enter" ? enterEvents : exitEvents;
         for (int i = 0; i < udonTargets.Length; i++) {
-          var uB = (UdonBehaviour) udonTargets[i];
+          var uB = (UdonSharpBehaviour) udonTargets[i];
           if (!networked) {
             uB.SendCustomEvent(udonEvents[i]);
             continue;
