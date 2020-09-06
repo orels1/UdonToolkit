@@ -7,11 +7,20 @@ using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
+  [CustomName("Interact Trigger")]
+  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#interact-trigger")]
     public class InteractTrigger : UdonSharpBehaviour {
+      [SectionHeader("General")][UTEditor]
       public bool active = true;
+      [SectionHeader("Udon Events")][UTEditor]
       public bool networked;
       public NetworkEventTarget networkTarget;
-      public Component[] udonTargets;
+      [ListView("Udon Events List")][UTEditor]
+      public UdonSharpBehaviour[] udonTargets;
+      
+      [ListView("Udon Events List")]
+      [Popup("behaviour", "@udonTargets", true)]
+      [UTEditor]
       public string[] udonEvents;
 
       private Collider col;
@@ -25,6 +34,7 @@ namespace UdonToolkit {
         FireTriggers();
       }
 
+      [Button("Activate")]
       public void Activate() {
         if ((object) col != null) {
           col.enabled = true;
@@ -32,6 +42,7 @@ namespace UdonToolkit {
         active = true;
       }
 
+      [Button("Deactivate")]
       public void Deactivate() {
         if ((object) col != null) {
           col.enabled = false;
@@ -39,6 +50,7 @@ namespace UdonToolkit {
         active = false;
       }
 
+      [Button("Toggle")]
       public void Toggle() {
         if ((object) col != null) {
           col.enabled = !col.enabled;
@@ -48,7 +60,7 @@ namespace UdonToolkit {
       
       private void FireTriggers() {
         for (int i = 0; i < udonTargets.Length; i++) {
-          var uB = (UdonBehaviour) udonTargets[i];
+          var uB = udonTargets[i];
           if (!networked) {
             uB.SendCustomEvent(udonEvents[i]);
             continue;

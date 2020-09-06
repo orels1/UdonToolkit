@@ -61,16 +61,20 @@ namespace UdonToolkit{
 
   public class SectionHeaderAttribute : PropertyModifierAttribute {
     public string text;
-    private float mHeight;
+    private float mHeight = 20;
     private bool isInList;
+    private bool savedHeight;
 
     public SectionHeaderAttribute(string text) {
       this.text = text;
-      var size = EditorStyles.helpBox.CalcSize(new GUIContent(text));
-      mHeight = size.y;
     }
 
     public override float GetHeight(SerializedProperty property, GUIContent label, float height) {
+      if (!savedHeight) {
+        var size = EditorStyles.helpBox.CalcSize(new GUIContent(text));
+        mHeight = size.y;
+        savedHeight = true;
+      }
       if (property.name == "data" && property.depth > 0) {
         isInList = true;
         return height;
@@ -197,9 +201,17 @@ namespace UdonToolkit{
       var newValue = property.serializedObject.targetObject.GetType().GetField(property.name)
         .GetValue(property.serializedObject.targetObject);
       if (oldValue != null && oldValue.Equals(newValue)) return;
-      property.serializedObject.targetObject.GetType().GetMethod(methodName).Invoke(property.serializedObject.targetObject, new[] {
-        (object) property
-      });
+      var m = property.serializedObject.targetObject.GetType().GetMethod(methodName, UTUtils.flags);
+      if (m.GetParameters().Length > 1) {
+        m.Invoke(
+          property.serializedObject.targetObject, new object[] {
+            property.serializedObject, property
+          });
+      }
+      else {
+        m.Invoke(
+          property.serializedObject.targetObject, new object[] {property});
+      }
       oldValue = newValue;
     }
   }
@@ -334,6 +346,17 @@ namespace UdonToolkit{
     private bool hideLabel;
     public PopupSource sourceType;
     public ShaderPropType shaderPropType = ShaderPropType.Float;
+    private Dictionary<string, PopupSource> sourcesMap = new Dictionary<string, PopupSource>() {
+      {"method", PopupSource.Method},
+      {"animator", PopupSource.Animator},
+      {"behaviour", PopupSource.UdonBehaviour},
+      {"shader", PopupSource.Shader}
+    };
+    private Dictionary<string, ShaderPropType> shaderPropsMap = new Dictionary<string, ShaderPropType>() {
+      {"float", ShaderPropType.Float},
+      {"color", ShaderPropType.Color},
+      {"vector", ShaderPropType.Vector}
+    };
 
     public enum PopupSource {
       Method,
@@ -347,35 +370,89 @@ namespace UdonToolkit{
       Color,
       Vector
     }
+
     
     public PopupAttribute(string methodName) {
       sourceType = PopupSource.Method;
       this.methodName = methodName;
     }
     
+    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
     public PopupAttribute(PopupSource sourceType, string methodName) {
       this.sourceType = sourceType;
       this.methodName = methodName;
     }
 
+    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
     public PopupAttribute(PopupSource sourceType, string methodName, ShaderPropType shaderPropType) {
       this.sourceType = sourceType;
       this.methodName = methodName;
       this.shaderPropType = shaderPropType;
     }
 
+    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
     public PopupAttribute(PopupSource sourceType, string methodName, bool hideLabel) {
       this.sourceType = sourceType;
       this.methodName = methodName;
       this.hideLabel = hideLabel;
     }
     
+    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
     public PopupAttribute(PopupSource sourceType, string methodName, ShaderPropType shaderPropType, bool hideLabel) {
       this.sourceType = sourceType;
       this.methodName = methodName;
       this.shaderPropType = shaderPropType;
       this.hideLabel = hideLabel;
     }
+
+    /// <summary>
+    /// An alternative [Popup] signature that avoids enums to compile with U#
+    /// </summary>
+    /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
+    /// <param name="methodName"></param>
+    public PopupAttribute(string sourceType, string methodName) {
+      this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
+      this.methodName = methodName;
+    }
+    
+    /// <summary>
+    /// An alternative [Popup] signature that avoids enums to compile with U#
+    /// </summary>
+    /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
+    /// <param name="methodName"></param>
+    /// <param name="shaderPropType">Can be "float", "color" or "vector"</param>
+    public PopupAttribute(string sourceType, string methodName, string shaderPropType) {
+      this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
+      this.shaderPropType = shaderPropsMap.ContainsKey(shaderPropType) ? shaderPropsMap[shaderPropType] : ShaderPropType.Float;
+      this.methodName = methodName;
+    }
+    
+    /// <summary>
+    /// An alternative [Popup] signature that avoids enums to compile with U#
+    /// </summary>
+    /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
+    /// <param name="methodName"></param>
+    /// <param name="hideLabel"></param>
+    public PopupAttribute(string sourceType, string methodName, bool hideLabel) {
+      this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
+      this.hideLabel = hideLabel;
+      this.methodName = methodName;
+    }
+    
+    /// <summary>
+    /// An alternative [Popup] signature that avoids enums to compile with U#
+    /// </summary>
+    /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
+    /// <param name="methodName"></param>
+    /// <param name="hideLabel"></param>
+    /// <param name="shaderPropType">Can be "float", "color" or "vector"</param>
+    public PopupAttribute(string sourceType, string methodName, string shaderPropType, bool hideLabel) {
+      this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
+      this.shaderPropType = shaderPropsMap.ContainsKey(shaderPropType) ? shaderPropsMap[shaderPropType] : ShaderPropType.Float;
+      this.hideLabel = hideLabel;
+      this.methodName = methodName;
+    }
+
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
       var fieldType = property.serializedObject.targetObject.GetType().GetField(property.name).FieldType;
@@ -389,10 +466,10 @@ namespace UdonToolkit{
         options = UTUtils.GetAnimatorTriggers(source as Animator).Select(o => new GUIContent(o)).ToArray();
       }
       else if (sourceType == PopupSource.UdonBehaviour) {
-        options = UTUtils.GetUdonEvents(source as UdonBehaviour).Select(o => new GUIContent(o)).ToArray();
+        options = UTUtils.GetUdonEvents(source as UdonSharpBehaviour).Select(o => new GUIContent(o)).ToArray();
       }
       else if (sourceType == PopupSource.Shader) {
-        options = UTUtils.GetShaderPropertiesByType(source as Shader, shaderPropType).Select(o => new GUIContent(o)).ToArray();
+        options = UTUtils.GetShaderPropertiesByType(source , shaderPropType).Select(o => new GUIContent(o)).ToArray();
       }
       else {
         options = ((string[]) source).Select(o => new GUIContent(o)).ToArray();
@@ -447,26 +524,6 @@ namespace UdonToolkit{
     }
   }
 
-  [AttributeUsage(AttributeTargets.Class)]
-  public class ControlledBehaviourAttribute : Attribute {
-    public UdonProgramAsset uB;
-
-    public ControlledBehaviourAttribute(Type T) {
-      var assets = Resources.FindObjectsOfTypeAll(typeof(UdonSharpProgramAsset))
-        .Select(a => a as UdonSharpProgramAsset).ToArray();
-      foreach (var asset in assets) {
-        try {
-          if (asset != null && asset.sourceCsScript.GetClass() == T) {
-            uB = asset;
-          }
-        }
-        catch {
-          // ignored
-        }
-      }
-    }
-  }
-
   [AttributeUsage(AttributeTargets.Method)]
   public class ButtonAttribute : Attribute {
     public string text;
@@ -479,6 +536,113 @@ namespace UdonToolkit{
     public ButtonAttribute(string text, bool activeInEditMode) {
       this.text = text;
       this.activeInEditMode = activeInEditMode;
+    }
+  }
+}
+#else
+using System;
+using UnityEditor;
+
+namespace UdonToolkit {
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class SectionHeaderAttribute: Attribute {
+    public SectionHeaderAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class OnValueChangedAttribute : Attribute {
+    public OnValueChangedAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class UTEditorAttribute : Attribute {
+    public UTEditorAttribute() {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class ListViewAttribute : Attribute {
+    public ListViewAttribute(object a) {
+    }
+
+    public ListViewAttribute(object a, object b) {
+    }
+
+    public ListViewAttribute(object a, object b, object c) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class PopupAttribute : Attribute {
+    public PopupAttribute(object a) {
+    }
+
+    public PopupAttribute(object a, object b) {
+    }
+
+    public PopupAttribute(object a, object b, object c) {
+    }
+
+    public PopupAttribute(object a, object b, object c, object d) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class ToggleAttribute : Attribute {
+    public ToggleAttribute() {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+  public class ButtonAttribute : Attribute {
+    public ButtonAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class HelpBoxAttribute : Attribute {
+    public HelpBoxAttribute(object a) {
+    }
+
+    public HelpBoxAttribute(object a, object b) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class RangeSliderAttribute : Attribute {
+    public RangeSliderAttribute(object a, object b){
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class HideIfAttribute : Attribute {
+    public HideIfAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class HorizontalAttribute : Attribute {
+    public HorizontalAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class HideLabelAttribute: Attribute {
+    public HideLabelAttribute(){
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Class)]
+  public class CustomNameAttribute: Attribute {
+    public CustomNameAttribute(object a){
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Class)]
+  public class HelpMessageAttribute: Attribute {
+    public HelpMessageAttribute(object a) {
     }
   }
 }

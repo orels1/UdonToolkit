@@ -5,60 +5,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using UdonSharp;
+using UdonSharpEditor;
+using UdonToolkit;
 using UnityEditor;
 using UnityEngine;
 using VRC.Udon;
 using VRC.Udon.Editor.ProgramSources;
 using VRC.Udon.Serialization.OdinSerializer.Utilities;
 
+
+[assembly:DefaultUdonSharpBehaviourEditor(typeof(UTEditor), "UdonToolkit Editor")]
+
 namespace UdonToolkit {
-  [CustomEditor(typeof(UTController), true), CanEditMultipleObjects]
+  [CustomEditor(typeof(UdonSharpBehaviour), true), CanEditMultipleObjects]
   public class UTEditor : UnityEditor.Editor {
-    private string undoString = "Change controller properties";
-    private UTController t;
-    private UdonProgramAsset uB;
-    private bool copiedValues;
+    private string undoString = "Change UdonBehaviour properties";
+    private UdonSharpBehaviour t;
+    private Type cT;
+    private bool isPlaying;
+    private BindingFlags methodFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
 
 
     public override void OnInspectorGUI() {
-      t = (UTController) target;
-      // Copy current values
-      if (!copiedValues) {
-        t.SyncBack();
-        copiedValues = true;
+      isPlaying = !Application.isPlaying;
+      t = (UdonSharpBehaviour) target;
+      if (cT == null) {
+        cT = t.GetType();
+        undoString = $"Update {cT.Name}";
       }
-
+      if (UdonSharpGUI.DrawDefaultUdonSharpBehaviourHeader(t, true)) return;
       // Header
-      var customNameAttr = t.GetType().GetCustomAttributes(typeof(CustomNameAttribute))
+      var customNameAttr = cT.GetCustomAttributes(typeof(CustomNameAttribute))
         .Select(i => i as CustomNameAttribute).ToArray();
-      var customName = customNameAttr.Length != 0 ? customNameAttr[0].name : t.GetType().Name.Replace("Controller", "");
-      UTStyles.RenderHeader(customName);
+      var helpUrlAttribute = cT.GetCustomAttributes(typeof(HelpURLAttribute))
+        .Select(i => i as HelpURLAttribute).ToArray();
+      if (customNameAttr.Any() || helpUrlAttribute.Any()) {
+        EditorGUILayout.BeginHorizontal();
+        UTStyles.RenderHeader(customNameAttr.Any() ? customNameAttr[0].name : cT.Name.Replace("Controller", ""));
+        if (helpUrlAttribute.Any()) {
+          if (GUILayout.Button("?", GUILayout.Height(26), GUILayout.Width(26))) {
+            Application.OpenURL(helpUrlAttribute[0].URL);
+          }
+        }
+        EditorGUILayout.EndHorizontal();
+      }
 
       EditorGUI.BeginChangeCheck();
       serializedObject.Update();
-      
-      // Extra pre-gui actions
-      t.SetupController();
 
-      // Auto UB Addition
-      if (t.GetComponent<UdonBehaviour>() == null) {
-        if (uB) {
-          var comp = t.gameObject.AddComponent<UdonBehaviour>();
-          comp.programSource = uB;
-        }
-        else {
-          var controlledBehAttr = t.GetType().GetCustomAttributes(typeof(ControlledBehaviourAttribute))
-            .Select(i => i as ControlledBehaviourAttribute).ToArray();
-          if (controlledBehAttr.Any()) {
-            var comp = t.gameObject.AddComponent<UdonBehaviour>();
-            uB = controlledBehAttr[0].uB;
-            comp.programSource = uB;
-          }
-        }
-      }
-      
       // Help Box
-      var helpBoxAttr = t.GetType().GetCustomAttributes(typeof(HelpMessageAttribute))
+      var helpBoxAttr = cT.GetCustomAttributes(typeof(HelpMessageAttribute))
         .Select(i => i as HelpMessageAttribute).ToArray();
       if (helpBoxAttr.Any()) {
         UTStyles.RenderNote(helpBoxAttr[0]?.helpMessage);
@@ -77,29 +74,13 @@ namespace UdonToolkit {
       if (EditorGUI.EndChangeCheck()) {
         Undo.RecordObject(t, undoString);
         serializedObject.ApplyModifiedProperties();
-        t.SyncValues();
-      }
-      
-      // Sync Toggles
-      UTStyles.RenderSectionHeader("Udon Sync");
-      if (t.uB != null) {
-        var uBo = new SerializedObject(t.uB);
-        uBo.Update();
-        EditorGUI.BeginChangeCheck();
-        EditorGUILayout.PropertyField(uBo.FindProperty("SynchronizePosition"));
-        var col = t.gameObject.GetComponent<Collider>();
-        if (col != null) {
-          EditorGUILayout.PropertyField(uBo.FindProperty("AllowCollisionOwnershipTransfer"), new GUIContent("Collision Owner Transfer"));
-        }
-        if (EditorGUI.EndChangeCheck()) {
-          uBo.ApplyModifiedProperties();
-        }
       }
 
       // Extra Methods
-      var methods = t.GetType().GetMethods().Where(i => i.GetCustomAttribute<ButtonAttribute>() != null)
-        .ToArray();
-      var buttons = t.GetType().GetMethods().Select(i => i.GetCustomAttribute<ButtonAttribute>()).Where(i => i != null)
+      var methods = cT.GetMethods(methodFlags).Where(i => i.GetCustomAttribute<ButtonAttribute>() != null).ToArray();
+      var buttons = methods
+        .Select(i => i.GetCustomAttribute<ButtonAttribute>())
+        .Where(i => i != null)
         .ToArray();
       if (buttons.Any()) {
         UTStyles.RenderSectionHeader("Methods");
@@ -113,9 +94,14 @@ namespace UdonToolkit {
             EditorGUILayout.BeginHorizontal();
             rowEndI = Math.Min(i + rowBreak, buttons.Length - 1);
           }
-          EditorGUI.BeginDisabledGroup(!Application.isPlaying && !button.activeInEditMode);
+          EditorGUI.BeginDisabledGroup(isPlaying && !button.activeInEditMode);
           if (GUILayout.Button(button.text)) {
-            t.Invoke(methods[i].Name, 0);
+            if (button.activeInEditMode) {
+              methods[i].Invoke(t, new object[] {});
+            }
+            else {
+              UdonSharpEditorUtility.GetProxyBehaviour(t.GetComponent<UdonBehaviour>()).SendCustomEvent(methods[i].Name);
+            }
           }
           EditorGUI.EndDisabledGroup();
           if (i == buttons.Length - 1 && rowEndI != -100) {
@@ -123,19 +109,9 @@ namespace UdonToolkit {
           }
         }
       }
-      UTStyles.RenderSectionHeader("Manual Value Sync");
-      EditorGUILayout.BeginHorizontal();
-      if (GUILayout.Button("Copy to Udon")) {
-        t.SyncValues();
-      }
-
-      if (GUILayout.Button("Copy from Udon")) {
-        t.SyncBack();
-      }
-      EditorGUILayout.EndHorizontal();
     }
 
-    protected virtual void DrawGUI(UTController t) {
+    protected virtual void DrawGUI(UdonSharpBehaviour t) {
       var property = serializedObject.GetIterator();
       var next = property.NextVisible(true);
       if (next) {
@@ -184,7 +160,7 @@ namespace UdonToolkit {
       }
 
       var groupName = groupAttribute[0].name;
-      var items = t.GetType().GetFields().Where(f =>
+      var items = cT.GetFields().Where(f =>
           f.GetAttribute<ListViewAttribute>() != null && f.GetAttribute<ListViewAttribute>().name == groupName)
         .ToList();
       // fast exit on 1 element with list view
@@ -222,12 +198,14 @@ namespace UdonToolkit {
       RenderHelpBox(prop);
     }
 
-    private void HandleChangeCallback(UTController t, string changedCallback, SerializedProperty prop, SerializedProperty otherProp, object[] output) {
+    private void HandleChangeCallback(UdonSharpBehaviour t, string changedCallback, SerializedProperty prop, SerializedProperty otherProp, object[] output) {
       if (changedCallback == null) return;
-      var m = t.GetType().GetMethod(changedCallback);
+      var m = cT.GetMethod(changedCallback, methodFlags);
       if (m == null) return;
       var arrVal = new List<SerializedProperty>();
       var otherArrVal = new List<SerializedProperty>();
+
+      var appended = output.ToList().Prepend(serializedObject).ToArray();
       
       for (int j = 0; j < prop.arraySize; j++) {
         arrVal.Add(prop.GetArrayElementAtIndex(j));
@@ -235,9 +213,9 @@ namespace UdonToolkit {
 
       if (otherProp == null) {
         m.Invoke(t,
-          m.GetParameters().Length > 1
-            ? output
-            : new object[] {arrVal.ToArray()});
+          m.GetParameters().Length > 2
+            ? appended
+            : new object[] {serializedObject, arrVal.ToArray()});
         return;
       }
       
@@ -245,9 +223,9 @@ namespace UdonToolkit {
         otherArrVal.Add(otherProp.GetArrayElementAtIndex(j));
       }
       m.Invoke(t,
-      m.GetParameters().Length > 2
-        ? output
-        : new object[] {arrVal.ToArray(), otherArrVal.ToArray()});
+      m.GetParameters().Length > 3
+        ? appended
+        : new object[] {serializedObject, arrVal.ToArray(), otherArrVal.ToArray()});
     }
 
     #region ArrayHandling
@@ -344,7 +322,7 @@ namespace UdonToolkit {
           return true;
         }
 
-        var addMethodCall = t.GetType().GetMethod(addMethod);
+        var addMethodCall = cT.GetMethod(addMethod);
         addMethodCall.Invoke(t, new object[] { });
         return true;
       }
@@ -411,11 +389,11 @@ namespace UdonToolkit {
             options = UTUtils.GetAnimatorTriggers(source.objectReferenceValue as Animator);
           }
           else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonBehaviour);
+            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
           }
           else if (sourceType == PopupAttribute.PopupSource.Shader) {
             var propsSource = UTUtils.GetValueThroughAttribute(source, leftPopup.methodName, out _);
-            options = UTUtils.GetShaderPropertiesByType(propsSource as Shader, leftPopup.shaderPropType);
+            options = UTUtils.GetShaderPropertiesByType(propsSource, leftPopup.shaderPropType);
           }
           else {
             options = (string[]) UTUtils.GetValueThroughAttribute(prop, leftPopup.methodName, out _);
@@ -443,11 +421,11 @@ namespace UdonToolkit {
             options = UTUtils.GetAnimatorTriggers(source.objectReferenceValue as Animator);
           }
           else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonBehaviour);
+            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
           }
           else if (sourceType == PopupAttribute.PopupSource.Shader) {
             var propsSource = UTUtils.GetValueThroughAttribute(source, rightPopup.methodName, out _);
-            options = UTUtils.GetShaderPropertiesByType(propsSource as Shader, rightPopup.shaderPropType);
+            options = UTUtils.GetShaderPropertiesByType(propsSource, rightPopup.shaderPropType);
           }
           else {
             options = (string[]) UTUtils.GetValueThroughAttribute(otherProp, rightPopup.methodName, out _);
@@ -464,7 +442,7 @@ namespace UdonToolkit {
         
         if (EditorGUI.EndChangeCheck()) {
           if (changedCallback != null) {
-            var m = t.GetType().GetMethod(changedCallback);
+            var m = cT.GetMethod(changedCallback);
             if (m != null) {
               m.Invoke(t,
                 m.GetParameters().Length > 2
@@ -476,7 +454,7 @@ namespace UdonToolkit {
 
         if (RenderRemoveControls(i, new[] {prop, otherProp})) {
           if (changedCallback != null) {
-            var m = t.GetType().GetMethod(changedCallback);
+            var m = cT.GetMethod(changedCallback);
             if (m != null) {
               m.Invoke(t,
                 m.GetParameters().Length > 2
@@ -492,7 +470,7 @@ namespace UdonToolkit {
 
       if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
         if (changedCallback != null) {
-          var m = t.GetType().GetMethod(changedCallback);
+          var m = cT.GetMethod(changedCallback);
           if (m != null) {
             m.Invoke(t,
               m.GetParameters().Length > 2

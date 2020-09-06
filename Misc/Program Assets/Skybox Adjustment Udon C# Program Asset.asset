@@ -14,3791 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedUdonProgramAsset: {fileID: 11400000, guid: 29635073175de7645bb944c83d65b278,
     type: 2}
-  udonAssembly: ".data_start\n\n    .export defaultSkybox\n    .export defaultFloatNames\n
-    \   .export defaultFloatValues\n    .export defaultColorNames\n    .export defaultColorValues\n
-    \   .export defaultVector3Names\n    .export defaultVector3Values\n    .export
-    activeSkybox\n    .export activeFloatNames\n    .export activeFloatValues\n    .export
-    activeColorNames\n    .export activeColorValues\n    .export activeVector3Names\n
-    \   .export activeVector3Values\n    .export instantTransition\n    .export transitionTime\n\n
-    \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:
-    %SystemString, null\n    instantTransition: %SystemBoolean, null\n    activeColorValues:
-    %UnityEngineColorArray, null\n    defaultColorValues: %UnityEngineColorArray,
-    null\n    activeSkybox: %UnityEngineMaterial, null\n    defaultSkybox: %UnityEngineMaterial,
-    null\n    transitionTime: %SystemSingle, null\n    activeFloatValues: %SystemSingleArray,
-    null\n    defaultFloatValues: %SystemSingleArray, null\n    activeColorNames:
-    %SystemStringArray, null\n    activeFloatNames: %SystemStringArray, null\n    activeVector3Names:
-    %SystemStringArray, null\n    defaultColorNames: %SystemStringArray, null\n    defaultFloatNames:
-    %SystemStringArray, null\n    defaultVector3Names: %SystemStringArray, null\n
-    \   activeVector3Values: %UnityEngineVector3Array, null\n    defaultVector3Values:
-    %UnityEngineVector3Array, null\n    active: %SystemBoolean, null\n    lerping:
-    %SystemBoolean, null\n    lerpEnd: %SystemSingle, null\n    __0_colorVals_ColorArray:
-    %UnityEngineColorArray, null\n    __0_eColorVals_ColorArray: %UnityEngineColorArray,
-    null\n    __0_sColorVals_ColorArray: %UnityEngineColorArray, null\n    __0_i_Int32:
-    %SystemInt32, null\n    __1_i_Int32: %SystemInt32, null\n    __0_mat_Material:
-    %UnityEngineMaterial, null\n    __1_mat_Material: %UnityEngineMaterial, null\n
-    \   __0_alpha_Single: %SystemSingle, null\n    __0_lerpAlpha_Single: %SystemSingle,
-    null\n    __0_eFloatVals_SingleArray: %SystemSingleArray, null\n    __0_floatVals_SingleArray:
-    %SystemSingleArray, null\n    __0_sFloatVals_SingleArray: %SystemSingleArray,
-    null\n    __0_colorNames_StringArray: %SystemStringArray, null\n    __0_floatNames_StringArray:
-    %SystemStringArray, null\n    __0_sColorNames_StringArray: %SystemStringArray,
-    null\n    __0_sFloatNames_StringArray: %SystemStringArray, null\n    __0_sVectorNames_StringArray:
-    %SystemStringArray, null\n    __0_vectorNames_StringArray: %SystemStringArray,
-    null\n    __0_eVectorVals_Vector3Array: %UnityEngineVector3Array, null\n    __0_sVectorVals_Vector3Array:
-    %UnityEngineVector3Array, null\n    __0_vectorVals_Vector3Array: %UnityEngineVector3Array,
-    null\n    __0_const_intnl_SystemBoolean: %SystemBoolean, null\n    __1_const_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __0_const_intnl_SystemInt32: %SystemInt32, null\n    __1_const_intnl_SystemInt32:
-    %SystemInt32, null\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
-    \   __0_const_intnl_SystemUInt32: %SystemUInt32, null\n    __1_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n
-    \   __0_intnl_SystemBoolean: %SystemBoolean, null\n    __1_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __10_intnl_SystemBoolean: %SystemBoolean, null\n    __11_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __12_intnl_SystemBoolean: %SystemBoolean, null\n    __13_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __2_intnl_SystemBoolean: %SystemBoolean, null\n    __3_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __4_intnl_SystemBoolean: %SystemBoolean, null\n    __5_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __6_intnl_SystemBoolean: %SystemBoolean, null\n    __7_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __8_intnl_SystemBoolean: %SystemBoolean, null\n    __9_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __0_intnl_UnityEngineColor: %UnityEngineColor, null\n
-    \   __1_intnl_UnityEngineColor: %UnityEngineColor, null\n    __2_intnl_UnityEngineColor:
-    %UnityEngineColor, null\n    __3_intnl_UnityEngineColor: %UnityEngineColor, null\n
-    \   __0_intnl_UnityEngineColorArray: %UnityEngineColorArray, null\n    __1_intnl_UnityEngineColorArray:
-    %UnityEngineColorArray, null\n    __2_intnl_UnityEngineColorArray: %UnityEngineColorArray,
-    null\n    __0_intnl_SystemInt32: %SystemInt32, null\n    __1_intnl_SystemInt32:
-    %SystemInt32, null\n    __2_intnl_SystemInt32: %SystemInt32, null\n    __3_intnl_SystemInt32:
-    %SystemInt32, null\n    __0_intnl_UnityEngineMaterial: %UnityEngineMaterial, null\n
-    \   __1_intnl_UnityEngineMaterial: %UnityEngineMaterial, null\n    __0_intnl_SystemSingle:
-    %SystemSingle, null\n    __1_intnl_SystemSingle: %SystemSingle, null\n    __10_intnl_SystemSingle:
-    %SystemSingle, null\n    __2_intnl_SystemSingle: %SystemSingle, null\n    __3_intnl_SystemSingle:
-    %SystemSingle, null\n    __4_intnl_SystemSingle: %SystemSingle, null\n    __5_intnl_SystemSingle:
-    %SystemSingle, null\n    __6_intnl_SystemSingle: %SystemSingle, null\n    __7_intnl_SystemSingle:
-    %SystemSingle, null\n    __8_intnl_SystemSingle: %SystemSingle, null\n    __9_intnl_SystemSingle:
-    %SystemSingle, null\n    __0_intnl_SystemSingleArray: %SystemSingleArray, null\n
-    \   __1_intnl_SystemSingleArray: %SystemSingleArray, null\n    __2_intnl_SystemSingleArray:
-    %SystemSingleArray, null\n    __0_intnl_SystemString: %SystemString, null\n    __1_intnl_SystemString:
-    %SystemString, null\n    __0_intnl_SystemStringArray: %SystemStringArray, null\n
-    \   __1_intnl_SystemStringArray: %SystemStringArray, null\n    __2_intnl_SystemStringArray:
-    %SystemStringArray, null\n    __3_intnl_SystemStringArray: %SystemStringArray,
-    null\n    __4_intnl_SystemStringArray: %SystemStringArray, null\n    __5_intnl_SystemStringArray:
-    %SystemStringArray, null\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\n
-    \   __0_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __1_intnl_UnityEngineVector3:
-    %UnityEngineVector3, null\n    __2_intnl_UnityEngineVector3: %UnityEngineVector3,
-    null\n    __3_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __0_intnl_UnityEngineVector3Array:
-    %UnityEngineVector3Array, null\n    __1_intnl_UnityEngineVector3Array: %UnityEngineVector3Array,
-    null\n    __2_intnl_UnityEngineVector3Array: %UnityEngineVector3Array, null\n
-    \   __0_intnl_UnityEngineVector4: %UnityEngineVector4, null\n    __1_intnl_UnityEngineVector4:
-    %UnityEngineVector4, null\n\n.data_end\n\n.code_start\n    .export Trigger\n        \n
-    \   Trigger:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH,
-    instantTransition\n        PUSH, __0_intnl_SystemBoolean\n        COPY\n        PUSH,
-    __0_intnl_SystemBoolean\n        PUSH, __1_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000000B0\n        PUSH, __0_const_intnl_SystemInt32\n
-    \       PUSH, __0_intnl_SystemSingle\n        EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n
-    \       PUSH, transitionTime\n        PUSH, __0_intnl_SystemSingle\n        PUSH,
-    __2_intnl_SystemBoolean\n        EXTERN, \"SystemSingle.__op_LessThanOrEqual__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __0_intnl_SystemBoolean\n        PUSH, __2_intnl_SystemBoolean\n
-    \       PUSH, __3_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __3_intnl_SystemBoolean\n        PUSH, __0_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000014C\n
-    \       PUSH, active\n        JUMP_IF_FALSE, 0x000000EC\n        PUSH, defaultSkybox\n
-    \       PUSH, __0_intnl_UnityEngineMaterial\n        COPY\n        JUMP, 0x00000100\n
-    \       PUSH, activeSkybox\n        PUSH, __0_intnl_UnityEngineMaterial\n        COPY\n
-    \       PUSH, __0_intnl_UnityEngineMaterial\n        EXTERN, \"UnityEngineRenderSettings.__set_skybox__UnityEngineMaterial__SystemVoid\"\n
-    \       PUSH, __0_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000938\n        PUSH,
-    active\n        PUSH, active\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __0_const_intnl_SystemBoolean\n
-    \       PUSH, lerping\n        COPY\n        PUSH, __1_intnl_SystemSingle\n        EXTERN,
-    \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, __1_intnl_SystemSingle\n
-    \       PUSH, transitionTime\n        PUSH, lerpEnd\n        EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    LerpValues:\n
-    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, defaultSkybox\n
-    \       PUSH, __0_mat_Material\n        COPY\n        PUSH, active\n        PUSH,
-    __4_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __4_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000204\n        PUSH,
-    defaultFloatNames\n        PUSH, __0_intnl_SystemStringArray\n        COPY\n        JUMP,
-    0x00000218\n        PUSH, activeFloatNames\n        PUSH, __0_intnl_SystemStringArray\n
-    \       COPY\n        PUSH, __0_intnl_SystemStringArray\n        PUSH, __0_sFloatNames_StringArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __5_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __5_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000270\n        PUSH, defaultFloatValues\n
-    \       PUSH, __0_intnl_SystemSingleArray\n        COPY\n        JUMP, 0x00000284\n
-    \       PUSH, activeFloatValues\n        PUSH, __0_intnl_SystemSingleArray\n        COPY\n
-    \       PUSH, __0_intnl_SystemSingleArray\n        PUSH, __0_sFloatVals_SingleArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __6_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000002DC\n        PUSH, defaultColorNames\n
-    \       PUSH, __1_intnl_SystemStringArray\n        COPY\n        JUMP, 0x000002F0\n
-    \       PUSH, activeColorNames\n        PUSH, __1_intnl_SystemStringArray\n        COPY\n
-    \       PUSH, __1_intnl_SystemStringArray\n        PUSH, __0_sColorNames_StringArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __7_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __7_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000348\n        PUSH, defaultColorValues\n
-    \       PUSH, __0_intnl_UnityEngineColorArray\n        COPY\n        JUMP, 0x0000035C\n
-    \       PUSH, activeColorValues\n        PUSH, __0_intnl_UnityEngineColorArray\n
-    \       COPY\n        PUSH, __0_intnl_UnityEngineColorArray\n        PUSH, __0_sColorVals_ColorArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __8_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __8_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000003B4\n        PUSH, defaultVector3Names\n
-    \       PUSH, __2_intnl_SystemStringArray\n        COPY\n        JUMP, 0x000003C8\n
-    \       PUSH, activeVector3Names\n        PUSH, __2_intnl_SystemStringArray\n
-    \       COPY\n        PUSH, __2_intnl_SystemStringArray\n        PUSH, __0_sVectorNames_StringArray\n
-    \       COPY\n        PUSH, active\n        PUSH, __9_intnl_SystemBoolean\n        EXTERN,
-    \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n        PUSH,
-    __9_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000420\n        PUSH, defaultVector3Values\n
-    \       PUSH, __0_intnl_UnityEngineVector3Array\n        COPY\n        JUMP, 0x00000434\n
-    \       PUSH, activeVector3Values\n        PUSH, __0_intnl_UnityEngineVector3Array\n
-    \       COPY\n        PUSH, __0_intnl_UnityEngineVector3Array\n        PUSH, __0_sVectorVals_Vector3Array\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000474\n        PUSH,
-    defaultFloatValues\n        PUSH, __1_intnl_SystemSingleArray\n        COPY\n
-    \       JUMP, 0x00000488\n        PUSH, activeFloatValues\n        PUSH, __1_intnl_SystemSingleArray\n
-    \       COPY\n        PUSH, __1_intnl_SystemSingleArray\n        PUSH, __0_eFloatVals_SingleArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x000004C8\n        PUSH,
-    defaultColorValues\n        PUSH, __1_intnl_UnityEngineColorArray\n        COPY\n
-    \       JUMP, 0x000004DC\n        PUSH, activeColorValues\n        PUSH, __1_intnl_UnityEngineColorArray\n
-    \       COPY\n        PUSH, __1_intnl_UnityEngineColorArray\n        PUSH, __0_eColorVals_ColorArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x0000051C\n        PUSH,
-    defaultVector3Values\n        PUSH, __1_intnl_UnityEngineVector3Array\n        COPY\n
-    \       JUMP, 0x00000530\n        PUSH, activeVector3Values\n        PUSH, __1_intnl_UnityEngineVector3Array\n
-    \       COPY\n        PUSH, __1_intnl_UnityEngineVector3Array\n        PUSH, __0_eVectorVals_Vector3Array\n
-    \       COPY\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH, __0_i_Int32\n
-    \       COPY\n        PUSH, __0_sFloatNames_StringArray\n        PUSH, __0_intnl_SystemInt32\n
-    \       EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n        PUSH,
-    __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH, __10_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000684\n        PUSH,
-    __0_sFloatNames_StringArray\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemString\n
-    \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_sFloatVals_SingleArray\n        PUSH, __0_i_Int32\n        PUSH, __2_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingleArray.__Get__SystemInt32__SystemSingle\"\n        PUSH,
-    __0_eFloatVals_SingleArray\n        PUSH, __0_i_Int32\n        PUSH, __3_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingleArray.__Get__SystemInt32__SystemSingle\"\n        PUSH,
-    __2_intnl_SystemSingle\n        PUSH, __3_intnl_SystemSingle\n        PUSH, __0_alpha_Single\n
-    \       PUSH, __4_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_mat_Material\n        PUSH, __0_intnl_SystemString\n        PUSH,
-    __4_intnl_SystemSingle\n        EXTERN, \"UnityEngineMaterial.__SetFloat__SystemString_SystemSingle__SystemVoid\"\n
-    \       PUSH, __0_i_Int32\n        PUSH, __1_intnl_SystemInt32\n        COPY\n
-    \       PUSH, __0_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
-    __0_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000558\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
-    __0_i_Int32\n        COPY\n        PUSH, __0_sColorNames_StringArray\n        PUSH,
-    __0_intnl_SystemInt32\n        EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n
-    \       PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH,
-    __10_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000007C4\n        PUSH,
-    __0_sColorNames_StringArray\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemString\n
-    \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_sColorVals_ColorArray\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_UnityEngineColor\n
-    \       EXTERN, \"UnityEngineColorArray.__Get__SystemInt32__UnityEngineColor\"\n
-    \       PUSH, __0_eColorVals_ColorArray\n        PUSH, __0_i_Int32\n        PUSH,
-    __1_intnl_UnityEngineColor\n        EXTERN, \"UnityEngineColorArray.__Get__SystemInt32__UnityEngineColor\"\n
-    \       PUSH, __0_intnl_UnityEngineColor\n        PUSH, __1_intnl_UnityEngineColor\n
-    \       PUSH, __0_alpha_Single\n        PUSH, __2_intnl_UnityEngineColor\n        EXTERN,
-    \"UnityEngineColor.__Lerp__UnityEngineColor_UnityEngineColor_SystemSingle__UnityEngineColor\"\n
-    \       PUSH, __0_mat_Material\n        PUSH, __0_intnl_SystemString\n        PUSH,
-    __2_intnl_UnityEngineColor\n        EXTERN, \"UnityEngineMaterial.__SetColor__SystemString_UnityEngineColor__SystemVoid\"\n
-    \       PUSH, __0_i_Int32\n        PUSH, __1_intnl_SystemInt32\n        COPY\n
-    \       PUSH, __0_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
-    __0_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000698\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
-    __0_i_Int32\n        COPY\n        PUSH, __0_sVectorNames_StringArray\n        PUSH,
-    __0_intnl_SystemInt32\n        EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n
-    \       PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemInt32\n        PUSH,
-    __10_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __10_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000091C\n        PUSH,
-    __0_sVectorNames_StringArray\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_SystemString\n
-    \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_sVectorVals_Vector3Array\n        PUSH, __0_i_Int32\n        PUSH, __0_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineVector3Array.__Get__SystemInt32__UnityEngineVector3\"\n
-    \       PUSH, __0_eVectorVals_Vector3Array\n        PUSH, __0_i_Int32\n        PUSH,
-    __1_intnl_UnityEngineVector3\n        EXTERN, \"UnityEngineVector3Array.__Get__SystemInt32__UnityEngineVector3\"\n
-    \       PUSH, __0_intnl_UnityEngineVector3\n        PUSH, __1_intnl_UnityEngineVector3\n
-    \       PUSH, __0_alpha_Single\n        PUSH, __2_intnl_UnityEngineVector3\n        EXTERN,
-    \"UnityEngineVector3.__Lerp__UnityEngineVector3_UnityEngineVector3_SystemSingle__UnityEngineVector3\"\n
-    \       PUSH, __2_intnl_UnityEngineVector3\n        PUSH, __0_intnl_UnityEngineVector4\n
-    \       EXTERN, \"UnityEngineVector4.__op_Implicit__UnityEngineVector3__UnityEngineVector4\"\n
-    \       PUSH, __0_mat_Material\n        PUSH, __0_intnl_SystemString\n        PUSH,
-    __0_intnl_UnityEngineVector4\n        EXTERN, \"UnityEngineMaterial.__SetVector__SystemString_UnityEngineVector4__SystemVoid\"\n
-    \       PUSH, __0_i_Int32\n        PUSH, __1_intnl_SystemInt32\n        COPY\n
-    \       PUSH, __0_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
-    __0_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x000007D8\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
-    \       \n    SetFinalValues:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, active\n        JUMP_IF_FALSE, 0x00000964\n        PUSH, defaultFloatNames\n
-    \       PUSH, __3_intnl_SystemStringArray\n        COPY\n        JUMP, 0x00000978\n
-    \       PUSH, activeFloatNames\n        PUSH, __3_intnl_SystemStringArray\n        COPY\n
-    \       PUSH, __3_intnl_SystemStringArray\n        PUSH, __0_floatNames_StringArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x000009B8\n        PUSH,
-    defaultFloatValues\n        PUSH, __2_intnl_SystemSingleArray\n        COPY\n
-    \       JUMP, 0x000009CC\n        PUSH, activeFloatValues\n        PUSH, __2_intnl_SystemSingleArray\n
-    \       COPY\n        PUSH, __2_intnl_SystemSingleArray\n        PUSH, __0_floatVals_SingleArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000A0C\n        PUSH,
-    defaultColorNames\n        PUSH, __4_intnl_SystemStringArray\n        COPY\n        JUMP,
-    0x00000A20\n        PUSH, activeColorNames\n        PUSH, __4_intnl_SystemStringArray\n
-    \       COPY\n        PUSH, __4_intnl_SystemStringArray\n        PUSH, __0_colorNames_StringArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000A60\n        PUSH,
-    defaultColorValues\n        PUSH, __2_intnl_UnityEngineColorArray\n        COPY\n
-    \       JUMP, 0x00000A74\n        PUSH, activeColorValues\n        PUSH, __2_intnl_UnityEngineColorArray\n
-    \       COPY\n        PUSH, __2_intnl_UnityEngineColorArray\n        PUSH, __0_colorVals_ColorArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000AB4\n        PUSH,
-    defaultVector3Names\n        PUSH, __5_intnl_SystemStringArray\n        COPY\n
-    \       JUMP, 0x00000AC8\n        PUSH, activeVector3Names\n        PUSH, __5_intnl_SystemStringArray\n
-    \       COPY\n        PUSH, __5_intnl_SystemStringArray\n        PUSH, __0_vectorNames_StringArray\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000B08\n        PUSH,
-    defaultVector3Values\n        PUSH, __2_intnl_UnityEngineVector3Array\n        COPY\n
-    \       JUMP, 0x00000B1C\n        PUSH, activeVector3Values\n        PUSH, __2_intnl_UnityEngineVector3Array\n
-    \       COPY\n        PUSH, __2_intnl_UnityEngineVector3Array\n        PUSH, __0_vectorVals_Vector3Array\n
-    \       COPY\n        PUSH, active\n        JUMP_IF_FALSE, 0x00000B5C\n        PUSH,
-    defaultSkybox\n        PUSH, __1_intnl_UnityEngineMaterial\n        COPY\n        JUMP,
-    0x00000B70\n        PUSH, activeSkybox\n        PUSH, __1_intnl_UnityEngineMaterial\n
-    \       COPY\n        PUSH, __1_intnl_UnityEngineMaterial\n        PUSH, __1_mat_Material\n
-    \       COPY\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH, __1_i_Int32\n
-    \       COPY\n        PUSH, __0_floatNames_StringArray\n        PUSH, __2_intnl_SystemInt32\n
-    \       EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n        PUSH,
-    __1_i_Int32\n        PUSH, __2_intnl_SystemInt32\n        PUSH, __11_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __11_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000C7C\n        PUSH,
-    __0_floatNames_StringArray\n        PUSH, __1_i_Int32\n        PUSH, __1_intnl_SystemString\n
-    \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_floatVals_SingleArray\n        PUSH, __1_i_Int32\n        PUSH, __5_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingleArray.__Get__SystemInt32__SystemSingle\"\n        PUSH,
-    __1_mat_Material\n        PUSH, __1_intnl_SystemString\n        PUSH, __5_intnl_SystemSingle\n
-    \       EXTERN, \"UnityEngineMaterial.__SetFloat__SystemString_SystemSingle__SystemVoid\"\n
-    \       PUSH, __1_i_Int32\n        PUSH, __3_intnl_SystemInt32\n        COPY\n
-    \       PUSH, __1_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
-    __1_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000B98\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
-    __1_i_Int32\n        COPY\n        PUSH, __0_colorNames_StringArray\n        PUSH,
-    __2_intnl_SystemInt32\n        EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n
-    \       PUSH, __1_i_Int32\n        PUSH, __2_intnl_SystemInt32\n        PUSH,
-    __11_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __11_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000D74\n        PUSH,
-    __0_colorNames_StringArray\n        PUSH, __1_i_Int32\n        PUSH, __1_intnl_SystemString\n
-    \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_colorVals_ColorArray\n        PUSH, __1_i_Int32\n        PUSH, __3_intnl_UnityEngineColor\n
-    \       EXTERN, \"UnityEngineColorArray.__Get__SystemInt32__UnityEngineColor\"\n
-    \       PUSH, __1_mat_Material\n        PUSH, __1_intnl_SystemString\n        PUSH,
-    __3_intnl_UnityEngineColor\n        EXTERN, \"UnityEngineMaterial.__SetColor__SystemString_UnityEngineColor__SystemVoid\"\n
-    \       PUSH, __1_i_Int32\n        PUSH, __3_intnl_SystemInt32\n        COPY\n
-    \       PUSH, __1_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
-    __1_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000C90\n        PUSH, __0_const_intnl_SystemInt32\n        PUSH,
-    __1_i_Int32\n        COPY\n        PUSH, __0_vectorNames_StringArray\n        PUSH,
-    __2_intnl_SystemInt32\n        EXTERN, \"SystemStringArray.__get_Length__SystemInt32\"\n
-    \       PUSH, __1_i_Int32\n        PUSH, __2_intnl_SystemInt32\n        PUSH,
-    __11_intnl_SystemBoolean\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\n
-    \       PUSH, __11_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000E84\n        PUSH,
-    __0_vectorNames_StringArray\n        PUSH, __1_i_Int32\n        PUSH, __1_intnl_SystemString\n
-    \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\n        PUSH,
-    __0_vectorVals_Vector3Array\n        PUSH, __1_i_Int32\n        PUSH, __3_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineVector3Array.__Get__SystemInt32__UnityEngineVector3\"\n
-    \       PUSH, __3_intnl_UnityEngineVector3\n        PUSH, __1_intnl_UnityEngineVector4\n
-    \       EXTERN, \"UnityEngineVector4.__op_Implicit__UnityEngineVector3__UnityEngineVector4\"\n
-    \       PUSH, __1_mat_Material\n        PUSH, __1_intnl_SystemString\n        PUSH,
-    __1_intnl_UnityEngineVector4\n        EXTERN, \"UnityEngineMaterial.__SetVector__SystemString_UnityEngineVector4__SystemVoid\"\n
-    \       PUSH, __1_i_Int32\n        PUSH, __3_intnl_SystemInt32\n        COPY\n
-    \       PUSH, __1_i_Int32\n        PUSH, __1_const_intnl_SystemInt32\n        PUSH,
-    __1_i_Int32\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\n
-    \       JUMP, 0x00000D88\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
-    \       \n    .export _update\n        \n    _update:\n        \n        PUSH,
-    __0_const_intnl_SystemUInt32\n        PUSH, lerping\n        PUSH, __12_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __12_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000EDC\n        PUSH,
-    __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\n        PUSH, __6_intnl_SystemSingle\n        EXTERN,
-    \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, __6_intnl_SystemSingle\n
-    \       PUSH, lerpEnd\n        PUSH, __13_intnl_SystemBoolean\n        EXTERN,
-    \"SystemSingle.__op_GreaterThanOrEqual__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __13_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000F6C\n        PUSH,
-    __1_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x00000938\n        PUSH, __1_const_intnl_SystemBoolean\n
-    \       PUSH, lerping\n        COPY\n        PUSH, active\n        PUSH, active\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __7_intnl_SystemSingle\n
-    \       EXTERN, \"UnityEngineTime.__get_time__SystemSingle\"\n        PUSH, lerpEnd\n
-    \       PUSH, transitionTime\n        PUSH, __8_intnl_SystemSingle\n        EXTERN,
-    \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n        PUSH,
-    __7_intnl_SystemSingle\n        PUSH, __8_intnl_SystemSingle\n        PUSH, __9_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __9_intnl_SystemSingle\n        PUSH, transitionTime\n        PUSH,
-    __10_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Division__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __10_intnl_SystemSingle\n        PUSH, __0_lerpAlpha_Single\n        COPY\n
-    \       PUSH, __0_lerpAlpha_Single\n        PUSH, __0_alpha_Single\n        COPY\n
-    \       PUSH, __2_const_intnl_exitJumpLoc_UInt32\n        JUMP, 0x000001AC\n        PUSH,
-    __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\n        \n.code_end\n"
+  udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 6bd31be68492ceb46bf02ac004a5eb8c, type: 3}
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
-  debugInfo:
-    serializedDebugSpans:
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 0
-      line: 0
-      lineChar: 0
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 0
-      line: 0
-      lineChar: 0
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 6
-      line: 0
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 6
-      endSourceChar: 15
-      line: 0
-      lineChar: 6
-      spanCodeSection: "System;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 15
-      endSourceChar: 21
-      line: 1
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 21
-      endSourceChar: 33
-      line: 1
-      lineChar: 6
-      spanCodeSection: "UdonSharp;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 33
-      endSourceChar: 39
-      line: 2
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 39
-      endSourceChar: 53
-      line: 2
-      lineChar: 6
-      spanCodeSection: "UnityEngine;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 53
-      endSourceChar: 59
-      line: 3
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 59
-      endSourceChar: 59
-      line: 3
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 59
-      endSourceChar: 63
-      line: 3
-      lineChar: 6
-      spanCodeSection: VRC.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 63
-      endSourceChar: 73
-      line: 3
-      lineChar: 10
-      spanCodeSection: "SDKBase;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 73
-      endSourceChar: 79
-      line: 4
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 79
-      endSourceChar: 79
-      line: 4
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 79
-      endSourceChar: 83
-      line: 4
-      lineChar: 6
-      spanCodeSection: VRC.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 83
-      endSourceChar: 92
-      line: 4
-      lineChar: 10
-      spanCodeSection: "Udon;\r\n\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 92
-      endSourceChar: 121
-      line: 6
-      lineChar: 0
-      spanCodeSection: "namespace UdonToolkit {\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 121
-      endSourceChar: 151
-      line: 7
-      lineChar: 4
-      spanCodeSection: 'public class SkyboxAdjustment '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 151
-      endSourceChar: 153
-      line: 7
-      lineChar: 34
-      spanCodeSection: ': '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 153
-      endSourceChar: 153
-      line: 7
-      lineChar: 36
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 153
-      endSourceChar: 181
-      line: 7
-      lineChar: 36
-      spanCodeSection: "UdonSharpBehaviour {\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 181
-      endSourceChar: 188
-      line: 8
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 188
-      endSourceChar: 188
-      line: 8
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 188
-      endSourceChar: 219
-      line: 8
-      lineChar: 13
-      spanCodeSection: "Material defaultSkybox;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 219
-      endSourceChar: 226
-      line: 9
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 226
-      endSourceChar: 226
-      line: 9
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 226
-      endSourceChar: 226
-      line: 9
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 226
-      endSourceChar: 261
-      line: 9
-      lineChar: 13
-      spanCodeSection: "string[] defaultFloatNames;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 261
-      endSourceChar: 268
-      line: 10
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 268
-      endSourceChar: 268
-      line: 10
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 268
-      endSourceChar: 268
-      line: 10
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 268
-      endSourceChar: 303
-      line: 10
-      lineChar: 13
-      spanCodeSection: "float[] defaultFloatValues;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 303
-      endSourceChar: 310
-      line: 11
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 310
-      endSourceChar: 310
-      line: 11
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 310
-      endSourceChar: 310
-      line: 11
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 310
-      endSourceChar: 345
-      line: 11
-      lineChar: 13
-      spanCodeSection: "string[] defaultColorNames;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 345
-      endSourceChar: 352
-      line: 12
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 352
-      endSourceChar: 352
-      line: 12
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 352
-      endSourceChar: 352
-      line: 12
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 352
-      endSourceChar: 387
-      line: 12
-      lineChar: 13
-      spanCodeSection: "Color[] defaultColorValues;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 387
-      endSourceChar: 394
-      line: 13
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 394
-      endSourceChar: 394
-      line: 13
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 394
-      endSourceChar: 394
-      line: 13
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 394
-      endSourceChar: 431
-      line: 13
-      lineChar: 13
-      spanCodeSection: "string[] defaultVector3Names;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 431
-      endSourceChar: 438
-      line: 14
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 438
-      endSourceChar: 438
-      line: 14
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 438
-      endSourceChar: 438
-      line: 14
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 438
-      endSourceChar: 479
-      line: 14
-      lineChar: 13
-      spanCodeSection: "Vector3[] defaultVector3Values;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 479
-      endSourceChar: 486
-      line: 16
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 486
-      endSourceChar: 486
-      line: 16
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 486
-      endSourceChar: 516
-      line: 16
-      lineChar: 13
-      spanCodeSection: "Material activeSkybox;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 516
-      endSourceChar: 523
-      line: 17
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 523
-      endSourceChar: 523
-      line: 17
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 523
-      endSourceChar: 523
-      line: 17
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 523
-      endSourceChar: 557
-      line: 17
-      lineChar: 13
-      spanCodeSection: "string[] activeFloatNames;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 557
-      endSourceChar: 564
-      line: 18
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 564
-      endSourceChar: 564
-      line: 18
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 564
-      endSourceChar: 564
-      line: 18
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 564
-      endSourceChar: 598
-      line: 18
-      lineChar: 13
-      spanCodeSection: "float[] activeFloatValues;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 598
-      endSourceChar: 605
-      line: 19
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 605
-      endSourceChar: 605
-      line: 19
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 605
-      endSourceChar: 605
-      line: 19
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 605
-      endSourceChar: 639
-      line: 19
-      lineChar: 13
-      spanCodeSection: "string[] activeColorNames;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 639
-      endSourceChar: 646
-      line: 20
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 646
-      endSourceChar: 646
-      line: 20
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 646
-      endSourceChar: 646
-      line: 20
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 646
-      endSourceChar: 680
-      line: 20
-      lineChar: 13
-      spanCodeSection: "Color[] activeColorValues;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 680
-      endSourceChar: 687
-      line: 21
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 687
-      endSourceChar: 687
-      line: 21
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 687
-      endSourceChar: 687
-      line: 21
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 687
-      endSourceChar: 723
-      line: 21
-      lineChar: 13
-      spanCodeSection: "string[] activeVector3Names;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 723
-      endSourceChar: 730
-      line: 22
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 730
-      endSourceChar: 730
-      line: 22
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 730
-      endSourceChar: 730
-      line: 22
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 730
-      endSourceChar: 770
-      line: 22
-      lineChar: 13
-      spanCodeSection: "Vector3[] activeVector3Values;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 770
-      endSourceChar: 777
-      line: 24
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 777
-      endSourceChar: 777
-      line: 24
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 777
-      endSourceChar: 815
-      line: 24
-      lineChar: 13
-      spanCodeSection: "bool instantTransition = true;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 815
-      endSourceChar: 822
-      line: 25
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 822
-      endSourceChar: 822
-      line: 25
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 822
-      endSourceChar: 853
-      line: 25
-      lineChar: 13
-      spanCodeSection: "float transitionTime;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 853
-      endSourceChar: 861
-      line: 27
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 861
-      endSourceChar: 861
-      line: 27
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 861
-      endSourceChar: 881
-      line: 27
-      lineChar: 14
-      spanCodeSection: "bool active;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 881
-      endSourceChar: 889
-      line: 28
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 889
-      endSourceChar: 889
-      line: 28
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 889
-      endSourceChar: 910
-      line: 28
-      lineChar: 14
-      spanCodeSection: "bool lerping;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 910
-      endSourceChar: 918
-      line: 29
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 918
-      endSourceChar: 918
-      line: 29
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 918
-      endSourceChar: 942
-      line: 29
-      lineChar: 14
-      spanCodeSection: "float lerpEnd;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: 7
-      startSourceChar: 942
-      endSourceChar: 964
-      line: 31
-      lineChar: 6
-      spanCodeSection: 'public void Trigger() '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 964
-      endSourceChar: 975
-      line: 31
-      lineChar: 28
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 975
-      endSourceChar: 979
-      line: 32
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 979
-      endSourceChar: 979
-      line: 32
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 67
-      startSourceChar: 979
-      endSourceChar: 1000
-      line: 32
-      lineChar: 12
-      spanCodeSection: 'instantTransition || '
-    - startInstruction: 68
-      endInstruction: 67
-      startSourceChar: 1000
-      endSourceChar: 1000
-      line: 32
-      lineChar: 33
-      spanCodeSection: 
-    - startInstruction: 68
-      endInstruction: 67
-      startSourceChar: 1000
-      endSourceChar: 1018
-      line: 32
-      lineChar: 33
-      spanCodeSection: 'transitionTime <= '
-    - startInstruction: 68
-      endInstruction: 191
-      startSourceChar: 1018
-      endSourceChar: 1021
-      line: 32
-      lineChar: 51
-      spanCodeSection: '0) '
-    - startInstruction: 192
-      endInstruction: 191
-      startSourceChar: 1021
-      endSourceChar: 1034
-      line: 32
-      lineChar: 54
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 192
-      endInstruction: 191
-      startSourceChar: 1034
-      endSourceChar: 1034
-      line: 33
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 192
-      endInstruction: 191
-      startSourceChar: 1034
-      endSourceChar: 1034
-      line: 33
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 192
-      endInstruction: 191
-      startSourceChar: 1034
-      endSourceChar: 1034
-      line: 33
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 192
-      endInstruction: 191
-      startSourceChar: 1034
-      endSourceChar: 1049
-      line: 33
-      lineChar: 10
-      spanCodeSection: RenderSettings.
-    - startInstruction: 192
-      endInstruction: 191
-      startSourceChar: 1049
-      endSourceChar: 1058
-      line: 33
-      lineChar: 25
-      spanCodeSection: 'skybox = '
-    - startInstruction: 192
-      endInstruction: 191
-      startSourceChar: 1058
-      endSourceChar: 1058
-      line: 33
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 192
-      endInstruction: 207
-      startSourceChar: 1058
-      endSourceChar: 1067
-      line: 33
-      lineChar: 34
-      spanCodeSection: 'active ? '
-    - startInstruction: 208
-      endInstruction: 235
-      startSourceChar: 1067
-      endSourceChar: 1083
-      line: 33
-      lineChar: 43
-      spanCodeSection: 'defaultSkybox : '
-    - startInstruction: 236
-      endInstruction: 271
-      startSourceChar: 1083
-      endSourceChar: 1108
-      line: 33
-      lineChar: 59
-      spanCodeSection: "activeSkybox;\r\n          "
-    - startInstruction: 272
-      endInstruction: 271
-      startSourceChar: 1108
-      endSourceChar: 1108
-      line: 34
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 272
-      endInstruction: 271
-      startSourceChar: 1108
-      endSourceChar: 1108
-      line: 34
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 272
-      endInstruction: 287
-      startSourceChar: 1108
-      endSourceChar: 1137
-      line: 34
-      lineChar: 10
-      spanCodeSection: "SetFinalValues();\r\n          "
-    - startInstruction: 288
-      endInstruction: 287
-      startSourceChar: 1137
-      endSourceChar: 1137
-      line: 35
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 288
-      endInstruction: 287
-      startSourceChar: 1137
-      endSourceChar: 1137
-      line: 35
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 288
-      endInstruction: 287
-      startSourceChar: 1137
-      endSourceChar: 1146
-      line: 35
-      lineChar: 10
-      spanCodeSection: 'active = '
-    - startInstruction: 288
-      endInstruction: 287
-      startSourceChar: 1146
-      endSourceChar: 1147
-      line: 35
-      lineChar: 19
-      spanCodeSection: '!'
-    - startInstruction: 288
-      endInstruction: 311
-      startSourceChar: 1147
-      endSourceChar: 1166
-      line: 35
-      lineChar: 20
-      spanCodeSection: "active;\r\n          "
-    - startInstruction: 312
-      endInstruction: 331
-      startSourceChar: 1166
-      endSourceChar: 1196
-      line: 36
-      lineChar: 10
-      spanCodeSection: "return;\r\n        }\r\n\r\n        "
-    - startInstruction: 332
-      endInstruction: 331
-      startSourceChar: 1196
-      endSourceChar: 1196
-      line: 39
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 332
-      endInstruction: 331
-      startSourceChar: 1196
-      endSourceChar: 1196
-      line: 39
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 332
-      endInstruction: 331
-      startSourceChar: 1196
-      endSourceChar: 1206
-      line: 39
-      lineChar: 8
-      spanCodeSection: 'lerping = '
-    - startInstruction: 332
-      endInstruction: 351
-      startSourceChar: 1206
-      endSourceChar: 1221
-      line: 39
-      lineChar: 18
-      spanCodeSection: "true;\r\n        "
-    - startInstruction: 352
-      endInstruction: 351
-      startSourceChar: 1221
-      endSourceChar: 1221
-      line: 40
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 352
-      endInstruction: 351
-      startSourceChar: 1221
-      endSourceChar: 1221
-      line: 40
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 352
-      endInstruction: 351
-      startSourceChar: 1221
-      endSourceChar: 1231
-      line: 40
-      lineChar: 8
-      spanCodeSection: 'lerpEnd = '
-    - startInstruction: 352
-      endInstruction: 351
-      startSourceChar: 1231
-      endSourceChar: 1231
-      line: 40
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 352
-      endInstruction: 351
-      startSourceChar: 1231
-      endSourceChar: 1231
-      line: 40
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 352
-      endInstruction: 351
-      startSourceChar: 1231
-      endSourceChar: 1236
-      line: 40
-      lineChar: 18
-      spanCodeSection: Time.
-    - startInstruction: 352
-      endInstruction: 367
-      startSourceChar: 1236
-      endSourceChar: 1243
-      line: 40
-      lineChar: 23
-      spanCodeSection: 'time + '
-    - startInstruction: 368
-      endInstruction: 419
-      startSourceChar: 1243
-      endSourceChar: 1277
-      line: 40
-      lineChar: 30
-      spanCodeSection: "transitionTime;\r\n      }\r\n\r\n      "
-    - startInstruction: 420
-      endInstruction: 419
-      startSourceChar: 1277
-      endSourceChar: 1301
-      line: 43
-      lineChar: 6
-      spanCodeSection: private void LerpValues(
-    - startInstruction: 420
-      endInstruction: 427
-      startSourceChar: 1301
-      endSourceChar: 1314
-      line: 43
-      lineChar: 30
-      spanCodeSection: 'float alpha) '
-    - startInstruction: 428
-      endInstruction: 427
-      startSourceChar: 1314
-      endSourceChar: 1325
-      line: 43
-      lineChar: 43
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 428
-      endInstruction: 427
-      startSourceChar: 1325
-      endSourceChar: 1325
-      line: 44
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 428
-      endInstruction: 427
-      startSourceChar: 1325
-      endSourceChar: 1325
-      line: 44
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 428
-      endInstruction: 427
-      startSourceChar: 1325
-      endSourceChar: 1333
-      line: 44
-      lineChar: 8
-      spanCodeSection: 'var mat '
-    - startInstruction: 428
-      endInstruction: 427
-      startSourceChar: 1333
-      endSourceChar: 1335
-      line: 44
-      lineChar: 16
-      spanCodeSection: '= '
-    - startInstruction: 428
-      endInstruction: 447
-      startSourceChar: 1335
-      endSourceChar: 1359
-      line: 44
-      lineChar: 18
-      spanCodeSection: "defaultSkybox;\r\n        "
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1359
-      endSourceChar: 1359
-      line: 45
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1359
-      endSourceChar: 1359
-      line: 45
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1359
-      endSourceChar: 1375
-      line: 45
-      lineChar: 8
-      spanCodeSection: 'var sFloatNames '
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1375
-      endSourceChar: 1377
-      line: 45
-      lineChar: 24
-      spanCodeSection: '= '
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1377
-      endSourceChar: 1377
-      line: 45
-      lineChar: 26
-      spanCodeSection: 
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1377
-      endSourceChar: 1378
-      line: 45
-      lineChar: 26
-      spanCodeSection: '!'
-    - startInstruction: 448
-      endInstruction: 487
-      startSourceChar: 1378
-      endSourceChar: 1387
-      line: 45
-      lineChar: 27
-      spanCodeSection: 'active ? '
-    - startInstruction: 488
-      endInstruction: 515
-      startSourceChar: 1387
-      endSourceChar: 1407
-      line: 45
-      lineChar: 36
-      spanCodeSection: 'defaultFloatNames : '
-    - startInstruction: 516
-      endInstruction: 555
-      startSourceChar: 1407
-      endSourceChar: 1434
-      line: 45
-      lineChar: 56
-      spanCodeSection: "activeFloatNames;\r\n        "
-    - startInstruction: 556
-      endInstruction: 555
-      startSourceChar: 1434
-      endSourceChar: 1434
-      line: 46
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 556
-      endInstruction: 555
-      startSourceChar: 1434
-      endSourceChar: 1434
-      line: 46
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 556
-      endInstruction: 555
-      startSourceChar: 1434
-      endSourceChar: 1449
-      line: 46
-      lineChar: 8
-      spanCodeSection: 'var sFloatVals '
-    - startInstruction: 556
-      endInstruction: 555
-      startSourceChar: 1449
-      endSourceChar: 1451
-      line: 46
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 556
-      endInstruction: 555
-      startSourceChar: 1451
-      endSourceChar: 1451
-      line: 46
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 556
-      endInstruction: 555
-      startSourceChar: 1451
-      endSourceChar: 1452
-      line: 46
-      lineChar: 25
-      spanCodeSection: '!'
-    - startInstruction: 556
-      endInstruction: 595
-      startSourceChar: 1452
-      endSourceChar: 1461
-      line: 46
-      lineChar: 26
-      spanCodeSection: 'active ? '
-    - startInstruction: 596
-      endInstruction: 623
-      startSourceChar: 1461
-      endSourceChar: 1482
-      line: 46
-      lineChar: 35
-      spanCodeSection: 'defaultFloatValues : '
-    - startInstruction: 624
-      endInstruction: 663
-      startSourceChar: 1482
-      endSourceChar: 1510
-      line: 46
-      lineChar: 56
-      spanCodeSection: "activeFloatValues;\r\n        "
-    - startInstruction: 664
-      endInstruction: 663
-      startSourceChar: 1510
-      endSourceChar: 1510
-      line: 47
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 664
-      endInstruction: 663
-      startSourceChar: 1510
-      endSourceChar: 1510
-      line: 47
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 664
-      endInstruction: 663
-      startSourceChar: 1510
-      endSourceChar: 1526
-      line: 47
-      lineChar: 8
-      spanCodeSection: 'var sColorNames '
-    - startInstruction: 664
-      endInstruction: 663
-      startSourceChar: 1526
-      endSourceChar: 1528
-      line: 47
-      lineChar: 24
-      spanCodeSection: '= '
-    - startInstruction: 664
-      endInstruction: 663
-      startSourceChar: 1528
-      endSourceChar: 1528
-      line: 47
-      lineChar: 26
-      spanCodeSection: 
-    - startInstruction: 664
-      endInstruction: 663
-      startSourceChar: 1528
-      endSourceChar: 1529
-      line: 47
-      lineChar: 26
-      spanCodeSection: '!'
-    - startInstruction: 664
-      endInstruction: 703
-      startSourceChar: 1529
-      endSourceChar: 1538
-      line: 47
-      lineChar: 27
-      spanCodeSection: 'active ? '
-    - startInstruction: 704
-      endInstruction: 731
-      startSourceChar: 1538
-      endSourceChar: 1558
-      line: 47
-      lineChar: 36
-      spanCodeSection: 'defaultColorNames : '
-    - startInstruction: 732
-      endInstruction: 771
-      startSourceChar: 1558
-      endSourceChar: 1585
-      line: 47
-      lineChar: 56
-      spanCodeSection: "activeColorNames;\r\n        "
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1585
-      endSourceChar: 1585
-      line: 48
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1585
-      endSourceChar: 1585
-      line: 48
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1585
-      endSourceChar: 1600
-      line: 48
-      lineChar: 8
-      spanCodeSection: 'var sColorVals '
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1600
-      endSourceChar: 1602
-      line: 48
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1602
-      endSourceChar: 1602
-      line: 48
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1602
-      endSourceChar: 1603
-      line: 48
-      lineChar: 25
-      spanCodeSection: '!'
-    - startInstruction: 772
-      endInstruction: 811
-      startSourceChar: 1603
-      endSourceChar: 1612
-      line: 48
-      lineChar: 26
-      spanCodeSection: 'active ? '
-    - startInstruction: 812
-      endInstruction: 839
-      startSourceChar: 1612
-      endSourceChar: 1633
-      line: 48
-      lineChar: 35
-      spanCodeSection: 'defaultColorValues : '
-    - startInstruction: 840
-      endInstruction: 879
-      startSourceChar: 1633
-      endSourceChar: 1661
-      line: 48
-      lineChar: 56
-      spanCodeSection: "activeColorValues;\r\n        "
-    - startInstruction: 880
-      endInstruction: 879
-      startSourceChar: 1661
-      endSourceChar: 1661
-      line: 49
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 880
-      endInstruction: 879
-      startSourceChar: 1661
-      endSourceChar: 1661
-      line: 49
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 880
-      endInstruction: 879
-      startSourceChar: 1661
-      endSourceChar: 1678
-      line: 49
-      lineChar: 8
-      spanCodeSection: 'var sVectorNames '
-    - startInstruction: 880
-      endInstruction: 879
-      startSourceChar: 1678
-      endSourceChar: 1680
-      line: 49
-      lineChar: 25
-      spanCodeSection: '= '
-    - startInstruction: 880
-      endInstruction: 879
-      startSourceChar: 1680
-      endSourceChar: 1680
-      line: 49
-      lineChar: 27
-      spanCodeSection: 
-    - startInstruction: 880
-      endInstruction: 879
-      startSourceChar: 1680
-      endSourceChar: 1681
-      line: 49
-      lineChar: 27
-      spanCodeSection: '!'
-    - startInstruction: 880
-      endInstruction: 919
-      startSourceChar: 1681
-      endSourceChar: 1690
-      line: 49
-      lineChar: 28
-      spanCodeSection: 'active ? '
-    - startInstruction: 920
-      endInstruction: 947
-      startSourceChar: 1690
-      endSourceChar: 1712
-      line: 49
-      lineChar: 37
-      spanCodeSection: 'defaultVector3Names : '
-    - startInstruction: 948
-      endInstruction: 987
-      startSourceChar: 1712
-      endSourceChar: 1741
-      line: 49
-      lineChar: 59
-      spanCodeSection: "activeVector3Names;\r\n        "
-    - startInstruction: 988
-      endInstruction: 987
-      startSourceChar: 1741
-      endSourceChar: 1741
-      line: 50
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 988
-      endInstruction: 987
-      startSourceChar: 1741
-      endSourceChar: 1741
-      line: 50
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 988
-      endInstruction: 987
-      startSourceChar: 1741
-      endSourceChar: 1757
-      line: 50
-      lineChar: 8
-      spanCodeSection: 'var sVectorVals '
-    - startInstruction: 988
-      endInstruction: 987
-      startSourceChar: 1757
-      endSourceChar: 1759
-      line: 50
-      lineChar: 24
-      spanCodeSection: '= '
-    - startInstruction: 988
-      endInstruction: 987
-      startSourceChar: 1759
-      endSourceChar: 1759
-      line: 50
-      lineChar: 26
-      spanCodeSection: 
-    - startInstruction: 988
-      endInstruction: 987
-      startSourceChar: 1759
-      endSourceChar: 1760
-      line: 50
-      lineChar: 26
-      spanCodeSection: '!'
-    - startInstruction: 988
-      endInstruction: 1027
-      startSourceChar: 1760
-      endSourceChar: 1769
-      line: 50
-      lineChar: 27
-      spanCodeSection: 'active ? '
-    - startInstruction: 1028
-      endInstruction: 1055
-      startSourceChar: 1769
-      endSourceChar: 1792
-      line: 50
-      lineChar: 36
-      spanCodeSection: 'defaultVector3Values : '
-    - startInstruction: 1056
-      endInstruction: 1095
-      startSourceChar: 1792
-      endSourceChar: 1832
-      line: 50
-      lineChar: 59
-      spanCodeSection: "activeVector3Values;\r\n        \r\n        "
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1832
-      endSourceChar: 1832
-      line: 52
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1832
-      endSourceChar: 1832
-      line: 52
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1832
-      endSourceChar: 1847
-      line: 52
-      lineChar: 8
-      spanCodeSection: 'var eFloatVals '
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1847
-      endSourceChar: 1849
-      line: 52
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 1096
-      endInstruction: 1095
-      startSourceChar: 1849
-      endSourceChar: 1849
-      line: 52
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 1096
-      endInstruction: 1111
-      startSourceChar: 1849
-      endSourceChar: 1858
-      line: 52
-      lineChar: 25
-      spanCodeSection: 'active ? '
-    - startInstruction: 1112
-      endInstruction: 1139
-      startSourceChar: 1858
-      endSourceChar: 1879
-      line: 52
-      lineChar: 34
-      spanCodeSection: 'defaultFloatValues : '
-    - startInstruction: 1140
-      endInstruction: 1179
-      startSourceChar: 1879
-      endSourceChar: 1907
-      line: 52
-      lineChar: 55
-      spanCodeSection: "activeFloatValues;\r\n        "
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 1907
-      endSourceChar: 1907
-      line: 53
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 1907
-      endSourceChar: 1907
-      line: 53
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 1907
-      endSourceChar: 1922
-      line: 53
-      lineChar: 8
-      spanCodeSection: 'var eColorVals '
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 1922
-      endSourceChar: 1924
-      line: 53
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 1180
-      endInstruction: 1179
-      startSourceChar: 1924
-      endSourceChar: 1924
-      line: 53
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 1180
-      endInstruction: 1195
-      startSourceChar: 1924
-      endSourceChar: 1933
-      line: 53
-      lineChar: 25
-      spanCodeSection: 'active ? '
-    - startInstruction: 1196
-      endInstruction: 1223
-      startSourceChar: 1933
-      endSourceChar: 1954
-      line: 53
-      lineChar: 34
-      spanCodeSection: 'defaultColorValues : '
-    - startInstruction: 1224
-      endInstruction: 1263
-      startSourceChar: 1954
-      endSourceChar: 1982
-      line: 53
-      lineChar: 55
-      spanCodeSection: "activeColorValues;\r\n        "
-    - startInstruction: 1264
-      endInstruction: 1263
-      startSourceChar: 1982
-      endSourceChar: 1982
-      line: 54
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1264
-      endInstruction: 1263
-      startSourceChar: 1982
-      endSourceChar: 1982
-      line: 54
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1264
-      endInstruction: 1263
-      startSourceChar: 1982
-      endSourceChar: 1998
-      line: 54
-      lineChar: 8
-      spanCodeSection: 'var eVectorVals '
-    - startInstruction: 1264
-      endInstruction: 1263
-      startSourceChar: 1998
-      endSourceChar: 2000
-      line: 54
-      lineChar: 24
-      spanCodeSection: '= '
-    - startInstruction: 1264
-      endInstruction: 1263
-      startSourceChar: 2000
-      endSourceChar: 2000
-      line: 54
-      lineChar: 26
-      spanCodeSection: 
-    - startInstruction: 1264
-      endInstruction: 1279
-      startSourceChar: 2000
-      endSourceChar: 2009
-      line: 54
-      lineChar: 26
-      spanCodeSection: 'active ? '
-    - startInstruction: 1280
-      endInstruction: 1307
-      startSourceChar: 2009
-      endSourceChar: 2032
-      line: 54
-      lineChar: 35
-      spanCodeSection: 'defaultVector3Values : '
-    - startInstruction: 1308
-      endInstruction: 1347
-      startSourceChar: 2032
-      endSourceChar: 2072
-      line: 54
-      lineChar: 58
-      spanCodeSection: "activeVector3Values;\r\n        \r\n        "
-    - startInstruction: 1348
-      endInstruction: 1347
-      startSourceChar: 2072
-      endSourceChar: 2077
-      line: 56
-      lineChar: 8
-      spanCodeSection: for (
-    - startInstruction: 1348
-      endInstruction: 1347
-      startSourceChar: 2077
-      endSourceChar: 2077
-      line: 56
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 1348
-      endInstruction: 1347
-      startSourceChar: 2077
-      endSourceChar: 2077
-      line: 56
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 1348
-      endInstruction: 1347
-      startSourceChar: 2077
-      endSourceChar: 2083
-      line: 56
-      lineChar: 13
-      spanCodeSection: 'int i '
-    - startInstruction: 1348
-      endInstruction: 1347
-      startSourceChar: 2083
-      endSourceChar: 2085
-      line: 56
-      lineChar: 19
-      spanCodeSection: '= '
-    - startInstruction: 1348
-      endInstruction: 1367
-      startSourceChar: 2085
-      endSourceChar: 2088
-      line: 56
-      lineChar: 21
-      spanCodeSection: '0; '
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2088
-      endSourceChar: 2088
-      line: 56
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2088
-      endSourceChar: 2092
-      line: 56
-      lineChar: 24
-      spanCodeSection: 'i < '
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2092
-      endSourceChar: 2092
-      line: 56
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 1368
-      endInstruction: 1367
-      startSourceChar: 2092
-      endSourceChar: 2104
-      line: 56
-      lineChar: 28
-      spanCodeSection: sFloatNames.
-    - startInstruction: 1368
-      endInstruction: 1439
-      startSourceChar: 2104
-      endSourceChar: 2117
-      line: 56
-      lineChar: 40
-      spanCodeSection: 'Length; i++) '
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2117
-      endSourceChar: 2130
-      line: 56
-      lineChar: 53
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2130
-      endSourceChar: 2130
-      line: 57
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2130
-      endSourceChar: 2130
-      line: 57
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2130
-      endSourceChar: 2130
-      line: 57
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2130
-      endSourceChar: 2134
-      line: 57
-      lineChar: 10
-      spanCodeSection: mat.
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2134
-      endSourceChar: 2143
-      line: 57
-      lineChar: 14
-      spanCodeSection: SetFloat(
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2143
-      endSourceChar: 2143
-      line: 57
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2143
-      endSourceChar: 2155
-      line: 57
-      lineChar: 23
-      spanCodeSection: sFloatNames[
-    - startInstruction: 1440
-      endInstruction: 1439
-      startSourceChar: 2155
-      endSourceChar: 2155
-      line: 57
-      lineChar: 35
-      spanCodeSection: 
-    - startInstruction: 1440
-      endInstruction: 1471
-      startSourceChar: 2155
-      endSourceChar: 2159
-      line: 57
-      lineChar: 35
-      spanCodeSection: 'i], '
-    - startInstruction: 1472
-      endInstruction: 1471
-      startSourceChar: 2159
-      endSourceChar: 2159
-      line: 57
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 1472
-      endInstruction: 1471
-      startSourceChar: 2159
-      endSourceChar: 2159
-      line: 57
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 1472
-      endInstruction: 1471
-      startSourceChar: 2159
-      endSourceChar: 2165
-      line: 57
-      lineChar: 39
-      spanCodeSection: Mathf.
-    - startInstruction: 1472
-      endInstruction: 1471
-      startSourceChar: 2165
-      endSourceChar: 2170
-      line: 57
-      lineChar: 45
-      spanCodeSection: Lerp(
-    - startInstruction: 1472
-      endInstruction: 1471
-      startSourceChar: 2170
-      endSourceChar: 2170
-      line: 57
-      lineChar: 50
-      spanCodeSection: 
-    - startInstruction: 1472
-      endInstruction: 1471
-      startSourceChar: 2170
-      endSourceChar: 2181
-      line: 57
-      lineChar: 50
-      spanCodeSection: sFloatVals[
-    - startInstruction: 1472
-      endInstruction: 1471
-      startSourceChar: 2181
-      endSourceChar: 2181
-      line: 57
-      lineChar: 61
-      spanCodeSection: 
-    - startInstruction: 1472
-      endInstruction: 1503
-      startSourceChar: 2181
-      endSourceChar: 2185
-      line: 57
-      lineChar: 61
-      spanCodeSection: 'i], '
-    - startInstruction: 1504
-      endInstruction: 1503
-      startSourceChar: 2185
-      endSourceChar: 2185
-      line: 57
-      lineChar: 65
-      spanCodeSection: 
-    - startInstruction: 1504
-      endInstruction: 1503
-      startSourceChar: 2185
-      endSourceChar: 2196
-      line: 57
-      lineChar: 65
-      spanCodeSection: eFloatVals[
-    - startInstruction: 1504
-      endInstruction: 1503
-      startSourceChar: 2196
-      endSourceChar: 2196
-      line: 57
-      lineChar: 76
-      spanCodeSection: 
-    - startInstruction: 1504
-      endInstruction: 1535
-      startSourceChar: 2196
-      endSourceChar: 2200
-      line: 57
-      lineChar: 76
-      spanCodeSection: 'i], '
-    - startInstruction: 1536
-      endInstruction: 1667
-      startSourceChar: 2200
-      endSourceChar: 2229
-      line: 57
-      lineChar: 80
-      spanCodeSection: "alpha));\r\n        }\r\n        "
-    - startInstruction: 1668
-      endInstruction: 1667
-      startSourceChar: 2229
-      endSourceChar: 2234
-      line: 59
-      lineChar: 8
-      spanCodeSection: for (
-    - startInstruction: 1668
-      endInstruction: 1667
-      startSourceChar: 2234
-      endSourceChar: 2234
-      line: 59
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 1668
-      endInstruction: 1667
-      startSourceChar: 2234
-      endSourceChar: 2234
-      line: 59
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 1668
-      endInstruction: 1667
-      startSourceChar: 2234
-      endSourceChar: 2240
-      line: 59
-      lineChar: 13
-      spanCodeSection: 'int i '
-    - startInstruction: 1668
-      endInstruction: 1667
-      startSourceChar: 2240
-      endSourceChar: 2242
-      line: 59
-      lineChar: 19
-      spanCodeSection: '= '
-    - startInstruction: 1668
-      endInstruction: 1687
-      startSourceChar: 2242
-      endSourceChar: 2245
-      line: 59
-      lineChar: 21
-      spanCodeSection: '0; '
-    - startInstruction: 1688
-      endInstruction: 1687
-      startSourceChar: 2245
-      endSourceChar: 2245
-      line: 59
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 1688
-      endInstruction: 1687
-      startSourceChar: 2245
-      endSourceChar: 2249
-      line: 59
-      lineChar: 24
-      spanCodeSection: 'i < '
-    - startInstruction: 1688
-      endInstruction: 1687
-      startSourceChar: 2249
-      endSourceChar: 2249
-      line: 59
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 1688
-      endInstruction: 1687
-      startSourceChar: 2249
-      endSourceChar: 2261
-      line: 59
-      lineChar: 28
-      spanCodeSection: sColorNames.
-    - startInstruction: 1688
-      endInstruction: 1759
-      startSourceChar: 2261
-      endSourceChar: 2274
-      line: 59
-      lineChar: 40
-      spanCodeSection: 'Length; i++) '
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2274
-      endSourceChar: 2287
-      line: 59
-      lineChar: 53
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2287
-      endSourceChar: 2287
-      line: 60
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2287
-      endSourceChar: 2287
-      line: 60
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2287
-      endSourceChar: 2287
-      line: 60
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2287
-      endSourceChar: 2291
-      line: 60
-      lineChar: 10
-      spanCodeSection: mat.
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2291
-      endSourceChar: 2300
-      line: 60
-      lineChar: 14
-      spanCodeSection: SetColor(
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2300
-      endSourceChar: 2300
-      line: 60
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2300
-      endSourceChar: 2312
-      line: 60
-      lineChar: 23
-      spanCodeSection: sColorNames[
-    - startInstruction: 1760
-      endInstruction: 1759
-      startSourceChar: 2312
-      endSourceChar: 2312
-      line: 60
-      lineChar: 35
-      spanCodeSection: 
-    - startInstruction: 1760
-      endInstruction: 1791
-      startSourceChar: 2312
-      endSourceChar: 2316
-      line: 60
-      lineChar: 35
-      spanCodeSection: 'i], '
-    - startInstruction: 1792
-      endInstruction: 1791
-      startSourceChar: 2316
-      endSourceChar: 2316
-      line: 60
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 1792
-      endInstruction: 1791
-      startSourceChar: 2316
-      endSourceChar: 2316
-      line: 60
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 1792
-      endInstruction: 1791
-      startSourceChar: 2316
-      endSourceChar: 2322
-      line: 60
-      lineChar: 39
-      spanCodeSection: Color.
-    - startInstruction: 1792
-      endInstruction: 1791
-      startSourceChar: 2322
-      endSourceChar: 2327
-      line: 60
-      lineChar: 45
-      spanCodeSection: Lerp(
-    - startInstruction: 1792
-      endInstruction: 1791
-      startSourceChar: 2327
-      endSourceChar: 2327
-      line: 60
-      lineChar: 50
-      spanCodeSection: 
-    - startInstruction: 1792
-      endInstruction: 1791
-      startSourceChar: 2327
-      endSourceChar: 2338
-      line: 60
-      lineChar: 50
-      spanCodeSection: sColorVals[
-    - startInstruction: 1792
-      endInstruction: 1791
-      startSourceChar: 2338
-      endSourceChar: 2338
-      line: 60
-      lineChar: 61
-      spanCodeSection: 
-    - startInstruction: 1792
-      endInstruction: 1823
-      startSourceChar: 2338
-      endSourceChar: 2342
-      line: 60
-      lineChar: 61
-      spanCodeSection: 'i], '
-    - startInstruction: 1824
-      endInstruction: 1823
-      startSourceChar: 2342
-      endSourceChar: 2342
-      line: 60
-      lineChar: 65
-      spanCodeSection: 
-    - startInstruction: 1824
-      endInstruction: 1823
-      startSourceChar: 2342
-      endSourceChar: 2353
-      line: 60
-      lineChar: 65
-      spanCodeSection: eColorVals[
-    - startInstruction: 1824
-      endInstruction: 1823
-      startSourceChar: 2353
-      endSourceChar: 2353
-      line: 60
-      lineChar: 76
-      spanCodeSection: 
-    - startInstruction: 1824
-      endInstruction: 1855
-      startSourceChar: 2353
-      endSourceChar: 2357
-      line: 60
-      lineChar: 76
-      spanCodeSection: 'i], '
-    - startInstruction: 1856
-      endInstruction: 1987
-      startSourceChar: 2357
-      endSourceChar: 2386
-      line: 60
-      lineChar: 80
-      spanCodeSection: "alpha));\r\n        }\r\n        "
-    - startInstruction: 1988
-      endInstruction: 1987
-      startSourceChar: 2386
-      endSourceChar: 2391
-      line: 62
-      lineChar: 8
-      spanCodeSection: for (
-    - startInstruction: 1988
-      endInstruction: 1987
-      startSourceChar: 2391
-      endSourceChar: 2391
-      line: 62
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 1988
-      endInstruction: 1987
-      startSourceChar: 2391
-      endSourceChar: 2391
-      line: 62
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 1988
-      endInstruction: 1987
-      startSourceChar: 2391
-      endSourceChar: 2397
-      line: 62
-      lineChar: 13
-      spanCodeSection: 'int i '
-    - startInstruction: 1988
-      endInstruction: 1987
-      startSourceChar: 2397
-      endSourceChar: 2399
-      line: 62
-      lineChar: 19
-      spanCodeSection: '= '
-    - startInstruction: 1988
-      endInstruction: 2007
-      startSourceChar: 2399
-      endSourceChar: 2402
-      line: 62
-      lineChar: 21
-      spanCodeSection: '0; '
-    - startInstruction: 2008
-      endInstruction: 2007
-      startSourceChar: 2402
-      endSourceChar: 2402
-      line: 62
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 2008
-      endInstruction: 2007
-      startSourceChar: 2402
-      endSourceChar: 2406
-      line: 62
-      lineChar: 24
-      spanCodeSection: 'i < '
-    - startInstruction: 2008
-      endInstruction: 2007
-      startSourceChar: 2406
-      endSourceChar: 2406
-      line: 62
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 2008
-      endInstruction: 2007
-      startSourceChar: 2406
-      endSourceChar: 2419
-      line: 62
-      lineChar: 28
-      spanCodeSection: sVectorNames.
-    - startInstruction: 2008
-      endInstruction: 2079
-      startSourceChar: 2419
-      endSourceChar: 2432
-      line: 62
-      lineChar: 41
-      spanCodeSection: 'Length; i++) '
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2432
-      endSourceChar: 2445
-      line: 62
-      lineChar: 54
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2445
-      endSourceChar: 2445
-      line: 63
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2445
-      endSourceChar: 2445
-      line: 63
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2445
-      endSourceChar: 2445
-      line: 63
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2445
-      endSourceChar: 2449
-      line: 63
-      lineChar: 10
-      spanCodeSection: mat.
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2449
-      endSourceChar: 2459
-      line: 63
-      lineChar: 14
-      spanCodeSection: SetVector(
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2459
-      endSourceChar: 2459
-      line: 63
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2459
-      endSourceChar: 2472
-      line: 63
-      lineChar: 24
-      spanCodeSection: sVectorNames[
-    - startInstruction: 2080
-      endInstruction: 2079
-      startSourceChar: 2472
-      endSourceChar: 2472
-      line: 63
-      lineChar: 37
-      spanCodeSection: 
-    - startInstruction: 2080
-      endInstruction: 2111
-      startSourceChar: 2472
-      endSourceChar: 2476
-      line: 63
-      lineChar: 37
-      spanCodeSection: 'i], '
-    - startInstruction: 2112
-      endInstruction: 2111
-      startSourceChar: 2476
-      endSourceChar: 2476
-      line: 63
-      lineChar: 41
-      spanCodeSection: 
-    - startInstruction: 2112
-      endInstruction: 2111
-      startSourceChar: 2476
-      endSourceChar: 2476
-      line: 63
-      lineChar: 41
-      spanCodeSection: 
-    - startInstruction: 2112
-      endInstruction: 2111
-      startSourceChar: 2476
-      endSourceChar: 2484
-      line: 63
-      lineChar: 41
-      spanCodeSection: Vector3.
-    - startInstruction: 2112
-      endInstruction: 2111
-      startSourceChar: 2484
-      endSourceChar: 2489
-      line: 63
-      lineChar: 49
-      spanCodeSection: Lerp(
-    - startInstruction: 2112
-      endInstruction: 2111
-      startSourceChar: 2489
-      endSourceChar: 2489
-      line: 63
-      lineChar: 54
-      spanCodeSection: 
-    - startInstruction: 2112
-      endInstruction: 2111
-      startSourceChar: 2489
-      endSourceChar: 2501
-      line: 63
-      lineChar: 54
-      spanCodeSection: sVectorVals[
-    - startInstruction: 2112
-      endInstruction: 2111
-      startSourceChar: 2501
-      endSourceChar: 2501
-      line: 63
-      lineChar: 66
-      spanCodeSection: 
-    - startInstruction: 2112
-      endInstruction: 2143
-      startSourceChar: 2501
-      endSourceChar: 2505
-      line: 63
-      lineChar: 66
-      spanCodeSection: 'i], '
-    - startInstruction: 2144
-      endInstruction: 2143
-      startSourceChar: 2505
-      endSourceChar: 2505
-      line: 63
-      lineChar: 70
-      spanCodeSection: 
-    - startInstruction: 2144
-      endInstruction: 2143
-      startSourceChar: 2505
-      endSourceChar: 2517
-      line: 63
-      lineChar: 70
-      spanCodeSection: eVectorVals[
-    - startInstruction: 2144
-      endInstruction: 2143
-      startSourceChar: 2517
-      endSourceChar: 2517
-      line: 63
-      lineChar: 82
-      spanCodeSection: 
-    - startInstruction: 2144
-      endInstruction: 2175
-      startSourceChar: 2517
-      endSourceChar: 2521
-      line: 63
-      lineChar: 82
-      spanCodeSection: 'i], '
-    - startInstruction: 2176
-      endInstruction: 2351
-      startSourceChar: 2521
-      endSourceChar: 2559
-      line: 63
-      lineChar: 86
-      spanCodeSection: "alpha));\r\n        }\r\n      }\r\n\r\n      "
-    - startInstruction: 2352
-      endInstruction: 2359
-      startSourceChar: 2559
-      endSourceChar: 2589
-      line: 67
-      lineChar: 6
-      spanCodeSection: 'private void SetFinalValues() '
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2589
-      endSourceChar: 2600
-      line: 67
-      lineChar: 36
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2600
-      endSourceChar: 2600
-      line: 68
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2600
-      endSourceChar: 2600
-      line: 68
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2600
-      endSourceChar: 2615
-      line: 68
-      lineChar: 8
-      spanCodeSection: 'var floatNames '
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2615
-      endSourceChar: 2617
-      line: 68
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 2360
-      endInstruction: 2359
-      startSourceChar: 2617
-      endSourceChar: 2617
-      line: 68
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 2360
-      endInstruction: 2375
-      startSourceChar: 2617
-      endSourceChar: 2626
-      line: 68
-      lineChar: 25
-      spanCodeSection: 'active ? '
-    - startInstruction: 2376
-      endInstruction: 2403
-      startSourceChar: 2626
-      endSourceChar: 2646
-      line: 68
-      lineChar: 34
-      spanCodeSection: 'defaultFloatNames : '
-    - startInstruction: 2404
-      endInstruction: 2443
-      startSourceChar: 2646
-      endSourceChar: 2673
-      line: 68
-      lineChar: 54
-      spanCodeSection: "activeFloatNames;\r\n        "
-    - startInstruction: 2444
-      endInstruction: 2443
-      startSourceChar: 2673
-      endSourceChar: 2673
-      line: 69
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2444
-      endInstruction: 2443
-      startSourceChar: 2673
-      endSourceChar: 2673
-      line: 69
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2444
-      endInstruction: 2443
-      startSourceChar: 2673
-      endSourceChar: 2687
-      line: 69
-      lineChar: 8
-      spanCodeSection: 'var floatVals '
-    - startInstruction: 2444
-      endInstruction: 2443
-      startSourceChar: 2687
-      endSourceChar: 2689
-      line: 69
-      lineChar: 22
-      spanCodeSection: '= '
-    - startInstruction: 2444
-      endInstruction: 2443
-      startSourceChar: 2689
-      endSourceChar: 2689
-      line: 69
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 2444
-      endInstruction: 2459
-      startSourceChar: 2689
-      endSourceChar: 2698
-      line: 69
-      lineChar: 24
-      spanCodeSection: 'active ? '
-    - startInstruction: 2460
-      endInstruction: 2487
-      startSourceChar: 2698
-      endSourceChar: 2719
-      line: 69
-      lineChar: 33
-      spanCodeSection: 'defaultFloatValues : '
-    - startInstruction: 2488
-      endInstruction: 2527
-      startSourceChar: 2719
-      endSourceChar: 2747
-      line: 69
-      lineChar: 54
-      spanCodeSection: "activeFloatValues;\r\n        "
-    - startInstruction: 2528
-      endInstruction: 2527
-      startSourceChar: 2747
-      endSourceChar: 2747
-      line: 70
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2528
-      endInstruction: 2527
-      startSourceChar: 2747
-      endSourceChar: 2747
-      line: 70
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2528
-      endInstruction: 2527
-      startSourceChar: 2747
-      endSourceChar: 2762
-      line: 70
-      lineChar: 8
-      spanCodeSection: 'var colorNames '
-    - startInstruction: 2528
-      endInstruction: 2527
-      startSourceChar: 2762
-      endSourceChar: 2764
-      line: 70
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 2528
-      endInstruction: 2527
-      startSourceChar: 2764
-      endSourceChar: 2764
-      line: 70
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 2528
-      endInstruction: 2543
-      startSourceChar: 2764
-      endSourceChar: 2773
-      line: 70
-      lineChar: 25
-      spanCodeSection: 'active ? '
-    - startInstruction: 2544
-      endInstruction: 2571
-      startSourceChar: 2773
-      endSourceChar: 2793
-      line: 70
-      lineChar: 34
-      spanCodeSection: 'defaultColorNames : '
-    - startInstruction: 2572
-      endInstruction: 2611
-      startSourceChar: 2793
-      endSourceChar: 2820
-      line: 70
-      lineChar: 54
-      spanCodeSection: "activeColorNames;\r\n        "
-    - startInstruction: 2612
-      endInstruction: 2611
-      startSourceChar: 2820
-      endSourceChar: 2820
-      line: 71
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2612
-      endInstruction: 2611
-      startSourceChar: 2820
-      endSourceChar: 2820
-      line: 71
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2612
-      endInstruction: 2611
-      startSourceChar: 2820
-      endSourceChar: 2834
-      line: 71
-      lineChar: 8
-      spanCodeSection: 'var colorVals '
-    - startInstruction: 2612
-      endInstruction: 2611
-      startSourceChar: 2834
-      endSourceChar: 2836
-      line: 71
-      lineChar: 22
-      spanCodeSection: '= '
-    - startInstruction: 2612
-      endInstruction: 2611
-      startSourceChar: 2836
-      endSourceChar: 2836
-      line: 71
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 2612
-      endInstruction: 2627
-      startSourceChar: 2836
-      endSourceChar: 2845
-      line: 71
-      lineChar: 24
-      spanCodeSection: 'active ? '
-    - startInstruction: 2628
-      endInstruction: 2655
-      startSourceChar: 2845
-      endSourceChar: 2866
-      line: 71
-      lineChar: 33
-      spanCodeSection: 'defaultColorValues : '
-    - startInstruction: 2656
-      endInstruction: 2695
-      startSourceChar: 2866
-      endSourceChar: 2894
-      line: 71
-      lineChar: 54
-      spanCodeSection: "activeColorValues;\r\n        "
-    - startInstruction: 2696
-      endInstruction: 2695
-      startSourceChar: 2894
-      endSourceChar: 2894
-      line: 72
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2696
-      endInstruction: 2695
-      startSourceChar: 2894
-      endSourceChar: 2894
-      line: 72
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2696
-      endInstruction: 2695
-      startSourceChar: 2894
-      endSourceChar: 2910
-      line: 72
-      lineChar: 8
-      spanCodeSection: 'var vectorNames '
-    - startInstruction: 2696
-      endInstruction: 2695
-      startSourceChar: 2910
-      endSourceChar: 2912
-      line: 72
-      lineChar: 24
-      spanCodeSection: '= '
-    - startInstruction: 2696
-      endInstruction: 2695
-      startSourceChar: 2912
-      endSourceChar: 2912
-      line: 72
-      lineChar: 26
-      spanCodeSection: 
-    - startInstruction: 2696
-      endInstruction: 2711
-      startSourceChar: 2912
-      endSourceChar: 2921
-      line: 72
-      lineChar: 26
-      spanCodeSection: 'active ? '
-    - startInstruction: 2712
-      endInstruction: 2739
-      startSourceChar: 2921
-      endSourceChar: 2943
-      line: 72
-      lineChar: 35
-      spanCodeSection: 'defaultVector3Names : '
-    - startInstruction: 2740
-      endInstruction: 2779
-      startSourceChar: 2943
-      endSourceChar: 2972
-      line: 72
-      lineChar: 57
-      spanCodeSection: "activeVector3Names;\r\n        "
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 2972
-      endSourceChar: 2972
-      line: 73
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 2972
-      endSourceChar: 2972
-      line: 73
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 2972
-      endSourceChar: 2987
-      line: 73
-      lineChar: 8
-      spanCodeSection: 'var vectorVals '
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 2987
-      endSourceChar: 2989
-      line: 73
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 2780
-      endInstruction: 2779
-      startSourceChar: 2989
-      endSourceChar: 2989
-      line: 73
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 2780
-      endInstruction: 2795
-      startSourceChar: 2989
-      endSourceChar: 2998
-      line: 73
-      lineChar: 25
-      spanCodeSection: 'active ? '
-    - startInstruction: 2796
-      endInstruction: 2823
-      startSourceChar: 2998
-      endSourceChar: 3021
-      line: 73
-      lineChar: 34
-      spanCodeSection: 'defaultVector3Values : '
-    - startInstruction: 2824
-      endInstruction: 2863
-      startSourceChar: 3021
-      endSourceChar: 3051
-      line: 73
-      lineChar: 57
-      spanCodeSection: "activeVector3Values;\r\n        "
-    - startInstruction: 2864
-      endInstruction: 2863
-      startSourceChar: 3051
-      endSourceChar: 3051
-      line: 74
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2864
-      endInstruction: 2863
-      startSourceChar: 3051
-      endSourceChar: 3051
-      line: 74
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2864
-      endInstruction: 2863
-      startSourceChar: 3051
-      endSourceChar: 3059
-      line: 74
-      lineChar: 8
-      spanCodeSection: 'var mat '
-    - startInstruction: 2864
-      endInstruction: 2863
-      startSourceChar: 3059
-      endSourceChar: 3061
-      line: 74
-      lineChar: 16
-      spanCodeSection: '= '
-    - startInstruction: 2864
-      endInstruction: 2863
-      startSourceChar: 3061
-      endSourceChar: 3061
-      line: 74
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 2864
-      endInstruction: 2879
-      startSourceChar: 3061
-      endSourceChar: 3070
-      line: 74
-      lineChar: 18
-      spanCodeSection: 'active ? '
-    - startInstruction: 2880
-      endInstruction: 2907
-      startSourceChar: 3070
-      endSourceChar: 3086
-      line: 74
-      lineChar: 27
-      spanCodeSection: 'defaultSkybox : '
-    - startInstruction: 2908
-      endInstruction: 2947
-      startSourceChar: 3086
-      endSourceChar: 3109
-      line: 74
-      lineChar: 43
-      spanCodeSection: "activeSkybox;\r\n        "
-    - startInstruction: 2948
-      endInstruction: 2947
-      startSourceChar: 3109
-      endSourceChar: 3114
-      line: 75
-      lineChar: 8
-      spanCodeSection: for (
-    - startInstruction: 2948
-      endInstruction: 2947
-      startSourceChar: 3114
-      endSourceChar: 3114
-      line: 75
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 2948
-      endInstruction: 2947
-      startSourceChar: 3114
-      endSourceChar: 3114
-      line: 75
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 2948
-      endInstruction: 2947
-      startSourceChar: 3114
-      endSourceChar: 3120
-      line: 75
-      lineChar: 13
-      spanCodeSection: 'int i '
-    - startInstruction: 2948
-      endInstruction: 2947
-      startSourceChar: 3120
-      endSourceChar: 3122
-      line: 75
-      lineChar: 19
-      spanCodeSection: '= '
-    - startInstruction: 2948
-      endInstruction: 2967
-      startSourceChar: 3122
-      endSourceChar: 3125
-      line: 75
-      lineChar: 21
-      spanCodeSection: '0; '
-    - startInstruction: 2968
-      endInstruction: 2967
-      startSourceChar: 3125
-      endSourceChar: 3125
-      line: 75
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 2968
-      endInstruction: 2967
-      startSourceChar: 3125
-      endSourceChar: 3129
-      line: 75
-      lineChar: 24
-      spanCodeSection: 'i < '
-    - startInstruction: 2968
-      endInstruction: 2967
-      startSourceChar: 3129
-      endSourceChar: 3129
-      line: 75
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 2968
-      endInstruction: 2967
-      startSourceChar: 3129
-      endSourceChar: 3140
-      line: 75
-      lineChar: 28
-      spanCodeSection: floatNames.
-    - startInstruction: 2968
-      endInstruction: 3039
-      startSourceChar: 3140
-      endSourceChar: 3153
-      line: 75
-      lineChar: 39
-      spanCodeSection: 'Length; i++) '
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3153
-      endSourceChar: 3166
-      line: 75
-      lineChar: 52
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3166
-      endSourceChar: 3166
-      line: 76
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3166
-      endSourceChar: 3166
-      line: 76
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3166
-      endSourceChar: 3166
-      line: 76
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3166
-      endSourceChar: 3170
-      line: 76
-      lineChar: 10
-      spanCodeSection: mat.
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3170
-      endSourceChar: 3179
-      line: 76
-      lineChar: 14
-      spanCodeSection: SetFloat(
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3179
-      endSourceChar: 3179
-      line: 76
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3179
-      endSourceChar: 3190
-      line: 76
-      lineChar: 23
-      spanCodeSection: floatNames[
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3190
-      endSourceChar: 3190
-      line: 76
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 3040
-      endInstruction: 3071
-      startSourceChar: 3190
-      endSourceChar: 3194
-      line: 76
-      lineChar: 34
-      spanCodeSection: 'i], '
-    - startInstruction: 3072
-      endInstruction: 3071
-      startSourceChar: 3194
-      endSourceChar: 3194
-      line: 76
-      lineChar: 38
-      spanCodeSection: 
-    - startInstruction: 3072
-      endInstruction: 3071
-      startSourceChar: 3194
-      endSourceChar: 3204
-      line: 76
-      lineChar: 38
-      spanCodeSection: floatVals[
-    - startInstruction: 3072
-      endInstruction: 3071
-      startSourceChar: 3204
-      endSourceChar: 3204
-      line: 76
-      lineChar: 48
-      spanCodeSection: 
-    - startInstruction: 3072
-      endInstruction: 3195
-      startSourceChar: 3204
-      endSourceChar: 3229
-      line: 76
-      lineChar: 48
-      spanCodeSection: "i]);\r\n        }\r\n        "
-    - startInstruction: 3196
-      endInstruction: 3195
-      startSourceChar: 3229
-      endSourceChar: 3234
-      line: 78
-      lineChar: 8
-      spanCodeSection: for (
-    - startInstruction: 3196
-      endInstruction: 3195
-      startSourceChar: 3234
-      endSourceChar: 3234
-      line: 78
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 3196
-      endInstruction: 3195
-      startSourceChar: 3234
-      endSourceChar: 3234
-      line: 78
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 3196
-      endInstruction: 3195
-      startSourceChar: 3234
-      endSourceChar: 3240
-      line: 78
-      lineChar: 13
-      spanCodeSection: 'int i '
-    - startInstruction: 3196
-      endInstruction: 3195
-      startSourceChar: 3240
-      endSourceChar: 3242
-      line: 78
-      lineChar: 19
-      spanCodeSection: '= '
-    - startInstruction: 3196
-      endInstruction: 3215
-      startSourceChar: 3242
-      endSourceChar: 3245
-      line: 78
-      lineChar: 21
-      spanCodeSection: '0; '
-    - startInstruction: 3216
-      endInstruction: 3215
-      startSourceChar: 3245
-      endSourceChar: 3245
-      line: 78
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 3216
-      endInstruction: 3215
-      startSourceChar: 3245
-      endSourceChar: 3249
-      line: 78
-      lineChar: 24
-      spanCodeSection: 'i < '
-    - startInstruction: 3216
-      endInstruction: 3215
-      startSourceChar: 3249
-      endSourceChar: 3249
-      line: 78
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 3216
-      endInstruction: 3215
-      startSourceChar: 3249
-      endSourceChar: 3260
-      line: 78
-      lineChar: 28
-      spanCodeSection: colorNames.
-    - startInstruction: 3216
-      endInstruction: 3287
-      startSourceChar: 3260
-      endSourceChar: 3273
-      line: 78
-      lineChar: 39
-      spanCodeSection: 'Length; i++) '
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3273
-      endSourceChar: 3286
-      line: 78
-      lineChar: 52
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3286
-      endSourceChar: 3286
-      line: 79
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3286
-      endSourceChar: 3286
-      line: 79
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3286
-      endSourceChar: 3286
-      line: 79
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3286
-      endSourceChar: 3290
-      line: 79
-      lineChar: 10
-      spanCodeSection: mat.
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3290
-      endSourceChar: 3299
-      line: 79
-      lineChar: 14
-      spanCodeSection: SetColor(
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3299
-      endSourceChar: 3299
-      line: 79
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3299
-      endSourceChar: 3310
-      line: 79
-      lineChar: 23
-      spanCodeSection: colorNames[
-    - startInstruction: 3288
-      endInstruction: 3287
-      startSourceChar: 3310
-      endSourceChar: 3310
-      line: 79
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 3288
-      endInstruction: 3319
-      startSourceChar: 3310
-      endSourceChar: 3314
-      line: 79
-      lineChar: 34
-      spanCodeSection: 'i], '
-    - startInstruction: 3320
-      endInstruction: 3319
-      startSourceChar: 3314
-      endSourceChar: 3314
-      line: 79
-      lineChar: 38
-      spanCodeSection: 
-    - startInstruction: 3320
-      endInstruction: 3319
-      startSourceChar: 3314
-      endSourceChar: 3324
-      line: 79
-      lineChar: 38
-      spanCodeSection: colorVals[
-    - startInstruction: 3320
-      endInstruction: 3319
-      startSourceChar: 3324
-      endSourceChar: 3324
-      line: 79
-      lineChar: 48
-      spanCodeSection: 
-    - startInstruction: 3320
-      endInstruction: 3443
-      startSourceChar: 3324
-      endSourceChar: 3349
-      line: 79
-      lineChar: 48
-      spanCodeSection: "i]);\r\n        }\r\n        "
-    - startInstruction: 3444
-      endInstruction: 3443
-      startSourceChar: 3349
-      endSourceChar: 3354
-      line: 81
-      lineChar: 8
-      spanCodeSection: for (
-    - startInstruction: 3444
-      endInstruction: 3443
-      startSourceChar: 3354
-      endSourceChar: 3354
-      line: 81
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 3444
-      endInstruction: 3443
-      startSourceChar: 3354
-      endSourceChar: 3354
-      line: 81
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 3444
-      endInstruction: 3443
-      startSourceChar: 3354
-      endSourceChar: 3360
-      line: 81
-      lineChar: 13
-      spanCodeSection: 'int i '
-    - startInstruction: 3444
-      endInstruction: 3443
-      startSourceChar: 3360
-      endSourceChar: 3362
-      line: 81
-      lineChar: 19
-      spanCodeSection: '= '
-    - startInstruction: 3444
-      endInstruction: 3463
-      startSourceChar: 3362
-      endSourceChar: 3365
-      line: 81
-      lineChar: 21
-      spanCodeSection: '0; '
-    - startInstruction: 3464
-      endInstruction: 3463
-      startSourceChar: 3365
-      endSourceChar: 3365
-      line: 81
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 3464
-      endInstruction: 3463
-      startSourceChar: 3365
-      endSourceChar: 3369
-      line: 81
-      lineChar: 24
-      spanCodeSection: 'i < '
-    - startInstruction: 3464
-      endInstruction: 3463
-      startSourceChar: 3369
-      endSourceChar: 3369
-      line: 81
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 3464
-      endInstruction: 3463
-      startSourceChar: 3369
-      endSourceChar: 3381
-      line: 81
-      lineChar: 28
-      spanCodeSection: vectorNames.
-    - startInstruction: 3464
-      endInstruction: 3535
-      startSourceChar: 3381
-      endSourceChar: 3394
-      line: 81
-      lineChar: 40
-      spanCodeSection: 'Length; i++) '
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3394
-      endSourceChar: 3407
-      line: 81
-      lineChar: 53
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3407
-      endSourceChar: 3407
-      line: 82
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3407
-      endSourceChar: 3407
-      line: 82
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3407
-      endSourceChar: 3407
-      line: 82
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3407
-      endSourceChar: 3411
-      line: 82
-      lineChar: 10
-      spanCodeSection: mat.
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3411
-      endSourceChar: 3421
-      line: 82
-      lineChar: 14
-      spanCodeSection: SetVector(
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3421
-      endSourceChar: 3421
-      line: 82
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3421
-      endSourceChar: 3433
-      line: 82
-      lineChar: 24
-      spanCodeSection: vectorNames[
-    - startInstruction: 3536
-      endInstruction: 3535
-      startSourceChar: 3433
-      endSourceChar: 3433
-      line: 82
-      lineChar: 36
-      spanCodeSection: 
-    - startInstruction: 3536
-      endInstruction: 3567
-      startSourceChar: 3433
-      endSourceChar: 3437
-      line: 82
-      lineChar: 36
-      spanCodeSection: 'i], '
-    - startInstruction: 3568
-      endInstruction: 3567
-      startSourceChar: 3437
-      endSourceChar: 3437
-      line: 82
-      lineChar: 40
-      spanCodeSection: 
-    - startInstruction: 3568
-      endInstruction: 3567
-      startSourceChar: 3437
-      endSourceChar: 3448
-      line: 82
-      lineChar: 40
-      spanCodeSection: vectorVals[
-    - startInstruction: 3568
-      endInstruction: 3567
-      startSourceChar: 3448
-      endSourceChar: 3448
-      line: 82
-      lineChar: 51
-      spanCodeSection: 
-    - startInstruction: 3568
-      endInstruction: 3735
-      startSourceChar: 3448
-      endSourceChar: 3482
-      line: 82
-      lineChar: 51
-      spanCodeSection: "i]);\r\n        }\r\n      }\r\n\r\n      "
-    - startInstruction: 3736
-      endInstruction: 3743
-      startSourceChar: 3482
-      endSourceChar: 3504
-      line: 86
-      lineChar: 6
-      spanCodeSection: 'private void Update() '
-    - startInstruction: 3744
-      endInstruction: 3743
-      startSourceChar: 3504
-      endSourceChar: 3515
-      line: 86
-      lineChar: 28
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 3744
-      endInstruction: 3743
-      startSourceChar: 3515
-      endSourceChar: 3519
-      line: 87
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 3744
-      endInstruction: 3743
-      startSourceChar: 3519
-      endSourceChar: 3520
-      line: 87
-      lineChar: 12
-      spanCodeSection: '!'
-    - startInstruction: 3744
-      endInstruction: 3783
-      startSourceChar: 3520
-      endSourceChar: 3529
-      line: 87
-      lineChar: 13
-      spanCodeSection: 'lerping) '
-    - startInstruction: 3784
-      endInstruction: 3803
-      startSourceChar: 3529
-      endSourceChar: 3546
-      line: 87
-      lineChar: 22
-      spanCodeSection: "return;\r\n        "
-    - startInstruction: 3804
-      endInstruction: 3803
-      startSourceChar: 3546
-      endSourceChar: 3550
-      line: 88
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 3804
-      endInstruction: 3803
-      startSourceChar: 3550
-      endSourceChar: 3550
-      line: 88
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 3804
-      endInstruction: 3803
-      startSourceChar: 3550
-      endSourceChar: 3550
-      line: 88
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 3804
-      endInstruction: 3803
-      startSourceChar: 3550
-      endSourceChar: 3555
-      line: 88
-      lineChar: 12
-      spanCodeSection: Time.
-    - startInstruction: 3804
-      endInstruction: 3819
-      startSourceChar: 3555
-      endSourceChar: 3563
-      line: 88
-      lineChar: 17
-      spanCodeSection: 'time >= '
-    - startInstruction: 3820
-      endInstruction: 3867
-      startSourceChar: 3563
-      endSourceChar: 3572
-      line: 88
-      lineChar: 25
-      spanCodeSection: 'lerpEnd) '
-    - startInstruction: 3868
-      endInstruction: 3867
-      startSourceChar: 3572
-      endSourceChar: 3585
-      line: 88
-      lineChar: 34
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 3868
-      endInstruction: 3867
-      startSourceChar: 3585
-      endSourceChar: 3585
-      line: 89
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3868
-      endInstruction: 3867
-      startSourceChar: 3585
-      endSourceChar: 3585
-      line: 89
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3868
-      endInstruction: 3883
-      startSourceChar: 3585
-      endSourceChar: 3614
-      line: 89
-      lineChar: 10
-      spanCodeSection: "SetFinalValues();\r\n          "
-    - startInstruction: 3884
-      endInstruction: 3883
-      startSourceChar: 3614
-      endSourceChar: 3614
-      line: 90
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3884
-      endInstruction: 3883
-      startSourceChar: 3614
-      endSourceChar: 3614
-      line: 90
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3884
-      endInstruction: 3883
-      startSourceChar: 3614
-      endSourceChar: 3624
-      line: 90
-      lineChar: 10
-      spanCodeSection: 'lerping = '
-    - startInstruction: 3884
-      endInstruction: 3903
-      startSourceChar: 3624
-      endSourceChar: 3642
-      line: 90
-      lineChar: 20
-      spanCodeSection: "false;\r\n          "
-    - startInstruction: 3904
-      endInstruction: 3903
-      startSourceChar: 3642
-      endSourceChar: 3642
-      line: 91
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3904
-      endInstruction: 3903
-      startSourceChar: 3642
-      endSourceChar: 3642
-      line: 91
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3904
-      endInstruction: 3903
-      startSourceChar: 3642
-      endSourceChar: 3651
-      line: 91
-      lineChar: 10
-      spanCodeSection: 'active = '
-    - startInstruction: 3904
-      endInstruction: 3903
-      startSourceChar: 3651
-      endSourceChar: 3652
-      line: 91
-      lineChar: 19
-      spanCodeSection: '!'
-    - startInstruction: 3904
-      endInstruction: 3927
-      startSourceChar: 3652
-      endSourceChar: 3671
-      line: 91
-      lineChar: 20
-      spanCodeSection: "active;\r\n          "
-    - startInstruction: 3928
-      endInstruction: 3947
-      startSourceChar: 3671
-      endSourceChar: 3699
-      line: 92
-      lineChar: 10
-      spanCodeSection: "return;\r\n        }\r\n        "
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3699
-      endSourceChar: 3699
-      line: 94
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3699
-      endSourceChar: 3699
-      line: 94
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3699
-      endSourceChar: 3713
-      line: 94
-      lineChar: 8
-      spanCodeSection: 'var lerpAlpha '
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3713
-      endSourceChar: 3715
-      line: 94
-      lineChar: 22
-      spanCodeSection: '= '
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3715
-      endSourceChar: 3715
-      line: 94
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3715
-      endSourceChar: 3716
-      line: 94
-      lineChar: 24
-      spanCodeSection: (
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3716
-      endSourceChar: 3716
-      line: 94
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3716
-      endSourceChar: 3716
-      line: 94
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 3948
-      endInstruction: 3947
-      startSourceChar: 3716
-      endSourceChar: 3721
-      line: 94
-      lineChar: 25
-      spanCodeSection: Time.
-    - startInstruction: 3948
-      endInstruction: 3963
-      startSourceChar: 3721
-      endSourceChar: 3728
-      line: 94
-      lineChar: 30
-      spanCodeSection: 'time - '
-    - startInstruction: 3964
-      endInstruction: 3963
-      startSourceChar: 3728
-      endSourceChar: 3729
-      line: 94
-      lineChar: 37
-      spanCodeSection: (
-    - startInstruction: 3964
-      endInstruction: 3963
-      startSourceChar: 3729
-      endSourceChar: 3729
-      line: 94
-      lineChar: 38
-      spanCodeSection: 
-    - startInstruction: 3964
-      endInstruction: 3963
-      startSourceChar: 3729
-      endSourceChar: 3739
-      line: 94
-      lineChar: 38
-      spanCodeSection: 'lerpEnd - '
-    - startInstruction: 3964
-      endInstruction: 4027
-      startSourceChar: 3739
-      endSourceChar: 3758
-      line: 94
-      lineChar: 48
-      spanCodeSection: 'transitionTime)) / '
-    - startInstruction: 4028
-      endInstruction: 4079
-      startSourceChar: 3758
-      endSourceChar: 3783
-      line: 94
-      lineChar: 67
-      spanCodeSection: "transitionTime;\r\n        "
-    - startInstruction: 4080
-      endInstruction: 4079
-      startSourceChar: 3783
-      endSourceChar: 3783
-      line: 95
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 4080
-      endInstruction: 4079
-      startSourceChar: 3783
-      endSourceChar: 3783
-      line: 95
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 4080
-      endInstruction: 4079
-      startSourceChar: 3783
-      endSourceChar: 3794
-      line: 95
-      lineChar: 8
-      spanCodeSection: LerpValues(
-    - startInstruction: 4080
-      endInstruction: 4080
-      startSourceChar: 3794
-      endSourceChar: 3794
-      line: 95
-      lineChar: 19
-      spanCodeSection: 
   hasInteractEvent: 0
   serializationData:
     SerializedFormat: 2
@@ -3811,7 +31,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: fieldDefinitions
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.Compiler.FieldDefinition,
         UdonSharp.Editor]], mscorlib
     - Name: comparer
       Entry: 7
@@ -3831,10 +51,10 @@ MonoBehaviour:
       Data: defaultSkybox
     - Name: $v
       Entry: 7
-      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 2|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 3|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 4|System.RuntimeType, mscorlib
@@ -3870,7 +90,25 @@ MonoBehaviour:
       Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: Default State
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -3894,13 +132,13 @@ MonoBehaviour:
       Data: defaultFloatNames
     - Name: $v
       Entry: 7
-      Data: 6|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 8|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 7|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 9|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 8|System.RuntimeType, mscorlib
+      Data: 10|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.String[], mscorlib
@@ -3930,10 +168,55 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 11|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 12|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Default Floats List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: '@defaultSkybox'
+    - Name: sourceType
+      Entry: 3
+      Data: 3
+    - Name: shaderPropType
+      Entry: 3
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -3957,13 +240,13 @@ MonoBehaviour:
       Data: defaultFloatValues
     - Name: $v
       Entry: 7
-      Data: 10|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 15|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 11|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 16|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 12|System.RuntimeType, mscorlib
+      Data: 17|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.Single[], mscorlib
@@ -3993,10 +276,37 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 18|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 19|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Default Floats List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4020,13 +330,13 @@ MonoBehaviour:
       Data: defaultColorNames
     - Name: $v
       Entry: 7
-      Data: 14|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 21|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 15|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 22|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 8
+      Data: 10
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4050,10 +360,55 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 23|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 24|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Default Colors List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: '@defaultSkybox'
+    - Name: sourceType
+      Entry: 3
+      Data: 3
+    - Name: shaderPropType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 26|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4077,13 +432,13 @@ MonoBehaviour:
       Data: defaultColorValues
     - Name: $v
       Entry: 7
-      Data: 17|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 27|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 18|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 28|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 19|System.RuntimeType, mscorlib
+      Data: 29|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.Color[], UnityEngine.CoreModule
@@ -4113,10 +468,37 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 20|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 30|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 31|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Default Colors List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 32|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4140,13 +522,13 @@ MonoBehaviour:
       Data: defaultVector3Names
     - Name: $v
       Entry: 7
-      Data: 21|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 33|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 22|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 34|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 8
+      Data: 10
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4170,10 +552,55 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 35|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 36|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Default Vectors List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 37|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: '@defaultSkybox'
+    - Name: sourceType
+      Entry: 3
+      Data: 3
+    - Name: shaderPropType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 38|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4197,13 +624,13 @@ MonoBehaviour:
       Data: defaultVector3Values
     - Name: $v
       Entry: 7
-      Data: 24|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 39|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 25|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 40|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 26|System.RuntimeType, mscorlib
+      Data: 41|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.Vector3[], UnityEngine.CoreModule
@@ -4233,10 +660,37 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 27|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 42|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 43|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Default Vectors List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 44|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4260,10 +714,10 @@ MonoBehaviour:
       Data: activeSkybox
     - Name: $v
       Entry: 7
-      Data: 28|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 45|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 29|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 46|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -4290,10 +744,28 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 30|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 47|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 48|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: Active State
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 49|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4317,13 +789,13 @@ MonoBehaviour:
       Data: activeFloatNames
     - Name: $v
       Entry: 7
-      Data: 31|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 50|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 32|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 51|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 8
+      Data: 10
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4347,10 +819,55 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 33|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 52|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 53|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Active Floats List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 54|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: '@activeSkybox'
+    - Name: sourceType
+      Entry: 3
+      Data: 3
+    - Name: shaderPropType
+      Entry: 3
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 55|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4374,13 +891,13 @@ MonoBehaviour:
       Data: activeFloatValues
     - Name: $v
       Entry: 7
-      Data: 34|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 56|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 35|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 57|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 17
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4404,10 +921,37 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 36|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 58|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 59|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Active Floats List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 60|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4431,13 +975,13 @@ MonoBehaviour:
       Data: activeColorNames
     - Name: $v
       Entry: 7
-      Data: 37|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 61|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 38|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 62|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 8
+      Data: 10
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4461,10 +1005,55 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 39|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 63|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 64|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Active Colors List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 65|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: '@activeSkybox'
+    - Name: sourceType
+      Entry: 3
+      Data: 3
+    - Name: shaderPropType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 66|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4488,13 +1077,13 @@ MonoBehaviour:
       Data: activeColorValues
     - Name: $v
       Entry: 7
-      Data: 40|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 67|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 41|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 68|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 19
+      Data: 29
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4518,10 +1107,37 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 42|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 69|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 70|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Active Colors List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 71|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4545,13 +1161,13 @@ MonoBehaviour:
       Data: activeVector3Names
     - Name: $v
       Entry: 7
-      Data: 43|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 72|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 44|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 73|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 8
+      Data: 10
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4575,10 +1191,55 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 45|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 74|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 75|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Active Vectors List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 76|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: '@activeSkybox'
+    - Name: sourceType
+      Entry: 3
+      Data: 3
+    - Name: shaderPropType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 77|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4602,13 +1263,13 @@ MonoBehaviour:
       Data: activeVector3Values
     - Name: $v
       Entry: 7
-      Data: 46|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 78|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 47|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 79|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 26
+      Data: 41
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4632,10 +1293,37 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 48|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 80|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 81|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 1
+      Data: Active Vectors List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 82|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4659,13 +1347,13 @@ MonoBehaviour:
       Data: instantTransition
     - Name: $v
       Entry: 7
-      Data: 49|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 83|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 50|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 84|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 51|System.RuntimeType, mscorlib
+      Data: 85|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.Boolean, mscorlib
@@ -4695,10 +1383,37 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 52|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 86|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 87|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: ToggleSelf
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 88|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: Transition
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 89|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4722,13 +1437,13 @@ MonoBehaviour:
       Data: transitionTime
     - Name: $v
       Entry: 7
-      Data: 53|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 90|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 54|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 91|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 55|System.RuntimeType, mscorlib
+      Data: 92|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.Single, mscorlib
@@ -4758,10 +1473,39 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 56|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 93|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 94|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: Transition only applies to material properties, as smooth transition between
+        materials is not possible. Active Skybox material field is set to be the same
+        as default.
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 95|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: Transition time cannot be negative
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 96|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4785,13 +1529,13 @@ MonoBehaviour:
       Data: active
     - Name: $v
       Entry: 7
-      Data: 57|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 97|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 58|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 98|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 51
+      Data: 85
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4815,7 +1559,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 59|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 99|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -4842,13 +1586,13 @@ MonoBehaviour:
       Data: lerping
     - Name: $v
       Entry: 7
-      Data: 60|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 100|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 61|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 101|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 51
+      Data: 85
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4872,7 +1616,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 62|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 102|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -4899,13 +1643,13 @@ MonoBehaviour:
       Data: lerpEnd
     - Name: $v
       Entry: 7
-      Data: 63|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 103|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 64|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 104|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 55
+      Data: 92
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4929,7 +1673,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 65|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 105|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

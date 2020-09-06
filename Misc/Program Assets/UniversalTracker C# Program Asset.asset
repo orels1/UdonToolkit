@@ -14,3576 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedUdonProgramAsset: {fileID: 11400000, guid: c31a67ea6baa5674ca452758264b3d03,
     type: 2}
-  udonAssembly: ".data_start\n\n    .export targetTransform\n    .export trackingTarget\n
-    \   .export trackBone\n    .export bone\n    .export trackPlayerBase\n    .export
-    trackPosition\n    .export trackRotation\n    .export trackPlayspace\n    .export
-    rotateBy\n    .export followMainCamera\n\n    __refl_const_intnl_udonTypeID: %SystemInt64,
-    null\n    __refl_const_intnl_udonTypeName: %SystemString, null\n    followMainCamera:
-    %SystemBoolean, null\n    trackBone: %SystemBoolean, null\n    trackPlayerBase:
-    %SystemBoolean, null\n    trackPlayspace: %SystemBoolean, null\n    trackPosition:
-    %SystemBoolean, null\n    trackRotation: %SystemBoolean, null\n    bone: %UnityEngineHumanBodyBones,
-    null\n    trackingTarget: %VRCSDKBaseVRCPlayerApiTrackingDataType, null\n    targetTransform:
-    %UnityEngineTransform, null\n    rotateBy: %UnityEngineVector3, null\n    isEditor:
-    %SystemBoolean, null\n    mainCamera: %UnityEngineGameObject, null\n    offsetRot:
-    %SystemSingle, null\n    oldRot: %SystemSingle, null\n    trackingData: %VRCSDKBaseVRCPlayerApiTrackingData,
-    null\n    offsetPos: %UnityEngineVector3, null\n    player: %VRCSDKBaseVRCPlayerApi,
-    null\n    __0_cameraRot_Quaternion: %UnityEngineQuaternion, null\n    __0_targetRot_Quaternion:
-    %UnityEngineQuaternion, null\n    __1_targetRot_Quaternion: %UnityEngineQuaternion,
-    null\n    __2_targetRot_Quaternion: %UnityEngineQuaternion, null\n    __0_horizontal_Single:
-    %SystemSingle, null\n    __0_rotation_Single: %SystemSingle, null\n    __0_vertical_Single:
-    %SystemSingle, null\n    __0_cameraPos_Vector3: %UnityEngineVector3, null\n    __0_targetPos_Vector3:
-    %UnityEngineVector3, null\n    __1_targetPos_Vector3: %UnityEngineVector3, null\n
-    \   __2_targetPos_Vector3: %UnityEngineVector3, null\n    __0_const_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __0_const_intnl_SystemInt32: %SystemInt32, null\n    __0_const_intnl_SystemObject:
-    %SystemObject, null\n    __0_const_intnl_SystemSingle: %SystemSingle, null\n    __1_const_intnl_SystemSingle:
-    %SystemSingle, null\n    __0_const_intnl_SystemString: %SystemString, null\n    __1_const_intnl_SystemString:
-    %SystemString, null\n    __2_const_intnl_SystemString: %SystemString, null\n    __3_const_intnl_SystemString:
-    %SystemString, null\n    __4_const_intnl_SystemString: %SystemString, null\n    __5_const_intnl_SystemString:
-    %SystemString, null\n    __6_const_intnl_SystemString: %SystemString, null\n    __0_const_intnl_SystemUInt32:
-    %SystemUInt32, null\n    __0_const_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi,
-    null\n    __0_intnl_SystemBoolean: %SystemBoolean, null\n    __1_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __10_intnl_SystemBoolean: %SystemBoolean, null\n    __11_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __12_intnl_SystemBoolean: %SystemBoolean, null\n    __13_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __14_intnl_SystemBoolean: %SystemBoolean, null\n    __15_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __16_intnl_SystemBoolean: %SystemBoolean, null\n    __17_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __18_intnl_SystemBoolean: %SystemBoolean, null\n    __19_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __2_intnl_SystemBoolean: %SystemBoolean, null\n    __3_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __4_intnl_SystemBoolean: %SystemBoolean, null\n    __5_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __6_intnl_SystemBoolean: %SystemBoolean, null\n    __7_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __8_intnl_SystemBoolean: %SystemBoolean, null\n    __9_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __0_intnl_UnityEngineQuaternion: %UnityEngineQuaternion,
-    null\n    __1_intnl_UnityEngineQuaternion: %UnityEngineQuaternion, null\n    __2_intnl_UnityEngineQuaternion:
-    %UnityEngineQuaternion, null\n    __0_intnl_SystemSingle: %SystemSingle, null\n
-    \   __1_intnl_SystemSingle: %SystemSingle, null\n    __10_intnl_SystemSingle:
-    %SystemSingle, null\n    __2_intnl_SystemSingle: %SystemSingle, null\n    __3_intnl_SystemSingle:
-    %SystemSingle, null\n    __4_intnl_SystemSingle: %SystemSingle, null\n    __5_intnl_SystemSingle:
-    %SystemSingle, null\n    __6_intnl_SystemSingle: %SystemSingle, null\n    __7_intnl_SystemSingle:
-    %SystemSingle, null\n    __8_intnl_SystemSingle: %SystemSingle, null\n    __9_intnl_SystemSingle:
-    %SystemSingle, null\n    __0_intnl_UnityEngineTransform: %UnityEngineTransform,
-    null\n    __1_intnl_UnityEngineTransform: %UnityEngineTransform, null\n    __0_intnl_returnTarget_UInt32:
-    %SystemUInt32, null\n    __0_intnl_UnityEngineVector3: %UnityEngineVector3, null\n
-    \   __1_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __2_intnl_UnityEngineVector3:
-    %UnityEngineVector3, null\n    __3_intnl_UnityEngineVector3: %UnityEngineVector3,
-    null\n    __4_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __5_intnl_UnityEngineVector3:
-    %UnityEngineVector3, null\n    __6_intnl_UnityEngineVector3: %UnityEngineVector3,
-    null\n\n.data_end\n\n.code_start\n    .export _start\n        \n    _start:\n
-    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        PUSH, player\n        EXTERN,
-    \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\n        PUSH,
-    player\n        PUSH, __0_const_intnl_VRCSDKBaseVRCPlayerApi\n        PUSH, __0_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemObject.__op_Equality__SystemObject_SystemObject__SystemBoolean\"\n
-    \       PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000009C\n        PUSH,
-    followMainCamera\n        PUSH, __1_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000084\n        PUSH,
-    __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\n        PUSH, __3_const_intnl_SystemString\n        PUSH,
-    mainCamera\n        EXTERN, \"UnityEngineGameObject.__Find__SystemString__UnityEngineGameObject\"\n
-    \       PUSH, trackPlayspace\n        JUMP_IF_FALSE, 0x00000124\n        PUSH,
-    player\n        PUSH, __0_intnl_UnityEngineVector3\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetPosition__UnityEngineVector3\"\n
-    \       PUSH, __0_intnl_UnityEngineVector3\n        PUSH, __0_targetPos_Vector3\n
-    \       COPY\n        PUSH, player\n        PUSH, __0_intnl_UnityEngineQuaternion\n
-    \       EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetRotation__UnityEngineQuaternion\"\n
-    \       PUSH, __0_intnl_UnityEngineQuaternion\n        PUSH, __0_targetRot_Quaternion\n
-    \       COPY\n        PUSH, targetTransform\n        PUSH, __0_targetPos_Vector3\n
-    \       PUSH, __0_targetRot_Quaternion\n        EXTERN, \"UnityEngineTransform.__SetPositionAndRotation__UnityEngineVector3_UnityEngineQuaternion__SystemVoid\"\n
-    \       PUSH, __0_const_intnl_SystemBoolean\n        PUSH, isEditor\n        COPY\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export ResetOffsets\n
-    \       \n    ResetOffsets:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, offsetPos\n        EXTERN, \"UnityEngineVector3.__get_zero__UnityEngineVector3\"\n
-    \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, oldRot\n        EXTERN,
-    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH, __0_const_intnl_SystemInt32\n
-    \       PUSH, offsetRot\n        EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n
-    \       PUSH, player\n        PUSH, __1_intnl_UnityEngineVector3\n        EXTERN,
-    \"VRCSDKBaseVRCPlayerApi.__GetPosition__UnityEngineVector3\"\n        PUSH, __1_intnl_UnityEngineVector3\n
-    \       PUSH, __1_targetPos_Vector3\n        COPY\n        PUSH, player\n        PUSH,
-    __1_intnl_UnityEngineQuaternion\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetRotation__UnityEngineQuaternion\"\n
-    \       PUSH, __1_intnl_UnityEngineQuaternion\n        PUSH, __1_targetRot_Quaternion\n
-    \       COPY\n        PUSH, targetTransform\n        PUSH, __1_targetPos_Vector3\n
-    \       PUSH, __1_targetRot_Quaternion\n        EXTERN, \"UnityEngineTransform.__SetPositionAndRotation__UnityEngineVector3_UnityEngineQuaternion__SystemVoid\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    .export _update\n
-    \       \n    _update:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, isEditor\n        JUMP_IF_FALSE, 0x00000330\n        PUSH, followMainCamera\n
-    \       PUSH, __2_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000274\n        PUSH,
-    __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\n        PUSH, mainCamera\n        PUSH, __0_intnl_UnityEngineTransform\n
-    \       EXTERN, \"UnityEngineGameObject.__get_transform__UnityEngineTransform\"\n
-    \       PUSH, __0_intnl_UnityEngineTransform\n        PUSH, __2_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineTransform.__get_position__UnityEngineVector3\"\n
-    \       PUSH, __2_intnl_UnityEngineVector3\n        PUSH, __0_cameraPos_Vector3\n
-    \       COPY\n        PUSH, mainCamera\n        PUSH, __1_intnl_UnityEngineTransform\n
-    \       EXTERN, \"UnityEngineGameObject.__get_transform__UnityEngineTransform\"\n
-    \       PUSH, __1_intnl_UnityEngineTransform\n        PUSH, __2_intnl_UnityEngineQuaternion\n
-    \       EXTERN, \"UnityEngineTransform.__get_rotation__UnityEngineQuaternion\"\n
-    \       PUSH, __2_intnl_UnityEngineQuaternion\n        PUSH, __0_cameraRot_Quaternion\n
-    \       COPY\n        PUSH, targetTransform\n        PUSH, __0_cameraPos_Vector3\n
-    \       PUSH, __0_cameraRot_Quaternion\n        EXTERN, \"UnityEngineTransform.__SetPositionAndRotation__UnityEngineVector3_UnityEngineQuaternion__SystemVoid\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, trackBone\n
-    \       JUMP_IF_FALSE, 0x00000388\n        PUSH, player\n        PUSH, bone\n
-    \       PUSH, __2_targetPos_Vector3\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetBonePosition__UnityEngineHumanBodyBones__UnityEngineVector3\"\n
-    \       PUSH, player\n        PUSH, bone\n        PUSH, __2_targetRot_Quaternion\n
-    \       EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetBoneRotation__UnityEngineHumanBodyBones__UnityEngineQuaternion\"\n
-    \       JUMP, 0x00000B08\n        PUSH, trackPlayerBase\n        JUMP_IF_FALSE,
-    0x000003D0\n        PUSH, player\n        PUSH, __2_targetPos_Vector3\n        EXTERN,
-    \"VRCSDKBaseVRCPlayerApi.__GetPosition__UnityEngineVector3\"\n        PUSH, player\n
-    \       PUSH, __2_targetRot_Quaternion\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetRotation__UnityEngineQuaternion\"\n
-    \       JUMP, 0x00000B08\n        PUSH, trackPlayspace\n        JUMP_IF_FALSE,
-    0x00000AB8\n        PUSH, __4_const_intnl_SystemString\n        PUSH, __0_intnl_SystemSingle\n
-    \       EXTERN, \"UnityEngineInput.__GetAxisRaw__SystemString__SystemSingle\"\n
-    \       PUSH, __0_intnl_SystemSingle\n        PUSH, __0_vertical_Single\n        COPY\n
-    \       PUSH, __5_const_intnl_SystemString\n        PUSH, __1_intnl_SystemSingle\n
-    \       EXTERN, \"UnityEngineInput.__GetAxisRaw__SystemString__SystemSingle\"\n
-    \       PUSH, __1_intnl_SystemSingle\n        PUSH, __0_horizontal_Single\n        COPY\n
-    \       PUSH, __6_const_intnl_SystemString\n        PUSH, __2_intnl_SystemSingle\n
-    \       EXTERN, \"UnityEngineInput.__GetAxisRaw__SystemString__SystemSingle\"\n
-    \       PUSH, __2_intnl_SystemSingle\n        PUSH, __0_rotation_Single\n        COPY\n
-    \       PUSH, player\n        PUSH, __2_targetPos_Vector3\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetPosition__UnityEngineVector3\"\n
-    \       PUSH, player\n        PUSH, __2_targetRot_Quaternion\n        EXTERN,
-    \"VRCSDKBaseVRCPlayerApi.__GetRotation__UnityEngineQuaternion\"\n        PUSH,
-    __2_targetRot_Quaternion\n        PUSH, __2_intnl_UnityEngineVector3\n        EXTERN,
-    \"UnityEngineQuaternion.__get_eulerAngles__UnityEngineVector3\"\n        PUSH,
-    __2_intnl_UnityEngineVector3\n        PUSH, __3_intnl_SystemSingle\n        EXTERN,
-    \"UnityEngineVector3.__get_y__SystemSingle\"\n        PUSH, oldRot\n        PUSH,
-    __3_intnl_SystemSingle\n        PUSH, offsetRot\n        EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __2_targetRot_Quaternion\n        PUSH, __3_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineQuaternion.__get_eulerAngles__UnityEngineVector3\"\n
-    \       PUSH, __3_intnl_UnityEngineVector3\n        PUSH, oldRot\n        EXTERN,
-    \"UnityEngineVector3.__get_y__SystemSingle\"\n        PUSH, __0_const_intnl_SystemInt32\n
-    \       PUSH, __4_intnl_SystemSingle\n        EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n
-    \       PUSH, __0_vertical_Single\n        PUSH, __4_intnl_SystemSingle\n        PUSH,
-    __5_intnl_SystemBoolean\n        EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __5_intnl_SystemBoolean\n        PUSH, __4_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __4_intnl_SystemBoolean\n        PUSH, __6_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __6_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000005F4\n        PUSH,
-    __0_const_intnl_SystemInt32\n        PUSH, __5_intnl_SystemSingle\n        EXTERN,
-    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH, __0_vertical_Single\n
-    \       PUSH, __5_intnl_SystemSingle\n        PUSH, __7_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemSingle.__op_LessThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __4_intnl_SystemBoolean\n        PUSH, __7_intnl_SystemBoolean\n
-    \       PUSH, __8_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __8_intnl_SystemBoolean\n        PUSH, __4_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __4_intnl_SystemBoolean\n        PUSH, __3_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __3_intnl_SystemBoolean\n        PUSH, __9_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __9_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000069C\n        PUSH,
-    __0_const_intnl_SystemInt32\n        PUSH, __6_intnl_SystemSingle\n        EXTERN,
-    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH, __0_horizontal_Single\n
-    \       PUSH, __6_intnl_SystemSingle\n        PUSH, __10_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __3_intnl_SystemBoolean\n        PUSH, __10_intnl_SystemBoolean\n
-    \       PUSH, __11_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __11_intnl_SystemBoolean\n        PUSH, __3_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __3_intnl_SystemBoolean\n        PUSH, __2_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __2_intnl_SystemBoolean\n        PUSH, __12_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __12_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000744\n        PUSH,
-    __0_const_intnl_SystemInt32\n        PUSH, __7_intnl_SystemSingle\n        EXTERN,
-    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH, __0_horizontal_Single\n
-    \       PUSH, __7_intnl_SystemSingle\n        PUSH, __13_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemSingle.__op_LessThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __2_intnl_SystemBoolean\n        PUSH, __13_intnl_SystemBoolean\n
-    \       PUSH, __14_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __14_intnl_SystemBoolean\n        PUSH, __2_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x0000090C\n
-    \       PUSH, __2_targetPos_Vector3\n        PUSH, offsetPos\n        PUSH, __4_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineVector3.__op_Addition__UnityEngineVector3_UnityEngineVector3__UnityEngineVector3\"\n
-    \       PUSH, __4_intnl_UnityEngineVector3\n        PUSH, __2_targetPos_Vector3\n
-    \       COPY\n        PUSH, targetTransform\n        PUSH, __2_targetPos_Vector3\n
-    \       EXTERN, \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\n
-    \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __8_intnl_SystemSingle\n
-    \       EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH,
-    __0_rotation_Single\n        PUSH, __8_intnl_SystemSingle\n        PUSH, __16_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __16_intnl_SystemBoolean\n        PUSH, __15_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __15_intnl_SystemBoolean\n        PUSH, __17_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __17_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000880\n        PUSH,
-    __0_const_intnl_SystemInt32\n        PUSH, __9_intnl_SystemSingle\n        EXTERN,
-    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH, __0_rotation_Single\n
-    \       PUSH, __9_intnl_SystemSingle\n        PUSH, __18_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemSingle.__op_LessThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __15_intnl_SystemBoolean\n        PUSH, __18_intnl_SystemBoolean\n
-    \       PUSH, __19_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __19_intnl_SystemBoolean\n        PUSH, __15_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __15_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000008F8\n
-    \       PUSH, player\n        PUSH, __5_intnl_UnityEngineVector3\n        EXTERN,
-    \"VRCSDKBaseVRCPlayerApi.__GetPosition__UnityEngineVector3\"\n        PUSH, __6_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineVector3.__get_up__UnityEngineVector3\"\n        PUSH,
-    offsetRot\n        PUSH, __10_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_UnaryMinus__SystemSingle__SystemSingle\"\n
-    \       PUSH, targetTransform\n        PUSH, __5_intnl_UnityEngineVector3\n        PUSH,
-    __6_intnl_UnityEngineVector3\n        PUSH, __10_intnl_SystemSingle\n        EXTERN,
-    \"UnityEngineTransform.__RotateAround__UnityEngineVector3_UnityEngineVector3_SystemSingle__SystemVoid\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __0_const_intnl_SystemInt32\n
-    \       PUSH, __8_intnl_SystemSingle\n        EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n
-    \       PUSH, __0_rotation_Single\n        PUSH, __8_intnl_SystemSingle\n        PUSH,
-    __16_intnl_SystemBoolean\n        EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __16_intnl_SystemBoolean\n        PUSH, __15_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __15_intnl_SystemBoolean\n        PUSH, __17_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __17_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000009EC\n        PUSH,
-    __0_const_intnl_SystemInt32\n        PUSH, __9_intnl_SystemSingle\n        EXTERN,
-    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH, __0_rotation_Single\n
-    \       PUSH, __9_intnl_SystemSingle\n        PUSH, __18_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemSingle.__op_LessThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __15_intnl_SystemBoolean\n        PUSH, __18_intnl_SystemBoolean\n
-    \       PUSH, __19_intnl_SystemBoolean\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __19_intnl_SystemBoolean\n        PUSH, __15_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __15_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000A64\n
-    \       PUSH, player\n        PUSH, __4_intnl_UnityEngineVector3\n        EXTERN,
-    \"VRCSDKBaseVRCPlayerApi.__GetPosition__UnityEngineVector3\"\n        PUSH, __5_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineVector3.__get_up__UnityEngineVector3\"\n        PUSH,
-    offsetRot\n        PUSH, __10_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_UnaryMinus__SystemSingle__SystemSingle\"\n
-    \       PUSH, targetTransform\n        PUSH, __4_intnl_UnityEngineVector3\n        PUSH,
-    __5_intnl_UnityEngineVector3\n        PUSH, __10_intnl_SystemSingle\n        EXTERN,
-    \"UnityEngineTransform.__RotateAround__UnityEngineVector3_UnityEngineVector3_SystemSingle__SystemVoid\"\n
-    \       PUSH, targetTransform\n        PUSH, __4_intnl_UnityEngineVector3\n        EXTERN,
-    \"UnityEngineTransform.__get_position__UnityEngineVector3\"\n        PUSH, __4_intnl_UnityEngineVector3\n
-    \       PUSH, __2_targetPos_Vector3\n        PUSH, offsetPos\n        EXTERN,
-    \"UnityEngineVector3.__op_Subtraction__UnityEngineVector3_UnityEngineVector3__UnityEngineVector3\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        JUMP, 0x00000B08\n
-    \       PUSH, player\n        PUSH, trackingTarget\n        PUSH, trackingData\n
-    \       EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetTrackingData__VRCSDKBaseVRCPlayerApiTrackingDataType__VRCSDKBaseVRCPlayerApiTrackingData\"\n
-    \       PUSH, trackingData\n        PUSH, __2_targetPos_Vector3\n        EXTERN,
-    \"VRCSDKBaseVRCPlayerApiTrackingData.__get_position__UnityEngineVector3\"\n        PUSH,
-    trackingData\n        PUSH, __2_targetRot_Quaternion\n        EXTERN, \"VRCSDKBaseVRCPlayerApiTrackingData.__get_rotation__UnityEngineQuaternion\"\n
-    \       PUSH, trackPosition\n        PUSH, __2_intnl_SystemBoolean\n        COPY\n
-    \       PUSH, __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000B60\n        PUSH,
-    __2_intnl_SystemBoolean\n        PUSH, trackRotation\n        PUSH, __3_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __3_intnl_SystemBoolean\n        PUSH, __2_intnl_SystemBoolean\n
-    \       COPY\n        PUSH, __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000B98\n
-    \       PUSH, targetTransform\n        PUSH, __2_targetPos_Vector3\n        PUSH,
-    __2_targetRot_Quaternion\n        EXTERN, \"UnityEngineTransform.__SetPositionAndRotation__UnityEngineVector3_UnityEngineQuaternion__SystemVoid\"\n
-    \       JUMP, 0x00000BE0\n        PUSH, trackPosition\n        JUMP_IF_FALSE,
-    0x00000BC8\n        PUSH, targetTransform\n        PUSH, __2_targetPos_Vector3\n
-    \       EXTERN, \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\n
-    \       JUMP, 0x00000BE0\n        PUSH, targetTransform\n        PUSH, __2_targetRot_Quaternion\n
-    \       EXTERN, \"UnityEngineTransform.__set_rotation__UnityEngineQuaternion__SystemVoid\"\n
-    \       PUSH, rotateBy\n        PUSH, __0_intnl_SystemSingle\n        EXTERN,
-    \"UnityEngineVector3.__get_magnitude__SystemSingle\"\n        PUSH, __0_const_intnl_SystemInt32\n
-    \       PUSH, __1_intnl_SystemSingle\n        EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n
-    \       PUSH, __0_intnl_SystemSingle\n        PUSH, __1_intnl_SystemSingle\n        PUSH,
-    __4_intnl_SystemBoolean\n        EXTERN, \"SystemSingle.__op_GreaterThan__SystemSingle_SystemSingle__SystemBoolean\"\n
-    \       PUSH, __4_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000C58\n        PUSH,
-    targetTransform\n        PUSH, rotateBy\n        EXTERN, \"UnityEngineTransform.__Rotate__UnityEngineVector3__SystemVoid\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n.code_end\n"
+  udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 8c692d0bc2d4c25458d365046b724c6f, type: 3}
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
-  debugInfo:
-    serializedDebugSpans:
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 0
-      line: 0
-      lineChar: 0
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 0
-      line: 0
-      lineChar: 0
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 6
-      line: 0
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 6
-      endSourceChar: 18
-      line: 0
-      lineChar: 6
-      spanCodeSection: "UdonSharp;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 18
-      endSourceChar: 24
-      line: 1
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 24
-      endSourceChar: 38
-      line: 1
-      lineChar: 6
-      spanCodeSection: "UnityEngine;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 38
-      endSourceChar: 44
-      line: 2
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 44
-      endSourceChar: 44
-      line: 2
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 44
-      endSourceChar: 48
-      line: 2
-      lineChar: 6
-      spanCodeSection: VRC.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 48
-      endSourceChar: 60
-      line: 2
-      lineChar: 10
-      spanCodeSection: "SDKBase;\r\n\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 60
-      endSourceChar: 87
-      line: 4
-      lineChar: 0
-      spanCodeSection: "namespace UdonToolkit {\r\n  "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 87
-      endSourceChar: 143
-      line: 5
-      lineChar: 2
-      spanCodeSection: "[AddComponentMenu(\"\")]\r\n  public class UniversalTracker "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 143
-      endSourceChar: 145
-      line: 6
-      lineChar: 32
-      spanCodeSection: ': '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 145
-      endSourceChar: 145
-      line: 6
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 145
-      endSourceChar: 171
-      line: 6
-      lineChar: 34
-      spanCodeSection: "UdonSharpBehaviour {\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 171
-      endSourceChar: 172
-      line: 7
-      lineChar: 4
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 172
-      endSourceChar: 172
-      line: 7
-      lineChar: 5
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 172
-      endSourceChar: 179
-      line: 7
-      lineChar: 5
-      spanCodeSection: Header(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 179
-      endSourceChar: 179
-      line: 7
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 179
-      endSourceChar: 204
-      line: 7
-      lineChar: 12
-      spanCodeSection: '"Tracking Data")] public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 204
-      endSourceChar: 204
-      line: 7
-      lineChar: 37
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 204
-      endSourceChar: 236
-      line: 7
-      lineChar: 37
-      spanCodeSection: "Transform targetTransform;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 236
-      endSourceChar: 243
-      line: 8
-      lineChar: 4
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 243
-      endSourceChar: 243
-      line: 8
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 243
-      endSourceChar: 243
-      line: 8
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 243
-      endSourceChar: 256
-      line: 8
-      lineChar: 11
-      spanCodeSection: VRCPlayerApi.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 256
-      endSourceChar: 296
-      line: 8
-      lineChar: 24
-      spanCodeSection: "TrackingDataType trackingTarget;\r\n\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 296
-      endSourceChar: 297
-      line: 10
-      lineChar: 4
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 297
-      endSourceChar: 310
-      line: 10
-      lineChar: 5
-      spanCodeSection: Space(10f)] [
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 310
-      endSourceChar: 310
-      line: 10
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 310
-      endSourceChar: 317
-      line: 10
-      lineChar: 18
-      spanCodeSection: Header(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 317
-      endSourceChar: 317
-      line: 10
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 317
-      endSourceChar: 342
-      line: 10
-      lineChar: 25
-      spanCodeSection: '"Bone Tracking")] public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 342
-      endSourceChar: 342
-      line: 10
-      lineChar: 50
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 342
-      endSourceChar: 363
-      line: 10
-      lineChar: 50
-      spanCodeSection: "bool trackBone;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 363
-      endSourceChar: 370
-      line: 11
-      lineChar: 4
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 370
-      endSourceChar: 370
-      line: 11
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 370
-      endSourceChar: 420
-      line: 11
-      lineChar: 11
-      spanCodeSection: "HumanBodyBones bone = HumanBodyBones.Hips;\r\n\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 420
-      endSourceChar: 427
-      line: 13
-      lineChar: 4
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 427
-      endSourceChar: 427
-      line: 13
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 427
-      endSourceChar: 456
-      line: 13
-      lineChar: 11
-      spanCodeSection: "bool trackPlayerBase;\r\n\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 456
-      endSourceChar: 457
-      line: 15
-      lineChar: 4
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 457
-      endSourceChar: 457
-      line: 15
-      lineChar: 5
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 457
-      endSourceChar: 463
-      line: 15
-      lineChar: 5
-      spanCodeSection: Space(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 463
-      endSourceChar: 463
-      line: 15
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 463
-      endSourceChar: 476
-      line: 15
-      lineChar: 11
-      spanCodeSection: '10f)] public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 476
-      endSourceChar: 476
-      line: 15
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 476
-      endSourceChar: 508
-      line: 15
-      lineChar: 24
-      spanCodeSection: "bool trackPosition = true;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 508
-      endSourceChar: 515
-      line: 16
-      lineChar: 4
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 515
-      endSourceChar: 515
-      line: 16
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 515
-      endSourceChar: 547
-      line: 16
-      lineChar: 11
-      spanCodeSection: "bool trackRotation = true;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 547
-      endSourceChar: 554
-      line: 17
-      lineChar: 4
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 554
-      endSourceChar: 554
-      line: 17
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 554
-      endSourceChar: 582
-      line: 17
-      lineChar: 11
-      spanCodeSection: "bool trackPlayspace;\r\n\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 582
-      endSourceChar: 589
-      line: 19
-      lineChar: 4
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 589
-      endSourceChar: 589
-      line: 19
-      lineChar: 11
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 589
-      endSourceChar: 639
-      line: 19
-      lineChar: 11
-      spanCodeSection: "Vector3 rotateBy = new Vector3(0, 45f, 0);\r\n\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 639
-      endSourceChar: 640
-      line: 21
-      lineChar: 4
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 640
-      endSourceChar: 653
-      line: 21
-      lineChar: 5
-      spanCodeSection: Space(15f)] [
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 653
-      endSourceChar: 653
-      line: 21
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 653
-      endSourceChar: 660
-      line: 21
-      lineChar: 18
-      spanCodeSection: Header(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 660
-      endSourceChar: 660
-      line: 21
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 660
-      endSourceChar: 684
-      line: 21
-      lineChar: 25
-      spanCodeSection: '"Editor Hacks")] public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 684
-      endSourceChar: 684
-      line: 21
-      lineChar: 49
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 684
-      endSourceChar: 714
-      line: 21
-      lineChar: 49
-      spanCodeSection: "bool followMainCamera;\r\n\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 714
-      endSourceChar: 722
-      line: 23
-      lineChar: 4
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 722
-      endSourceChar: 722
-      line: 23
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 722
-      endSourceChar: 748
-      line: 23
-      lineChar: 12
-      spanCodeSection: "VRCPlayerApi player;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 748
-      endSourceChar: 756
-      line: 24
-      lineChar: 4
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 756
-      endSourceChar: 756
-      line: 24
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 756
-      endSourceChar: 783
-      line: 24
-      lineChar: 12
-      spanCodeSection: "bool isEditor = true;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 783
-      endSourceChar: 791
-      line: 25
-      lineChar: 4
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 791
-      endSourceChar: 791
-      line: 25
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 791
-      endSourceChar: 791
-      line: 25
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 791
-      endSourceChar: 804
-      line: 25
-      lineChar: 12
-      spanCodeSection: VRCPlayerApi.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 804
-      endSourceChar: 836
-      line: 25
-      lineChar: 25
-      spanCodeSection: "TrackingData trackingData;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 836
-      endSourceChar: 844
-      line: 26
-      lineChar: 4
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 844
-      endSourceChar: 844
-      line: 26
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 844
-      endSourceChar: 872
-      line: 26
-      lineChar: 12
-      spanCodeSection: "GameObject mainCamera;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 872
-      endSourceChar: 880
-      line: 27
-      lineChar: 4
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 880
-      endSourceChar: 880
-      line: 27
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 880
-      endSourceChar: 904
-      line: 27
-      lineChar: 12
-      spanCodeSection: "Vector3 offsetPos;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 904
-      endSourceChar: 912
-      line: 28
-      lineChar: 4
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 912
-      endSourceChar: 912
-      line: 28
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 912
-      endSourceChar: 931
-      line: 28
-      lineChar: 12
-      spanCodeSection: "float oldRot;\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 931
-      endSourceChar: 939
-      line: 29
-      lineChar: 4
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 939
-      endSourceChar: 939
-      line: 29
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 939
-      endSourceChar: 963
-      line: 29
-      lineChar: 12
-      spanCodeSection: "float offsetRot;\r\n\r\n    "
-    - startInstruction: 0
-      endInstruction: 7
-      startSourceChar: 963
-      endSourceChar: 984
-      line: 31
-      lineChar: 4
-      spanCodeSection: 'private void Start() '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 984
-      endSourceChar: 993
-      line: 31
-      lineChar: 25
-      spanCodeSection: "{\r\n      "
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 993
-      endSourceChar: 993
-      line: 32
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 993
-      endSourceChar: 993
-      line: 32
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 993
-      endSourceChar: 1002
-      line: 32
-      lineChar: 6
-      spanCodeSection: 'player = '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 1002
-      endSourceChar: 1002
-      line: 32
-      lineChar: 15
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 1002
-      endSourceChar: 1013
-      line: 32
-      lineChar: 15
-      spanCodeSection: Networking.
-    - startInstruction: 8
-      endInstruction: 23
-      startSourceChar: 1013
-      endSourceChar: 1033
-      line: 32
-      lineChar: 26
-      spanCodeSection: "LocalPlayer;\r\n      "
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1033
-      endSourceChar: 1037
-      line: 33
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1037
-      endSourceChar: 1037
-      line: 33
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 24
-      endInstruction: 23
-      startSourceChar: 1037
-      endSourceChar: 1047
-      line: 33
-      lineChar: 10
-      spanCodeSection: 'player == '
-    - startInstruction: 24
-      endInstruction: 71
-      startSourceChar: 1047
-      endSourceChar: 1053
-      line: 33
-      lineChar: 20
-      spanCodeSection: 'null) '
-    - startInstruction: 72
-      endInstruction: 71
-      startSourceChar: 1053
-      endSourceChar: 1064
-      line: 33
-      lineChar: 26
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 72
-      endInstruction: 71
-      startSourceChar: 1064
-      endSourceChar: 1068
-      line: 34
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 72
-      endInstruction: 71
-      startSourceChar: 1068
-      endSourceChar: 1069
-      line: 34
-      lineChar: 12
-      spanCodeSection: '!'
-    - startInstruction: 72
-      endInstruction: 111
-      startSourceChar: 1069
-      endSourceChar: 1087
-      line: 34
-      lineChar: 13
-      spanCodeSection: 'followMainCamera) '
-    - startInstruction: 112
-      endInstruction: 131
-      startSourceChar: 1087
-      endSourceChar: 1104
-      line: 34
-      lineChar: 31
-      spanCodeSection: "return;\r\n        "
-    - startInstruction: 132
-      endInstruction: 131
-      startSourceChar: 1104
-      endSourceChar: 1104
-      line: 35
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 132
-      endInstruction: 131
-      startSourceChar: 1104
-      endSourceChar: 1104
-      line: 35
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 132
-      endInstruction: 131
-      startSourceChar: 1104
-      endSourceChar: 1117
-      line: 35
-      lineChar: 8
-      spanCodeSection: 'mainCamera = '
-    - startInstruction: 132
-      endInstruction: 131
-      startSourceChar: 1117
-      endSourceChar: 1117
-      line: 35
-      lineChar: 21
-      spanCodeSection: 
-    - startInstruction: 132
-      endInstruction: 131
-      startSourceChar: 1117
-      endSourceChar: 1117
-      line: 35
-      lineChar: 21
-      spanCodeSection: 
-    - startInstruction: 132
-      endInstruction: 131
-      startSourceChar: 1117
-      endSourceChar: 1128
-      line: 35
-      lineChar: 21
-      spanCodeSection: GameObject.
-    - startInstruction: 132
-      endInstruction: 131
-      startSourceChar: 1128
-      endSourceChar: 1133
-      line: 35
-      lineChar: 32
-      spanCodeSection: Find(
-    - startInstruction: 132
-      endInstruction: 155
-      startSourceChar: 1133
-      endSourceChar: 1165
-      line: 35
-      lineChar: 37
-      spanCodeSection: "\"Main Camera\");\r\n      }\r\n      "
-    - startInstruction: 156
-      endInstruction: 155
-      startSourceChar: 1165
-      endSourceChar: 1169
-      line: 37
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 156
-      endInstruction: 171
-      startSourceChar: 1169
-      endSourceChar: 1185
-      line: 37
-      lineChar: 10
-      spanCodeSection: 'trackPlayspace) '
-    - startInstruction: 172
-      endInstruction: 171
-      startSourceChar: 1185
-      endSourceChar: 1196
-      line: 37
-      lineChar: 26
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 172
-      endInstruction: 171
-      startSourceChar: 1196
-      endSourceChar: 1196
-      line: 38
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 172
-      endInstruction: 171
-      startSourceChar: 1196
-      endSourceChar: 1196
-      line: 38
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 172
-      endInstruction: 171
-      startSourceChar: 1196
-      endSourceChar: 1210
-      line: 38
-      lineChar: 8
-      spanCodeSection: 'var targetPos '
-    - startInstruction: 172
-      endInstruction: 171
-      startSourceChar: 1210
-      endSourceChar: 1212
-      line: 38
-      lineChar: 22
-      spanCodeSection: '= '
-    - startInstruction: 172
-      endInstruction: 171
-      startSourceChar: 1212
-      endSourceChar: 1212
-      line: 38
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 172
-      endInstruction: 171
-      startSourceChar: 1212
-      endSourceChar: 1212
-      line: 38
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 172
-      endInstruction: 171
-      startSourceChar: 1212
-      endSourceChar: 1219
-      line: 38
-      lineChar: 24
-      spanCodeSection: player.
-    - startInstruction: 172
-      endInstruction: 215
-      startSourceChar: 1219
-      endSourceChar: 1243
-      line: 38
-      lineChar: 31
-      spanCodeSection: "GetPosition();\r\n        "
-    - startInstruction: 216
-      endInstruction: 215
-      startSourceChar: 1243
-      endSourceChar: 1243
-      line: 39
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 216
-      endInstruction: 215
-      startSourceChar: 1243
-      endSourceChar: 1243
-      line: 39
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 216
-      endInstruction: 215
-      startSourceChar: 1243
-      endSourceChar: 1257
-      line: 39
-      lineChar: 8
-      spanCodeSection: 'var targetRot '
-    - startInstruction: 216
-      endInstruction: 215
-      startSourceChar: 1257
-      endSourceChar: 1259
-      line: 39
-      lineChar: 22
-      spanCodeSection: '= '
-    - startInstruction: 216
-      endInstruction: 215
-      startSourceChar: 1259
-      endSourceChar: 1259
-      line: 39
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 216
-      endInstruction: 215
-      startSourceChar: 1259
-      endSourceChar: 1259
-      line: 39
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 216
-      endInstruction: 215
-      startSourceChar: 1259
-      endSourceChar: 1266
-      line: 39
-      lineChar: 24
-      spanCodeSection: player.
-    - startInstruction: 216
-      endInstruction: 259
-      startSourceChar: 1266
-      endSourceChar: 1290
-      line: 39
-      lineChar: 31
-      spanCodeSection: "GetRotation();\r\n        "
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1290
-      endSourceChar: 1290
-      line: 40
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1290
-      endSourceChar: 1290
-      line: 40
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1290
-      endSourceChar: 1290
-      line: 40
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1290
-      endSourceChar: 1306
-      line: 40
-      lineChar: 8
-      spanCodeSection: targetTransform.
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1306
-      endSourceChar: 1329
-      line: 40
-      lineChar: 24
-      spanCodeSection: SetPositionAndRotation(
-    - startInstruction: 260
-      endInstruction: 259
-      startSourceChar: 1329
-      endSourceChar: 1340
-      line: 40
-      lineChar: 47
-      spanCodeSection: 'targetPos, '
-    - startInstruction: 260
-      endInstruction: 291
-      startSourceChar: 1340
-      endSourceChar: 1368
-      line: 40
-      lineChar: 58
-      spanCodeSection: "targetRot);\r\n      }\r\n      "
-    - startInstruction: 292
-      endInstruction: 291
-      startSourceChar: 1368
-      endSourceChar: 1368
-      line: 42
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 292
-      endInstruction: 291
-      startSourceChar: 1368
-      endSourceChar: 1368
-      line: 42
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 292
-      endInstruction: 291
-      startSourceChar: 1368
-      endSourceChar: 1379
-      line: 42
-      lineChar: 6
-      spanCodeSection: 'isEditor = '
-    - startInstruction: 292
-      endInstruction: 331
-      startSourceChar: 1379
-      endSourceChar: 1400
-      line: 42
-      lineChar: 17
-      spanCodeSection: "false;\r\n    }\r\n\r\n    "
-    - startInstruction: 332
-      endInstruction: 339
-      startSourceChar: 1400
-      endSourceChar: 1427
-      line: 45
-      lineChar: 4
-      spanCodeSection: 'public void ResetOffsets() '
-    - startInstruction: 340
-      endInstruction: 339
-      startSourceChar: 1427
-      endSourceChar: 1436
-      line: 45
-      lineChar: 31
-      spanCodeSection: "{\r\n      "
-    - startInstruction: 340
-      endInstruction: 339
-      startSourceChar: 1436
-      endSourceChar: 1436
-      line: 46
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 340
-      endInstruction: 339
-      startSourceChar: 1436
-      endSourceChar: 1436
-      line: 46
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 340
-      endInstruction: 339
-      startSourceChar: 1436
-      endSourceChar: 1448
-      line: 46
-      lineChar: 6
-      spanCodeSection: 'offsetPos = '
-    - startInstruction: 340
-      endInstruction: 339
-      startSourceChar: 1448
-      endSourceChar: 1448
-      line: 46
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 340
-      endInstruction: 339
-      startSourceChar: 1448
-      endSourceChar: 1456
-      line: 46
-      lineChar: 18
-      spanCodeSection: Vector3.
-    - startInstruction: 340
-      endInstruction: 355
-      startSourceChar: 1456
-      endSourceChar: 1469
-      line: 46
-      lineChar: 26
-      spanCodeSection: "zero;\r\n      "
-    - startInstruction: 356
-      endInstruction: 355
-      startSourceChar: 1469
-      endSourceChar: 1469
-      line: 47
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 356
-      endInstruction: 355
-      startSourceChar: 1469
-      endSourceChar: 1469
-      line: 47
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 356
-      endInstruction: 355
-      startSourceChar: 1469
-      endSourceChar: 1478
-      line: 47
-      lineChar: 6
-      spanCodeSection: 'oldRot = '
-    - startInstruction: 356
-      endInstruction: 379
-      startSourceChar: 1478
-      endSourceChar: 1488
-      line: 47
-      lineChar: 15
-      spanCodeSection: "0;\r\n      "
-    - startInstruction: 380
-      endInstruction: 379
-      startSourceChar: 1488
-      endSourceChar: 1488
-      line: 48
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 380
-      endInstruction: 379
-      startSourceChar: 1488
-      endSourceChar: 1488
-      line: 48
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 380
-      endInstruction: 379
-      startSourceChar: 1488
-      endSourceChar: 1500
-      line: 48
-      lineChar: 6
-      spanCodeSection: 'offsetRot = '
-    - startInstruction: 380
-      endInstruction: 403
-      startSourceChar: 1500
-      endSourceChar: 1510
-      line: 48
-      lineChar: 18
-      spanCodeSection: "0;\r\n      "
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 1510
-      endSourceChar: 1510
-      line: 49
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 1510
-      endSourceChar: 1510
-      line: 49
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 1510
-      endSourceChar: 1524
-      line: 49
-      lineChar: 6
-      spanCodeSection: 'var targetPos '
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 1524
-      endSourceChar: 1526
-      line: 49
-      lineChar: 20
-      spanCodeSection: '= '
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 1526
-      endSourceChar: 1526
-      line: 49
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 1526
-      endSourceChar: 1526
-      line: 49
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 404
-      endInstruction: 403
-      startSourceChar: 1526
-      endSourceChar: 1533
-      line: 49
-      lineChar: 22
-      spanCodeSection: player.
-    - startInstruction: 404
-      endInstruction: 447
-      startSourceChar: 1533
-      endSourceChar: 1555
-      line: 49
-      lineChar: 29
-      spanCodeSection: "GetPosition();\r\n      "
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1555
-      endSourceChar: 1555
-      line: 50
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1555
-      endSourceChar: 1555
-      line: 50
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1555
-      endSourceChar: 1569
-      line: 50
-      lineChar: 6
-      spanCodeSection: 'var targetRot '
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1569
-      endSourceChar: 1571
-      line: 50
-      lineChar: 20
-      spanCodeSection: '= '
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1571
-      endSourceChar: 1571
-      line: 50
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1571
-      endSourceChar: 1571
-      line: 50
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 448
-      endInstruction: 447
-      startSourceChar: 1571
-      endSourceChar: 1578
-      line: 50
-      lineChar: 22
-      spanCodeSection: player.
-    - startInstruction: 448
-      endInstruction: 491
-      startSourceChar: 1578
-      endSourceChar: 1600
-      line: 50
-      lineChar: 29
-      spanCodeSection: "GetRotation();\r\n      "
-    - startInstruction: 492
-      endInstruction: 491
-      startSourceChar: 1600
-      endSourceChar: 1600
-      line: 51
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 492
-      endInstruction: 491
-      startSourceChar: 1600
-      endSourceChar: 1600
-      line: 51
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 492
-      endInstruction: 491
-      startSourceChar: 1600
-      endSourceChar: 1600
-      line: 51
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 492
-      endInstruction: 491
-      startSourceChar: 1600
-      endSourceChar: 1616
-      line: 51
-      lineChar: 6
-      spanCodeSection: targetTransform.
-    - startInstruction: 492
-      endInstruction: 491
-      startSourceChar: 1616
-      endSourceChar: 1639
-      line: 51
-      lineChar: 22
-      spanCodeSection: SetPositionAndRotation(
-    - startInstruction: 492
-      endInstruction: 491
-      startSourceChar: 1639
-      endSourceChar: 1650
-      line: 51
-      lineChar: 45
-      spanCodeSection: 'targetPos, '
-    - startInstruction: 492
-      endInstruction: 543
-      startSourceChar: 1650
-      endSourceChar: 1676
-      line: 51
-      lineChar: 56
-      spanCodeSection: "targetRot);\r\n    }\r\n\r\n    "
-    - startInstruction: 544
-      endInstruction: 551
-      startSourceChar: 1676
-      endSourceChar: 1698
-      line: 54
-      lineChar: 4
-      spanCodeSection: 'private void Update() '
-    - startInstruction: 552
-      endInstruction: 551
-      startSourceChar: 1698
-      endSourceChar: 1707
-      line: 54
-      lineChar: 26
-      spanCodeSection: "{\r\n      "
-    - startInstruction: 552
-      endInstruction: 551
-      startSourceChar: 1707
-      endSourceChar: 1711
-      line: 55
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 552
-      endInstruction: 567
-      startSourceChar: 1711
-      endSourceChar: 1721
-      line: 55
-      lineChar: 10
-      spanCodeSection: 'isEditor) '
-    - startInstruction: 568
-      endInstruction: 567
-      startSourceChar: 1721
-      endSourceChar: 1732
-      line: 55
-      lineChar: 20
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 568
-      endInstruction: 567
-      startSourceChar: 1732
-      endSourceChar: 1736
-      line: 56
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 568
-      endInstruction: 567
-      startSourceChar: 1736
-      endSourceChar: 1737
-      line: 56
-      lineChar: 12
-      spanCodeSection: '!'
-    - startInstruction: 568
-      endInstruction: 607
-      startSourceChar: 1737
-      endSourceChar: 1755
-      line: 56
-      lineChar: 13
-      spanCodeSection: 'followMainCamera) '
-    - startInstruction: 608
-      endInstruction: 627
-      startSourceChar: 1755
-      endSourceChar: 1772
-      line: 56
-      lineChar: 31
-      spanCodeSection: "return;\r\n        "
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1772
-      endSourceChar: 1772
-      line: 57
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1772
-      endSourceChar: 1772
-      line: 57
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1772
-      endSourceChar: 1786
-      line: 57
-      lineChar: 8
-      spanCodeSection: 'var cameraPos '
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1786
-      endSourceChar: 1788
-      line: 57
-      lineChar: 22
-      spanCodeSection: '= '
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1788
-      endSourceChar: 1788
-      line: 57
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1788
-      endSourceChar: 1788
-      line: 57
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1788
-      endSourceChar: 1799
-      line: 57
-      lineChar: 24
-      spanCodeSection: mainCamera.
-    - startInstruction: 628
-      endInstruction: 627
-      startSourceChar: 1799
-      endSourceChar: 1809
-      line: 57
-      lineChar: 35
-      spanCodeSection: transform.
-    - startInstruction: 628
-      endInstruction: 695
-      startSourceChar: 1809
-      endSourceChar: 1828
-      line: 57
-      lineChar: 45
-      spanCodeSection: "position;\r\n        "
-    - startInstruction: 696
-      endInstruction: 695
-      startSourceChar: 1828
-      endSourceChar: 1828
-      line: 58
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 696
-      endInstruction: 695
-      startSourceChar: 1828
-      endSourceChar: 1828
-      line: 58
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 696
-      endInstruction: 695
-      startSourceChar: 1828
-      endSourceChar: 1842
-      line: 58
-      lineChar: 8
-      spanCodeSection: 'var cameraRot '
-    - startInstruction: 696
-      endInstruction: 695
-      startSourceChar: 1842
-      endSourceChar: 1844
-      line: 58
-      lineChar: 22
-      spanCodeSection: '= '
-    - startInstruction: 696
-      endInstruction: 695
-      startSourceChar: 1844
-      endSourceChar: 1844
-      line: 58
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 696
-      endInstruction: 695
-      startSourceChar: 1844
-      endSourceChar: 1844
-      line: 58
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 696
-      endInstruction: 695
-      startSourceChar: 1844
-      endSourceChar: 1855
-      line: 58
-      lineChar: 24
-      spanCodeSection: mainCamera.
-    - startInstruction: 696
-      endInstruction: 695
-      startSourceChar: 1855
-      endSourceChar: 1865
-      line: 58
-      lineChar: 35
-      spanCodeSection: transform.
-    - startInstruction: 696
-      endInstruction: 763
-      startSourceChar: 1865
-      endSourceChar: 1884
-      line: 58
-      lineChar: 45
-      spanCodeSection: "rotation;\r\n        "
-    - startInstruction: 764
-      endInstruction: 763
-      startSourceChar: 1884
-      endSourceChar: 1884
-      line: 59
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 764
-      endInstruction: 763
-      startSourceChar: 1884
-      endSourceChar: 1884
-      line: 59
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 764
-      endInstruction: 763
-      startSourceChar: 1884
-      endSourceChar: 1884
-      line: 59
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 764
-      endInstruction: 763
-      startSourceChar: 1884
-      endSourceChar: 1900
-      line: 59
-      lineChar: 8
-      spanCodeSection: targetTransform.
-    - startInstruction: 764
-      endInstruction: 763
-      startSourceChar: 1900
-      endSourceChar: 1923
-      line: 59
-      lineChar: 24
-      spanCodeSection: SetPositionAndRotation(
-    - startInstruction: 764
-      endInstruction: 763
-      startSourceChar: 1923
-      endSourceChar: 1934
-      line: 59
-      lineChar: 47
-      spanCodeSection: 'cameraPos, '
-    - startInstruction: 764
-      endInstruction: 795
-      startSourceChar: 1934
-      endSourceChar: 1955
-      line: 59
-      lineChar: 58
-      spanCodeSection: "cameraRot);\r\n        "
-    - startInstruction: 796
-      endInstruction: 815
-      startSourceChar: 1955
-      endSourceChar: 1981
-      line: 60
-      lineChar: 8
-      spanCodeSection: "return;\r\n      }\r\n\r\n      "
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 1981
-      endSourceChar: 1981
-      line: 63
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 1981
-      endSourceChar: 1981
-      line: 63
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 1981
-      endSourceChar: 1981
-      line: 63
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 1981
-      endSourceChar: 2007
-      line: 63
-      lineChar: 6
-      spanCodeSection: "Vector3 targetPos;\r\n      "
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 2007
-      endSourceChar: 2007
-      line: 64
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 2007
-      endSourceChar: 2007
-      line: 64
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 2007
-      endSourceChar: 2007
-      line: 64
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 2007
-      endSourceChar: 2038
-      line: 64
-      lineChar: 6
-      spanCodeSection: "Quaternion targetRot;\r\n\r\n      "
-    - startInstruction: 816
-      endInstruction: 815
-      startSourceChar: 2038
-      endSourceChar: 2042
-      line: 66
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 816
-      endInstruction: 831
-      startSourceChar: 2042
-      endSourceChar: 2053
-      line: 66
-      lineChar: 10
-      spanCodeSection: 'trackBone) '
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 2053
-      endSourceChar: 2064
-      line: 66
-      lineChar: 21
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 2064
-      endSourceChar: 2064
-      line: 67
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 2064
-      endSourceChar: 2064
-      line: 67
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 2064
-      endSourceChar: 2076
-      line: 67
-      lineChar: 8
-      spanCodeSection: 'targetPos = '
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 2076
-      endSourceChar: 2076
-      line: 67
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 2076
-      endSourceChar: 2076
-      line: 67
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 2076
-      endSourceChar: 2083
-      line: 67
-      lineChar: 20
-      spanCodeSection: player.
-    - startInstruction: 832
-      endInstruction: 831
-      startSourceChar: 2083
-      endSourceChar: 2099
-      line: 67
-      lineChar: 27
-      spanCodeSection: GetBonePosition(
-    - startInstruction: 832
-      endInstruction: 863
-      startSourceChar: 2099
-      endSourceChar: 2115
-      line: 67
-      lineChar: 43
-      spanCodeSection: "bone);\r\n        "
-    - startInstruction: 864
-      endInstruction: 863
-      startSourceChar: 2115
-      endSourceChar: 2115
-      line: 68
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 864
-      endInstruction: 863
-      startSourceChar: 2115
-      endSourceChar: 2115
-      line: 68
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 864
-      endInstruction: 863
-      startSourceChar: 2115
-      endSourceChar: 2127
-      line: 68
-      lineChar: 8
-      spanCodeSection: 'targetRot = '
-    - startInstruction: 864
-      endInstruction: 863
-      startSourceChar: 2127
-      endSourceChar: 2127
-      line: 68
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 864
-      endInstruction: 863
-      startSourceChar: 2127
-      endSourceChar: 2127
-      line: 68
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 864
-      endInstruction: 863
-      startSourceChar: 2127
-      endSourceChar: 2134
-      line: 68
-      lineChar: 20
-      spanCodeSection: player.
-    - startInstruction: 864
-      endInstruction: 863
-      startSourceChar: 2134
-      endSourceChar: 2150
-      line: 68
-      lineChar: 27
-      spanCodeSection: GetBoneRotation(
-    - startInstruction: 864
-      endInstruction: 903
-      startSourceChar: 2150
-      endSourceChar: 2173
-      line: 68
-      lineChar: 43
-      spanCodeSection: "bone);\r\n      }\r\n      "
-    - startInstruction: 904
-      endInstruction: 903
-      startSourceChar: 2173
-      endSourceChar: 2178
-      line: 70
-      lineChar: 6
-      spanCodeSection: 'else '
-    - startInstruction: 904
-      endInstruction: 903
-      startSourceChar: 2178
-      endSourceChar: 2182
-      line: 70
-      lineChar: 11
-      spanCodeSection: if (
-    - startInstruction: 904
-      endInstruction: 919
-      startSourceChar: 2182
-      endSourceChar: 2199
-      line: 70
-      lineChar: 15
-      spanCodeSection: 'trackPlayerBase) '
-    - startInstruction: 920
-      endInstruction: 919
-      startSourceChar: 2199
-      endSourceChar: 2210
-      line: 70
-      lineChar: 32
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 920
-      endInstruction: 919
-      startSourceChar: 2210
-      endSourceChar: 2210
-      line: 71
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 920
-      endInstruction: 919
-      startSourceChar: 2210
-      endSourceChar: 2210
-      line: 71
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 920
-      endInstruction: 919
-      startSourceChar: 2210
-      endSourceChar: 2222
-      line: 71
-      lineChar: 8
-      spanCodeSection: 'targetPos = '
-    - startInstruction: 920
-      endInstruction: 919
-      startSourceChar: 2222
-      endSourceChar: 2222
-      line: 71
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 920
-      endInstruction: 919
-      startSourceChar: 2222
-      endSourceChar: 2222
-      line: 71
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 920
-      endInstruction: 919
-      startSourceChar: 2222
-      endSourceChar: 2229
-      line: 71
-      lineChar: 20
-      spanCodeSection: player.
-    - startInstruction: 920
-      endInstruction: 943
-      startSourceChar: 2229
-      endSourceChar: 2253
-      line: 71
-      lineChar: 27
-      spanCodeSection: "GetPosition();\r\n        "
-    - startInstruction: 944
-      endInstruction: 943
-      startSourceChar: 2253
-      endSourceChar: 2253
-      line: 72
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 944
-      endInstruction: 943
-      startSourceChar: 2253
-      endSourceChar: 2253
-      line: 72
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 944
-      endInstruction: 943
-      startSourceChar: 2253
-      endSourceChar: 2265
-      line: 72
-      lineChar: 8
-      spanCodeSection: 'targetRot = '
-    - startInstruction: 944
-      endInstruction: 943
-      startSourceChar: 2265
-      endSourceChar: 2265
-      line: 72
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 944
-      endInstruction: 943
-      startSourceChar: 2265
-      endSourceChar: 2265
-      line: 72
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 944
-      endInstruction: 943
-      startSourceChar: 2265
-      endSourceChar: 2272
-      line: 72
-      lineChar: 20
-      spanCodeSection: player.
-    - startInstruction: 944
-      endInstruction: 975
-      startSourceChar: 2272
-      endSourceChar: 2303
-      line: 72
-      lineChar: 27
-      spanCodeSection: "GetRotation();\r\n      }\r\n      "
-    - startInstruction: 976
-      endInstruction: 975
-      startSourceChar: 2303
-      endSourceChar: 2308
-      line: 74
-      lineChar: 6
-      spanCodeSection: 'else '
-    - startInstruction: 976
-      endInstruction: 975
-      startSourceChar: 2308
-      endSourceChar: 2312
-      line: 74
-      lineChar: 11
-      spanCodeSection: if (
-    - startInstruction: 976
-      endInstruction: 991
-      startSourceChar: 2312
-      endSourceChar: 2328
-      line: 74
-      lineChar: 15
-      spanCodeSection: 'trackPlayspace) '
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2328
-      endSourceChar: 2339
-      line: 74
-      lineChar: 31
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2339
-      endSourceChar: 2339
-      line: 75
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2339
-      endSourceChar: 2339
-      line: 75
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2339
-      endSourceChar: 2352
-      line: 75
-      lineChar: 8
-      spanCodeSection: 'var vertical '
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2352
-      endSourceChar: 2354
-      line: 75
-      lineChar: 21
-      spanCodeSection: '= '
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2354
-      endSourceChar: 2354
-      line: 75
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2354
-      endSourceChar: 2354
-      line: 75
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2354
-      endSourceChar: 2360
-      line: 75
-      lineChar: 23
-      spanCodeSection: Input.
-    - startInstruction: 992
-      endInstruction: 991
-      startSourceChar: 2360
-      endSourceChar: 2371
-      line: 75
-      lineChar: 29
-      spanCodeSection: GetAxisRaw(
-    - startInstruction: 992
-      endInstruction: 1035
-      startSourceChar: 2371
-      endSourceChar: 2393
-      line: 75
-      lineChar: 40
-      spanCodeSection: "\"Vertical\");\r\n        "
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 2393
-      endSourceChar: 2393
-      line: 76
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 2393
-      endSourceChar: 2393
-      line: 76
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 2393
-      endSourceChar: 2408
-      line: 76
-      lineChar: 8
-      spanCodeSection: 'var horizontal '
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 2408
-      endSourceChar: 2410
-      line: 76
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 2410
-      endSourceChar: 2410
-      line: 76
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 2410
-      endSourceChar: 2410
-      line: 76
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 2410
-      endSourceChar: 2416
-      line: 76
-      lineChar: 25
-      spanCodeSection: Input.
-    - startInstruction: 1036
-      endInstruction: 1035
-      startSourceChar: 2416
-      endSourceChar: 2427
-      line: 76
-      lineChar: 31
-      spanCodeSection: GetAxisRaw(
-    - startInstruction: 1036
-      endInstruction: 1079
-      startSourceChar: 2427
-      endSourceChar: 2451
-      line: 76
-      lineChar: 42
-      spanCodeSection: "\"Horizontal\");\r\n        "
-    - startInstruction: 1080
-      endInstruction: 1079
-      startSourceChar: 2451
-      endSourceChar: 2451
-      line: 77
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1080
-      endInstruction: 1079
-      startSourceChar: 2451
-      endSourceChar: 2451
-      line: 77
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1080
-      endInstruction: 1079
-      startSourceChar: 2451
-      endSourceChar: 2464
-      line: 77
-      lineChar: 8
-      spanCodeSection: 'var rotation '
-    - startInstruction: 1080
-      endInstruction: 1079
-      startSourceChar: 2464
-      endSourceChar: 2466
-      line: 77
-      lineChar: 21
-      spanCodeSection: '= '
-    - startInstruction: 1080
-      endInstruction: 1079
-      startSourceChar: 2466
-      endSourceChar: 2466
-      line: 77
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 1080
-      endInstruction: 1079
-      startSourceChar: 2466
-      endSourceChar: 2466
-      line: 77
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 1080
-      endInstruction: 1079
-      startSourceChar: 2466
-      endSourceChar: 2472
-      line: 77
-      lineChar: 23
-      spanCodeSection: Input.
-    - startInstruction: 1080
-      endInstruction: 1079
-      startSourceChar: 2472
-      endSourceChar: 2483
-      line: 77
-      lineChar: 29
-      spanCodeSection: GetAxisRaw(
-    - startInstruction: 1080
-      endInstruction: 1123
-      startSourceChar: 2483
-      endSourceChar: 2547
-      line: 77
-      lineChar: 40
-      spanCodeSection: "\"Oculus_CrossPlatform_SecondaryThumbstickHorizontal\");\r\n
-        \       "
-    - startInstruction: 1124
-      endInstruction: 1123
-      startSourceChar: 2547
-      endSourceChar: 2547
-      line: 78
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1124
-      endInstruction: 1123
-      startSourceChar: 2547
-      endSourceChar: 2547
-      line: 78
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1124
-      endInstruction: 1123
-      startSourceChar: 2547
-      endSourceChar: 2559
-      line: 78
-      lineChar: 8
-      spanCodeSection: 'targetPos = '
-    - startInstruction: 1124
-      endInstruction: 1123
-      startSourceChar: 2559
-      endSourceChar: 2559
-      line: 78
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1124
-      endInstruction: 1123
-      startSourceChar: 2559
-      endSourceChar: 2559
-      line: 78
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1124
-      endInstruction: 1123
-      startSourceChar: 2559
-      endSourceChar: 2566
-      line: 78
-      lineChar: 20
-      spanCodeSection: player.
-    - startInstruction: 1124
-      endInstruction: 1147
-      startSourceChar: 2566
-      endSourceChar: 2590
-      line: 78
-      lineChar: 27
-      spanCodeSection: "GetPosition();\r\n        "
-    - startInstruction: 1148
-      endInstruction: 1147
-      startSourceChar: 2590
-      endSourceChar: 2590
-      line: 79
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1148
-      endInstruction: 1147
-      startSourceChar: 2590
-      endSourceChar: 2590
-      line: 79
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1148
-      endInstruction: 1147
-      startSourceChar: 2590
-      endSourceChar: 2602
-      line: 79
-      lineChar: 8
-      spanCodeSection: 'targetRot = '
-    - startInstruction: 1148
-      endInstruction: 1147
-      startSourceChar: 2602
-      endSourceChar: 2602
-      line: 79
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1148
-      endInstruction: 1147
-      startSourceChar: 2602
-      endSourceChar: 2602
-      line: 79
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1148
-      endInstruction: 1147
-      startSourceChar: 2602
-      endSourceChar: 2609
-      line: 79
-      lineChar: 20
-      spanCodeSection: player.
-    - startInstruction: 1148
-      endInstruction: 1171
-      startSourceChar: 2609
-      endSourceChar: 2633
-      line: 79
-      lineChar: 27
-      spanCodeSection: "GetRotation();\r\n        "
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2633
-      endSourceChar: 2633
-      line: 80
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2633
-      endSourceChar: 2633
-      line: 80
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2633
-      endSourceChar: 2645
-      line: 80
-      lineChar: 8
-      spanCodeSection: 'offsetRot = '
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2645
-      endSourceChar: 2645
-      line: 80
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2645
-      endSourceChar: 2654
-      line: 80
-      lineChar: 20
-      spanCodeSection: 'oldRot - '
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2654
-      endSourceChar: 2654
-      line: 80
-      lineChar: 29
-      spanCodeSection: 
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2654
-      endSourceChar: 2654
-      line: 80
-      lineChar: 29
-      spanCodeSection: 
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2654
-      endSourceChar: 2664
-      line: 80
-      lineChar: 29
-      spanCodeSection: targetRot.
-    - startInstruction: 1172
-      endInstruction: 1171
-      startSourceChar: 2664
-      endSourceChar: 2676
-      line: 80
-      lineChar: 39
-      spanCodeSection: eulerAngles.
-    - startInstruction: 1172
-      endInstruction: 1251
-      startSourceChar: 2676
-      endSourceChar: 2688
-      line: 80
-      lineChar: 51
-      spanCodeSection: "y;\r\n        "
-    - startInstruction: 1252
-      endInstruction: 1251
-      startSourceChar: 2688
-      endSourceChar: 2688
-      line: 81
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1252
-      endInstruction: 1251
-      startSourceChar: 2688
-      endSourceChar: 2688
-      line: 81
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1252
-      endInstruction: 1251
-      startSourceChar: 2688
-      endSourceChar: 2697
-      line: 81
-      lineChar: 8
-      spanCodeSection: 'oldRot = '
-    - startInstruction: 1252
-      endInstruction: 1251
-      startSourceChar: 2697
-      endSourceChar: 2697
-      line: 81
-      lineChar: 17
-      spanCodeSection: 
-    - startInstruction: 1252
-      endInstruction: 1251
-      startSourceChar: 2697
-      endSourceChar: 2697
-      line: 81
-      lineChar: 17
-      spanCodeSection: 
-    - startInstruction: 1252
-      endInstruction: 1251
-      startSourceChar: 2697
-      endSourceChar: 2707
-      line: 81
-      lineChar: 17
-      spanCodeSection: targetRot.
-    - startInstruction: 1252
-      endInstruction: 1251
-      startSourceChar: 2707
-      endSourceChar: 2719
-      line: 81
-      lineChar: 27
-      spanCodeSection: eulerAngles.
-    - startInstruction: 1252
-      endInstruction: 1299
-      startSourceChar: 2719
-      endSourceChar: 2731
-      line: 81
-      lineChar: 39
-      spanCodeSection: "y;\r\n        "
-    - startInstruction: 1300
-      endInstruction: 1299
-      startSourceChar: 2731
-      endSourceChar: 2735
-      line: 82
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 1300
-      endInstruction: 1299
-      startSourceChar: 2735
-      endSourceChar: 2735
-      line: 82
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 1300
-      endInstruction: 1299
-      startSourceChar: 2735
-      endSourceChar: 2735
-      line: 82
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 1300
-      endInstruction: 1299
-      startSourceChar: 2735
-      endSourceChar: 2735
-      line: 82
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 1300
-      endInstruction: 1299
-      startSourceChar: 2735
-      endSourceChar: 2735
-      line: 82
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 1300
-      endInstruction: 1299
-      startSourceChar: 2735
-      endSourceChar: 2746
-      line: 82
-      lineChar: 12
-      spanCodeSection: 'vertical > '
-    - startInstruction: 1300
-      endInstruction: 1415
-      startSourceChar: 2746
-      endSourceChar: 2751
-      line: 82
-      lineChar: 23
-      spanCodeSection: '0 || '
-    - startInstruction: 1416
-      endInstruction: 1415
-      startSourceChar: 2751
-      endSourceChar: 2751
-      line: 82
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 1416
-      endInstruction: 1415
-      startSourceChar: 2751
-      endSourceChar: 2762
-      line: 82
-      lineChar: 28
-      spanCodeSection: 'vertical < '
-    - startInstruction: 1416
-      endInstruction: 1583
-      startSourceChar: 2762
-      endSourceChar: 2767
-      line: 82
-      lineChar: 39
-      spanCodeSection: '0 || '
-    - startInstruction: 1584
-      endInstruction: 1583
-      startSourceChar: 2767
-      endSourceChar: 2767
-      line: 82
-      lineChar: 44
-      spanCodeSection: 
-    - startInstruction: 1584
-      endInstruction: 1583
-      startSourceChar: 2767
-      endSourceChar: 2780
-      line: 82
-      lineChar: 44
-      spanCodeSection: 'horizontal > '
-    - startInstruction: 1584
-      endInstruction: 1751
-      startSourceChar: 2780
-      endSourceChar: 2785
-      line: 82
-      lineChar: 57
-      spanCodeSection: '0 || '
-    - startInstruction: 1752
-      endInstruction: 1751
-      startSourceChar: 2785
-      endSourceChar: 2785
-      line: 82
-      lineChar: 62
-      spanCodeSection: 
-    - startInstruction: 1752
-      endInstruction: 1751
-      startSourceChar: 2785
-      endSourceChar: 2798
-      line: 82
-      lineChar: 62
-      spanCodeSection: 'horizontal < '
-    - startInstruction: 1752
-      endInstruction: 1875
-      startSourceChar: 2798
-      endSourceChar: 2801
-      line: 82
-      lineChar: 75
-      spanCodeSection: '0) '
-    - startInstruction: 1876
-      endInstruction: 1875
-      startSourceChar: 2801
-      endSourceChar: 2814
-      line: 82
-      lineChar: 78
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 1876
-      endInstruction: 1875
-      startSourceChar: 2814
-      endSourceChar: 2814
-      line: 83
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1876
-      endInstruction: 1875
-      startSourceChar: 2814
-      endSourceChar: 2814
-      line: 83
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1876
-      endInstruction: 1875
-      startSourceChar: 2814
-      endSourceChar: 2827
-      line: 83
-      lineChar: 10
-      spanCodeSection: 'targetPos += '
-    - startInstruction: 1876
-      endInstruction: 1927
-      startSourceChar: 2827
-      endSourceChar: 2849
-      line: 83
-      lineChar: 23
-      spanCodeSection: "offsetPos;\r\n          "
-    - startInstruction: 1928
-      endInstruction: 1927
-      startSourceChar: 2849
-      endSourceChar: 2849
-      line: 84
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1928
-      endInstruction: 1927
-      startSourceChar: 2849
-      endSourceChar: 2849
-      line: 84
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1928
-      endInstruction: 1927
-      startSourceChar: 2849
-      endSourceChar: 2849
-      line: 84
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1928
-      endInstruction: 1927
-      startSourceChar: 2849
-      endSourceChar: 2865
-      line: 84
-      lineChar: 10
-      spanCodeSection: targetTransform.
-    - startInstruction: 1928
-      endInstruction: 1927
-      startSourceChar: 2865
-      endSourceChar: 2876
-      line: 84
-      lineChar: 26
-      spanCodeSection: 'position = '
-    - startInstruction: 1928
-      endInstruction: 1951
-      startSourceChar: 2876
-      endSourceChar: 2898
-      line: 84
-      lineChar: 37
-      spanCodeSection: "targetPos;\r\n          "
-    - startInstruction: 1952
-      endInstruction: 1951
-      startSourceChar: 2898
-      endSourceChar: 2902
-      line: 85
-      lineChar: 10
-      spanCodeSection: if (
-    - startInstruction: 1952
-      endInstruction: 1951
-      startSourceChar: 2902
-      endSourceChar: 2902
-      line: 85
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 1952
-      endInstruction: 1951
-      startSourceChar: 2902
-      endSourceChar: 2902
-      line: 85
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 1952
-      endInstruction: 1951
-      startSourceChar: 2902
-      endSourceChar: 2913
-      line: 85
-      lineChar: 14
-      spanCodeSection: 'rotation > '
-    - startInstruction: 1952
-      endInstruction: 2067
-      startSourceChar: 2913
-      endSourceChar: 2918
-      line: 85
-      lineChar: 25
-      spanCodeSection: '0 || '
-    - startInstruction: 2068
-      endInstruction: 2067
-      startSourceChar: 2918
-      endSourceChar: 2918
-      line: 85
-      lineChar: 30
-      spanCodeSection: 
-    - startInstruction: 2068
-      endInstruction: 2067
-      startSourceChar: 2918
-      endSourceChar: 2929
-      line: 85
-      lineChar: 30
-      spanCodeSection: 'rotation < '
-    - startInstruction: 2068
-      endInstruction: 2191
-      startSourceChar: 2929
-      endSourceChar: 2932
-      line: 85
-      lineChar: 41
-      spanCodeSection: '0) '
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2932
-      endSourceChar: 2947
-      line: 85
-      lineChar: 44
-      spanCodeSection: "{\r\n            "
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2947
-      endSourceChar: 2947
-      line: 86
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2947
-      endSourceChar: 2947
-      line: 86
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2947
-      endSourceChar: 2947
-      line: 86
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2947
-      endSourceChar: 2963
-      line: 86
-      lineChar: 12
-      spanCodeSection: targetTransform.
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2963
-      endSourceChar: 2976
-      line: 86
-      lineChar: 28
-      spanCodeSection: RotateAround(
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2976
-      endSourceChar: 2976
-      line: 86
-      lineChar: 41
-      spanCodeSection: 
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2976
-      endSourceChar: 2976
-      line: 86
-      lineChar: 41
-      spanCodeSection: 
-    - startInstruction: 2192
-      endInstruction: 2191
-      startSourceChar: 2976
-      endSourceChar: 2983
-      line: 86
-      lineChar: 41
-      spanCodeSection: player.
-    - startInstruction: 2192
-      endInstruction: 2215
-      startSourceChar: 2983
-      endSourceChar: 2998
-      line: 86
-      lineChar: 48
-      spanCodeSection: 'GetPosition(), '
-    - startInstruction: 2216
-      endInstruction: 2215
-      startSourceChar: 2998
-      endSourceChar: 2998
-      line: 86
-      lineChar: 63
-      spanCodeSection: 
-    - startInstruction: 2216
-      endInstruction: 2215
-      startSourceChar: 2998
-      endSourceChar: 3006
-      line: 86
-      lineChar: 63
-      spanCodeSection: Vector3.
-    - startInstruction: 2216
-      endInstruction: 2231
-      startSourceChar: 3006
-      endSourceChar: 3010
-      line: 86
-      lineChar: 71
-      spanCodeSection: 'up, '
-    - startInstruction: 2232
-      endInstruction: 2231
-      startSourceChar: 3010
-      endSourceChar: 3011
-      line: 86
-      lineChar: 75
-      spanCodeSection: '-'
-    - startInstruction: 2232
-      endInstruction: 2295
-      startSourceChar: 3011
-      endSourceChar: 3047
-      line: 86
-      lineChar: 76
-      spanCodeSection: "offsetRot);\r\n          }\r\n          "
-    - startInstruction: 2296
-      endInstruction: 2315
-      startSourceChar: 3047
-      endSourceChar: 3075
-      line: 88
-      lineChar: 10
-      spanCodeSection: "return;\r\n        }\r\n        "
-    - startInstruction: 2316
-      endInstruction: 2315
-      startSourceChar: 3075
-      endSourceChar: 3079
-      line: 90
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 2316
-      endInstruction: 2315
-      startSourceChar: 3079
-      endSourceChar: 3079
-      line: 90
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 2316
-      endInstruction: 2315
-      startSourceChar: 3079
-      endSourceChar: 3079
-      line: 90
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 2316
-      endInstruction: 2315
-      startSourceChar: 3079
-      endSourceChar: 3090
-      line: 90
-      lineChar: 12
-      spanCodeSection: 'rotation > '
-    - startInstruction: 2316
-      endInstruction: 2431
-      startSourceChar: 3090
-      endSourceChar: 3095
-      line: 90
-      lineChar: 23
-      spanCodeSection: '0 || '
-    - startInstruction: 2432
-      endInstruction: 2431
-      startSourceChar: 3095
-      endSourceChar: 3095
-      line: 90
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 2432
-      endInstruction: 2431
-      startSourceChar: 3095
-      endSourceChar: 3106
-      line: 90
-      lineChar: 28
-      spanCodeSection: 'rotation < '
-    - startInstruction: 2432
-      endInstruction: 2555
-      startSourceChar: 3106
-      endSourceChar: 3109
-      line: 90
-      lineChar: 39
-      spanCodeSection: '0) '
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3109
-      endSourceChar: 3122
-      line: 90
-      lineChar: 42
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3122
-      endSourceChar: 3122
-      line: 91
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3122
-      endSourceChar: 3122
-      line: 91
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3122
-      endSourceChar: 3122
-      line: 91
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3122
-      endSourceChar: 3138
-      line: 91
-      lineChar: 10
-      spanCodeSection: targetTransform.
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3138
-      endSourceChar: 3151
-      line: 91
-      lineChar: 26
-      spanCodeSection: RotateAround(
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3151
-      endSourceChar: 3151
-      line: 91
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3151
-      endSourceChar: 3151
-      line: 91
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 2556
-      endInstruction: 2555
-      startSourceChar: 3151
-      endSourceChar: 3158
-      line: 91
-      lineChar: 39
-      spanCodeSection: player.
-    - startInstruction: 2556
-      endInstruction: 2579
-      startSourceChar: 3158
-      endSourceChar: 3173
-      line: 91
-      lineChar: 46
-      spanCodeSection: 'GetPosition(), '
-    - startInstruction: 2580
-      endInstruction: 2579
-      startSourceChar: 3173
-      endSourceChar: 3173
-      line: 91
-      lineChar: 61
-      spanCodeSection: 
-    - startInstruction: 2580
-      endInstruction: 2579
-      startSourceChar: 3173
-      endSourceChar: 3181
-      line: 91
-      lineChar: 61
-      spanCodeSection: Vector3.
-    - startInstruction: 2580
-      endInstruction: 2595
-      startSourceChar: 3181
-      endSourceChar: 3185
-      line: 91
-      lineChar: 69
-      spanCodeSection: 'up, '
-    - startInstruction: 2596
-      endInstruction: 2595
-      startSourceChar: 3185
-      endSourceChar: 3186
-      line: 91
-      lineChar: 73
-      spanCodeSection: '-'
-    - startInstruction: 2596
-      endInstruction: 2659
-      startSourceChar: 3186
-      endSourceChar: 3218
-      line: 91
-      lineChar: 74
-      spanCodeSection: "offsetRot);\r\n        }\r\n        "
-    - startInstruction: 2660
-      endInstruction: 2659
-      startSourceChar: 3218
-      endSourceChar: 3218
-      line: 93
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2660
-      endInstruction: 2659
-      startSourceChar: 3218
-      endSourceChar: 3218
-      line: 93
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2660
-      endInstruction: 2659
-      startSourceChar: 3218
-      endSourceChar: 3230
-      line: 93
-      lineChar: 8
-      spanCodeSection: 'offsetPos = '
-    - startInstruction: 2660
-      endInstruction: 2659
-      startSourceChar: 3230
-      endSourceChar: 3230
-      line: 93
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 2660
-      endInstruction: 2659
-      startSourceChar: 3230
-      endSourceChar: 3230
-      line: 93
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 2660
-      endInstruction: 2659
-      startSourceChar: 3230
-      endSourceChar: 3246
-      line: 93
-      lineChar: 20
-      spanCodeSection: targetTransform.
-    - startInstruction: 2660
-      endInstruction: 2683
-      startSourceChar: 3246
-      endSourceChar: 3257
-      line: 93
-      lineChar: 36
-      spanCodeSection: 'position - '
-    - startInstruction: 2684
-      endInstruction: 2715
-      startSourceChar: 3257
-      endSourceChar: 3277
-      line: 93
-      lineChar: 47
-      spanCodeSection: "targetPos;\r\n        "
-    - startInstruction: 2716
-      endInstruction: 2743
-      startSourceChar: 3277
-      endSourceChar: 3301
-      line: 94
-      lineChar: 8
-      spanCodeSection: "return;\r\n      }\r\n      "
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3301
-      endSourceChar: 3306
-      line: 96
-      lineChar: 6
-      spanCodeSection: 'else '
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3306
-      endSourceChar: 3317
-      line: 96
-      lineChar: 11
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3317
-      endSourceChar: 3317
-      line: 97
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3317
-      endSourceChar: 3317
-      line: 97
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3317
-      endSourceChar: 3332
-      line: 97
-      lineChar: 8
-      spanCodeSection: 'trackingData = '
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3332
-      endSourceChar: 3332
-      line: 97
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3332
-      endSourceChar: 3332
-      line: 97
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3332
-      endSourceChar: 3339
-      line: 97
-      lineChar: 23
-      spanCodeSection: player.
-    - startInstruction: 2744
-      endInstruction: 2743
-      startSourceChar: 3339
-      endSourceChar: 3355
-      line: 97
-      lineChar: 30
-      spanCodeSection: GetTrackingData(
-    - startInstruction: 2744
-      endInstruction: 2775
-      startSourceChar: 3355
-      endSourceChar: 3381
-      line: 97
-      lineChar: 46
-      spanCodeSection: "trackingTarget);\r\n        "
-    - startInstruction: 2776
-      endInstruction: 2775
-      startSourceChar: 3381
-      endSourceChar: 3381
-      line: 98
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2776
-      endInstruction: 2775
-      startSourceChar: 3381
-      endSourceChar: 3381
-      line: 98
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2776
-      endInstruction: 2775
-      startSourceChar: 3381
-      endSourceChar: 3393
-      line: 98
-      lineChar: 8
-      spanCodeSection: 'targetPos = '
-    - startInstruction: 2776
-      endInstruction: 2775
-      startSourceChar: 3393
-      endSourceChar: 3393
-      line: 98
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 2776
-      endInstruction: 2775
-      startSourceChar: 3393
-      endSourceChar: 3406
-      line: 98
-      lineChar: 20
-      spanCodeSection: trackingData.
-    - startInstruction: 2776
-      endInstruction: 2799
-      startSourceChar: 3406
-      endSourceChar: 3425
-      line: 98
-      lineChar: 33
-      spanCodeSection: "position;\r\n        "
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3425
-      endSourceChar: 3425
-      line: 99
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3425
-      endSourceChar: 3425
-      line: 99
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3425
-      endSourceChar: 3437
-      line: 99
-      lineChar: 8
-      spanCodeSection: 'targetRot = '
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3437
-      endSourceChar: 3437
-      line: 99
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 2800
-      endInstruction: 2799
-      startSourceChar: 3437
-      endSourceChar: 3450
-      line: 99
-      lineChar: 20
-      spanCodeSection: trackingData.
-    - startInstruction: 2800
-      endInstruction: 2823
-      startSourceChar: 3450
-      endSourceChar: 3478
-      line: 99
-      lineChar: 33
-      spanCodeSection: "rotation;\r\n      }\r\n\r\n      "
-    - startInstruction: 2824
-      endInstruction: 2823
-      startSourceChar: 3478
-      endSourceChar: 3482
-      line: 102
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 2824
-      endInstruction: 2823
-      startSourceChar: 3482
-      endSourceChar: 3482
-      line: 102
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 2824
-      endInstruction: 2859
-      startSourceChar: 3482
-      endSourceChar: 3499
-      line: 102
-      lineChar: 10
-      spanCodeSection: 'trackPosition && '
-    - startInstruction: 2860
-      endInstruction: 2927
-      startSourceChar: 3499
-      endSourceChar: 3514
-      line: 102
-      lineChar: 27
-      spanCodeSection: 'trackRotation) '
-    - startInstruction: 2928
-      endInstruction: 2927
-      startSourceChar: 3514
-      endSourceChar: 3525
-      line: 102
-      lineChar: 42
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 2928
-      endInstruction: 2927
-      startSourceChar: 3525
-      endSourceChar: 3525
-      line: 103
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2928
-      endInstruction: 2927
-      startSourceChar: 3525
-      endSourceChar: 3525
-      line: 103
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2928
-      endInstruction: 2927
-      startSourceChar: 3525
-      endSourceChar: 3525
-      line: 103
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2928
-      endInstruction: 2927
-      startSourceChar: 3525
-      endSourceChar: 3541
-      line: 103
-      lineChar: 8
-      spanCodeSection: targetTransform.
-    - startInstruction: 2928
-      endInstruction: 2927
-      startSourceChar: 3541
-      endSourceChar: 3564
-      line: 103
-      lineChar: 24
-      spanCodeSection: SetPositionAndRotation(
-    - startInstruction: 2928
-      endInstruction: 2927
-      startSourceChar: 3564
-      endSourceChar: 3575
-      line: 103
-      lineChar: 47
-      spanCodeSection: 'targetPos, '
-    - startInstruction: 2928
-      endInstruction: 2967
-      startSourceChar: 3575
-      endSourceChar: 3596
-      line: 103
-      lineChar: 58
-      spanCodeSection: "targetRot);\r\n      } "
-    - startInstruction: 2968
-      endInstruction: 2967
-      startSourceChar: 3596
-      endSourceChar: 3601
-      line: 104
-      lineChar: 8
-      spanCodeSection: 'else '
-    - startInstruction: 2968
-      endInstruction: 2967
-      startSourceChar: 3601
-      endSourceChar: 3605
-      line: 104
-      lineChar: 13
-      spanCodeSection: if (
-    - startInstruction: 2968
-      endInstruction: 2983
-      startSourceChar: 3605
-      endSourceChar: 3620
-      line: 104
-      lineChar: 17
-      spanCodeSection: 'trackPosition) '
-    - startInstruction: 2984
-      endInstruction: 2983
-      startSourceChar: 3620
-      endSourceChar: 3631
-      line: 104
-      lineChar: 32
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 2984
-      endInstruction: 2983
-      startSourceChar: 3631
-      endSourceChar: 3631
-      line: 105
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2984
-      endInstruction: 2983
-      startSourceChar: 3631
-      endSourceChar: 3631
-      line: 105
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2984
-      endInstruction: 2983
-      startSourceChar: 3631
-      endSourceChar: 3631
-      line: 105
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2984
-      endInstruction: 2983
-      startSourceChar: 3631
-      endSourceChar: 3647
-      line: 105
-      lineChar: 8
-      spanCodeSection: targetTransform.
-    - startInstruction: 2984
-      endInstruction: 2983
-      startSourceChar: 3647
-      endSourceChar: 3658
-      line: 105
-      lineChar: 24
-      spanCodeSection: 'position = '
-    - startInstruction: 2984
-      endInstruction: 3015
-      startSourceChar: 3658
-      endSourceChar: 3685
-      line: 105
-      lineChar: 35
-      spanCodeSection: "targetPos;\r\n      }\r\n      "
-    - startInstruction: 3016
-      endInstruction: 3015
-      startSourceChar: 3685
-      endSourceChar: 3690
-      line: 107
-      lineChar: 6
-      spanCodeSection: 'else '
-    - startInstruction: 3016
-      endInstruction: 3015
-      startSourceChar: 3690
-      endSourceChar: 3701
-      line: 107
-      lineChar: 11
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 3016
-      endInstruction: 3015
-      startSourceChar: 3701
-      endSourceChar: 3701
-      line: 108
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 3016
-      endInstruction: 3015
-      startSourceChar: 3701
-      endSourceChar: 3701
-      line: 108
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 3016
-      endInstruction: 3015
-      startSourceChar: 3701
-      endSourceChar: 3701
-      line: 108
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 3016
-      endInstruction: 3015
-      startSourceChar: 3701
-      endSourceChar: 3717
-      line: 108
-      lineChar: 8
-      spanCodeSection: targetTransform.
-    - startInstruction: 3016
-      endInstruction: 3015
-      startSourceChar: 3717
-      endSourceChar: 3728
-      line: 108
-      lineChar: 24
-      spanCodeSection: 'rotation = '
-    - startInstruction: 3016
-      endInstruction: 3039
-      startSourceChar: 3728
-      endSourceChar: 3755
-      line: 108
-      lineChar: 35
-      spanCodeSection: "targetRot;\r\n      }\r\n      "
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3755
-      endSourceChar: 3759
-      line: 110
-      lineChar: 6
-      spanCodeSection: if (
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3759
-      endSourceChar: 3759
-      line: 110
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3759
-      endSourceChar: 3759
-      line: 110
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 3040
-      endInstruction: 3039
-      startSourceChar: 3759
-      endSourceChar: 3768
-      line: 110
-      lineChar: 10
-      spanCodeSection: rotateBy.
-    - startInstruction: 3040
-      endInstruction: 3063
-      startSourceChar: 3768
-      endSourceChar: 3780
-      line: 110
-      lineChar: 19
-      spanCodeSection: 'magnitude > '
-    - startInstruction: 3064
-      endInstruction: 3135
-      startSourceChar: 3780
-      endSourceChar: 3783
-      line: 110
-      lineChar: 31
-      spanCodeSection: '0) '
-    - startInstruction: 3136
-      endInstruction: 3135
-      startSourceChar: 3783
-      endSourceChar: 3783
-      line: 110
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 3136
-      endInstruction: 3135
-      startSourceChar: 3783
-      endSourceChar: 3783
-      line: 110
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 3136
-      endInstruction: 3135
-      startSourceChar: 3783
-      endSourceChar: 3783
-      line: 110
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 3136
-      endInstruction: 3135
-      startSourceChar: 3783
-      endSourceChar: 3799
-      line: 110
-      lineChar: 34
-      spanCodeSection: targetTransform.
-    - startInstruction: 3136
-      endInstruction: 3135
-      startSourceChar: 3799
-      endSourceChar: 3806
-      line: 110
-      lineChar: 50
-      spanCodeSection: Rotate(
-    - startInstruction: 3136
-      endInstruction: 3136
-      startSourceChar: 3806
-      endSourceChar: 3806
-      line: 110
-      lineChar: 57
-      spanCodeSection: 
   hasInteractEvent: 0
   serializationData:
     SerializedFormat: 2
@@ -3596,7 +31,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: fieldDefinitions
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.Compiler.FieldDefinition,
         UdonSharp.Editor]], mscorlib
     - Name: comparer
       Entry: 7
@@ -3607,7 +42,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 17
+      Data: 15
     - Name: 
       Entry: 7
       Data: 
@@ -3616,10 +51,10 @@ MonoBehaviour:
       Data: targetTransform
     - Name: $v
       Entry: 7
-      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 2|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 3|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 4|System.RuntimeType, mscorlib
@@ -3655,79 +90,25 @@ MonoBehaviour:
       Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 6|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
-    - Name: header
+      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+    - Name: text
       Entry: 1
-      Data: Tracking Data
+      Data: Tracking Target
     - Name: 
       Entry: 8
       Data: 
     - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
+      Entry: 7
+      Data: 7|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
       Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: trackingTarget
-    - Name: $v
-      Entry: 7
-      Data: 7|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 8|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 7
-      Data: 9|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: VRC.SDKBase.VRCPlayerApi+TrackingDataType, VRCSDKBase
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: VRCSDKBaseVRCPlayerApiTrackingDataType
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: trackingTarget
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: trackingTarget
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -3751,13 +132,13 @@ MonoBehaviour:
       Data: trackBone
     - Name: $v
       Entry: 7
-      Data: 11|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 8|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 12|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 9|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 13|System.RuntimeType, mscorlib
+      Data: 10|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.Boolean, mscorlib
@@ -3787,25 +168,202 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 14|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 11|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 0
     - Name: 
-      Entry: 7
-      Data: 15|UnityEngine.SpaceAttribute, UnityEngine.CoreModule
-    - Name: height
-      Entry: 4
-      Data: 10
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 16|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
-    - Name: header
+      Data: 
+    - Name: $k
       Entry: 1
-      Data: Bone Tracking
+      Data: trackPlayerBase
+    - Name: $v
+      Entry: 7
+      Data: 12|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 13|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 10
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: trackPlayerBase
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: trackPlayerBase
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 14|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: trackPlayspace
+    - Name: $v
+      Entry: 7
+      Data: 15|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 16|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 10
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: trackPlayspace
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: trackPlayspace
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 17|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: trackingTarget
+    - Name: $v
+      Entry: 7
+      Data: 18|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 19|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 20|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: VRC.SDKBase.VRCPlayerApi+TrackingDataType, VRCSDKBase
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: VRCSDKBaseVRCPlayerApiTrackingDataType
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: trackingTarget
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: trackingTarget
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 22|UdonToolkit.HideIfAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: HideTrackDataDropdown
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -3832,13 +390,13 @@ MonoBehaviour:
       Data: bone
     - Name: $v
       Entry: 7
-      Data: 17|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 24|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 18|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 25|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 19|System.RuntimeType, mscorlib
+      Data: 26|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.HumanBodyBones, UnityEngine.AnimationModule
@@ -3868,67 +426,28 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 20|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 27|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
     - Name: 
-      Entry: 13
-      Data: 
+      Entry: 7
+      Data: 28|UdonToolkit.HideIfAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: HideTrackBoneDropdown
     - Name: 
       Entry: 8
       Data: 
-    - Name: userBehaviourSource
+    - Name: 
+      Entry: 7
+      Data: 29|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
       Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: trackPlayerBase
-    - Name: $v
-      Entry: 7
-      Data: 21|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 22|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 9
-      Data: 13
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemBoolean
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: trackPlayerBase
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: trackPlayerBase
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -3952,46 +471,55 @@ MonoBehaviour:
       Data: trackPosition
     - Name: $v
       Entry: 7
-      Data: 24|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 30|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 25|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 31|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 13
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemBoolean
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: trackPosition
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: trackPosition
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 26|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 27|UnityEngine.SpaceAttribute, UnityEngine.CoreModule
-    - Name: height
-      Entry: 4
       Data: 10
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: trackPosition
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: trackPosition
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 32|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 33|UdonToolkit.HideIfAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: '@trackPlayspace'
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 34|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -4018,13 +546,13 @@ MonoBehaviour:
       Data: trackRotation
     - Name: $v
       Entry: 7
-      Data: 28|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 35|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 29|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 36|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 13
+      Data: 10
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -4048,67 +576,28 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 30|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 37|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
     - Name: 
-      Entry: 13
-      Data: 
+      Entry: 7
+      Data: 38|UdonToolkit.HideIfAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: '@trackPlayspace'
     - Name: 
       Entry: 8
       Data: 
-    - Name: userBehaviourSource
+    - Name: 
+      Entry: 7
+      Data: 39|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
       Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: trackPlayspace
-    - Name: $v
-      Entry: 7
-      Data: 31|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 32|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 9
-      Data: 13
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemBoolean
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: trackPlayspace
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: trackPlayspace
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 33|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -4132,13 +621,13 @@ MonoBehaviour:
       Data: rotateBy
     - Name: $v
       Entry: 7
-      Data: 34|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 40|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 35|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 41|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 36|System.RuntimeType, mscorlib
+      Data: 42|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
@@ -4168,82 +657,35 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 37|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 43|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 3
     - Name: 
-      Entry: 13
-      Data: 
+      Entry: 7
+      Data: 44|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: Tracking Correction
     - Name: 
       Entry: 8
       Data: 
-    - Name: userBehaviourSource
+    - Name: 
+      Entry: 7
+      Data: 45|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: The target transform will be rotated by this angles after copying source
+        transforms.
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 46|UdonToolkit.UTEditorAttribute, Assembly-CSharp
+    - Name: modifiers
       Entry: 6
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: followMainCamera
-    - Name: $v
-      Entry: 7
-      Data: 38|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 39|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 9
-      Data: 13
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemBoolean
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: followMainCamera
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: followMainCamera
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 40|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 41|UnityEngine.SpaceAttribute, UnityEngine.CoreModule
-    - Name: height
-      Entry: 4
-      Data: 15
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 42|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
-    - Name: header
-      Entry: 1
-      Data: Editor Hacks
     - Name: 
       Entry: 8
       Data: 
@@ -4270,13 +712,13 @@ MonoBehaviour:
       Data: player
     - Name: $v
       Entry: 7
-      Data: 43|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 47|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 44|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 48|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 45|System.RuntimeType, mscorlib
+      Data: 49|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: VRC.SDKBase.VRCPlayerApi, VRCSDKBase
@@ -4306,7 +748,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 46|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 50|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -4333,13 +775,13 @@ MonoBehaviour:
       Data: isEditor
     - Name: $v
       Entry: 7
-      Data: 47|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 51|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 48|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 52|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 13
+      Data: 10
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4355,69 +797,6 @@ MonoBehaviour:
     - Name: symbolUniqueName
       Entry: 1
       Data: isEditor
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 49|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: trackingData
-    - Name: $v
-      Entry: 7
-      Data: 50|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 51|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 7
-      Data: 52|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: VRC.SDKBase.VRCPlayerApi+TrackingData, VRCSDKBase
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: declarationType
-      Entry: 3
-      Data: 2
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: VRCSDKBaseVRCPlayerApiTrackingData
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: trackingData
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: trackingData
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -4450,19 +829,19 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: mainCamera
+      Data: trackingData
     - Name: $v
       Entry: 7
-      Data: 54|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 54|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 55|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 55|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 56|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UnityEngine.GameObject, UnityEngine.CoreModule
+      Data: VRC.SDKBase.VRCPlayerApi+TrackingData, VRCSDKBase
     - Name: 
       Entry: 8
       Data: 
@@ -4474,13 +853,13 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: UnityEngineGameObject
+      Data: VRCSDKBaseVRCPlayerApiTrackingData
     - Name: symbolOriginalName
       Entry: 1
-      Data: mainCamera
+      Data: trackingData
     - Name: symbolUniqueName
       Entry: 1
-      Data: mainCamera
+      Data: trackingData
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -4516,13 +895,13 @@ MonoBehaviour:
       Data: offsetPos
     - Name: $v
       Entry: 7
-      Data: 58|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 58|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 59|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 59|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 36
+      Data: 42
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4573,10 +952,10 @@ MonoBehaviour:
       Data: oldRot
     - Name: $v
       Entry: 7
-      Data: 61|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 61|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 62|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 62|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 63|System.RuntimeType, mscorlib
@@ -4636,10 +1015,10 @@ MonoBehaviour:
       Data: offsetRot
     - Name: $v
       Entry: 7
-      Data: 65|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 65|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 66|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 66|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 63

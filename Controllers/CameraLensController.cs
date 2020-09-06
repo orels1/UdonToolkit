@@ -1,15 +1,13 @@
 #if UNITY_EDITOR
-using UdonToolkit;
+using System;
 using UnityEngine;
-using UnityEditor;
 using UnityEngine.UI;
 using VRC.SDK3.Components;
 using VRC.Udon;
-using VRC.Udon.Common.Interfaces;
 
-namespace CustomControllers {
+namespace UdonToolkit.Legacy {
+  [Obsolete("Controllers are Deprecated since v0.4.0, you can use the attributes directly in U# code now! Learn more: https://l.vrchat.sh/utV4Migrate")]
   [CustomName("Camera Lens")]
-  [ControlledBehaviour(typeof(CameraLens))]
   public class CameraLensController : UTController {
     [SectionHeader("General")]
     [UdonPublic] public bool active;

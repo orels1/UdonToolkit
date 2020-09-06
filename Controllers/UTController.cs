@@ -9,6 +9,7 @@ using VRC.Udon.Common.Interfaces;
 using VRC.Udon.Serialization.OdinSerializer.Utilities;
 
 namespace UdonToolkit {
+  [Obsolete("Controllers are Deprecated since v0.4.0, you can use the attributes directly in U# code now! Learn more: https://l.vrchat.sh/utV4Migrate")]
   public class UTController : MonoBehaviour {
     [HideInInspector] public UdonBehaviour uB;
     

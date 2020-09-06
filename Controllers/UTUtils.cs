@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UdonSharp;
+using UdonSharpEditor;
 using UnityEditor;
 using UnityEngine;
 using VRC.Udon;
@@ -11,6 +12,12 @@ using VRC.Udon.Serialization.OdinSerializer.Utilities;
 
 namespace UdonToolkit {
   public static class UTUtils {
+    public static BindingFlags flags = BindingFlags.GetField
+                               | BindingFlags.GetProperty
+                               | BindingFlags.IgnoreCase
+                               | BindingFlags.Instance
+                               | BindingFlags.NonPublic
+                               | BindingFlags.Public;
     public static GameObject CreateObjectWithComponents(GameObject target, string name, Type[] components) {
       // check if object exists
       var obj = target.transform.Find(name).gameObject;
@@ -46,12 +53,12 @@ namespace UdonToolkit {
         var startIndex = 1;
         if (methodName.IndexOf("!") > -1) startIndex = 2;
         var methodActual = methodName.Substring(startIndex);
-        var val = property.serializedObject.targetObject.GetType().GetField(methodActual);
+        var val = property.serializedObject.targetObject.GetType().GetField(methodActual, flags);
         type = val.FieldType.GetElementType();
         return val.GetValue(property.serializedObject.targetObject);
       }
 
-      var method = property.serializedObject.targetObject.GetType().GetMethod(methodName);
+      var method = property.serializedObject.targetObject.GetType().GetMethod(methodName, flags);
       type = method.GetReturnType().GetElementType();
       return method.Invoke(property.serializedObject.targetObject, null);
     }
@@ -84,10 +91,25 @@ namespace UdonToolkit {
       return new[] {"no triggers found"};
     }
 
-    public static string[] GetUdonEvents(UdonBehaviour source) {
-      var events = new[] {"no events found "};
+    public static string[] GetUdonEvents(UdonSharpBehaviour source) {
+      var events = new[] {"no events found"};
       if (source != null) {
-        var uPa =source.programSource as UdonSharpProgramAsset;
+        var uPa = UdonSharpEditorUtility.GetUdonSharpProgramAsset(source);
+        if (uPa != null) {
+          var methods = uPa.sourceCsScript.GetClass().GetMethods();
+          var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
+          if (mapped.Length > 0) {
+            events = mapped;
+          }
+        }
+      }
+      return events;
+    }
+    
+    public static string[] GetUdonEvents(UdonBehaviour source) {
+      var events = new[] {"no events found"};
+      if (source != null) {
+        var uPa = source.programSource as UdonSharpProgramAsset;
         if (uPa != null) {
           var methods = uPa.sourceCsScript.GetClass().GetMethods();
           var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
@@ -110,12 +132,6 @@ namespace UdonToolkit {
     }
 
     public static object[] GetPropertyAttributes<T>(SerializedProperty prop) where T : Attribute {
-      const BindingFlags flags = BindingFlags.GetField
-                                 | BindingFlags.GetProperty
-                                 | BindingFlags.IgnoreCase
-                                 | BindingFlags.Instance
-                                 | BindingFlags.NonPublic
-                                 | BindingFlags.Public;
       if (prop.serializedObject.targetObject == null) return null;
       var tType = prop.serializedObject.targetObject.GetType();
       var field = tType.GetField(prop.name, flags);
@@ -201,17 +217,28 @@ namespace UdonToolkit {
         }
       };
     
-    public static string[] GetShaderPropertiesByType(Shader source, PopupAttribute.ShaderPropType valid) {
+    public static string[] GetShaderPropertiesByType(object source, PopupAttribute.ShaderPropType valid) {
       if (source == null) {
+        return new[] {"-- no shader provided --"};
+      }
+
+      var convertedShader = source as Shader;
+      var convertedMat = source as Material;
+      var shader = convertedShader;
+      if (convertedShader == null) {
+        shader = convertedMat?.shader;
+      }
+
+      if (shader == null) {
         return new[] {"-- no shader provided --"};
       }
 
       var types = propTypeMapping[valid];
       var res = new List<string>();
-      for (int i = 0; i < ShaderUtil.GetPropertyCount(source); i++) {
-        var type = ShaderUtil.GetPropertyType(source, i);
+      for (int i = 0; i < ShaderUtil.GetPropertyCount(shader); i++) {
+        var type = ShaderUtil.GetPropertyType(shader, i);
         if (types.Contains(type)) {
-          res.Add(ShaderUtil.GetPropertyName(source, i));
+          res.Add(ShaderUtil.GetPropertyName(shader, i));
         }
       }
       

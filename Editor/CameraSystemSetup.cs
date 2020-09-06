@@ -215,8 +215,6 @@ namespace UdonToolkit {
         var mask = (LayerMask) LayerMask.GetMask(LayerMask.LayerToName(cameraControlsLayer));
         var uB = child.GetComponent<UdonBehaviour>();
         uB.publicVariables.TrySetVariableValue("collideWith", mask);
-        var cont = child.GetComponent<AreaTriggerController>();
-        cont.collideWith = mask;
         child.layer = cameraControlsLayer;
       }
 
@@ -227,8 +225,6 @@ namespace UdonToolkit {
         var mask = (LayerMask) LayerMask.GetMask(LayerMask.LayerToName(cameraControlsLayer));
         var uB = startSphere.GetComponent<UdonBehaviour>();
         uB.publicVariables.TrySetVariableValue("collideWith", mask);
-        var cont = startSphere.GetComponent<AreaTriggerController>();
-        cont.collideWith = mask;
       }
       startSphere.transform.GetChild(0).gameObject.layer = cameraControlsLayer;
 
