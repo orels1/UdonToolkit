@@ -377,23 +377,27 @@ namespace UdonToolkit{
       this.methodName = methodName;
     }
     
+    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
     public PopupAttribute(PopupSource sourceType, string methodName) {
       this.sourceType = sourceType;
       this.methodName = methodName;
     }
 
+    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
     public PopupAttribute(PopupSource sourceType, string methodName, ShaderPropType shaderPropType) {
       this.sourceType = sourceType;
       this.methodName = methodName;
       this.shaderPropType = shaderPropType;
     }
 
+    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
     public PopupAttribute(PopupSource sourceType, string methodName, bool hideLabel) {
       this.sourceType = sourceType;
       this.methodName = methodName;
       this.hideLabel = hideLabel;
     }
     
+    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
     public PopupAttribute(PopupSource sourceType, string methodName, ShaderPropType shaderPropType, bool hideLabel) {
       this.sourceType = sourceType;
       this.methodName = methodName;
