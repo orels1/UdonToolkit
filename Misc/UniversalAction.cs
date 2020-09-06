@@ -76,9 +76,7 @@ namespace UdonToolkit {
     public Collider[] colliderTargets;
     
     [ListView("Colliders List")]
-    #if !COMPILER_UDONSHARP && UNITY_EDITOR
-    [Popup(PopupAttribute.PopupSource.Method, "@goToggleOptions", true)]
-    #endif
+    [Popup("method", "@goToggleOptions", true)]
     [UTEditor]
     public string[] colliderToggleEvents;
     
