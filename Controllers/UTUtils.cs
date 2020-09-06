@@ -106,6 +106,21 @@ namespace UdonToolkit {
       return events;
     }
     
+    public static string[] GetUdonEvents(UdonBehaviour source) {
+      var events = new[] {"no events found"};
+      if (source != null) {
+        var uPa = source.programSource as UdonSharpProgramAsset;
+        if (uPa != null) {
+          var methods = uPa.sourceCsScript.GetClass().GetMethods();
+          var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
+          if (mapped.Length > 0) {
+            events = mapped;
+          }
+        }
+      }
+      return events;
+    }
+    
     public static T GetPropertyAttribute<T>(SerializedProperty prop) where T : Attribute {
       var attrs = GetPropertyAttributes<T>(prop);
       if (attrs.Length == 0) return null;
