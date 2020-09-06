@@ -71,6 +71,9 @@ namespace UdonToolkit {
     }
 
     private void StartLerping() {
+      if (lerping) {
+        active = !active;
+      }
       lerping = true;
       lerpEnd = Time.time + fogTransitionTime;
       fromColor = RenderSettings.fogColor;
@@ -166,7 +169,6 @@ namespace UdonToolkit {
       var alpha = (Time.time - (lerpEnd - fogTransitionTime)) / fogTransitionTime;
       // if currently active - lerp down;
       if (active) {
-        Debug.Log("lerping down");
         if (mode == FogMode.Linear) {
           LerpFogLinear(fromColor, defaultFogColor, fromStart, defaultFogStart, fromEnd, defaultFogEnd,
             alpha);
@@ -176,7 +178,6 @@ namespace UdonToolkit {
         }
       } // otherwise - lerp up;
       else {
-        Debug.Log("lerping up");
         if (mode == FogMode.Linear) {
           LerpFogLinear(fromColor, activeFogColor, fromStart, activeFogStart, fromEnd, activeFogEnd,
             alpha);
@@ -187,7 +188,6 @@ namespace UdonToolkit {
       }
 
       if (!(Time.time > lerpEnd)) return;
-      Debug.LogFormat("Reached lerp end, resetting {0}, current {1}", lerpEnd, Time.time);
       lerping = false;
       active = !active;
     }
