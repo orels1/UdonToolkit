@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using System.Linq;
 using UdonSharp;
 using UnityEngine;
@@ -27,3 +28,4 @@ namespace UdonToolkit.Legacy {
   }
 
 }
+#endif
