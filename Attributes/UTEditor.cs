@@ -100,7 +100,7 @@ namespace UdonToolkit {
               methods[i].Invoke(t, new object[] {});
             }
             else {
-              UdonSharpEditorUtility.GetBackingUdonBehaviour(t).SendCustomEvent(methods[i].Name);
+              UdonSharpEditorUtility.GetProxyBehaviour(t.GetComponent<UdonBehaviour>()).SendCustomEvent(methods[i].Name);
             }
           }
           EditorGUI.EndDisabledGroup();
