@@ -188,27 +188,6 @@ namespace UdonToolkit{
     public override bool BeforeGUI(ref Rect position, SerializedProperty property, GUIContent label, bool visible) {
       return visible;
     }
-
-    public override void AfterGUI(Rect position, SerializedProperty property, GUIContent label) {
-      // we handle this in the ETEditor directly
-      if (property.name == "data" && property.depth > 0) return;
-      if (methodName == "") return;
-      var newValue = property.serializedObject.targetObject.GetType().GetField(property.name)
-        .GetValue(property.serializedObject.targetObject);
-      if (oldValue != null && oldValue.Equals(newValue)) return;
-      var m = property.serializedObject.targetObject.GetType().GetMethod(methodName, UTUtils.flags);
-      if (m.GetParameters().Length > 1) {
-        m.Invoke(
-          property.serializedObject.targetObject, new object[] {
-            property.serializedObject, property
-          });
-      }
-      else {
-        m.Invoke(
-          property.serializedObject.targetObject, new object[] {property});
-      }
-      oldValue = newValue;
-    }
   }
 
   public class HideIfAttribute : PropertyModifierAttribute {

@@ -130,7 +130,24 @@ namespace UdonToolkit {
         HandleArray(prop);
       }
       else {
+        EditorGUI.BeginChangeCheck();
         EditorGUILayout.PropertyField(prop);
+        if (EditorGUI.EndChangeCheck()) {
+          var changeCallback = UTUtils.GetPropertyAttribute<OnValueChangedAttribute>(prop);
+          if (changeCallback != null) {
+            var m = prop.serializedObject.targetObject.GetType().GetMethod(changeCallback.methodName, UTUtils.flags);
+            if (m.GetParameters().Length > 1) {
+              m.Invoke(
+                serializedObject.targetObject, new object[] {
+                  serializedObject, prop
+                });
+            }
+            else {
+              m.Invoke(
+                serializedObject.targetObject, new object[] {prop});
+            }
+          }
+         }
       }
     }
 
