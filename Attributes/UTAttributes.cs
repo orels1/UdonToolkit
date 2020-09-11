@@ -503,6 +503,33 @@ namespace UdonToolkit{
     }
   }
 
+  [AttributeUsage(AttributeTargets.Class)]
+  public class OnBeforeEditorAttribute : Attribute {
+    public string methodName;
+
+    public OnBeforeEditorAttribute(string methodName) {
+      this.methodName = methodName;
+    }
+  }
+  
+  [AttributeUsage(AttributeTargets.Class)]
+  public class OnAfterEditorAttribute : Attribute {
+    public string methodName;
+
+    public OnAfterEditorAttribute(string methodName) {
+      this.methodName = methodName;
+    }
+  }
+  
+  [AttributeUsage(AttributeTargets.Class)]
+  public class OnValuesChangedAttribute : Attribute {
+    public string methodName;
+
+    public OnValuesChangedAttribute(string methodName) {
+      this.methodName = methodName;
+    }
+  }
+
   [AttributeUsage(AttributeTargets.Method)]
   public class ButtonAttribute : Attribute {
     public string text;

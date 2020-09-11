@@ -69,10 +69,31 @@ namespace UdonToolkit {
           "Right click the prefab and choose \"Unpack Prefab\"", MessageType.Warning);
       }
       
+      // Before Editor Callback
+      var beforeEditorCallback = cT.GetCustomAttribute<OnBeforeEditorAttribute>();
+      if (beforeEditorCallback != null) {
+        var m = cT.GetMethod(beforeEditorCallback.methodName);
+        m?.Invoke(t, new object[] {serializedObject});
+      }
+
       // Actual GUI
       DrawGUI(t);
+      
+      // After Editor Callback
+      var afterEditorCallback = cT.GetCustomAttribute<OnAfterEditorAttribute>();
+      if (afterEditorCallback != null) {
+        var m = cT.GetMethod(afterEditorCallback.methodName);
+        m?.Invoke(t, new object[] {serializedObject});
+      }
+
       if (EditorGUI.EndChangeCheck()) {
         Undo.RecordObject(t, undoString);
+        // Global Values Callback
+        var globalEditorCallback = cT.GetCustomAttribute<OnValuesChangedAttribute>();
+        if (globalEditorCallback != null) {
+          var m = cT.GetMethod(globalEditorCallback.methodName);
+          m?.Invoke(t, new object[] {serializedObject});
+        }
         serializedObject.ApplyModifiedProperties();
       }
 
