@@ -459,8 +459,8 @@ namespace UdonToolkit{
   }
 
   public class ListViewAttribute : ModifiablePropertyAttribute {
-    public string name;
-    public string addMethodName;
+    public readonly string name;
+    public readonly string addMethodName;
     public string addButtonText = "Add Element";
 
     public ListViewAttribute(string name) {
@@ -481,13 +481,25 @@ namespace UdonToolkit{
   
   [AttributeUsage(AttributeTargets.Field)]
   public class DisabledAttribute : Attribute {
+    public readonly string methodName;
+    /// <summary>
+    /// Makes the fields read only in the inspector
+    /// </summary>
     public DisabledAttribute() {
+    }
+
+    /// <summary>
+    /// Makes the fields read only in the inspector if the provided method or value is true
+    /// </summary>
+    /// <param name="methodName"></param>
+    public DisabledAttribute(string methodName) {
+      this.methodName = methodName;
     }
   }
 
   [AttributeUsage(AttributeTargets.Class)]
   public class HelpMessageAttribute : Attribute {
-    public string helpMessage;
+    public readonly string helpMessage;
 
     public HelpMessageAttribute(string message) {
       helpMessage = message;
@@ -496,17 +508,21 @@ namespace UdonToolkit{
   
   [AttributeUsage(AttributeTargets.Class)]
   public class CustomNameAttribute : Attribute {
-    public string name;
+    public readonly string name;
 
     public CustomNameAttribute(string value) {
       name = value;
     }
   }
-
+  
   [AttributeUsage(AttributeTargets.Class)]
   public class OnBeforeEditorAttribute : Attribute {
-    public string methodName;
+    public readonly string methodName;
 
+    /// <summary>
+    /// Calls the provided method before all the editor code. Runs every editor update
+    /// </summary>
+    /// <param name="methodName"></param>
     public OnBeforeEditorAttribute(string methodName) {
       this.methodName = methodName;
     }
@@ -514,8 +530,12 @@ namespace UdonToolkit{
   
   [AttributeUsage(AttributeTargets.Class)]
   public class OnAfterEditorAttribute : Attribute {
-    public string methodName;
-
+    public readonly string methodName;
+    
+    /// <summary>
+    /// Calls the provided method after all the editor code. Runs every editor update
+    /// </summary>
+    /// <param name="methodName"></param>
     public OnAfterEditorAttribute(string methodName) {
       this.methodName = methodName;
     }
@@ -523,8 +543,12 @@ namespace UdonToolkit{
   
   [AttributeUsage(AttributeTargets.Class)]
   public class OnValuesChangedAttribute : Attribute {
-    public string methodName;
-
+    public readonly string methodName;
+    
+    /// <summary>
+    /// Calls the provided method if any values were changed in the inspector
+    /// </summary>
+    /// <param name="methodName"></param>
     public OnValuesChangedAttribute(string methodName) {
       this.methodName = methodName;
     }
@@ -532,8 +556,8 @@ namespace UdonToolkit{
 
   [AttributeUsage(AttributeTargets.Method)]
   public class ButtonAttribute : Attribute {
-    public string text;
-    public bool activeInEditMode;
+    public readonly string text;
+    public readonly bool activeInEditMode;
 
     public ButtonAttribute(string text) {
       this.text = text;

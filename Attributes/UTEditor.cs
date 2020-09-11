@@ -149,7 +149,15 @@ namespace UdonToolkit {
         return;
       }
       var disabledAttribute = UTUtils.GetPropertyAttribute<DisabledAttribute>(prop);
-      propDisabled = disabledAttribute != null;
+      propDisabled = false;
+      if (disabledAttribute != null) {
+        if (disabledAttribute.methodName != null) {
+          propDisabled = UTUtils.GetVisibleThroughAttribute(prop, disabledAttribute.methodName, false);
+        }
+        else {
+          propDisabled = true;
+        }
+      }
       if (prop.isArray && prop.propertyType != SerializedPropertyType.String) {
         HandleArray(prop);
       }
