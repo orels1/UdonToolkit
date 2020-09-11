@@ -14,3004 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedUdonProgramAsset: {fileID: 11400000, guid: d65135a06a9659f4fa2bb2ae1b8dd16d,
     type: 2}
-  udonAssembly: ".data_start\n\n    .export filter\n    .export source\n    .export
-    muffledFilter\n    .export muffledVolume\n    .export quietZoneFilter\n    .export
-    quietZoneVolume\n    .export minDistance\n    .export maxDistance\n    .export
-    modifier\n    .export speed\n    .export occluderLayers\n\n    __refl_const_intnl_udonTypeID:
-    %SystemInt64, null\n    __refl_const_intnl_udonTypeName: %SystemString, null\n
-    \   filter: %UnityEngineAudioLowPassFilter, null\n    source: %UnityEngineAudioSource,
-    null\n    occluderLayers: %UnityEngineLayerMask, null\n    maxDistance: %SystemSingle,
-    null\n    minDistance: %SystemSingle, null\n    modifier: %SystemSingle, null\n
-    \   muffledFilter: %SystemSingle, null\n    muffledVolume: %SystemSingle, null\n
-    \   quietZoneFilter: %SystemSingle, null\n    quietZoneVolume: %SystemSingle,
-    null\n    speed: %SystemSingle, null\n    muffled: %SystemBoolean, null\n    oldMuffled:
-    %SystemBoolean, null\n    quietZoneActive: %SystemBoolean, null\n    mask: %SystemInt32,
-    null\n    qT: %UnityEngineQueryTriggerInteraction, null\n    currDistance: %SystemSingle,
-    null\n    startFilter: %SystemSingle, null\n    startVolume: %SystemSingle, null\n
-    \   targetFilter: %SystemSingle, null\n    targetVolume: %SystemSingle, null\n
-    \   __0_this_intnl_UnityEngineTransform: %UnityEngineTransform, this\n    __0_a1_Single:
-    %SystemSingle, null\n    __0_a2_Single: %SystemSingle, null\n    __0_alpha_Single:
-    %SystemSingle, null\n    __0_b1_Single: %SystemSingle, null\n    __0_b2_Single:
-    %SystemSingle, null\n    __0_clamped_Single: %SystemSingle, null\n    __0_quietAdjustedFilter_Single:
-    %SystemSingle, null\n    __0_quietAdjustedVolume_Single: %SystemSingle, null\n
-    \   __0_s_Single: %SystemSingle, null\n    __0_transAlpha_Single: %SystemSingle,
-    null\n    __0_cPos_Vector3: %UnityEngineVector3, null\n    __0_const_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __1_const_intnl_SystemBoolean: %SystemBoolean, null\n
-    \   __0_const_intnl_SystemInt32: %SystemInt32, null\n    __1_const_intnl_SystemInt32:
-    %SystemInt32, null\n    __2_const_intnl_SystemInt32: %SystemInt32, null\n    __3_const_intnl_SystemInt32:
-    %SystemInt32, null\n    __4_const_intnl_SystemInt32: %SystemInt32, null\n    __0_const_intnl_UnityEngineQueryTriggerInteraction:
-    %UnityEngineQueryTriggerInteraction, null\n    __0_const_intnl_SystemSingle: %SystemSingle,
-    null\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\n    __0_const_intnl_SystemUInt32:
-    %SystemUInt32, null\n    __0_intnl_SystemBoolean: %SystemBoolean, null\n    __1_intnl_SystemBoolean:
-    %SystemBoolean, null\n    __2_intnl_SystemBoolean: %SystemBoolean, null\n    __0_intnl_returnValSymbol_Single:
-    %SystemSingle, null\n    __0_intnl_SystemSingle: %SystemSingle, null\n    __1_intnl_SystemSingle:
-    %SystemSingle, null\n    __10_intnl_SystemSingle: %SystemSingle, null\n    __11_intnl_SystemSingle:
-    %SystemSingle, null\n    __12_intnl_SystemSingle: %SystemSingle, null\n    __13_intnl_SystemSingle:
-    %SystemSingle, null\n    __14_intnl_SystemSingle: %SystemSingle, null\n    __15_intnl_SystemSingle:
-    %SystemSingle, null\n    __16_intnl_SystemSingle: %SystemSingle, null\n    __17_intnl_SystemSingle:
-    %SystemSingle, null\n    __18_intnl_SystemSingle: %SystemSingle, null\n    __19_intnl_SystemSingle:
-    %SystemSingle, null\n    __2_intnl_SystemSingle: %SystemSingle, null\n    __20_intnl_SystemSingle:
-    %SystemSingle, null\n    __21_intnl_SystemSingle: %SystemSingle, null\n    __22_intnl_SystemSingle:
-    %SystemSingle, null\n    __23_intnl_SystemSingle: %SystemSingle, null\n    __3_intnl_SystemSingle:
-    %SystemSingle, null\n    __4_intnl_SystemSingle: %SystemSingle, null\n    __5_intnl_SystemSingle:
-    %SystemSingle, null\n    __6_intnl_SystemSingle: %SystemSingle, null\n    __7_intnl_SystemSingle:
-    %SystemSingle, null\n    __8_intnl_SystemSingle: %SystemSingle, null\n    __9_intnl_SystemSingle:
-    %SystemSingle, null\n    __0_intnl_UnityEngineTransform: %UnityEngineTransform,
-    null\n    __1_intnl_UnityEngineTransform: %UnityEngineTransform, null\n    __0_intnl_returnTarget_UInt32:
-    %SystemUInt32, null\n    __0_intnl_UnityEngineVector3: %UnityEngineVector3, null\n
-    \   __1_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __10_intnl_UnityEngineVector3:
-    %UnityEngineVector3, null\n    __2_intnl_UnityEngineVector3: %UnityEngineVector3,
-    null\n    __3_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __4_intnl_UnityEngineVector3:
-    %UnityEngineVector3, null\n    __5_intnl_UnityEngineVector3: %UnityEngineVector3,
-    null\n    __6_intnl_UnityEngineVector3: %UnityEngineVector3, null\n    __7_intnl_UnityEngineVector3:
-    %UnityEngineVector3, null\n    __8_intnl_UnityEngineVector3: %UnityEngineVector3,
-    null\n    __9_intnl_UnityEngineVector3: %UnityEngineVector3, null\n\n.data_end\n\n.code_start\n
-    \   .export _start\n        \n    _start:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, source\n        PUSH, startVolume\n        EXTERN, \"UnityEngineAudioSource.__get_volume__SystemSingle\"\n
-    \       PUSH, filter\n        PUSH, startFilter\n        EXTERN, \"UnityEngineAudioLowPassFilter.__get_cutoffFrequency__SystemSingle\"\n
-    \       PUSH, occluderLayers\n        PUSH, mask\n        EXTERN, \"UnityEngineLayerMask.__get_value__SystemInt32\"\n
-    \       PUSH, __0_const_intnl_UnityEngineQueryTriggerInteraction\n        PUSH,
-    qT\n        COPY\n        PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n
-    \       COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n
-    \   .export _update\n        \n    _update:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
-    \       PUSH, __0_intnl_SystemSingle\n        EXTERN, \"UnityEngineTime.__get_deltaTime__SystemSingle\"\n
-    \       PUSH, speed\n        PUSH, __0_intnl_SystemSingle\n        PUSH, __1_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __1_intnl_SystemSingle\n        PUSH, __0_transAlpha_Single\n        COPY\n
-    \       PUSH, source\n        PUSH, __2_intnl_SystemSingle\n        EXTERN, \"UnityEngineAudioSource.__get_volume__SystemSingle\"\n
-    \       PUSH, __2_intnl_SystemSingle\n        PUSH, targetVolume\n        PUSH,
-    __0_transAlpha_Single\n        PUSH, __3_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, source\n        PUSH, __3_intnl_SystemSingle\n        EXTERN, \"UnityEngineAudioSource.__set_volume__SystemSingle__SystemVoid\"\n
-    \       PUSH, filter\n        PUSH, __4_intnl_SystemSingle\n        EXTERN, \"UnityEngineAudioLowPassFilter.__get_cutoffFrequency__SystemSingle\"\n
-    \       PUSH, __4_intnl_SystemSingle\n        PUSH, targetFilter\n        PUSH,
-    __0_transAlpha_Single\n        PUSH, __5_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, filter\n        PUSH, __5_intnl_SystemSingle\n        EXTERN, \"UnityEngineAudioLowPassFilter.__set_cutoffFrequency__SystemSingle__SystemVoid\"\n
-    \       PUSH, source\n        PUSH, __0_intnl_UnityEngineTransform\n        EXTERN,
-    \"UnityEngineAudioSource.__get_transform__UnityEngineTransform\"\n        PUSH,
-    __0_this_intnl_UnityEngineTransform\n        PUSH, __0_intnl_UnityEngineTransform\n
-    \       EXTERN, \"UnityEngineTransform.__LookAt__UnityEngineTransform__SystemVoid\"\n
-    \       PUSH, __0_this_intnl_UnityEngineTransform\n        PUSH, __0_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineTransform.__get_position__UnityEngineVector3\"\n
-    \       PUSH, __0_intnl_UnityEngineVector3\n        PUSH, __0_cPos_Vector3\n        COPY\n
-    \       PUSH, source\n        PUSH, __1_intnl_UnityEngineTransform\n        EXTERN,
-    \"UnityEngineAudioSource.__get_transform__UnityEngineTransform\"\n        PUSH,
-    __1_intnl_UnityEngineTransform\n        PUSH, __1_intnl_UnityEngineVector3\n        EXTERN,
-    \"UnityEngineTransform.__get_position__UnityEngineVector3\"\n        PUSH, __0_cPos_Vector3\n
-    \       PUSH, __1_intnl_UnityEngineVector3\n        PUSH, currDistance\n        EXTERN,
-    \"UnityEngineVector3.__Distance__UnityEngineVector3_UnityEngineVector3__SystemSingle\"\n
-    \       PUSH, __0_const_intnl_SystemBoolean\n        PUSH, muffled\n        COPY\n
-    \       PUSH, __0_this_intnl_UnityEngineTransform\n        PUSH, __2_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineTransform.__get_forward__UnityEngineVector3\"\n        PUSH,
-    __0_cPos_Vector3\n        PUSH, __2_intnl_UnityEngineVector3\n        PUSH, currDistance\n
-    \       PUSH, mask\n        PUSH, qT\n        PUSH, __0_intnl_SystemBoolean\n
-    \       EXTERN, \"UnityEnginePhysics.__Raycast__UnityEngineVector3_UnityEngineVector3_SystemSingle_SystemInt32_UnityEngineQueryTriggerInteraction__SystemBoolean\"\n
-    \       PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000430\n        PUSH,
-    __0_this_intnl_UnityEngineTransform\n        PUSH, __3_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineTransform.__get_right__UnityEngineVector3\"\n        PUSH,
-    __3_intnl_UnityEngineVector3\n        PUSH, __0_const_intnl_SystemSingle\n        PUSH,
-    __4_intnl_UnityEngineVector3\n        EXTERN, \"UnityEngineVector3.__op_Multiply__UnityEngineVector3_SystemSingle__UnityEngineVector3\"\n
-    \       PUSH, __0_cPos_Vector3\n        PUSH, __4_intnl_UnityEngineVector3\n        PUSH,
-    __5_intnl_UnityEngineVector3\n        EXTERN, \"UnityEngineVector3.__op_Addition__UnityEngineVector3_UnityEngineVector3__UnityEngineVector3\"\n
-    \       PUSH, __0_this_intnl_UnityEngineTransform\n        PUSH, __6_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineTransform.__get_forward__UnityEngineVector3\"\n        PUSH,
-    __5_intnl_UnityEngineVector3\n        PUSH, __6_intnl_UnityEngineVector3\n        PUSH,
-    currDistance\n        PUSH, mask\n        PUSH, qT\n        PUSH, __1_intnl_SystemBoolean\n
-    \       EXTERN, \"UnityEnginePhysics.__Raycast__UnityEngineVector3_UnityEngineVector3_SystemSingle_SystemInt32_UnityEngineQueryTriggerInteraction__SystemBoolean\"\n
-    \       PUSH, __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000430\n        PUSH,
-    __0_this_intnl_UnityEngineTransform\n        PUSH, __7_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineTransform.__get_right__UnityEngineVector3\"\n        PUSH,
-    __0_const_intnl_SystemSingle\n        PUSH, __6_intnl_SystemSingle\n        EXTERN,
-    \"SystemSingle.__op_UnaryMinus__SystemSingle__SystemSingle\"\n        PUSH, __7_intnl_UnityEngineVector3\n
-    \       PUSH, __6_intnl_SystemSingle\n        PUSH, __8_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineVector3.__op_Multiply__UnityEngineVector3_SystemSingle__UnityEngineVector3\"\n
-    \       PUSH, __0_cPos_Vector3\n        PUSH, __8_intnl_UnityEngineVector3\n        PUSH,
-    __9_intnl_UnityEngineVector3\n        EXTERN, \"UnityEngineVector3.__op_Addition__UnityEngineVector3_UnityEngineVector3__UnityEngineVector3\"\n
-    \       PUSH, __0_this_intnl_UnityEngineTransform\n        PUSH, __10_intnl_UnityEngineVector3\n
-    \       EXTERN, \"UnityEngineTransform.__get_forward__UnityEngineVector3\"\n        PUSH,
-    __9_intnl_UnityEngineVector3\n        PUSH, __10_intnl_UnityEngineVector3\n        PUSH,
-    currDistance\n        PUSH, mask\n        PUSH, qT\n        PUSH, __2_intnl_SystemBoolean\n
-    \       EXTERN, \"UnityEnginePhysics.__Raycast__UnityEngineVector3_UnityEngineVector3_SystemSingle_SystemInt32_UnityEngineQueryTriggerInteraction__SystemBoolean\"\n
-    \       PUSH, __2_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000430\n        PUSH,
-    __1_const_intnl_SystemBoolean\n        PUSH, muffled\n        COPY\n        PUSH,
-    currDistance\n        PUSH, minDistance\n        PUSH, maxDistance\n        PUSH,
-    __6_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Clamp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __6_intnl_SystemSingle\n        PUSH, __0_clamped_Single\n        COPY\n
-    \       PUSH, __0_clamped_Single\n        PUSH, __0_s_Single\n        COPY\n        PUSH,
-    minDistance\n        PUSH, __0_a1_Single\n        COPY\n        PUSH, maxDistance\n
-    \       PUSH, __0_a2_Single\n        COPY\n        PUSH, __2_const_intnl_SystemInt32\n
-    \       PUSH, __0_b1_Single\n        EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n
-    \       PUSH, __3_const_intnl_SystemInt32\n        PUSH, __0_b2_Single\n        EXTERN,
-    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH, minDistance\n
-    \       PUSH, __7_intnl_SystemSingle\n        COPY # Copy-on-write symbol value
-    dirtied\n        PUSH, maxDistance\n        PUSH, __8_intnl_SystemSingle\n        COPY
-    # Copy-on-write symbol value dirtied\n        PUSH, __0_const_intnl_exitJumpLoc_UInt32\n
-    \       JUMP, 0x000007F0\n        PUSH, __0_intnl_returnValSymbol_Single\n        PUSH,
-    __0_alpha_Single\n        COPY\n        PUSH, muffled\n        PUSH, __1_intnl_SystemBoolean\n
-    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\n
-    \       PUSH, __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000005F4\n        PUSH,
-    __3_const_intnl_SystemInt32\n        PUSH, __9_intnl_SystemSingle\n        EXTERN,
-    \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH, __9_intnl_SystemSingle\n
-    \       PUSH, modifier\n        PUSH, __10_intnl_SystemSingle\n        EXTERN,
-    \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n        PUSH,
-    startVolume\n        PUSH, __10_intnl_SystemSingle\n        PUSH, __11_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, startVolume\n        PUSH, __11_intnl_SystemSingle\n        PUSH,
-    __0_alpha_Single\n        PUSH, targetVolume\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, startFilter\n        PUSH, targetFilter\n        COPY\n        PUSH,
-    __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\n        PUSH, quietZoneActive\n        JUMP_IF_FALSE,
-    0x00000620\n        PUSH, quietZoneFilter\n        PUSH, __9_intnl_SystemSingle\n
-    \       COPY\n        JUMP, 0x00000634\n        PUSH, muffledFilter\n        PUSH,
-    __9_intnl_SystemSingle\n        COPY\n        PUSH, __9_intnl_SystemSingle\n        PUSH,
-    __0_quietAdjustedFilter_Single\n        COPY\n        PUSH, quietZoneActive\n
-    \       JUMP_IF_FALSE, 0x00000674\n        PUSH, quietZoneVolume\n        PUSH,
-    __10_intnl_SystemSingle\n        COPY\n        JUMP, 0x00000688\n        PUSH,
-    muffledVolume\n        PUSH, __10_intnl_SystemSingle\n        COPY\n        PUSH,
-    __10_intnl_SystemSingle\n        PUSH, __0_quietAdjustedVolume_Single\n        COPY\n
-    \       PUSH, __3_const_intnl_SystemInt32\n        PUSH, __11_intnl_SystemSingle\n
-    \       EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH,
-    __11_intnl_SystemSingle\n        PUSH, modifier\n        PUSH, __12_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_quietAdjustedVolume_Single\n        PUSH, __12_intnl_SystemSingle\n
-    \       PUSH, __13_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_quietAdjustedVolume_Single\n        PUSH, __13_intnl_SystemSingle\n
-    \       PUSH, __0_alpha_Single\n        PUSH, targetVolume\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __3_const_intnl_SystemInt32\n        PUSH, __14_intnl_SystemSingle\n
-    \       EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH,
-    __14_intnl_SystemSingle\n        PUSH, modifier\n        PUSH, __15_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_quietAdjustedFilter_Single\n        PUSH, __15_intnl_SystemSingle\n
-    \       PUSH, __16_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __4_const_intnl_SystemInt32\n        PUSH, __17_intnl_SystemSingle\n
-    \       EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH,
-    __17_intnl_SystemSingle\n        PUSH, __16_intnl_SystemSingle\n        PUSH,
-    __18_intnl_SystemSingle\n        EXTERN, \"UnityEngineMathf.__Max__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_quietAdjustedFilter_Single\n        PUSH, __18_intnl_SystemSingle\n
-    \       PUSH, __0_alpha_Single\n        PUSH, targetFilter\n        EXTERN, \"UnityEngineMathf.__Lerp__SystemSingle_SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n    Remap:\n        \n
-    \       PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __0_s_Single\n        PUSH,
-    __0_a1_Single\n        PUSH, __19_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_b2_Single\n        PUSH, __0_b1_Single\n        PUSH, __20_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __19_intnl_SystemSingle\n        PUSH, __20_intnl_SystemSingle\n
-    \       PUSH, __21_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_a2_Single\n        PUSH, __0_a1_Single\n        PUSH, __22_intnl_SystemSingle\n
-    \       EXTERN, \"SystemSingle.__op_Subtraction__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __21_intnl_SystemSingle\n        PUSH, __22_intnl_SystemSingle\n
-    \       PUSH, __23_intnl_SystemSingle\n        EXTERN, \"SystemSingle.__op_Division__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_b1_Single\n        PUSH, __23_intnl_SystemSingle\n        PUSH,
-    __0_intnl_returnValSymbol_Single\n        EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\n        COPY\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        PUSH, __0_intnl_returnTarget_UInt32
-    #Function epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
-    \       \n    .export EnterQuietZone\n        \n    EnterQuietZone:\n        \n
-    \       PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __1_const_intnl_SystemBoolean\n
-    \       PUSH, quietZoneActive\n        COPY\n        PUSH, __0_intnl_returnTarget_UInt32
-    #Function epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
-    \       \n    .export ExitQuietZone\n        \n    ExitQuietZone:\n        \n
-    \       PUSH, __0_const_intnl_SystemUInt32\n        PUSH, __0_const_intnl_SystemBoolean\n
-    \       PUSH, quietZoneActive\n        COPY\n        PUSH, __0_intnl_returnTarget_UInt32
-    #Function epilogue\n        COPY\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n
-    \       \n.code_end\n"
+  udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 350aaf4438e84bd4d8ce33fbe9662fb9, type: 3}
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
-  debugInfo:
-    serializedDebugSpans:
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 0
-      line: 0
-      lineChar: 0
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 0
-      line: 0
-      lineChar: 0
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 0
-      endSourceChar: 6
-      line: 0
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 6
-      endSourceChar: 18
-      line: 0
-      lineChar: 6
-      spanCodeSection: "UdonSharp;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 18
-      endSourceChar: 24
-      line: 1
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 24
-      endSourceChar: 38
-      line: 1
-      lineChar: 6
-      spanCodeSection: "UnityEngine;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 38
-      endSourceChar: 44
-      line: 2
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 44
-      endSourceChar: 44
-      line: 2
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 44
-      endSourceChar: 48
-      line: 2
-      lineChar: 6
-      spanCodeSection: VRC.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 48
-      endSourceChar: 58
-      line: 2
-      lineChar: 10
-      spanCodeSection: "SDKBase;\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 58
-      endSourceChar: 64
-      line: 3
-      lineChar: 0
-      spanCodeSection: 'using '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 64
-      endSourceChar: 64
-      line: 3
-      lineChar: 6
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 64
-      endSourceChar: 68
-      line: 3
-      lineChar: 6
-      spanCodeSection: VRC.
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 68
-      endSourceChar: 77
-      line: 3
-      lineChar: 10
-      spanCodeSection: "Udon;\r\n\r\n"
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 77
-      endSourceChar: 106
-      line: 5
-      lineChar: 0
-      spanCodeSection: "namespace UdonToolkit {\r\n    "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 106
-      endSourceChar: 134
-      line: 6
-      lineChar: 4
-      spanCodeSection: 'public class SoundOcclusion '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 134
-      endSourceChar: 136
-      line: 6
-      lineChar: 32
-      spanCodeSection: ': '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 136
-      endSourceChar: 136
-      line: 6
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 136
-      endSourceChar: 164
-      line: 6
-      lineChar: 34
-      spanCodeSection: "UdonSharpBehaviour {\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 164
-      endSourceChar: 171
-      line: 7
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 171
-      endSourceChar: 171
-      line: 7
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 171
-      endSourceChar: 205
-      line: 7
-      lineChar: 13
-      spanCodeSection: "AudioLowPassFilter filter;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 205
-      endSourceChar: 212
-      line: 8
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 212
-      endSourceChar: 212
-      line: 8
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 212
-      endSourceChar: 239
-      line: 8
-      lineChar: 13
-      spanCodeSection: "AudioSource source;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 239
-      endSourceChar: 240
-      line: 9
-      lineChar: 6
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 240
-      endSourceChar: 240
-      line: 9
-      lineChar: 7
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 240
-      endSourceChar: 246
-      line: 9
-      lineChar: 7
-      spanCodeSection: Range(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 246
-      endSourceChar: 246
-      line: 9
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 246
-      endSourceChar: 251
-      line: 9
-      lineChar: 13
-      spanCodeSection: '100, '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 251
-      endSourceChar: 251
-      line: 9
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 251
-      endSourceChar: 273
-      line: 9
-      lineChar: 18
-      spanCodeSection: "22000)]\r\n      public "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 273
-      endSourceChar: 273
-      line: 10
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 273
-      endSourceChar: 309
-      line: 10
-      lineChar: 13
-      spanCodeSection: "float muffledFilter = 1883f;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 309
-      endSourceChar: 310
-      line: 11
-      lineChar: 6
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 310
-      endSourceChar: 310
-      line: 11
-      lineChar: 7
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 310
-      endSourceChar: 316
-      line: 11
-      lineChar: 7
-      spanCodeSection: Range(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 316
-      endSourceChar: 316
-      line: 11
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 316
-      endSourceChar: 319
-      line: 11
-      lineChar: 13
-      spanCodeSection: '0, '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 319
-      endSourceChar: 319
-      line: 11
-      lineChar: 16
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 319
-      endSourceChar: 337
-      line: 11
-      lineChar: 16
-      spanCodeSection: "1)]\r\n      public "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 337
-      endSourceChar: 337
-      line: 12
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 337
-      endSourceChar: 372
-      line: 12
-      lineChar: 13
-      spanCodeSection: "float muffledVolume = 0.5f;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 372
-      endSourceChar: 373
-      line: 13
-      lineChar: 6
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 373
-      endSourceChar: 373
-      line: 13
-      lineChar: 7
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 373
-      endSourceChar: 379
-      line: 13
-      lineChar: 7
-      spanCodeSection: Range(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 379
-      endSourceChar: 379
-      line: 13
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 379
-      endSourceChar: 384
-      line: 13
-      lineChar: 13
-      spanCodeSection: '100, '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 384
-      endSourceChar: 384
-      line: 13
-      lineChar: 18
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 384
-      endSourceChar: 406
-      line: 13
-      lineChar: 18
-      spanCodeSection: "22000)]\r\n      public "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 406
-      endSourceChar: 406
-      line: 14
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 406
-      endSourceChar: 444
-      line: 14
-      lineChar: 13
-      spanCodeSection: "float quietZoneFilter = 1000f;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 444
-      endSourceChar: 445
-      line: 15
-      lineChar: 6
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 445
-      endSourceChar: 445
-      line: 15
-      lineChar: 7
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 445
-      endSourceChar: 451
-      line: 15
-      lineChar: 7
-      spanCodeSection: Range(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 451
-      endSourceChar: 451
-      line: 15
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 451
-      endSourceChar: 454
-      line: 15
-      lineChar: 13
-      spanCodeSection: '0, '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 454
-      endSourceChar: 454
-      line: 15
-      lineChar: 16
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 454
-      endSourceChar: 472
-      line: 15
-      lineChar: 16
-      spanCodeSection: "1)]\r\n      public "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 472
-      endSourceChar: 472
-      line: 16
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 472
-      endSourceChar: 511
-      line: 16
-      lineChar: 13
-      spanCodeSection: "float quietZoneVolume = 0.2f;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 511
-      endSourceChar: 518
-      line: 18
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 518
-      endSourceChar: 518
-      line: 18
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 518
-      endSourceChar: 549
-      line: 18
-      lineChar: 13
-      spanCodeSection: "float minDistance = 4f;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 549
-      endSourceChar: 556
-      line: 19
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 556
-      endSourceChar: 556
-      line: 19
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 556
-      endSourceChar: 588
-      line: 19
-      lineChar: 13
-      spanCodeSection: "float maxDistance = 10f;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 588
-      endSourceChar: 589
-      line: 20
-      lineChar: 6
-      spanCodeSection: '['
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 589
-      endSourceChar: 589
-      line: 20
-      lineChar: 7
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 589
-      endSourceChar: 595
-      line: 20
-      lineChar: 7
-      spanCodeSection: Range(
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 595
-      endSourceChar: 595
-      line: 20
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 595
-      endSourceChar: 598
-      line: 20
-      lineChar: 13
-      spanCodeSection: '0, '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 598
-      endSourceChar: 598
-      line: 20
-      lineChar: 16
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 598
-      endSourceChar: 616
-      line: 20
-      lineChar: 16
-      spanCodeSection: "1)]\r\n      public "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 616
-      endSourceChar: 616
-      line: 21
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 616
-      endSourceChar: 646
-      line: 21
-      lineChar: 13
-      spanCodeSection: "float modifier = 0.5f;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 646
-      endSourceChar: 653
-      line: 22
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 653
-      endSourceChar: 653
-      line: 22
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 653
-      endSourceChar: 680
-      line: 22
-      lineChar: 13
-      spanCodeSection: "float speed = 2f;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 680
-      endSourceChar: 687
-      line: 24
-      lineChar: 6
-      spanCodeSection: 'public '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 687
-      endSourceChar: 687
-      line: 24
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 687
-      endSourceChar: 722
-      line: 24
-      lineChar: 13
-      spanCodeSection: "LayerMask occluderLayers;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 722
-      endSourceChar: 730
-      line: 26
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 730
-      endSourceChar: 730
-      line: 26
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 730
-      endSourceChar: 756
-      line: 26
-      lineChar: 14
-      spanCodeSection: "float startVolume;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 756
-      endSourceChar: 764
-      line: 27
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 764
-      endSourceChar: 764
-      line: 27
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 764
-      endSourceChar: 790
-      line: 27
-      lineChar: 14
-      spanCodeSection: "float startFilter;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 790
-      endSourceChar: 798
-      line: 28
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 798
-      endSourceChar: 798
-      line: 28
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 798
-      endSourceChar: 822
-      line: 28
-      lineChar: 14
-      spanCodeSection: "bool oldMuffled;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 822
-      endSourceChar: 830
-      line: 29
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 830
-      endSourceChar: 830
-      line: 29
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 830
-      endSourceChar: 851
-      line: 29
-      lineChar: 14
-      spanCodeSection: "bool muffled;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 851
-      endSourceChar: 859
-      line: 30
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 859
-      endSourceChar: 859
-      line: 30
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 859
-      endSourceChar: 886
-      line: 30
-      lineChar: 14
-      spanCodeSection: "float currDistance;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 886
-      endSourceChar: 894
-      line: 31
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 894
-      endSourceChar: 894
-      line: 31
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 894
-      endSourceChar: 911
-      line: 31
-      lineChar: 14
-      spanCodeSection: "int mask;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 911
-      endSourceChar: 919
-      line: 32
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 919
-      endSourceChar: 919
-      line: 32
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 919
-      endSourceChar: 954
-      line: 32
-      lineChar: 14
-      spanCodeSection: "QueryTriggerInteraction qT;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 954
-      endSourceChar: 962
-      line: 33
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 962
-      endSourceChar: 962
-      line: 33
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 962
-      endSourceChar: 989
-      line: 33
-      lineChar: 14
-      spanCodeSection: "float targetVolume;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 989
-      endSourceChar: 997
-      line: 34
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 997
-      endSourceChar: 997
-      line: 34
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 997
-      endSourceChar: 1024
-      line: 34
-      lineChar: 14
-      spanCodeSection: "float targetFilter;\r\n      "
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 1024
-      endSourceChar: 1032
-      line: 35
-      lineChar: 6
-      spanCodeSection: 'private '
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 1032
-      endSourceChar: 1032
-      line: 35
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 0
-      endInstruction: -1
-      startSourceChar: 1032
-      endSourceChar: 1063
-      line: 35
-      lineChar: 14
-      spanCodeSection: "bool quietZoneActive;\r\n\r\n      "
-    - startInstruction: 0
-      endInstruction: 7
-      startSourceChar: 1063
-      endSourceChar: 1084
-      line: 37
-      lineChar: 6
-      spanCodeSection: 'private void Start() '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 1084
-      endSourceChar: 1095
-      line: 37
-      lineChar: 27
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 1095
-      endSourceChar: 1095
-      line: 38
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 1095
-      endSourceChar: 1095
-      line: 38
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 1095
-      endSourceChar: 1109
-      line: 38
-      lineChar: 8
-      spanCodeSection: 'startVolume = '
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 1109
-      endSourceChar: 1109
-      line: 38
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 8
-      endInstruction: 7
-      startSourceChar: 1109
-      endSourceChar: 1116
-      line: 38
-      lineChar: 22
-      spanCodeSection: source.
-    - startInstruction: 8
-      endInstruction: 31
-      startSourceChar: 1116
-      endSourceChar: 1133
-      line: 38
-      lineChar: 29
-      spanCodeSection: "volume;\r\n        "
-    - startInstruction: 32
-      endInstruction: 31
-      startSourceChar: 1133
-      endSourceChar: 1133
-      line: 39
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 32
-      endInstruction: 31
-      startSourceChar: 1133
-      endSourceChar: 1133
-      line: 39
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 32
-      endInstruction: 31
-      startSourceChar: 1133
-      endSourceChar: 1147
-      line: 39
-      lineChar: 8
-      spanCodeSection: 'startFilter = '
-    - startInstruction: 32
-      endInstruction: 31
-      startSourceChar: 1147
-      endSourceChar: 1147
-      line: 39
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 32
-      endInstruction: 31
-      startSourceChar: 1147
-      endSourceChar: 1154
-      line: 39
-      lineChar: 22
-      spanCodeSection: filter.
-    - startInstruction: 32
-      endInstruction: 55
-      startSourceChar: 1154
-      endSourceChar: 1180
-      line: 39
-      lineChar: 29
-      spanCodeSection: "cutoffFrequency;\r\n        "
-    - startInstruction: 56
-      endInstruction: 55
-      startSourceChar: 1180
-      endSourceChar: 1180
-      line: 40
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 56
-      endInstruction: 55
-      startSourceChar: 1180
-      endSourceChar: 1180
-      line: 40
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 56
-      endInstruction: 55
-      startSourceChar: 1180
-      endSourceChar: 1187
-      line: 40
-      lineChar: 8
-      spanCodeSection: 'mask = '
-    - startInstruction: 56
-      endInstruction: 55
-      startSourceChar: 1187
-      endSourceChar: 1187
-      line: 40
-      lineChar: 15
-      spanCodeSection: 
-    - startInstruction: 56
-      endInstruction: 55
-      startSourceChar: 1187
-      endSourceChar: 1202
-      line: 40
-      lineChar: 15
-      spanCodeSection: occluderLayers.
-    - startInstruction: 56
-      endInstruction: 79
-      startSourceChar: 1202
-      endSourceChar: 1218
-      line: 40
-      lineChar: 30
-      spanCodeSection: "value;\r\n        "
-    - startInstruction: 80
-      endInstruction: 79
-      startSourceChar: 1218
-      endSourceChar: 1218
-      line: 41
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 80
-      endInstruction: 79
-      startSourceChar: 1218
-      endSourceChar: 1218
-      line: 41
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 80
-      endInstruction: 79
-      startSourceChar: 1218
-      endSourceChar: 1223
-      line: 41
-      lineChar: 8
-      spanCodeSection: 'qT = '
-    - startInstruction: 80
-      endInstruction: 79
-      startSourceChar: 1223
-      endSourceChar: 1223
-      line: 41
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 80
-      endInstruction: 79
-      startSourceChar: 1223
-      endSourceChar: 1247
-      line: 41
-      lineChar: 13
-      spanCodeSection: QueryTriggerInteraction.
-    - startInstruction: 80
-      endInstruction: 119
-      startSourceChar: 1247
-      endSourceChar: 1274
-      line: 41
-      lineChar: 37
-      spanCodeSection: "Collide;\r\n      }\r\n\r\n      "
-    - startInstruction: 120
-      endInstruction: 127
-      startSourceChar: 1274
-      endSourceChar: 1296
-      line: 44
-      lineChar: 6
-      spanCodeSection: 'private void Update() '
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1296
-      endSourceChar: 1307
-      line: 44
-      lineChar: 28
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1307
-      endSourceChar: 1307
-      line: 45
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1307
-      endSourceChar: 1307
-      line: 45
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1307
-      endSourceChar: 1322
-      line: 45
-      lineChar: 8
-      spanCodeSection: 'var transAlpha '
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1322
-      endSourceChar: 1324
-      line: 45
-      lineChar: 23
-      spanCodeSection: '= '
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1324
-      endSourceChar: 1324
-      line: 45
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1324
-      endSourceChar: 1332
-      line: 45
-      lineChar: 25
-      spanCodeSection: 'speed * '
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1332
-      endSourceChar: 1332
-      line: 45
-      lineChar: 33
-      spanCodeSection: 
-    - startInstruction: 128
-      endInstruction: 127
-      startSourceChar: 1332
-      endSourceChar: 1337
-      line: 45
-      lineChar: 33
-      spanCodeSection: Time.
-    - startInstruction: 128
-      endInstruction: 195
-      startSourceChar: 1337
-      endSourceChar: 1357
-      line: 45
-      lineChar: 38
-      spanCodeSection: "deltaTime;\r\n        "
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1357
-      endSourceChar: 1357
-      line: 46
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1357
-      endSourceChar: 1357
-      line: 46
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1357
-      endSourceChar: 1357
-      line: 46
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1357
-      endSourceChar: 1364
-      line: 46
-      lineChar: 8
-      spanCodeSection: source.
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1364
-      endSourceChar: 1373
-      line: 46
-      lineChar: 15
-      spanCodeSection: 'volume = '
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1373
-      endSourceChar: 1373
-      line: 46
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1373
-      endSourceChar: 1373
-      line: 46
-      lineChar: 24
-      spanCodeSection: 
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1373
-      endSourceChar: 1379
-      line: 46
-      lineChar: 24
-      spanCodeSection: Mathf.
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1379
-      endSourceChar: 1384
-      line: 46
-      lineChar: 30
-      spanCodeSection: Lerp(
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1384
-      endSourceChar: 1384
-      line: 46
-      lineChar: 35
-      spanCodeSection: 
-    - startInstruction: 196
-      endInstruction: 195
-      startSourceChar: 1384
-      endSourceChar: 1391
-      line: 46
-      lineChar: 35
-      spanCodeSection: source.
-    - startInstruction: 196
-      endInstruction: 219
-      startSourceChar: 1391
-      endSourceChar: 1399
-      line: 46
-      lineChar: 42
-      spanCodeSection: 'volume, '
-    - startInstruction: 220
-      endInstruction: 219
-      startSourceChar: 1399
-      endSourceChar: 1413
-      line: 46
-      lineChar: 50
-      spanCodeSection: 'targetVolume, '
-    - startInstruction: 220
-      endInstruction: 283
-      startSourceChar: 1413
-      endSourceChar: 1435
-      line: 46
-      lineChar: 64
-      spanCodeSection: "transAlpha);\r\n        "
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1435
-      endSourceChar: 1435
-      line: 47
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1435
-      endSourceChar: 1435
-      line: 47
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1435
-      endSourceChar: 1435
-      line: 47
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1435
-      endSourceChar: 1442
-      line: 47
-      lineChar: 8
-      spanCodeSection: filter.
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1442
-      endSourceChar: 1460
-      line: 47
-      lineChar: 15
-      spanCodeSection: 'cutoffFrequency = '
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1460
-      endSourceChar: 1460
-      line: 47
-      lineChar: 33
-      spanCodeSection: 
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1460
-      endSourceChar: 1460
-      line: 47
-      lineChar: 33
-      spanCodeSection: 
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1460
-      endSourceChar: 1466
-      line: 47
-      lineChar: 33
-      spanCodeSection: Mathf.
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1466
-      endSourceChar: 1471
-      line: 47
-      lineChar: 39
-      spanCodeSection: Lerp(
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1471
-      endSourceChar: 1471
-      line: 47
-      lineChar: 44
-      spanCodeSection: 
-    - startInstruction: 284
-      endInstruction: 283
-      startSourceChar: 1471
-      endSourceChar: 1478
-      line: 47
-      lineChar: 44
-      spanCodeSection: filter.
-    - startInstruction: 284
-      endInstruction: 307
-      startSourceChar: 1478
-      endSourceChar: 1495
-      line: 47
-      lineChar: 51
-      spanCodeSection: 'cutoffFrequency, '
-    - startInstruction: 308
-      endInstruction: 307
-      startSourceChar: 1495
-      endSourceChar: 1509
-      line: 47
-      lineChar: 68
-      spanCodeSection: 'targetFilter, '
-    - startInstruction: 308
-      endInstruction: 371
-      startSourceChar: 1509
-      endSourceChar: 1531
-      line: 47
-      lineChar: 82
-      spanCodeSection: "transAlpha);\r\n        "
-    - startInstruction: 372
-      endInstruction: 371
-      startSourceChar: 1531
-      endSourceChar: 1531
-      line: 48
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 372
-      endInstruction: 371
-      startSourceChar: 1531
-      endSourceChar: 1531
-      line: 48
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 372
-      endInstruction: 371
-      startSourceChar: 1531
-      endSourceChar: 1531
-      line: 48
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 372
-      endInstruction: 371
-      startSourceChar: 1531
-      endSourceChar: 1541
-      line: 48
-      lineChar: 8
-      spanCodeSection: transform.
-    - startInstruction: 372
-      endInstruction: 371
-      startSourceChar: 1541
-      endSourceChar: 1548
-      line: 48
-      lineChar: 18
-      spanCodeSection: LookAt(
-    - startInstruction: 372
-      endInstruction: 371
-      startSourceChar: 1548
-      endSourceChar: 1548
-      line: 48
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 372
-      endInstruction: 371
-      startSourceChar: 1548
-      endSourceChar: 1555
-      line: 48
-      lineChar: 25
-      spanCodeSection: source.
-    - startInstruction: 372
-      endInstruction: 419
-      startSourceChar: 1555
-      endSourceChar: 1576
-      line: 48
-      lineChar: 32
-      spanCodeSection: "transform);\r\n        "
-    - startInstruction: 420
-      endInstruction: 419
-      startSourceChar: 1576
-      endSourceChar: 1576
-      line: 49
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 420
-      endInstruction: 419
-      startSourceChar: 1576
-      endSourceChar: 1576
-      line: 49
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 420
-      endInstruction: 419
-      startSourceChar: 1576
-      endSourceChar: 1585
-      line: 49
-      lineChar: 8
-      spanCodeSection: 'var cPos '
-    - startInstruction: 420
-      endInstruction: 419
-      startSourceChar: 1585
-      endSourceChar: 1587
-      line: 49
-      lineChar: 17
-      spanCodeSection: '= '
-    - startInstruction: 420
-      endInstruction: 419
-      startSourceChar: 1587
-      endSourceChar: 1587
-      line: 49
-      lineChar: 19
-      spanCodeSection: 
-    - startInstruction: 420
-      endInstruction: 419
-      startSourceChar: 1587
-      endSourceChar: 1597
-      line: 49
-      lineChar: 19
-      spanCodeSection: transform.
-    - startInstruction: 420
-      endInstruction: 463
-      startSourceChar: 1597
-      endSourceChar: 1616
-      line: 49
-      lineChar: 29
-      spanCodeSection: "position;\r\n        "
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1616
-      endSourceChar: 1616
-      line: 50
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1616
-      endSourceChar: 1616
-      line: 50
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1616
-      endSourceChar: 1631
-      line: 50
-      lineChar: 8
-      spanCodeSection: 'currDistance = '
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1631
-      endSourceChar: 1631
-      line: 50
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1631
-      endSourceChar: 1631
-      line: 50
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1631
-      endSourceChar: 1639
-      line: 50
-      lineChar: 23
-      spanCodeSection: Vector3.
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1639
-      endSourceChar: 1648
-      line: 50
-      lineChar: 31
-      spanCodeSection: Distance(
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1648
-      endSourceChar: 1654
-      line: 50
-      lineChar: 40
-      spanCodeSection: 'cPos, '
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1654
-      endSourceChar: 1654
-      line: 50
-      lineChar: 46
-      spanCodeSection: 
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1654
-      endSourceChar: 1654
-      line: 50
-      lineChar: 46
-      spanCodeSection: 
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1654
-      endSourceChar: 1661
-      line: 50
-      lineChar: 46
-      spanCodeSection: source.
-    - startInstruction: 464
-      endInstruction: 463
-      startSourceChar: 1661
-      endSourceChar: 1671
-      line: 50
-      lineChar: 53
-      spanCodeSection: transform.
-    - startInstruction: 464
-      endInstruction: 543
-      startSourceChar: 1671
-      endSourceChar: 1691
-      line: 50
-      lineChar: 63
-      spanCodeSection: "position);\r\n        "
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1691
-      endSourceChar: 1691
-      line: 51
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1691
-      endSourceChar: 1691
-      line: 51
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 544
-      endInstruction: 543
-      startSourceChar: 1691
-      endSourceChar: 1701
-      line: 51
-      lineChar: 8
-      spanCodeSection: 'muffled = '
-    - startInstruction: 544
-      endInstruction: 563
-      startSourceChar: 1701
-      endSourceChar: 1717
-      line: 51
-      lineChar: 18
-      spanCodeSection: "false;\r\n        "
-    - startInstruction: 564
-      endInstruction: 563
-      startSourceChar: 1717
-      endSourceChar: 1721
-      line: 52
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 564
-      endInstruction: 563
-      startSourceChar: 1721
-      endSourceChar: 1721
-      line: 52
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 564
-      endInstruction: 563
-      startSourceChar: 1721
-      endSourceChar: 1721
-      line: 52
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 564
-      endInstruction: 563
-      startSourceChar: 1721
-      endSourceChar: 1729
-      line: 52
-      lineChar: 12
-      spanCodeSection: Physics.
-    - startInstruction: 564
-      endInstruction: 563
-      startSourceChar: 1729
-      endSourceChar: 1737
-      line: 52
-      lineChar: 20
-      spanCodeSection: Raycast(
-    - startInstruction: 564
-      endInstruction: 563
-      startSourceChar: 1737
-      endSourceChar: 1743
-      line: 52
-      lineChar: 28
-      spanCodeSection: 'cPos, '
-    - startInstruction: 564
-      endInstruction: 563
-      startSourceChar: 1743
-      endSourceChar: 1743
-      line: 52
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 564
-      endInstruction: 563
-      startSourceChar: 1743
-      endSourceChar: 1753
-      line: 52
-      lineChar: 34
-      spanCodeSection: transform.
-    - startInstruction: 564
-      endInstruction: 587
-      startSourceChar: 1753
-      endSourceChar: 1762
-      line: 52
-      lineChar: 44
-      spanCodeSection: 'forward, '
-    - startInstruction: 588
-      endInstruction: 587
-      startSourceChar: 1762
-      endSourceChar: 1776
-      line: 52
-      lineChar: 53
-      spanCodeSection: 'currDistance, '
-    - startInstruction: 588
-      endInstruction: 587
-      startSourceChar: 1776
-      endSourceChar: 1782
-      line: 52
-      lineChar: 67
-      spanCodeSection: 'mask, '
-    - startInstruction: 588
-      endInstruction: 659
-      startSourceChar: 1782
-      endSourceChar: 1787
-      line: 52
-      lineChar: 73
-      spanCodeSection: 'qT)) '
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1787
-      endSourceChar: 1800
-      line: 52
-      lineChar: 78
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1800
-      endSourceChar: 1804
-      line: 53
-      lineChar: 10
-      spanCodeSection: if (
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1804
-      endSourceChar: 1804
-      line: 53
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1804
-      endSourceChar: 1804
-      line: 53
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1804
-      endSourceChar: 1812
-      line: 53
-      lineChar: 14
-      spanCodeSection: Physics.
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1812
-      endSourceChar: 1820
-      line: 53
-      lineChar: 22
-      spanCodeSection: Raycast(
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1820
-      endSourceChar: 1820
-      line: 53
-      lineChar: 30
-      spanCodeSection: 
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1820
-      endSourceChar: 1827
-      line: 53
-      lineChar: 30
-      spanCodeSection: 'cPos + '
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1827
-      endSourceChar: 1827
-      line: 53
-      lineChar: 37
-      spanCodeSection: 
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1827
-      endSourceChar: 1827
-      line: 53
-      lineChar: 37
-      spanCodeSection: 
-    - startInstruction: 660
-      endInstruction: 659
-      startSourceChar: 1827
-      endSourceChar: 1837
-      line: 53
-      lineChar: 37
-      spanCodeSection: transform.
-    - startInstruction: 660
-      endInstruction: 683
-      startSourceChar: 1837
-      endSourceChar: 1845
-      line: 53
-      lineChar: 47
-      spanCodeSection: 'right * '
-    - startInstruction: 684
-      endInstruction: 747
-      startSourceChar: 1845
-      endSourceChar: 1851
-      line: 53
-      lineChar: 55
-      spanCodeSection: '0.1f, '
-    - startInstruction: 748
-      endInstruction: 747
-      startSourceChar: 1851
-      endSourceChar: 1851
-      line: 53
-      lineChar: 61
-      spanCodeSection: 
-    - startInstruction: 748
-      endInstruction: 747
-      startSourceChar: 1851
-      endSourceChar: 1861
-      line: 53
-      lineChar: 61
-      spanCodeSection: transform.
-    - startInstruction: 748
-      endInstruction: 771
-      startSourceChar: 1861
-      endSourceChar: 1870
-      line: 53
-      lineChar: 71
-      spanCodeSection: 'forward, '
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1870
-      endSourceChar: 1884
-      line: 53
-      lineChar: 80
-      spanCodeSection: 'currDistance, '
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1884
-      endSourceChar: 1890
-      line: 53
-      lineChar: 94
-      spanCodeSection: 'mask, '
-    - startInstruction: 772
-      endInstruction: 843
-      startSourceChar: 1890
-      endSourceChar: 1895
-      line: 53
-      lineChar: 100
-      spanCodeSection: 'qT)) '
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1895
-      endSourceChar: 1910
-      line: 53
-      lineChar: 105
-      spanCodeSection: "{\r\n            "
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1910
-      endSourceChar: 1914
-      line: 54
-      lineChar: 12
-      spanCodeSection: if (
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1914
-      endSourceChar: 1914
-      line: 54
-      lineChar: 16
-      spanCodeSection: 
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1914
-      endSourceChar: 1914
-      line: 54
-      lineChar: 16
-      spanCodeSection: 
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1914
-      endSourceChar: 1922
-      line: 54
-      lineChar: 16
-      spanCodeSection: Physics.
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1922
-      endSourceChar: 1930
-      line: 54
-      lineChar: 24
-      spanCodeSection: Raycast(
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1930
-      endSourceChar: 1930
-      line: 54
-      lineChar: 32
-      spanCodeSection: 
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1930
-      endSourceChar: 1937
-      line: 54
-      lineChar: 32
-      spanCodeSection: 'cPos + '
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1937
-      endSourceChar: 1937
-      line: 54
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1937
-      endSourceChar: 1937
-      line: 54
-      lineChar: 39
-      spanCodeSection: 
-    - startInstruction: 844
-      endInstruction: 843
-      startSourceChar: 1937
-      endSourceChar: 1947
-      line: 54
-      lineChar: 39
-      spanCodeSection: transform.
-    - startInstruction: 844
-      endInstruction: 867
-      startSourceChar: 1947
-      endSourceChar: 1955
-      line: 54
-      lineChar: 49
-      spanCodeSection: 'right * '
-    - startInstruction: 868
-      endInstruction: 867
-      startSourceChar: 1955
-      endSourceChar: 1956
-      line: 54
-      lineChar: 57
-      spanCodeSection: '-'
-    - startInstruction: 868
-      endInstruction: 955
-      startSourceChar: 1956
-      endSourceChar: 1962
-      line: 54
-      lineChar: 58
-      spanCodeSection: '0.1f, '
-    - startInstruction: 956
-      endInstruction: 955
-      startSourceChar: 1962
-      endSourceChar: 1962
-      line: 54
-      lineChar: 64
-      spanCodeSection: 
-    - startInstruction: 956
-      endInstruction: 955
-      startSourceChar: 1962
-      endSourceChar: 1972
-      line: 54
-      lineChar: 64
-      spanCodeSection: transform.
-    - startInstruction: 956
-      endInstruction: 979
-      startSourceChar: 1972
-      endSourceChar: 1981
-      line: 54
-      lineChar: 74
-      spanCodeSection: 'forward, '
-    - startInstruction: 980
-      endInstruction: 979
-      startSourceChar: 1981
-      endSourceChar: 1995
-      line: 54
-      lineChar: 83
-      spanCodeSection: 'currDistance, '
-    - startInstruction: 980
-      endInstruction: 979
-      startSourceChar: 1995
-      endSourceChar: 2001
-      line: 54
-      lineChar: 97
-      spanCodeSection: 'mask, '
-    - startInstruction: 980
-      endInstruction: 1051
-      startSourceChar: 2001
-      endSourceChar: 2006
-      line: 54
-      lineChar: 103
-      spanCodeSection: 'qT)) '
-    - startInstruction: 1052
-      endInstruction: 1051
-      startSourceChar: 2006
-      endSourceChar: 2023
-      line: 54
-      lineChar: 108
-      spanCodeSection: "{\r\n              "
-    - startInstruction: 1052
-      endInstruction: 1051
-      startSourceChar: 2023
-      endSourceChar: 2023
-      line: 55
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 1052
-      endInstruction: 1051
-      startSourceChar: 2023
-      endSourceChar: 2023
-      line: 55
-      lineChar: 14
-      spanCodeSection: 
-    - startInstruction: 1052
-      endInstruction: 1051
-      startSourceChar: 2023
-      endSourceChar: 2033
-      line: 55
-      lineChar: 14
-      spanCodeSection: 'muffled = '
-    - startInstruction: 1052
-      endInstruction: 1071
-      startSourceChar: 2033
-      endSourceChar: 2283
-      line: 55
-      lineChar: 24
-      spanCodeSection: "true;   \r\n            }\r\n          }\r\n        }\r\n\r\n
-        \       // if (muffled != oldMuffled) {\r\n        //   Debug.LogFormat(\"Muffled
-        is now {0}\", muffled);\r\n        //   SetMuffled();\r\n        //   oldMuffled
-        = muffled;\r\n        // }\r\n        \r\n        "
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2283
-      endSourceChar: 2283
-      line: 66
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2283
-      endSourceChar: 2283
-      line: 66
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2283
-      endSourceChar: 2295
-      line: 66
-      lineChar: 8
-      spanCodeSection: 'var clamped '
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2295
-      endSourceChar: 2297
-      line: 66
-      lineChar: 20
-      spanCodeSection: '= '
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2297
-      endSourceChar: 2297
-      line: 66
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2297
-      endSourceChar: 2297
-      line: 66
-      lineChar: 22
-      spanCodeSection: 
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2297
-      endSourceChar: 2303
-      line: 66
-      lineChar: 22
-      spanCodeSection: Mathf.
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2303
-      endSourceChar: 2309
-      line: 66
-      lineChar: 28
-      spanCodeSection: Clamp(
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2309
-      endSourceChar: 2323
-      line: 66
-      lineChar: 34
-      spanCodeSection: 'currDistance, '
-    - startInstruction: 1072
-      endInstruction: 1071
-      startSourceChar: 2323
-      endSourceChar: 2336
-      line: 66
-      lineChar: 48
-      spanCodeSection: 'minDistance, '
-    - startInstruction: 1072
-      endInstruction: 1131
-      startSourceChar: 2336
-      endSourceChar: 2359
-      line: 66
-      lineChar: 61
-      spanCodeSection: "maxDistance);\r\n        "
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2359
-      endSourceChar: 2359
-      line: 67
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2359
-      endSourceChar: 2359
-      line: 67
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2359
-      endSourceChar: 2369
-      line: 67
-      lineChar: 8
-      spanCodeSection: 'var alpha '
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2369
-      endSourceChar: 2371
-      line: 67
-      lineChar: 18
-      spanCodeSection: '= '
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2371
-      endSourceChar: 2371
-      line: 67
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2371
-      endSourceChar: 2377
-      line: 67
-      lineChar: 20
-      spanCodeSection: Remap(
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2377
-      endSourceChar: 2386
-      line: 67
-      lineChar: 26
-      spanCodeSection: 'clamped, '
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2386
-      endSourceChar: 2399
-      line: 67
-      lineChar: 35
-      spanCodeSection: 'minDistance, '
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2399
-      endSourceChar: 2412
-      line: 67
-      lineChar: 48
-      spanCodeSection: 'maxDistance, '
-    - startInstruction: 1132
-      endInstruction: 1131
-      startSourceChar: 2412
-      endSourceChar: 2415
-      line: 67
-      lineChar: 61
-      spanCodeSection: '0, '
-    - startInstruction: 1132
-      endInstruction: 1315
-      startSourceChar: 2415
-      endSourceChar: 2430
-      line: 67
-      lineChar: 64
-      spanCodeSection: "1);\r\n\r\n        "
-    - startInstruction: 1316
-      endInstruction: 1315
-      startSourceChar: 2430
-      endSourceChar: 2434
-      line: 69
-      lineChar: 8
-      spanCodeSection: if (
-    - startInstruction: 1316
-      endInstruction: 1315
-      startSourceChar: 2434
-      endSourceChar: 2435
-      line: 69
-      lineChar: 12
-      spanCodeSection: '!'
-    - startInstruction: 1316
-      endInstruction: 1355
-      startSourceChar: 2435
-      endSourceChar: 2444
-      line: 69
-      lineChar: 13
-      spanCodeSection: 'muffled) '
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2444
-      endSourceChar: 2457
-      line: 69
-      lineChar: 22
-      spanCodeSection: "{\r\n          "
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2457
-      endSourceChar: 2457
-      line: 70
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2457
-      endSourceChar: 2457
-      line: 70
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2457
-      endSourceChar: 2472
-      line: 70
-      lineChar: 10
-      spanCodeSection: 'targetVolume = '
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2472
-      endSourceChar: 2472
-      line: 70
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2472
-      endSourceChar: 2472
-      line: 70
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2472
-      endSourceChar: 2478
-      line: 70
-      lineChar: 25
-      spanCodeSection: Mathf.
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2478
-      endSourceChar: 2483
-      line: 70
-      lineChar: 31
-      spanCodeSection: Lerp(
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2483
-      endSourceChar: 2496
-      line: 70
-      lineChar: 36
-      spanCodeSection: 'startVolume, '
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2496
-      endSourceChar: 2496
-      line: 70
-      lineChar: 49
-      spanCodeSection: 
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2496
-      endSourceChar: 2510
-      line: 70
-      lineChar: 49
-      spanCodeSection: 'startVolume * '
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2510
-      endSourceChar: 2511
-      line: 70
-      lineChar: 63
-      spanCodeSection: (
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2511
-      endSourceChar: 2511
-      line: 70
-      lineChar: 64
-      spanCodeSection: 
-    - startInstruction: 1356
-      endInstruction: 1355
-      startSourceChar: 2511
-      endSourceChar: 2515
-      line: 70
-      lineChar: 64
-      spanCodeSection: '1 - '
-    - startInstruction: 1356
-      endInstruction: 1443
-      startSourceChar: 2515
-      endSourceChar: 2526
-      line: 70
-      lineChar: 68
-      spanCodeSection: 'modifier), '
-    - startInstruction: 1444
-      endInstruction: 1483
-      startSourceChar: 2526
-      endSourceChar: 2545
-      line: 70
-      lineChar: 79
-      spanCodeSection: "alpha);\r\n          "
-    - startInstruction: 1484
-      endInstruction: 1483
-      startSourceChar: 2545
-      endSourceChar: 2545
-      line: 71
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1484
-      endInstruction: 1483
-      startSourceChar: 2545
-      endSourceChar: 2545
-      line: 71
-      lineChar: 10
-      spanCodeSection: 
-    - startInstruction: 1484
-      endInstruction: 1483
-      startSourceChar: 2545
-      endSourceChar: 2560
-      line: 71
-      lineChar: 10
-      spanCodeSection: 'targetFilter = '
-    - startInstruction: 1484
-      endInstruction: 1503
-      startSourceChar: 2560
-      endSourceChar: 2584
-      line: 71
-      lineChar: 25
-      spanCodeSection: "startFilter;\r\n          "
-    - startInstruction: 1504
-      endInstruction: 1523
-      startSourceChar: 2584
-      endSourceChar: 2612
-      line: 72
-      lineChar: 10
-      spanCodeSection: "return;\r\n        }\r\n        "
-    - startInstruction: 1524
-      endInstruction: 1523
-      startSourceChar: 2612
-      endSourceChar: 2612
-      line: 74
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1524
-      endInstruction: 1523
-      startSourceChar: 2612
-      endSourceChar: 2612
-      line: 74
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1524
-      endInstruction: 1523
-      startSourceChar: 2612
-      endSourceChar: 2636
-      line: 74
-      lineChar: 8
-      spanCodeSection: 'var quietAdjustedFilter '
-    - startInstruction: 1524
-      endInstruction: 1523
-      startSourceChar: 2636
-      endSourceChar: 2638
-      line: 74
-      lineChar: 32
-      spanCodeSection: '= '
-    - startInstruction: 1524
-      endInstruction: 1523
-      startSourceChar: 2638
-      endSourceChar: 2638
-      line: 74
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 1524
-      endInstruction: 1539
-      startSourceChar: 2638
-      endSourceChar: 2656
-      line: 74
-      lineChar: 34
-      spanCodeSection: 'quietZoneActive ? '
-    - startInstruction: 1540
-      endInstruction: 1567
-      startSourceChar: 2656
-      endSourceChar: 2674
-      line: 74
-      lineChar: 52
-      spanCodeSection: 'quietZoneFilter : '
-    - startInstruction: 1568
-      endInstruction: 1607
-      startSourceChar: 2674
-      endSourceChar: 2698
-      line: 74
-      lineChar: 70
-      spanCodeSection: "muffledFilter;\r\n        "
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2698
-      endSourceChar: 2698
-      line: 75
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2698
-      endSourceChar: 2698
-      line: 75
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2698
-      endSourceChar: 2722
-      line: 75
-      lineChar: 8
-      spanCodeSection: 'var quietAdjustedVolume '
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2722
-      endSourceChar: 2724
-      line: 75
-      lineChar: 32
-      spanCodeSection: '= '
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2724
-      endSourceChar: 2724
-      line: 75
-      lineChar: 34
-      spanCodeSection: 
-    - startInstruction: 1608
-      endInstruction: 1623
-      startSourceChar: 2724
-      endSourceChar: 2742
-      line: 75
-      lineChar: 34
-      spanCodeSection: 'quietZoneActive ? '
-    - startInstruction: 1624
-      endInstruction: 1651
-      startSourceChar: 2742
-      endSourceChar: 2760
-      line: 75
-      lineChar: 52
-      spanCodeSection: 'quietZoneVolume : '
-    - startInstruction: 1652
-      endInstruction: 1691
-      startSourceChar: 2760
-      endSourceChar: 2784
-      line: 75
-      lineChar: 70
-      spanCodeSection: "muffledVolume;\r\n        "
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2784
-      endSourceChar: 2784
-      line: 76
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2784
-      endSourceChar: 2784
-      line: 76
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2784
-      endSourceChar: 2799
-      line: 76
-      lineChar: 8
-      spanCodeSection: 'targetVolume = '
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2799
-      endSourceChar: 2799
-      line: 76
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2799
-      endSourceChar: 2799
-      line: 76
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2799
-      endSourceChar: 2805
-      line: 76
-      lineChar: 23
-      spanCodeSection: Mathf.
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2805
-      endSourceChar: 2810
-      line: 76
-      lineChar: 29
-      spanCodeSection: Lerp(
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2810
-      endSourceChar: 2831
-      line: 76
-      lineChar: 34
-      spanCodeSection: 'quietAdjustedVolume, '
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2831
-      endSourceChar: 2831
-      line: 76
-      lineChar: 55
-      spanCodeSection: 
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2831
-      endSourceChar: 2853
-      line: 76
-      lineChar: 55
-      spanCodeSection: 'quietAdjustedVolume * '
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2853
-      endSourceChar: 2854
-      line: 76
-      lineChar: 77
-      spanCodeSection: (
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2854
-      endSourceChar: 2854
-      line: 76
-      lineChar: 78
-      spanCodeSection: 
-    - startInstruction: 1692
-      endInstruction: 1691
-      startSourceChar: 2854
-      endSourceChar: 2858
-      line: 76
-      lineChar: 78
-      spanCodeSection: '1 - '
-    - startInstruction: 1692
-      endInstruction: 1779
-      startSourceChar: 2858
-      endSourceChar: 2869
-      line: 76
-      lineChar: 82
-      spanCodeSection: 'modifier), '
-    - startInstruction: 1780
-      endInstruction: 1819
-      startSourceChar: 2869
-      endSourceChar: 2886
-      line: 76
-      lineChar: 93
-      spanCodeSection: "alpha);\r\n        "
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2886
-      endSourceChar: 2886
-      line: 77
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2886
-      endSourceChar: 2886
-      line: 77
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2886
-      endSourceChar: 2901
-      line: 77
-      lineChar: 8
-      spanCodeSection: 'targetFilter = '
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2901
-      endSourceChar: 2901
-      line: 77
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2901
-      endSourceChar: 2901
-      line: 77
-      lineChar: 23
-      spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2901
-      endSourceChar: 2907
-      line: 77
-      lineChar: 23
-      spanCodeSection: Mathf.
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2907
-      endSourceChar: 2912
-      line: 77
-      lineChar: 29
-      spanCodeSection: Lerp(
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2912
-      endSourceChar: 2933
-      line: 77
-      lineChar: 34
-      spanCodeSection: 'quietAdjustedFilter, '
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2933
-      endSourceChar: 2933
-      line: 77
-      lineChar: 55
-      spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2933
-      endSourceChar: 2933
-      line: 77
-      lineChar: 55
-      spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2933
-      endSourceChar: 2939
-      line: 77
-      lineChar: 55
-      spanCodeSection: Mathf.
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2939
-      endSourceChar: 2943
-      line: 77
-      lineChar: 61
-      spanCodeSection: Max(
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2943
-      endSourceChar: 2949
-      line: 77
-      lineChar: 65
-      spanCodeSection: '1000, '
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2949
-      endSourceChar: 2949
-      line: 77
-      lineChar: 71
-      spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2949
-      endSourceChar: 2971
-      line: 77
-      lineChar: 71
-      spanCodeSection: 'quietAdjustedFilter * '
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2971
-      endSourceChar: 2972
-      line: 77
-      lineChar: 93
-      spanCodeSection: (
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2972
-      endSourceChar: 2972
-      line: 77
-      lineChar: 94
-      spanCodeSection: 
-    - startInstruction: 1820
-      endInstruction: 1819
-      startSourceChar: 2972
-      endSourceChar: 2976
-      line: 77
-      lineChar: 94
-      spanCodeSection: '1 - '
-    - startInstruction: 1820
-      endInstruction: 1963
-      startSourceChar: 2976
-      endSourceChar: 2988
-      line: 77
-      lineChar: 98
-      spanCodeSection: 'modifier)), '
-    - startInstruction: 1964
-      endInstruction: 2023
-      startSourceChar: 2988
-      endSourceChar: 3020
-      line: 77
-      lineChar: 110
-      spanCodeSection: "alpha);\r\n      }\r\n      \r\n      "
-    - startInstruction: 2024
-      endInstruction: 2023
-      startSourceChar: 3020
-      endSourceChar: 3040
-      line: 80
-      lineChar: 6
-      spanCodeSection: private float Remap(
-    - startInstruction: 2024
-      endInstruction: 2023
-      startSourceChar: 3040
-      endSourceChar: 3049
-      line: 80
-      lineChar: 26
-      spanCodeSection: 'float s, '
-    - startInstruction: 2024
-      endInstruction: 2023
-      startSourceChar: 3049
-      endSourceChar: 3059
-      line: 80
-      lineChar: 35
-      spanCodeSection: 'float a1, '
-    - startInstruction: 2024
-      endInstruction: 2023
-      startSourceChar: 3059
-      endSourceChar: 3069
-      line: 80
-      lineChar: 45
-      spanCodeSection: 'float a2, '
-    - startInstruction: 2024
-      endInstruction: 2023
-      startSourceChar: 3069
-      endSourceChar: 3079
-      line: 80
-      lineChar: 55
-      spanCodeSection: 'float b1, '
-    - startInstruction: 2024
-      endInstruction: 2031
-      startSourceChar: 3079
-      endSourceChar: 3089
-      line: 80
-      lineChar: 65
-      spanCodeSection: 'float b2) '
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3089
-      endSourceChar: 3100
-      line: 80
-      lineChar: 75
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3100
-      endSourceChar: 3107
-      line: 81
-      lineChar: 8
-      spanCodeSection: 'return '
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3107
-      endSourceChar: 3107
-      line: 81
-      lineChar: 15
-      spanCodeSection: 
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3107
-      endSourceChar: 3112
-      line: 81
-      lineChar: 15
-      spanCodeSection: 'b1 + '
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3112
-      endSourceChar: 3112
-      line: 81
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3112
-      endSourceChar: 3112
-      line: 81
-      lineChar: 20
-      spanCodeSection: 
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3112
-      endSourceChar: 3113
-      line: 81
-      lineChar: 20
-      spanCodeSection: (
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3113
-      endSourceChar: 3113
-      line: 81
-      lineChar: 21
-      spanCodeSection: 
-    - startInstruction: 2032
-      endInstruction: 2031
-      startSourceChar: 3113
-      endSourceChar: 3115
-      line: 81
-      lineChar: 21
-      spanCodeSection: s-
-    - startInstruction: 2032
-      endInstruction: 2063
-      startSourceChar: 3115
-      endSourceChar: 3119
-      line: 81
-      lineChar: 23
-      spanCodeSection: a1)*
-    - startInstruction: 2064
-      endInstruction: 2063
-      startSourceChar: 3119
-      endSourceChar: 3120
-      line: 81
-      lineChar: 27
-      spanCodeSection: (
-    - startInstruction: 2064
-      endInstruction: 2063
-      startSourceChar: 3120
-      endSourceChar: 3120
-      line: 81
-      lineChar: 28
-      spanCodeSection: 
-    - startInstruction: 2064
-      endInstruction: 2063
-      startSourceChar: 3120
-      endSourceChar: 3123
-      line: 81
-      lineChar: 28
-      spanCodeSection: b2-
-    - startInstruction: 2064
-      endInstruction: 2127
-      startSourceChar: 3123
-      endSourceChar: 3127
-      line: 81
-      lineChar: 31
-      spanCodeSection: b1)/
-    - startInstruction: 2128
-      endInstruction: 2127
-      startSourceChar: 3127
-      endSourceChar: 3128
-      line: 81
-      lineChar: 35
-      spanCodeSection: (
-    - startInstruction: 2128
-      endInstruction: 2127
-      startSourceChar: 3128
-      endSourceChar: 3128
-      line: 81
-      lineChar: 36
-      spanCodeSection: 
-    - startInstruction: 2128
-      endInstruction: 2127
-      startSourceChar: 3128
-      endSourceChar: 3131
-      line: 81
-      lineChar: 36
-      spanCodeSection: a2-
-    - startInstruction: 2128
-      endInstruction: 2263
-      startSourceChar: 3131
-      endSourceChar: 3347
-      line: 81
-      lineChar: 39
-      spanCodeSection: "a1);\r\n      }\r\n\r\n      // private void SetMuffled()
-        {\r\n      //   source.volume = muffled ? muffledVolume : startVolume;\r\n
-        \     //   filter.cutoffFrequency = muffled ? muffledFilter : startFilter;\r\n
-        \     // }\r\n      "
-    - startInstruction: 2264
-      endInstruction: 2271
-      startSourceChar: 3347
-      endSourceChar: 3376
-      line: 88
-      lineChar: 6
-      spanCodeSection: 'public void EnterQuietZone() '
-    - startInstruction: 2272
-      endInstruction: 2271
-      startSourceChar: 3376
-      endSourceChar: 3387
-      line: 88
-      lineChar: 35
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 2272
-      endInstruction: 2271
-      startSourceChar: 3387
-      endSourceChar: 3387
-      line: 89
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2272
-      endInstruction: 2271
-      startSourceChar: 3387
-      endSourceChar: 3387
-      line: 89
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2272
-      endInstruction: 2271
-      startSourceChar: 3387
-      endSourceChar: 3405
-      line: 89
-      lineChar: 8
-      spanCodeSection: 'quietZoneActive = '
-    - startInstruction: 2272
-      endInstruction: 2311
-      startSourceChar: 3405
-      endSourceChar: 3435
-      line: 89
-      lineChar: 26
-      spanCodeSection: "true;\r\n      }\r\n      \r\n      "
-    - startInstruction: 2312
-      endInstruction: 2319
-      startSourceChar: 3435
-      endSourceChar: 3463
-      line: 92
-      lineChar: 6
-      spanCodeSection: 'public void ExitQuietZone() '
-    - startInstruction: 2320
-      endInstruction: 2319
-      startSourceChar: 3463
-      endSourceChar: 3474
-      line: 92
-      lineChar: 34
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 2320
-      endInstruction: 2319
-      startSourceChar: 3474
-      endSourceChar: 3474
-      line: 93
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2320
-      endInstruction: 2319
-      startSourceChar: 3474
-      endSourceChar: 3474
-      line: 93
-      lineChar: 8
-      spanCodeSection: 
-    - startInstruction: 2320
-      endInstruction: 2319
-      startSourceChar: 3474
-      endSourceChar: 3492
-      line: 93
-      lineChar: 8
-      spanCodeSection: 'quietZoneActive = '
-    - startInstruction: 2320
-      endInstruction: 2320
-      startSourceChar: 3492
-      endSourceChar: 3492
-      line: 93
-      lineChar: 26
-      spanCodeSection: 
   hasInteractEvent: 0
   serializationData:
     SerializedFormat: 2
@@ -3024,7 +31,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: fieldDefinitions
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.Compiler.FieldDefinition,
         UdonSharp.Editor]], mscorlib
     - Name: comparer
       Entry: 7
@@ -3035,7 +42,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 21
+      Data: 32
     - Name: 
       Entry: 7
       Data: 
@@ -3044,10 +51,10 @@ MonoBehaviour:
       Data: filter
     - Name: $v
       Entry: 7
-      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 2|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 3|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 4|System.RuntimeType, mscorlib
@@ -3104,19 +111,19 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: source
+      Data: reverb
     - Name: $v
       Entry: 7
-      Data: 6|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 6|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 7|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 7|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 8|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UnityEngine.AudioSource, UnityEngine.AudioModule
+      Data: UnityEngine.AudioReverbFilter, UnityEngine.AudioModule
     - Name: 
       Entry: 8
       Data: 
@@ -3128,13 +135,13 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: UnityEngineAudioSource
+      Data: UnityEngineAudioReverbFilter
     - Name: symbolOriginalName
       Entry: 1
-      Data: source
+      Data: reverb
     - Name: symbolUniqueName
       Entry: 1
-      Data: source
+      Data: reverb
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3167,16 +174,142 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: muffledFilter
+      Data: source
     - Name: $v
       Entry: 7
-      Data: 10|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 10|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 11|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 11|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
       Data: 12|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.GameObject, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineGameObject
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: source
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: source
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: sourceA
+    - Name: $v
+      Entry: 7
+      Data: 14|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 15|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 16|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.AudioSource, UnityEngine.AudioModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineAudioSource
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: sourceA
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: sourceA
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 17|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: muffledFilter
+    - Name: $v
+      Entry: 7
+      Data: 18|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 19|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 20|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.Single, mscorlib
@@ -3198,144 +331,6 @@ MonoBehaviour:
     - Name: symbolUniqueName
       Entry: 1
       Data: muffledFilter
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 14|UnityEngine.RangeAttribute, UnityEngine.CoreModule
-    - Name: min
-      Entry: 4
-      Data: 100
-    - Name: max
-      Entry: 4
-      Data: 22000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: muffledVolume
-    - Name: $v
-      Entry: 7
-      Data: 15|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 16|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 9
-      Data: 12
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemSingle
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: muffledVolume
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: muffledVolume
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 17|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 18|UnityEngine.RangeAttribute, UnityEngine.CoreModule
-    - Name: min
-      Entry: 4
-      Data: 0
-    - Name: max
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: quietZoneFilter
-    - Name: $v
-      Entry: 7
-      Data: 19|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 20|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 9
-      Data: 12
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemSingle
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: quietZoneFilter
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: quietZoneFilter
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3380,16 +375,16 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: quietZoneVolume
+      Data: muffledVolume
     - Name: $v
       Entry: 7
-      Data: 23|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 23|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 24|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 24|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -3401,10 +396,10 @@ MonoBehaviour:
       Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: quietZoneVolume
+      Data: muffledVolume
     - Name: symbolUniqueName
       Entry: 1
-      Data: quietZoneVolume
+      Data: muffledVolume
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3449,16 +444,16 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: minDistance
+      Data: quietZoneFilter
     - Name: $v
       Entry: 7
-      Data: 27|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 27|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 28|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 28|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -3470,10 +465,10 @@ MonoBehaviour:
       Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: minDistance
+      Data: quietZoneFilter
     - Name: symbolUniqueName
       Entry: 1
-      Data: minDistance
+      Data: quietZoneFilter
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3485,7 +480,19 @@ MonoBehaviour:
       Data: 29|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 30|UnityEngine.RangeAttribute, UnityEngine.CoreModule
+    - Name: min
+      Entry: 4
+      Data: 100
+    - Name: max
+      Entry: 4
+      Data: 22000
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -3506,16 +513,16 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: maxDistance
+      Data: quietZoneVolume
     - Name: $v
       Entry: 7
-      Data: 30|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 31|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 31|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 32|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -3527,10 +534,10 @@ MonoBehaviour:
       Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: maxDistance
+      Data: quietZoneVolume
     - Name: symbolUniqueName
       Entry: 1
-      Data: maxDistance
+      Data: quietZoneVolume
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3539,70 +546,13 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 32|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: modifier
-    - Name: $v
-      Entry: 7
-      Data: 33|UdonSharp.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 34|UdonSharp.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 9
-      Data: 12
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemSingle
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: modifier
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: modifier
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 35|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 33|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 36|UnityEngine.RangeAttribute, UnityEngine.CoreModule
+      Data: 34|UnityEngine.RangeAttribute, UnityEngine.CoreModule
     - Name: min
       Entry: 4
       Data: 0
@@ -3632,16 +582,16 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: speed
+      Data: reverbDryTarget
     - Name: $v
       Entry: 7
-      Data: 37|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 35|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 38|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 36|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -3653,10 +603,10 @@ MonoBehaviour:
       Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: speed
+      Data: reverbDryTarget
     - Name: symbolUniqueName
       Entry: 1
-      Data: speed
+      Data: reverbDryTarget
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3665,7 +615,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 39|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 37|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -3689,22 +639,16 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: occluderLayers
+      Data: reverbRoomTarget
     - Name: $v
       Entry: 7
-      Data: 40|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 38|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 41|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 39|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
-      Entry: 7
-      Data: 42|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: UnityEngine.LayerMask, UnityEngine.CoreModule
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 9
+      Data: 20
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -3713,13 +657,70 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: UnityEngineLayerMask
+      Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: occluderLayers
+      Data: reverbRoomTarget
     - Name: symbolUniqueName
       Entry: 1
-      Data: occluderLayers
+      Data: reverbRoomTarget
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 40|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: minDistance
+    - Name: $v
+      Entry: 7
+      Data: 41|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 42|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: minDistance
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: minDistance
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3752,19 +753,19 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: startVolume
+      Data: maxDistance
     - Name: $v
       Entry: 7
-      Data: 44|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 44|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 45|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 45|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: syncMode
       Entry: 3
       Data: 0
@@ -3773,10 +774,10 @@ MonoBehaviour:
       Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: startVolume
+      Data: maxDistance
     - Name: symbolUniqueName
       Entry: 1
-      Data: startVolume
+      Data: maxDistance
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3809,19 +810,19 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: startFilter
+      Data: modifier
     - Name: $v
       Entry: 7
-      Data: 47|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 47|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 48|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 48|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: syncMode
       Entry: 3
       Data: 0
@@ -3830,10 +831,10 @@ MonoBehaviour:
       Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: startFilter
+      Data: modifier
     - Name: symbolUniqueName
       Entry: 1
-      Data: startFilter
+      Data: modifier
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3845,7 +846,19 @@ MonoBehaviour:
       Data: 49|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 50|UnityEngine.RangeAttribute, UnityEngine.CoreModule
+    - Name: min
+      Entry: 4
       Data: 0
+    - Name: max
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -3866,37 +879,31 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: oldMuffled
+      Data: speed
     - Name: $v
       Entry: 7
-      Data: 50|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 51|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 51|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 52|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
-      Entry: 7
-      Data: 52|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Boolean, mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 9
+      Data: 20
     - Name: declarationType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: syncMode
       Entry: 3
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: SystemBoolean
+      Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: oldMuffled
+      Data: speed
     - Name: symbolUniqueName
       Entry: 1
-      Data: oldMuffled
+      Data: speed
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -3929,16 +936,433 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
+      Data: occluderLayers
+    - Name: $v
+      Entry: 7
+      Data: 54|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 55|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 56|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.LayerMask, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineLayerMask
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: occluderLayers
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: occluderLayers
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 57|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: currProxy
+    - Name: $v
+      Entry: 7
+      Data: 58|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 59|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 60|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineVector3
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: currProxy
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: currProxy
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 61|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: inProxyVolume
+    - Name: $v
+      Entry: 7
+      Data: 62|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 63|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 64|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Boolean, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: inProxyVolume
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: inProxyVolume
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 65|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: proxyModifier
+    - Name: $v
+      Entry: 7
+      Data: 66|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 67|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: proxyModifier
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: proxyModifier
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 68|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: startVolume
+    - Name: $v
+      Entry: 7
+      Data: 69|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 70|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: startVolume
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: startVolume
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 71|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: startFilter
+    - Name: $v
+      Entry: 7
+      Data: 72|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 73|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: startFilter
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: startFilter
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 74|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: oldMuffled
+    - Name: $v
+      Entry: 7
+      Data: 75|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 76|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 64
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: oldMuffled
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: oldMuffled
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 77|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
       Data: muffled
     - Name: $v
       Entry: 7
-      Data: 54|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 78|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 55|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 79|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 52
+      Data: 64
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -3962,7 +1386,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 56|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 80|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -3989,13 +1413,13 @@ MonoBehaviour:
       Data: currDistance
     - Name: $v
       Entry: 7
-      Data: 57|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 81|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 58|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 82|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4019,7 +1443,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 59|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 83|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -4046,13 +1470,13 @@ MonoBehaviour:
       Data: mask
     - Name: $v
       Entry: 7
-      Data: 60|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 84|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 61|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 85|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 62|System.RuntimeType, mscorlib
+      Data: 86|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.Int32, mscorlib
@@ -4082,7 +1506,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 63|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 87|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -4109,13 +1533,13 @@ MonoBehaviour:
       Data: qT
     - Name: $v
       Entry: 7
-      Data: 64|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 88|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 65|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 89|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 66|System.RuntimeType, mscorlib
+      Data: 90|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.QueryTriggerInteraction, UnityEngine.PhysicsModule
@@ -4145,7 +1569,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 67|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 91|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -4172,13 +1596,13 @@ MonoBehaviour:
       Data: targetVolume
     - Name: $v
       Entry: 7
-      Data: 68|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 92|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 69|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 93|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4202,7 +1626,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 70|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 94|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -4229,13 +1653,13 @@ MonoBehaviour:
       Data: targetFilter
     - Name: $v
       Entry: 7
-      Data: 71|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 95|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 72|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 96|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 12
+      Data: 20
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4259,7 +1683,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 73|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 97|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -4286,13 +1710,13 @@ MonoBehaviour:
       Data: quietZoneActive
     - Name: $v
       Entry: 7
-      Data: 74|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 98|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 75|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 99|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 52
+      Data: 64
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -4316,7 +1740,235 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 76|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 100|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: startReverbDry
+    - Name: $v
+      Entry: 7
+      Data: 101|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 102|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: startReverbDry
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: startReverbDry
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 103|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: startReverbRoom
+    - Name: $v
+      Entry: 7
+      Data: 104|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 105|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: startReverbRoom
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: startReverbRoom
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 106|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: adjustedReverbDryTarget
+    - Name: $v
+      Entry: 7
+      Data: 107|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 108|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: adjustedReverbDryTarget
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: adjustedReverbDryTarget
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 109|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: adjustedReverbRoomTarget
+    - Name: $v
+      Entry: 7
+      Data: 110|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 111|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: adjustedReverbRoomTarget
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: adjustedReverbRoomTarget
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 112|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

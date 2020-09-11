@@ -6,7 +6,9 @@ using VRC.Udon;
 namespace UdonToolkit {
     public class SoundOcclusion : UdonSharpBehaviour {
       public AudioLowPassFilter filter;
-      public AudioSource source;
+      public AudioReverbFilter reverb;
+      public GameObject source;
+      public AudioSource sourceA;
       [Range(100, 22000)]
       public float muffledFilter = 1883f;
       [Range(0, 1)]
@@ -16,6 +18,9 @@ namespace UdonToolkit {
       [Range(0, 1)]
       public float quietZoneVolume = 0.2f;
 
+      public float reverbDryTarget;
+      public float reverbRoomTarget;
+
       public float minDistance = 4f;
       public float maxDistance = 10f;
       [Range(0, 1)]
@@ -23,6 +28,9 @@ namespace UdonToolkit {
       public float speed = 2f;
 
       public LayerMask occluderLayers;
+      public Vector3 currProxy;
+      public bool inProxyVolume;
+      public float proxyModifier = 1f;
 
       private float startVolume;
       private float startFilter;
@@ -34,25 +42,43 @@ namespace UdonToolkit {
       private float targetVolume;
       private float targetFilter;
       private bool quietZoneActive;
+      private float startReverbDry;
+      private float startReverbRoom;
+      private float adjustedReverbDryTarget;
+      private float adjustedReverbRoomTarget;
 
       private void Start() {
-        startVolume = source.volume;
+        reverbDryTarget = reverb.dryLevel;
+        reverbRoomTarget = reverb.room;
+        startReverbDry = reverbDryTarget;
+        startReverbRoom = reverbRoomTarget;
+        startVolume = sourceA.volume;
         startFilter = filter.cutoffFrequency;
         mask = occluderLayers.value;
         qT = QueryTriggerInteraction.Collide;
       }
 
+      public void ReverbReset() {
+        reverb.dryLevel = startReverbDry;
+        reverb.room = startReverbRoom;
+        reverbDryTarget = startReverbDry;
+        reverbRoomTarget = startReverbRoom;
+      }
+
       private void Update() {
         var transAlpha = speed * Time.deltaTime;
-        source.volume = Mathf.Lerp(source.volume, targetVolume, transAlpha);
+        sourceA.volume = Mathf.Lerp(sourceA.volume, targetVolume, transAlpha);
         filter.cutoffFrequency = Mathf.Lerp(filter.cutoffFrequency, targetFilter, transAlpha);
-        transform.LookAt(source.transform);
+        reverb.room = Mathf.Lerp(reverb.room, reverbRoomTarget, transAlpha);
+        reverb.dryLevel = Mathf.Lerp(reverb.dryLevel, reverbDryTarget, transAlpha);
+        // transform.LookAt(source.transform);
         var cPos = transform.position;
+        var dir = source.transform.position - cPos;
         currDistance = Vector3.Distance(cPos, source.transform.position);
         muffled = false;
-        if (Physics.Raycast(cPos, transform.forward, currDistance, mask, qT)) {
-          if (Physics.Raycast(cPos + transform.right * 0.1f, transform.forward, currDistance, mask, qT)) {
-            if (Physics.Raycast(cPos + transform.right * -0.1f, transform.forward, currDistance, mask, qT)) {
+        if (Physics.Raycast(cPos, dir, currDistance, mask, qT)) {
+          if (Physics.Raycast(cPos + Vector3.right * 0.1f, dir, currDistance, mask, qT)) {
+            if (Physics.Raycast(cPos + Vector3.right * -0.1f, dir, currDistance, mask, qT)) {
               muffled = true;   
             }
           }
@@ -63,7 +89,7 @@ namespace UdonToolkit {
         //   SetMuffled();
         //   oldMuffled = muffled;
         // }
-        
+
         var clamped = Mathf.Clamp(currDistance, minDistance, maxDistance);
         var alpha = Remap(clamped, minDistance, maxDistance, 0, 1);
 
@@ -74,7 +100,9 @@ namespace UdonToolkit {
         }
         var quietAdjustedFilter = quietZoneActive ? quietZoneFilter : muffledFilter;
         var quietAdjustedVolume = quietZoneActive ? quietZoneVolume : muffledVolume;
-        targetVolume = Mathf.Lerp(quietAdjustedVolume, quietAdjustedVolume * (1 - modifier), alpha);
+        quietAdjustedFilter *= proxyModifier;
+        quietAdjustedVolume *= proxyModifier;
+        targetVolume = Mathf.Lerp(quietAdjustedVolume, quietAdjustedVolume * (1 - modifier) , alpha);
         targetFilter = Mathf.Lerp(quietAdjustedFilter, Mathf.Max(1000, quietAdjustedFilter * (1 - modifier)), alpha);
       }
       
