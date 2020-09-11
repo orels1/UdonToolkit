@@ -511,27 +511,11 @@ namespace UdonToolkit {
         }
         
         if (EditorGUI.EndChangeCheck()) {
-          if (changedCallback != null) {
-            var m = cT.GetMethod(changedCallback);
-            if (m != null) {
-              m.Invoke(t,
-                m.GetParameters().Length > 2
-                  ? new object[] {prop.GetArrayElementAtIndex(i), otherProp.GetArrayElementAtIndex(i), i}
-                  : new object[] {prop, otherProp});
-            }
-          }
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(i), otherProp.GetArrayElementAtIndex(i), i});
         }
 
         if (RenderRemoveControls(i, new[] {prop, otherProp})) {
-          if (changedCallback != null) {
-            var m = cT.GetMethod(changedCallback);
-            if (m != null) {
-              m.Invoke(t,
-                m.GetParameters().Length > 2
-                  ? new object[] {null, null, i}
-                  : new object[] {prop, otherProp});
-            }
-          }
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {null, null, i});
           break;
         }
 
