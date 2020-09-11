@@ -292,15 +292,14 @@ namespace UdonToolkit{
           startOffset = 10;
         }
         position = new Rect(position) {
-          x = startOffset + size * index + 3f * (index + 1),
+          x = startOffset + size * index + 3f,
           xMax = size * (index + 1)
         };
         if (index > 0) {
-          var shift = height + 2;
-          position.yMin -= shift * index;
+          var shift = height + 2 * index;
+          position.yMin -= shift;
           position.yMax = position.yMin + height;
         }
-        // Debug.LogFormat("Field {0} index {1} yMin {2} xMin {3} xMax {4} height {5}", label.text, index, position.yMin, position.xMin, position.xMax, position.height);
       }
       
       return visible;
@@ -315,7 +314,7 @@ namespace UdonToolkit{
 
   public class PopupAttribute : ModifiablePropertyAttribute {
     public string methodName;
-    private int selectedIndex = 0;
+    private int selectedIndex;
     private GUIContent[] options;
     private bool hideLabel;
     public PopupSource sourceType;
