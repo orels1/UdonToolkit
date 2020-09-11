@@ -93,13 +93,8 @@ namespace UdonToolkit{
         rect.width -= fullWidth - lRect.width;
       }
       rect.height = mHeight;
-      var fields = property.serializedObject.targetObject.GetType().GetFields()
-        .Where(f => f.GetAttribute<SectionHeaderAttribute>() != null);
-      var fieldsForSection = fields.Where(f => f.GetAttribute<SectionHeaderAttribute>().text == text);
-      if (fieldsForSection.ToList().FindIndex(f => f.Name == property.name) == 0) {
-        UTStyles.RenderSectionHeader(ref rect, text);
-        position.yMin += mHeight + 3;
-      }
+      UTStyles.RenderSectionHeader(ref rect, text);
+      position.yMin += mHeight + 3;
 
       return true;
     }
