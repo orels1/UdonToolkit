@@ -478,6 +478,12 @@ namespace UdonToolkit{
       this.addButtonText = addButtonText;
     }
   }
+  
+  [AttributeUsage(AttributeTargets.Field)]
+  public class DisabledAttribute : Attribute {
+    public DisabledAttribute() {
+    }
+  }
 
   [AttributeUsage(AttributeTargets.Class)]
   public class HelpMessageAttribute : Attribute {
