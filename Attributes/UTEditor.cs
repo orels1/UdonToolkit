@@ -132,22 +132,21 @@ namespace UdonToolkit {
       else {
         EditorGUI.BeginChangeCheck();
         EditorGUILayout.PropertyField(prop);
-        if (EditorGUI.EndChangeCheck()) {
-          var changeCallback = UTUtils.GetPropertyAttribute<OnValueChangedAttribute>(prop);
-          if (changeCallback != null) {
-            var m = prop.serializedObject.targetObject.GetType().GetMethod(changeCallback.methodName, UTUtils.flags);
-            if (m.GetParameters().Length > 1) {
-              m.Invoke(
-                serializedObject.targetObject, new object[] {
-                  serializedObject, prop
-                });
-            }
-            else {
-              m.Invoke(
-                serializedObject.targetObject, new object[] {prop});
-            }
-          }
-         }
+        if (!EditorGUI.EndChangeCheck()) return;
+        var changeCallback = UTUtils.GetPropertyAttribute<OnValueChangedAttribute>(prop);
+        if (changeCallback == null) return;
+        var m = prop.serializedObject.targetObject.GetType().GetMethod(changeCallback.methodName, UTUtils.flags);
+        if (m == null) return;
+        if (m.GetParameters().Length > 1) {
+          m.Invoke(
+            serializedObject.targetObject, new object[] {
+              serializedObject, prop
+            });
+        }
+        else {
+          m.Invoke(
+            serializedObject.targetObject, new object[] {prop});
+        }
       }
     }
 
@@ -358,6 +357,13 @@ namespace UdonToolkit {
         }
 
         EditorGUI.BeginChangeCheck();
+        // handle arrays of different lengths
+        var lLength = prop.arraySize;
+        var rLength = otherProp.arraySize;
+        if (lLength != rLength) {
+          prop.arraySize = Math.Max(lLength, rLength);
+          otherProp.arraySize = Math.Max(lLength, rLength);
+        }
         EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
         EditorGUILayout.PropertyField(otherProp.GetArrayElementAtIndex(i), new GUIContent());
         if (EditorGUI.EndChangeCheck()) {
@@ -392,6 +398,13 @@ namespace UdonToolkit {
         // but we have to handle it here directly because we are connecting two different props together
         // should probably refactor at some point
         EditorGUI.BeginChangeCheck();
+        // handle arrays of different lengths
+        var lLength = prop.arraySize;
+        var rLength = otherProp.arraySize;
+        if (lLength != rLength) {
+          prop.arraySize = Math.Max(lLength, rLength);
+          otherProp.arraySize = Math.Max(lLength, rLength);
+        }
         // Left Field
         if (leftPopup == null) {
           EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
