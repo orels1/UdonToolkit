@@ -783,6 +783,32 @@ namespace UdonToolkit {
     }
   }
 
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class DisabledAttribute : Attribute {
+    public DisabledAttribute() {
+    }
+    public DisabledAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Class)]
+  public class OnBeforeEditor : Attribute {
+    public OnBeforeEditor(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Class)]
+  public class OnAfterEditor : Attribute {
+    public OnAfterEditor(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Class)]
+  public class OnValuesChanged : Attribute {
+    public OnValuesChanged(object a) {
+    }
+  }
+
   [AttributeUsage(AttributeTargets.Class)]
   public class CustomNameAttribute: Attribute {
     public CustomNameAttribute(object a){
