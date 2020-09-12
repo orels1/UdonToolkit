@@ -41,6 +41,7 @@ namespace UdonToolkit{
     }
   }
   
+  [Obsolete("This attribute is not needed anymore as it is only used with now deprecated Controllers. Learn more: https://l.vrchat.sh/utV4Migrate")]
   public class UdonPublicAttribute : ModifiablePropertyAttribute {
     public string varName;
 
@@ -50,21 +51,24 @@ namespace UdonToolkit{
     public UdonPublicAttribute(string customName) {
       varName = customName;
     }
-
-    
   }
   
+  /// <summary>
+  /// Enables the UdonToolkit editor attributes to function as intended. Highly recommend to put this on every field alongside other UdonToolkit attributes
+  /// </summary>
   public class UTEditorAttribute : ModifiablePropertyAttribute {
-    public UTEditorAttribute() {
-    }
   }
-
+  
   public class SectionHeaderAttribute : PropertyModifierAttribute {
     public string text;
     private float mHeight = 20;
     private bool isInList;
     private bool savedHeight;
 
+    /// <summary>
+    /// Draws a Section Header with the provided text
+    /// </summary>
+    /// <param name="text"></param>
     public SectionHeaderAttribute(string text) {
       this.text = text;
     }
@@ -101,12 +105,19 @@ namespace UdonToolkit{
   }
 
   public class ToggleAttribute : ModifiablePropertyAttribute {
-    private string label;
+    private readonly string label = "";
 
+    /// <summary>
+    /// Converts a boolean field checkbox into a toggle-style button
+    /// </summary>
     public ToggleAttribute() {
       label = "";
     }
 
+    /// <summary>
+    /// Converts a boolean field checkbox into a toggle-style button with the provided text
+    /// </summary>
+    /// <param name="text"></param>
     public ToggleAttribute(string text) {
       label = text;
     }
@@ -133,6 +144,11 @@ namespace UdonToolkit{
     private float min;
     private float max;
 
+    /// <summary>
+    /// Draws a value slider that goes from min to max. Can be put on both int and float fields
+    /// </summary>
+    /// <param name="min"></param>
+    /// <param name="max"></param>
     public RangeSliderAttribute(float min, float max) {
       this.min = min;
       this.max = max;
@@ -173,10 +189,17 @@ namespace UdonToolkit{
     }
   }
 
+  /// <summary>
+  /// Calls the provided method whenever the value is changed, <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#onvaluechanged">see wiki for more details</a>
+  /// </summary>
   public class OnValueChangedAttribute : PropertyModifierAttribute {
     public string methodName;
     private object oldValue;
-
+    
+    /// <summary>
+    /// Calls the provided method whenever the value is changed, <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#onvaluechanged">see wiki for more details</a>
+    /// </summary>
+    /// <param name="methodName"></param>
     public OnValueChangedAttribute(string methodName) {
       if (methodName == null) {
         this.methodName = "";
@@ -190,10 +213,17 @@ namespace UdonToolkit{
     }
   }
 
+  /// <summary>
+  /// Hides a field based on the provided field or method
+  /// </summary>
   public class HideIfAttribute : PropertyModifierAttribute {
     public string methodName;
     private bool isVisible;
 
+    /// <summary>
+    /// Hides a field based on the provided field or method
+    /// </summary>
+    /// <param name="methodName"></param>
     public HideIfAttribute(string methodName) {
       this.methodName = methodName;
     }
@@ -209,18 +239,30 @@ namespace UdonToolkit{
     }
   }
 
+  /// <summary>
+  /// Shows a help box under a field
+  /// </summary>
   public class HelpBoxAttribute : PropertyModifierAttribute {
-    public string text;
-    private string methodName;
+    public readonly string text;
+    private readonly string methodName;
     private bool isVisible = true;
     private float boxHeight;
     private float fieldHeight;
 
+    /// <summary>
+    /// Shows a help box with the provided text
+    /// </summary>
+    /// <param name="text"></param>
     public HelpBoxAttribute(string text) {
       this.text = text;
       methodName = "";
     }
 
+    /// <summary>
+    /// Shows a help box with the provided text based on the provided field or method
+    /// </summary>
+    /// <param name="text"></param>
+    /// <param name="methodName"></param>
     public HelpBoxAttribute(string text, string methodName) {
       this.text = text;
       this.methodName = methodName;
@@ -260,6 +302,9 @@ namespace UdonToolkit{
     }
   }
 
+  /// <summary>
+  /// Combines fields into a horizontal group. Fields should follow each other to work correctly
+  /// </summary>
   public class HorizontalAttribute : PropertyModifierAttribute {
     private string name;
     private List<FieldInfo> items = new List<FieldInfo>();
@@ -268,6 +313,10 @@ namespace UdonToolkit{
     private float yMin;
     private float height;
 
+    /// <summary>
+    /// Combines fields into a horizontal group. Fields should follow each other to work correctly
+    /// </summary>
+    /// <param name="name">Name of the group (must be unique)</param>
     public HorizontalAttribute(string name) {
       this.name = name;
     }
@@ -306,12 +355,19 @@ namespace UdonToolkit{
     }
   }
 
+  /// <summary>
+  /// Hides the label of the field
+  /// </summary>
   public class HideLabelAttribute : ModifiablePropertyAttribute {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
       EditorGUI.PropertyField(position, property, new GUIContent());
     }
   }
 
+  /// <summary>
+  /// Draws a popup for a field with options to choose from
+  /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#popup">See More</a>
+  /// </summary>
   public class PopupAttribute : ModifiablePropertyAttribute {
     public string methodName;
     private int selectedIndex;
@@ -344,7 +400,10 @@ namespace UdonToolkit{
       Vector
     }
 
-    
+    /// <summary>
+    /// Draws a popup with options provided by the specified field or method
+    /// </summary>
+    /// <param name="methodName"></param>
     public PopupAttribute(string methodName) {
       sourceType = PopupSource.Method;
       this.methodName = methodName;
@@ -458,20 +517,42 @@ namespace UdonToolkit{
     }
   }
 
+  /// <summary>
+  /// Draws combined list of two arrays. Helps maintain same length between the two and associate values of one array with another.
+  /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#listview">See More</a>
+  /// </summary>
   public class ListViewAttribute : ModifiablePropertyAttribute {
     public readonly string name;
     public readonly string addMethodName;
     public string addButtonText = "Add Element";
 
+    /// <summary>
+    /// Draws combined list of two arrays. Helps maintain same length between the two and associate values of one array with another.
+    /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#listview">See More</a>
+    /// </summary>
+    /// <param name="name">Name of the ListView (must be unique)</param>
     public ListViewAttribute(string name) {
       this.name = name;
     }
 
+    /// <summary>
+    /// Draws combined list of two arrays. Helps maintain same length between the two and associate values of one array with another.
+    /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#listview">See More</a>
+    /// </summary>
+    /// <param name="name">Name of the ListView (must be unique)</param>
+    /// <param name="addMethodName">Method to call when user tries to add a new value</param>
     public ListViewAttribute(string name, string addMethodName) {
       this.name = name;
       this.addMethodName = addMethodName;
     }
 
+    /// <summary>
+    /// Draws combined list of two arrays. Helps maintain same length between the two and associate values of one array with another.
+    /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#listview">See More</a>
+    /// </summary>
+    /// <param name="name">Name of the ListView (must be unique)</param>
+    /// <param name="addMethodName">Method to call when user tries to add a new value</param>
+    /// <param name="addButtonText">Text to display on the Add button</param>
     public ListViewAttribute(string name, string addMethodName, string addButtonText) {
       this.name = name;
       this.addMethodName = addMethodName;
@@ -479,6 +560,9 @@ namespace UdonToolkit{
     }
   }
   
+  /// <summary>
+  /// Makes the fields read only in the inspector
+  /// </summary>
   [AttributeUsage(AttributeTargets.Field)]
   public class DisabledAttribute : Attribute {
     public readonly string methodName;
@@ -497,24 +581,41 @@ namespace UdonToolkit{
     }
   }
 
+  /// <summary>
+  /// Displays a help message above all the fields
+  /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
   public class HelpMessageAttribute : Attribute {
     public readonly string helpMessage;
 
+    /// <summary>
+    /// Displays a help message above all the fields
+    /// </summary>
+    /// <param name="message">Text to display</param>
     public HelpMessageAttribute(string message) {
       helpMessage = message;
     }
   }
   
+  /// <summary>
+  /// Draws a custom header above all the fields
+  /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
   public class CustomNameAttribute : Attribute {
     public readonly string name;
 
+    /// <summary>
+    /// Draws a custom header above all the fields
+    /// </summary>
+    /// <param name="value">Text to display</param>
     public CustomNameAttribute(string value) {
       name = value;
     }
   }
   
+  /// <summary>
+  /// Calls the provided method before all the editor code. Runs every editor update
+  /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
   public class OnBeforeEditorAttribute : Attribute {
     public readonly string methodName;
@@ -528,6 +629,9 @@ namespace UdonToolkit{
     }
   }
   
+  /// <summary>
+  /// Calls the provided method after all the editor code. Runs every editor update
+  /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
   public class OnAfterEditorAttribute : Attribute {
     public readonly string methodName;
@@ -541,6 +645,9 @@ namespace UdonToolkit{
     }
   }
   
+  /// <summary>
+  /// Calls the provided method if any values were changed in the inspector
+  /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
   public class OnValuesChangedAttribute : Attribute {
     public readonly string methodName;
@@ -554,15 +661,27 @@ namespace UdonToolkit{
     }
   }
 
+  /// <summary>
+  /// Draws a button below all the fields that calls the method in play mode
+  /// </summary>
   [AttributeUsage(AttributeTargets.Method)]
   public class ButtonAttribute : Attribute {
     public readonly string text;
     public readonly bool activeInEditMode;
 
+    /// <summary>
+    /// Draws a button below all the fields that calls the method in play mode
+    /// </summary>
+    /// <param name="text">Text to display</param>
     public ButtonAttribute(string text) {
       this.text = text;
     }
 
+    /// <summary>
+    /// Draws a button below all the fields that calls the method in edit mode
+    /// </summary>
+    /// <param name="text">Text to display</param>
+    /// <param name="activeInEditMode">Specifies if button should be active in edit mode</param>
     public ButtonAttribute(string text, bool activeInEditMode) {
       this.text = text;
       this.activeInEditMode = activeInEditMode;
