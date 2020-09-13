@@ -487,6 +487,10 @@ namespace UdonToolkit{
 
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      if (property.name == "data" && property.depth > 0) {
+        EditorGUI.PropertyField(position, property, label);
+        return;
+      }
       var fieldType = property.serializedObject.targetObject.GetType().GetField(property.name).FieldType;
       var source = UTUtils.GetValueThroughAttribute(property, methodName, out var sourceValType);
       if (sourceType == PopupSource.Method && fieldType != sourceValType || property.type != "string") {

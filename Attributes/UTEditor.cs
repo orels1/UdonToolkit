@@ -289,13 +289,21 @@ namespace UdonToolkit {
       prop.isExpanded = UTStyles.FoldoutHeader($"{String.Join(" ", formatted)} [{prop.arraySize}] {disabledString}", prop.isExpanded);
       if (!prop.isExpanded) return;
       EditorGUI.BeginDisabledGroup(propDisabled);
+      var popup = UTUtils.GetPropertyAttribute<PopupAttribute>(prop);
       for (int i = 0; i < prop.arraySize; i++) {
         EditorGUILayout.BeginHorizontal();
         if (RenderPositionControls(i, new[] {prop})) {
           break;
         }
         EditorGUI.BeginChangeCheck();
-        EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
+        if (popup == null) {
+          EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
+        }
+        else {
+          var options = UTUtils.GetPopupOptions(prop.GetArrayElementAtIndex(i), popup, out var selectedIndex);
+          selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
+          prop.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];
+        }
         if (EditorGUI.EndChangeCheck()) {
           HandleChangeCallback(t, changedCallback, prop, null, new object[] {prop.GetArrayElementAtIndex(i), i});
         }
@@ -458,29 +466,8 @@ namespace UdonToolkit {
           EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
         }
         else {
-          string[] options;
-          var sourceType = leftPopup.sourceType;
-          var source = prop.GetArrayElementAtIndex(i);
-
-          // Right Field
-          if (sourceType == PopupAttribute.PopupSource.Animator) {
-            options = UTUtils.GetAnimatorTriggers(source.objectReferenceValue as Animator);
-          }
-          else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
-          }
-          else if (sourceType == PopupAttribute.PopupSource.Shader) {
-            var propsSource = UTUtils.GetValueThroughAttribute(source, leftPopup.methodName, out _);
-            options = UTUtils.GetShaderPropertiesByType(propsSource, leftPopup.shaderPropType);
-          }
-          else {
-            options = (string[]) UTUtils.GetValueThroughAttribute(prop, leftPopup.methodName, out _);
-          }
-
-          var selectedIndex = options.ToList().IndexOf(prop.GetArrayElementAtIndex(i).stringValue);
-          if (selectedIndex >= options.Length || selectedIndex == -1) {
-            selectedIndex = 0;
-          }
+          var source = otherProp.GetArrayElementAtIndex(i);
+          var options = UTUtils.GetPopupOptions(source, leftPopup, out var selectedIndex);
 
           selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
           prop.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];
@@ -490,29 +477,8 @@ namespace UdonToolkit {
           EditorGUILayout.PropertyField(otherProp.GetArrayElementAtIndex(i), new GUIContent());
         }
         else {
-          string[] options;
-          var sourceType = rightPopup.sourceType;
           var source = prop.GetArrayElementAtIndex(i);
-
-          // Right Field
-          if (sourceType == PopupAttribute.PopupSource.Animator) {
-            options = UTUtils.GetAnimatorTriggers(source.objectReferenceValue as Animator);
-          }
-          else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
-          }
-          else if (sourceType == PopupAttribute.PopupSource.Shader) {
-            var propsSource = UTUtils.GetValueThroughAttribute(source, rightPopup.methodName, out _);
-            options = UTUtils.GetShaderPropertiesByType(propsSource, rightPopup.shaderPropType);
-          }
-          else {
-            options = (string[]) UTUtils.GetValueThroughAttribute(otherProp, rightPopup.methodName, out _);
-          }
-
-          var selectedIndex = options.ToList().IndexOf(otherProp.GetArrayElementAtIndex(i).stringValue);
-          if (selectedIndex >= options.Length || selectedIndex == -1) {
-            selectedIndex = 0;
-          }
+          var options = UTUtils.GetPopupOptions(source, rightPopup, out var selectedIndex);
 
           selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
           otherProp.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];
