@@ -26,6 +26,7 @@ namespace UdonToolkit {
     private bool isPlaying;
     private BindingFlags methodFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
 
+    private bool drawDefaultInspector;
 
     public override void OnInspectorGUI() {
       isPlaying = !Application.isPlaying;
@@ -33,6 +34,11 @@ namespace UdonToolkit {
       if (cT == null) {
         cT = t.GetType();
         undoString = $"Update {cT.Name}";
+      }
+
+      if (drawDefaultInspector) {
+        DrawDefaultGUI(t);
+        return;
       }
       if (UdonSharpGUI.DrawDefaultUdonSharpBehaviourHeader(t, true)) return;
       // Header
@@ -75,9 +81,13 @@ namespace UdonToolkit {
         var m = cT.GetMethod(beforeEditorCallback.methodName);
         m?.Invoke(t, new object[] {serializedObject});
       }
-
+      
       // Actual GUI
-      DrawGUI(t);
+      try {
+        DrawGUI(t);
+      } catch (Exception ex) {
+        Debug.LogException(ex);
+      }
       
       // After Editor Callback
       var afterEditorCallback = cT.GetCustomAttribute<OnAfterEditorAttribute>();
@@ -129,6 +139,20 @@ namespace UdonToolkit {
             EditorGUILayout.EndHorizontal();
           }
         }
+      }
+
+      UTStyles.HorizontalLine();
+      if (GUILayout.Button("Show Default Inspector", UTStyles.smallButton)) {
+        drawDefaultInspector = true;
+      }
+    }
+
+    private void DrawDefaultGUI(UdonSharpBehaviour t) {
+      if (UdonSharpGUI.DrawDefaultUdonSharpBehaviourHeader(target, false, false)) return;
+      base.OnInspectorGUI();
+      UTStyles.HorizontalLine();
+      if (GUILayout.Button("Show UdonToolkit Inspector", UTStyles.smallButton)) {
+        drawDefaultInspector = false;
       }
     }
 
