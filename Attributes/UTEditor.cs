@@ -26,6 +26,7 @@ namespace UdonToolkit {
     private bool isPlaying;
     private BindingFlags methodFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
 
+    private bool drawDefaultInspector;
 
     public override void OnInspectorGUI() {
       isPlaying = !Application.isPlaying;
@@ -33,6 +34,11 @@ namespace UdonToolkit {
       if (cT == null) {
         cT = t.GetType();
         undoString = $"Update {cT.Name}";
+      }
+
+      if (drawDefaultInspector) {
+        DrawDefaultGUI(t);
+        return;
       }
       if (UdonSharpGUI.DrawDefaultUdonSharpBehaviourHeader(t, true)) return;
       // Header
@@ -69,10 +75,35 @@ namespace UdonToolkit {
           "Right click the prefab and choose \"Unpack Prefab\"", MessageType.Warning);
       }
       
+      // Before Editor Callback
+      var beforeEditorCallback = cT.GetCustomAttribute<OnBeforeEditorAttribute>();
+      if (beforeEditorCallback != null) {
+        var m = cT.GetMethod(beforeEditorCallback.methodName);
+        m?.Invoke(t, new object[] {serializedObject});
+      }
+      
       // Actual GUI
-      DrawGUI(t);
+      try {
+        DrawGUI(t);
+      } catch (Exception ex) {
+        Debug.LogException(ex);
+      }
+      
+      // After Editor Callback
+      var afterEditorCallback = cT.GetCustomAttribute<OnAfterEditorAttribute>();
+      if (afterEditorCallback != null) {
+        var m = cT.GetMethod(afterEditorCallback.methodName);
+        m?.Invoke(t, new object[] {serializedObject});
+      }
+
       if (EditorGUI.EndChangeCheck()) {
         Undo.RecordObject(t, undoString);
+        // Global Values Callback
+        var globalEditorCallback = cT.GetCustomAttribute<OnValuesChangedAttribute>();
+        if (globalEditorCallback != null) {
+          var m = cT.GetMethod(globalEditorCallback.methodName);
+          m?.Invoke(t, new object[] {serializedObject});
+        }
         serializedObject.ApplyModifiedProperties();
       }
 
@@ -109,6 +140,20 @@ namespace UdonToolkit {
           }
         }
       }
+
+      UTStyles.HorizontalLine();
+      if (GUILayout.Button("Show Default Inspector", UTStyles.smallButton)) {
+        drawDefaultInspector = true;
+      }
+    }
+
+    private void DrawDefaultGUI(UdonSharpBehaviour t) {
+      if (UdonSharpGUI.DrawDefaultUdonSharpBehaviourHeader(target, false, false)) return;
+      base.OnInspectorGUI();
+      UTStyles.HorizontalLine();
+      if (GUILayout.Button("Show UdonToolkit Inspector", UTStyles.smallButton)) {
+        drawDefaultInspector = false;
+      }
     }
 
     protected virtual void DrawGUI(UdonSharpBehaviour t) {
@@ -121,17 +166,30 @@ namespace UdonToolkit {
       }
     }
 
+    private bool propDisabled;
+
     private void HandleProperty(SerializedProperty prop) {
       if (prop.name.Equals("m_Script")) {
         return;
       }
-
+      var disabledAttribute = UTUtils.GetPropertyAttribute<DisabledAttribute>(prop);
+      propDisabled = false;
+      if (disabledAttribute != null) {
+        if (disabledAttribute.methodName != null) {
+          propDisabled = UTUtils.GetVisibleThroughAttribute(prop, disabledAttribute.methodName, false);
+        }
+        else {
+          propDisabled = true;
+        }
+      }
       if (prop.isArray && prop.propertyType != SerializedPropertyType.String) {
         HandleArray(prop);
       }
       else {
         EditorGUI.BeginChangeCheck();
+        EditorGUI.BeginDisabledGroup(propDisabled);
         EditorGUILayout.PropertyField(prop);
+        EditorGUI.EndDisabledGroup();
         if (!EditorGUI.EndChangeCheck()) return;
         var changeCallback = UTUtils.GetPropertyAttribute<OnValueChangedAttribute>(prop);
         if (changeCallback == null) return;
@@ -148,6 +206,8 @@ namespace UdonToolkit {
             serializedObject.targetObject, new object[] {prop});
         }
       }
+
+      propDisabled = false;
     }
 
     private void RenderHelpBox(SerializedProperty prop) {
@@ -249,15 +309,25 @@ namespace UdonToolkit {
     private void RenderArray(SerializedProperty prop, string changedCallback) {
       var formatted = Regex.Split(prop.name, @"(?<!^)(?=[A-Z])");
       formatted[0] = formatted[0].Substring(0, 1).ToUpper() + formatted[0].Substring(1);
-      prop.isExpanded = UTStyles.FoldoutHeader($"{String.Join(" ", formatted)} [{prop.arraySize}]", prop.isExpanded);
+      var disabledString = propDisabled ? "[Read Only]" : "";
+      prop.isExpanded = UTStyles.FoldoutHeader($"{String.Join(" ", formatted)} [{prop.arraySize}] {disabledString}", prop.isExpanded);
       if (!prop.isExpanded) return;
+      EditorGUI.BeginDisabledGroup(propDisabled);
+      var popup = UTUtils.GetPropertyAttribute<PopupAttribute>(prop);
       for (int i = 0; i < prop.arraySize; i++) {
         EditorGUILayout.BeginHorizontal();
         if (RenderPositionControls(i, new[] {prop})) {
           break;
         }
         EditorGUI.BeginChangeCheck();
-        EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
+        if (popup == null) {
+          EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
+        }
+        else {
+          var options = UTUtils.GetPopupOptions(prop.GetArrayElementAtIndex(i), null, popup, out var selectedIndex);
+          selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
+          prop.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];
+        }
         if (EditorGUI.EndChangeCheck()) {
           HandleChangeCallback(t, changedCallback, prop, null, new object[] {prop.GetArrayElementAtIndex(i), i});
         }
@@ -269,9 +339,12 @@ namespace UdonToolkit {
         EditorGUILayout.EndHorizontal();
       }
 
-      if (RenderAddControls(new[] {prop}, "Add Element", null)) {
-        HandleChangeCallback(t, changedCallback, prop, null, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), prop.arraySize - 1});
+      if (!propDisabled) {
+        if (RenderAddControls(new[] {prop}, "Add Element", null)) {
+          HandleChangeCallback(t, changedCallback, prop, null, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), prop.arraySize - 1});
+        }
       }
+      EditorGUI.EndDisabledGroup();
     }
 
     private bool RenderPositionControls(int index, SerializedProperty[] props) {
@@ -348,8 +421,10 @@ namespace UdonToolkit {
 
     private void RenderStackedArray(string name, SerializedProperty prop, SerializedProperty otherProp,
       string addMethod, string addText, string changedCallback) {
-      prop.isExpanded = UTStyles.FoldoutHeader($"{name} [{prop.arraySize}]", prop.isExpanded);
+      var disabledString = propDisabled ? "[Read Only]" : "";
+      prop.isExpanded = UTStyles.FoldoutHeader($"{name} [{prop.arraySize}] {disabledString}", prop.isExpanded);
       if (!prop.isExpanded) return;
+      EditorGUI.BeginDisabledGroup(propDisabled);
       for (int i = 0; i < prop.arraySize; i++) {
         EditorGUILayout.BeginHorizontal();
         if (RenderPositionControls(i, new[] {prop, otherProp})) {
@@ -378,16 +453,21 @@ namespace UdonToolkit {
         EditorGUILayout.EndHorizontal();
       }
 
-      if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
-        HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), otherProp.GetArrayElementAtIndex(otherProp.arraySize - 1), prop.arraySize - 1});
+      if (!propDisabled) {
+        if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), otherProp.GetArrayElementAtIndex(otherProp.arraySize - 1), prop.arraySize - 1});
+        }
       }
+      EditorGUI.EndDisabledGroup();
     }
 
     private void RenderStackedArray(string name, SerializedProperty prop, SerializedProperty otherProp, PopupAttribute leftPopup,
       PopupAttribute rightPopup,
       string addMethod, string addText, string changedCallback) {
-      prop.isExpanded = UTStyles.FoldoutHeader($"{name} [{prop.arraySize}]", prop.isExpanded);
+      var disabledString = propDisabled ? "[Read Only]" : "";
+      prop.isExpanded = UTStyles.FoldoutHeader($"{name} [{prop.arraySize}] {disabledString}", prop.isExpanded);
       if (!prop.isExpanded) return;
+      EditorGUI.BeginDisabledGroup(propDisabled);
       for (int i = 0; i < prop.arraySize; i++) {
         EditorGUILayout.BeginHorizontal();
         if (RenderPositionControls(i, new[] {prop, otherProp})) {
@@ -410,29 +490,8 @@ namespace UdonToolkit {
           EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
         }
         else {
-          string[] options;
-          var sourceType = leftPopup.sourceType;
-          var source = prop.GetArrayElementAtIndex(i);
-
-          // Right Field
-          if (sourceType == PopupAttribute.PopupSource.Animator) {
-            options = UTUtils.GetAnimatorTriggers(source.objectReferenceValue as Animator);
-          }
-          else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
-          }
-          else if (sourceType == PopupAttribute.PopupSource.Shader) {
-            var propsSource = UTUtils.GetValueThroughAttribute(source, leftPopup.methodName, out _);
-            options = UTUtils.GetShaderPropertiesByType(propsSource, leftPopup.shaderPropType);
-          }
-          else {
-            options = (string[]) UTUtils.GetValueThroughAttribute(prop, leftPopup.methodName, out _);
-          }
-
-          var selectedIndex = options.ToList().IndexOf(prop.GetArrayElementAtIndex(i).stringValue);
-          if (selectedIndex >= options.Length || selectedIndex == -1) {
-            selectedIndex = 0;
-          }
+          var source = otherProp.GetArrayElementAtIndex(i);
+          var options = UTUtils.GetPopupOptions(prop.GetArrayElementAtIndex(i), source, leftPopup, out var selectedIndex);
 
           selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
           prop.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];
@@ -442,73 +501,31 @@ namespace UdonToolkit {
           EditorGUILayout.PropertyField(otherProp.GetArrayElementAtIndex(i), new GUIContent());
         }
         else {
-          string[] options;
-          var sourceType = rightPopup.sourceType;
           var source = prop.GetArrayElementAtIndex(i);
-
-          // Right Field
-          if (sourceType == PopupAttribute.PopupSource.Animator) {
-            options = UTUtils.GetAnimatorTriggers(source.objectReferenceValue as Animator);
-          }
-          else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-            options = UTUtils.GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
-          }
-          else if (sourceType == PopupAttribute.PopupSource.Shader) {
-            var propsSource = UTUtils.GetValueThroughAttribute(source, rightPopup.methodName, out _);
-            options = UTUtils.GetShaderPropertiesByType(propsSource, rightPopup.shaderPropType);
-          }
-          else {
-            options = (string[]) UTUtils.GetValueThroughAttribute(otherProp, rightPopup.methodName, out _);
-          }
-
-          var selectedIndex = options.ToList().IndexOf(otherProp.GetArrayElementAtIndex(i).stringValue);
-          if (selectedIndex >= options.Length || selectedIndex == -1) {
-            selectedIndex = 0;
-          }
+          var options = UTUtils.GetPopupOptions(otherProp.GetArrayElementAtIndex(i), source, rightPopup, out var selectedIndex);
 
           selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
           otherProp.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];
         }
         
         if (EditorGUI.EndChangeCheck()) {
-          if (changedCallback != null) {
-            var m = cT.GetMethod(changedCallback);
-            if (m != null) {
-              m.Invoke(t,
-                m.GetParameters().Length > 2
-                  ? new object[] {prop.GetArrayElementAtIndex(i), otherProp.GetArrayElementAtIndex(i), i}
-                  : new object[] {prop, otherProp});
-            }
-          }
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(i), otherProp.GetArrayElementAtIndex(i), i});
         }
 
         if (RenderRemoveControls(i, new[] {prop, otherProp})) {
-          if (changedCallback != null) {
-            var m = cT.GetMethod(changedCallback);
-            if (m != null) {
-              m.Invoke(t,
-                m.GetParameters().Length > 2
-                  ? new object[] {null, null, i}
-                  : new object[] {prop, otherProp});
-            }
-          }
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {null, null, i});
           break;
         }
 
         EditorGUILayout.EndHorizontal();
       }
 
-      if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
-        if (changedCallback != null) {
-          var m = cT.GetMethod(changedCallback);
-          if (m != null) {
-            m.Invoke(t,
-              m.GetParameters().Length > 2
-                ? new object[] {prop.GetArrayElementAtIndex(prop.arraySize), otherProp.GetArrayElementAtIndex(prop.arraySize), prop.arraySize}
-                : new object[] {prop, otherProp});
-          }
+      if (!propDisabled) {
+        if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), otherProp.GetArrayElementAtIndex(otherProp.arraySize - 1), prop.arraySize - 1});
         }
       }
+      EditorGUI.EndDisabledGroup();
     }
     #endregion
   }

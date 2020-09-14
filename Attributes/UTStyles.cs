@@ -145,6 +145,11 @@ namespace UdonToolkit {
     public static void HorizontalLine() {
       HorizontalLine(new Color(0.5f, 0.5f, 0.5f, 0.5f));
     }
+
+    public static GUIStyle smallButton = new GUIStyle("button") {
+      fontSize = 9,
+      fixedHeight = 16
+    };
   }
 }
 

@@ -60,7 +60,15 @@ namespace UdonToolkit {
 
       var method = property.serializedObject.targetObject.GetType().GetMethod(methodName, flags);
       type = method.GetReturnType().GetElementType();
-      return method.Invoke(property.serializedObject.targetObject, null);
+      if (method == null) {
+        return null;
+      } 
+      var paramsList = method.GetParameters();
+      var argList = new object[]{};
+      if (paramsList.Length > 0 && paramsList[0].ParameterType == typeof(SerializedProperty)) {
+        argList = new object[] { property };
+      }
+      return method.Invoke(property.serializedObject.targetObject, argList);
     }
 
     public static bool GetVisibleThroughAttribute(SerializedProperty property, string methodName, bool flipValue) {
@@ -242,7 +250,37 @@ namespace UdonToolkit {
         }
       }
       
-      return res.Count == 0 ? new[] {"no valid properties"} : res.ToArray();
+      return res.Count == 0 ? new[] {"-- no valid properties--"} : res.ToArray();
+    }
+
+    public static string[] GetPopupOptions(SerializedProperty prop, SerializedProperty fetchFrom, PopupAttribute popup, out int index) {
+      var sourceType = popup.sourceType;
+      var source = fetchFrom ?? prop;
+      string[] options;
+      if (sourceType == PopupAttribute.PopupSource.Animator) {
+        options = GetAnimatorTriggers(source.objectReferenceValue as Animator);
+      }
+      else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
+        options = GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
+      }
+      else if (sourceType == PopupAttribute.PopupSource.Shader) {
+        var propsSource = GetValueThroughAttribute(source, popup.methodName, out _);
+        options = GetShaderPropertiesByType(propsSource, popup.shaderPropType);
+      }
+      else {
+        options = (string[]) GetValueThroughAttribute(source, popup.methodName, out _);
+      }
+
+      if (options.Length == 0) {
+        index = 0;
+        return new[] {"-- no options provided --"};
+      }
+      index = options.ToList().IndexOf(prop.stringValue);
+      if (index >= options.Length || index == -1) {
+        index = 0;
+      }
+
+      return options;
     }
   }
 }
