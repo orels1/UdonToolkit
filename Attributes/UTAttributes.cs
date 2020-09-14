@@ -510,12 +510,13 @@ namespace UdonToolkit{
       else {
         options = ((string[]) source).Select(o => new GUIContent(o)).ToArray();
       }
-      var finalLabel = hideLabel ? new GUIContent() : label;
 
       selectedIndex = options.ToList().FindIndex(i => i.text == property.stringValue);
       if (selectedIndex >= options.Length || selectedIndex < 0) {
         selectedIndex = 0;
       }
+      
+      var finalLabel = hideLabel ? new GUIContent() : label;
       selectedIndex = EditorGUI.Popup(position, finalLabel, selectedIndex, options);
       property.stringValue = options[selectedIndex].text;
     }

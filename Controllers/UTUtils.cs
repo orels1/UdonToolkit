@@ -253,21 +253,22 @@ namespace UdonToolkit {
       return res.Count == 0 ? new[] {"-- no valid properties--"} : res.ToArray();
     }
 
-    public static string[] GetPopupOptions(SerializedProperty prop, PopupAttribute popup, out int index) {
+    public static string[] GetPopupOptions(SerializedProperty prop, SerializedProperty fetchFrom, PopupAttribute popup, out int index) {
       var sourceType = popup.sourceType;
+      var source = fetchFrom ?? prop;
       string[] options;
       if (sourceType == PopupAttribute.PopupSource.Animator) {
-        options = GetAnimatorTriggers(prop.objectReferenceValue as Animator);
+        options = GetAnimatorTriggers(source.objectReferenceValue as Animator);
       }
       else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
-        options = GetUdonEvents(prop.objectReferenceValue as UdonSharpBehaviour);
+        options = GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
       }
       else if (sourceType == PopupAttribute.PopupSource.Shader) {
-        var propsSource = GetValueThroughAttribute(prop, popup.methodName, out _);
+        var propsSource = GetValueThroughAttribute(source, popup.methodName, out _);
         options = GetShaderPropertiesByType(propsSource, popup.shaderPropType);
       }
       else {
-        options = (string[]) GetValueThroughAttribute(prop, popup.methodName, out _);
+        options = (string[]) GetValueThroughAttribute(source, popup.methodName, out _);
       }
 
       if (options.Length == 0) {

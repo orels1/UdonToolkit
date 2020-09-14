@@ -300,7 +300,7 @@ namespace UdonToolkit {
           EditorGUILayout.PropertyField(prop.GetArrayElementAtIndex(i), new GUIContent());
         }
         else {
-          var options = UTUtils.GetPopupOptions(prop.GetArrayElementAtIndex(i), popup, out var selectedIndex);
+          var options = UTUtils.GetPopupOptions(prop.GetArrayElementAtIndex(i), null, popup, out var selectedIndex);
           selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
           prop.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];
         }
@@ -467,7 +467,7 @@ namespace UdonToolkit {
         }
         else {
           var source = otherProp.GetArrayElementAtIndex(i);
-          var options = UTUtils.GetPopupOptions(source, leftPopup, out var selectedIndex);
+          var options = UTUtils.GetPopupOptions(prop.GetArrayElementAtIndex(i), source, leftPopup, out var selectedIndex);
 
           selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
           prop.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];
@@ -478,7 +478,7 @@ namespace UdonToolkit {
         }
         else {
           var source = prop.GetArrayElementAtIndex(i);
-          var options = UTUtils.GetPopupOptions(source, rightPopup, out var selectedIndex);
+          var options = UTUtils.GetPopupOptions(otherProp.GetArrayElementAtIndex(i), source, rightPopup, out var selectedIndex);
 
           selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
           otherProp.GetArrayElementAtIndex(i).stringValue = options[selectedIndex];

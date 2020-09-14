@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UdonSharp;
 using UnityEditor;
 using UnityEngine;
 using VRC.Udon;
@@ -90,7 +91,7 @@ namespace UdonToolkit {
     public string somePopupVar;
 
     [Horizontal("BehaviourTrigger")] [HideLabel] [UdonPublic]
-    public UdonBehaviour behaviour;
+    public UdonSharpBehaviour behaviour;
 
     [Horizontal("BehaviourTrigger")] [Popup(PopupAttribute.PopupSource.UdonBehaviour, "@behaviour", true)]
     public string behaviourPopupVar;
