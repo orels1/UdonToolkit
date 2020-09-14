@@ -747,6 +747,9 @@ namespace UdonToolkit {
   public class ToggleAttribute : Attribute {
     public ToggleAttribute() {
     }
+
+    public ToggleAttribute(object a) {
+    }
   }
 
   [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
