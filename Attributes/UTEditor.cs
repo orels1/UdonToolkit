@@ -213,6 +213,7 @@ namespace UdonToolkit {
     private void RenderHelpBox(SerializedProperty prop) {
       var helpBoxAttr = UTUtils.GetPropertyAttribute<HelpBoxAttribute>(prop);
       if (helpBoxAttr != null) {
+        if (!UTUtils.GetVisibleThroughAttribute(prop, helpBoxAttr.methodName, false)) return;
         UTStyles.RenderNote(helpBoxAttr.text);
       }
     }

@@ -244,7 +244,7 @@ namespace UdonToolkit{
   /// </summary>
   public class HelpBoxAttribute : PropertyModifierAttribute {
     public readonly string text;
-    private readonly string methodName;
+    public readonly string methodName;
     private bool isVisible = true;
     private float boxHeight;
     private float fieldHeight;
