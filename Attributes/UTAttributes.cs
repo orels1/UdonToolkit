@@ -244,7 +244,7 @@ namespace UdonToolkit{
   /// </summary>
   public class HelpBoxAttribute : PropertyModifierAttribute {
     public readonly string text;
-    private readonly string methodName;
+    public readonly string methodName;
     private bool isVisible = true;
     private float boxHeight;
     private float fieldHeight;
@@ -746,6 +746,9 @@ namespace UdonToolkit {
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class ToggleAttribute : Attribute {
     public ToggleAttribute() {
+    }
+
+    public ToggleAttribute(object a) {
     }
   }
 

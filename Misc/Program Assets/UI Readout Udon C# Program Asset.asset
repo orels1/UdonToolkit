@@ -446,6 +446,9 @@ MonoBehaviour:
 
         {0} will be replaced by the value, e.g. "Speed: {0} u/s" will become "Speed:
         10 u/s" if variable value is 10.'
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -730,6 +733,9 @@ MonoBehaviour:
       Data: Each element of Slider Readout Multiplier corresponds to a Slider Readout
         from the list above, make sure both lists are the same length or this will
         crash.
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

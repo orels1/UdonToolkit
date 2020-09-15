@@ -1485,6 +1485,9 @@ MonoBehaviour:
       Data: Transition only applies to material properties, as smooth transition between
         materials is not possible. Active Skybox material field is set to be the same
         as default.
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1494,6 +1497,9 @@ MonoBehaviour:
     - Name: text
       Entry: 1
       Data: Transition time cannot be negative
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

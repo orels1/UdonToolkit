@@ -106,6 +106,9 @@ MonoBehaviour:
     - Name: text
       Entry: 1
       Data: This behaviour requires a trigger collider to be attached to the object
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -189,6 +192,9 @@ MonoBehaviour:
       Data: It is impossible to distinguish between Local and Remote Players without
         putting the Area Trigger on a special layer that collides with either of those,
         keep that in mind when planning your triggers.
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -198,6 +204,9 @@ MonoBehaviour:
     - Name: text
       Entry: 1
       Data: It is not recommended to collide with Everything or the Default layer.
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -283,6 +292,9 @@ MonoBehaviour:
       Entry: 1
       Data: Do not use Networked option with target All when colliding with Player
         layer, as it will cause oversync.
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

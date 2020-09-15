@@ -172,6 +172,9 @@ MonoBehaviour:
     - Name: text
       Entry: 1
       Data: Make sure this game object is always enabled when using delays.
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -686,6 +689,9 @@ MonoBehaviour:
       Entry: 1
       Data: Only use this option if you are invoking this action locally, e.g. from
         a UI Button, otherwise it will cause oversync.
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1713,6 +1719,9 @@ MonoBehaviour:
       Entry: 1
       Data: Playing many audio clips at once is performance heavy, please be considerate
         when using these.
+    - Name: methodName
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

@@ -86,7 +86,11 @@ namespace UdonToolkit {
       try {
         DrawGUI(t);
       } catch (Exception ex) {
-        Debug.LogException(ex);
+        // for some reason unity likes to throw ExitGUI exceptions when looking up scene objects
+        // even tho it doesnt throw them when you don't try-catch
+        if (ex.GetType() != typeof(ExitGUIException)) {
+          Debug.LogException(ex);
+        }
       }
       
       // After Editor Callback
@@ -213,6 +217,7 @@ namespace UdonToolkit {
     private void RenderHelpBox(SerializedProperty prop) {
       var helpBoxAttr = UTUtils.GetPropertyAttribute<HelpBoxAttribute>(prop);
       if (helpBoxAttr != null) {
+        if (helpBoxAttr.methodName.Length > 0 && !UTUtils.GetVisibleThroughAttribute(prop, helpBoxAttr.methodName, false)) return;
         UTStyles.RenderNote(helpBoxAttr.text);
       }
     }
