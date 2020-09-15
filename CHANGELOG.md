@@ -1,5 +1,17 @@
 # Changelog
 
+## [v0.4.2](https://github.com/orels1/UdonToolkit/tree/v0.4.2) (2020-09-14)
+
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.1...v0.4.2)
+
+Only bug fixes this time, nothing to see here 👀 
+
+**Fixed bugs:**
+
+- "Exception of type 'UnityEngine.ExitGUIException' was thrown." error happens whenever you click the circle next to a reference [\#48](https://github.com/orels1/UdonToolkit/issues/48)
+- Using a custom label on a toggle attribute throws an error when doing a VRC build [\#47](https://github.com/orels1/UdonToolkit/issues/47)
+- Helpboxes applied to arrays do not respect the provided methodname [\#46](https://github.com/orels1/UdonToolkit/issues/46)
+
 ## [v0.4.1](https://github.com/orels1/UdonToolkit/tree/v0.4.1) (2020-09-14)
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.0...v0.4.1)
