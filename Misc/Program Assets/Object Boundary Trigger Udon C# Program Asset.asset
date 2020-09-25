@@ -240,7 +240,7 @@ MonoBehaviour:
         This is useful if you want to toggle something when the target object goes
         below some Y position and agan - when it comes back'
     - Name: methodName
-      Entry: 6
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8

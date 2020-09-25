@@ -1486,8 +1486,8 @@ MonoBehaviour:
         materials is not possible. Active Skybox material field is set to be the same
         as default.
     - Name: methodName
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: '@!instantTransition'
     - Name: 
       Entry: 8
       Data: 
@@ -1498,8 +1498,8 @@ MonoBehaviour:
       Entry: 1
       Data: Transition time cannot be negative
     - Name: methodName
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: CheckValidTransition
     - Name: 
       Entry: 8
       Data: 

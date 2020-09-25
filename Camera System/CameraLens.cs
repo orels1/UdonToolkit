@@ -98,7 +98,7 @@ namespace UdonToolkit {
         cR = visuals.GetComponent<MeshRenderer>();
         sR = viewSphere.GetComponent<MeshRenderer>();
         fingerSphere.gameObject.SetActive(false);
-        pickup = (VRC_Pickup) gameObject.GetComponent("VRC_Pickup");
+        pickup = (VRC_Pickup) GetComponent(typeof(VRC_Pickup));
         var player = Networking.LocalPlayer;
         if (player == null) return;
         if (player.IsUserInVR()) {

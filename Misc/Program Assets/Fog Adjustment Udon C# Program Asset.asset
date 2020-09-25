@@ -767,8 +767,8 @@ MonoBehaviour:
       Entry: 1
       Data: Transition time cannot be negative
     - Name: methodName
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: CheckValidTransition
     - Name: 
       Entry: 8
       Data: 
@@ -930,8 +930,8 @@ MonoBehaviour:
       Data: Will set the fog color and density from the Default or Active state on
         start
     - Name: methodName
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: '@setInitialState'
     - Name: 
       Entry: 8
       Data: 

@@ -236,8 +236,8 @@ MonoBehaviour:
       Entry: 1
       Data: Target will instantly match the Source position
     - Name: methodName
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: '@!lerpPosition'
     - Name: 
       Entry: 8
       Data: 
@@ -314,8 +314,8 @@ MonoBehaviour:
       Entry: 1
       Data: Target will instantly match the Source rotation
     - Name: methodName
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: '@!lerpRotation'
     - Name: 
       Entry: 8
       Data: 
@@ -455,7 +455,7 @@ MonoBehaviour:
       Entry: 1
       Data: This option disables rotation transfer.
     - Name: methodName
-      Entry: 6
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8
