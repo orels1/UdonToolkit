@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.4.3](https://github.com/orels1/UdonToolkit/tree/v0.4.3) (2020-09-25)
+
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.2...v0.4.3)
+
+Fixed a major bug with camera system not working in VR
+
 ## [v0.4.2](https://github.com/orels1/UdonToolkit/tree/v0.4.2) (2020-09-14)
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.1...v0.4.2)
