@@ -1,5 +1,7 @@
+using System;
 using UdonSharp;
 using UnityEngine;
+using VRC.SDKBase;
 using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
@@ -19,11 +21,19 @@ namespace UdonToolkit {
       }
 
       [HelpBox(
-        "It is impossible to distinguish between Local and Remote Players without putting the Area Trigger on a special layer that collides with either of those, keep that in mind when planning your triggers.",
+        "Please use Collide With Local Players and Collide With Remote Players options instead of Player and PlayerLocal layers.",
         "PlayerLayerWarnings")]
       [HelpBox("It is not recommended to collide with Everything or the Default layer.", "CheckCollisionLayers")]
+      [HideIf("HideLayerList")]
       [UTEditor]
       public LayerMask collideWith;
+
+      public bool collideWithLocalPlayers;
+      public bool collideWithRemotePlayers;
+
+      private bool HideLayerList() {
+        return collideWithLocalPlayers || collideWithRemotePlayers;
+      }
       
       #if !COMPILER_UDONSHARP && UNITY_EDITOR
       private bool CheckCollisionLayers() {
@@ -34,9 +44,7 @@ namespace UdonToolkit {
       private bool PlayerLayerWarnings() {
         var player = LayerMask.NameToLayer("Player");
         var playerLocal = LayerMask.NameToLayer("PlayerLocal");
-        var currL = gameObject.layer;
-        return (collideWith == (collideWith | (1 << player)) || collideWith == (collideWith | (1 << playerLocal))) &&
-               currL <= 22 && !(collideWith == (collideWith | (1 << player)) && collideWith == (collideWith | (1 << playerLocal)));
+        return (collideWith == (collideWith | (1 << player)) || collideWith == (collideWith | (1 << playerLocal)));
       }
       #endif
 
@@ -86,21 +94,28 @@ namespace UdonToolkit {
       public void Toggle() {
         active = !active;
       }
-      
+
+      private bool shouldCollideWithPlayers;
+      private bool shouldCollideWithLocals;
+      private bool shouldCollideWithRemote;
+
+      private void Start() {
+        if (collideWith == (collideWith | (1 << playerLayer)) ||
+            collideWith == (collideWith | (1 << playerLocalLayer))) {
+          shouldCollideWithPlayers = true;
+        }
+
+        if (collideWith == (collideWith | (1 << playerLayer))) {
+          shouldCollideWithRemote = true;
+        }
+
+        if (collideWith == (collideWith | (1 << playerLocalLayer))) {
+          shouldCollideWithLocals = true;
+        }
+      }
+
       private void OnTriggerEnter(Collider other) {
         if (!active) return;
-        if (other == null) {
-          if (collideWith == (collideWith | (1 << playerLayer)) ||
-              collideWith == (collideWith | (1 << playerLocalLayer))) {
-            if (collidersIn == 0) {
-              FireTriggers("enter");
-            }
-            collidersIn++;
-            return;
-          }
-
-          return;
-        }
         if (collideWith == (collideWith | (1 << other.gameObject.layer))) {
           if (collidersIn == 0) {
             FireTriggers("enter");
@@ -109,25 +124,57 @@ namespace UdonToolkit {
         }
       }
 
-      private void OnTriggerExit(Collider other) {
-        if (!active) return;
-        if (other == null) {
-          if (collideWith == (collideWith | (1 << playerLayer)) ||
-              collideWith == (collideWith | (1 << playerLocalLayer))) {
-            if (collidersIn == 1) {
-              FireTriggers("exit");
-            }
-            collidersIn--;
-            return;
-          }
-
+      public override void OnPlayerTriggerEnter(VRCPlayerApi player) {
+        if (!collideWithLocalPlayers && !collideWithRemotePlayers && !shouldCollideWithPlayers) {
           return;
         }
+        var isLocal = player.isLocal;
+        if (isLocal && (collideWithLocalPlayers || shouldCollideWithLocals)) {
+          if (collidersIn == 0) {
+            FireTriggers("enter");
+            collidersIn++;
+            return;
+          }
+        }
+
+        if (!isLocal && (collideWithRemotePlayers || shouldCollideWithRemote)) {
+          if (collidersIn == 0) {
+            FireTriggers("enter");
+            collidersIn++;
+            return;
+          }
+        }
+      }
+
+      private void OnTriggerExit(Collider other) {
+        if (!active) return;
         if (collideWith == (collideWith | (1 << other.gameObject.layer))) {
           if (collidersIn == 1) {
             FireTriggers("exit");
           }
           collidersIn--;
+        }
+      }
+
+      public override void OnPlayerTriggerExit(VRCPlayerApi player) {
+        if (!collideWithLocalPlayers && !collideWithRemotePlayers && !shouldCollideWithPlayers) {
+          return;
+        }
+        var isLocal = player.isLocal;
+        if (isLocal && (collideWithLocalPlayers || shouldCollideWithLocals)) {
+          if (collidersIn == 1) {
+            FireTriggers("exit");
+            collidersIn--;
+            return;
+          }
+        }
+
+        if (!isLocal && (collideWithRemotePlayers || shouldCollideWithRemote)) {
+          if (collidersIn == 1) {
+            FireTriggers("exit");
+            collidersIn--;
+            return;
+          }
         }
       }
 
