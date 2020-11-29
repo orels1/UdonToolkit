@@ -27,8 +27,10 @@ namespace UdonToolkit {
     private BindingFlags methodFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
 
     private bool drawDefaultInspector;
+    private bool droppedObjects;
 
     public override void OnInspectorGUI() {
+      droppedObjects = false;
       isPlaying = !Application.isPlaying;
       t = (UdonSharpBehaviour) target;
       if (cT == null) {
@@ -103,8 +105,7 @@ namespace UdonToolkit {
         m?.Invoke(t, new object[] {serializedObject});
       }
 
-      if (EditorGUI.EndChangeCheck()) {
-        Undo.RecordObject(t, undoString);
+      if (EditorGUI.EndChangeCheck() || droppedObjects) {
         // Global Values Callback
         var globalEditorCallback = cT.GetCustomAttribute<OnValuesChangedAttribute>();
         if (globalEditorCallback != null) {
@@ -113,6 +114,8 @@ namespace UdonToolkit {
         }
         serializedObject.ApplyModifiedProperties();
       }
+
+      if (droppedObjects) return;
 
       // Extra Methods
       var methods = cT.GetMethods(methodFlags).Where(i => i.GetCustomAttribute<ButtonAttribute>() != null).ToArray();
@@ -168,6 +171,9 @@ namespace UdonToolkit {
       var next = property.NextVisible(true);
       if (next) {
         do {
+          // if you drag & drop values - unity doesnt allow dynamic layout elements to be calculated anymore
+          // so we have to exit this update cycle
+          if (droppedObjects) break;
           HandleProperty(property);
         } while (property.NextVisible(false));
       }
@@ -239,6 +245,7 @@ namespace UdonToolkit {
       if (!isGroup) {
         if (isHidden) return;
         RenderArray(prop,  onValueChangedAttribute?.methodName);
+        if (droppedObjects) return;
         RenderHelpBox(prop);
         return;
       }
@@ -251,6 +258,7 @@ namespace UdonToolkit {
       if (items.Count < 2) {
         if (isHidden) return;
         RenderArray(prop, onValueChangedAttribute?.methodName);
+        if (droppedObjects) return;
         RenderHelpBox(prop);
         return;
       }
@@ -273,12 +281,14 @@ namespace UdonToolkit {
       if (rightPopupAttribute != null || leftPopupAttribute != null) {
         RenderStackedArray(groupAttribute[0].name, prop, otherProp, leftPopupAttribute, rightPopupAttribute, groupAttribute[0].addMethodName,
           groupAttribute[0].addButtonText, onValueChangedAttribute?.methodName);
+        if (droppedObjects) return;
         RenderHelpBox(prop);
         return;
       }
 
       RenderStackedArray(groupAttribute[0].name, prop, otherProp, groupAttribute[0].addMethodName,
         groupAttribute[0].addButtonText, onValueChangedAttribute?.methodName);
+      if (droppedObjects) return;
       RenderHelpBox(prop);
     }
 
@@ -313,12 +323,111 @@ namespace UdonToolkit {
     }
 
     #region ArrayHandling
+
+    private void HandleDragAndDrop(Rect position, SerializedProperty prop) {
+      if (!position.Contains(Event.current.mousePosition)) return;
+      if (Event.current.type == EventType.DragUpdated) {
+        DragAndDrop.visualMode = DragAndDropVisualMode.Copy;
+        Event.current.Use();
+      }
+      else if (Event.current.type == EventType.DragPerform) {
+        DragAndDrop.AcceptDrag();
+        var targetType = serializedObject.targetObject.GetType().GetField(prop.name).FieldType.GetElementType();
+        var addingGo = targetType == typeof(GameObject);
+        Debug.Log($"target type is {targetType}");
+        foreach (var draggedObject in DragAndDrop.objectReferences) {
+          if (!(draggedObject is GameObject addedGameObject)) continue;
+          var addIndex = prop.arraySize;
+          // Because GameObject is not a component, we skip the GetComponent part
+          if (addingGo) {
+            prop.InsertArrayElementAtIndex(addIndex);
+            prop.GetArrayElementAtIndex(addIndex).objectReferenceValue = addedGameObject;
+            droppedObjects = true;
+            continue;
+          }
+
+          var addedItem = addedGameObject.GetComponent(targetType);
+          if (addedItem == null) continue;
+          prop.InsertArrayElementAtIndex(addIndex);
+          prop.GetArrayElementAtIndex(addIndex).objectReferenceValue = addedItem;
+          droppedObjects = true;
+        }
+      }
+    }
+    
+    private void HandleDragAndDrop(Rect position, SerializedProperty prop, SerializedProperty otherProp) {
+      if (!position.Contains(Event.current.mousePosition)) return;
+      if (Event.current.type == EventType.DragUpdated) {
+        DragAndDrop.visualMode = DragAndDropVisualMode.Copy;
+        Event.current.Use();
+      }
+      else if (Event.current.type == EventType.DragPerform) {
+        DragAndDrop.AcceptDrag();
+        var targetType = serializedObject.targetObject.GetType().GetField(prop.name).FieldType.GetElementType();
+        var otherTargetType = serializedObject.targetObject.GetType().GetField(otherProp.name).FieldType.GetElementType();
+        var addingGo = targetType == typeof(GameObject);
+        var addingOtherGo = otherTargetType == typeof(GameObject);
+        var addedElements = false;
+        Debug.Log($"target type is {targetType}");
+        foreach (var draggedObject in DragAndDrop.objectReferences) {
+          if (!(draggedObject is GameObject addedGameObject)) continue;
+          var addIndex = prop.arraySize;
+          if (addingGo || addingOtherGo) {
+            prop.InsertArrayElementAtIndex(addIndex);
+            otherProp.InsertArrayElementAtIndex(addIndex);
+            addedElements = true;
+          }
+          // Because GameObject is not a component, we skip the GetComponent part
+          if (addingGo) {
+            prop.GetArrayElementAtIndex(addIndex).objectReferenceValue = addedGameObject;
+            droppedObjects = true;
+          }
+
+          if (addingOtherGo) {
+            otherProp.GetArrayElementAtIndex(addIndex).objectReferenceValue = addedGameObject;
+            droppedObjects = true;
+          }
+
+          if (addingGo && addingOtherGo) {
+            continue;
+          }
+
+          // If adding regular components - check if we can get them
+          Component addedItem = null;
+          if (targetType.InheritsFrom(typeof(Component)) || targetType.InheritsFrom(typeof(MonoBehaviour))) {
+            addedItem = addedGameObject.GetComponent(targetType);
+          }
+          Component addedOtherItem = null;
+          if (otherTargetType.InheritsFrom(typeof(Component)) || otherTargetType.InheritsFrom(typeof(MonoBehaviour))) {
+            addedOtherItem = addedGameObject.GetComponent(otherTargetType);
+          }
+          if (addedItem != null || addedOtherItem != null && !addedElements) {
+            prop.InsertArrayElementAtIndex(addIndex);
+            otherProp.InsertArrayElementAtIndex(addIndex);
+          }
+          if (addedItem != null) {
+            prop.GetArrayElementAtIndex(addIndex).objectReferenceValue = addedItem;
+            droppedObjects = true;
+          }
+
+          if (addedOtherItem != null) {
+            otherProp.GetArrayElementAtIndex(addIndex).objectReferenceValue = addedOtherItem;
+            droppedObjects = true;
+          }
+        }
+      }
+    }
     
     private void RenderArray(SerializedProperty prop, string changedCallback) {
       var formatted = Regex.Split(prop.name, @"(?<!^)(?=[A-Z])");
       formatted[0] = formatted[0].Substring(0, 1).ToUpper() + formatted[0].Substring(1);
       var disabledString = propDisabled ? "[Read Only]" : "";
       prop.isExpanded = UTStyles.FoldoutHeader($"{String.Join(" ", formatted)} [{prop.arraySize}] {disabledString}", prop.isExpanded);
+      var foldoutRect = GUILayoutUtility.GetLastRect();
+      if (!propDisabled) {
+        HandleDragAndDrop(foldoutRect, prop);
+        if (droppedObjects) return;
+      }
       if (!prop.isExpanded) return;
       EditorGUI.BeginDisabledGroup(propDisabled);
       var popup = UTUtils.GetPropertyAttribute<PopupAttribute>(prop);
@@ -348,9 +457,15 @@ namespace UdonToolkit {
       }
 
       if (!propDisabled) {
+        EditorGUILayout.BeginHorizontal();
         if (RenderAddControls(new[] {prop}, "Add Element", null)) {
           HandleChangeCallback(t, changedCallback, prop, null, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), prop.arraySize - 1});
         }
+        if (GUILayout.Button("Clear", GUILayout.MaxWidth(60))) {
+          prop.arraySize = 0;
+          HandleChangeCallback(t, changedCallback, prop, null, new object[] {null, 0});
+        }
+        EditorGUILayout.EndHorizontal();
       }
       EditorGUI.EndDisabledGroup();
     }
@@ -431,6 +546,11 @@ namespace UdonToolkit {
       string addMethod, string addText, string changedCallback) {
       var disabledString = propDisabled ? "[Read Only]" : "";
       prop.isExpanded = UTStyles.FoldoutHeader($"{name} [{prop.arraySize}] {disabledString}", prop.isExpanded);
+      var foldoutRect = GUILayoutUtility.GetLastRect();
+      if (!propDisabled) {
+        HandleDragAndDrop(foldoutRect, prop, otherProp);
+        if (droppedObjects) return;
+      }
       if (!prop.isExpanded) return;
       EditorGUI.BeginDisabledGroup(propDisabled);
       for (int i = 0; i < prop.arraySize; i++) {
@@ -462,9 +582,16 @@ namespace UdonToolkit {
       }
 
       if (!propDisabled) {
+        EditorGUILayout.BeginHorizontal();
         if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
           HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), otherProp.GetArrayElementAtIndex(otherProp.arraySize - 1), prop.arraySize - 1});
         }
+        if (GUILayout.Button("Clear", GUILayout.MaxWidth(40))) {
+          prop.arraySize = 0;
+          otherProp.arraySize = 0;
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {null, null, 0});
+        }
+        EditorGUILayout.EndHorizontal();
       }
       EditorGUI.EndDisabledGroup();
     }
@@ -474,6 +601,11 @@ namespace UdonToolkit {
       string addMethod, string addText, string changedCallback) {
       var disabledString = propDisabled ? "[Read Only]" : "";
       prop.isExpanded = UTStyles.FoldoutHeader($"{name} [{prop.arraySize}] {disabledString}", prop.isExpanded);
+      var foldoutRect = GUILayoutUtility.GetLastRect();
+      if (!propDisabled) {
+        HandleDragAndDrop(foldoutRect, prop, otherProp);
+        if (droppedObjects) return;
+      }
       if (!prop.isExpanded) return;
       EditorGUI.BeginDisabledGroup(propDisabled);
       for (int i = 0; i < prop.arraySize; i++) {
@@ -529,9 +661,16 @@ namespace UdonToolkit {
       }
 
       if (!propDisabled) {
+        EditorGUILayout.BeginHorizontal();
         if (RenderAddControls(new[] {prop, otherProp}, addText, addMethod)) {
           HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {prop.GetArrayElementAtIndex(prop.arraySize - 1), otherProp.GetArrayElementAtIndex(otherProp.arraySize - 1), prop.arraySize - 1});
         }
+        if (GUILayout.Button("Clear", GUILayout.MaxWidth(60))) {
+          prop.arraySize = 0;
+          otherProp.arraySize = 0;
+          HandleChangeCallback(t, changedCallback, prop, otherProp, new object[] {null, null, 0});
+        }
+        EditorGUILayout.EndHorizontal();
       }
       EditorGUI.EndDisabledGroup();
     }
