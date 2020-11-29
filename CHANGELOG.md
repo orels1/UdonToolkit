@@ -1,11 +1,27 @@
 # Changelog
 
+## [v0.4.5](https://github.com/orels1/UdonToolkit/tree/v0.4.5) (2020-11-29)
+
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.4...v0.4.5)
+
+Drag & Drop is now implemented as a part of array rendering. You can now drag a bunch of game objects and the proper components will be picked up and put into the relevant fields of your arrays and ListViews.
+
+For List Views it will try to look for the components specified in list view types to populate either or both of the fields.
+
+This release also significantly simplifies the Skybox Adjustment behaviour and fixes a bug with OnValueChange handlers not being passed correct parameters in some cases.
+
+Old `UTTestController` has also been replaced by a `CustomUISample` that now exists inside the demo folder. It should provide an up-to-date example of a fairly complex UI setup
+
+**Implemented enhancements:**
+
+- Add support for Drag & Drop on Arrays and ListViews [\#54](https://github.com/orels1/UdonToolkit/issues/54)
+
+**Closed issues:**
+
+- Remove the `Interact` trigger from UdonBehaviour Event autofill [\#53](https://github.com/orels1/UdonToolkit/issues/53)
+- Move the detailed installation instructions to the Readme [\#52](https://github.com/orels1/UdonToolkit/issues/52)
+
 ## [v0.4.4](https://github.com/orels1/UdonToolkit/tree/v0.4.4) (2020-10-07)
-
-[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.4...HEAD)
-
-- Fixed Player collision in Area Trigger
-- Added backwards compat for old code
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.3...v0.4.4)
 
