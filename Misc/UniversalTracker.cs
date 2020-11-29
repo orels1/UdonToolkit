@@ -1,3 +1,4 @@
+using System;
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -39,7 +40,19 @@ namespace UdonToolkit {
     [SectionHeader("Tracking Correction")]
     [HelpBox("The target transform will be rotated by this angles after copying source transforms.")]
     [UTEditor]
-    public Vector3 rotateBy = new Vector3(0, 45f, 0);
+    public Vector3 rotateBy = new Vector3(0, 0, 0);
+
+    [HideIf("ShowControllerCorrection")]
+    [HelpBox("This option will align the trackers with the player's hand laser direction", "ShowControllerCorrectionInverted")][UTEditor]
+    public bool correctForControllers;
+    
+    public bool ShowControllerCorrection() {
+      return trackingTarget == VRCPlayerApi.TrackingDataType.Head || trackBone || trackPlayspace || trackPlayerBase || !trackRotation;
+    }
+    
+    public bool ShowControllerCorrectionInverted() {
+      return !ShowControllerCorrection();
+    }
 
     private VRCPlayerApi player;
     private bool isEditor = true;
@@ -70,17 +83,13 @@ namespace UdonToolkit {
       targetTransform.SetPositionAndRotation(targetPos, targetRot);
     }
 
-    private void Update() {
-      if (isEditor) {
-        return;
-      }
-
+    private void LateUpdate() {
       Vector3 targetPos;
       Quaternion targetRot;
 
+      // we're tracking bones in regular Update, otherwise it doesnt sync with IK
       if (trackBone) {
-        targetPos = player.GetBonePosition(bone);
-        targetRot = player.GetBoneRotation(bone);
+        return;
       }
       else if (trackPlayerBase) {
         targetPos = player.GetPosition();
@@ -113,6 +122,31 @@ namespace UdonToolkit {
         targetPos = trackingData.position;
         targetRot = trackingData.rotation;
       }
+
+      if (trackPosition && trackRotation) {
+        targetTransform.SetPositionAndRotation(targetPos, targetRot);
+      } else if (trackPosition) {
+        targetTransform.position = targetPos;
+      }
+      else {
+        targetTransform.rotation = targetRot;
+      }
+
+      if (correctForControllers && !trackPlayspace && !trackPlayerBase) {
+        // Thx to Phasedragon for testing and finding out the exact formula
+        targetTransform.rotation = targetRot * Quaternion.Euler(-41, 0, 0);
+      }
+      if (rotateBy.magnitude > 0) targetTransform.Rotate(rotateBy);
+    }
+
+    private void Update() {
+      if (isEditor || !trackBone) return;
+
+      Vector3 targetPos;
+      Quaternion targetRot;
+
+      targetPos = player.GetBonePosition(bone);
+      targetRot = player.GetBoneRotation(bone);
 
       if (trackPosition && trackRotation) {
         targetTransform.SetPositionAndRotation(targetPos, targetRot);
