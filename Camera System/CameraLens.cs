@@ -72,9 +72,7 @@ namespace UdonToolkit {
       private Color activeColor = new Color(1, 1, 1, 0.4f);
       private Color inactiveTextColor = new Color(1, 1, 1, 0.4f);
       private Color activeTextColor = new Color(0,0,0,1f);
-      private bool tutorialPassed;
       private bool closeHelpShown;
-      private bool isFirstWatermarkClick = true;
 
       private void Start() {
         // property blocks
@@ -178,7 +176,6 @@ namespace UdonToolkit {
       }
 
       public void PassTutorial() {
-        tutorialPassed = true;
         cameraAnimator.SetBool("TChecked", true);
       }
 
