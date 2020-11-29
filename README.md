@@ -21,12 +21,15 @@
 - [Udon Sharp Compiler](https://github.com/Merlin-san/UdonSharp) (v0.18+)
 - [Optional] PostProcessing from Unity Package Manager (required for the Camera System)
 
-### Installation
+## Installation
 
 - Grab the latest package [from releases](https://github.com/orels1/UdonToolkit/releases)
 - Import it into the project
+    - If you're upgrading from version prior to 0.4.0 - you'll need to close and open the scene again after import
 - A welcome screen will appear with links to documentation
-- Take a look at the Demo scene for more usage examples
+- Open your `Project Settings` -> `UdonSharp` and in the `Default Behaviour Editor` select `UdonToolkit Editor`
+
+> It is required to use the default path when importing as for now asset paths are hardcoded
 
 ### [Check out the wiki for all the information](https://github.com/orels1/UdonToolkit/wiki)
 
