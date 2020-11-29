@@ -99,6 +99,11 @@ namespace UdonToolkit {
       return new[] {"no triggers found"};
     }
 
+    private static string[] BLACKLISTED_EVENT_NAMES = new[] {
+      "Update", "LateUpdate", "FixedUpdate", "Start", "OnEnable", "OnDisable", "OnTriggerEnter", "OnTriggerStay",
+      "OnTriggerExit", "OnPlayerTriggerEnter", "OnPlayerTriggerStay", "OnPlayerTriggerExit", "Interact"
+    };
+
     public static string[] GetUdonEvents(UdonSharpBehaviour source) {
       var events = new[] {"no events found"};
       if (source != null) {
@@ -106,6 +111,7 @@ namespace UdonToolkit {
         if (uPa != null) {
           var methods = uPa.sourceCsScript.GetClass().GetMethods();
           var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
+          mapped = mapped.Where(m => !BLACKLISTED_EVENT_NAMES.Contains(m)).ToArray();
           if (mapped.Length > 0) {
             events = mapped;
           }
