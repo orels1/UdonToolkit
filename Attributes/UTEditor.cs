@@ -306,6 +306,10 @@ namespace UdonToolkit {
       }
 
       if (otherProp == null) {
+        if (m.GetParameters().Length == 1) {
+          m.Invoke(t, new object[] {arrVal.ToArray()});
+          return;
+        }
         m.Invoke(t,
           m.GetParameters().Length > 2
             ? appended
@@ -315,6 +319,11 @@ namespace UdonToolkit {
       
       for (int j = 0; j < otherProp.arraySize; j++) {
         otherArrVal.Add(otherProp.GetArrayElementAtIndex(j));
+      }
+
+      if (m.GetParameters().Length == 2) {
+        m.Invoke(t, new object[] {arrVal.ToArray(), otherArrVal.ToArray()});
+        return;
       }
       m.Invoke(t,
       m.GetParameters().Length > 3
