@@ -82,6 +82,9 @@ namespace UdonToolkit {
         m?.Invoke(t, new object[] {serializedObject});
       }
       
+      // for direct editing of fields in case of jagged arrays - we need to record changes
+      Undo.RecordObject(t, undoString);
+      
       // Actual GUI
       try {
         DrawGUI(t);
