@@ -12,27 +12,6 @@ namespace UdonToolkit {
     "This object can be kept disabled if using instant transition, it will still work as expected.")]
   [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#skybox-adjustment")]
   public class SkyboxAdjustment : UdonSharpBehaviour {
-    [SectionHeader("Default State")] [UTEditor]
-    public Material defaultSkybox;
-    
-    [ListView("Default Floats List")]
-    [Popup("shader", "@defaultSkybox", true)] [UTEditor]
-    public string[] defaultFloatNames;
-    [ListView("Default Floats List")] [UTEditor]
-    public float[] defaultFloatValues;
-    
-    [ListView("Default Colors List")]
-    [Popup("shader", "@defaultSkybox", "color",  true)] [UTEditor]
-    public string[] defaultColorNames;
-    [ListView("Default Colors List")] [UTEditor]
-    public Color[] defaultColorValues;
-    
-    [ListView("Default Vectors List")]
-    [Popup("shader", "@defaultSkybox", "vector",  true)] [UTEditor]
-    public string[] defaultVector3Names;
-    [ListView("Default Vectors List")][UTEditor]
-    public Vector3[] defaultVector3Values;
-
     [SectionHeader("Active State")] [UTEditor]
     public Material activeSkybox;
     
@@ -57,17 +36,7 @@ namespace UdonToolkit {
     [OnValueChanged("ToggleSelf")]
     [SectionHeader("Transition")][UTEditor]
     public bool instantTransition = true;
-    
-    #if !COMPILER_UDONSHARP && UNITY_EDITOR
-    private void ToggleSelf(SerializedObject obj, SerializedProperty prop) {
-      var val = prop.boolValue;
-      if (!val) {
-        obj.FindProperty("activeSkybox").objectReferenceValue = defaultSkybox;
-        obj.ApplyModifiedProperties();
-      }
-    }
-    #endif
-    
+
     [HelpBox("Transition only applies to material properties, as smooth transition between materials is not possible. Active Skybox material field is set to be the same as default.", "@!instantTransition")]
     [HelpBox("Transition time cannot be negative", "CheckValidTransition")]
     [UTEditor]
@@ -81,12 +50,53 @@ namespace UdonToolkit {
     private bool lerping;
     private float lerpEnd;
 
+    private string[] sFloatNames;
+    private float[] sFloatVals;
+    private string[] sColorNames;
+    private Color[] sColorVals;
+    private string[] sVectorNames;
+    private Vector3[] sVectorVals;
+    
+    private string[] eFloatNames;
+    private float[] eFloatVals;
+    private string[] eColorNames;
+    private Color[] eColorVals;
+    private string[] eVectorNames;
+    private Vector3[] eVectorVals;
+
     public void Trigger() {
       if (instantTransition || transitionTime <= 0) {
-        RenderSettings.skybox = active ? defaultSkybox : activeSkybox;
+        RenderSettings.skybox = activeSkybox;
         SetFinalValues();
-        active = !active;
         return;
+      }
+
+      eFloatNames = activeFloatNames;
+      eFloatVals = activeFloatValues;
+      eColorNames = activeColorNames;
+      eColorVals = activeColorValues;
+      eVectorNames = activeVector3Names;
+      eVectorVals = activeVector3Values;
+
+      Debug.Log("start floats empty, populating");
+      sFloatVals = new float[eFloatVals.Length];
+      Debug.Log($"new floats length is {sFloatVals.Length}");
+      for (int i = 0; i < eFloatNames.Length; i++) {
+        sFloatVals[i] = activeSkybox.GetFloat(eFloatNames[i]);
+      }
+      
+      Debug.Log("start colors empty, populating");
+      sColorVals = new Color[eColorVals.Length];
+      Debug.Log($"new colors length is {sColorVals.Length}");
+      for (int i = 0; i < eColorNames.Length; i++) {
+        sColorVals[i] = activeSkybox.GetColor(eColorNames[i]);
+      }
+
+      Debug.Log("start vectors empty, populating");
+      sVectorVals = new Vector3[eVectorVals.Length];
+      Debug.Log($"new vectors length is {sVectorVals.Length}");
+      for (int i = 0; i < eVectorNames.Length; i++) {
+        sVectorVals[i] = activeSkybox.GetVector(eVectorNames[i]);
       }
 
       lerping = true;
@@ -94,39 +104,29 @@ namespace UdonToolkit {
     }
 
     private void LerpValues(float alpha) {
-      var mat = defaultSkybox;
-      var sFloatNames = !active ? defaultFloatNames : activeFloatNames;
-      var sFloatVals = !active ? defaultFloatValues : activeFloatValues;
-      var sColorNames = !active ? defaultColorNames : activeColorNames;
-      var sColorVals = !active ? defaultColorValues : activeColorValues;
-      var sVectorNames = !active ? defaultVector3Names : activeVector3Names;
-      var sVectorVals = !active ? defaultVector3Values : activeVector3Values;
-
-      var eFloatVals = active ? defaultFloatValues : activeFloatValues;
-      var eColorVals = active ? defaultColorValues : activeColorValues;
-      var eVectorVals = active ? defaultVector3Values : activeVector3Values;
-
-      for (int i = 0; i < sFloatNames.Length; i++) {
-        mat.SetFloat(sFloatNames[i], Mathf.Lerp(sFloatVals[i], eFloatVals[i], alpha));
+      RenderSettings.skybox = activeSkybox;
+      var mat = activeSkybox;
+      for (int i = 0; i < eFloatNames.Length; i++) {
+        mat.SetFloat(eFloatNames[i], Mathf.Lerp(sFloatVals[i], eFloatVals[i], alpha));
       }
 
-      for (int i = 0; i < sColorNames.Length; i++) {
-        mat.SetColor(sColorNames[i], Color.Lerp(sColorVals[i], eColorVals[i], alpha));
+      for (int i = 0; i < eColorNames.Length; i++) {
+        mat.SetColor(eColorNames[i], Color.Lerp(sColorVals[i], eColorVals[i], alpha));
       }
 
-      for (int i = 0; i < sVectorNames.Length; i++) {
-        mat.SetVector(sVectorNames[i], Vector3.Lerp(sVectorVals[i], eVectorVals[i], alpha));
+      for (int i = 0; i < eVectorNames.Length; i++) {
+        mat.SetVector(eVectorNames[i], Vector3.Lerp(sVectorVals[i], eVectorVals[i], alpha));
       }
     }
 
     private void SetFinalValues() {
-      var floatNames = active ? defaultFloatNames : activeFloatNames;
-      var floatVals = active ? defaultFloatValues : activeFloatValues;
-      var colorNames = active ? defaultColorNames : activeColorNames;
-      var colorVals = active ? defaultColorValues : activeColorValues;
-      var vectorNames = active ? defaultVector3Names : activeVector3Names;
-      var vectorVals = active ? defaultVector3Values : activeVector3Values;
-      var mat = active ? defaultSkybox : activeSkybox;
+      var floatNames = activeFloatNames;
+      var floatVals = activeFloatValues;
+      var colorNames = activeColorNames;
+      var colorVals = activeColorValues;
+      var vectorNames = activeVector3Names;
+      var vectorVals = activeVector3Values;
+      var mat = activeSkybox;
       for (int i = 0; i < floatNames.Length; i++) {
         mat.SetFloat(floatNames[i], floatVals[i]);
       }
@@ -145,7 +145,6 @@ namespace UdonToolkit {
       if (Time.time >= lerpEnd) {
         SetFinalValues();
         lerping = false;
-        active = !active;
         return;
       }
 
