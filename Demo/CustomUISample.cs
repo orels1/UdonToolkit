@@ -85,7 +85,7 @@ public class CustomUISample : UdonSharpBehaviour {
 
   [SectionHeader("List View")]
   [OnValueChanged("EventAdded")]
-  [ListView("EventsList", "AddEvent", addButtonText = "Add Event")]
+  [ListView("EventsList", "AddEvent", "Add Event")]
   public string[] events;
 
   [ListView("EventsList")] public UdonSharpBehaviour[] targets;
