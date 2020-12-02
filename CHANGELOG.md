@@ -1,9 +1,21 @@
 # Changelog
 
+## [v0.4.6](https://github.com/orels1/UdonToolkit/tree/v0.4.6) (2020-12-02)
+
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.5...v0.4.6)
+
+I introduced a bug in `0.4.5` that caused a project build to crash if you had demo assets imported. This release fixes it
+
+**Fixed bugs:**
+
+- CustomUISample crashes build process [\#56](https://github.com/orels1/UdonToolkit/issues/56)
+
 ## [v0.4.5](https://github.com/orels1/UdonToolkit/tree/v0.4.5) (2020-11-29)
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.4...v0.4.5)
 
+- Fixed Player collision in Area Trigger
+- Added backwards compat for old code
 Drag & Drop is now implemented as a part of array rendering. You can now drag a bunch of game objects and the proper components will be picked up and put into the relevant fields of your arrays and ListViews.
 
 For List Views it will try to look for the components specified in list view types to populate either or both of the fields.
