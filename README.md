@@ -31,7 +31,7 @@
 
 > It is required to use the default path when importing as for now asset paths are hardcoded
 
-### [Check out the wiki for all the information](https://github.com/orels1/UdonToolkit/wiki)
+### [Check out the wiki for all the information](https://ut.orels.sh/)
 
 ## Copyright
 
