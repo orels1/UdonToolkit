@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.5.0](https://github.com/orels1/UdonToolkit/tree/v0.5.0) (2021-01-11)
+
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.6...v0.5.0)
+
+![](https://cdn.vrchat.sh/ut/promo/Flight%20System%20Banner%20Wide.png)
+
+This release adds my flight system to Udon Toolkit! [Check out the documentation to learn more](https://ut.orels.sh/systems/flight-system)
+
+**Implemented enhancements:**
+
+- Add FlightSystem [\#59](https://github.com/orels1/UdonToolkit/issues/59)
+
+**Closed issues:**
+
+- Add version.txt [\#58](https://github.com/orels1/UdonToolkit/issues/58)
+
 ## [v0.4.6](https://github.com/orels1/UdonToolkit/tree/v0.4.6) (2020-12-02)
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.5...v0.4.6)
