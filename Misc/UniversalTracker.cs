@@ -91,7 +91,7 @@ namespace UdonToolkit {
       if (trackBone) {
         return;
       }
-      else if (trackPlayerBase) {
+      if (trackPlayerBase) {
         targetPos = player.GetPosition();
         targetRot = player.GetRotation();
       }
