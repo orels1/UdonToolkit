@@ -1,0 +1,11 @@
+﻿fileFormatVersion: 2
+guid: 00a01689cdeb20640b2d80875b3c6ff0
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _CalibrationFloorDiffuse: {fileID: 2800000, guid: f74216b7220d1974ba5822647df1cf7c,
+      type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
