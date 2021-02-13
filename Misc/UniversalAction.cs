@@ -87,7 +87,7 @@ namespace UdonToolkit {
     public GameObject[] goTargets;
 
     [FoldoutGroup("Game Object Toggles")] [ListView("Game Objects List")] [LVHeader("Toggle Actions")] [Popup("method", "@goToggleOptions", true)]
-    public int[] goToggleEvents;
+    public string[] goToggleEvents;
 
     [HideInInspector] public string[] goToggleOptions = {
       "Enable",
@@ -103,7 +103,7 @@ namespace UdonToolkit {
     public Collider[] colliderTargets;
 
     [FoldoutGroup("Collider Toggles")] [ListView("Colliders List")] [Popup("method", "@goToggleOptions", true)]
-    public int[] colliderToggleEvents;
+    public string[] colliderToggleEvents;
     #endregion
 
     #region Audio
@@ -193,12 +193,12 @@ namespace UdonToolkit {
     private void FireObjectToggles() {
       if (!fireObjectToggles) return;
       for (int i = 0; i < goTargets.Length; i++) {
-        if (goToggleEvents[i] == 2) {
+        if (goToggleEvents[i] == "Toggle") {
           goTargets[i].SetActive(!goTargets[i].activeSelf);
           continue;
         }
 
-        var state = goToggleEvents[i] == 0;
+        var state = goToggleEvents[i] == "Enable";
         goTargets[i].SetActive(state);
       }
     }
@@ -206,12 +206,12 @@ namespace UdonToolkit {
     private void FireColliderToggles() {
       if (!fireColliderToggles) return;
       for (int i = 0; i < colliderTargets.Length; i++) {
-        if (colliderToggleEvents[i] == 2) {
+        if (colliderToggleEvents[i] == "Toggle") {
           colliderTargets[i].enabled = !colliderTargets[i].enabled;
           continue;
         }
 
-        var state = colliderToggleEvents[i] == 0;
+        var state = colliderToggleEvents[i] == "Enable";
         colliderTargets[i].enabled = state;
       }
     }
