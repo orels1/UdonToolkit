@@ -183,20 +183,20 @@ namespace UdonToolkit {
         methodsExpanded = UTStyles.FoldoutHeader("Udon Events", methodsExpanded);
         if (methodsExpanded) {
           EditorGUILayout.BeginVertical(new GUIStyle("helpBox"));
-          var rowBreak = Mathf.Max(1, Mathf.Min(3, behInfo.buttons.Length - 1));
+          var rowBreak = Mathf.Max(1, Mathf.Min(3, behInfo.udonCustomEvents.Length - 1));
           var rowEndI = -100;
-          foreach (var (button, i) in behInfo.buttons.WithIndex()) {
-            if (i == rowEndI && i != behInfo.buttons.Length - 1) {
+          foreach (var (button, i) in behInfo.udonCustomEvents.WithIndex()) {
+            if (i == rowEndI && i != behInfo.udonCustomEvents.Length - 1) {
               EditorGUILayout.EndHorizontal();
             }
-            if (i % rowBreak == 0 && i != behInfo.buttons.Length - 1) {
+            if (i % rowBreak == 0 && i != behInfo.udonCustomEvents.Length - 1) {
               EditorGUILayout.BeginHorizontal();
-              rowEndI = Math.Min(i + rowBreak, behInfo.buttons.Length - 1);
+              rowEndI = Math.Min(i + rowBreak, behInfo.udonCustomEvents.Length - 1);
             }
-            if (GUILayout.Button(button.Name)) {
-              t.SendCustomEvent(button.Name);
+            if (GUILayout.Button(button)) {
+              t.SendCustomEvent(button);
             }
-            if (i == behInfo.buttons.Length - 1 && rowEndI != -100) {
+            if (i == behInfo.udonCustomEvents.Length - 1 && rowEndI != -100) {
               EditorGUILayout.EndHorizontal();
             }
           }
