@@ -2,66 +2,39 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using UdonSharp;
 using UnityEditor;
 using UnityEngine;
-using VRC.Udon;
-using VRC.Udon.Editor.ProgramSources;
-using VRC.Udon.Serialization.OdinSerializer.Utilities;
 
 namespace UdonToolkit{
-  // Unapologetically stolen from
-  // https://forum.unity.com/threads/drawing-a-field-using-multiple-property-drawers.479377/#post-3331025
-  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
-  public abstract class PropertyModifierAttribute : Attribute {
-    public int order { get; set; }
-
-    public virtual float GetHeight(SerializedProperty property, GUIContent label, float height) {
-      return height;
+  /// <summary>
+  /// These attributes directly affect field drawing using the provided overrides
+  /// </summary>
+  [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
+  public class UTPropertyAttribute: Attribute {
+    public virtual void BeforeGUI(SerializedProperty property) {
+    }
+    
+    public virtual void OnGUI(SerializedProperty property) {
     }
 
-    public virtual bool BeforeGUI(ref Rect position, SerializedProperty property, GUIContent label, bool visible) {
+    public virtual void AfterGUI(SerializedProperty property) {
+    }
+
+    public virtual bool GetVisible(SerializedProperty property) {
       return true;
     }
-    public virtual void AfterGUI(Rect position, SerializedProperty property, GUIContent label) {
-    }
   }
 
-  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
-  public class ModifiablePropertyAttribute : PropertyAttribute {
-    public List<PropertyModifierAttribute> modifiers = null;
-
-    public virtual void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
-      EditorGUI.PropertyField(position, property, label);
-    }
-
-    public virtual float GetPropertyHeight(SerializedProperty property, GUIContent label) {
-      return EditorGUI.GetPropertyHeight(property, label);
-    }
-  }
-  
-  [Obsolete("This attribute is not needed anymore as it is only used with now deprecated Controllers. Learn more: https://l.vrchat.sh/utV4Migrate")]
-  public class UdonPublicAttribute : ModifiablePropertyAttribute {
-    public string varName;
-
-    public UdonPublicAttribute() {
-    }
-
-    public UdonPublicAttribute(string customName) {
-      varName = customName;
-    }
-  }
-  
   /// <summary>
-  /// Enables the UdonToolkit editor attributes to function as intended. Highly recommend to put this on every field alongside other UdonToolkit attributes
+  /// These attributes are used to pass dat to custom logic in the UTEditor
   /// </summary>
-  public class UTEditorAttribute : ModifiablePropertyAttribute {
+  [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
+  public class UTVisualAttribute : Attribute {
   }
   
-  public class SectionHeaderAttribute : PropertyModifierAttribute {
-    public string text;
-    private float mHeight = 20;
+  public class SectionHeaderAttribute : UTPropertyAttribute {
+    public readonly string text;
     private bool isInList;
     private bool savedHeight;
 
@@ -73,39 +46,13 @@ namespace UdonToolkit{
       this.text = text;
     }
 
-    public override float GetHeight(SerializedProperty property, GUIContent label, float height) {
-      if (!savedHeight) {
-        var size = EditorStyles.helpBox.CalcSize(new GUIContent(text));
-        mHeight = size.y;
-        savedHeight = true;
-      }
-      if (property.name == "data" && property.depth > 0) {
-        isInList = true;
-        return height;
-      }
-      return height + mHeight + 3;
-    }
-
-    public override bool BeforeGUI(ref Rect position, SerializedProperty property, GUIContent label, bool visible) {
-      if (!visible) return false;
-      if (isInList) return true;
-      var lRect = GUILayoutUtility.GetLastRect();
-      var rect = EditorGUI.IndentedRect(position);
-      var fullWidth = EditorGUIUtility.currentViewWidth;
-      rect.width = EditorGUIUtility.currentViewWidth;
-      if (Math.Abs(fullWidth - lRect.width) > 0.1f) {
-        rect.width -= fullWidth - lRect.width;
-      }
-      rect.height = mHeight;
-      UTStyles.RenderSectionHeader(ref rect, text);
-      position.yMin += mHeight + 3;
-
-      return true;
+    public override void BeforeGUI(SerializedProperty property) {
+      UTStyles.RenderSectionHeader(text);
     }
   }
 
-  public class ToggleAttribute : ModifiablePropertyAttribute {
-    private readonly string label = "";
+  public class ToggleAttribute : UTPropertyAttribute {
+    private readonly string label;
 
     /// <summary>
     /// Converts a boolean field checkbox into a toggle-style button
@@ -122,27 +69,21 @@ namespace UdonToolkit{
       label = text;
     }
 
-    public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {
-      return EditorGUI.GetPropertyHeight(property, label) + 2;
-    }
-
-    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
-      if (this.label != "") {
-        label.text = this.label;
-      }
+    public override void OnGUI(SerializedProperty property) {
+      var text = String.IsNullOrWhiteSpace(label) ? property.displayName : label;
       if (property.type != "bool") {
-        EditorGUI.PropertyField(position, property, label);
+        EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
         return;
       }
-
-      position.yMax -= 2;
-      property.boolValue = GUI.Toggle(position, property.boolValue, label, "Button");
+      
+      property.boolValue = GUILayout.Toggle(property.boolValue, text, "Button");
     }
   }
 
-  public class RangeSliderAttribute : ModifiablePropertyAttribute {
-    private float min;
-    private float max;
+  public class RangeSliderAttribute : UTPropertyAttribute {
+    private readonly float min;
+    private readonly float max;
+    private readonly bool hideLabel;
 
     /// <summary>
     /// Draws a value slider that goes from min to max. Can be put on both int and float fields
@@ -153,10 +94,16 @@ namespace UdonToolkit{
       this.min = min;
       this.max = max;
     }
+    
+    public RangeSliderAttribute(float min, float max, bool hideLabel) {
+      this.min = min;
+      this.max = max;
+      this.hideLabel = hideLabel;
+    }
 
-    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+    public override void OnGUI(SerializedProperty property) {
       if (min > max) {
-        EditorGUI.PropertyField(position, property, label);
+        EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
         return;
       }
       switch (property.type) {
@@ -168,7 +115,7 @@ namespace UdonToolkit{
           if (property.floatValue > max) {
             property.floatValue = max;
           }
-          EditorGUI.Slider(position, property, min, max, label);
+          EditorGUILayout.Slider(property, min, max, new GUIContent(hideLabel ? "" : property.displayName));
           break;
         case "int":
           var intMin = Convert.ToInt32(Mathf.Round(min));
@@ -180,10 +127,10 @@ namespace UdonToolkit{
           if (property.intValue > intMax) {
             property.intValue = intMax;
           }
-          EditorGUI.IntSlider(position, property, intMin, intMax, label);
+          EditorGUILayout.IntSlider(property, intMin, intMax, new GUIContent(hideLabel ? "" : property.displayName));
           break;
         default:
-          EditorGUI.PropertyField(position, property, label);
+          EditorGUILayout.PropertyField(property, new GUIContent(hideLabel ? "" : property.displayName));
           break;
       }
     }
@@ -192,8 +139,8 @@ namespace UdonToolkit{
   /// <summary>
   /// Calls the provided method whenever the value is changed, <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#onvaluechanged">see wiki for more details</a>
   /// </summary>
-  public class OnValueChangedAttribute : PropertyModifierAttribute {
-    public string methodName;
+  public class OnValueChangedAttribute : UTVisualAttribute {
+    public readonly string methodName;
     private object oldValue;
     
     /// <summary>
@@ -207,17 +154,13 @@ namespace UdonToolkit{
       }
       this.methodName = methodName;
     }
-
-    public override bool BeforeGUI(ref Rect position, SerializedProperty property, GUIContent label, bool visible) {
-      return visible;
-    }
   }
 
   /// <summary>
   /// Hides a field based on the provided field or method
   /// </summary>
-  public class HideIfAttribute : PropertyModifierAttribute {
-    public string methodName;
+  public class HideIfAttribute : UTPropertyAttribute {
+    public readonly string methodName;
     private bool isVisible;
 
     /// <summary>
@@ -228,12 +171,7 @@ namespace UdonToolkit{
       this.methodName = methodName;
     }
 
-    public override float GetHeight(SerializedProperty property, GUIContent label, float height) {
-      if (!isVisible) return 0;
-      return height;
-    }
-
-    public override bool BeforeGUI(ref Rect position, SerializedProperty property, GUIContent label, bool visible) {
+    public override bool GetVisible(SerializedProperty property) {
       isVisible = UTUtils.GetVisibleThroughAttribute(property, methodName, true);
       return isVisible;
     }
@@ -242,7 +180,8 @@ namespace UdonToolkit{
   /// <summary>
   /// Shows a help box under a field
   /// </summary>
-  public class HelpBoxAttribute : PropertyModifierAttribute {
+  [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
+  public class HelpBoxAttribute : UTPropertyAttribute {
     public readonly string text;
     public readonly string methodName;
     private bool isVisible = true;
@@ -267,100 +206,49 @@ namespace UdonToolkit{
       this.text = text;
       this.methodName = methodName;
     }
-
-    public override float GetHeight(SerializedProperty property, GUIContent label, float height) {
-      fieldHeight = height;
-      if (!isVisible) return height;
-      if (property.name == "data" && property.depth > 0) return height;
-      boxHeight =
-        new GUIStyle(EditorStyles.helpBox) { fontSize = 10 }.CalcHeight(
-          new GUIContent(text), EditorGUIUtility.currentViewWidth - 10);
-      return height + boxHeight + 2;
-    }
-
-    public override bool BeforeGUI(ref Rect position, SerializedProperty property, GUIContent label, bool visible) {
-      isVisible = visible;
-      if (!visible) return false;
+    
+    public override void AfterGUI(SerializedProperty property) {
       if (methodName != "") {
         isVisible = UTUtils.GetVisibleThroughAttribute(property, methodName, false);
       }
-      if (isVisible && property.name != "data" && property.depth == 0) {
-        position.yMax -= boxHeight;
-      }
-      return true;
-    }
 
-    public override void AfterGUI(Rect position, SerializedProperty property, GUIContent label) {
       if (!isVisible) return;
-      if (property.name == "data" && property.depth > 0) return;
-      var rect = EditorGUI.IndentedRect(position);
-      // check for section header
-      var secHeader = UTUtils.GetPropertyAttribute<SectionHeaderAttribute>(property);
-      rect.yMin += secHeader != null ? fieldHeight / 2 + 2 : fieldHeight + 2;
-      rect.height = boxHeight;
-      UTStyles.RenderNote(ref rect, text);
+      UTStyles.RenderNote(text);
     }
   }
 
   /// <summary>
-  /// Combines fields into a horizontal group. Fields should follow each other to work correctly
+  /// Combines fields into a horizontal group
   /// </summary>
-  public class HorizontalAttribute : PropertyModifierAttribute {
-    private string name;
-    private List<FieldInfo> items = new List<FieldInfo>();
-    private float size;
-    private int index;
-    private float yMin;
-    private float height;
+  public class HorizontalAttribute : UTPropertyAttribute {
+    public readonly string name;
+    public readonly bool showHeader;
 
     /// <summary>
-    /// Combines fields into a horizontal group. Fields should follow each other to work correctly
+    /// Combines fields into a horizontal group
     /// </summary>
     /// <param name="name">Name of the group (must be unique)</param>
     public HorizontalAttribute(string name) {
       this.name = name;
     }
 
-    public override float GetHeight(SerializedProperty property, GUIContent label, float height) {
-      this.height = height;
-      if (items.Count > 0 && index != 0) {
-        return 0;
-      }
-    
-      return height;
-    }
-
-    public override bool BeforeGUI(ref Rect position, SerializedProperty property, GUIContent label, bool visible) {
-      items = property.serializedObject.targetObject.GetType().GetFields().Where(f => f.GetAttribute<HorizontalAttribute>() != null && f.GetAttribute<HorizontalAttribute>().name == name).ToList();
-      var attrs = items.Select(f => f.GetAttribute<HorizontalAttribute>()).ToList();
-      if (items.Count > 1) {
-        index = items.FindIndex(a => a.Name == property.name);
-        size = Mathf.Round(position.xMax / items.Count);
-        var startOffset = 0;
-        if (index == 0) {
-          startOffset = 10;
-        }
-        position = new Rect(position) {
-          x = startOffset + size * index + 3f,
-          xMax = size * (index + 1)
-        };
-        if (index > 0) {
-          var shift = height + 2 * index;
-          position.yMin -= shift;
-          position.yMax = position.yMin + height;
-        }
-      }
-      
-      return visible;
+    /// <summary>
+    /// Combines fields into a horizontal group
+    /// </summary>
+    /// <param name="name">Name of the group (must be unique)</param>
+    /// <param name="showHeader">Whether to show the header with the name of the group</param>
+    public HorizontalAttribute(string name, bool showHeader) {
+      this.name = name;
+      this.showHeader = showHeader;
     }
   }
 
   /// <summary>
   /// Hides the label of the field
   /// </summary>
-  public class HideLabelAttribute : ModifiablePropertyAttribute {
-    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
-      EditorGUI.PropertyField(position, property, new GUIContent());
+  public class HideLabelAttribute : UTPropertyAttribute {
+    public override void OnGUI(SerializedProperty property) {
+      EditorGUILayout.PropertyField(property, new GUIContent());
     }
   }
 
@@ -368,36 +256,47 @@ namespace UdonToolkit{
   /// Draws a popup for a field with options to choose from
   /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#popup">See More</a>
   /// </summary>
-  public class PopupAttribute : ModifiablePropertyAttribute {
-    public string methodName;
+  public class PopupAttribute : UTPropertyAttribute {
+    public readonly string methodName;
     private int selectedIndex;
     private GUIContent[] options;
-    private bool hideLabel;
-    public PopupSource sourceType;
-    public ShaderPropType shaderPropType = ShaderPropType.Float;
+    private readonly bool hideLabel;
+    public readonly PopupSource sourceType;
+    public readonly ShaderPropType shaderPropType = ShaderPropType.Float;
     private Dictionary<string, PopupSource> sourcesMap = new Dictionary<string, PopupSource>() {
       {"method", PopupSource.Method},
-      {"animator", PopupSource.Animator},
+      {"animator", PopupSource.AnimatorTrigger},
+      {"animatorTrigger", PopupSource.AnimatorTrigger},
+      {"animatorBool", PopupSource.AnimatorBool},
+      {"animatorFloat", PopupSource.AnimatorFloat},
+      {"animatorInt", PopupSource.AnimatorInt},
       {"behaviour", PopupSource.UdonBehaviour},
+      {"programVariable", PopupSource.UdonProgramVariable},
       {"shader", PopupSource.Shader}
     };
     private Dictionary<string, ShaderPropType> shaderPropsMap = new Dictionary<string, ShaderPropType>() {
       {"float", ShaderPropType.Float},
       {"color", ShaderPropType.Color},
-      {"vector", ShaderPropType.Vector}
+      {"vector", ShaderPropType.Vector},
+      {"all", ShaderPropType.All}
     };
 
     public enum PopupSource {
       Method,
-      Animator,
+      AnimatorTrigger,
+      AnimatorBool,
+      AnimatorFloat,
+      AnimatorInt,
       UdonBehaviour,
+      UdonProgramVariable,
       Shader
     }
 
     public enum ShaderPropType {
       Float,
       Color,
-      Vector
+      Vector,
+      All
     }
 
     /// <summary>
@@ -407,34 +306,6 @@ namespace UdonToolkit{
     public PopupAttribute(string methodName) {
       sourceType = PopupSource.Method;
       this.methodName = methodName;
-    }
-    
-    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
-    public PopupAttribute(PopupSource sourceType, string methodName) {
-      this.sourceType = sourceType;
-      this.methodName = methodName;
-    }
-
-    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
-    public PopupAttribute(PopupSource sourceType, string methodName, ShaderPropType shaderPropType) {
-      this.sourceType = sourceType;
-      this.methodName = methodName;
-      this.shaderPropType = shaderPropType;
-    }
-
-    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
-    public PopupAttribute(PopupSource sourceType, string methodName, bool hideLabel) {
-      this.sourceType = sourceType;
-      this.methodName = methodName;
-      this.hideLabel = hideLabel;
-    }
-    
-    [Obsolete("Deprecated since UdonToolkit 0.4.0, use the other Popup signatures")]
-    public PopupAttribute(PopupSource sourceType, string methodName, ShaderPropType shaderPropType, bool hideLabel) {
-      this.sourceType = sourceType;
-      this.methodName = methodName;
-      this.shaderPropType = shaderPropType;
-      this.hideLabel = hideLabel;
     }
 
     /// <summary>
@@ -485,48 +356,74 @@ namespace UdonToolkit{
       this.methodName = methodName;
     }
 
-
-    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+    public override void OnGUI(SerializedProperty property) {
       if (property.name == "data" && property.depth > 0) {
-        EditorGUI.PropertyField(position, property, label);
+        EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
         return;
       }
       var fieldType = property.serializedObject.targetObject.GetType().GetField(property.name).FieldType;
       var source = UTUtils.GetValueThroughAttribute(property, methodName, out var sourceValType);
       if (sourceType == PopupSource.Method && fieldType != sourceValType || property.type != "string") {
-        EditorGUI.PropertyField(position, property, label);
+        EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
         return;
       }
       
-      if (sourceType == PopupSource.Animator) {
+      if (sourceType == PopupSource.AnimatorTrigger) {
         options = UTUtils.GetAnimatorTriggers(source as Animator).Select(o => new GUIContent(o)).ToArray();
+      }
+      else if (sourceType == PopupSource.AnimatorBool) {
+        options = UTUtils.GetAnimatorBools(source as Animator).Select(o => new GUIContent(o)).ToArray();
+      }
+      else if (sourceType == PopupSource.AnimatorFloat) {
+        options = UTUtils.GetAnimatorFloats(source as Animator).Select(o => new GUIContent(o)).ToArray();
+      }
+      else if (sourceType == PopupSource.AnimatorInt) {
+        options = UTUtils.GetAnimatorInts(source as Animator).Select(o => new GUIContent(o)).ToArray();
       }
       else if (sourceType == PopupSource.UdonBehaviour) {
         options = UTUtils.GetUdonEvents(source as UdonSharpBehaviour).Select(o => new GUIContent(o)).ToArray();
       }
+      else if (sourceType == PopupSource.UdonProgramVariable) {
+        options = UTUtils.GetUdonVariables(source as UdonSharpBehaviour).Select(o => new GUIContent(o)).ToArray();
+      }
       else if (sourceType == PopupSource.Shader) {
-        options = UTUtils.GetShaderPropertiesByType(source , shaderPropType).Select(o => new GUIContent(o)).ToArray();
+        if (shaderPropType == ShaderPropType.All) {
+          options = UTUtils.GetAllShaderProperties(source ).Select(o => new GUIContent(o)).ToArray();
+        }
+        else {
+          options = UTUtils.GetShaderPropertiesByType(source , shaderPropType).Select(o => new GUIContent(o)).ToArray();
+        }
       }
       else {
         options = ((string[]) source).Select(o => new GUIContent(o)).ToArray();
       }
 
-      selectedIndex = options.ToList().FindIndex(i => i.text == property.stringValue);
-      if (selectedIndex >= options.Length || selectedIndex < 0) {
-        selectedIndex = 0;
+      if (property.type == "int") {
+        selectedIndex = property.intValue;
+      }
+      else {
+        selectedIndex = options.ToList().FindIndex(i => i.text == property.stringValue);
+        if (selectedIndex >= options.Length || selectedIndex < 0) {
+          selectedIndex = 0;
+        }
       }
       
-      var finalLabel = hideLabel ? new GUIContent() : label;
-      selectedIndex = EditorGUI.Popup(position, finalLabel, selectedIndex, options);
-      property.stringValue = options[selectedIndex].text;
+      var finalLabel = hideLabel ? new GUIContent() : new GUIContent(property.displayName);
+      selectedIndex = EditorGUILayout.Popup(finalLabel, selectedIndex, options);
+      if (property.type == "int") {
+        property.intValue = selectedIndex;
+      }
+      else {
+        property.stringValue = options[selectedIndex].text;
+      }
     }
   }
 
   /// <summary>
   /// Draws combined list of two arrays. Helps maintain same length between the two and associate values of one array with another.
-  /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#listview">See More</a>
+  /// <a href="https://ut.orels.sh/attributes/attributes-list#listview">See More</a>
   /// </summary>
-  public class ListViewAttribute : ModifiablePropertyAttribute {
+  public class ListViewAttribute : UTVisualAttribute {
     public readonly string name;
     public readonly string addMethodName;
     public string addButtonText = "Add Element";
@@ -553,7 +450,7 @@ namespace UdonToolkit{
 
     /// <summary>
     /// Draws combined list of two arrays. Helps maintain same length between the two and associate values of one array with another.
-    /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#listview">See More</a>
+    /// <a href="https://ut.orels.sh/attributes/attributes-list#listview">See More</a>
     /// </summary>
     /// <param name="name">Name of the ListView (must be unique)</param>
     /// <param name="addMethodName">Method to call when user tries to add a new value</param>
@@ -564,12 +461,29 @@ namespace UdonToolkit{
       this.addButtonText = addButtonText;
     }
   }
+
+  /// <summary>
+  /// Specifies a custom column title for a list view.
+  /// Has no effect outside of a listview
+  /// </summary>
+  public class LVHeaderAttribute : UTVisualAttribute {
+    public readonly string title;
+
+    /// <summary>
+    /// Specifies a custom column title for a list view.
+    /// Has no effect outside of a listview
+    /// </summary>
+    /// <param name="title">The title to use</param>
+    public LVHeaderAttribute(string title) {
+      this.title = title;
+    }
+  }
   
   /// <summary>
   /// Makes the fields read only in the inspector
   /// </summary>
   [AttributeUsage(AttributeTargets.Field)]
-  public class DisabledAttribute : Attribute {
+  public class DisabledAttribute : UTPropertyAttribute {
     public readonly string methodName;
     /// <summary>
     /// Makes the fields read only in the inspector
@@ -583,6 +497,43 @@ namespace UdonToolkit{
     /// <param name="methodName"></param>
     public DisabledAttribute(string methodName) {
       this.methodName = methodName;
+    }
+  }
+
+  /// <summary>
+  /// Forces the label to display in places where is otherwise hidden
+  /// </summary>
+  [AttributeUsage(AttributeTargets.Field)]
+  public class ShowLabelAttribute : Attribute {
+    public readonly string label;
+    /// <summary>
+    /// Forces the label to display in places where is otherwise hidden
+    /// </summary>
+    public ShowLabelAttribute() {
+    }
+
+    /// <summary>
+    /// Forces the label to display in places where is otherwise hidden
+    /// </summary>
+    /// <param name="label">Custom label text</param>
+    public ShowLabelAttribute(string label) {
+      this.label = label;
+    }
+  }
+
+  public class FoldoutGroupAttribute : UTVisualAttribute {
+    public readonly string name;
+
+    public FoldoutGroupAttribute(string name) {
+      this.name = name;
+    }
+  }
+  
+  public class TabGroupAttribute : UTVisualAttribute {
+    public readonly string name;
+
+    public TabGroupAttribute(string name) {
+      this.name = name;
     }
   }
 
@@ -693,6 +644,7 @@ namespace UdonToolkit{
     }
   }
 }
+
 #else
 using System;
 using UnityEditor;
@@ -718,13 +670,13 @@ namespace UdonToolkit {
 
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class ListViewAttribute : Attribute {
-    public ListViewAttribute(object a) {
+    public ListViewAttribute(string a) {
     }
-
-    public ListViewAttribute(object a, object b) {
+    
+    public ListViewAttribute(string a, string b) {
     }
-
-    public ListViewAttribute(object a, object b, object c) {
+    
+    public ListViewAttribute(string a, string b, string c) {
     }
   }
 
@@ -788,6 +740,18 @@ namespace UdonToolkit {
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class HideLabelAttribute: Attribute {
     public HideLabelAttribute(){
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class FoldoutGroupAttribute : Attribute {
+    public FoldoutGroupAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class TabGroupAttribute : Attribute {
+    public TabGroupAttribute(object a) {
     }
   }
 

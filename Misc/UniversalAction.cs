@@ -9,105 +9,130 @@ namespace UdonToolkit {
   [CustomName("Universal Action")]
   [HelpMessage(
     "This component expects a \"Trigger\" event to fire.")]
-  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#universal-action")]
+  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#universal-action")]
   public class UniversalAction : UdonSharpBehaviour {
-    [SectionHeader("General")] [UTEditor]
-    public bool active = true;
-    
+    [SectionHeader("General")] public bool active = true;
+
     [HelpBox("Make sure this game object is always enabled when using delays.", "@fireAfterDelay")]
-    [UTEditor]
     public bool fireAfterDelay;
-    
-    [HideIf("@!fireAfterDelay")]
-    [Tooltip("Delay in seconds")]
-    [UTEditor]
+
+    [HideIf("@!fireAfterDelay")] [Tooltip("Delay in seconds")]
     public float delayLength;
-    
-    [SectionHeader("Animations")][UTEditor]
-    public bool fireAnimationTriggers;
-    
-    [ListView("Animator Triggers List")][UTEditor]
+
+    #region Animations
+    [FoldoutGroup("Animations")] public bool fireAnimationTriggers;
+
+    [FoldoutGroup("Animations")] [ListView("Animator Triggers List")]
     public Animator[] animators;
-    [ListView("Animator Triggers List")]
+
+    [FoldoutGroup("Animations")] [ListView("Animator Triggers List")] [LVHeader("Triggers")]
     [Popup("animator", "@animators", true)]
-    [UTEditor]
     public string[] animatorTriggers;
     
-    [SectionHeader("Udon Events")] [UTEditor]
-    public bool fireUdonEvents;
+    [FoldoutGroup("Animations")] [ListView("Animator Bools List")] [LVHeader("Animators")]
+    public Animator[] animatorBoolTargets;
+
+    [FoldoutGroup("Animations")] [ListView("Animator Bools List")] [LVHeader("Bools")]
+    [Popup("animatorBool", "@animatorBoolTargets", true)]
+    public string[] animatorBoolNames;
     
-    [HelpBox("Only use this option if you are invoking this action locally, e.g. from a UI Button, otherwise it will cause oversync.", "@networked")]
-    [UTEditor]
+    [FoldoutGroup("Animations")] [ListView("Animator Bools List")] [LVHeader("Values")]
+    public bool[] animatorBools;
+    
+    [FoldoutGroup("Animations")] [ListView("Animator Floats List")] [LVHeader("Animators")]
+    public Animator[] animatorFloatTargets;
+
+    [FoldoutGroup("Animations")] [ListView("Animator Floats List")] [LVHeader("Floats")]
+    [Popup("animatorFloat", "@animatorFloatTargets", true)]
+    public string[] animatorFloatNames;
+    
+    [FoldoutGroup("Animations")] [ListView("Animator Floats List")] [LVHeader("Values")]
+    public float[] animatorFloats;
+    
+    [FoldoutGroup("Animations")] [ListView("Animator Ints List")] [LVHeader("Animators")]
+    public Animator[] animatorIntTargets;
+
+    [FoldoutGroup("Animations")] [ListView("Animator Ints List")] [LVHeader("Ints")]
+    [Popup("animatorInt", "@animatorIntTargets", true)]
+    public string[] animatorIntNames;
+    
+    [FoldoutGroup("Animations")] [ListView("Animator Ints List")] [LVHeader("Values")]
+    public int[] animatorInts;
+    #endregion
+
+    
+    #region Udon Events
+    [FoldoutGroup("Udon Events")] public bool fireUdonEvents;
+
+    [FoldoutGroup("Udon Events")]
+    [HelpBox(
+      "Only use this option if you are invoking this action locally, e.g. from a UI Button, otherwise it will cause oversync.",
+      "@networked")]
     public bool networked;
-    
-    [HideIf("@!networked")]
-    [UTEditor]
+
+    [FoldoutGroup("Udon Events")] [HideIf("@!networked")]
     public NetworkEventTarget networkTarget;
-    
-    [ListView("Udon Events List")] [UTEditor]
+
+    [FoldoutGroup("Udon Events")] [ListView("Udon Events List")]
     public UdonSharpBehaviour[] udonTargets;
-    
-    [ListView("Udon Events List")]
-    [Popup("behaviour", "@udonTargets", true)]
-    [UTEditor]
+
+    [FoldoutGroup("Udon Events")] [ListView("Udon Events List")] [Popup("behaviour", "@udonTargets", true)]
     public string[] udonEvents;
+    #endregion
     
-    [SectionHeader("Game Object Toggles")] [UTEditor]
-    public bool fireObjectToggles;
-    
-    [ListView("Game Objects List")] [UTEditor]
+    #region GameObjects
+    [FoldoutGroup("Game Object Toggles")] public bool fireObjectToggles;
+
+    [FoldoutGroup("Game Object Toggles")] [ListView("Game Objects List")]
     public GameObject[] goTargets;
-    
-    [ListView("Game Objects List")]
-    [Popup("method", "@goToggleOptions", true)]
-    [UTEditor]
-    public string[] goToggleEvents;
+
+    [FoldoutGroup("Game Object Toggles")] [ListView("Game Objects List")] [LVHeader("Toggle Actions")] [Popup("method", "@goToggleOptions", true)]
+    public int[] goToggleEvents;
 
     [HideInInspector] public string[] goToggleOptions = {
       "Enable",
       "Disable",
       "Toggle"
     };
+    #endregion
 
-    [SectionHeader("Collider Toggles")] [UTEditor]
-    public bool fireColliderToggles;
-    
-    [ListView("Colliders List")] [UTEditor]
+    #region Collider
+    [FoldoutGroup("Collider Toggles")] public bool fireColliderToggles;
+
+    [FoldoutGroup("Collider Toggles")] [ListView("Colliders List")]
     public Collider[] colliderTargets;
-    
-    [ListView("Colliders List")]
-    [Popup("method", "@goToggleOptions", true)]
-    [UTEditor]
-    public string[] colliderToggleEvents;
-    
-    [SectionHeader("Audio")] [UTEditor]
-    public bool fireAudioEvents;
-    
-    [HelpBox("Playing many audio clips at once is performance heavy, please be considerate when using these.")]
-    [ListView("Audio List")] [UTEditor]
-    public AudioSource[] audioSources;
-    [ListView("Audio List")] [UTEditor]
-    public AudioClip[] audioClips;
 
+    [FoldoutGroup("Collider Toggles")] [ListView("Colliders List")] [Popup("method", "@goToggleOptions", true)]
+    public int[] colliderToggleEvents;
+    #endregion
+
+    #region Audio
+    [FoldoutGroup("Audio")] public bool fireAudioEvents;
+
+    [FoldoutGroup("Audio")]
+    [HelpBox("Playing many audio clips at once is performance heavy, please be considerate when using these.")]
+    [ListView("Audio List")]
+    public AudioSource[] audioSources;
+
+    [FoldoutGroup("Audio")] [ListView("Audio List")]
+    public AudioClip[] audioClips;
+    #endregion
+    
     private bool delayActive;
     private float delayExpire;
-
-    [Button("Activate")]
+    
     public void Activate() {
       active = true;
     }
-
-    [Button("Deactivate")]
+    
     public void Deactivate() {
       active = false;
     }
-
-    [Button("Toggle")]
+    
     public void Toggle() {
       active = !active;
     }
-
-    [Button("Trigger")]
+    
     public void Trigger() {
       if (!active) return;
       if (fireAfterDelay) {
@@ -115,7 +140,9 @@ namespace UdonToolkit {
         delayActive = true;
         return;
       }
+
       FireAnimationTriggers();
+      FireAnimationBools();
       FireUdonEvents();
       FireObjectToggles();
       FireColliderToggles();
@@ -127,6 +154,7 @@ namespace UdonToolkit {
       if (!delayActive) return;
       if (Time.time >= delayExpire) {
         FireAnimationTriggers();
+        FireAnimationBools();
         FireUdonEvents();
         FireObjectToggles();
         FireColliderToggles();
@@ -141,6 +169,13 @@ namespace UdonToolkit {
         animators[i].SetTrigger(animatorTriggers[i]);
       }
     }
+    
+    private void FireAnimationBools() {
+      if (!fireAnimationTriggers) return;
+      for (int i = 0; i < animatorBoolTargets.Length; i++) {
+        animatorBoolTargets[i].SetBool(animatorBoolNames[i], animatorBools[i]);
+      }
+    }
 
     private void FireUdonEvents() {
       if (!fireUdonEvents) return;
@@ -150,6 +185,7 @@ namespace UdonToolkit {
           uB.SendCustomNetworkEvent(networkTarget, udonEvents[i]);
           continue;
         }
+
         uB.SendCustomEvent(udonEvents[i]);
       }
     }
@@ -157,25 +193,25 @@ namespace UdonToolkit {
     private void FireObjectToggles() {
       if (!fireObjectToggles) return;
       for (int i = 0; i < goTargets.Length; i++) {
-        if (goToggleEvents[i] == "Toggle") {
+        if (goToggleEvents[i] == 2) {
           goTargets[i].SetActive(!goTargets[i].activeSelf);
           continue;
         }
 
-        var state = goToggleEvents[i] == "Enable";
+        var state = goToggleEvents[i] == 0;
         goTargets[i].SetActive(state);
       }
     }
-    
+
     private void FireColliderToggles() {
       if (!fireColliderToggles) return;
       for (int i = 0; i < colliderTargets.Length; i++) {
-        if (colliderToggleEvents[i] == "Toggle") {
+        if (colliderToggleEvents[i] == 2) {
           colliderTargets[i].enabled = !colliderTargets[i].enabled;
           continue;
         }
-        
-        var state = colliderToggleEvents[i] == "Enable";
+
+        var state = colliderToggleEvents[i] == 0;
         colliderTargets[i].enabled = state;
       }
     }

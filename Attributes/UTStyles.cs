@@ -107,7 +107,7 @@ namespace UdonToolkit {
     
     public static void RenderNote(ref Rect position, string text) {
       var textColor = EditorGUIUtility.isProSkin ? new Color(1f, 1f, 1f, 0.5f) : new Color(0f, 0f, 0f, 0.8f);
-      EditorGUI.LabelField(position, text, new GUIStyle(EditorStyles.helpBox) {
+      EditorGUILayout.LabelField(text, new GUIStyle(EditorStyles.helpBox) {
         fontSize = 10,
         stretchWidth = true,
         normal = new GUIStyleState {
@@ -117,7 +117,7 @@ namespace UdonToolkit {
       });
     }
 
-    private static Texture2D MakeTex(int width, int height, Color col) {
+    public static Texture2D MakeTex(int width, int height, Color col) {
       Color[] pix = new Color[width * height];
       for (int i = 0; i < pix.Length; ++i) {
         pix[i] = col;

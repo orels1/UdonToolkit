@@ -90,22 +90,13 @@ MonoBehaviour:
       Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
     - Name: text
       Entry: 1
       Data: General
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -132,13 +123,13 @@ MonoBehaviour:
       Data: source
     - Name: $v
       Entry: 7
-      Data: 8|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 7|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 9|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 8|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 10|System.RuntimeType, mscorlib
+      Data: 9|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: VRC.Udon.UdonBehaviour, VRC.Udon
@@ -168,7 +159,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 10|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -195,13 +186,13 @@ MonoBehaviour:
       Data: textVariableNames
     - Name: $v
       Entry: 7
-      Data: 12|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 11|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 13|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 12|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 14|System.RuntimeType, mscorlib
+      Data: 13|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.String[], mscorlib
@@ -231,13 +222,13 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 14|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 7
-      Data: 16|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 15|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
     - Name: text
       Entry: 1
       Data: Text Readouts
@@ -246,10 +237,20 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 16|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+    - Name: text
+      Entry: 1
+      Data: '{0} will be replaced by the value, e.g. "Speed: {0} u/s" will become
+        "Speed: 10 u/s" if variable value is 10.'
+    - Name: methodName
+      Entry: 1
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Text Readouts List
@@ -264,10 +265,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 18|UdonToolkit.PopupAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 18|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Text Variables
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|UdonToolkit.PopupAttribute, Assembly-CSharp
     - Name: methodName
       Entry: 1
       Data: GetTextVariableOptions
@@ -277,15 +284,6 @@ MonoBehaviour:
     - Name: shaderPropType
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 19|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -355,9 +353,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 24|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: name
       Entry: 1
       Data: Text Readouts List
@@ -372,10 +367,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
+      Data: 25|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Targets
     - Name: 
       Entry: 8
       Data: 
@@ -408,7 +403,7 @@ MonoBehaviour:
       Data: 27|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 14
+      Data: 13
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -438,26 +433,25 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 29|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
-    - Name: text
+      Data: 29|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
       Entry: 1
-      Data: 'Each element of Text Readout Format corresponds to a Text Readout from
-        the list above, make sure both lists are the same length or this will crash.
-
-        {0} will be replaced by the value, e.g. "Speed: {0} u/s" will become "Speed:
-        10 u/s" if variable value is 10.'
-    - Name: methodName
-      Entry: 1
+      Data: Text Readouts List
+    - Name: addMethodName
+      Entry: 6
       Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 30|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
+      Data: 30|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Formats
     - Name: 
       Entry: 8
       Data: 
@@ -490,7 +484,7 @@ MonoBehaviour:
       Data: 32|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 14
+      Data: 13
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -530,9 +524,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 35|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: name
       Entry: 1
       Data: Slider Readouts List
@@ -547,10 +538,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|UdonToolkit.PopupAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 36|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Slider Variables
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 37|UdonToolkit.PopupAttribute, Assembly-CSharp
     - Name: methodName
       Entry: 1
       Data: GetSliderVariableOptions
@@ -560,15 +557,6 @@ MonoBehaviour:
     - Name: shaderPropType
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 37|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -638,9 +626,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 42|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: name
       Entry: 1
       Data: Slider Readouts List
@@ -655,10 +640,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 43|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
+      Data: 43|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Targets
     - Name: 
       Entry: 8
       Data: 
@@ -727,24 +712,25 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 48|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
-    - Name: text
+      Data: 48|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
       Entry: 1
-      Data: Each element of Slider Readout Multiplier corresponds to a Slider Readout
-        from the list above, make sure both lists are the same length or this will
-        crash.
-    - Name: methodName
-      Entry: 1
+      Data: Slider Readouts List
+    - Name: addMethodName
+      Entry: 6
       Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 49|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
+      Data: 49|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Multipliers
     - Name: 
       Entry: 8
       Data: 

@@ -11,12 +11,12 @@ using VRC.Udon.Wrapper.Modules;
 [HelpURL("https://ut.orels.sh/systems/flight-system")]
 public class FlightSystem : UdonSharpBehaviour
 {
-  [SectionHeader("Tracking References")][UTEditor]
+  [SectionHeader("Tracking References")]
   public Transform rightHand;
   public Transform leftHand;
   public Transform head;
   
-  [SectionHeader("General Settings")][UTEditor]
+  [SectionHeader("General Settings")]
   public float maxSpeed = 20f;
   public bool allowBoosting = true;
   public float boostLength = 10f;
@@ -25,14 +25,14 @@ public class FlightSystem : UdonSharpBehaviour
   public LayerMask groundLayers;
   public bool allowHover = false;
   
-  [SectionHeader("Comfort Settings")] [UTEditor]
+  [SectionHeader("Comfort Settings")] 
   public float accelerationSmoothFactor = 2f;
   public float decelerationSmoothFactor = 10f;
   public float groundSlowMaxHeight = 4f;
-  [RangeSlider(0.1f, 0.99f)][HelpBox("This defines the minimum player speed during takeoff/landing")][UTEditor]
+  [RangeSlider(0.1f, 0.99f)][HelpBox("This defines the minimum player speed during takeoff/landing")]
   public float minGroundSpeedModifier = 0.6f;
 
-  [SectionHeader("Desktop Keybinds")] [UTEditor]
+  [SectionHeader("Desktop Keybinds")] 
   public string glideTakeOffKey = "t";
   public string freezeInPlaceKey = "f";
   public string forceRespawnKey = "p";
@@ -42,9 +42,9 @@ public class FlightSystem : UdonSharpBehaviour
   [HideInInspector]
   public float downforce = 10f;
   
-  [SectionHeader("Initial State")][UTEditor]
+  [SectionHeader("Initial State")]
   public bool flightRestricted;
-  [HelpBox("This position will be used by desktop users when force-respawning")] [UTEditor]
+  [HelpBox("This position will be used by desktop users when force-respawning")] 
   public Transform resetPosition;
 
   // one handed mode toggles
@@ -62,29 +62,29 @@ public class FlightSystem : UdonSharpBehaviour
   public float rAltitude;
   
   // Callbacks
-  [SectionHeader("Callbacks")] [Horizontal("OnFlightStart")][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnFlightStart", true)]
   public UdonSharpBehaviour onFlightStart;
-  [Horizontal("OnFlightStart")] [Popup("behaviour", "@onFlightStart", true)][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnFlightStart", true)] [Popup("behaviour", "@onFlightStart", true)]
   public string onFlightStartEvent;
-  [Horizontal("OnFlightEnd")][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnFlightEnd", true)]
   public UdonSharpBehaviour onFlightEnd;
-  [Horizontal("OnFlightEnd")] [Popup("behaviour", "@onFlightEnd", true)][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnFlightEnd", true)] [Popup("behaviour", "@onFlightEnd", true)]
   public string onFlightEndEvent;
-  [Horizontal("OnHoverStart")][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnHoverStart", true)]
   public UdonSharpBehaviour onHoverStart;
-  [Horizontal("OnHoverStart")] [Popup("behaviour", "@onHoverStart", true)][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnHoverStart", true)] [Popup("behaviour", "@onHoverStart", true)]
   public string onHoverStartEvent;
-  [Horizontal("OnHoverEnd")][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnHoverEnd", true)]
   public UdonSharpBehaviour onHoverEnd;
-  [Horizontal("OnHoverEnd")] [Popup("behaviour", "@onHoverEnd", true)][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnHoverEnd", true)] [Popup("behaviour", "@onHoverEnd", true)]
   public string onHoverEndEvent;
-  [Horizontal("OnGlideStart")][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnGlideStart", true)]
   public UdonSharpBehaviour onGlideStart;
-  [Horizontal("OnGlideStart")] [Popup("behaviour", "@onGlideStart", true)][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnGlideStart", true)] [Popup("behaviour", "@onGlideStart", true)]
   public string onGlideStartEvent;
-  [Horizontal("OnGlideEnd")][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnGlideEnd", true)]
   public UdonSharpBehaviour onGlideEnd;
-  [Horizontal("OnGlideEnd")] [Popup("behaviour", "@onGlideEnd", true)][UTEditor]
+  [FoldoutGroup("Callbacks")][Horizontal("OnGlideEnd", true)] [Popup("behaviour", "@onGlideEnd", true)]
   public string onGlideEndEvent;
 
   private bool boosting;

@@ -3,26 +3,21 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
-namespace  UdonToolkit {
+namespace UdonToolkit {
   [CustomName("Platform Trigger")]
-  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#platform-trigger")]
-  [HelpMessage("This behaviour will send specified events on the Start of the world based on the current user platform")]
+  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#platform-trigger")]
+  [HelpMessage(
+    "This behaviour will send specified events on the Start of the world based on the current user platform")]
   public class PlatformTrigger : UdonSharpBehaviour {
     public bool fireOnStart = true;
-    [ListView("Desktop Events")][UTEditor]
-    public UdonSharpBehaviour[] desktopTargets;
-    
-    [ListView("Desktop Events")][UTEditor]
-    [Popup("behaviour", "@desktopTargets", true)]
-    [UTEditor]
+    [ListView("Desktop Events")] public UdonSharpBehaviour[] desktopTargets;
+
+    [ListView("Desktop Events")] [Popup("behaviour", "@desktopTargets", true)]
     public string[] desktopEvents;
-    
-    [ListView("VR Events")][UTEditor]
-    public UdonSharpBehaviour[] vrTargets;
-    
-    [ListView("VR Events")]
-    [Popup("behaviour", "@vrTargets", true)]
-    [UTEditor]
+
+    [ListView("VR Events")] public UdonSharpBehaviour[] vrTargets;
+
+    [ListView("VR Events")] [Popup("behaviour", "@vrTargets", true)]
     public string[] vrEvents;
 
     private VRCPlayerApi player;
@@ -33,7 +28,6 @@ namespace  UdonToolkit {
       FireTriggers();
     }
     
-    [Button("Trigger")]
     public void Trigger() {
       FireTriggers();
     }

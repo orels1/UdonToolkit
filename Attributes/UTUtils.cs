@@ -48,6 +48,14 @@ namespace UdonToolkit {
       return list;
     }
 
+    public static SerializedProperty GetPropThroughAttribute(SerializedObject obj, string methodName) {
+      if (!methodName.StartsWith("@")) return null;
+      if (methodName.IndexOf("!") > -1) return null;
+      var methodActual = methodName.Substring(1);
+      var prop = obj.FindProperty(methodActual);
+      return prop;
+    }
+
     public static object GetValueThroughAttribute(SerializedProperty property, string methodName, out Type type) {
       if (methodName.StartsWith("@")) {
         var startIndex = 1;
@@ -82,21 +90,71 @@ namespace UdonToolkit {
       return isVisible;
     }
 
-    public static string[] GetAnimatorTriggers(Animator animator) {
-      if (animator == null) return new[] {"no triggers found"};
+    private static AnimatorControllerParameter[] GetAnimatorParams(Animator animator) {
+      if (animator == null) return null;
       if (animator.runtimeAnimatorController != null) {
         if (animator.GetCurrentAnimatorStateInfo(0).length == 0) {
           animator.enabled = false;
           animator.enabled = true;
           animator.gameObject.SetActive(true);
         }
-        var found = animator.parameters.Where(p => p.type == AnimatorControllerParameterType.Trigger)
-          .Select(x => x.name).ToArray();
-        if (found.Length > 0) {
-          return found;
-        }
+
+        return animator.parameters;
+      }
+
+      return null;
+    }
+
+    public static string[] GetAnimatorTriggers(Animator animator) {
+      var found = GetAnimatorParams(animator);
+      if (found == null) {
+        return new[] {"no triggers found"};
+      }
+      var filtered = found.Where(p => p.type == AnimatorControllerParameterType.Trigger)
+        .Select(x => x.name).ToArray();
+      if (filtered.Length > 0) {
+        return filtered;
       }
       return new[] {"no triggers found"};
+    }
+    
+    public static string[] GetAnimatorBools(Animator animator) {
+      var found = GetAnimatorParams(animator);
+      if (found == null) {
+        return new[] {"no bools found"};
+      }
+      var filtered = found.Where(p => p.type == AnimatorControllerParameterType.Bool)
+        .Select(x => x.name).ToArray();
+      if (filtered.Length > 0) {
+        return filtered;
+      }
+      return new[] {"no bools found"};
+    }
+    
+    public static string[] GetAnimatorFloats(Animator animator) {
+      var found = GetAnimatorParams(animator);
+      if (found == null) {
+        return new[] {"no floats found"};
+      }
+      var filtered = found.Where(p => p.type == AnimatorControllerParameterType.Float)
+        .Select(x => x.name).ToArray();
+      if (filtered.Length > 0) {
+        return filtered;
+      }
+      return new[] {"no floats found"};
+    }
+    
+    public static string[] GetAnimatorInts(Animator animator) {
+      var found = GetAnimatorParams(animator);
+      if (found == null) {
+        return new[] {"no ints found"};
+      }
+      var filtered = found.Where(p => p.type == AnimatorControllerParameterType.Int)
+        .Select(x => x.name).ToArray();
+      if (filtered.Length > 0) {
+        return filtered;
+      }
+      return new[] {"no ints found"};
     }
 
     private static string[] BLACKLISTED_EVENT_NAMES = new[] {
@@ -118,6 +176,21 @@ namespace UdonToolkit {
         }
       }
       return events;
+    }
+    
+    public static string[] GetUdonVariables(UdonSharpBehaviour source) {
+      var variables = new[] {"no variables found"};
+      if (source != null) {
+        var uPa = UdonSharpEditorUtility.GetUdonSharpProgramAsset(source);
+        if (uPa != null) {
+          var fields = uPa.sourceCsScript.GetClass().GetFields();
+          var mapped = fields.Where(f => f.Module.Name == "Assembly-CSharp.dll").Select(f => f.Name).ToArray();
+          if (mapped.Length > 0) {
+            variables = mapped;
+          }
+        }
+      }
+      return variables;
     }
     
     public static string[] GetUdonEvents(UdonBehaviour source) {
@@ -259,19 +332,59 @@ namespace UdonToolkit {
       return res.Count == 0 ? new[] {"-- no valid properties--"} : res.ToArray();
     }
 
+    public static string[] GetAllShaderProperties(object source) {
+      if (source == null) {
+        return new[] {"-- no shader provided --"};
+      }
+      var props = new List<string>();
+      var toFetch = new PopupAttribute.ShaderPropType[] {
+        PopupAttribute.ShaderPropType.Float, PopupAttribute.ShaderPropType.Color, PopupAttribute.ShaderPropType.Vector
+      };
+      foreach (var valid in toFetch) {
+        var list = GetShaderPropertiesByType(source, valid);
+        if (list.Length == 1 && list[0] == "-- no valid properties --") {
+          continue;
+        }
+        props.AddRange(list);
+      }
+
+      if (props.Count == 0) {
+        return new[] {"-- no shader provided --"};
+      }
+
+      return props.ToArray();
+    }
+
     public static string[] GetPopupOptions(SerializedProperty prop, SerializedProperty fetchFrom, PopupAttribute popup, out int index) {
       var sourceType = popup.sourceType;
       var source = fetchFrom ?? prop;
       string[] options;
-      if (sourceType == PopupAttribute.PopupSource.Animator) {
+      if (sourceType == PopupAttribute.PopupSource.AnimatorTrigger) {
         options = GetAnimatorTriggers(source.objectReferenceValue as Animator);
+      }
+      else if (sourceType == PopupAttribute.PopupSource.AnimatorBool) {
+        options = GetAnimatorBools(source.objectReferenceValue as Animator);
+      }
+      else if (sourceType == PopupAttribute.PopupSource.AnimatorFloat) {
+        options = GetAnimatorFloats(source.objectReferenceValue as Animator);
+      }
+      else if (sourceType == PopupAttribute.PopupSource.AnimatorInt) {
+        options = GetAnimatorInts(source.objectReferenceValue as Animator);
       }
       else if (sourceType == PopupAttribute.PopupSource.UdonBehaviour) {
         options = GetUdonEvents(source.objectReferenceValue as UdonSharpBehaviour);
       }
+      else if (sourceType == PopupAttribute.PopupSource.UdonProgramVariable) {
+        options = GetUdonVariables(source.objectReferenceValue as UdonSharpBehaviour);
+      }
       else if (sourceType == PopupAttribute.PopupSource.Shader) {
         var propsSource = GetValueThroughAttribute(source, popup.methodName, out _);
-        options = GetShaderPropertiesByType(propsSource, popup.shaderPropType);
+        if (popup.shaderPropType == PopupAttribute.ShaderPropType.All) {
+          options = GetAllShaderProperties(propsSource);
+        }
+        else {
+          options = GetShaderPropertiesByType(propsSource, popup.shaderPropType);
+        }
       }
       else {
         options = (string[]) GetValueThroughAttribute(source, popup.methodName, out _);
@@ -281,12 +394,63 @@ namespace UdonToolkit {
         index = 0;
         return new[] {"-- no options provided --"};
       }
+
+      if (prop.type == "int") {
+        index = prop.intValue;
+        return options;
+      }
+
       index = options.ToList().IndexOf(prop.stringValue);
       if (index >= options.Length || index == -1) {
         index = 0;
       }
 
       return options;
+    }
+
+    public enum UTSettingType {
+      String,
+      Bool,
+      Float,
+      Int
+    }
+
+    public static object GetUTSetting(string key, UTSettingType type) {
+      var prefixed = "UT_" + key;
+      if (!EditorPrefs.HasKey(prefixed)) {
+        return null;
+      }
+
+      switch (type) {
+        case UTSettingType.String:
+          return EditorPrefs.GetString(prefixed);
+        case UTSettingType.Bool:
+          return EditorPrefs.GetBool(prefixed);
+        case UTSettingType.Float:
+          return EditorPrefs.GetFloat(prefixed);
+        case UTSettingType.Int:
+          return EditorPrefs.GetInt(prefixed);
+        default:
+          return null;
+      }
+    }
+
+    public static void SetUTSetting(string key, UTSettingType type, object value) {
+      var prefixed = "UT_" + key;
+      switch (type) {
+        case UTSettingType.String:
+          EditorPrefs.SetString(prefixed, value as string);
+          break;
+        case UTSettingType.Bool:
+          EditorPrefs.SetBool(prefixed, (bool) value);
+          break;
+        case UTSettingType.Float:
+          EditorPrefs.SetFloat(prefixed, (float) value);
+          break;
+        case UTSettingType.Int:
+          EditorPrefs.SetInt(prefixed, (int) value);
+          break;
+      }
     }
   }
 }

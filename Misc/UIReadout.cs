@@ -12,18 +12,21 @@ using System.Linq;
 
 namespace UdonToolkit {
   [CustomName("UI Readout")]
-  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#ui-readout")]
+  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#ui-readout")]
   public class UIReadout : UdonSharpBehaviour {
-    [SectionHeader("General")] [UTEditor]
+    [SectionHeader("General")] 
     public bool active;
     public UdonBehaviour source;
     
     [SectionHeader("Text Readouts")]
-    [ListView("Text Readouts List", "AddTextVar")]
-    [Popup("method", "GetTextVariableOptions", true)][UTEditor]
+    [HelpBox("{0} will be replaced by the value, e.g. \"Speed: {0} u/s\" will become \"Speed: 10 u/s\" if variable value is 10.")]
+    [ListView("Text Readouts List", "AddTextVar")] [LVHeader("Text Variables")]
+    [Popup("method", "GetTextVariableOptions", true)]
     public string[] textVariableNames;
-    [ListView("Text Readouts List")] [UTEditor]
+    [ListView("Text Readouts List")] [LVHeader("Targets")]
     public Text[] textVariableTargets;
+    [ListView("Text Readouts List")] [LVHeader("Formats")]
+    public string[] textReadoutFormats;
     
     #if !COMPILER_UDONSHARP && UNITY_EDITOR
     #region ToolkitSTuff
@@ -96,19 +99,14 @@ namespace UdonToolkit {
     }
     #endregion
     #endif
-    
-    [HelpBox("Each element of Text Readout Format corresponds to a Text Readout from the list above, make sure both lists are the same length or this will crash.\n{0} will be replaced by the value, e.g. \"Speed: {0} u/s\" will become \"Speed: 10 u/s\" if variable value is 10.")]
-    [UTEditor]
-    public string[] textReadoutFormats;
-    
+
     [SectionHeader("Slider Readouts")]
-    [ListView("Slider Readouts List", "AddSliderVar")]
-    [Popup("method", "GetSliderVariableOptions", true)] [UTEditor]
+    [ListView("Slider Readouts List", "AddSliderVar")] [LVHeader("Slider Variables")]
+    [Popup("method", "GetSliderVariableOptions", true)] 
     public string[] sliderVariableNames;
-    [ListView("Slider Readouts List")] [UTEditor]
+    [ListView("Slider Readouts List")] [LVHeader("Targets")]
     public Slider[] sliderVariableTargets;
-    [HelpBox("Each element of Slider Readout Multiplier corresponds to a Slider Readout from the list above, make sure both lists are the same length or this will crash.")]
-    [UTEditor] 
+    [ListView("Slider Readouts List")] [LVHeader("Multipliers")]
     public float[] sliderReadoutMultipliers;
 
     private void LateUpdate() {

@@ -42,7 +42,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 23
+      Data: 32
     - Name: 
       Entry: 7
       Data: 
@@ -90,22 +90,13 @@ MonoBehaviour:
       Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
     - Name: text
       Entry: 1
       Data: General
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -132,10 +123,10 @@ MonoBehaviour:
       Data: fireAfterDelay
     - Name: $v
       Entry: 7
-      Data: 8|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 7|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 9|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 8|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -162,28 +153,19 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 9|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 11|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 10|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
     - Name: text
       Entry: 1
       Data: Make sure this game object is always enabled when using delays.
     - Name: methodName
       Entry: 1
       Data: '@fireAfterDelay'
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 12|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -210,13 +192,13 @@ MonoBehaviour:
       Data: delayLength
     - Name: $v
       Entry: 7
-      Data: 13|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 11|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 14|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 12|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 15|System.RuntimeType, mscorlib
+      Data: 13|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.Single, mscorlib
@@ -246,13 +228,13 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 14|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 15|UdonToolkit.HideIfAttribute, Assembly-CSharp
     - Name: methodName
       Entry: 1
       Data: '@!fireAfterDelay'
@@ -261,19 +243,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 18|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+      Data: 16|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
       Data: Delay in seconds
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 19|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -300,10 +273,10 @@ MonoBehaviour:
       Data: fireAnimationTriggers
     - Name: $v
       Entry: 7
-      Data: 20|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 17|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 21|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 18|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -330,25 +303,16 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 22|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 19|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 23|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
-    - Name: text
+      Data: 20|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
       Entry: 1
       Data: Animations
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 24|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -375,13 +339,13 @@ MonoBehaviour:
       Data: animators
     - Name: $v
       Entry: 7
-      Data: 25|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 21|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 26|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 22|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 27|System.RuntimeType, mscorlib
+      Data: 23|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.Animator[], UnityEngine.AnimationModule
@@ -411,16 +375,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 28|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 24|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 29|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 25|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 26|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Animator Triggers List
@@ -430,15 +400,6 @@ MonoBehaviour:
     - Name: addButtonText
       Entry: 1
       Data: Add Element
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 30|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -465,13 +426,13 @@ MonoBehaviour:
       Data: animatorTriggers
     - Name: $v
       Entry: 7
-      Data: 31|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 27|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 32|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 28|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 33|System.RuntimeType, mscorlib
+      Data: 29|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.String[], mscorlib
@@ -501,16 +462,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 34|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 30|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
-      Data: 35|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 31|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 32|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Animator Triggers List
@@ -525,10 +492,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|UdonToolkit.PopupAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 33|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Triggers
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 34|UdonToolkit.PopupAttribute, Assembly-CSharp
     - Name: methodName
       Entry: 1
       Data: '@animators'
@@ -542,11 +515,875 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 37|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
       Entry: 6
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorBoolTargets
+    - Name: $v
+      Entry: 7
+      Data: 35|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 36|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 23
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineAnimatorArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorBoolTargets
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorBoolTargets
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 37|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 38|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 39|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Bools List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 40|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Animators
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorBoolNames
+    - Name: $v
+      Entry: 7
+      Data: 41|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 42|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 29
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemStringArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorBoolNames
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorBoolNames
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 43|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 44|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 45|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Bools List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 46|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Bools
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 47|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: '@animatorBoolTargets'
+    - Name: sourceType
+      Entry: 3
+      Data: 2
+    - Name: shaderPropType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorBools
+    - Name: $v
+      Entry: 7
+      Data: 48|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 49|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 50|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Boolean[], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBooleanArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorBools
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorBools
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 51|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 52|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 53|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Bools List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 54|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Values
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorFloatTargets
+    - Name: $v
+      Entry: 7
+      Data: 55|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 56|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 23
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineAnimatorArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorFloatTargets
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorFloatTargets
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 57|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 58|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 59|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Floats List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 60|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Animators
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorFloatNames
+    - Name: $v
+      Entry: 7
+      Data: 61|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 62|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 29
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemStringArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorFloatNames
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorFloatNames
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 63|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 64|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 65|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Floats List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 66|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Floats
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 67|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: '@animatorFloatTargets'
+    - Name: sourceType
+      Entry: 3
+      Data: 3
+    - Name: shaderPropType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorFloats
+    - Name: $v
+      Entry: 7
+      Data: 68|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 69|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 70|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Single[], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingleArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorFloats
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorFloats
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 71|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 72|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 73|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Floats List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 74|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Values
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorIntTargets
+    - Name: $v
+      Entry: 7
+      Data: 75|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 76|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 23
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineAnimatorArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorIntTargets
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorIntTargets
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 77|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 78|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 79|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Ints List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 80|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Animators
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorIntNames
+    - Name: $v
+      Entry: 7
+      Data: 81|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 82|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 29
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemStringArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorIntNames
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorIntNames
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 83|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 84|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 85|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Ints List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 86|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Ints
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 87|UdonToolkit.PopupAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: '@animatorIntTargets'
+    - Name: sourceType
+      Entry: 3
+      Data: 4
+    - Name: shaderPropType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: animatorInts
+    - Name: $v
+      Entry: 7
+      Data: 88|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 89|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 90|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Int32[], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemInt32Array
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: animatorInts
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: animatorInts
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 91|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 92|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animations
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 93|UdonToolkit.ListViewAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Animator Ints List
+    - Name: addMethodName
+      Entry: 6
+      Data: 
+    - Name: addButtonText
+      Entry: 1
+      Data: Add Element
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 94|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Values
     - Name: 
       Entry: 8
       Data: 
@@ -573,10 +1410,10 @@ MonoBehaviour:
       Data: fireUdonEvents
     - Name: $v
       Entry: 7
-      Data: 38|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 95|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 39|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 96|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -603,14 +1440,80 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 40|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 97|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 98|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Udon Events
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: networked
+    - Name: $v
+      Entry: 7
+      Data: 99|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 100|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: networked
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: networked
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 101|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 41|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
-    - Name: text
+      Data: 102|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
       Entry: 1
       Data: Udon Events
     - Name: 
@@ -618,73 +1521,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 42|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: networked
-    - Name: $v
-      Entry: 7
-      Data: 43|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 44|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 9
-      Data: 4
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemBoolean
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: networked
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: networked
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 45|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 46|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 103|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
     - Name: text
       Entry: 1
       Data: Only use this option if you are invoking this action locally, e.g. from
@@ -692,15 +1529,6 @@ MonoBehaviour:
     - Name: methodName
       Entry: 1
       Data: '@networked'
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 47|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -727,13 +1555,13 @@ MonoBehaviour:
       Data: networkTarget
     - Name: $v
       Entry: 7
-      Data: 48|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 104|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 49|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 105|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 50|System.RuntimeType, mscorlib
+      Data: 106|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: VRC.Udon.Common.Interfaces.NetworkEventTarget, VRC.Udon.Common
@@ -763,25 +1591,25 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 51|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 107|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 52|UdonToolkit.HideIfAttribute, Assembly-CSharp
-    - Name: methodName
+      Data: 108|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
       Entry: 1
-      Data: '@!networked'
+      Data: Udon Events
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 53|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
+      Data: 109|UdonToolkit.HideIfAttribute, Assembly-CSharp
+    - Name: methodName
+      Entry: 1
+      Data: '@!networked'
     - Name: 
       Entry: 8
       Data: 
@@ -808,13 +1636,13 @@ MonoBehaviour:
       Data: udonTargets
     - Name: $v
       Entry: 7
-      Data: 54|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 110|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 55|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 111|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 56|System.RuntimeType, mscorlib
+      Data: 112|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UdonSharp.UdonSharpBehaviour[], UdonSharp.Runtime
@@ -844,16 +1672,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 57|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 113|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 58|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 114|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Udon Events
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 115|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Udon Events List
@@ -863,15 +1697,6 @@ MonoBehaviour:
     - Name: addButtonText
       Entry: 1
       Data: Add Element
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 59|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -898,13 +1723,13 @@ MonoBehaviour:
       Data: udonEvents
     - Name: $v
       Entry: 7
-      Data: 60|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 116|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 61|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 117|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 33
+      Data: 29
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -928,16 +1753,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 62|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 118|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 63|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 119|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Udon Events
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 120|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Udon Events List
@@ -952,28 +1783,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 64|UdonToolkit.PopupAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
+      Data: 121|UdonToolkit.PopupAttribute, Assembly-CSharp
     - Name: methodName
       Entry: 1
       Data: '@udonTargets'
     - Name: sourceType
       Entry: 3
-      Data: 2
+      Data: 5
     - Name: shaderPropType
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 65|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1000,10 +1819,10 @@ MonoBehaviour:
       Data: fireObjectToggles
     - Name: $v
       Entry: 7
-      Data: 66|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 122|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 67|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 123|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -1030,25 +1849,16 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 68|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 124|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 69|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
-    - Name: text
+      Data: 125|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
       Entry: 1
       Data: Game Object Toggles
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 70|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1075,13 +1885,13 @@ MonoBehaviour:
       Data: goTargets
     - Name: $v
       Entry: 7
-      Data: 71|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 126|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 72|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 127|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 73|System.RuntimeType, mscorlib
+      Data: 128|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.GameObject[], UnityEngine.CoreModule
@@ -1111,16 +1921,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 74|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 129|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 75|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 130|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Game Object Toggles
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 131|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Game Objects List
@@ -1130,15 +1946,6 @@ MonoBehaviour:
     - Name: addButtonText
       Entry: 1
       Data: Add Element
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 76|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1165,13 +1972,13 @@ MonoBehaviour:
       Data: goToggleEvents
     - Name: $v
       Entry: 7
-      Data: 77|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 132|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 78|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 133|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 33
+      Data: 90
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -1180,7 +1987,7 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: SystemStringArray
+      Data: SystemInt32Array
     - Name: symbolOriginalName
       Entry: 1
       Data: goToggleEvents
@@ -1195,16 +2002,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 79|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 134|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
-      Data: 80|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 135|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Game Object Toggles
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 136|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Game Objects List
@@ -1219,10 +2032,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 81|UdonToolkit.PopupAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 137|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+    - Name: title
+      Entry: 1
+      Data: Toggle Actions
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 138|UdonToolkit.PopupAttribute, Assembly-CSharp
     - Name: methodName
       Entry: 1
       Data: '@goToggleOptions'
@@ -1236,15 +2055,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 82|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -1267,13 +2077,13 @@ MonoBehaviour:
       Data: goToggleOptions
     - Name: $v
       Entry: 7
-      Data: 83|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 139|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 84|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 140|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 33
+      Data: 29
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -1297,13 +2107,13 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 85|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 141|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 86|UnityEngine.HideInInspector, UnityEngine.CoreModule
+      Data: 142|UnityEngine.HideInInspector, UnityEngine.CoreModule
     - Name: 
       Entry: 8
       Data: 
@@ -1330,10 +2140,10 @@ MonoBehaviour:
       Data: fireColliderToggles
     - Name: $v
       Entry: 7
-      Data: 87|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 143|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 88|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 144|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -1360,25 +2170,16 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 89|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 145|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 90|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
-    - Name: text
+      Data: 146|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
       Entry: 1
       Data: Collider Toggles
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 91|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1405,13 +2206,13 @@ MonoBehaviour:
       Data: colliderTargets
     - Name: $v
       Entry: 7
-      Data: 92|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 147|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 93|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 148|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 94|System.RuntimeType, mscorlib
+      Data: 149|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.Collider[], UnityEngine.PhysicsModule
@@ -1441,16 +2242,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 95|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 150|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 96|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 151|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Collider Toggles
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 152|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Colliders List
@@ -1460,15 +2267,6 @@ MonoBehaviour:
     - Name: addButtonText
       Entry: 1
       Data: Add Element
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 97|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1495,13 +2293,13 @@ MonoBehaviour:
       Data: colliderToggleEvents
     - Name: $v
       Entry: 7
-      Data: 98|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 153|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 99|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 154|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 33
+      Data: 90
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -1510,7 +2308,7 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: SystemStringArray
+      Data: SystemInt32Array
     - Name: symbolOriginalName
       Entry: 1
       Data: colliderToggleEvents
@@ -1525,16 +2323,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 100|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 155|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 101|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 156|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Collider Toggles
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 157|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Colliders List
@@ -1549,10 +2353,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 102|UdonToolkit.PopupAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
+      Data: 158|UdonToolkit.PopupAttribute, Assembly-CSharp
     - Name: methodName
       Entry: 1
       Data: '@goToggleOptions'
@@ -1562,15 +2363,6 @@ MonoBehaviour:
     - Name: shaderPropType
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 103|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1597,10 +2389,10 @@ MonoBehaviour:
       Data: fireAudioEvents
     - Name: $v
       Entry: 7
-      Data: 104|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 159|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 105|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 160|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -1627,25 +2419,16 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 106|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 161|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 107|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
-    - Name: text
+      Data: 162|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
       Entry: 1
       Data: Audio
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 108|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1672,13 +2455,13 @@ MonoBehaviour:
       Data: audioSources
     - Name: $v
       Entry: 7
-      Data: 109|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 163|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 110|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 164|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 111|System.RuntimeType, mscorlib
+      Data: 165|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.AudioSource[], UnityEngine.AudioModule
@@ -1708,13 +2491,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 112|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 166|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 113|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 167|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Audio
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 168|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
     - Name: text
       Entry: 1
       Data: Playing many audio clips at once is performance heavy, please be considerate
@@ -1727,10 +2519,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 114|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
+      Data: 169|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Audio List
@@ -1740,15 +2529,6 @@ MonoBehaviour:
     - Name: addButtonText
       Entry: 1
       Data: Add Element
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 115|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1775,13 +2555,13 @@ MonoBehaviour:
       Data: audioClips
     - Name: $v
       Entry: 7
-      Data: 116|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 170|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 117|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 171|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 118|System.RuntimeType, mscorlib
+      Data: 172|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: UnityEngine.AudioClip[], UnityEngine.AudioModule
@@ -1811,16 +2591,22 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 119|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 173|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 120|UdonToolkit.ListViewAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
+      Data: 174|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Audio
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 175|UdonToolkit.ListViewAttribute, Assembly-CSharp
     - Name: name
       Entry: 1
       Data: Audio List
@@ -1830,15 +2616,6 @@ MonoBehaviour:
     - Name: addButtonText
       Entry: 1
       Data: Add Element
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 121|UdonToolkit.UTEditorAttribute, Assembly-CSharp
-    - Name: modifiers
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1865,10 +2642,10 @@ MonoBehaviour:
       Data: delayActive
     - Name: $v
       Entry: 7
-      Data: 122|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 176|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 123|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 177|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
       Data: 4
@@ -1895,7 +2672,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 124|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 178|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -1922,13 +2699,13 @@ MonoBehaviour:
       Data: delayExpire
     - Name: $v
       Entry: 7
-      Data: 125|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+      Data: 179|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 126|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+      Data: 180|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 15
+      Data: 13
     - Name: declarationType
       Entry: 3
       Data: 2
@@ -1952,7 +2729,7 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 127|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 181|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

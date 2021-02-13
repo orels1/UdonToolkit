@@ -8,29 +8,30 @@ using VRC.Udon.Common.Interfaces;
 namespace UdonToolkit {
     [CustomName("Area Trigger")]
     [HelpMessage("It is recommended to put Area Triggers on a MirrorReflection layer unless they need a custom layer.")]
-    [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#area-trigger")]
+    [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#area-trigger")]
     public class AreaTrigger : UdonSharpBehaviour {
-      [SectionHeader("General")]
-      [HelpBox("This behaviour requires a trigger collider to be attached to the object", "CheckCollider")]
-      [UTEditor]
-      public bool active = true;
-      
       private bool CheckCollider() {
         var col = gameObject.GetComponent<Collider>();
         return col == null || !col.isTrigger;
       }
-
+      
+      [TabGroup("Collide With Objects")]
       [HelpBox(
         "Please use Collide With Local Players and Collide With Remote Players options instead of Player and PlayerLocal layers.",
         "PlayerLayerWarnings")]
       [HelpBox("It is not recommended to collide with Everything or the Default layer.", "CheckCollisionLayers")]
       [HideIf("HideLayerList")]
-      [UTEditor]
       public LayerMask collideWith;
 
+      [TabGroup("Collide With Players")]
       public bool collideWithLocalPlayers;
+      [TabGroup("Collide With Players")]
       public bool collideWithRemotePlayers;
 
+      [SectionHeader("General")]
+      [HelpBox("This behaviour requires a trigger collider to be attached to the object", "CheckCollider")]
+      public bool active = true;
+      
       private bool HideLayerList() {
         return collideWithLocalPlayers || collideWithRemotePlayers;
       }
@@ -51,7 +52,6 @@ namespace UdonToolkit {
       [SectionHeader("Udon Events")]
       [HelpBox("Do not use Networked option with target All when colliding with Player layer, as it will cause oversync.",
         "CheckNetworkedValidity")]
-      [UTEditor]
       public bool networked;
       public NetworkEventTarget networkTarget;
       
@@ -60,37 +60,32 @@ namespace UdonToolkit {
         return collideWith == (collideWith | (1 << player)) && networked && networkTarget == NetworkEventTarget.All;
       }
 
-      [ListView("Enter Events List")] [UTEditor]
+      [ListView("Enter Events List")]
       public UdonSharpBehaviour[] enterTargets;
       
       [ListView("Enter Events List")]
       [Popup("behaviour", "@enterTargets", true)]
-      [UTEditor]
       public string[] enterEvents;
 
-      [ListView("Exit Events List")] [UTEditor]
+      [ListView("Exit Events List")]
       public UdonSharpBehaviour[] exitTargets;
       
       [ListView("Exit Events List")]
       [Popup("behaviour", "@exitTargets", true)]
-      [UTEditor]
       public string[] exitEvents;
 
       private int playerLayer = 9;
       private int playerLocalLayer = 10;
       private int collidersIn;
       
-      [Button("Activate")]
       public void Activate() {
         active = true;
       }
-
-      [Button("Deactivate")]
+      
       public void Deactivate() {
         active = false;
       }
       
-      [Button("Toggle")]
       public void Toggle() {
         active = !active;
       }

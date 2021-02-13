@@ -8,23 +8,21 @@ using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
   [CustomName("Interact Trigger")]
-  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#interact-trigger")]
+  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#interact-trigger")]
     public class InteractTrigger : UdonSharpBehaviour {
-      [SectionHeader("General")][UTEditor]
+      [SectionHeader("General")]
       public bool active = true;
-      [SectionHeader("Udon Events")][UTEditor]
+      [SectionHeader("Udon Events")]
       public bool networked;
       public NetworkEventTarget networkTarget;
-      [ListView("Udon Events List")][UTEditor]
+      [ListView("Udon Events List")]
       public UdonSharpBehaviour[] udonTargets;
       
       [ListView("Udon Events List")]
       [Popup("behaviour", "@udonTargets", true)]
-      [UTEditor]
       public string[] udonEvents;
 
       private Collider col;
-
       private void Start() {
         col = gameObject.GetComponent<Collider>();
       }
@@ -33,24 +31,21 @@ namespace UdonToolkit {
         if (!active) return;
         FireTriggers();
       }
-
-      [Button("Activate")]
+      
       public void Activate() {
         if ((object) col != null) {
           col.enabled = true;
         }
         active = true;
       }
-
-      [Button("Deactivate")]
+      
       public void Deactivate() {
         if ((object) col != null) {
           col.enabled = false;
         }
         active = false;
       }
-
-      [Button("Toggle")]
+      
       public void Toggle() {
         if ((object) col != null) {
           col.enabled = !col.enabled;

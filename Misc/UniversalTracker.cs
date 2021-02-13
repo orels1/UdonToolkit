@@ -8,15 +8,14 @@ namespace UdonToolkit {
   [HelpMessage(
     "This component will take the specified Bone or Tracking Target and copy its position/rotation to the specified Target Transform. " +
     "You can attach all sorts of objects to the player in that way.")]
-  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#universal-tracker")]
+  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#universal-tracker")]
   public class UniversalTracker : UdonSharpBehaviour {
-    [SectionHeader("Tracking Target")] [UTEditor]
-    public Transform targetTransform;
+    [SectionHeader("Tracking Target")] public Transform targetTransform;
     public bool trackBone;
     public bool trackPlayerBase;
     public bool trackPlayspace;
-    
-    #if !COMPILER_UDONSHARP && UNITY_EDITOR
+
+#if !COMPILER_UDONSHARP && UNITY_EDITOR
     public bool HideTrackDataDropdown() {
       return trackBone || trackPlayerBase || trackPlayspace;
     }
@@ -24,32 +23,29 @@ namespace UdonToolkit {
     public bool HideTrackBoneDropdown() {
       return !trackBone || trackPlayerBase || trackPlayspace;
     }
-    #endif
+#endif
 
-    [HideIf("HideTrackDataDropdown")] [UTEditor]
-    public VRCPlayerApi.TrackingDataType trackingTarget;
-    
-    [HideIf("HideTrackBoneDropdown")] [UTEditor]
-    public HumanBodyBones bone = HumanBodyBones.Hips;
+    [HideIf("HideTrackDataDropdown")] public VRCPlayerApi.TrackingDataType trackingTarget;
 
-    [HideIf("@trackPlayspace")][UTEditor]
-    public bool trackPosition = true;
-    [HideIf("@trackPlayspace")][UTEditor]
-    public bool trackRotation = true;
+    [HideIf("HideTrackBoneDropdown")] public HumanBodyBones bone = HumanBodyBones.Hips;
+
+    [HideIf("@trackPlayspace")] public bool trackPosition = true;
+    [HideIf("@trackPlayspace")] public bool trackRotation = true;
 
     [SectionHeader("Tracking Correction")]
     [HelpBox("The target transform will be rotated by this angles after copying source transforms.")]
-    [UTEditor]
     public Vector3 rotateBy = new Vector3(0, 0, 0);
 
     [HideIf("ShowControllerCorrection")]
-    [HelpBox("This option will align the trackers with the player's hand laser direction", "ShowControllerCorrectionInverted")][UTEditor]
+    [HelpBox("This option will align the trackers with the player's hand laser direction",
+      "ShowControllerCorrectionInverted")]
     public bool correctForControllers;
-    
+
     public bool ShowControllerCorrection() {
-      return trackingTarget == VRCPlayerApi.TrackingDataType.Head || trackBone || trackPlayspace || trackPlayerBase || !trackRotation;
+      return trackingTarget == VRCPlayerApi.TrackingDataType.Head || trackBone || trackPlayspace || trackPlayerBase ||
+             !trackRotation;
     }
-    
+
     public bool ShowControllerCorrectionInverted() {
       return !ShowControllerCorrection();
     }
@@ -66,11 +62,13 @@ namespace UdonToolkit {
       if (player == null) {
         return;
       }
+
       if (trackPlayspace) {
         var targetPos = player.GetPosition();
         var targetRot = player.GetRotation();
         targetTransform.SetPositionAndRotation(targetPos, targetRot);
       }
+
       isEditor = false;
     }
 
@@ -91,6 +89,7 @@ namespace UdonToolkit {
       if (trackBone) {
         return;
       }
+
       if (trackPlayerBase) {
         targetPos = player.GetPosition();
         targetRot = player.GetRotation();
@@ -109,11 +108,14 @@ namespace UdonToolkit {
           if (rotation > 0 || rotation < 0) {
             targetTransform.RotateAround(player.GetPosition(), Vector3.up, -offsetRot);
           }
+
           return;
         }
+
         if (rotation > 0 || rotation < 0) {
           targetTransform.RotateAround(player.GetPosition(), Vector3.up, -offsetRot);
         }
+
         offsetPos = targetTransform.position - targetPos;
         return;
       }
@@ -125,7 +127,8 @@ namespace UdonToolkit {
 
       if (trackPosition && trackRotation) {
         targetTransform.SetPositionAndRotation(targetPos, targetRot);
-      } else if (trackPosition) {
+      }
+      else if (trackPosition) {
         targetTransform.position = targetPos;
       }
       else {
@@ -136,6 +139,7 @@ namespace UdonToolkit {
         // Thx to Phasedragon for testing and finding out the exact formula
         targetTransform.rotation = targetRot * Quaternion.Euler(-41, 0, 0);
       }
+
       if (rotateBy.magnitude > 0) targetTransform.Rotate(rotateBy);
     }
 
@@ -150,12 +154,14 @@ namespace UdonToolkit {
 
       if (trackPosition && trackRotation) {
         targetTransform.SetPositionAndRotation(targetPos, targetRot);
-      } else if (trackPosition) {
+      }
+      else if (trackPosition) {
         targetTransform.position = targetPos;
       }
       else {
         targetTransform.rotation = targetRot;
       }
+
       if (rotateBy.magnitude > 0) targetTransform.Rotate(rotateBy);
     }
   }

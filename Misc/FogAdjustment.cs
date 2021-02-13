@@ -7,40 +7,40 @@ using VRC.Udon;
 
 namespace UdonToolkit {
   [CustomName("Fog Adjustment")]
-  [HelpURL("https://github.com/orels1/UdonToolkit/wiki/Misc-Behaviours#fog-adjustment")]
+  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#fog-adjustment")]
   public class FogAdjustment : UdonSharpBehaviour {
     public bool isLinearFog;
-    [SectionHeader("Default State")][UTEditor]
+    [SectionHeader("Default State")]
     public Color defaultFogColor;
-    [HideIf("@isLinearFog")][UTEditor]
+    [HideIf("@isLinearFog")]
     public float defaultFogDensity;
-    [HideIf("@!isLinearFog")][UTEditor]
+    [HideIf("@!isLinearFog")]
     public float defaultFogStart;
-    [HideIf("@!isLinearFog")][UTEditor]
+    [HideIf("@!isLinearFog")]
     public float defaultFogEnd;
-    [SectionHeader("Active State")][UTEditor]
+    [SectionHeader("Active State")]
     public Color activeFogColor;
-    [HideIf("@isLinearFog")][UTEditor]
+    [HideIf("@isLinearFog")]
     public float activeFogDensity;
-    [HideIf("@!isLinearFog")][UTEditor]
+    [HideIf("@!isLinearFog")]
     public float activeFogStart;
-    [HideIf("@!isLinearFog")][UTEditor]
+    [HideIf("@!isLinearFog")]
     public float activeFogEnd;
     
     [HelpBox("Transition time cannot be negative", "CheckValidTransition")]
     [Tooltip("0 - Instant")]
-    [UTEditor]
+    
     public float fogTransitionTime;
 
     private bool CheckValidTransition() {
       return fogTransitionTime < 0;
     }
     
-    [SectionHeader("Extras")][UTEditor]
+    [SectionHeader("Extras")]
     public bool startActive;
     
     [HelpBox("Will set the fog color and density from the Default or Active state on start", "@setInitialState")]
-    [UTEditor]
+    
     public bool setInitialState;
 
     private FogMode mode = FogMode.ExponentialSquared;
@@ -104,8 +104,7 @@ namespace UdonToolkit {
       RenderSettings.fogStartDistance = Mathf.Lerp(sStart, eStart, alpha);
       RenderSettings.fogEndDistance = Mathf.Lerp(sEnd, eEnd, alpha);
     }
-
-    [Button("ActivateFog")]
+    
     public void ActivateFog() {
       active = false;
       if (fogTransitionTime > 0 && !initial) {
@@ -126,8 +125,7 @@ namespace UdonToolkit {
 
       active = true;
     }
-
-    [Button("DeactivateFog")]
+    
     public void DeactivateFog() {
       active = true;
       if (fogTransitionTime > 0 && !initial) {
@@ -148,8 +146,7 @@ namespace UdonToolkit {
 
       active = false;
     }
-
-    [Button("Trigger")]
+    
     public void Trigger() {
       if (fogTransitionTime > 0) {
         StartLerping();

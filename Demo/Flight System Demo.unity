@@ -6873,6 +6873,11 @@ PrefabInstance:
       propertyPath: publicVariablesUnityEngineObjects.Array.data[0]
       value: 
       objectReference: {fileID: 793129602}
+    - target: {fileID: 4276602794463003044, guid: 52b9c4142d946314c82079ebe3ccea44,
+        type: 3}
+      propertyPath: AllowCollisionOwnershipTransfer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4276602794463003067, guid: 52b9c4142d946314c82079ebe3ccea44,
         type: 3}
       propertyPath: m_LocalPosition.x

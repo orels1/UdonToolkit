@@ -9,25 +9,30 @@ using VRC.Udon;
 
 namespace UdonToolkit {
     public class CameraLens : UdonSharpBehaviour {
+      [SectionHeader("General")]
       public bool active;
       public Animator lensAnimator;
       public Animator cameraAnimator;
-      [Space(5)]
+      
+      [SectionHeader("Desktop UI")]
       public GameObject desktopUI;
-      public GameObject vrUI;
-      [Space(5)]
       public Slider focusSlider;
       public Slider focalSlider;
       public Slider zoomSlider;
+      
+      [SectionHeader("VR UI")]
+      public GameObject vrUI;
       public Slider vrFocusSlider;
       public Slider vrFocalSlider;
       public Slider vrZoomSlider;
-      [Space(5)]
+      
+      [SectionHeader("Camera Objects")]
       public GameObject viewSphere;
       public GameObject cameraObject;
       public GameObject visuals;
       public MeshRenderer fingerSphere;
-      [Space(5)]
+      
+      [SectionHeader("Auto Focus")]
       public bool autoFocus;
       public float autoFocusDistance = 30f;
       public Image autoFocusIcon;
@@ -35,7 +40,7 @@ namespace UdonToolkit {
       [ColorUsage(true)]
       public Color activeControlColor;
 
-      [Space(5)]
+      [SectionHeader("On-Camera UI")]
       public Text positionText;
       public Text focusText;
       public Text zoomText;
@@ -43,7 +48,8 @@ namespace UdonToolkit {
       public Image focusBg;
       public Image zoomBg;
       public Image focalBg;
-      [Space(5)]
+      
+      [SectionHeader("Tracking")]
       public Transform dropTarget;
       public UniversalTracker playspaceTracker;
 

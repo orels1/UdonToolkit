@@ -14,9 +14,6 @@ using VRC.Udon;
 using VRC.Udon.Editor.ProgramSources;
 using VRC.Udon.Serialization.OdinSerializer.Utilities;
 
-
-[assembly:DefaultUdonSharpBehaviourEditor(typeof(UTEditor), "UdonToolkit Editor")]
-
 namespace UdonToolkit {
   [CustomEditor(typeof(UdonSharpBehaviour), true), CanEditMultipleObjects]
   public class UTEditor : UnityEditor.Editor {
@@ -343,7 +340,6 @@ namespace UdonToolkit {
         DragAndDrop.AcceptDrag();
         var targetType = serializedObject.targetObject.GetType().GetField(prop.name).FieldType.GetElementType();
         var addingGo = targetType == typeof(GameObject);
-        Debug.Log($"target type is {targetType}");
         foreach (var draggedObject in DragAndDrop.objectReferences) {
           if (!(draggedObject is GameObject addedGameObject)) continue;
           var addIndex = prop.arraySize;
