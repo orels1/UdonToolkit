@@ -357,16 +357,22 @@ namespace UdonToolkit{
     }
 
     public override void OnGUI(SerializedProperty property) {
-      if (property.name == "data" && property.depth > 0) {
-        EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
-        return;
-      }
-      var fieldType = property.serializedObject.targetObject.GetType().GetField(property.name).FieldType;
       var source = UTUtils.GetValueThroughAttribute(property, methodName, out var sourceValType);
-      if (sourceType == PopupSource.Method && fieldType != sourceValType || property.type != "string") {
+      if (property.name == "data" && sourceType == PopupSource.Method && property.type != "string" && property.type != "int") {
         EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
         return;
       }
+
+      if (property.name != "data") {
+        var fieldType = property.serializedObject.targetObject.GetType().GetField(property.name).FieldType;
+        if (sourceType == PopupSource.Method && fieldType != sourceValType && property.type != "string" && property.type != "int") {
+          EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
+          return;
+        }
+      }
+
+      var numericPopup = property.type == "int" && sourceValType == typeof(int) ||
+                         property.type == "float" && sourceValType == typeof(float);
       
       if (sourceType == PopupSource.AnimatorTrigger) {
         options = UTUtils.GetAnimatorTriggers(source as Animator).Select(o => new GUIContent(o)).ToArray();
@@ -395,11 +401,29 @@ namespace UdonToolkit{
         }
       }
       else {
-        options = ((string[]) source).Select(o => new GUIContent(o)).ToArray();
+        if (sourceValType == typeof(int)) {
+          options = ((int[]) source).Select(i => new GUIContent(i.ToString())).ToArray();
+        } else if (sourceValType == typeof(float)) {
+          options = ((float[]) source).Select(i => new GUIContent(i.ToString())).ToArray();
+        }
+        else {
+          options = ((string[]) source).Select(o => new GUIContent(o)).ToArray();
+        }
       }
 
-      if (property.type == "int") {
+      // we want to still support int[] -> int[] and float[] -> float[] mapping
+      if (property.type == "int" && !numericPopup) {
         selectedIndex = property.intValue;
+      } else if (numericPopup) {
+        if (property.type == "int") {
+          selectedIndex = options.ToList().FindIndex(i => i.text == property.intValue.ToString()); 
+        }
+        else {
+          selectedIndex = options.ToList().FindIndex(i => i.text == property.floatValue.ToString()); 
+        }
+        if (selectedIndex >= options.Length || selectedIndex < 0) {
+          selectedIndex = 0;
+        }
       }
       else {
         selectedIndex = options.ToList().FindIndex(i => i.text == property.stringValue);
@@ -408,10 +432,17 @@ namespace UdonToolkit{
         }
       }
       
-      var finalLabel = hideLabel ? new GUIContent() : new GUIContent(property.displayName);
+      var finalLabel = hideLabel || property.name == "data" ? new GUIContent() : new GUIContent(property.displayName);
       selectedIndex = EditorGUILayout.Popup(finalLabel, selectedIndex, options);
-      if (property.type == "int") {
+      if (property.type == "int" && !numericPopup) {
         property.intValue = selectedIndex;
+      } else if (numericPopup) {
+        if (property.type == "int") {
+          property.intValue = Convert.ToInt32(options[selectedIndex].text);  
+        }
+        else {
+          property.floatValue = Convert.ToSingle(options[selectedIndex].text); 
+        }
       }
       else {
         property.stringValue = options[selectedIndex].text;

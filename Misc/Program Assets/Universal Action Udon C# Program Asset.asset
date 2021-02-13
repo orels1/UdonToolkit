@@ -1978,7 +1978,7 @@ MonoBehaviour:
       Data: 133|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 90
+      Data: 29
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -1987,7 +1987,7 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: SystemInt32Array
+      Data: SystemStringArray
     - Name: symbolOriginalName
       Entry: 1
       Data: goToggleEvents
@@ -2299,7 +2299,7 @@ MonoBehaviour:
       Data: 154|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 90
+      Data: 29
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -2308,7 +2308,7 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: SystemInt32Array
+      Data: SystemStringArray
     - Name: symbolOriginalName
       Entry: 1
       Data: colliderToggleEvents
