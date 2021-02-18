@@ -766,6 +766,9 @@ namespace UdonToolkit {
   public class HorizontalAttribute : Attribute {
     public HorizontalAttribute(object a) {
     }
+
+    public HorizontalAttribute(object a, object b) {
+    }
   }
 
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
@@ -783,6 +786,12 @@ namespace UdonToolkit {
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class TabGroupAttribute : Attribute {
     public TabGroupAttribute(object a) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class LVHeaderAttribute : Attribute {
+    public LVHeaderAttribute(object a) {
     }
   }
 
