@@ -393,6 +393,9 @@ namespace UdonToolkit {
               break;
             }
 
+            // for some reason - the break above doesnt actually break
+            // I do not know why, but this fixes the layout issue
+            if (droppedObjects) break;
             if (!parentProp.isExpanded) break;
             EditorGUI.BeginDisabledGroup(propDisabled);
             for (int i = 0; i < parentProp.arraySize; i++) {
