@@ -162,6 +162,10 @@ namespace UdonToolkit {
         serializedObject.ApplyModifiedProperties();
       }
 
+      if (droppedObjects) {
+        return;
+      }
+
       if (behInfo.onAfterEditor != null) {
         behInfo.onAfterEditor.Invoke(t, new object[] {serializedObject});
       }
@@ -316,6 +320,9 @@ namespace UdonToolkit {
 
     private void HandleFields(Dictionary<string, UTFieldType> fields) {
       foreach (var fieldEntry in fields) {
+        if (droppedObjects) {
+          break;
+        }
         switch (fieldEntry.Value) {
           case UTFieldType.Regular: {
             var prop = serializedObject.FindProperty(fieldEntry.Key);
@@ -389,12 +396,13 @@ namespace UdonToolkit {
             var foldoutRect = GUILayoutUtility.GetLastRect();
             if (!propDisabled && UTEditorArray.HandleDragAndDrop(foldoutRect, serializedObject, propsList)) {
               droppedObjects = true;
+              if (listViewFields[0].onValueChaged == null) {
+                break;
+              }
               HandleFieldChangeArray(listViewFields[0], parentProp, parentProp.arraySize - 1);
               break;
             }
 
-            // for some reason - the break above doesnt actually break
-            // I do not know why, but this fixes the layout issue
             if (droppedObjects) break;
             if (!parentProp.isExpanded) break;
             EditorGUI.BeginDisabledGroup(propDisabled);
