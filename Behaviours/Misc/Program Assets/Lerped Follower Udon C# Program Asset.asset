@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Lerped Follower Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: f53136790f8a4f14e82279a491b709e0,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 648a5fa93d0b62444a7cb45796d68b25,
     type: 2}
   udonAssembly: 
   assemblyError: 

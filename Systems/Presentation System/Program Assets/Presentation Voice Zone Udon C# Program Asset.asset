@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Presentation Voice Zone Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 86b515516c889eb4f80540f425d6abe1,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: c483124d17e91d3458a1ad572a55f711,
     type: 2}
   udonAssembly: 
   assemblyError: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: UniversalTracker C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 2408c8fbfcc25b54fa9a387ee3a46f84,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: c31a67ea6baa5674ca452758264b3d03,
     type: 2}
   udonAssembly: 
   assemblyError: 

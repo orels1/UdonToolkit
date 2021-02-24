@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Camera Lens Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 7655a92295078634d8033d003830ff17,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: b4a3b01f223685f44935a935e788326f,
     type: 2}
   udonAssembly: 
   assemblyError: 
