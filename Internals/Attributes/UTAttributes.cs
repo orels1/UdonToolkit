@@ -562,9 +562,15 @@ namespace UdonToolkit{
   
   public class TabGroupAttribute : UTVisualAttribute {
     public readonly string name;
+    public readonly string variableName;
 
     public TabGroupAttribute(string name) {
       this.name = name;
+    }
+    
+    public TabGroupAttribute(string name, string variableName) {
+      this.name = name;
+      this.variableName = variableName;
     }
   }
 
@@ -786,6 +792,9 @@ namespace UdonToolkit {
   [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
   public class TabGroupAttribute : Attribute {
     public TabGroupAttribute(object a) {
+    }
+
+    public TabGroupAttribute(object a, object b) {
     }
   }
 

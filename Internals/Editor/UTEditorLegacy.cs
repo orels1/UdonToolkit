@@ -427,7 +427,7 @@ namespace UdonToolkit {
       var formatted = Regex.Split(prop.name, @"(?<!^)(?=[A-Z])");
       formatted[0] = formatted[0].Substring(0, 1).ToUpper() + formatted[0].Substring(1);
       var disabledString = propDisabled ? "[Read Only]" : "";
-      prop.isExpanded = UTStyles.FoldoutHeader($"{String.Join(" ", formatted)} [{prop.arraySize}] {disabledString}", prop.isExpanded);
+      prop.isExpanded = UTEditorStyles.FoldoutHeader($"{String.Join(" ", formatted)} [{prop.arraySize}] {disabledString}", prop.isExpanded);
       var foldoutRect = GUILayoutUtility.GetLastRect();
       if (!propDisabled) {
         HandleDragAndDrop(foldoutRect, prop);
@@ -550,7 +550,7 @@ namespace UdonToolkit {
     private void RenderStackedArray(string name, SerializedProperty prop, SerializedProperty otherProp,
       string addMethod, string addText, string changedCallback) {
       var disabledString = propDisabled ? "[Read Only]" : "";
-      prop.isExpanded = UTStyles.FoldoutHeader($"{name} [{prop.arraySize}] {disabledString}", prop.isExpanded);
+      prop.isExpanded = UTEditorStyles.FoldoutHeader($"{name} [{prop.arraySize}] {disabledString}", prop.isExpanded);
       var foldoutRect = GUILayoutUtility.GetLastRect();
       if (!propDisabled) {
         HandleDragAndDrop(foldoutRect, prop, otherProp);
@@ -605,7 +605,7 @@ namespace UdonToolkit {
       PopupAttribute rightPopup,
       string addMethod, string addText, string changedCallback) {
       var disabledString = propDisabled ? "[Read Only]" : "";
-      prop.isExpanded = UTStyles.FoldoutHeader($"{name} [{prop.arraySize}] {disabledString}", prop.isExpanded);
+      prop.isExpanded = UTEditorStyles.FoldoutHeader($"{name} [{prop.arraySize}] {disabledString}", prop.isExpanded);
       var foldoutRect = GUILayoutUtility.GetLastRect();
       if (!propDisabled) {
         HandleDragAndDrop(foldoutRect, prop, otherProp);

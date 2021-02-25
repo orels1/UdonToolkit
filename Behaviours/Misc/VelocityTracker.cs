@@ -10,16 +10,12 @@ namespace UdonToolkit {
   [CustomName("Velocity Tracker")]
   [HelpMessage("Uses physics-based tracking to allow for proper collision and acceleration between bodies. For best results - use with Continuous Speculative collision.")]
   public class VelocityTracker : UdonSharpBehaviour {
-    [Horizontal("Source Selector")]
-    [Toggle][OnValueChanged("SelectTransformSource")]
-    public bool trackTransform;
-    [Horizontal("Source Selector")]
-    [Toggle][OnValueChanged("SelectTransformSource")]
-    public bool trackPlayer;
-    
-    [HideIf("@!trackTransform")]
+    [HideInInspector]
+    public int trackingType;
+
+    [TabGroup("Track Transform", "trackingType")]
     public Transform sourceTransform;
-    [HideIf("@!trackPlayer")]
+    [TabGroup("Track Player")]
     public VRCPlayerApi.TrackingDataType sourceOnPlayer;
 
     [HelpBox("This behaviour requires an attached rigidbody to work", "GetRBState")]
@@ -28,19 +24,6 @@ namespace UdonToolkit {
     public bool trackRotation;
 
     #if !COMPILER_UDONSHARP && UNITY_EDITOR
-    public void SelectTransformSource(SerializedProperty value) {
-      switch (value.name) {
-        case "trackTransform": {
-          value.serializedObject.FindProperty("trackPlayer").boolValue = !value.boolValue;
-          break;
-        }
-        case "trackPlayer": {
-          value.serializedObject.FindProperty("trackTransform").boolValue = !value.boolValue;
-          break;
-        }
-      }
-    }
-    
     public bool GetRBState() {
       return GetComponent<Rigidbody>() == null;
     }
@@ -49,9 +32,19 @@ namespace UdonToolkit {
     private Rigidbody rb;
     private VRCPlayerApi player;
 
+    private bool trackTransform;
+
     private void Start() {
       player = Networking.LocalPlayer;
       rb = target.GetComponent<Rigidbody>();
+      switch (trackingType) {
+        case 0:
+          trackTransform = true;
+          break;
+        default:
+          trackTransform = true;
+          break;
+      }
       if (sourceTransform != null) {
         trackTransform = true;
       }

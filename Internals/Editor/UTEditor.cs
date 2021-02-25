@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace UdonToolkit {
   [CustomEditor(typeof(UdonSharpBehaviour), true), CanEditMultipleObjects]
-  public class UTEditor : Editor {
+  public partial class UTEditor : Editor {
     private UdonSharpBehaviour t;
     private Type tT;
     private UTBehaviourInfo behInfo;
@@ -27,6 +27,10 @@ namespace UdonToolkit {
       new Dictionary<string, Dictionary<string, UTFieldType>>();
 
     private Dictionary<string, UTFieldType> fieldOrder = new Dictionary<string, UTFieldType>();
+
+    private Dictionary<string, int> listPaginations = new Dictionary<string, int>();
+    private Dictionary<string, bool> utilsShown = new Dictionary<string, bool>();
+
     private bool cacheBuilt;
     private bool firstRepaint = true;
     private bool droppedObjects;
@@ -172,7 +176,7 @@ namespace UdonToolkit {
       
       #region Buttons
       if (!Application.isPlaying && behInfo.buttons.Length > 0) {
-        buttonsExpanded = UTStyles.FoldoutHeader("Editor Methods", buttonsExpanded);
+        buttonsExpanded = UTEditorStyles.FoldoutHeader("Editor Methods", buttonsExpanded);
         if (buttonsExpanded) {
           EditorGUILayout.BeginVertical(new GUIStyle("helpBox"));
           foreach (var button in behInfo.buttons) {
@@ -184,7 +188,7 @@ namespace UdonToolkit {
         }
       }
       if (Application.isPlaying && behInfo.udonCustomEvents.Length > 0) {
-        methodsExpanded = UTStyles.FoldoutHeader("Udon Events", methodsExpanded);
+        methodsExpanded = UTEditorStyles.FoldoutHeader("Udon Events", methodsExpanded);
         if (methodsExpanded) {
           EditorGUILayout.BeginVertical(new GUIStyle("helpBox"));
           var rowBreak = Mathf.Max(1, Mathf.Min(3, behInfo.udonCustomEvents.Length - 1));
@@ -259,7 +263,7 @@ namespace UdonToolkit {
 
     #endregion
 
-    #region Field Handling
+    #region Field Order
     private void AddToFieldOrder(UTField field, SerializedProperty prop, bool addToFoldout = false,
       bool addToTabGroup = false) {
       if (!addToFoldout && !addToTabGroup) {
@@ -282,9 +286,10 @@ namespace UdonToolkit {
 
     private void AddToFieldOrder(UTField field, SerializedProperty prop,
       ref Dictionary<string, UTFieldType> targetObj) {
-      // var targetObj = addToFoldout ? foldouts[field.foldoutName] : fieldOrder;
       // we reuse ListView rendering for the arrays
       if (field.isArray && !field.isInListView) {
+        listPaginations.Add(prop.displayName, 0);
+        utilsShown.Add(prop.displayName, false);
         listViews.Add(prop.displayName, new List<UTField> {field});
         targetObj.Add(prop.displayName, UTFieldType.ListView);
         return;
@@ -292,6 +297,8 @@ namespace UdonToolkit {
 
       if (field.isInListView) {
         if (!listViews.ContainsKey(field.listViewName)) {
+          utilsShown.Add(field.listViewName, false);
+          listPaginations.Add(field.listViewName, 0);
           listViews.Add(field.listViewName, new List<UTField> {field});
           targetObj.Add(field.listViewName, UTFieldType.ListView);
         }
@@ -315,229 +322,6 @@ namespace UdonToolkit {
       }
       else {
         targetObj.Add(field.name, UTFieldType.Regular);
-      }
-    }
-
-    private void HandleFields(Dictionary<string, UTFieldType> fields) {
-      foreach (var fieldEntry in fields) {
-        if (droppedObjects) {
-          break;
-        }
-        switch (fieldEntry.Value) {
-          case UTFieldType.Regular: {
-            var prop = serializedObject.FindProperty(fieldEntry.Key);
-            DrawField(fieldCache[fieldEntry.Key], prop);
-            break;
-          }
-          case UTFieldType.Tab: {
-            var tabNames = tabs.Select(i => i.Key).ToArray();
-            tabOpen = GUILayout.Toolbar(tabOpen, tabNames);
-            HandleFields(tabs[tabNames[tabOpen]]);
-            break;
-          }
-          case UTFieldType.Foldout: {
-            var foldout = foldouts[fieldEntry.Key].First();
-            UTField field;
-            switch (foldout.Value) {
-              case UTFieldType.Horizontal: {
-                field = horizontalViews[foldout.Key].First();
-                break;
-              }
-              case UTFieldType.ListView: {
-                field = listViews[foldout.Key].First();
-                break;
-              }
-              default: {
-                field = fieldCache[foldout.Key];
-                break;
-              }
-            }
-            var parentProp = serializedObject.FindProperty(field.name);
-            var foldoutName = field.foldoutName;
-            parentProp.isExpanded = UTStyles.FoldoutHeader(foldoutName, parentProp.isExpanded);
-            if (!parentProp.isExpanded) break;
-            EditorGUILayout.BeginVertical(new GUIStyle("helpBox"));
-            HandleFields(foldouts[fieldEntry.Key]);
-            EditorGUILayout.EndVertical();
-            break;
-          }
-          case UTFieldType.ListView: {
-            var listViewFields = listViews[fieldEntry.Key];
-            List<SerializedProperty> propsList = new List<SerializedProperty>();
-            foreach (var field in listViewFields) {
-              propsList.Add(serializedObject.FindProperty(field.name));
-            }
-
-            // draw header
-            var parentProp = serializedObject.FindProperty(listViewFields[0].name);
-            var uiAttrs = listViewFields[0].uiAttrs;
-
-            var isVisible = true;
-            foreach (var uiAttr in uiAttrs) {
-              if (!uiAttr.GetVisible(parentProp)) {
-                isVisible = false;
-                break;
-              }
-            }
-
-            if (!isVisible) {
-              break;
-            }
-            
-            foreach (var uiAttr in uiAttrs) {
-              uiAttr.BeforeGUI(propsList[0]);
-            }
-            
-            var propDisabled = listViewFields.Exists(i => i.isDisabled);
-            var disabledString = propDisabled ? "[Read Only]" : "";
-            parentProp.isExpanded =
-              UTStyles.FoldoutHeader($"{fieldEntry.Key} [{parentProp.arraySize}] {disabledString}",
-                parentProp.isExpanded);
-            var foldoutRect = GUILayoutUtility.GetLastRect();
-            if (!propDisabled && UTEditorArray.HandleDragAndDrop(foldoutRect, serializedObject, propsList)) {
-              droppedObjects = true;
-              if (listViewFields[0].onValueChaged == null) {
-                break;
-              }
-              HandleFieldChangeArray(listViewFields[0], parentProp, parentProp.arraySize - 1);
-              break;
-            }
-
-            if (droppedObjects) break;
-            if (!parentProp.isExpanded) break;
-            EditorGUI.BeginDisabledGroup(propDisabled);
-            for (int i = 0; i < parentProp.arraySize; i++) {
-              Rect headerRect = default;
-              Rect[] fieldRects = new Rect[listViewFields.Count];
-              // get a react to draw a header later
-              if (listViewFields.Count > 1 && i == 0) {
-                headerRect = EditorGUILayout.GetControlRect();
-              }
-
-              EditorGUILayout.BeginHorizontal();
-
-              // position controls
-              if (UTEditorArray.RenderPositionControls(i, propsList, out var newIndex)) {
-                HandleFieldChangeArray(listViewFields[0], parentProp.GetArrayElementAtIndex(newIndex), newIndex);
-                break;
-              }
-
-              var fieldIndex = 0;
-              foreach (var field in listViewFields) {
-                var prop = serializedObject.FindProperty(field.name);
-
-                if (prop.arraySize != parentProp.arraySize) {
-                  prop.arraySize = parentProp.arraySize;
-                }
-
-                DrawFieldElement(field, prop.GetArrayElementAtIndex(i));
-                // saved the field width to reuse in the header later
-                if (listViewFields.Count > 1 && i == 0) {
-                  fieldRects[fieldIndex] = GUILayoutUtility.GetLastRect();
-                }
-
-                fieldIndex++;
-              }
-
-              // removal controls
-              if (UTEditorArray.RenderRemoveControls(i, propsList)) {
-                if (listViewFields[0].onValueChaged != null) {
-                  HandleFieldChangeArray(listViewFields[0], null, i);
-                }
-
-                break;
-              }
-
-              EditorGUILayout.EndHorizontal();
-              // draw a header with saved field widths
-              // we only draw a header for cases where there are multiple elements
-              if (listViewFields.Count > 1 && i == 0) {
-                GUI.Box(headerRect, "", new GUIStyle("helpBox"));
-                for (int j = 0; j < listViewFields.Count; j++) {
-                  var adjustedRect = fieldRects[j];
-                  if (j == 0) {
-                    adjustedRect.xMin = headerRect.xMin + 2;
-                  }
-
-                  adjustedRect.yMin = headerRect.yMin;
-                  adjustedRect.yMax = headerRect.yMax;
-                  EditorGUI.LabelField(adjustedRect, listViewFields[j].listViewColumnName ?? serializedObject.FindProperty(listViewFields[j].name).displayName);
-                }
-              }
-            }
-
-            EditorGUI.EndDisabledGroup();
-
-            if (GUILayout.Button("Add Element")) {
-              var insertAt = parentProp.arraySize;
-              foreach (var field in listViewFields) {
-                var prop = serializedObject.FindProperty(field.name);
-                prop.InsertArrayElementAtIndex(insertAt);
-              }
-
-              if (listViewFields[0].onValueChaged != null) {
-                HandleFieldChangeArray(listViewFields[0], parentProp.GetArrayElementAtIndex(insertAt), insertAt);
-              }
-            }
-
-            foreach (var uiAttr in uiAttrs) {
-              uiAttr.AfterGUI(parentProp);
-            }
-
-            break;
-          }
-          case UTFieldType.Horizontal: {
-            if (droppedObjects) break;
-            var horizontalFields = horizontalViews[fieldEntry.Key];
-            List<SerializedProperty> propsList = new List<SerializedProperty>();
-            foreach (var field in horizontalFields) {
-              propsList.Add(serializedObject.FindProperty(field.name));
-            }
-
-            var uiAttrs = horizontalFields[0].uiAttrs;
-            
-            var isVisible = true;
-            foreach (var uiAttr in uiAttrs) {
-              if (!uiAttr.GetVisible(propsList[0])) {
-                isVisible = false;
-                break;
-              }
-            }
-
-            if (!isVisible) {
-              break;
-            }
-            
-            foreach (var uiAttr in uiAttrs) {
-              uiAttr.BeforeGUI(propsList[0]);
-            }
-
-            var horizontalAttr =
-              horizontalFields[0].attributes.Find(i => i is HorizontalAttribute) as HorizontalAttribute;
-            if (horizontalAttr.showHeader) {
-              // header frame and label for the group
-              var oldColor = GUI.backgroundColor;
-              var headerRect = EditorGUILayout.GetControlRect();
-              GUI.backgroundColor = new Color(oldColor.r, oldColor.g, oldColor.b, 0.5f);
-              GUI.Box(headerRect, "", new GUIStyle("helpBox"));
-              GUI.backgroundColor = oldColor;
-              EditorGUI.LabelField(headerRect, fieldEntry.Key);
-            }
-
-            EditorGUILayout.BeginHorizontal();
-            for (int i = 0; i < propsList.Count; i++) {
-              DrawFieldElement(horizontalFields[i], propsList[i]);
-            }
-
-            EditorGUILayout.EndHorizontal();
-
-            foreach (var uiAttr in uiAttrs) {
-              uiAttr.AfterGUI(propsList[0]);
-            }
-            
-            break;
-          }
-        }
       }
     }
 
@@ -570,6 +354,7 @@ namespace UdonToolkit {
       public string foldoutName;
       public bool isInTabGroup;
       public string tabGroupName;
+      public string tabSaveTarget;
       public bool isDisabled;
       public bool showLabel;
       
@@ -598,11 +383,13 @@ namespace UdonToolkit {
         var tAttr = attributes.Find(i => i.GetType() == typeof(TabGroupAttribute)) as TabGroupAttribute;
         isInTabGroup = tAttr != null;
         tabGroupName = isInTabGroup ? tAttr.name : null;
+        tabSaveTarget = isInTabGroup ? tAttr.variableName : null;
         var disabledAttr = attributes.Find(i => i is DisabledAttribute) as DisabledAttribute;
         isDisabled = disabledAttr != null;
         var showLabelAttr = attributes.Find(i => i is ShowLabelAttribute) as ShowLabelAttribute;
         showLabel = showLabelAttr != null;
 
+        // Value Changed Handling
         var vChangeAttr = attributes.OfType<OnValueChangedAttribute>().ToArray();
         onValueChaged = vChangeAttr.Any() ? tType.GetMethod(vChangeAttr.First().methodName) : null;
         if (onValueChaged != null) {
@@ -632,209 +419,6 @@ namespace UdonToolkit {
           isValueChangeAtomic = false;
           isValueChangedFull = false;
           isValueChangedWithObject = false;
-        }
-      }
-    }
-
-    private void DrawField(UTField field, SerializedProperty prop) {
-      var uiAttrs = field.uiAttrs;
-      if (!uiAttrs.Any()) {
-        EditorGUI.BeginDisabledGroup(field.isDisabled);
-        EditorGUILayout.PropertyField(prop, new GUIContent(prop.displayName));
-        EditorGUI.EndDisabledGroup();
-        return;
-      }
-
-      var isVisible = true;
-      foreach (var uiAttr in uiAttrs) {
-        if (!uiAttr.GetVisible(prop)) {
-          isVisible = false;
-          break;
-        }
-      }
-
-      if (!isVisible) return;
-
-      foreach (var uiAttr in uiAttrs) {
-        uiAttr.BeforeGUI(prop);
-      }
-
-      EditorGUI.BeginChangeCheck();
-      EditorGUI.BeginDisabledGroup(field.isDisabled);
-      // we can only have a single UI overriding OnGUI that renders the actual prop field
-      var uiOverride = uiAttrs.Where(i => i.GetType().GetMethod("OnGUI")?.DeclaringType == i.GetType()).ToArray();
-      if (uiOverride.Any()) {
-        uiOverride.First().OnGUI(prop);
-      }
-      else {
-        EditorGUILayout.PropertyField(prop, new GUIContent(prop.displayName));
-      }
-
-      EditorGUI.EndDisabledGroup();
-      if (EditorGUI.EndChangeCheck() && field.onValueChaged != null) {
-        field.onValueChaged.Invoke(t, new object[] {prop});
-      }
-
-      foreach (var uiAttr in uiAttrs) {
-        uiAttr.AfterGUI(prop);
-      }
-    }
-
-    private void DrawFieldElement(UTField field, SerializedProperty prop) {
-      var propPath = prop.propertyPath;
-      var arrIndex = Convert.ToInt32(field.isArray
-        ? propPath.Substring(propPath.LastIndexOf("[") + 1, propPath.LastIndexOf("]") - propPath.LastIndexOf("[") - 1)
-        : null);
-      var customLabel = field.attributes.Find(i => i is ShowLabelAttribute) as ShowLabelAttribute;
-      var uiAttrs = field.uiAttrs;
-      var uiOverride = uiAttrs.Where(i => i.GetType().GetMethod("OnGUI")?.DeclaringType == i.GetType()).ToArray();
-      EditorGUI.BeginChangeCheck();
-      switch (prop.type) {
-        case "bool":
-          if (uiOverride.Any()) {
-            uiOverride.First().OnGUI(prop);
-            break;
-          }
-
-          if (customLabel == null) {
-            EditorGUILayout.PropertyField(prop, new GUIContent(), GUILayout.MaxWidth(30));
-          }
-          else {
-            EditorGUILayout.PropertyField(prop, new GUIContent(customLabel.label ?? prop.displayName));
-          }
-
-          break;
-        default:
-          // for list views we handle the UI separately due to how popup targeting works
-          if (uiOverride.Any() && !field.isInListView) {
-            uiOverride.First().OnGUI(prop);
-            break;
-          }
-
-          var popupAttr = field.attributes.Find(i => i is PopupAttribute) as PopupAttribute;
-          if (popupAttr != null) {
-            var sourceProp = UTUtils.GetPropThroughAttribute(serializedObject, popupAttr.methodName);
-            // I do not like this handling
-            // need a way to determine if target is a part of the list view or not without breaking the bank
-            var source = sourceProp == null ? null : !field.isInListView
-              ? sourceProp
-              : sourceProp.isArray && sourceProp.arraySize > arrIndex
-                ? sourceProp.GetArrayElementAtIndex(arrIndex)
-                : null;
-            var options = UTUtils.GetPopupOptions(prop, source, popupAttr, out var selectedIndex);
-            selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
-            if (prop.type == "int") {
-              prop.intValue = selectedIndex;
-            }
-            else {
-              prop.stringValue = options[selectedIndex];
-            }
-            break;
-          }
-
-          // if there are no popup attributes - still allow gui override
-          if (uiOverride.Any(i => !(i is PopupAttribute))) {
-            uiOverride.First(i => !(i is PopupAttribute)).OnGUI(prop);
-            break;
-          }
-
-          if (customLabel == null) {
-            EditorGUILayout.PropertyField(prop, new GUIContent());
-          }
-          else {
-            EditorGUILayout.PropertyField(prop, new GUIContent(customLabel.label ?? prop.displayName));
-          }
-
-          break;
-      }
-
-      if (EditorGUI.EndChangeCheck() && field.onValueChaged != null) {
-        if (!field.isInListView) {
-          field.onValueChaged.Invoke(t, new object[] {prop});
-          return;
-        }
-        HandleFieldChangeArray(field, prop, arrIndex);
-      }
-    }
-
-    private void HandleFieldChangeArray(UTField field, SerializedProperty prop, int arrIndex = 0) {
-      if (field.isValueChangeAtomic) {
-        if (!field.isInListView) {
-          field.onValueChaged.Invoke(t, new object[] {prop, arrIndex});
-          return;
-        }
-
-        var fields = listViews[field.listViewName];
-        var props = new List<SerializedProperty>();
-        foreach (var utField in fields) {
-          var parentProp = serializedObject.FindProperty(utField.name);
-          props.Add(parentProp);
-        }
-
-        field.onValueChaged.Invoke(t, props.ToArray());
-        return;
-      }
-
-      if (field.isValueChangedFull) {
-        if (!field.isInListView) {
-          var parentProp = serializedObject.FindProperty(field.name);
-          var props = new SerializedProperty[parentProp.arraySize];
-          for (int i = 0; i < parentProp.arraySize; i++) {
-            props[i] = parentProp.GetArrayElementAtIndex(i);
-          }
-
-          field.onValueChaged.Invoke(t, new object[] {props});
-          return;
-        }
-
-        {
-          var fields = listViews[field.listViewName];
-          var props = new List<SerializedProperty[]>();
-          foreach (var utField in fields) {
-            var parentProp = serializedObject.FindProperty(utField.name);
-            var localProps = new List<SerializedProperty>();
-            for (int i = 0; i < parentProp.arraySize; i++) {
-              localProps.Add(parentProp.GetArrayElementAtIndex(i));
-            }
-
-            props.Add(localProps.ToArray());
-          }
-
-          field.onValueChaged.Invoke(t, props.ToArray());
-          return;
-        }
-      }
-
-      if (field.isValueChangedWithObject) {
-        if (!field.isInListView) {
-          var parentProp = serializedObject.FindProperty(field.name);
-          var props = new SerializedProperty[parentProp.arraySize];
-          for (int i = 0; i < parentProp.arraySize; i++) {
-            props[i] = parentProp.GetArrayElementAtIndex(i);
-          }
-
-          field.onValueChaged.Invoke(t, new object[] {serializedObject, props});
-          return;
-        }
-
-        {
-          var fields = listViews[field.listViewName];
-          var props = new List<SerializedProperty[]>();
-          foreach (var utField in fields) {
-            var parentProp = serializedObject.FindProperty(utField.name);
-            var localProps = new List<SerializedProperty>();
-            for (int i = 0; i < parentProp.arraySize; i++) {
-              localProps.Add(parentProp.GetArrayElementAtIndex(i));
-            }
-
-            props.Add(localProps.ToArray());
-          }
-
-          var appended = new List<object> {serializedObject};
-          appended.AddRange(props);
-
-          field.onValueChaged.Invoke(t, appended.ToArray());
-          return;
         }
       }
     }

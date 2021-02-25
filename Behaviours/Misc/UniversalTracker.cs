@@ -15,7 +15,7 @@ namespace UdonToolkit {
     public bool trackPlayerBase;
     public bool trackPlayspace;
 
-#if !COMPILER_UDONSHARP && UNITY_EDITOR
+    #if !COMPILER_UDONSHARP && UNITY_EDITOR
     public bool HideTrackDataDropdown() {
       return trackBone || trackPlayerBase || trackPlayspace;
     }
@@ -23,7 +23,7 @@ namespace UdonToolkit {
     public bool HideTrackBoneDropdown() {
       return !trackBone || trackPlayerBase || trackPlayspace;
     }
-#endif
+    #endif
 
     [HideIf("HideTrackDataDropdown")] public VRCPlayerApi.TrackingDataType trackingTarget;
 

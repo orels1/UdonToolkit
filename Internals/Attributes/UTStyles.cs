@@ -6,8 +6,9 @@ using UnityEngine;
 namespace UdonToolkit {
   public class UTStyles {
     public static Texture2D ComponentBG = (Texture2D) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Component BG.png");
-    public static Texture Arrow = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow.png");
-    public static Texture2D Splash = (Texture2D) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/github_banner.png");
+    public static Texture ArrowR = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow_R.png");
+    public static Texture ArrowL = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow_L.png");
+    public static Texture Utils = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Utils.png");
 
     public static GUIStyle CreatePreviewStyle(Texture2D bg) {
       return new GUIStyle(EditorStyles.helpBox) {
@@ -59,38 +60,6 @@ namespace UdonToolkit {
         stretchWidth = true,
       });
       GUI.backgroundColor = Color.white;
-    }
-
-    // based on https://github.com/Xiexe/Xiexes-Unity-Shaders/blob/master/Editor/XSStyles.cs#L275
-    public static bool FoldoutHeader(string text, bool value) {
-      var shown = value;
-      var textColor = EditorGUIUtility.isProSkin ? new Color(0.6f, 0.6f, 0.6f) : new Color(0.1f, 0.1f, 0.1f);
-      GUI.backgroundColor = new Color(0.8f , 0.8f, 0.8f);
-      var style = new GUIStyle(EditorStyles.helpBox) {
-        stretchWidth = true,
-        font = new GUIStyle(EditorStyles.label).font,
-        fontSize = 10,
-        contentOffset = new Vector2(20f, 0f),
-        normal = new GUIStyleState() {
-          textColor = textColor,
-          background = EditorStyles.helpBox.normal.background
-        }
-      };
-      var rect = GUILayoutUtility.GetRect(16f, 20, style);
-      EditorGUI.LabelField(rect, new GUIContent(text), style);
-      var toggleRect = new Rect(rect.x + 4f, rect.y + 2f, 13f, 13f);
-      var e = Event.current;
-      if (e.type == EventType.Repaint) {
-        EditorStyles.foldout.Draw(toggleRect, false, false, value, false);
-      }
-      GUI.backgroundColor = Color.white;
-
-      if (e.type == EventType.MouseDown && rect.Contains(e.mousePosition)) {
-        shown = !shown;
-        e.Use();
-      }
-
-      return shown;
     }
 
     public static void RenderNote(string text) {
