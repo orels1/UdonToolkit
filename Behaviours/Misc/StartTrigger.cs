@@ -1,6 +1,7 @@
 ﻿
 using UdonSharp;
 using UdonToolkit;
+using UnityEditor;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
@@ -16,7 +17,7 @@ public class StartTrigger : UdonSharpBehaviour {
   public NetworkEventTarget networkTarget;
   [ListView("Udon Events List")]
   public UdonSharpBehaviour[] udonTargets;
-      
+  
   [ListView("Udon Events List")]
   [Popup("behaviour", "@udonTargets", true)]
   public string[] udonEvents;

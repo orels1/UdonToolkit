@@ -15,6 +15,9 @@ namespace UdonToolkit {
   public partial class UTEditor : Editor {
     private UdonSharpBehaviour t;
     private Type tT;
+    
+    #region Editor State
+    
     private UTBehaviourInfo behInfo;
     private Dictionary<string, UTField> fieldCache = new Dictionary<string, UTField>();
     private Dictionary<string, List<UTField>> listViews = new Dictionary<string, List<UTField>>();
@@ -39,6 +42,8 @@ namespace UdonToolkit {
     private int tabOpen;
     private bool methodsExpanded;
     private bool buttonsExpanded = true;
+    
+    #endregion
 
     public override void OnInspectorGUI() {
       t = (UdonSharpBehaviour) target;
@@ -176,7 +181,7 @@ namespace UdonToolkit {
       
       #region Buttons
       if (!Application.isPlaying && behInfo.buttons.Length > 0) {
-        buttonsExpanded = UTEditorStyles.FoldoutHeader("Editor Methods", buttonsExpanded);
+        buttonsExpanded = UTStyles.FoldoutHeader("Editor Methods", buttonsExpanded);
         if (buttonsExpanded) {
           EditorGUILayout.BeginVertical(new GUIStyle("helpBox"));
           foreach (var button in behInfo.buttons) {
@@ -188,7 +193,7 @@ namespace UdonToolkit {
         }
       }
       if (Application.isPlaying && behInfo.udonCustomEvents.Length > 0) {
-        methodsExpanded = UTEditorStyles.FoldoutHeader("Udon Events", methodsExpanded);
+        methodsExpanded = UTStyles.FoldoutHeader("Udon Events", methodsExpanded);
         if (methodsExpanded) {
           EditorGUILayout.BeginVertical(new GUIStyle("helpBox"));
           var rowBreak = Mathf.Max(1, Mathf.Min(3, behInfo.udonCustomEvents.Length - 1));
@@ -348,6 +353,8 @@ namespace UdonToolkit {
       public bool isInListView;
       public string listViewName;
       public string listViewColumnName;
+      public MethodInfo listViewAddMethod;
+      public string listViewAddTitle;
       public bool isInHorizontal;
       public string horizontalName;
       public bool isInFoldout;
@@ -373,6 +380,8 @@ namespace UdonToolkit {
         listViewName = isInListView ? lVAttr.name : null;
         var lvColumnNameAttr = attributes.OfType<LVHeaderAttribute>().ToList();
         listViewColumnName = lvColumnNameAttr.Any() ? lvColumnNameAttr.First().title : null;
+        listViewAddMethod = isInListView && !String.IsNullOrEmpty(lVAttr.addMethodName) ? tType.GetMethod(lVAttr.addMethodName) : null;
+        listViewAddTitle = isInListView ? lVAttr.addButtonText : null;
         var hAttr = attributes.Find(i => i.GetType() == typeof(HorizontalAttribute)) as HorizontalAttribute;
         // we do not support combining horizontal with general arrays or list views
         isInHorizontal = !isArray && !isInListView && hAttr != null;
