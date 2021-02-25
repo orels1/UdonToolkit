@@ -140,10 +140,14 @@ namespace UdonToolkit {
                   }
                 }
 
+                var elFound = false;
                 for (int i = objRefs[0].arraySize - 1; i >= 0; i--) {
+                  elFound = false;
                   foreach (var oRef in objRefs) {
+                    if (elFound) continue;
                     if (oRef.GetArrayElementAtIndex(i).objectReferenceValue == null) {
                       clearedItems.Add(i);
+                      elFound = true;
                     }
                   }
                 }
