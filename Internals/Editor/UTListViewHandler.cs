@@ -231,13 +231,13 @@ namespace UdonToolkit {
       if (pageCount > 1) {
         EditorGUI.EndDisabledGroup();
         EditorGUI.BeginDisabledGroup(page <= 0);
-        if (GUILayout.Button(UTStyles.ArrowL, UTStyles.miniArrowLeft)) {
+        if (GUILayout.Button(UTStyles.ArrowL, UTStyles.MiniArrowLeft)) {
           listPaginations[fieldEntry.Key]--;
         }
         EditorGUI.EndDisabledGroup();
         
         EditorGUI.BeginDisabledGroup(page >= pageCount - 1);
-        if (GUILayout.Button(UTStyles.ArrowR, UTStyles.miniArrowRight)) {
+        if (GUILayout.Button(UTStyles.ArrowR, UTStyles.MiniArrowRight)) {
           listPaginations[fieldEntry.Key]++;
         }
         EditorGUI.EndDisabledGroup();

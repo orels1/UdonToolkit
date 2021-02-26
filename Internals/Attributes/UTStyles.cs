@@ -147,7 +147,7 @@ namespace UdonToolkit {
       var e = Event.current;
       if (e.type == EventType.Repaint) {
         EditorStyles.foldout.Draw(toggleRect, false, false, value, false);
-        GUI.Box(utilsRect, UTStyles.Utils, new GUIStyle());
+        GUI.Box(utilsRect, Utils, new GUIStyle());
       }
       GUI.backgroundColor = Color.white;
       
@@ -169,19 +169,19 @@ namespace UdonToolkit {
       return FoldoutHeader(text, value, ref stubRef);
     }
 
-    public static GUIStyle miniArrowLeft = new GUIStyle(EditorStyles.miniButtonLeft) {
+    public static readonly GUIStyle MiniArrowLeft = new GUIStyle(EditorStyles.miniButtonLeft) {
       margin = new RectOffset(0, 0, 3, 3),
       fixedWidth = 20,
       fixedHeight = 17
     };
     
-    public static GUIStyle miniArrowRight = new GUIStyle(EditorStyles.miniButtonRight) {
+    public static readonly GUIStyle MiniArrowRight = new GUIStyle(EditorStyles.miniButtonRight) {
       margin = new RectOffset(0, 0, 3, 3),
       fixedWidth = 20,
       fixedHeight = 17
     };
 
-    public static GUIStyle undoButton = new GUIStyle("button") {
+    public static readonly GUIStyle UndoButton = new GUIStyle("button") {
       fixedHeight = 18,
       fixedWidth = 22,
       margin = new RectOffset(0, 0, 0, 0),

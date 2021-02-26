@@ -129,7 +129,7 @@ namespace UdonToolkit {
       btnRect.xMin = rect.xMax;
       btnRect.xMax += 24;
       btnRect.y -= 2;
-      if (GUI.Button(btnRect, "", UTStyles.undoButton)) {
+      if (GUI.Button(btnRect, "", UTStyles.UndoButton)) {
         tT.GetField(prop.name).SetValue(t, origValue);
       }
     }
