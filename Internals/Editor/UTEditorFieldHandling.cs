@@ -120,12 +120,35 @@ namespace UdonToolkit {
         }
       }
     }
+
+    private void PropertyFieldWithUndo(SerializedProperty prop, object origValue) {
+      var rect = EditorGUILayout.GetControlRect();
+      rect.xMax -= 24;
+      EditorGUI.PropertyField(rect, prop, new GUIContent(prop.displayName));
+      var btnRect = rect;
+      btnRect.xMin = rect.xMax;
+      btnRect.xMax += 24;
+      btnRect.y -= 2;
+      if (GUI.Button(btnRect, "", UTStyles.undoButton)) {
+        tT.GetField(prop.name).SetValue(t, origValue);
+      }
+    }
     
     private void DrawField(UTField field, SerializedProperty prop) {
+      // this is taken directly from U# code
+      var origValue = programAsset.GetRealProgram().Heap.GetHeapVariable(programAsset.GetRealProgram().SymbolTable.GetAddressFromSymbol(prop.name));
+      var fieldVal = tT.GetField(prop.name).GetValue(t);
+      var isNonDefault = fieldVal != null && origValue != null && !origValue.Equals(fieldVal) ;
+      
       var uiAttrs = field.uiAttrs;
       if (!uiAttrs.Any()) {
         EditorGUI.BeginDisabledGroup(field.isDisabled);
-        EditorGUILayout.PropertyField(prop, new GUIContent(prop.displayName));
+        if (isNonDefault) {
+          PropertyFieldWithUndo(prop, origValue);
+        }
+        else {
+          EditorGUILayout.PropertyField(prop, new GUIContent(prop.displayName));
+        }
         EditorGUI.EndDisabledGroup();
         return;
       }
@@ -152,7 +175,13 @@ namespace UdonToolkit {
         uiOverride.First().OnGUI(prop);
       }
       else {
-        EditorGUILayout.PropertyField(prop, new GUIContent(prop.displayName));
+        if (isNonDefault) {
+          PropertyFieldWithUndo(prop, origValue);
+        }
+        else {
+          EditorGUILayout.PropertyField(prop, new GUIContent(prop.displayName));
+        }
+        
       }
 
       EditorGUI.EndDisabledGroup();

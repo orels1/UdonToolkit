@@ -15,6 +15,8 @@ namespace UdonToolkit {
   public partial class UTEditor : Editor {
     private UdonSharpBehaviour t;
     private Type tT;
+    private UdonSharpProgramAsset programAsset;
+    private GUIContent undoArrow;
     
     #region Editor State
     
@@ -67,6 +69,7 @@ namespace UdonToolkit {
 
       if (!cacheBuilt) {
         tT = t.GetType();
+        programAsset = UdonSharpEditorUtility.GetUdonSharpProgramAsset(t);
         behInfo = new UTBehaviourInfo(t);
 
         var prop = serializedObject.GetIterator();

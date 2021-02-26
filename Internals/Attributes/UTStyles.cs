@@ -9,6 +9,7 @@ namespace UdonToolkit {
     public static Texture ArrowR = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow_R.png");
     public static Texture ArrowL = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow_L.png");
     public static Texture Utils = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Utils.png");
+    public static Texture Undo = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Undo.png");
 
     public static GUIStyle CreatePreviewStyle(Texture2D bg) {
       return new GUIStyle(EditorStyles.helpBox) {
@@ -178,6 +179,19 @@ namespace UdonToolkit {
       margin = new RectOffset(0, 0, 3, 3),
       fixedWidth = 20,
       fixedHeight = 17
+    };
+
+    public static GUIStyle undoButton = new GUIStyle("button") {
+      fixedHeight = 18,
+      fixedWidth = 22,
+      margin = new RectOffset(0, 0, 0, 0),
+      padding = new RectOffset(0,0,0,0),
+      normal = new GUIStyleState {
+        background = (Texture2D) Undo
+      },
+      active = new GUIStyleState {
+        background = (Texture2D) Undo
+      }, 
     };
   }
 }
