@@ -14,17 +14,56 @@ namespace UdonToolkit {
       public Animator lensAnimator;
       public Animator cameraAnimator;
       
+      [FoldoutGroup("User Interface")]
       [SectionHeader("Desktop UI")]
       public GameObject desktopUI;
+      [FoldoutGroup("User Interface")]
       public Slider focusSlider;
+      [FoldoutGroup("User Interface")]
       public Slider focalSlider;
+      [FoldoutGroup("User Interface")]
       public Slider zoomSlider;
       
+      [FoldoutGroup("User Interface")]
       [SectionHeader("VR UI")]
+      [FoldoutGroup("User Interface")]
       public GameObject vrUI;
+      [FoldoutGroup("User Interface")]
       public Slider vrFocusSlider;
+      [FoldoutGroup("User Interface")]
       public Slider vrFocalSlider;
+      [FoldoutGroup("User Interface")]
       public Slider vrZoomSlider;
+      
+      [FoldoutGroup("VR Controls")]
+      public Text positionText;
+      [FoldoutGroup("VR Controls")]
+      public Text focusText;
+      [FoldoutGroup("VR Controls")]
+      public Text zoomText;
+      [FoldoutGroup("VR Controls")]
+      public Text focalText;
+      [FoldoutGroup("VR Controls")]
+      public Image focusBg;
+      [FoldoutGroup("VR Controls")]
+      public Image zoomBg;
+      [FoldoutGroup("VR Controls")]
+      public Image focalBg;
+
+      [FoldoutGroup("VR Controls")] [SectionHeader("Control Spheres")]
+      public Transform vrFingerReference;
+      [FoldoutGroup("VR Controls")]
+      public float sphereRadius = 0.015f;
+      [FoldoutGroup("VR Controls")]
+      public Transform tutorialSphere;
+      [FoldoutGroup("VR Controls")]
+      public Transform flipSphere;
+      [FoldoutGroup("VR Controls")]
+      public Transform alwaysOnSphere;
+      [FoldoutGroup("VR Controls")]
+      public Transform focusSphere;
+      [FoldoutGroup("VR Controls")]
+      public Transform worldSpaceSphere;
       
       [SectionHeader("Camera Objects")]
       public GameObject viewSphere;
@@ -40,15 +79,6 @@ namespace UdonToolkit {
       [ColorUsage(true)]
       public Color activeControlColor;
 
-      [SectionHeader("On-Camera UI")]
-      public Text positionText;
-      public Text focusText;
-      public Text zoomText;
-      public Text focalText;
-      public Image focusBg;
-      public Image zoomBg;
-      public Image focalBg;
-      
       [SectionHeader("Tracking")]
       public Transform dropTarget;
       public UniversalTracker playspaceTracker;
@@ -79,6 +109,38 @@ namespace UdonToolkit {
       private Color inactiveTextColor = new Color(1, 1, 1, 0.4f);
       private Color activeTextColor = new Color(0,0,0,1f);
       private bool closeHelpShown;
+      private VRCPlayerApi player;
+      private bool setupPlatform;
+
+      private void SetupPlatform() {
+        if (player == null) return;
+        setupPlatform = true;
+        if (player.IsUserInVR()) {
+          if (isDesktop) {
+            isDesktop = false;
+          }
+
+          SetupVR();
+          return;
+        }
+        isDesktop = true;
+        SetupDesktop();
+      }
+
+      private void SetupVR() {
+        cameraAnimator.SetBool("IsVR", true);
+        vrUI.SetActive(true);
+        isDesktop = false;
+        constraint.constraintActive = false;
+        pickup.pickupable = true;
+      }
+
+      private void SetupDesktop() {
+        desktopUI.SetActive(true);
+        sphereBlock.SetInt("_Watermark", 1);
+        sphereBlock.SetFloat("_SceneStartTime", Time.time - 1);
+        sR.SetPropertyBlock(sphereBlock);
+      }
 
       private void Start() {
         // property blocks
@@ -103,21 +165,14 @@ namespace UdonToolkit {
         sR = viewSphere.GetComponent<MeshRenderer>();
         fingerSphere.gameObject.SetActive(false);
         pickup = (VRC_Pickup) GetComponent(typeof(VRC_Pickup));
-        var player = Networking.LocalPlayer;
+        player = Networking.LocalPlayer;
         if (player == null) return;
-        if (player.IsUserInVR()) {
-          cameraAnimator.SetBool("IsVR", true);
-          vrUI.SetActive(true);
-          isDesktop = false;
-          constraint.constraintActive = false;
-          pickup.pickupable = true;
-          return;
-        }
+      }
 
-        desktopUI.SetActive(true);
-        sphereBlock.SetInt("_Watermark", 1);
-        sphereBlock.SetFloat("_SceneStartTime", Time.time - 1);
-        sR.SetPropertyBlock(sphereBlock);
+      // Sometimes
+      public override void OnDeserialization() {
+        if (setupPlatform) return;
+        SetupPlatform();
       }
 
       private void Activate() {
@@ -181,7 +236,9 @@ namespace UdonToolkit {
         positionText.text = worldSpace ? "World Position" : "Local Position";
       }
 
+      private bool tutorialPassed;
       public void PassTutorial() {
+        tutorialPassed = true;
         cameraAnimator.SetBool("TChecked", true);
       }
 
@@ -198,8 +255,14 @@ namespace UdonToolkit {
       }
 
       private void Update() {
+        CheckVRThresholds();
+        
         if (autoFocus) {
           AutoFocus();
+        }
+
+        if (Time.timeSinceLevelLoad > 5 && !setupPlatform) {
+          SetupPlatform();
         }
         // global "P" hotkey for desktop
         if (!active && isDesktop) {
@@ -424,5 +487,122 @@ namespace UdonToolkit {
         focusSlider.value = focus;
         vrFocusSlider.value = focus;
       }
+
+      private bool isInTutorial;
+      private bool isInFlip;
+      private bool isInAlwaysOn;
+      private bool isInFocus;
+      private bool isInWorldSpace;
+
+      private float GetSphereDistSq(Vector3 source, Vector3 sphere) {
+        var flipDir = source - sphere;
+        return flipDir.x * flipDir.x + flipDir.y * flipDir.y + flipDir.z * flipDir.z;
+      }
+
+      private void CheckVRThresholds() {
+        if (isDesktop) return;
+        var radSq = sphereRadius * sphereRadius;
+        var fingerPos =  vrFingerReference.position;
+        
+        // TUTORIAL
+        var tutorialDistSqr = GetSphereDistSq(fingerPos, tutorialSphere.position);
+        if (tutorialDistSqr < radSq) {
+          if (!isInTutorial) {
+            if (!tutorialPassed) {
+              PassTutorial();
+              cameraAnimator.SetTrigger("TBubblePulse");
+            }
+            isInTutorial = true;
+          }
+        }
+        else {
+          isInTutorial = false;
+        }
+        
+        // FLIP
+        var flipDistSqr = GetSphereDistSq(fingerPos, flipSphere.position);
+        if (flipDistSqr < radSq) {
+          if (!isInFlip) {
+            FlipCamera();
+            cameraAnimator.SetTrigger("Pulse1");
+            isInFlip = true;
+          }
+        }
+        else {
+          isInFlip = false;
+        }
+        
+        // ALWAYS ON
+        var alwaysOnDistSqr = GetSphereDistSq(fingerPos, alwaysOnSphere.position);
+        if (alwaysOnDistSqr < radSq) {
+          if (!isInAlwaysOn) {
+            ToggleAlwaysOn();
+            cameraAnimator.SetTrigger("Pulse2");
+            cameraAnimator.SetTrigger("Toggle2");
+            isInAlwaysOn = true;
+            alwaysOnSphere.GetChild(0).gameObject.SetActive(false);
+            alwaysOnSphere.GetChild(1).gameObject.SetActive(true);
+          }
+          else {
+            alwaysOnSphere.GetChild(0).gameObject.SetActive(true);
+            alwaysOnSphere.GetChild(1).gameObject.SetActive(false);
+          }
+        }
+        else {
+          isInAlwaysOn = false;
+        }
+        
+        // AUTO FOCUS
+        var focusDistSqr = GetSphereDistSq(fingerPos, focusSphere.position);
+        if (focusDistSqr < radSq) {
+          if (!isInFocus) {
+            SwitchAF();
+            cameraAnimator.SetTrigger("Pulse3");
+            cameraAnimator.SetTrigger("Toggle3");
+            isInFocus = true;
+            focusSphere.GetChild(0).gameObject.SetActive(false);
+            focusSphere.GetChild(1).gameObject.SetActive(true);
+          }
+          else {
+            focusSphere.GetChild(0).gameObject.SetActive(false);
+            focusSphere.GetChild(1).gameObject.SetActive(true);
+          }
+        }
+        else {
+          isInFocus = false;
+        }
+        
+        // WORLD SPACE
+        var worldSpaceDistSqr = GetSphereDistSq(fingerPos, worldSpaceSphere.position);
+        if (worldSpaceDistSqr < radSq) {
+          if (!isInWorldSpace) {
+            SwitchPosition();
+            cameraAnimator.SetTrigger("Pulse4");
+            cameraAnimator.SetTrigger("Toggle4");
+            isInWorldSpace = true;
+            worldSpaceSphere.GetChild(0).gameObject.SetActive(false);
+            worldSpaceSphere.GetChild(1).gameObject.SetActive(true);
+          }
+          else {
+            worldSpaceSphere.GetChild(0).gameObject.SetActive(true);
+            worldSpaceSphere.GetChild(1).gameObject.SetActive(false);
+          }
+        }
+        else {
+          isInWorldSpace = false;
+        }
+      }
+
+      #region DEBUG
+      #if UNITY_EDITOR
+      public void DEBUG_SetVR() {
+        SetupVR();
+      }
+      
+      public void DEBUG_Pickup() {
+        OnPickup();
+      }
+      #endif
+      #endregion
     }
 }

@@ -20,6 +20,31 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: {x: -0.2199, y: 0.0446, z: -0.0064}
+        inSlope: {x: 0.0060776393, y: 0.0060735196, z: 0.0064381496}
+        outSlope: {x: 0.0060776393, y: 0.0060735196, z: 0.0064381496}
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.76058394, y: 0.72700727, z: 0.74306566}
+      - serializedVersion: 3
+        time: 0.5
+        value: {x: -0.1643, y: 0.0446, z: -0.0064}
+        inSlope: {x: -0.02957316, y: 0.13309942, z: 0.053980973}
+        outSlope: {x: -0.02957316, y: 0.13309942, z: 0.053980973}
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: {x: 0.030656934, y: 0.03211679, z: 0.03211679}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: VR Controls/FlipSphere
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
         value: {x: -0.2199, y: -0.0057, z: -0.0064}
         inSlope: {x: 0.008934068, y: -0.0034636175, z: -0.005277674}
         outSlope: {x: 0.008934068, y: -0.0034636175, z: -0.005277674}
@@ -39,7 +64,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: VR Controls/Sphere (1)
+    path: VR Controls/AlwaysOnSphere
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -64,7 +89,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: VR Controls/Sphere (2)
+    path: VR Controls/FocusSphere
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -89,108 +114,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: VR Controls/Sphere (3)
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: -0.2199, y: 0.0446, z: -0.0064}
-        inSlope: {x: 0.0060776393, y: 0.0060735196, z: 0.0064381496}
-        outSlope: {x: 0.0060776393, y: 0.0060735196, z: 0.0064381496}
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.76058394, y: 0.72700727, z: 0.74306566}
-      - serializedVersion: 3
-        time: 0.5
-        value: {x: -0.1643, y: 0.0446, z: -0.0064}
-        inSlope: {x: -0.02957316, y: 0.13309942, z: 0.053980973}
-        outSlope: {x: -0.02957316, y: 0.13309942, z: 0.053980973}
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: {x: 0.030656934, y: 0.03211679, z: 0.03211679}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: VR Controls/Sphere
+    path: VR Controls/WorldSpaceSphere
   m_ScaleCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.020121582, y: 0.020121582, z: 0.020121582}
-        inSlope: {x: 0.0016294543, y: -0.0013148712, z: 0.0016230266}
-        outSlope: {x: 0.0016294543, y: -0.0013148712, z: 0.0016230266}
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.73722625, y: 0.7386861, z: 0.7401459}
-      - serializedVersion: 3
-        time: 0.45
-        value: {x: -0.0005822582, y: -0.0005822582, z: -0.0005822582}
-        inSlope: {x: -0.07356169, y: 0.00089294027, z: -0.14797167}
-        outSlope: {x: -0.07356169, y: 0.00089294027, z: -0.14797167}
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: {x: 0.029197082, y: 0.027737226, z: 0.029197082}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: VR Controls/Sphere (1)
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.020121582, y: 0.020121582, z: 0.020121582}
-        inSlope: {x: -0.0013174749, y: -0.0013174749, z: -0.0013200889}
-        outSlope: {x: -0.0013174749, y: -0.0013174749, z: -0.0013200889}
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.73722625, y: 0.73722625, z: 0.7357664}
-      - serializedVersion: 3
-        time: 0.4
-        value: {x: -0.0005822582, y: -0.0005822582, z: -0.0005822582}
-        inSlope: {x: 0.00089294027, y: -0.07356169, z: 0.0008482932}
-        outSlope: {x: 0.00089294027, y: -0.07356169, z: 0.0008482932}
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: {x: 0.027737226, y: 0.029197082, z: 0.029197082}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: VR Controls/Sphere (2)
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.020121582, y: 0.020121582, z: 0.020121582}
-        inSlope: {x: 0.0016294543, y: -0.0013148712, z: 0.0016230266}
-        outSlope: {x: 0.0016294543, y: -0.0013148712, z: 0.0016230266}
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.73722625, y: 0.7386861, z: 0.7401459}
-      - serializedVersion: 3
-        time: 0.35
-        value: {x: -0.0005822582, y: -0.0005822582, z: -0.0005822582}
-        inSlope: {x: -0.07356169, y: 0.00089294027, z: -0.14797167}
-        outSlope: {x: -0.07356169, y: 0.00089294027, z: -0.14797167}
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: {x: 0.029197082, y: 0.027737226, z: 0.029197082}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: VR Controls/Sphere (3)
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -215,8 +140,111 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: VR Controls/Sphere
+    path: VR Controls/FlipSphere
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.020121582, y: 0.020121582, z: 0.020121582}
+        inSlope: {x: 0.0016294543, y: -0.0013148712, z: 0.0016230266}
+        outSlope: {x: 0.0016294543, y: -0.0013148712, z: 0.0016230266}
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.73722625, y: 0.7386861, z: 0.7401459}
+      - serializedVersion: 3
+        time: 0.45
+        value: {x: -0.0005822582, y: -0.0005822582, z: -0.0005822582}
+        inSlope: {x: -0.07356169, y: 0.00089294027, z: -0.14797167}
+        outSlope: {x: -0.07356169, y: 0.00089294027, z: -0.14797167}
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: {x: 0.029197082, y: 0.027737226, z: 0.029197082}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: VR Controls/AlwaysOnSphere
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.020121582, y: 0.020121582, z: 0.020121582}
+        inSlope: {x: -0.0013174749, y: -0.0013174749, z: -0.0013200889}
+        outSlope: {x: -0.0013174749, y: -0.0013174749, z: -0.0013200889}
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.73722625, y: 0.73722625, z: 0.7357664}
+      - serializedVersion: 3
+        time: 0.4
+        value: {x: -0.0005822582, y: -0.0005822582, z: -0.0005822582}
+        inSlope: {x: 0.00089294027, y: -0.07356169, z: 0.0008482932}
+        outSlope: {x: 0.00089294027, y: -0.07356169, z: 0.0008482932}
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: {x: 0.027737226, y: 0.029197082, z: 0.029197082}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: VR Controls/FocusSphere
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.020121582, y: 0.020121582, z: 0.020121582}
+        inSlope: {x: 0.0016294543, y: -0.0013148712, z: 0.0016230266}
+        outSlope: {x: 0.0016294543, y: -0.0013148712, z: 0.0016230266}
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.73722625, y: 0.7386861, z: 0.7401459}
+      - serializedVersion: 3
+        time: 0.35
+        value: {x: -0.0005822582, y: -0.0005822582, z: -0.0005822582}
+        inSlope: {x: -0.07356169, y: 0.00089294027, z: -0.14797167}
+        outSlope: {x: -0.07356169, y: 0.00089294027, z: -0.14797167}
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: {x: 0.029197082, y: 0.027737226, z: 0.029197082}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: VR Controls/WorldSpaceSphere
   m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: VR Controls/FlipSphere
+    classID: 1
+    script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -242,7 +270,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: VR Controls/Sphere (1)
+    path: VR Controls/AlwaysOnSphere
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -270,7 +298,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: VR Controls/Sphere (2)
+    path: VR Controls/FocusSphere
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -298,35 +326,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: VR Controls/Sphere (3)
-    classID: 1
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: VR Controls/Sphere
+    path: VR Controls/WorldSpaceSphere
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -338,84 +338,84 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3857814781
+      path: 1910664606
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3470575422
+      path: 4243277977
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3620206207
+      path: 1047552628
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1652806998
+      path: 3314574980
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3857814781
+      path: 1910664606
       attribute: 3
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3470575422
+      path: 4243277977
       attribute: 3
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3620206207
+      path: 1047552628
       attribute: 3
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1652806998
+      path: 3314574980
       attribute: 3
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3857814781
+      path: 1910664606
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3470575422
+      path: 4243277977
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3620206207
+      path: 1047552628
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1652806998
+      path: 3314574980
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -449,594 +449,6 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: -0.2199
-        inSlope: 0.008934068
-        outSlope: 0.008934068
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.76058394
-      - serializedVersion: 3
-        time: 0.45
-        value: -0.1643
-        inSlope: -0.02957316
-        outSlope: -0.02957316
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.030656934
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.x
-    path: VR Controls/Sphere (1)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.0057
-        inSlope: -0.0034636175
-        outSlope: -0.0034636175
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.74306566
-      - serializedVersion: 3
-        time: 0.45
-        value: -0.0057
-        inSlope: -0.14219043
-        outSlope: -0.14219043
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.027737226
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.y
-    path: VR Controls/Sphere (1)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.0064
-        inSlope: -0.005277674
-        outSlope: -0.005277674
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7401459
-      - serializedVersion: 3
-        time: 0.45
-        value: -0.0064
-        inSlope: 0.15739885
-        outSlope: 0.15739885
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.024817519
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.z
-    path: VR Controls/Sphere (1)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: 0.0016294543
-        outSlope: 0.0016294543
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.73722625
-      - serializedVersion: 3
-        time: 0.45
-        value: -0.0005822582
-        inSlope: -0.07356169
-        outSlope: -0.07356169
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.029197082
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.x
-    path: VR Controls/Sphere (1)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: -0.0013148712
-        outSlope: -0.0013148712
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7386861
-      - serializedVersion: 3
-        time: 0.45
-        value: -0.0005822582
-        inSlope: 0.00089294027
-        outSlope: 0.00089294027
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.027737226
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.y
-    path: VR Controls/Sphere (1)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: 0.0016230266
-        outSlope: 0.0016230266
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7401459
-      - serializedVersion: 3
-        time: 0.45
-        value: -0.0005822582
-        inSlope: -0.14797167
-        outSlope: -0.14797167
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.029197082
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.z
-    path: VR Controls/Sphere (1)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.45
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: VR Controls/Sphere (1)
-    classID: 1
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.2199
-        inSlope: 0.0060776393
-        outSlope: 0.0060776393
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.76058394
-      - serializedVersion: 3
-        time: 0.4
-        value: -0.1643
-        inSlope: -0.10043979
-        outSlope: -0.10043979
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.030656934
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.x
-    path: VR Controls/Sphere (2)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.0575
-        inSlope: 0.007053961
-        outSlope: 0.007053961
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7474453
-      - serializedVersion: 3
-        time: 0.4
-        value: -0.0575
-        inSlope: -0.14156172
-        outSlope: -0.14156172
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.02189781
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.y
-    path: VR Controls/Sphere (2)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.0064
-        inSlope: -0.002346999
-        outSlope: -0.002346999
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7386861
-      - serializedVersion: 3
-        time: 0.4
-        value: -0.0064
-        inSlope: -0.016701028
-        outSlope: -0.016701028
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.026277373
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.z
-    path: VR Controls/Sphere (2)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: -0.0013174749
-        outSlope: -0.0013174749
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.73722625
-      - serializedVersion: 3
-        time: 0.4
-        value: -0.0005822582
-        inSlope: 0.00089294027
-        outSlope: 0.00089294027
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.027737226
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.x
-    path: VR Controls/Sphere (2)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: -0.0013174749
-        outSlope: -0.0013174749
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.73722625
-      - serializedVersion: 3
-        time: 0.4
-        value: -0.0005822582
-        inSlope: -0.07356169
-        outSlope: -0.07356169
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.029197082
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.y
-    path: VR Controls/Sphere (2)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: -0.0013200889
-        outSlope: -0.0013200889
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7357664
-      - serializedVersion: 3
-        time: 0.4
-        value: -0.0005822582
-        inSlope: 0.0008482932
-        outSlope: 0.0008482932
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.029197082
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.z
-    path: VR Controls/Sphere (2)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.4
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: VR Controls/Sphere (2)
-    classID: 1
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.2195
-        inSlope: 0.0031239043
-        outSlope: 0.0031239043
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.77905726
-      - serializedVersion: 3
-        time: 0.35
-        value: -0.161
-        inSlope: -0.07221505
-        outSlope: -0.07221505
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.05181717
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.x
-    path: VR Controls/Sphere (3)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.1076
-        inSlope: 0.005980341
-        outSlope: 0.005980341
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.77725804
-      - serializedVersion: 3
-        time: 0.35
-        value: -0.1076
-        inSlope: -0.09293198
-        outSlope: -0.09293198
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.050017964
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.y
-    path: VR Controls/Sphere (3)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.0064
-        inSlope: 0.00000086702437
-        outSlope: 0.00000086702437
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7718604
-      - serializedVersion: 3
-        time: 0.35
-        value: -0.0064
-        inSlope: -0.000013379629
-        outSlope: -0.000013379629
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.050017964
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.z
-    path: VR Controls/Sphere (3)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: 0.0016294543
-        outSlope: 0.0016294543
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.73722625
-      - serializedVersion: 3
-        time: 0.35
-        value: -0.0005822582
-        inSlope: -0.07356169
-        outSlope: -0.07356169
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.029197082
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.x
-    path: VR Controls/Sphere (3)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: -0.0013148712
-        outSlope: -0.0013148712
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7386861
-      - serializedVersion: 3
-        time: 0.35
-        value: -0.0005822582
-        inSlope: 0.00089294027
-        outSlope: 0.00089294027
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.027737226
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.y
-    path: VR Controls/Sphere (3)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.020121582
-        inSlope: 0.0016230266
-        outSlope: 0.0016230266
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.33333334
-        outWeight: 0.7401459
-      - serializedVersion: 3
-        time: 0.35
-        value: -0.0005822582
-        inSlope: -0.14797167
-        outSlope: -0.14797167
-        tangentMode: 0
-        weightedMode: 3
-        inWeight: 0.029197082
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalScale.z
-    path: VR Controls/Sphere (3)
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.35
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: VR Controls/Sphere (3)
-    classID: 1
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.2199
         inSlope: 0.0060776393
         outSlope: 0.0060776393
         tangentMode: 0
@@ -1056,7 +468,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: VR Controls/Sphere
+    path: VR Controls/FlipSphere
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1084,7 +496,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: VR Controls/Sphere
+    path: VR Controls/FlipSphere
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1112,7 +524,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: VR Controls/Sphere
+    path: VR Controls/FlipSphere
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1140,7 +552,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: VR Controls/Sphere
+    path: VR Controls/FlipSphere
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1168,7 +580,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: VR Controls/Sphere
+    path: VR Controls/FlipSphere
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1196,7 +608,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: VR Controls/Sphere
+    path: VR Controls/FlipSphere
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1224,7 +636,595 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: VR Controls/Sphere
+    path: VR Controls/FlipSphere
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.2199
+        inSlope: 0.008934068
+        outSlope: 0.008934068
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.76058394
+      - serializedVersion: 3
+        time: 0.45
+        value: -0.1643
+        inSlope: -0.02957316
+        outSlope: -0.02957316
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.030656934
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: VR Controls/AlwaysOnSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0057
+        inSlope: -0.0034636175
+        outSlope: -0.0034636175
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.74306566
+      - serializedVersion: 3
+        time: 0.45
+        value: -0.0057
+        inSlope: -0.14219043
+        outSlope: -0.14219043
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.027737226
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: VR Controls/AlwaysOnSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0064
+        inSlope: -0.005277674
+        outSlope: -0.005277674
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7401459
+      - serializedVersion: 3
+        time: 0.45
+        value: -0.0064
+        inSlope: 0.15739885
+        outSlope: 0.15739885
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.024817519
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: VR Controls/AlwaysOnSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: 0.0016294543
+        outSlope: 0.0016294543
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.73722625
+      - serializedVersion: 3
+        time: 0.45
+        value: -0.0005822582
+        inSlope: -0.07356169
+        outSlope: -0.07356169
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.029197082
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: VR Controls/AlwaysOnSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: -0.0013148712
+        outSlope: -0.0013148712
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7386861
+      - serializedVersion: 3
+        time: 0.45
+        value: -0.0005822582
+        inSlope: 0.00089294027
+        outSlope: 0.00089294027
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.027737226
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: VR Controls/AlwaysOnSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: 0.0016230266
+        outSlope: 0.0016230266
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7401459
+      - serializedVersion: 3
+        time: 0.45
+        value: -0.0005822582
+        inSlope: -0.14797167
+        outSlope: -0.14797167
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.029197082
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: VR Controls/AlwaysOnSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.45
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: VR Controls/AlwaysOnSphere
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.2199
+        inSlope: 0.0060776393
+        outSlope: 0.0060776393
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.76058394
+      - serializedVersion: 3
+        time: 0.4
+        value: -0.1643
+        inSlope: -0.10043979
+        outSlope: -0.10043979
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.030656934
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: VR Controls/FocusSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0575
+        inSlope: 0.007053961
+        outSlope: 0.007053961
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7474453
+      - serializedVersion: 3
+        time: 0.4
+        value: -0.0575
+        inSlope: -0.14156172
+        outSlope: -0.14156172
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.02189781
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: VR Controls/FocusSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0064
+        inSlope: -0.002346999
+        outSlope: -0.002346999
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7386861
+      - serializedVersion: 3
+        time: 0.4
+        value: -0.0064
+        inSlope: -0.016701028
+        outSlope: -0.016701028
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.026277373
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: VR Controls/FocusSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: -0.0013174749
+        outSlope: -0.0013174749
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.73722625
+      - serializedVersion: 3
+        time: 0.4
+        value: -0.0005822582
+        inSlope: 0.00089294027
+        outSlope: 0.00089294027
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.027737226
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: VR Controls/FocusSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: -0.0013174749
+        outSlope: -0.0013174749
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.73722625
+      - serializedVersion: 3
+        time: 0.4
+        value: -0.0005822582
+        inSlope: -0.07356169
+        outSlope: -0.07356169
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.029197082
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: VR Controls/FocusSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: -0.0013200889
+        outSlope: -0.0013200889
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7357664
+      - serializedVersion: 3
+        time: 0.4
+        value: -0.0005822582
+        inSlope: 0.0008482932
+        outSlope: 0.0008482932
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.029197082
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: VR Controls/FocusSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.4
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: VR Controls/FocusSphere
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.2195
+        inSlope: 0.0031239043
+        outSlope: 0.0031239043
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.77905726
+      - serializedVersion: 3
+        time: 0.35
+        value: -0.161
+        inSlope: -0.07221505
+        outSlope: -0.07221505
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.05181717
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: VR Controls/WorldSpaceSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.1076
+        inSlope: 0.005980341
+        outSlope: 0.005980341
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.77725804
+      - serializedVersion: 3
+        time: 0.35
+        value: -0.1076
+        inSlope: -0.09293198
+        outSlope: -0.09293198
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.050017964
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: VR Controls/WorldSpaceSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0064
+        inSlope: 0.00000086702437
+        outSlope: 0.00000086702437
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7718604
+      - serializedVersion: 3
+        time: 0.35
+        value: -0.0064
+        inSlope: -0.000013379629
+        outSlope: -0.000013379629
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.050017964
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: VR Controls/WorldSpaceSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: 0.0016294543
+        outSlope: 0.0016294543
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.73722625
+      - serializedVersion: 3
+        time: 0.35
+        value: -0.0005822582
+        inSlope: -0.07356169
+        outSlope: -0.07356169
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.029197082
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: VR Controls/WorldSpaceSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: -0.0013148712
+        outSlope: -0.0013148712
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7386861
+      - serializedVersion: 3
+        time: 0.35
+        value: -0.0005822582
+        inSlope: 0.00089294027
+        outSlope: 0.00089294027
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.027737226
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: VR Controls/WorldSpaceSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.020121582
+        inSlope: 0.0016230266
+        outSlope: 0.0016230266
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.33333334
+        outWeight: 0.7401459
+      - serializedVersion: 3
+        time: 0.35
+        value: -0.0005822582
+        inSlope: -0.14797167
+        outSlope: -0.14797167
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.029197082
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: VR Controls/WorldSpaceSphere
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.35
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: VR Controls/WorldSpaceSphere
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

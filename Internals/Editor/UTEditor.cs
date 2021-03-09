@@ -210,7 +210,7 @@ namespace UdonToolkit {
               rowEndI = Math.Min(i + rowBreak, behInfo.udonCustomEvents.Length - 1);
             }
             if (GUILayout.Button(button)) {
-              t.SendCustomEvent(button);
+              UdonSharpEditorUtility.GetBackingUdonBehaviour(t).SendCustomEvent(button);
             }
             if (i == behInfo.udonCustomEvents.Length - 1 && rowEndI != -100) {
               EditorGUILayout.EndHorizontal();

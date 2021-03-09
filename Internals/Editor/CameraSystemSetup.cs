@@ -29,7 +29,6 @@ namespace UdonToolkit {
     private bool addGuide;
     private GuideStyle guideStyle = GuideStyle.Futuristic;
     private int cameraPPLayer = 27;
-    private int cameraControlsLayer = 28;
     private Texture watermark;
     private bool setup;
 
@@ -123,17 +122,6 @@ namespace UdonToolkit {
       if (cameraPPLayer == 22) {
         EditorGUILayout.HelpBox("It is crucial to not put Camera PP volumes on the same layer as the main PostProcessing, or your own view will be affected by the camera effects", MessageType.Warning);
       }
-      var newCameraControlsLayer = EditorGUILayout.Popup("Camera PP Layer", cameraControlsLayer, layersArr);
-      UTStyles.RenderNote("This layer will be used for detecting player's interactions with the camera controls");
-      if (newCameraControlsLayer != cameraControlsLayer) {
-        CheckIncorrectCollision(newCameraControlsLayer);
-      }
-
-      if (incorrectCollision) {
-        EditorGUILayout.HelpBox("It is highly recommended to use a layer that only collides with itself for the Camera Controls", MessageType.Warning);
-      }
-
-      cameraControlsLayer = newCameraControlsLayer;
 
       if (setup) {
         var oldColor = GUI.backgroundColor;
@@ -170,7 +158,6 @@ namespace UdonToolkit {
       }
 
       cameraPPLayer = emptyLayer;
-      cameraControlsLayer = emptyLayer;
     }
     
     private static readonly string SciFiStandPath = "Assets/UdonToolkit/Systems/Camera System/Camera Stand.prefab";
@@ -207,31 +194,6 @@ namespace UdonToolkit {
       
       var cameraObject = instancedCameraRoot.Find("Camera Lens").gameObject;
       var cameraLens = cameraObject.transform.Find("Lens Camera").gameObject;
-      Undo.RecordObjects(new Object[] { cameraObject, cameraLens }, "Adjusted Camera Lens PP Layer");
-      var vrControls = cameraObject.transform.Find("VR Controls");
-      for (int i = 0; i < vrControls.childCount; i++) {
-        var child = vrControls.GetChild(i).gameObject;
-        Undo.RecordObject(child, "Adjust Camera Lens Control Layer");{}
-        var mask = (LayerMask) LayerMask.GetMask(LayerMask.LayerToName(cameraControlsLayer));
-        var uB = child.GetComponent<UdonBehaviour>();
-        uB.publicVariables.TrySetVariableValue("collideWith", mask);
-        child.layer = cameraControlsLayer;
-      }
-
-      var startSphere = cameraObject.transform.Find("Start Sphere").gameObject;
-      Undo.RecordObjects(new Object[]{ startSphere, startSphere.transform.GetChild(0).gameObject}, "Adjust Camera Lens Controls Layers");
-      startSphere.layer = cameraControlsLayer;
-      {
-        var mask = (LayerMask) LayerMask.GetMask(LayerMask.LayerToName(cameraControlsLayer));
-        var uB = startSphere.GetComponent<UdonBehaviour>();
-        uB.publicVariables.TrySetVariableValue("collideWith", mask);
-      }
-      startSphere.transform.GetChild(0).gameObject.layer = cameraControlsLayer;
-
-      var fingerTracker = instancedCameraRoot.Find("Camera Left Finger").gameObject;
-      Undo.RecordObjects(new Object[]{ fingerTracker, fingerTracker.transform.GetChild(0).gameObject}, "Adjusted Camera Finger Tracker Layer");
-      fingerTracker.layer = cameraControlsLayer;
-      fingerTracker.transform.GetChild(0).gameObject.layer = cameraControlsLayer;
 
       // Set watermark
       if (watermark != null) {
