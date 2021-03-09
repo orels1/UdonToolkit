@@ -35,19 +35,20 @@ namespace UdonToolkit {
       [FoldoutGroup("User Interface")]
       public Slider vrZoomSlider;
       
-      [FoldoutGroup("VR Controls")]
+      [FoldoutGroup("User Interface")]
+      [SectionHeader("On Camera UI")]
       public Text positionText;
-      [FoldoutGroup("VR Controls")]
+      [FoldoutGroup("User Interface")]
       public Text focusText;
-      [FoldoutGroup("VR Controls")]
+      [FoldoutGroup("User Interface")]
       public Text zoomText;
-      [FoldoutGroup("VR Controls")]
+      [FoldoutGroup("User Interface")]
       public Text focalText;
-      [FoldoutGroup("VR Controls")]
+      [FoldoutGroup("User Interface")]
       public Image focusBg;
-      [FoldoutGroup("VR Controls")]
+      [FoldoutGroup("User Interface")]
       public Image zoomBg;
-      [FoldoutGroup("VR Controls")]
+      [FoldoutGroup("User Interface")]
       public Image focalBg;
 
       [FoldoutGroup("VR Controls")] [SectionHeader("Control Spheres")]

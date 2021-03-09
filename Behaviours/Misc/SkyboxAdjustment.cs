@@ -8,8 +8,7 @@ using VRC.Udon;
 namespace UdonToolkit {
   [CustomName("Skybox Adjustment")]
   [HelpMessage(
-    "This component expects a \"Trigger\" event to transition between default and active skybox materials. " +
-    "This object can be kept disabled if using instant transition, it will still work as expected.")]
+    "This component expects a \"Trigger\" event to transition between current and active skybox material values. You can  ")]
   [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#skybox-adjustment")]
   public class SkyboxAdjustment : UdonSharpBehaviour {
     [SectionHeader("Active State")] public Material activeSkybox;
@@ -31,10 +30,7 @@ namespace UdonToolkit {
 
     [OnValueChanged("ToggleSelf")] [SectionHeader("Transition")]
     public bool instantTransition = true;
-
-    [HelpBox(
-      "Transition only applies to material properties, as smooth transition between materials is not possible. Active Skybox material field is set to be the same as default.",
-      "@!instantTransition")]
+    
     [HelpBox("Transition time cannot be negative", "CheckValidTransition")]
     public float transitionTime;
 

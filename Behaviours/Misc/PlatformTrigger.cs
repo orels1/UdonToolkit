@@ -1,3 +1,4 @@
+using System;
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -21,15 +22,23 @@ namespace UdonToolkit {
     public string[] vrEvents;
 
     private VRCPlayerApi player;
+    private bool starTriggersFired;
 
     private void Start() {
       player = Networking.LocalPlayer;
-      if (!fireOnStart) return;
-      FireTriggers();
     }
     
     public void Trigger() {
       FireTriggers();
+    }
+
+    // We have to use the Update loop because VRC does not report the VR/Desktop state correctly in Start anymore
+    private void Update() {
+      if (!fireOnStart) return;
+      if (Time.timeSinceLevelLoad > 3 && !starTriggersFired) {
+        starTriggersFired = true;
+        FireTriggers();
+      }
     }
 
     private void FireTriggers() {

@@ -8,6 +8,8 @@ using VRC.Udon;
 #if !COMPILER_UDONSHARP && UNITY_EDITOR
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
+
 #endif
 
 namespace UdonToolkit {
@@ -30,7 +32,7 @@ namespace UdonToolkit {
     
     #if !COMPILER_UDONSHARP && UNITY_EDITOR
     #region ToolkitSTuff
-    public void AddTextVar() {
+    public void AddTextVar(SerializedObject obj) {
       var newNames = textVariableNames.ToList();
       newNames.Add(GetTextVariableOptions()[0]);
       textVariableNames = newNames.ToArray();
@@ -48,7 +50,7 @@ namespace UdonToolkit {
       textReadoutFormats = newFormats.ToArray();
     }
     
-    public void AddSliderVar() {
+    public void AddSliderVar(SerializedObject obj) {
       var newNames = sliderVariableNames.ToList();
       newNames.Add(GetSliderVariableOptions()[0]);
       sliderVariableNames = newNames.ToArray();

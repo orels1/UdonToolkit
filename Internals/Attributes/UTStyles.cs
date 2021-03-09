@@ -147,8 +147,8 @@ namespace UdonToolkit {
       var e = Event.current;
       if (e.type == EventType.Repaint) {
         EditorStyles.foldout.Draw(toggleRect, false, false, value, false);
-        GUI.Box(utilsRect, Utils, new GUIStyle());
       }
+      GUI.Box(utilsRect, Utils, new GUIStyle());
       GUI.backgroundColor = Color.white;
       
       if (e.type == EventType.MouseDown) {
