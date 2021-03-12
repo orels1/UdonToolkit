@@ -36,10 +36,10 @@ namespace UdonToolkit {
       obj.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
       return obj;
     }
-    
-    public static IEnumerable<(T item, int index)> WithIndex<T>(this IEnumerable<T> self)       
+
+    public static IEnumerable<(T item, int index)> WithIndex<T>(this IEnumerable<T> self)
       => self.Select((item, index) => (item, index));
-    
+
     public static IList<T> Swap<T>(this IList<T> list, int indexA, int indexB)
     {
       T tmp = list[indexA];
@@ -62,7 +62,7 @@ namespace UdonToolkit {
       type = method.GetReturnType().GetElementType();
       if (method == null) {
         return null;
-      } 
+      }
       var paramsList = method.GetParameters();
       var argList = new object[]{};
       if (paramsList.Length > 0 && paramsList[0].ParameterType == typeof(SerializedProperty)) {
@@ -104,13 +104,17 @@ namespace UdonToolkit {
       "OnTriggerExit", "OnPlayerTriggerEnter", "OnPlayerTriggerStay", "OnPlayerTriggerExit", "Interact"
     };
 
+    private static string[] BLACKLISTED_MODULE_NAMES = new [] {
+      "UdonSharp.Runtime.dll", "UnityEngine.CoreModule.dll", "mscorlib.dll",
+    };
+
     public static string[] GetUdonEvents(UdonSharpBehaviour source) {
       var events = new[] {"no events found"};
       if (source != null) {
         var uPa = UdonSharpEditorUtility.GetUdonSharpProgramAsset(source);
         if (uPa != null) {
           var methods = uPa.sourceCsScript.GetClass().GetMethods();
-          var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
+          var mapped = methods.Where(m => !BLACKLISTED_MODULE_NAMES.Contains(m.Module.Name)).Select(m => m.Name).ToArray();
           mapped = mapped.Where(m => !BLACKLISTED_EVENT_NAMES.Contains(m)).ToArray();
           if (mapped.Length > 0) {
             events = mapped;
@@ -119,14 +123,14 @@ namespace UdonToolkit {
       }
       return events;
     }
-    
+
     public static string[] GetUdonEvents(UdonBehaviour source) {
       var events = new[] {"no events found"};
       if (source != null) {
         var uPa = source.programSource as UdonSharpProgramAsset;
         if (uPa != null) {
           var methods = uPa.sourceCsScript.GetClass().GetMethods();
-          var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
+          var mapped = methods.Where(m => !BLACKLISTED_MODULE_NAMES.Contains(m.Module.Name)).Select(m => m.Name).ToArray();
           if (mapped.Length > 0) {
             events = mapped;
           }
@@ -134,13 +138,13 @@ namespace UdonToolkit {
       }
       return events;
     }
-    
+
     public static T GetPropertyAttribute<T>(SerializedProperty prop) where T : Attribute {
       var attrs = GetPropertyAttributes<T>(prop);
       if (attrs.Length == 0) return null;
       return (T) attrs[0];
     }
-    
+
     public static object[] GetPropertyAttributes(SerializedProperty prop) {
       return GetPropertyAttributes<PropertyAttribute>(prop);
     }
@@ -151,7 +155,7 @@ namespace UdonToolkit {
       var field = tType.GetField(prop.name, flags);
       return field != null ? field.GetCustomAttributes(typeof(T), true) : null;
     }
-    
+
     private static Dictionary<int, int> masksByLayer;
 
     public static void GetLayerMasks() {
@@ -230,7 +234,7 @@ namespace UdonToolkit {
           new List<ShaderUtil.ShaderPropertyType> {ShaderUtil.ShaderPropertyType.Vector}
         }
       };
-    
+
     public static string[] GetShaderPropertiesByType(object source, PopupAttribute.ShaderPropType valid) {
       if (source == null) {
         return new[] {"-- no shader provided --"};
@@ -255,7 +259,7 @@ namespace UdonToolkit {
           res.Add(ShaderUtil.GetPropertyName(shader, i));
         }
       }
-      
+
       return res.Count == 0 ? new[] {"-- no valid properties--"} : res.ToArray();
     }
 
