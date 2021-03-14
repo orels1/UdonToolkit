@@ -11,7 +11,9 @@ namespace UdonToolkit {
     "This component expects a \"Trigger\" event to fire.")]
   [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#universal-action")]
   public class UniversalAction : UdonSharpBehaviour {
-    [SectionHeader("General")] public bool active = true;
+    [SectionHeader("General")]
+    public bool active = true;
+    public bool oneShot;
 
     [HelpBox("Make sure this game object is always enabled when using delays.", "@fireAfterDelay")]
     public bool fireAfterDelay;
@@ -60,7 +62,6 @@ namespace UdonToolkit {
     public int[] animatorInts;
     #endregion
 
-    
     #region Udon Events
     [FoldoutGroup("Udon Events")] public bool fireUdonEvents;
 
@@ -121,6 +122,8 @@ namespace UdonToolkit {
     private bool delayActive;
     private float delayExpire;
     
+    private bool used;
+    
     public void Activate() {
       active = true;
     }
@@ -133,12 +136,27 @@ namespace UdonToolkit {
       active = !active;
     }
     
+    public void ResetOneShot() {
+      used = false;
+      active = true;
+    }
+    
     public void Trigger() {
       if (!active) return;
       if (fireAfterDelay) {
         delayExpire = Time.time + delayLength;
         delayActive = true;
         return;
+      }
+      
+      if (oneShot) {
+        if (used) {
+          return;
+        }
+
+        active = false;
+        used = true;
+        enabled = false;
       }
 
       FireAnimationTriggers();
@@ -153,6 +171,17 @@ namespace UdonToolkit {
       if (!active) return;
       if (!delayActive) return;
       if (Time.time >= delayExpire) {
+        
+        if (oneShot) {
+          if (used) {
+            return;
+          }
+
+          active = false;
+          used = true;
+          enabled = false;
+        }
+        
         FireAnimationTriggers();
         FireAnimationBools();
         FireUdonEvents();

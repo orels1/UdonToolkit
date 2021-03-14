@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: General
@@ -222,7 +222,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 14|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 14|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: 'Enabling cross mode will make the trigger run every time the setup conditions
@@ -364,7 +364,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 23|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 23|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@testOptions'
@@ -436,7 +436,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 27|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 27|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Boundary List
@@ -451,7 +451,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 28|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 28|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@compareOptions'
@@ -586,7 +586,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 36|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 36|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Boundary List
@@ -784,7 +784,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 48|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 48|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Udon Events List
@@ -856,7 +856,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 52|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 52|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Udon Events List
@@ -871,7 +871,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 53|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 53|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@udonTargets'

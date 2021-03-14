@@ -61,7 +61,7 @@ MonoBehaviour:
       Data: 4|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UdonToolkit.PresentationPlayer, Assembly-CSharp
+      Data: UdonToolkit.PresentationPlayer, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -157,7 +157,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 10|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 10|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Access Control
@@ -166,13 +166,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 11|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 11|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 12|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 12|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: You can limit the people who can turn on the stream screen. It is highly
@@ -248,7 +248,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 17|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!restrictAccess'
@@ -383,7 +383,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 26|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 26|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: These objects will be toggled on and off when pressing the stream key
@@ -704,7 +704,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 46|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 46|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Text Elements

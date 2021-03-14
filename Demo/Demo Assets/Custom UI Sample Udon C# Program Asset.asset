@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -105,7 +105,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 7|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Section Header
@@ -177,7 +177,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 12|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 12|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -189,7 +189,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 13|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 13|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Range Slider
@@ -198,7 +198,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 14|UdonToolkit.RangeSliderAttribute, Assembly-CSharp
+      Data: 14|UdonToolkit.RangeSliderAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -267,7 +267,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 19|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 19|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -279,7 +279,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 20|UdonToolkit.RangeSliderAttribute, Assembly-CSharp
+      Data: 20|UdonToolkit.RangeSliderAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -348,7 +348,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 25|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 25|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -360,7 +360,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 26|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 26|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Hide Label
@@ -369,7 +369,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 27|UdonToolkit.HideLabelAttribute, Assembly-CSharp
+      Data: 27|UdonToolkit.HideLabelAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -438,7 +438,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 32|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 32|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -450,7 +450,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 33|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 33|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Toggles
@@ -459,7 +459,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 34|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 34|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -522,7 +522,7 @@ MonoBehaviour:
       Data: 5
     - Name: 
       Entry: 7
-      Data: 38|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 38|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -534,7 +534,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 39|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 39|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: TestChange
@@ -543,7 +543,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 40|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 40|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Some helpful text
@@ -555,7 +555,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 41|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 41|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!hasSFX'
@@ -564,7 +564,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 42|UdonToolkit.RangeSliderAttribute, Assembly-CSharp
+      Data: 42|UdonToolkit.RangeSliderAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -627,7 +627,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 46|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 46|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -639,7 +639,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 47|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 47|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -702,7 +702,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 51|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 51|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -714,7 +714,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 52|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 52|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Help Box
@@ -723,7 +723,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 53|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 53|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This checkbox shows extra options via [HideIf] attribute
@@ -792,7 +792,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 57|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 57|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -804,7 +804,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 58|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 58|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This is only visible when option is checked
@@ -816,7 +816,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 59|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 59|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!helpBoxCheck'
@@ -882,7 +882,7 @@ MonoBehaviour:
       Data: 5
     - Name: 
       Entry: 7
-      Data: 63|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 63|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -894,7 +894,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 64|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 64|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: On Value Changed
@@ -903,7 +903,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 65|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 65|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: UpdateDiffValue
@@ -912,7 +912,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 66|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 66|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This slider will update an editor only checkbox below
@@ -924,7 +924,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 67|UdonToolkit.RangeSliderAttribute, Assembly-CSharp
+      Data: 67|UdonToolkit.RangeSliderAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -987,7 +987,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 71|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 71|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Basics
@@ -1062,7 +1062,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 76|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 76|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1074,7 +1074,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 77|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 77|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: LogArrayValues
@@ -1083,7 +1083,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 78|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 78|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: OnValueChanged has a separate signature for ListView and Array types you
@@ -1153,7 +1153,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 82|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 82|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1165,7 +1165,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 83|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 83|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Group
@@ -1234,7 +1234,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 87|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 87|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1246,7 +1246,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 88|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 88|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Group
@@ -1315,7 +1315,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 92|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 92|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1327,7 +1327,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 93|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 93|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Group
@@ -1396,7 +1396,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 97|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 97|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1408,7 +1408,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 98|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 98|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Group
@@ -1483,7 +1483,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 103|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 103|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1495,7 +1495,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 104|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 104|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Popup
@@ -1504,7 +1504,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 105|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 105|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: AnimationTrigger
@@ -1573,7 +1573,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 109|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 109|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1585,7 +1585,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 110|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 110|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: AnimationTrigger
@@ -1597,7 +1597,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 111|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 111|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@animator'
@@ -1675,7 +1675,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 116|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 116|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1687,7 +1687,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 117|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 117|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: BehaviourTrigger
@@ -1756,7 +1756,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 121|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 121|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1768,7 +1768,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 122|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 122|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: BehaviourTrigger
@@ -1780,7 +1780,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 123|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 123|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@behaviour'
@@ -1858,7 +1858,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 128|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 128|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1870,7 +1870,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 129|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 129|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: List View
@@ -1879,7 +1879,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 130|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 130|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: EventAdded
@@ -1888,7 +1888,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 131|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 131|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: EventsList
@@ -1966,7 +1966,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 136|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 136|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -1978,7 +1978,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 137|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 137|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: EventsList
@@ -2050,7 +2050,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 141|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 141|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2062,7 +2062,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 142|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 142|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: EventsList
@@ -2134,7 +2134,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 146|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 146|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2146,7 +2146,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 147|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 147|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Udon Events List
@@ -2218,7 +2218,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 151|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 151|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2230,7 +2230,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 152|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 152|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Udon Events List
@@ -2245,7 +2245,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 153|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 153|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@udonTargets'
@@ -2317,7 +2317,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 157|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 157|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2329,7 +2329,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 158|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 158|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Regular Arrays
@@ -2338,7 +2338,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 159|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 159|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: UTController also automatically updates array editors with reordering
@@ -2351,7 +2351,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 160|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 160|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: BasicChanged
@@ -2417,7 +2417,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 164|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 164|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2429,7 +2429,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 165|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 165|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Hide If also works on array types
@@ -2498,7 +2498,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 169|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 169|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2510,7 +2510,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 170|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 170|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!showRegularArray'
@@ -2576,7 +2576,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 174|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 174|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2588,7 +2588,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 175|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 175|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Popups
@@ -2597,7 +2597,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 176|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 176|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: GetOptions
@@ -2669,7 +2669,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 180|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 180|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2681,7 +2681,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 181|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 181|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Disabled
@@ -2690,7 +2690,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 182|UdonToolkit.DisabledAttribute, Assembly-CSharp
+      Data: 182|UdonToolkit.DisabledAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 6
       Data: 
@@ -2756,7 +2756,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 186|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 186|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2768,7 +2768,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 187|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 187|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Foldout
@@ -2834,7 +2834,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 191|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 191|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2846,7 +2846,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 192|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 192|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Foldout
@@ -2912,7 +2912,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 196|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 196|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -2924,7 +2924,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 197|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 197|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Foldout
@@ -2933,7 +2933,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 198|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 198|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Horizontal In Foldout
@@ -3002,7 +3002,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 202|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 202|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -3014,7 +3014,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 203|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 203|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Foldout
@@ -3023,7 +3023,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 204|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 204|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Horizontal In Foldout
@@ -3092,7 +3092,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 208|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 208|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -3104,7 +3104,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 209|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 209|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Foldout
@@ -3113,7 +3113,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 210|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 210|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: ListViewInFodlout
@@ -3185,7 +3185,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 214|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 214|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Advanced
@@ -3197,7 +3197,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 215|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 215|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Foldout
@@ -3206,7 +3206,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 216|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 216|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: ListViewInFodlout
@@ -3221,7 +3221,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 217|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 217|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@foldoutTargets'
@@ -3293,7 +3293,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 221|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 221|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Non-Tab Members

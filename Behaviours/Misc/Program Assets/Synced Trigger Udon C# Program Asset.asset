@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: General
@@ -102,7 +102,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 7|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: You can set the initial state here
@@ -177,7 +177,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 12|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 12|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This option requires a collider on the object
@@ -189,7 +189,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 13|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 13|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: When Use Interact is checked, clicking on this object will toggle the
@@ -259,7 +259,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 17|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Access
@@ -268,7 +268,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 18|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 18|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Access
@@ -280,13 +280,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 19|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 19|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 20|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 20|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: SelectAccessLevel
@@ -352,13 +352,13 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 24|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 24|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 25|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Access
@@ -370,7 +370,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 26|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 26|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: SelectAccessLevel
@@ -442,7 +442,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 31|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 31|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: If any names are listed - only those users will be allowed to fire events,
@@ -518,7 +518,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 36|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 36|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: ON Events
@@ -590,7 +590,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 40|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 40|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: ON Events
@@ -605,7 +605,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 41|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 41|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@onTargets'
@@ -677,7 +677,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 45|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 45|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OFF Events
@@ -749,7 +749,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 49|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 49|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OFF Events
@@ -764,7 +764,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 50|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 50|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@onTargets'

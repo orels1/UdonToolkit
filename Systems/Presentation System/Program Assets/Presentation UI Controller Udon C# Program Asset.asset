@@ -61,7 +61,7 @@ MonoBehaviour:
       Data: 4|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UdonToolkit.PresentationPlayer, Assembly-CSharp
+      Data: UdonToolkit.PresentationPlayer, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -220,7 +220,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 14|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 14|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Ownership Changes
@@ -469,7 +469,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 29|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 29|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Text Elements

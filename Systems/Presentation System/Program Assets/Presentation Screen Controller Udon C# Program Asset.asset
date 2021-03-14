@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Material Swap
@@ -165,7 +165,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 11|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 11|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Material Swap Targets
@@ -180,7 +180,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 12|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 12|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Meshes
@@ -252,7 +252,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 17|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Material Swap Targets
@@ -267,7 +267,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 18|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 18|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Default Mats
@@ -333,7 +333,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 22|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 22|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Material Swap Targets
@@ -348,7 +348,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 23|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 23|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Active Mats
@@ -414,7 +414,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 27|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 27|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Object Toggles
@@ -486,7 +486,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 32|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 32|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: On Talk Start
@@ -501,7 +501,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 33|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 33|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Objects
@@ -573,7 +573,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 38|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 38|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: On Talk Start
@@ -588,7 +588,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 39|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 39|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Actions
@@ -597,7 +597,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 40|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 40|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@objectActions'
@@ -669,7 +669,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 44|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 44|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: On Talk End
@@ -684,7 +684,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 45|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 45|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Objects
@@ -750,7 +750,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 49|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 49|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: On Talk End
@@ -765,7 +765,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 50|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 50|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Actions
@@ -774,7 +774,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 51|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 51|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@objectActions'

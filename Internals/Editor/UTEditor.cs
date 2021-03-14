@@ -7,6 +7,7 @@ using UdonSharpEditor;
 using UdonToolkit;
 using UnityEditor;
 using UnityEngine;
+using VRC.Udon;
 
 [assembly: DefaultUdonSharpBehaviourEditor(typeof(UTEditor), "UdonToolkit Editor")]
 
@@ -39,6 +40,7 @@ namespace UdonToolkit {
     private bool cacheBuilt;
     private bool firstRepaint = true;
     private bool droppedObjects;
+    private bool shouldReserialize;
     private bool showUdonSettings;
     private bool tabsExist;
     private int tabOpen;
@@ -51,6 +53,11 @@ namespace UdonToolkit {
       t = (UdonSharpBehaviour) target;
 
       showUdonSettings = (bool) (UTUtils.GetUTSetting("showUdonSettings", UTUtils.UTSettingType.Bool) ?? false);
+
+      // we force-disable collision transfer for toolkit driven behaviours as it is not applicable
+      if (UdonSharpEditorUtility.GetBackingUdonBehaviour(t).AllowCollisionOwnershipTransfer) {
+        UdonSharpEditorUtility.GetBackingUdonBehaviour(t).AllowCollisionOwnershipTransfer = false;
+      }
 
       var headerExited = false;
       EditorGUI.BeginChangeCheck();
@@ -167,7 +174,7 @@ namespace UdonToolkit {
       // this method is overrideable by custom code
       DrawGUI();
 
-      if (EditorGUI.EndChangeCheck() || droppedObjects) {
+      if (EditorGUI.EndChangeCheck() || droppedObjects || shouldReserialize) {
         if (behInfo.onValuesChanged != null) {
           behInfo.onValuesChanged.Invoke(t, new object[] {serializedObject});
         }
@@ -211,6 +218,7 @@ namespace UdonToolkit {
             }
             if (GUILayout.Button(button)) {
               UdonSharpEditorUtility.GetBackingUdonBehaviour(t).SendCustomEvent(button);
+              UdonSharpEditorUtility.CopyUdonToProxy(t);
             }
             if (i == behInfo.udonCustomEvents.Length - 1 && rowEndI != -100) {
               EditorGUILayout.EndHorizontal();

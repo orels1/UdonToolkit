@@ -162,7 +162,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 11|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 11|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Track Transform
@@ -237,7 +237,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 16|UdonToolkit.TabGroupAttribute, Assembly-CSharp
+      Data: 16|UdonToolkit.TabGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Track Player
@@ -312,7 +312,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 21|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 21|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This behaviour requires an attached rigidbody to work

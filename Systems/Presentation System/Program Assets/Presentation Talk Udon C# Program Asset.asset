@@ -277,7 +277,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 17|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@lengthOptions'
@@ -424,7 +424,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 27|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 27|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Configuration Wizard
@@ -490,7 +490,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 31|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 31|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Configuration Wizard
@@ -499,7 +499,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 32|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 32|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Duration of individual slides. Set this to the length of each slide you
@@ -575,7 +575,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 37|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 37|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Configuration Wizard
@@ -584,13 +584,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 38|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 38|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 39|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 39|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Clicking this button will auto-populate the Slides list with the amount
@@ -603,7 +603,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 40|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 40|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: ConfigureTalkSlides
@@ -669,7 +669,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 44|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 44|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Check the Autoplay checkbox if the slide contains animations / video,
@@ -682,7 +682,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 45|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 45|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Slides
@@ -760,7 +760,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 50|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 50|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Slides
@@ -775,7 +775,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 51|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 51|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Autoplay
@@ -814,7 +814,7 @@ MonoBehaviour:
       Data: 54|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UdonToolkit.PresentationVideoPlayer, Assembly-CSharp
+      Data: UdonToolkit.PresentationVideoPlayer, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 

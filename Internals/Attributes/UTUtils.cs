@@ -159,7 +159,16 @@ namespace UdonToolkit {
 
     private static string[] BLACKLISTED_EVENT_NAMES = new[] {
       "Update", "LateUpdate", "FixedUpdate", "Start", "OnEnable", "OnDisable", "OnTriggerEnter", "OnTriggerStay",
-      "OnTriggerExit", "OnPlayerTriggerEnter", "OnPlayerTriggerStay", "OnPlayerTriggerExit", "Interact"
+      "OnTriggerExit", "OnPlayerTriggerEnter", "OnPlayerTriggerStay", "OnPlayerTriggerExit", "Interact", "OnPlayerRespawn",
+      "OnPickupUseDown", "OnPickupUseUp", "OnPlayerJoined", "OnPlayerLeft", "OnVideoEnd", "OnVideoError", "OnVideoLoop",
+      "OnVideoPause", "OnVideoPlay", "OnVideoReady", "OnVideoStart", "OnSpawn", "OnStationEntered", "OnStationExited",
+      "OnPreserialization", "OnDeserialization", "OnPlayerParticleCollision", "OnOwnershipTransferred", "OnPickup",
+      "OnOwnershipRequest", "MidiNoteOn", "MidiNoteOff", "MidiControlChange", "InputJump", "InputUse", "InputGrab",
+      "InputDrop", "InputMoveHorizontal", "InputMoveVertical", "InputLookHorizontal", "InputLookVertical"
+    };
+    
+    private static string[] BLACKLISTED_MODULE_NAMES = new [] {
+      "UdonSharp.Runtime.dll", "UnityEngine.CoreModule.dll", "mscorlib.dll",
     };
 
     public static string[] GetUdonEvents(UdonSharpBehaviour source) {
@@ -168,7 +177,7 @@ namespace UdonToolkit {
         var uPa = UdonSharpEditorUtility.GetUdonSharpProgramAsset(source);
         if (uPa != null) {
           var methods = uPa.sourceCsScript.GetClass().GetMethods();
-          var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
+          var mapped = methods.Where(m => !BLACKLISTED_MODULE_NAMES.Contains(m.Module.Name)).Select(m => m.Name).ToArray();
           mapped = mapped.Where(m => !BLACKLISTED_EVENT_NAMES.Contains(m)).ToArray();
           if (mapped.Length > 0) {
             events = mapped;
@@ -184,7 +193,7 @@ namespace UdonToolkit {
         var uPa = UdonSharpEditorUtility.GetUdonSharpProgramAsset(source);
         if (uPa != null) {
           var fields = uPa.sourceCsScript.GetClass().GetFields();
-          var mapped = fields.Where(f => f.Module.Name == "Assembly-CSharp.dll").Select(f => f.Name).ToArray();
+          var mapped = fields.Where(f => !BLACKLISTED_MODULE_NAMES.Contains(f.Module.Name)).Select(f => f.Name).ToArray();
           if (mapped.Length > 0) {
             variables = mapped;
           }
@@ -199,7 +208,7 @@ namespace UdonToolkit {
         var uPa = source.programSource as UdonSharpProgramAsset;
         if (uPa != null) {
           var methods = uPa.sourceCsScript.GetClass().GetMethods();
-          var mapped = methods.Where(m => m.Module.Name == "Assembly-CSharp.dll").Select(m => m.Name).ToArray();
+          var mapped = methods.Where(m => !BLACKLISTED_MODULE_NAMES.Contains(m.Module.Name)).Select(m => m.Name).ToArray();
           if (mapped.Length > 0) {
             events = mapped;
           }

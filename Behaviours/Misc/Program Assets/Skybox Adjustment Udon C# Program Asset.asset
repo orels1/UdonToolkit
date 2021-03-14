@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Active State
@@ -165,7 +165,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 11|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 11|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Active Floats List
@@ -180,7 +180,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 12|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 12|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@activeSkybox'
@@ -258,7 +258,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 17|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Active Floats List
@@ -330,7 +330,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 21|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 21|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Active Colors List
@@ -345,7 +345,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 22|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 22|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@activeSkybox'
@@ -423,7 +423,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 27|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 27|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Active Colors List
@@ -495,7 +495,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 31|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 31|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Active Vectors List
@@ -510,7 +510,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 32|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 32|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@activeSkybox'
@@ -588,7 +588,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 37|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 37|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Active Vectors List
@@ -666,7 +666,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 42|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 42|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: ToggleSelf
@@ -675,7 +675,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 43|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 43|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Transition
@@ -747,7 +747,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 48|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 48|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Transition time cannot be negative

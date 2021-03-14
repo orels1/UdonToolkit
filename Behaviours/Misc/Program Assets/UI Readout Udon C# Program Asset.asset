@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: General
@@ -228,7 +228,7 @@ MonoBehaviour:
       Data: 5
     - Name: 
       Entry: 7
-      Data: 15|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 15|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Text Readouts
@@ -237,7 +237,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 16|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 16|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: '{0} will be replaced by the value, e.g. "Speed: {0} u/s" will become
@@ -250,7 +250,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 17|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Text Readouts List
@@ -265,7 +265,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 18|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 18|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Text Variables
@@ -274,7 +274,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 19|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 19|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: GetTextVariableOptions
@@ -352,7 +352,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 24|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 24|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Text Readouts List
@@ -367,7 +367,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 25|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Targets
@@ -433,7 +433,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 29|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 29|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Text Readouts List
@@ -448,7 +448,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 30|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 30|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Formats
@@ -514,7 +514,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 34|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 34|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Slider Readouts
@@ -523,7 +523,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 35|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 35|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Slider Readouts List
@@ -538,7 +538,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 36|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Slider Variables
@@ -547,7 +547,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 37|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 37|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: GetSliderVariableOptions
@@ -625,7 +625,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 42|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 42|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Slider Readouts List
@@ -640,7 +640,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 43|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 43|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Targets
@@ -712,7 +712,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 48|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 48|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Slider Readouts List
@@ -727,7 +727,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 49|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 49|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Multipliers

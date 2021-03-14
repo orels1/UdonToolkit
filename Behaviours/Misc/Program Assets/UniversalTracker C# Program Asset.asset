@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Tracking Target
@@ -342,7 +342,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 21|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 21|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: HideTrackDataDropdown
@@ -414,7 +414,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 26|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 26|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: HideTrackBoneDropdown
@@ -480,7 +480,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 30|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 30|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@trackPlayspace'
@@ -546,7 +546,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 34|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 34|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@trackPlayspace'
@@ -618,7 +618,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 39|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 39|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Tracking Correction
@@ -627,7 +627,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 40|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 40|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: The target transform will be rotated by this angles after copying source
@@ -697,7 +697,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 44|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 44|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: ShowControllerCorrection
@@ -706,7 +706,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 45|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 45|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This option will align the trackers with the player's hand laser direction

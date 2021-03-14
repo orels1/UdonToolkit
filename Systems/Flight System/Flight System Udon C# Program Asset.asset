@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Tracking References
@@ -279,7 +279,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 17|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: General Settings
@@ -699,7 +699,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 41|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 41|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Comfort Settings
@@ -879,13 +879,13 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 51|UdonToolkit.RangeSliderAttribute, Assembly-CSharp
+      Data: 51|UdonToolkit.RangeSliderAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 52|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 52|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This defines the minimum player speed during takeoff/landing
@@ -960,7 +960,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 57|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 57|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Desktop Keybinds
@@ -1266,7 +1266,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 75|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 75|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Initial State
@@ -1332,7 +1332,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 79|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 79|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This position will be used by desktop users when force-respawning
@@ -1848,7 +1848,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 112|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 112|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1857,7 +1857,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 113|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 113|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnFlightStart
@@ -1926,7 +1926,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 117|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 117|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1935,7 +1935,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 118|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 118|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnFlightStart
@@ -1947,7 +1947,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 119|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 119|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@onFlightStart'
@@ -2019,7 +2019,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 123|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 123|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2028,7 +2028,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 124|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 124|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnFlightEnd
@@ -2097,7 +2097,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 128|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 128|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2106,7 +2106,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 129|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 129|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnFlightEnd
@@ -2118,7 +2118,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 130|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 130|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@onFlightEnd'
@@ -2190,7 +2190,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 134|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 134|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2199,7 +2199,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 135|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 135|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnHoverStart
@@ -2268,7 +2268,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 139|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 139|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2277,7 +2277,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 140|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 140|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnHoverStart
@@ -2289,7 +2289,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 141|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 141|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@onHoverStart'
@@ -2361,7 +2361,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 145|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 145|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2370,7 +2370,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 146|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 146|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnHoverEnd
@@ -2439,7 +2439,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 150|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 150|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2448,7 +2448,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 151|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 151|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnHoverEnd
@@ -2460,7 +2460,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 152|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 152|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@onHoverEnd'
@@ -2532,7 +2532,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 156|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 156|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2541,7 +2541,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 157|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 157|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnGlideStart
@@ -2610,7 +2610,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 161|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 161|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2619,7 +2619,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 162|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 162|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnGlideStart
@@ -2631,7 +2631,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 163|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 163|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@onGlideStart'
@@ -2703,7 +2703,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 167|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 167|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2712,7 +2712,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 168|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 168|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnGlideEnd
@@ -2781,7 +2781,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 172|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 172|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2790,7 +2790,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 173|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 173|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnGlideEnd
@@ -2802,7 +2802,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 174|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 174|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@onGlideEnd'

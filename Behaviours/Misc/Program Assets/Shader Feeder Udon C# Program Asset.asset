@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: General
@@ -348,7 +348,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 22|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 22|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Update Rate
@@ -360,7 +360,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 23|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 23|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!customUpdateRate'
@@ -432,7 +432,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 28|UdonToolkit.HorizontalAttribute, Assembly-CSharp
+      Data: 28|UdonToolkit.HorizontalAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Update Rate
@@ -444,7 +444,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 29|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 29|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@updateTypes'
@@ -459,7 +459,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 30|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 30|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!customUpdateRate'
@@ -588,7 +588,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 38|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 38|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Cycle Options
@@ -597,7 +597,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 39|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 39|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -660,7 +660,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 43|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 43|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Cycle Options
@@ -669,7 +669,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 44|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 44|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@source'
@@ -684,7 +684,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 45|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 45|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Scene start time will be saved to this float
@@ -753,7 +753,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 49|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 49|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Cycle Options
@@ -762,13 +762,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 50|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 50|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 51|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 51|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!customUpdateRate'
@@ -834,7 +834,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 55|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 55|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Cycle Options
@@ -843,7 +843,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 56|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 56|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: HideCycleLengthTarget
@@ -852,7 +852,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 57|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 57|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@source'
@@ -924,7 +924,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 61|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 61|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Cycle Options
@@ -933,7 +933,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 62|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 62|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -996,7 +996,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 66|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 66|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Cycle Options
@@ -1005,7 +1005,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 67|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 67|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!setCycleStartTime'
@@ -1014,7 +1014,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 68|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 68|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@source'
@@ -1029,7 +1029,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 69|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 69|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Start time of each cycle will be saved to this float
@@ -1104,7 +1104,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 74|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 74|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Slider Sources
@@ -1176,7 +1176,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 78|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 78|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Slider Sources
@@ -1191,7 +1191,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 79|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 79|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@source'
@@ -1269,7 +1269,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 84|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 84|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Transform Sources
@@ -1341,7 +1341,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 88|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 88|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Transform Sources
@@ -1356,7 +1356,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 89|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 89|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@source'
@@ -1434,7 +1434,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 94|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 94|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Text Sources
@@ -1449,7 +1449,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 95|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 95|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Text inputs will be casted to floats and passed into the provided property
@@ -1518,7 +1518,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 99|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 99|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Text Sources
@@ -1533,7 +1533,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 100|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 100|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@source'
@@ -1611,7 +1611,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 105|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 105|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Udon Variables
@@ -1683,7 +1683,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 109|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 109|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Udon Variables
@@ -1698,7 +1698,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 110|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 110|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Variables
@@ -1707,7 +1707,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 111|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 111|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@udonBehaviours'
@@ -1779,7 +1779,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 115|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 115|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Udon Variables
@@ -1794,7 +1794,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 116|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 116|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Types
@@ -1803,7 +1803,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 117|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 117|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@typeOptions'
@@ -1875,7 +1875,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 121|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 121|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Udon Variables
@@ -1890,7 +1890,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 122|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 122|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Shader Props
@@ -1899,7 +1899,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 123|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 123|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@source'

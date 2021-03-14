@@ -94,7 +94,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: General
@@ -286,7 +286,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 18|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 18|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -295,7 +295,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 19|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 19|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Desktop UI
@@ -367,7 +367,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 24|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 24|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -433,7 +433,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 28|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 28|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -499,7 +499,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 32|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 32|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -565,7 +565,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 36|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 36|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -574,7 +574,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 37|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 37|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: VR UI
@@ -583,7 +583,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 38|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 38|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -649,7 +649,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 42|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 42|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -715,7 +715,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 46|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 46|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -781,7 +781,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 50|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 50|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -853,7 +853,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 55|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 55|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -862,7 +862,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 56|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 56|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: On Camera UI
@@ -928,7 +928,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 60|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 60|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -994,7 +994,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 64|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 64|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -1060,7 +1060,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 68|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 68|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -1132,7 +1132,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 73|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 73|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -1198,7 +1198,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 77|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 77|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -1264,7 +1264,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 81|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 81|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: User Interface
@@ -1336,7 +1336,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 86|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 86|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Controls
@@ -1345,7 +1345,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 87|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 87|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Control Spheres
@@ -1417,7 +1417,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 92|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 92|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Controls
@@ -1483,7 +1483,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 96|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 96|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Controls
@@ -1549,7 +1549,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 100|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 100|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Controls
@@ -1615,7 +1615,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 104|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 104|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Controls
@@ -1681,7 +1681,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 108|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 108|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Controls
@@ -1747,7 +1747,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 112|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 112|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Controls
@@ -1813,7 +1813,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 116|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 116|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Camera Objects
@@ -2056,7 +2056,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 130|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 130|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Auto Focus
@@ -2380,7 +2380,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 148|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 148|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Tracking
@@ -2419,7 +2419,7 @@ MonoBehaviour:
       Data: 151|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UdonToolkit.UniversalTracker, Assembly-CSharp
+      Data: UdonToolkit.UniversalTracker, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 

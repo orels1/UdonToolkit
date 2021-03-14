@@ -95,7 +95,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Clicking this button will populate the list of talks with all the TLXTalk
@@ -108,13 +108,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 7|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|UdonToolkit.OnValueChangedAttribute, Assembly-CSharp
+      Data: 8|UdonToolkit.OnValueChangedAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: PopulateTalks
@@ -153,7 +153,7 @@ MonoBehaviour:
       Data: 11|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UdonToolkit.PresentationTalk[], Assembly-CSharp
+      Data: UdonToolkit.PresentationTalk[], UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -216,7 +216,7 @@ MonoBehaviour:
       Data: 15|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UdonToolkit.PresentationVideoPlayer, Assembly-CSharp
+      Data: UdonToolkit.PresentationVideoPlayer, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -249,7 +249,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 17|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 17|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Video Players
@@ -372,7 +372,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 24|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 24|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Access Control
@@ -381,13 +381,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|UdonToolkit.ToggleAttribute, Assembly-CSharp
+      Data: 25|UdonToolkit.ToggleAttribute, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 26|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 26|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: You can limit the people who can control the presentation using the whitelist
@@ -463,7 +463,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 31|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 31|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!restrictAccess'
@@ -535,7 +535,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 36|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 36|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -544,7 +544,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 37|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 37|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTakenControl
@@ -559,7 +559,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 38|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 38|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Behaviours
@@ -625,7 +625,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 42|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 42|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -634,7 +634,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 43|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 43|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTakenControl
@@ -649,7 +649,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 44|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 44|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Events
@@ -658,7 +658,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 45|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 45|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@takenControlTargets'
@@ -736,7 +736,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 50|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 50|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -745,7 +745,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 51|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 51|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTakenControl
@@ -760,7 +760,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 52|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 52|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Targets
@@ -769,7 +769,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 53|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 53|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@netTargetTypes'
@@ -841,7 +841,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 57|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 57|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -850,7 +850,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 58|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 58|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnLostControl
@@ -865,7 +865,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 59|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 59|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Behaviours
@@ -931,7 +931,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 63|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 63|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -940,7 +940,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 64|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 64|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnLostControl
@@ -955,7 +955,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 65|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 65|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Events
@@ -964,7 +964,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 66|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 66|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@lostControlTargets'
@@ -1036,7 +1036,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 70|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 70|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1045,7 +1045,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 71|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 71|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnLostControl
@@ -1060,7 +1060,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 72|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 72|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Targets
@@ -1069,7 +1069,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 73|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 73|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@netTargetTypes'
@@ -1141,7 +1141,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 77|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 77|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1150,7 +1150,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 78|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 78|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTalkStart
@@ -1165,7 +1165,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 79|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 79|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Behaviours
@@ -1231,7 +1231,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 83|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 83|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1240,7 +1240,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 84|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 84|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTalkStart
@@ -1255,7 +1255,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 85|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 85|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Events
@@ -1264,7 +1264,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 86|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 86|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@talkStartTargets'
@@ -1336,7 +1336,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 90|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 90|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1345,7 +1345,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 91|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 91|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTalkStart
@@ -1360,7 +1360,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 92|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 92|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Targets
@@ -1369,7 +1369,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 93|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 93|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@netTargetTypes'
@@ -1441,7 +1441,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 97|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 97|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1450,7 +1450,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 98|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 98|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTalkEnd
@@ -1465,7 +1465,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 99|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 99|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Behaviours
@@ -1531,7 +1531,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 103|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 103|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1540,7 +1540,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 104|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 104|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTalkEnd
@@ -1555,7 +1555,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 105|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 105|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Events
@@ -1564,7 +1564,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 106|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 106|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@talkEndTargets'
@@ -1636,7 +1636,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 110|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 110|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1645,7 +1645,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 111|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 111|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnTalkEnd
@@ -1660,7 +1660,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 112|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 112|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Targets
@@ -1669,7 +1669,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 113|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 113|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@netTargetTypes'
@@ -1741,7 +1741,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 117|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 117|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1750,7 +1750,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 118|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 118|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnNextSlide
@@ -1765,7 +1765,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 119|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 119|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Behaviours
@@ -1831,7 +1831,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 123|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 123|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1840,7 +1840,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 124|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 124|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnNextSlide
@@ -1855,7 +1855,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 125|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 125|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Events
@@ -1864,7 +1864,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 126|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 126|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@nextSlideTargets'
@@ -1936,7 +1936,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 130|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 130|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -1945,7 +1945,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 131|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 131|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnNextSlide
@@ -1960,7 +1960,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 132|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 132|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Targets
@@ -1969,7 +1969,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 133|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 133|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@netTargetTypes'
@@ -2041,7 +2041,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 137|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 137|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2050,7 +2050,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 138|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 138|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnPrevSlide
@@ -2065,7 +2065,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 139|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 139|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Behaviours
@@ -2131,7 +2131,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 143|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 143|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2140,7 +2140,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 144|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 144|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnPrevSlide
@@ -2155,7 +2155,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 145|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 145|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Events
@@ -2164,7 +2164,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 146|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 146|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@prevSlideTargets'
@@ -2236,7 +2236,7 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 150|UdonToolkit.FoldoutGroupAttribute, Assembly-CSharp
+      Data: 150|UdonToolkit.FoldoutGroupAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Callbacks
@@ -2245,7 +2245,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 151|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 151|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: OnPrevSlide
@@ -2260,7 +2260,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 152|UdonToolkit.LVHeaderAttribute, Assembly-CSharp
+      Data: 152|UdonToolkit.LVHeaderAttribute, UdonToolkitRuntime
     - Name: title
       Entry: 1
       Data: Targets
@@ -2269,7 +2269,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 153|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 153|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@netTargetTypes'

@@ -156,7 +156,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 10|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Default State
@@ -228,7 +228,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 15|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 15|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@isLinearFog'
@@ -294,7 +294,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 19|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 19|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!isLinearFog'
@@ -360,7 +360,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 23|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 23|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!isLinearFog'
@@ -426,7 +426,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 27|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 27|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Active State
@@ -492,7 +492,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 31|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 31|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@isLinearFog'
@@ -558,7 +558,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 35|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 35|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!isLinearFog'
@@ -624,7 +624,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 39|UdonToolkit.HideIfAttribute, Assembly-CSharp
+      Data: 39|UdonToolkit.HideIfAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@!isLinearFog'
@@ -690,7 +690,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 43|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 43|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Transition time cannot be negative
@@ -768,7 +768,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 48|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 48|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Extras
@@ -834,7 +834,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 52|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 52|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Will set the fog color and density from the Default or Active state on

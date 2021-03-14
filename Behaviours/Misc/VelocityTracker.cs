@@ -25,7 +25,8 @@ namespace UdonToolkit {
 
     #if !COMPILER_UDONSHARP && UNITY_EDITOR
     public bool GetRBState() {
-      return GetComponent<Rigidbody>() == null;
+      if (!target) return false;
+      return target.GetComponent<Rigidbody>() == null;
     }
     #endif
 

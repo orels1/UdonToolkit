@@ -1,5 +1,6 @@
 using System;
 using UdonSharp;
+using UnityEditor;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
@@ -10,6 +11,11 @@ namespace UdonToolkit {
     [HelpMessage("It is recommended to put Area Triggers on a MirrorReflection layer unless they need a custom layer.")]
     [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#area-trigger")]
     public class AreaTrigger : UdonSharpBehaviour {
+      [SectionHeader("General")]
+      [HelpBox("This behaviour requires a trigger collider to be attached to the object", "CheckCollider")]
+      public bool active = true;
+      public bool oneShot;
+      
       private bool CheckCollider() {
         var col = gameObject.GetComponent<Collider>();
         return col == null || !col.isTrigger;
@@ -28,10 +34,6 @@ namespace UdonToolkit {
       [TabGroup("Collide With Players")]
       public bool collideWithRemotePlayers;
 
-      [SectionHeader("General")]
-      [HelpBox("This behaviour requires a trigger collider to be attached to the object", "CheckCollider")]
-      public bool active = true;
-      
       private bool HideLayerList() {
         return collideWithLocalPlayers || collideWithRemotePlayers;
       }
@@ -47,7 +49,34 @@ namespace UdonToolkit {
         var playerLocal = LayerMask.NameToLayer("PlayerLocal");
         return (collideWith == (collideWith | (1 << player)) || collideWith == (collideWith | (1 << playerLocal)));
       }
+      
+      public void SelectAccessLevel(SerializedProperty value) {
+        if (!value.boolValue) return;
+        switch (value.name) {
+          case "masterOnly": {
+            value.serializedObject.FindProperty("ownerOnly").boolValue = false;
+            break;
+          }
+          case "ownerOnly": {
+            value.serializedObject.FindProperty("masterOnly").boolValue = false;
+            break;
+          }
+        }
+      }
       #endif
+      
+      [SectionHeader("Access")]
+      [Horizontal("Access")]
+      [Toggle]
+      [OnValueChanged("SelectAccessLevel")]
+      public bool masterOnly;
+      [Toggle]
+      [Horizontal("Access")]
+      [OnValueChanged("SelectAccessLevel")]
+      public bool ownerOnly;
+
+      [HelpBox("If any names are listed - only those users will be allowed to fire events, as well as the Master/Owner based on the options above")]
+      public string[] allowedUsers;
 
       [SectionHeader("Udon Events")]
       [HelpBox("Do not use Networked option with target All when colliding with Player layer, as it will cause oversync.",
@@ -77,6 +106,9 @@ namespace UdonToolkit {
       private int playerLayer = 9;
       private int playerLocalLayer = 10;
       private int collidersIn;
+      
+      private bool isOwner;
+      private bool used;
       
       public void Activate() {
         active = true;
@@ -173,7 +205,65 @@ namespace UdonToolkit {
         }
       }
 
+      private bool CheckAccess() {
+        var whitelist = allowedUsers.Length > 0;
+        if (masterOnly && !Networking.IsMaster && !whitelist) return false;
+        if (ownerOnly && !isOwner && !whitelist) return false;
+        if (whitelist) {
+          var allowed = false;
+          var playerName = Networking.LocalPlayer.displayName;
+          foreach (var user in allowedUsers) {
+            if (user == playerName) {
+              allowed = true;
+              break;
+            }
+          }
+
+          if (!allowed && ownerOnly && isOwner) {
+            allowed = true;
+          }
+
+          if (!allowed && masterOnly && Networking.IsMaster) {
+            allowed = true;
+          }
+
+          if (!allowed) return false;
+        }
+
+        return true;
+      }
+      
+      public void TakeOwnership() {
+        if (isOwner) return;
+        Networking.SetOwner(Networking.LocalPlayer, gameObject);
+        isOwner = true;
+      }
+      
+      public override void OnOwnershipTransferred() {
+        isOwner = Networking.IsOwner(gameObject);
+      }
+
+      public override void OnPlayerLeft(VRCPlayerApi player) {
+        isOwner = Networking.IsOwner(gameObject);
+      }
+      
+      public void ResetOneShot() {
+        used = false;
+        active = true;
+      }
+      
       private void FireTriggers(string type) {
+        if (!CheckAccess()) return;
+        if (oneShot) {
+          if (used) {
+            return;
+          }
+
+          active = false;
+          used = true;
+          enabled = false;
+        }
+
         var udonTargets = type == "enter" ? enterTargets : exitTargets;
         var udonEvents = type == "enter" ? enterEvents : exitEvents;
         for (int i = 0; i < udonTargets.Length; i++) {

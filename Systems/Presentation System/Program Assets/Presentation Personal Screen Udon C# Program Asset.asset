@@ -157,7 +157,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 10|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This will be attached to the desktop/vr ref
@@ -199,7 +199,7 @@ MonoBehaviour:
       Data: 13|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UdonToolkit.PresentationStreamController, Assembly-CSharp
+      Data: UdonToolkit.PresentationStreamController, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -415,7 +415,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 26|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 26|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: The position of the spawned screen for Desktop players
@@ -484,7 +484,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 30|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 30|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: The position of the spawned screen for VR players

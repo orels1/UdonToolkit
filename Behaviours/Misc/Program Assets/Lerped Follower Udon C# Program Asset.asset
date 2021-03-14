@@ -93,7 +93,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.SectionHeaderAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.SectionHeaderAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: General
@@ -222,7 +222,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 14|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 14|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Target will instantly match the Source position
@@ -291,7 +291,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 18|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 18|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: Target will instantly match the Source rotation
@@ -423,7 +423,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 26|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 26|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This option disables rotation transfer.

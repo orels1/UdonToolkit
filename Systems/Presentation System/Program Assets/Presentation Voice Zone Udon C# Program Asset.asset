@@ -61,7 +61,7 @@ MonoBehaviour:
       Data: 4|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UdonToolkit.PresentationVoiceController, Assembly-CSharp
+      Data: UdonToolkit.PresentationVoiceController, UdonToolkitRuntime
     - Name: 
       Entry: 8
       Data: 
@@ -94,7 +94,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 6|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 6|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: This object requires a trigger collider to function
@@ -106,7 +106,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|UdonToolkit.HelpBoxAttribute, Assembly-CSharp
+      Data: 7|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
       Data: It is recommended to put this object onto a MirroReflection layer

@@ -237,10 +237,17 @@ namespace UdonToolkit {
                 : null;
             var options = UTUtils.GetPopupOptions(prop, source, popupAttr, out var selectedIndex);
             selectedIndex = EditorGUILayout.Popup(selectedIndex, options);
+            // we force reserialize for cases of default values
             if (prop.type == "int") {
+              if (prop.intValue != selectedIndex) {
+                shouldReserialize = true;
+              }
               prop.intValue = selectedIndex;
             }
             else {
+              if (prop.stringValue != options[selectedIndex]) {
+                shouldReserialize = true;
+              }
               prop.stringValue = options[selectedIndex];
             }
             break;

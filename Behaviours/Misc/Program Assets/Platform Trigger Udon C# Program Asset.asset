@@ -156,7 +156,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 10|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Desktop Events
@@ -234,7 +234,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 15|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 15|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: Desktop Events
@@ -249,7 +249,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 16|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 16|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@desktopTargets'
@@ -321,7 +321,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 20|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 20|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Events
@@ -393,7 +393,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 24|UdonToolkit.ListViewAttribute, Assembly-CSharp
+      Data: 24|UdonToolkit.ListViewAttribute, UdonToolkitRuntime
     - Name: name
       Entry: 1
       Data: VR Events
@@ -408,7 +408,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|UdonToolkit.PopupAttribute, Assembly-CSharp
+      Data: 25|UdonToolkit.PopupAttribute, UdonToolkitRuntime
     - Name: methodName
       Entry: 1
       Data: '@vrTargets'
