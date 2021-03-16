@@ -48,7 +48,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: jumpStrengthChangeType
+      Data: jumpImpulseChangeType
     - Name: $v
       Entry: 7
       Data: 2|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
@@ -75,10 +75,10 @@ MonoBehaviour:
       Data: SystemInt32
     - Name: symbolOriginalName
       Entry: 1
-      Data: jumpStrengthChangeType
+      Data: jumpImpulseChangeType
     - Name: symbolUniqueName
       Entry: 1
-      Data: jumpStrengthChangeType
+      Data: jumpImpulseChangeType
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
