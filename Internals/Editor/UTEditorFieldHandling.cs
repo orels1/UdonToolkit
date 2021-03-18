@@ -137,7 +137,7 @@ namespace UdonToolkit {
     private void DrawField(UTField field, SerializedProperty prop) {
       // this is taken directly from U# code
       var origValue = programAsset.GetRealProgram().Heap.GetHeapVariable(programAsset.GetRealProgram().SymbolTable.GetAddressFromSymbol(prop.name));
-      var fieldVal = tT.GetField(prop.name).GetValue(t);
+      var fieldVal = tT.GetField(prop.name)?.GetValue(t);
       var isNonDefault = fieldVal != null && origValue != null && !origValue.Equals(fieldVal) ;
       
       var uiAttrs = field.uiAttrs;
