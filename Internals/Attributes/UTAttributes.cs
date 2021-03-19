@@ -578,7 +578,7 @@ namespace UdonToolkit{
   /// Legacy attribute you do not need to use since v1.0
   /// </summary>
   [AttributeUsage(AttributeTargets.Field)]
-  public class UTEditor : Attribute {}
+  public class UTEditorAttribute : Attribute {}
   
 
   /// <summary>
@@ -818,9 +818,6 @@ namespace UdonToolkit {
     public DisabledAttribute(object a) {
     }
   }
-
-  [AttributeUsage(AttributeTargets.Field)]
-  public class UTEditor : Attribute {}
 
   [AttributeUsage(AttributeTargets.Class)]
   public class OnBeforeEditor : Attribute {

@@ -2035,7 +2035,7 @@ MonoBehaviour:
       Data: 136|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 9
-      Data: 93
+      Data: 32
     - Name: declarationType
       Entry: 3
       Data: 1
@@ -2044,7 +2044,7 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: SystemInt32Array
+      Data: SystemStringArray
     - Name: symbolOriginalName
       Entry: 1
       Data: goToggleEvents

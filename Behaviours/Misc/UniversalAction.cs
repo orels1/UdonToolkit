@@ -88,7 +88,7 @@ namespace UdonToolkit {
     public GameObject[] goTargets;
 
     [FoldoutGroup("Game Object Toggles")] [ListView("Game Objects List")] [LVHeader("Toggle Actions")] [Popup("method", "@goToggleOptions", true)]
-    public int[] goToggleEvents;
+    public string[] goToggleEvents;
 
     [HideInInspector] public string[] goToggleOptions = {
       "Enable",
@@ -222,12 +222,12 @@ namespace UdonToolkit {
     private void FireObjectToggles() {
       if (!fireObjectToggles) return;
       for (int i = 0; i < goTargets.Length; i++) {
-        if (goToggleEvents[i] == 2) {
+        if (goToggleEvents[i] == "Toggle") {
           goTargets[i].SetActive(!goTargets[i].activeSelf);
           continue;
         }
 
-        var state = goToggleEvents[i] == 0;
+        var state = goToggleEvents[i] == "Enable";
         goTargets[i].SetActive(state);
       }
     }
