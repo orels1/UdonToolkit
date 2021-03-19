@@ -27,7 +27,7 @@ namespace UdonToolkit{
   }
 
   /// <summary>
-  /// These attributes are used to pass dat to custom logic in the UTEditor
+  /// These attributes are used to pass data to custom logic in the UTEditor
   /// </summary>
   [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
   public class UTVisualAttribute : Attribute {
@@ -573,6 +573,13 @@ namespace UdonToolkit{
       this.variableName = variableName;
     }
   }
+  
+  /// <summary>
+  /// Legacy attribute you do not need to use since v1.0
+  /// </summary>
+  [AttributeUsage(AttributeTargets.Field)]
+  public class UTEditor : Attribute {}
+  
 
   /// <summary>
   /// Displays a help message above all the fields
@@ -811,6 +818,9 @@ namespace UdonToolkit {
     public DisabledAttribute(object a) {
     }
   }
+
+  [AttributeUsage(AttributeTargets.Field)]
+  public class UTEditor : Attribute {}
 
   [AttributeUsage(AttributeTargets.Class)]
   public class OnBeforeEditor : Attribute {
