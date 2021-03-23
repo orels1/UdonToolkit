@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace UdonToolkit {
   public class UTStyles {
-    public static Texture2D ComponentBG = (Texture2D) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Component BG.png");
-    public static Texture ArrowR = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow_R.png");
-    public static Texture ArrowL = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow_L.png");
-    public static Texture Utils = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Utils.png");
-    public static Texture Undo = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Undo.png");
+    public static Texture2D ComponentBG = Resources.Load<Texture2D>("Component BG");
+    public static Texture ArrowR = Resources.Load<Texture>("Arrow_R");
+    public static Texture ArrowL = Resources.Load<Texture>("Arrow_L");
+    public static Texture Utils = Resources.Load<Texture>("Utils");
+    public static Texture Undo = Resources.Load<Texture>("Undo");
 
     public static GUIStyle CreatePreviewStyle(Texture2D bg) {
       return new GUIStyle(EditorStyles.helpBox) {
@@ -54,7 +54,7 @@ namespace UdonToolkit {
       });
       GUI.backgroundColor = Color.white;
     }
-    
+
     public static void RenderSectionHeader(ref Rect position, string name) {
       GUI.backgroundColor = new Color(0.5f , 0.5f, 0.5f);
       EditorGUI.LabelField(position, new GUIContent(name), new GUIStyle(EditorStyles.helpBox) {
@@ -74,7 +74,7 @@ namespace UdonToolkit {
         }
       });
     }
-    
+
     public static void RenderNote(ref Rect position, string text) {
       var textColor = EditorGUIUtility.isProSkin ? new Color(1f, 1f, 1f, 0.5f) : new Color(0f, 0f, 0f, 0.8f);
       EditorGUILayout.LabelField(text, new GUIStyle(EditorStyles.helpBox) {
@@ -120,7 +120,7 @@ namespace UdonToolkit {
       fontSize = 9,
       fixedHeight = 16
     };
-    
+
     // based on https://github.com/Xiexe/Xiexes-Unity-Shaders/blob/master/Editor/XSStyles.cs#L275
     public static bool FoldoutHeader(string text, bool value, ref bool showUtils) {
       var shown = value;
@@ -150,7 +150,7 @@ namespace UdonToolkit {
       }
       GUI.Box(utilsRect, Utils, new GUIStyle());
       GUI.backgroundColor = Color.white;
-      
+
       if (e.type == EventType.MouseDown) {
         if (utilsRect.Contains(e.mousePosition)) {
           showUtils = !showUtils;
@@ -174,7 +174,7 @@ namespace UdonToolkit {
       fixedWidth = 20,
       fixedHeight = 17
     };
-    
+
     public static readonly GUIStyle MiniArrowRight = new GUIStyle(EditorStyles.miniButtonRight) {
       margin = new RectOffset(0, 0, 3, 3),
       fixedWidth = 20,
@@ -191,7 +191,7 @@ namespace UdonToolkit {
       },
       active = new GUIStyleState {
         background = (Texture2D) Undo
-      }, 
+      },
     };
   }
 }
