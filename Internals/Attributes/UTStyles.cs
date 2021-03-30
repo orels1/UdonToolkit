@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace UdonToolkit {
   public class UTStyles {
-    public static Texture2D ComponentBG = (Texture2D) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Component BG.png");
-    public static Texture ArrowR = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow_R.png");
-    public static Texture ArrowL = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Arrow_L.png");
-    public static Texture Utils = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Utils.png");
-    public static Texture Undo = (Texture) EditorGUIUtility.Load("Assets/UdonToolkit/Internals/Resources/Undo.png");
+    public static Texture2D ComponentBG = Resources.Load<Texture2D>("Component BG");
+    public static Texture ArrowR = Resources.Load<Texture>("Arrow_R");
+    public static Texture ArrowL = Resources.Load<Texture>("Arrow_L");
+    public static Texture Utils = Resources.Load<Texture>("Utils");
+    public static Texture Undo = Resources.Load<Texture>("Undo");
 
     public static GUIStyle CreatePreviewStyle(Texture2D bg) {
       return new GUIStyle(EditorStyles.helpBox) {
