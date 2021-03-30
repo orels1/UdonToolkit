@@ -189,6 +189,7 @@ namespace UdonToolkit {
       normal = new GUIStyleState {
         background = (Texture2D) Undo
       },
+      alignment = TextAnchor.LowerCenter,
       active = new GUIStyleState {
         background = (Texture2D) Undo
       }, 

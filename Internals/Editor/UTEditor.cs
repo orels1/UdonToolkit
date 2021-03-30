@@ -18,6 +18,8 @@ namespace UdonToolkit {
     private Type tT;
     private UdonSharpProgramAsset programAsset;
     private GUIContent undoArrow;
+    private bool nonUBChecked;
+    private bool nonUBMode;
     
     #region Editor State
     
@@ -55,8 +57,15 @@ namespace UdonToolkit {
       showUdonSettings = (bool) (UTUtils.GetUTSetting("showUdonSettings", UTUtils.UTSettingType.Bool) ?? false);
 
       // we force-disable collision transfer for toolkit driven behaviours as it is not applicable
-      if (UdonSharpEditorUtility.GetBackingUdonBehaviour(t).AllowCollisionOwnershipTransfer) {
-        UdonSharpEditorUtility.GetBackingUdonBehaviour(t).AllowCollisionOwnershipTransfer = false;
+      if (!nonUBChecked) {
+        nonUBMode = t.gameObject.GetComponent<UdonBehaviour>() == null;
+        nonUBChecked = true;
+      }
+
+      if (!nonUBMode) {
+        if (UdonSharpEditorUtility.GetBackingUdonBehaviour(t).AllowCollisionOwnershipTransfer) {
+          UdonSharpEditorUtility.GetBackingUdonBehaviour(t).AllowCollisionOwnershipTransfer = false;
+        }
       }
 
       var headerExited = false;
@@ -190,7 +199,7 @@ namespace UdonToolkit {
       }
       
       #region Buttons
-      if (!Application.isPlaying && behInfo.buttons.Length > 0) {
+      if (behInfo.buttons != null && !Application.isPlaying && behInfo.buttons.Length > 0) {
         buttonsExpanded = UTStyles.FoldoutHeader("Editor Methods", buttonsExpanded);
         if (buttonsExpanded) {
           EditorGUILayout.BeginVertical(new GUIStyle("helpBox"));
@@ -202,7 +211,7 @@ namespace UdonToolkit {
           EditorGUILayout.EndVertical();
         }
       }
-      if (Application.isPlaying && behInfo.udonCustomEvents.Length > 0) {
+      if (Application.isPlaying && behInfo.udonCustomEvents.Length > 0 && !nonUBMode) {
         methodsExpanded = UTStyles.FoldoutHeader("Udon Events", methodsExpanded);
         if (methodsExpanded) {
           EditorGUILayout.BeginVertical(new GUIStyle("helpBox"));
