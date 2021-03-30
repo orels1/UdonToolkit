@@ -63,7 +63,7 @@ namespace UdonToolkit {
       if (GUILayout.Button("Documentation", GUILayout.ExpandWidth(true))) {
         Application.OpenURL(WikiURL);
       }
-      
+
       UTStyles.RenderSectionHeader("Position and Style");
 
       var newCameraSpot = (Transform) EditorGUILayout.ObjectField("Camera Position", cameraSpot, typeof(Transform), true);
@@ -92,7 +92,7 @@ namespace UdonToolkit {
 
       UTStyles.RenderSectionHeader("PostProcessing and Collisions");
       UTStyles.RenderNote("Layers are very important to the overall setup. Make sure you follow the instructions below");
-      
+
       layers.Clear();
       for (int i = 0; i < 32; i++) {
         var layerName = LayerMask.LayerToName(i);
@@ -108,7 +108,7 @@ namespace UdonToolkit {
       }
 
       var layersArr = layers.ToArray();
-      
+
       if (emptyLayer != 0) {
         if (GUILayout.Button("Setup Layers")) {
           SetupLayers();
@@ -130,7 +130,7 @@ namespace UdonToolkit {
         GUI.backgroundColor = oldColor;
       }
       if (GUILayout.Button("Create Camera System", GUILayout.Height(30))) {
-        RunCameraSetup();  
+        RunCameraSetup();
       }
 
       if (GUILayout.Button("Add Guide Stand Only", GUILayout.Height(20))) {
@@ -159,13 +159,18 @@ namespace UdonToolkit {
 
       cameraPPLayer = emptyLayer;
     }
-    
-    private static readonly string SciFiStandPath = "Assets/UdonToolkit/Systems/Camera System/Camera Stand.prefab";
-    private static readonly string TikiStandPath = "Assets/UdonToolkit/Systems/Camera System/Camera Stand Tiki.prefab";
-    private static readonly string CameraSystemPath = "Assets/UdonToolkit/Systems/Camera System/UT Camera System.prefab";
-    private static readonly string DefaultPPProfilePath = "Assets/UdonToolkit/Systems/Camera System/Assets/Camera Lens PP.asset";
-    private static readonly string FocusFarPPProfilePath = "Assets/UdonToolkit/Systems/Camera System/Assets/Camera Lens PP Far.asset";
-    private static readonly string FocalNearPPProfilePath = "Assets/UdonToolkit/Systems/Camera System/Assets/Camera Lens PP Focal.asset";
+
+    private static string GetSystemAssetPath(string path)
+    {
+      return AssetDatabase.GetAssetPath(Resources.Load<Texture2D>("Component BG")).Replace("Internals/Resources/Component BG.png", $"Systems/{path}");
+    }
+
+    private static readonly string SciFiStandPath = GetSystemAssetPath("Camera System/Camera Stand.prefab");
+    private static readonly string TikiStandPath = GetSystemAssetPath("Camera System/Camera Stand Tiki.prefab");
+    private static readonly string CameraSystemPath = GetSystemAssetPath("Camera System/UT Camera System.prefab");
+    private static readonly string DefaultPPProfilePath = GetSystemAssetPath("Camera System/Assets/Camera Lens PP.asset");
+    private static readonly string FocusFarPPProfilePath = GetSystemAssetPath("Camera System/Assets/Camera Lens PP Far.asset");
+    private static readonly string FocalNearPPProfilePath = GetSystemAssetPath("Camera System/Assets/Camera Lens PP Focal.asset");
 
     private void RunCameraSetup() {
       setup = false;
@@ -177,7 +182,7 @@ namespace UdonToolkit {
       if (addGuide) {
         AddGuide();
       }
-      
+
       // spawn camera
       var cameraPrefab = AssetDatabase.LoadAssetAtPath(CameraSystemPath, typeof(GameObject));
       var instancedCamera = PrefabUtility.InstantiatePrefab(cameraPrefab) as GameObject;
@@ -191,7 +196,7 @@ namespace UdonToolkit {
         Undo.RecordObject(child.gameObject, "Adjusted Camera Lens PP Layers");
         child.gameObject.layer = cameraPPLayer;
       }
-      
+
       var cameraObject = instancedCameraRoot.Find("Camera Lens").gameObject;
       var cameraLens = cameraObject.transform.Find("Lens Camera").gameObject;
 
@@ -200,7 +205,7 @@ namespace UdonToolkit {
         var overlaySphere = instancedCameraRoot.Find("Camera Tracker").Find("Sphere");
         overlaySphere.GetComponent<MeshRenderer>().sharedMaterial.SetTexture("_WatermarkImage", watermark);
       }
-      
+
       // add PP stuff, we have to do it manually as having these scripts in a prefab causes build time erorrs
       // TODO: extract this into a function
       var cameraPPComp = cameraLens.AddComponent<PostProcessLayer>();
@@ -236,7 +241,7 @@ namespace UdonToolkit {
         Undo.RegisterCreatedObjectUndo(child.gameObject, "Spawn Camera Lens");
       }
       DestroyImmediate(instancedCamera);
-      
+
       // setup constraints
       var constraint = cameraObject.GetComponent<ParentConstraint>();
       Undo.RecordObject(constraint, "Adjust Constraint Settings");
