@@ -189,8 +189,6 @@ namespace UdonToolkit {
     private static readonly string FocalNearPPProfilePath = "Assets/Camera Lens PP Focal.asset";
 
     private string GetAssetPath(string path) {
-      Debug.Log($"Getting path for {path}");
-      Debug.Log($"Final path: {toolkitPath}/Systems/{systemPath}/{path}");
       return $"{toolkitPath}/Systems/{systemPath}/{path}";
     }
 
