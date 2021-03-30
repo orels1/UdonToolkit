@@ -1,7 +1,8 @@
-﻿#if UNITY_EDITOR
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
+using System;
 
+#if UNITY_EDITOR
 namespace UdonToolkit.Demo {
   public class MyAttribute : UTPropertyAttribute {
     public override void BeforeGUI(SerializedProperty property) {
@@ -14,6 +15,14 @@ namespace UdonToolkit.Demo {
       if (GUILayout.Button("Reset Value")) {
         property.floatValue = 0;
       }
+    }
+  }
+}
+#else
+namespace UdonToolkit.Demo {
+  [AttributeUsage(AttributeTargets.Field)]
+  public class MyAttribute : Attribute {
+    public MyAttribute() {
     }
   }
 }
