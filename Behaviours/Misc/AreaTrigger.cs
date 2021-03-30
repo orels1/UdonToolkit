@@ -112,14 +112,17 @@ namespace UdonToolkit {
       
       public void Activate() {
         active = true;
+        collidersIn = 0;
       }
       
       public void Deactivate() {
         active = false;
+        collidersIn = 0;
       }
       
       public void Toggle() {
         active = !active;
+        collidersIn = 0;
       }
 
       private bool shouldCollideWithPlayers;
