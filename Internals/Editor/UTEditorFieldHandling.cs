@@ -26,7 +26,11 @@ namespace UdonToolkit {
               EditorGUI.BeginChangeCheck();
               tabOpen = GUILayout.Toolbar(tabOpen, tabNames);
               if (EditorGUI.EndChangeCheck()) {
+                var fieldChange = fieldCache?[tabSaveTarget].onValueChaged;
                 targetProp.intValue = tabOpen;
+                if (fieldChange != null) {
+                  fieldChange.Invoke(t, new object[] {targetProp});
+                }
               } 
             }
             else {

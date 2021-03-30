@@ -161,6 +161,8 @@ namespace UdonToolkit {
 
       FireAnimationTriggers();
       FireAnimationBools();
+      FireAnimationFloats();
+      FireAnimationInts();
       FireUdonEvents();
       FireObjectToggles();
       FireColliderToggles();
@@ -184,6 +186,8 @@ namespace UdonToolkit {
         
         FireAnimationTriggers();
         FireAnimationBools();
+        FireAnimationFloats();
+        FireAnimationInts();
         FireUdonEvents();
         FireObjectToggles();
         FireColliderToggles();
@@ -203,6 +207,20 @@ namespace UdonToolkit {
       if (!fireAnimationTriggers) return;
       for (int i = 0; i < animatorBoolTargets.Length; i++) {
         animatorBoolTargets[i].SetBool(animatorBoolNames[i], animatorBools[i]);
+      }
+    }
+    
+    private void FireAnimationFloats() {
+      if (!fireAnimationTriggers) return;
+      for (int i = 0; i < animatorFloatTargets.Length; i++) {
+        animatorFloatTargets[i].SetFloat(animatorFloatNames[i], animatorFloats[i]);
+      }
+    }
+    
+    private void FireAnimationInts() {
+      if (!fireAnimationTriggers) return;
+      for (int i = 0; i < animatorIntTargets.Length; i++) {
+        animatorIntTargets[i].SetInteger(animatorIntNames[i], animatorInts[i]);
       }
     }
 

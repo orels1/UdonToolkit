@@ -7,6 +7,7 @@ using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
+    [OnBeforeEditor("CheckCollisionTab")]
     [CustomName("Area Trigger")]
     [HelpMessage("It is recommended to put Area Triggers on a MirrorReflection layer unless they need a custom layer.")]
     [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#area-trigger")]
@@ -21,23 +22,27 @@ namespace UdonToolkit {
         return col == null || !col.isTrigger;
       }
       
-      [TabGroup("Collide With Objects")]
+      [SectionHeader("Collision Settings")]
+      [Popup("@collideTargetOptions")]
+      [OnValueChanged("HandleCollisionTypeChange")]
+      public int collideTarget;
+
+      [NonSerialized] public string[] collideTargetOptions = new[] {
+        "Objects", "Players"
+      };
+
       [HelpBox(
         "Please use Collide With Local Players and Collide With Remote Players options instead of Player and PlayerLocal layers.",
         "PlayerLayerWarnings")]
       [HelpBox("It is not recommended to collide with Everything or the Default layer.", "CheckCollisionLayers")]
-      [HideIf("HideLayerList")]
+      [HideIf("HideCollisionLayers")]
       public LayerMask collideWith;
-
-      [TabGroup("Collide With Players")]
+      
+      [HideIf("HideCollisionPlayerTargets")]
       public bool collideWithLocalPlayers;
-      [TabGroup("Collide With Players")]
+      [HideIf("HideCollisionPlayerTargets")]
       public bool collideWithRemotePlayers;
 
-      private bool HideLayerList() {
-        return collideWithLocalPlayers || collideWithRemotePlayers;
-      }
-      
       #if !COMPILER_UDONSHARP && UNITY_EDITOR
       private bool CheckCollisionLayers() {
         var check = LayerMask.NameToLayer("Default");
@@ -49,7 +54,34 @@ namespace UdonToolkit {
         var playerLocal = LayerMask.NameToLayer("PlayerLocal");
         return (collideWith == (collideWith | (1 << player)) || collideWith == (collideWith | (1 << playerLocal)));
       }
+
+      public void CheckCollisionTab(SerializedObject obj) {
+        var collideTargetProp = obj.FindProperty("collideTarget");
+        var collideWithLocalsProp = obj.FindProperty("collideWithLocalPlayers");
+        var collideWithRemotesProp = obj.FindProperty("collideWithRemotePlayers");
+        if (collideWithLocalsProp.boolValue || collideWithRemotesProp.boolValue) {
+          collideTargetProp.intValue = 1;
+        }
+      }
+
+      private bool HideCollisionLayers() {
+        return collideTarget == 1;
+      }
       
+      private bool HideCollisionPlayerTargets() {
+        return collideTarget == 0;
+      }
+
+      public void HandleCollisionTypeChange(SerializedProperty prop) {
+        var obj = prop.serializedObject;
+        var collideWithLocalsProp = obj.FindProperty("collideWithLocalPlayers");
+        var collideWithRemotesProp = obj.FindProperty("collideWithRemotePlayers");
+        if (prop.intValue == 0) {
+          collideWithLocalsProp.boolValue = false;
+          collideWithRemotesProp.boolValue = false;
+        }
+      }
+
       public void SelectAccessLevel(SerializedProperty value) {
         if (!value.boolValue) return;
         switch (value.name) {
@@ -131,7 +163,7 @@ namespace UdonToolkit {
 
       private void Start() {
         if (collideWith == (collideWith | (1 << playerLayer)) ||
-            collideWith == (collideWith | (1 << playerLocalLayer))) {
+            collideWith == (collideWith | (1 << playerLocalLayer)) || collideTarget == 1) {
           shouldCollideWithPlayers = true;
         }
 
