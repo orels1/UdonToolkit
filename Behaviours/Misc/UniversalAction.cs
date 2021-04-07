@@ -24,6 +24,10 @@ namespace UdonToolkit {
     #region Animations
     [FoldoutGroup("Animations")] public bool fireAnimationTriggers;
 
+    [NonSerialized] public string[] animatorChangeModeOptions = new[] {
+      "SET", "ADD", "SUB"
+    };
+
     [FoldoutGroup("Animations")] [ListView("Animator Triggers List")]
     public Animator[] animators;
 
@@ -51,6 +55,10 @@ namespace UdonToolkit {
     [FoldoutGroup("Animations")] [ListView("Animator Floats List")] [LVHeader("Values")]
     public float[] animatorFloats;
     
+    [FoldoutGroup("Animations")] [ListView("Animator Floats List")] [LVHeader("Modes")]
+    [Popup("@animatorChangeModeOptions")]
+    public int[] animatorFloatsChangeModes;
+    
     [FoldoutGroup("Animations")] [ListView("Animator Ints List")] [LVHeader("Animators")]
     public Animator[] animatorIntTargets;
 
@@ -60,6 +68,10 @@ namespace UdonToolkit {
     
     [FoldoutGroup("Animations")] [ListView("Animator Ints List")] [LVHeader("Values")]
     public int[] animatorInts;
+    
+    [FoldoutGroup("Animations")] [ListView("Animator Ints List")] [LVHeader("Modes")]
+    [Popup("@animatorChangeModeOptions")]
+    public int[] animatorIntsChangeModes;
     #endregion
 
     #region Udon Events
@@ -213,14 +225,38 @@ namespace UdonToolkit {
     private void FireAnimationFloats() {
       if (!fireAnimationTriggers) return;
       for (int i = 0; i < animatorFloatTargets.Length; i++) {
-        animatorFloatTargets[i].SetFloat(animatorFloatNames[i], animatorFloats[i]);
+        switch (animatorFloatsChangeModes[i]) {
+          case 0:
+            animatorFloatTargets[i].SetFloat(animatorFloatNames[i], animatorFloats[i]);
+            break;
+          case 1: {
+            animatorFloatTargets[i].SetFloat(animatorFloatNames[i], animatorFloatTargets[i].GetFloat(animatorFloatNames[i]) + animatorFloats[i]);
+            break;
+          }
+          case 2:
+            animatorFloatTargets[i].SetFloat(animatorFloatNames[i],
+              animatorFloatTargets[i].GetFloat(animatorFloatNames[i]) - animatorFloats[i]);
+            break;
+        }
       }
     }
     
     private void FireAnimationInts() {
       if (!fireAnimationTriggers) return;
       for (int i = 0; i < animatorIntTargets.Length; i++) {
-        animatorIntTargets[i].SetInteger(animatorIntNames[i], animatorInts[i]);
+        switch (animatorIntsChangeModes[i]) {
+          case 0:
+            animatorIntTargets[i].SetInteger(animatorIntNames[i], animatorInts[i]);
+            break;
+          case 1: {
+            animatorIntTargets[i].SetInteger(animatorIntNames[i], animatorIntTargets[i].GetInteger(animatorIntNames[i]) + animatorInts[i]);
+            break;
+          }
+          case 2:
+            animatorIntTargets[i].SetInteger(animatorIntNames[i],
+              animatorIntTargets[i].GetInteger(animatorIntNames[i]) - animatorInts[i]);
+            break;
+        }
       }
     }
 
