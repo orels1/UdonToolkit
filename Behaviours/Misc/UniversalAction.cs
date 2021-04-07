@@ -225,6 +225,9 @@ namespace UdonToolkit {
     private void FireAnimationFloats() {
       if (!fireAnimationTriggers) return;
       for (int i = 0; i < animatorFloatTargets.Length; i++) {
+        if (animatorFloatsChangeModes.Length == 0) {
+          animatorFloatsChangeModes = new int[animatorFloatTargets.Length];
+        }
         switch (animatorFloatsChangeModes[i]) {
           case 0:
             animatorFloatTargets[i].SetFloat(animatorFloatNames[i], animatorFloats[i]);
@@ -244,6 +247,9 @@ namespace UdonToolkit {
     private void FireAnimationInts() {
       if (!fireAnimationTriggers) return;
       for (int i = 0; i < animatorIntTargets.Length; i++) {
+        if (animatorIntsChangeModes.Length == 0) {
+          animatorIntsChangeModes = new int[animatorIntTargets.Length];
+        }
         switch (animatorIntsChangeModes[i]) {
           case 0:
             animatorIntTargets[i].SetInteger(animatorIntNames[i], animatorInts[i]);
