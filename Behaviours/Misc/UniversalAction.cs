@@ -102,7 +102,7 @@ namespace UdonToolkit {
     [FoldoutGroup("Game Object Toggles")] [ListView("Game Objects List")] [LVHeader("Toggle Actions")] [Popup("method", "@goToggleOptions", true)]
     public string[] goToggleEvents;
 
-    [HideInInspector] public string[] goToggleOptions = {
+    [NonSerialized] public string[] goToggleOptions = {
       "Enable",
       "Disable",
       "Toggle"
