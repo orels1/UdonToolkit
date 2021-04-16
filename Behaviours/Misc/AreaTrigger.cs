@@ -187,6 +187,7 @@ namespace UdonToolkit {
       }
 
       public override void OnPlayerTriggerEnter(VRCPlayerApi player) {
+        if (!active) return;
         if (!collideWithLocalPlayers && !collideWithRemotePlayers && !shouldCollideWithPlayers) {
           return;
         }
@@ -219,6 +220,7 @@ namespace UdonToolkit {
       }
 
       public override void OnPlayerTriggerExit(VRCPlayerApi player) {
+        if (!active) return;
         if (!collideWithLocalPlayers && !collideWithRemotePlayers && !shouldCollideWithPlayers) {
           return;
         }
