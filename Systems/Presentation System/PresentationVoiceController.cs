@@ -48,6 +48,8 @@ namespace UdonToolkit {
     [HelpBox("If you want to boost the voice when the presenter starts the presentation - use this option")]
     public bool adjustOnPresentationStart;
 
+    [HideInInspector] public float personalSpeakerOffset = 1f;
+
     private VRCPlayerApi owner;
     private bool ownerLeft;
 
@@ -61,7 +63,8 @@ namespace UdonToolkit {
       ownerLeft = false;
       if (!adjustOnPresentationStart) return;
       owner = Networking.GetOwner(presentationPlayer.gameObject);
-      owner.SetVoiceGain(15 + gainAdjust + gainTweak);
+      owner.SetVoiceGain(15 + gainAdjust * personalSpeakerOffset + gainTweak);
+      owner.SetPlayerTag("isSpeaker", "true");
       owner.SetVoiceDistanceFar(25 + rangeBoost);
     }
 
@@ -70,6 +73,7 @@ namespace UdonToolkit {
       if (!adjustOnPresentationStart) return;
       owner = Networking.GetOwner(presentationPlayer.gameObject);
       owner.SetVoiceGain(15);
+      owner.SetPlayerTag("isSpeaker", "false");
       owner.SetVoiceDistanceFar(25);
     }
 
@@ -83,7 +87,7 @@ namespace UdonToolkit {
 
     public void EnterZone(VRCPlayerApi player) {
       if (!useZones) return;
-      player.SetVoiceGain(15 + gainAdjust + gainTweak);
+      player.SetVoiceGain(15 + gainAdjust * personalSpeakerOffset + gainTweak);
       player.SetVoiceDistanceFar(25 + rangeBoost);
     }
     

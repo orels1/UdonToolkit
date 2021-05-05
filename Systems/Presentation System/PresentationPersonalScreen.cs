@@ -25,7 +25,7 @@ namespace UdonToolkit {
 
     private bool isVR;
     private VRCPlayerApi player;
-    private bool shown;
+    [NonSerialized] public bool shown;
 
     private void Start() {
       player = Networking.LocalPlayer;

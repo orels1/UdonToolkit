@@ -167,7 +167,7 @@ namespace UdonToolkit {
 
     private void RunOffEvents() {
       for (int i = 0; i < onTargets.Length; i++) {
-        onTargets[i].SendCustomEvent(offEvents[i]);
+        offTargets[i].SendCustomEvent(offEvents[i]);
       }
     }
 
