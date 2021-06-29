@@ -157,6 +157,10 @@ namespace UdonToolkit {
         collidersIn = 0;
       }
 
+      private void OnDisable() {
+        collidersIn = 0;
+      }
+
       private bool shouldCollideWithPlayers;
       private bool shouldCollideWithLocals;
       private bool shouldCollideWithRemote;
@@ -191,6 +195,9 @@ namespace UdonToolkit {
         if (!collideWithLocalPlayers && !collideWithRemotePlayers && !shouldCollideWithPlayers) {
           return;
         }
+
+        if (player == null) return;
+        if (!Utilities.IsValid(player)) return;
         var isLocal = player.isLocal;
         if (isLocal && (collideWithLocalPlayers || shouldCollideWithLocals)) {
           if (collidersIn == 0) {
@@ -224,6 +231,8 @@ namespace UdonToolkit {
         if (!collideWithLocalPlayers && !collideWithRemotePlayers && !shouldCollideWithPlayers) {
           return;
         }
+        if (player == null) return;
+        if (!Utilities.IsValid(player)) return;
         var isLocal = player.isLocal;
         if (isLocal && (collideWithLocalPlayers || shouldCollideWithLocals)) {
           if (collidersIn == 1) {
@@ -287,6 +296,7 @@ namespace UdonToolkit {
       public void ResetOneShot() {
         used = false;
         active = true;
+        collidersIn = 0;
       }
       
       private void FireTriggers(string type) {

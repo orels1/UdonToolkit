@@ -14,7 +14,6 @@ namespace UdonToolkit {
   public static class UTUtils {
     public static BindingFlags flags = BindingFlags.GetField
                                | BindingFlags.GetProperty
-                               | BindingFlags.IgnoreCase
                                | BindingFlags.Instance
                                | BindingFlags.NonPublic
                                | BindingFlags.Public;
