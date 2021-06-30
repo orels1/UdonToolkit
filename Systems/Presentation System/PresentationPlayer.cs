@@ -220,7 +220,7 @@ namespace UdonToolkit {
       }
     }
 
-    public override void OnOwnershipTransferred() {
+    public override void OnOwnershipTransferred(VRCPlayerApi player) {
       isOwner = Networking.IsOwner(gameObject);
       if (!isOwner) {
         FireCallbacks(lostControlTargets, lostControlEvents, lostControlNetworkTargets);

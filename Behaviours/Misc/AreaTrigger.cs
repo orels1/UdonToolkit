@@ -182,6 +182,7 @@ namespace UdonToolkit {
 
       private void OnTriggerEnter(Collider other) {
         if (!active) return;
+        if (other == null) return;
         if (collideWith == (collideWith | (1 << other.gameObject.layer))) {
           if (collidersIn == 0) {
             FireTriggers("enter");
@@ -195,7 +196,6 @@ namespace UdonToolkit {
         if (!collideWithLocalPlayers && !collideWithRemotePlayers && !shouldCollideWithPlayers) {
           return;
         }
-
         if (player == null) return;
         if (!Utilities.IsValid(player)) return;
         var isLocal = player.isLocal;
@@ -218,6 +218,7 @@ namespace UdonToolkit {
 
       private void OnTriggerExit(Collider other) {
         if (!active) return;
+        if (other == null) return;
         if (collideWith == (collideWith | (1 << other.gameObject.layer))) {
           if (collidersIn == 1) {
             FireTriggers("exit");
@@ -285,7 +286,7 @@ namespace UdonToolkit {
         isOwner = true;
       }
       
-      public override void OnOwnershipTransferred() {
+      public override void OnOwnershipTransferred(VRCPlayerApi player) {
         isOwner = Networking.IsOwner(gameObject);
       }
 

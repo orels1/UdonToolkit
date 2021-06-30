@@ -66,7 +66,7 @@ namespace UdonToolkit {
       isOwner = Networking.IsOwner(gameObject);
     }
 
-    public override void OnOwnershipTransferred() {
+    public override void OnOwnershipTransferred(VRCPlayerApi player) {
       isOwner = Networking.IsOwner(gameObject);
     }
 
