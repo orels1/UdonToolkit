@@ -9,6 +9,7 @@ using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
+  [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
   [CustomName("Synced Trigger")]
   [HelpMessage("This behaviour will fire ON triggers or OFF triggers when the synced value changes. Meaning it will be synced for late joiners")]
   public class SyncedTrigger : UdonSharpBehaviour {
@@ -50,7 +51,7 @@ namespace UdonToolkit {
     [OnValueChanged("SelectAccessLevel")]
     public bool ownerOnly;
 
-    [HelpBox("If any names are listed - only those users will be allowed to fire events, as well as the Master/Owner based on the options above")]
+    [HelpBox("If any names are listed - only those users will be allowed to change the synced value, as well as the Master/Owner based on the options above")]
     public string[] allowedUsers;
 
     [ListView("ON Events")] public UdonSharpBehaviour[] onTargets;
@@ -133,6 +134,9 @@ namespace UdonToolkit {
       }
 
       localSyncedValue = syncedValue;
+      if (isOwner) {
+        RequestSerialization();
+      }
       if (syncedValue) {
         RunOnEvents();
         return;
