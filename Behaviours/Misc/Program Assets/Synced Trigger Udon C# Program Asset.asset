@@ -17,7 +17,7 @@ MonoBehaviour:
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 33908dabc9dcd0649850de98d7a6aeb6, type: 3}
-  behaviourSyncMode: 0
+  behaviourSyncMode: 3
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
   hasInteractEvent: 1
@@ -446,8 +446,8 @@ MonoBehaviour:
       Data: 31|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
-      Data: If any names are listed - only those users will be allowed to fire events,
-        as well as the Master/Owner based on the options above
+      Data: If any names are listed - only those users will be allowed to change the
+        synced value, as well as the Master/Owner based on the options above
     - Name: methodName
       Entry: 1
       Data: 
