@@ -156,8 +156,7 @@ namespace UdonToolkit {
     public void Trigger() {
       if (!active) return;
       if (fireAfterDelay) {
-        delayExpire = Time.time + delayLength;
-        delayActive = true;
+        SendCustomEventDelayedSeconds(nameof(_FireTrigger), delayLength);
         return;
       }
       
@@ -181,31 +180,27 @@ namespace UdonToolkit {
       FireAudioEvents();
     }
 
-    public void Update() {
+    public void _FireTrigger() {
       if (!active) return;
-      if (!delayActive) return;
-      if (Time.time >= delayExpire) {
-        
-        if (oneShot) {
-          if (used) {
-            return;
-          }
-
-          active = false;
-          used = true;
-          enabled = false;
+      if (!gameObject.activeSelf) return;
+      if (oneShot) {
+        if (used) {
+          return;
         }
-        
-        FireAnimationTriggers();
-        FireAnimationBools();
-        FireAnimationFloats();
-        FireAnimationInts();
-        FireUdonEvents();
-        FireObjectToggles();
-        FireColliderToggles();
-        FireAudioEvents();
-        delayActive = false;
+
+        active = false;
+        used = true;
+        enabled = false;
       }
+
+      FireAnimationTriggers();
+      FireAnimationBools();
+      FireAnimationFloats();
+      FireAnimationInts();
+      FireUdonEvents();
+      FireObjectToggles();
+      FireColliderToggles();
+      FireAudioEvents();
     }
 
     private void FireAnimationTriggers() {
