@@ -29,7 +29,7 @@ Material:
     - _JumpScale: 0.2
     - _Metallic: 1
     - _SceneStart: 0
-    - _Smoothness: 0.6
+    - _Smoothness: 0.086
     - __dirty: 0
     m_Colors:
     - _Albedo: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0}
