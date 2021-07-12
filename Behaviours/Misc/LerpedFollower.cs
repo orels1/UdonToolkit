@@ -8,7 +8,8 @@ namespace UdonToolkit {
   [CustomName("Lerped Follower")]
   [HelpMessage("This component makes the Target Transform follow the Source Transform with linear interpolation. " +
                "Use this to make an object smoothly follow your target.")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#lerped-follower")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#lerped-follower")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class LerpedFollower : UdonSharpBehaviour {
     [SectionHeader("General")] 
     public Transform sourceTransform;

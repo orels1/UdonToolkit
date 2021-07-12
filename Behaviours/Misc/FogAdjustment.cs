@@ -7,7 +7,8 @@ using VRC.Udon;
 
 namespace UdonToolkit {
   [CustomName("Fog Adjustment")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#fog-adjustment")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#fog-adjustment")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class FogAdjustment : UdonSharpBehaviour {
     public bool isLinearFog;
     [SectionHeader("Default State")]

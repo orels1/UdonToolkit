@@ -6,9 +6,10 @@ using VRC.Udon;
 
 namespace UdonToolkit {
   [CustomName("Platform Trigger")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#platform-trigger")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#platform-trigger")]
   [HelpMessage(
     "This behaviour will send specified events on the Start of the world based on the current user platform")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class PlatformTrigger : UdonSharpBehaviour {
     public bool fireOnStart = true;
     [ListView("Desktop Events")] public UdonSharpBehaviour[] desktopTargets;

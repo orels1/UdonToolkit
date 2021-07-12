@@ -10,7 +10,8 @@ namespace UdonToolkit {
     [OnBeforeEditor("CheckCollisionTab")]
     [CustomName("Area Trigger")]
     [HelpMessage("It is recommended to put Area Triggers on a MirrorReflection layer unless they need a custom layer.")]
-    [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#area-trigger")]
+    [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#area-trigger")]
+    [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
     public class AreaTrigger : UdonSharpBehaviour {
       [SectionHeader("General")]
       [HelpBox("This behaviour requires a trigger collider to be attached to the object", "CheckCollider")]

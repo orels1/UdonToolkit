@@ -10,7 +10,8 @@ namespace UdonToolkit {
   [HelpMessage("This component tracks if objects cross ALL or ANY of the boundaries specified, " +
                "useful for checking if something is above / below a global threshold.\n" +
                "This will fire once and disable itself, send an \"Enable\" event to this component to re-enable the check")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#object-boundary-trigger")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#object-boundary-trigger")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class ObjectBoundaryTrigger : UdonSharpBehaviour {
     [SectionHeader("General")] public bool active = true;
     public Transform target;

@@ -9,7 +9,8 @@ namespace UdonToolkit {
   [CustomName("Shader Feeder")]
   [HelpMessage(
     "This is an advanced behaviour, its highly recommended to check out the docs by clicking the blue manual icon in the corner above. This behaviour might not play nicely with animations that touch materials")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#shader-feeder")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#shader-feeder")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class ShaderFeeder : UdonSharpBehaviour {
     [SectionHeader("General")] public bool active = true;
     public Shader source;

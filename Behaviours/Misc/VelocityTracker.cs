@@ -9,6 +9,8 @@ using VRC.Udon;
 namespace UdonToolkit {
   [CustomName("Velocity Tracker")]
   [HelpMessage("Uses physics-based tracking to allow for proper collision and acceleration between bodies. For best results - use with Continuous Speculative collision.")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#velocity-tracker")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class VelocityTracker : UdonSharpBehaviour {
     [HideInInspector]
     public int trackingType;

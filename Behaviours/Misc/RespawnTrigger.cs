@@ -7,6 +7,8 @@ using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
   [CustomName("Respawn Trigger")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#respawn-trigger")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class RespawnTrigger : UdonSharpBehaviour {
     [SectionHeader("General")]
     public bool active = true;

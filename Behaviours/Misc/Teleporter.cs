@@ -5,7 +5,10 @@ using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
-  [CustomName("Teleporter")][HelpMessage("This behaviour will teleport the player or an object when a Trigger event is received")]
+  [CustomName("Teleporter")]
+  [HelpMessage("This behaviour will teleport the player or an object when a Trigger event is received")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#teleporter")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class Teleporter : UdonSharpBehaviour {
     [HideInInspector] public int teleportType;
 

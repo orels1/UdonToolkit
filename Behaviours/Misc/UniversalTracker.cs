@@ -8,7 +8,8 @@ namespace UdonToolkit {
   [HelpMessage(
     "This component will take the specified Bone or Tracking Target and copy its position/rotation to the specified Target Transform. " +
     "You can attach all sorts of objects to the player in that way.")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#universal-tracker")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#universal-tracker")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class UniversalTracker : UdonSharpBehaviour {
     [SectionHeader("Tracking Target")] public Transform targetTransform;
     public bool trackBone;

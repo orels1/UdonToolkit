@@ -43,14 +43,14 @@ namespace UdonToolkit {
 
     public static void ShowWindow() {
       var window = (UTStartup) GetWindow(typeof(UTStartup), true, "Welcome to UdonToolkit");
-      window.minSize = new Vector2( 650, 160 );
-      window.maxSize = new Vector2( 650, 160 );
+      window.minSize = new Vector2( 256, 370 );
+      window.maxSize = new Vector2( 250, 370 );
       window.Show();
     }
 
     private GUIStyle labelStyle = null;
     private static string DiscordURL = "https://discord.com/invite/fR869XP";
-    private static string WikiURL = "https://ut.orels.sh";
+    private static string WikiURL = "https://ut.orels.sh/v/v1.x/";
     private static string GithubURL = "https://github.com/orels1/UdonToolkit";
     private static string PatreonURL = "https://www.patreon.com/orels1";
 
@@ -63,13 +63,14 @@ namespace UdonToolkit {
 
       EditorGUILayout.BeginVertical();
       EditorGUILayout.LabelField("Welcome to UdonToolkit!", labelStyle);
-      GUILayout.Label(@"Udon Toolkit is a project aimed at simplifying usage of Udon by providing a set of easy to use purpose-built behaviours, from generic triggers and actions, to more complete systems like Key Items, Cabinet Drawers, etc.
+      GUILayout.Label(@"Udon Toolkit is built to serve as a foundation for your next Udon-based world. It contains a lot of useful behaviours from Area Triggers, to Player Teleporters and Followers.
 
-This also includes a system of attributes that allow you to utilize the same UI elements when building your own behaviours!
+Also included are various fully-featured systems, like a Camera System that adds an enhanced camera functionality to your world. 
+
+The last part of the Udon Toolkit is an expansive attributes system that allows you to create complex UI for your behaviours the same way Udon Toolkit does.
 
 If you find that something is broken or works not as you would expect - please ping me in the discord server, or better - create an issue on github.", "WordWrappedMiniLabel", GUILayout.ExpandWidth(true));
       GUILayout.Space(10);
-      EditorGUILayout.BeginHorizontal();
       if (GUILayout.Button("Documentation", GUILayout.ExpandWidth(true))) {
         Application.OpenURL(WikiURL);
       }
@@ -82,7 +83,6 @@ If you find that something is broken or works not as you would expect - please p
       if (GUILayout.Button("Support UdonToolkit", GUILayout.ExpandWidth(true))) {
         Application.OpenURL(PatreonURL);
       }
-      EditorGUILayout.EndHorizontal();
       GUILayout.Space(2);
       UTStyles.RenderNote("This will only show once, you can open it again via Window / UdonToolkit / Show Startup Screen");
       EditorGUILayout.EndVertical();

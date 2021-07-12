@@ -9,7 +9,8 @@ using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
   [CustomName("Interact Trigger")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#interact-trigger")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#interact-trigger")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
     public class InteractTrigger : UdonSharpBehaviour {
       [SectionHeader("General")]
       public bool active = true;

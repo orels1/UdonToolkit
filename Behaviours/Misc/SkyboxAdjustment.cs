@@ -9,7 +9,8 @@ namespace UdonToolkit {
   [CustomName("Skybox Adjustment")]
   [HelpMessage(
     "This component expects a \"Trigger\" event to transition between current and active skybox material values. You can  ")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#skybox-adjustment")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#skybox-adjustment")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class SkyboxAdjustment : UdonSharpBehaviour {
     [SectionHeader("Active State")] public Material activeSkybox;
 
@@ -30,7 +31,7 @@ namespace UdonToolkit {
 
     [OnValueChanged("ToggleSelf")] [SectionHeader("Transition")]
     public bool instantTransition = true;
-    
+
     [HelpBox("Transition time cannot be negative", "CheckValidTransition")]
     public float transitionTime;
 
@@ -69,17 +70,17 @@ namespace UdonToolkit {
       eColorVals = activeColorValues;
       eVectorNames = activeVector3Names;
       eVectorVals = activeVector3Values;
-      
+
       sFloatVals = new float[eFloatVals.Length];
       for (int i = 0; i < eFloatNames.Length; i++) {
         sFloatVals[i] = activeSkybox.GetFloat(eFloatNames[i]);
       }
-      
+
       sColorVals = new Color[eColorVals.Length];
       for (int i = 0; i < eColorNames.Length; i++) {
         sColorVals[i] = activeSkybox.GetColor(eColorNames[i]);
       }
-      
+
       sVectorVals = new Vector3[eVectorVals.Length];
       for (int i = 0; i < eVectorNames.Length; i++) {
         sVectorVals[i] = activeSkybox.GetVector(eVectorNames[i]);

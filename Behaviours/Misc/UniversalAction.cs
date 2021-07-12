@@ -9,7 +9,8 @@ namespace UdonToolkit {
   [CustomName("Universal Action")]
   [HelpMessage(
     "This component expects a \"Trigger\" event to fire.")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#universal-action")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#universal-action")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class UniversalAction : UdonSharpBehaviour {
     [SectionHeader("General")]
     public bool active = true;

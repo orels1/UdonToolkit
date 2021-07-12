@@ -9,9 +9,10 @@ using VRC.Udon;
 using VRC.Udon.Common.Interfaces;
 
 namespace UdonToolkit {
-  [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
   [CustomName("Synced Trigger")]
   [HelpMessage("This behaviour will fire ON triggers or OFF triggers when the synced value changes. Meaning it will be synced for late joiners")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#synced-trigger")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
   public class SyncedTrigger : UdonSharpBehaviour {
     [SectionHeader("General")] [HelpBox("You can set the initial state here")] [UdonSynced]
     public bool syncedValue;

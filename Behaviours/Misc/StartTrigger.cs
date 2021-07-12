@@ -9,6 +9,7 @@ using VRC.Udon.Common.Interfaces;
 
 [CustomName("Start Trigger")]
 [HelpMessage("You can also send a \"Trigger\" event to this behaviour to fire all the triggers again")]
+[UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
 public class StartTrigger : UdonSharpBehaviour {
   [SectionHeader("General")]
   public bool active = true;

@@ -296,6 +296,15 @@ namespace UdonToolkit {
       layerProp.stringValue = name;
       tagManager.ApplyModifiedProperties();
     }
+    
+    public static string[] GetLayerNames() {
+      var layerList = new List<string>();
+      for (int i = 0; i < 31; i++) {
+        layerList.Add(LayerMask.LayerToName(i));
+      }
+
+      return layerList.ToArray();
+    }  
 
     private static Dictionary<PopupAttribute.ShaderPropType, List<ShaderUtil.ShaderPropertyType>> propTypeMapping =
       new Dictionary<PopupAttribute.ShaderPropType, List<ShaderUtil.ShaderPropertyType>> {

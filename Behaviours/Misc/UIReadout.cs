@@ -14,7 +14,8 @@ using UnityEditor;
 
 namespace UdonToolkit {
   [CustomName("UI Readout")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#ui-readout")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#ui-readout")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class UIReadout : UdonSharpBehaviour {
     [SectionHeader("General")] 
     public bool active;

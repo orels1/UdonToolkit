@@ -9,7 +9,8 @@ namespace UdonToolkit {
   [CustomName("Networked Trigger")]
   [HelpMessage(
     "This component waits for a \"Trigger\" custom event, e.g. from a UI Button, and calls a network event on all the provided behaviours.")]
-  [HelpURL("https://ut.orels.sh/behaviours/misc-behaviours#networked-trigger")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#networked-trigger")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
     public class NetworkedTrigger : UdonSharpBehaviour {
       [SectionHeader("General")] 
       public bool active = true;

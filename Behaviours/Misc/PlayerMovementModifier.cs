@@ -10,6 +10,8 @@ namespace UdonToolkit {
                "SET: sets the parameter to the provided value\n" +
                "ADD: adds the provided value to the current\n" +
                "SUBTRACT: subtracts the provided value from the current")]
+  [HelpURL("https://ut.orels.sh/v/v1.x/behaviours/misc-behaviours#player-movement-modifier")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
   public class PlayerMovementModifier : UdonSharpBehaviour {
     [Horizontal("Jump Impulse", true)][Popup("method", "@changeTypes", true)]
     public int jumpImpulseChangeType;
