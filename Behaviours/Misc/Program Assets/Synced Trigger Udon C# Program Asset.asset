@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Synced Trigger Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 88968e75931cfc9478ba79a6e71a1e59,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 4ffc55469d194c54f88862ca861ec0bf,
     type: 2}
   udonAssembly: 
   assemblyError: 
@@ -446,8 +446,8 @@ MonoBehaviour:
       Data: 31|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
-      Data: If any names are listed - only those users will be allowed to change the
-        synced value, as well as the Master/Owner based on the options above
+      Data: If any names are listed - only those users will be allowed to change
+        the synced value, as well as the Master/Owner based on the options above
     - Name: methodName
       Entry: 1
       Data: 

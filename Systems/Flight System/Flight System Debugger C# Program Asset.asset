@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Flight System Debugger C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 81e0b828b0f51d540bf0e91a349af3ca,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 5730867f237aa2344b856fc21ce90b6e,
     type: 2}
   udonAssembly: 
   assemblyError: 
