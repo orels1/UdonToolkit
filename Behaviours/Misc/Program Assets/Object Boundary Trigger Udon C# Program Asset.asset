@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Object Boundary Trigger Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 9e0197fec4852ed4e852506bbe4b7edb,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: e3ac938549bc78540b207e9a868f6b8b,
     type: 2}
   udonAssembly: 
   assemblyError: 
@@ -229,8 +229,9 @@ MonoBehaviour:
       Data: 'Enabling cross mode will make the trigger run every time the setup conditions
         are met or not met anymore.
 
-        This is useful if you want to toggle something when the target object goes
-        below some Y position and agan - when it comes back'
+        This is useful if you want to toggle
+        something when the target object goes below some Y position and agan - when
+        it comes back'
     - Name: methodName
       Entry: 1
       Data: 
