@@ -1,5 +1,31 @@
 # Changelog
 
+## [v1.1.0](https://github.com/orels1/UdonToolkit/tree/v1.1.0) (2021-08-05)
+
+UdonToolkit was already compatible with 2019, but some shaders would throw a warning, so I fixed it in this release
+
+# DO NOT USE THIS ON UNITY 2018
+
+If you are still on 2018 - [use the older version](https://github.com/orels1/UdonToolkit/releases/tag/v1.0.0)
+
+## Upgrade Udon Sharp and VRCSDK to latest 2019 before installing
+
+You can grab [VRCSDK here](https://vrchat.com/home/download) and [UdonSharp here](https://github.com/MerlinVR/UdonSharp/releases/tag/v0.20.2)
+
+Here's how Toolkit looks in 2019. I am working on further UI updates to make inspectors even better! But for now you can continue using the UI you are used to
+
+![image](https://user-images.githubusercontent.com/3798928/128309680-4cb83b83-3be7-4541-a1a7-a17fde82499d.png)
+
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v1.0.0...v1.1.0)
+
+**Implemented enhancements:**
+
+- Add Source Types to ShaderFeeder [\#16](https://github.com/orels1/UdonToolkit/issues/16)
+
+**Closed issues:**
+
+- Add And document the Presentation System [\#66](https://github.com/orels1/UdonToolkit/issues/66)
+
 ## [v1.0.0](https://github.com/orels1/UdonToolkit/tree/v1.0.0) (2021-07-12)
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.5.0...v1.0.0)
@@ -41,7 +67,6 @@ This has been **a long time coming**, it was tested by many people during the pa
 - Support 3-4 elements in list view [\#20](https://github.com/orels1/UdonToolkit/issues/20)
 - Refactor colors into a separate singleton [\#14](https://github.com/orels1/UdonToolkit/issues/14)
 - Add support for boolean animator parameter to Universal Action [\#13](https://github.com/orels1/UdonToolkit/issues/13)
-- Add Source Types to ShaderFeeder [\#16](https://github.com/orels1/UdonToolkit/issues/16)
 
 **Fixed bugs:**
 
@@ -65,7 +90,6 @@ This has been **a long time coming**, it was tested by many people during the pa
 - Move ListView attribute to the Modifier type [\#50](https://github.com/orels1/UdonToolkit/issues/50)
 - Scene Start Trigger Behaviour [\#22](https://github.com/orels1/UdonToolkit/issues/22)
 - Add basic guides [\#15](https://github.com/orels1/UdonToolkit/issues/15)
-- Add And document the Presentation System [\#66](https://github.com/orels1/UdonToolkit/issues/66)
 
 ## [v0.5.0](https://github.com/orels1/UdonToolkit/tree/v0.5.0) (2021-01-11)
 
