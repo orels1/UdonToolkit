@@ -1,6 +1,14 @@
 # Changelog
 
-## [v1.1.0](https://github.com/orels1/UdonToolkit/tree/v1.1.0) (2021-08-05)
+## [v1.1.1](https://github.com/orels1/UdonToolkit/tree/HEAD)
+
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v1.1.1...HEAD)
+
+Added package json
+
+## [v1.1.0](https://github.com/orels1/UdonToolkit/tree/v1.1.1) (2021-08-19)
+
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v1.1.0...v1.1.1)
 
 UdonToolkit was already compatible with 2019, but some shaders would throw a warning, so I fixed it in this release
 
@@ -15,6 +23,9 @@ You can grab [VRCSDK here](https://vrchat.com/home/download) and [UdonSharp here
 Here's how Toolkit looks in 2019. I am working on further UI updates to make inspectors even better! But for now you can continue using the UI you are used to
 
 ![image](https://user-images.githubusercontent.com/3798928/128309680-4cb83b83-3be7-4541-a1a7-a17fde82499d.png)
+
+
+## [v1.0.1](https://github.com/orels1/UdonToolkit/tree/v1.1.0) (2021-08-05)
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v1.0.0...v1.1.0)
 
