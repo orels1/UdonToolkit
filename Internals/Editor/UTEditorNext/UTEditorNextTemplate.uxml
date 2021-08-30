@@ -1,0 +1,21 @@
+<UXML xmlns="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <VisualElement class="col" name="container">
+        <VisualElement class="col">
+            <Button text="Udon Settings" name="uSharpHeaderToggle" class="button" />
+            <IMGUIContainer name="uSharpHeader" class="uSharpHeaderContainer"/>
+        </VisualElement>
+        <VisualElement name="toolkitHeader" class="componentHeader">
+            <VisualElement class="componentHeader__nameArea">
+                <Label name="toolkitClassName" />
+            </VisualElement>
+            <VisualElement class="toolkitHelpButton">
+                <Label text="UT" class="toolkitHelpButton_utLogo" />
+                <Button text="?" name="toolkitHelpButton">
+                    <VisualElement class="toolkitHelpButton__overlay" />
+                </Button>
+            </VisualElement>
+        </VisualElement>
+        <VisualElement class="col" name="fields">
+        </VisualElement>
+    </VisualElement>
+</UXML>

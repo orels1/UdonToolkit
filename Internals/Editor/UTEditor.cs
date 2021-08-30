@@ -239,7 +239,7 @@ namespace UdonToolkit {
 
     #region Behaviour Handling
     
-    private struct UTBehaviourInfo {
+    internal struct UTBehaviourInfo {
       public string name;
       public string customName;
       public string helpUrl;
@@ -344,7 +344,7 @@ namespace UdonToolkit {
       }
     }
 
-    private enum UTFieldType {
+    internal enum UTFieldType {
       Regular,
       Array,
       ListView,
@@ -359,6 +359,7 @@ namespace UdonToolkit {
       public FieldInfo fieldInfo;
       public List<Attribute> attributes;
       public List<UTPropertyAttribute> uiAttrs;
+      public List<UTPropertyAttribute> visibilityAttrs; // visibility attrs are separated as they need to be polled
       public MethodInfo onValueChaged;
       public bool isValueChangeAtomic;
       public bool isValueChangedFull;
@@ -388,6 +389,7 @@ namespace UdonToolkit {
           ? field.GetCustomAttributes(typeof(Attribute), true).Select(i => i as Attribute).ToList()
           : new List<Attribute>();
         uiAttrs = attributes.OfType<UTPropertyAttribute>().ToList();
+        visibilityAttrs = uiAttrs.Where(i => i.GetType().GetMethod("GetVisible")?.DeclaringType == i.GetType()).ToList();
         isArray = prop.isArray && prop.type != "string" && prop.type != "String";
         var lVAttr = attributes.Find(i => i.GetType() == typeof(ListViewAttribute)) as ListViewAttribute;
         isInListView = lVAttr != null;

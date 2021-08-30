@@ -5,6 +5,7 @@ using System.Linq;
 using UdonSharp;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace UdonToolkit{
   /// <summary>
@@ -14,11 +15,19 @@ namespace UdonToolkit{
   public class UTPropertyAttribute: Attribute {
     public virtual void BeforeGUI(SerializedProperty property) {
     }
+
+    public virtual VisualElement CreateBeforeGUI(SerializedProperty property) {
+      return new VisualElement();
+    }
     
     public virtual void OnGUI(SerializedProperty property) {
     }
 
     public virtual void AfterGUI(SerializedProperty property) {
+    }
+    
+    public virtual VisualElement CreateAfterGUI(SerializedProperty property) {
+      return new VisualElement();
     }
 
     public virtual bool GetVisible(SerializedProperty property) {
@@ -46,8 +55,10 @@ namespace UdonToolkit{
       this.text = text;
     }
 
-    public override void BeforeGUI(SerializedProperty property) {
-      UTStyles.RenderSectionHeader(text);
+    public override VisualElement CreateBeforeGUI(SerializedProperty property) {
+      var header = new Label(text);
+      header.AddToClassList("header");
+      return header;
     }
   }
 
@@ -213,7 +224,17 @@ namespace UdonToolkit{
       }
 
       if (!isVisible) return;
-      UTStyles.RenderNote(text);
+      // UTStyles.RenderNote(text);
+    }
+
+    public override VisualElement CreateAfterGUI(SerializedProperty property) {
+      var helpBoxContainer = new VisualElement();
+      helpBoxContainer.AddToClassList("helpBox");
+      var helpBoxText = new TextElement();
+      helpBoxText.AddToClassList("helpBoxText");
+      helpBoxText.text = text;
+      helpBoxContainer.Add(helpBoxText);
+      return helpBoxContainer;
     }
   }
 
