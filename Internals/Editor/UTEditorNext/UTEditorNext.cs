@@ -84,7 +84,7 @@ namespace UdonToolkit {
         }
       }
       else {
-        toolkitClass.AddToClassList("hidden");
+        rootElement.Q("toolkitHeader").AddToClassList("hidden");
       }
         
       HandleFields(fieldOrder, ref c);

@@ -65,6 +65,10 @@
     justify-content: space-between;
 }
 
+.componentHeader.hidden {
+    display: none;
+}
+
 .componentHeader__nameArea {
     padding: 4px 6px;
     height: 100%;
