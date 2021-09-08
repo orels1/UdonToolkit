@@ -1,15 +1,22 @@
 # Changelog
 
-## [v1.1.1](https://github.com/orels1/UdonToolkit/tree/HEAD)
+## [v1.1.2](https://github.com/orels1/UdonToolkit/tree/v1.1.2) (2021-09-08)
 
-[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v1.1.1...HEAD)
+[Full Changelog](https://github.com/orels1/UdonToolkit/compare/v1.1.1...v1.1.2)
 
-Added package json
+Added internal composite colliders check
 
-## [v1.1.0](https://github.com/orels1/UdonToolkit/tree/v1.1.1) (2021-08-19)
+- Added a `collidersIn` Clamp to the exit events (thx Lakuza)
+
+**Implemented enhancements:**
+
+- Add composite collider check to Area Trigger [\#87](https://github.com/orels1/UdonToolkit/issues/87)
+
+## [v1.1.1](https://github.com/orels1/UdonToolkit/tree/v1.1.1) (2021-08-19)
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v1.1.0...v1.1.1)
 
+Added package json
 UdonToolkit was already compatible with 2019, but some shaders would throw a warning, so I fixed it in this release
 
 # DO NOT USE THIS ON UNITY 2018
@@ -25,7 +32,7 @@ Here's how Toolkit looks in 2019. I am working on further UI updates to make ins
 ![image](https://user-images.githubusercontent.com/3798928/128309680-4cb83b83-3be7-4541-a1a7-a17fde82499d.png)
 
 
-## [v1.0.1](https://github.com/orels1/UdonToolkit/tree/v1.1.0) (2021-08-05)
+## [v1.1.0](https://github.com/orels1/UdonToolkit/tree/v1.1.0) (2021-08-05)
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v1.0.0...v1.1.0)
 
