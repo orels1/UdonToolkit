@@ -7,8 +7,6 @@
 Added internal composite colliders check
 
 - Added a `collidersIn` Clamp to the exit events (thx Lakuza)
-- Fixed Player collision in Area Trigger
-- Added backwards compat for old code
 
 **Implemented enhancements:**
 
@@ -141,6 +139,8 @@ I introduced a bug in `0.4.5` that caused a project build to crash if you had de
 
 [Full Changelog](https://github.com/orels1/UdonToolkit/compare/v0.4.4...v0.4.5)
 
+- Fixed Player collision in Area Trigger
+- Added backwards compat for old code
 Drag & Drop is now implemented as a part of array rendering. You can now drag a bunch of game objects and the proper components will be picked up and put into the relevant fields of your arrays and ListViews.
 
 For List Views it will try to look for the components specified in list view types to populate either or both of the fields.
