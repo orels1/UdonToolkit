@@ -142,6 +142,7 @@ namespace UdonToolkit {
       
       private bool isOwner;
       private bool used;
+      private bool isComposite;
       
       public void Activate() {
         active = true;
@@ -179,12 +180,21 @@ namespace UdonToolkit {
         if (collideWith == (collideWith | (1 << playerLocalLayer))) {
           shouldCollideWithLocals = true;
         }
+
+        var colliders = GetComponents<Collider>();
+        if (colliders != null && colliders.Length > 1) {
+          isComposite = true;
+        }
       }
 
       private void OnTriggerEnter(Collider other) {
         if (!active) return;
         if (other == null) return;
         if (collideWith == (collideWith | (1 << other.gameObject.layer))) {
+          if (!isComposite) {
+            FireTriggers("enter");
+            return;
+          }
           if (collidersIn == 0) {
             FireTriggers("enter");
           }
@@ -201,6 +211,10 @@ namespace UdonToolkit {
         if (!Utilities.IsValid(player)) return;
         var isLocal = player.isLocal;
         if (isLocal && (collideWithLocalPlayers || shouldCollideWithLocals)) {
+          if (!isComposite) {
+            FireTriggers("enter");
+            return;
+          }
           if (collidersIn == 0) {
             FireTriggers("enter");
             collidersIn++;
@@ -209,10 +223,13 @@ namespace UdonToolkit {
         }
 
         if (!isLocal && (collideWithRemotePlayers || shouldCollideWithRemote)) {
+          if (!isComposite) {
+            FireTriggers("enter");
+            return;
+          }
           if (collidersIn == 0) {
             FireTriggers("enter");
             collidersIn++;
-            return;
           }
         }
       }
@@ -221,10 +238,14 @@ namespace UdonToolkit {
         if (!active) return;
         if (other == null) return;
         if (collideWith == (collideWith | (1 << other.gameObject.layer))) {
+          if (!isComposite) {
+            FireTriggers("exit");
+            return;
+          }
           if (collidersIn == 1) {
             FireTriggers("exit");
           }
-          collidersIn--;
+          collidersIn = Mathf.Max(0, collidersIn - 1);
         }
       }
 
@@ -237,18 +258,25 @@ namespace UdonToolkit {
         if (!Utilities.IsValid(player)) return;
         var isLocal = player.isLocal;
         if (isLocal && (collideWithLocalPlayers || shouldCollideWithLocals)) {
+          if (!isComposite) {
+            FireTriggers("exit");
+            return;
+          }
           if (collidersIn == 1) {
             FireTriggers("exit");
-            collidersIn--;
+            collidersIn = Mathf.Max(0, collidersIn - 1);
             return;
           }
         }
 
         if (!isLocal && (collideWithRemotePlayers || shouldCollideWithRemote)) {
+          if (!isComposite) {
+            FireTriggers("exit");
+            return;
+          }
           if (collidersIn == 1) {
             FireTriggers("exit");
-            collidersIn--;
-            return;
+            collidersIn = Mathf.Max(0, collidersIn - 1);
           }
         }
       }
