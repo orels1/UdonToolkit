@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UdonSharp;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -21,6 +22,10 @@ namespace UdonToolkit{
     }
     
     public virtual void OnGUI(SerializedProperty property) {
+    }
+
+    public virtual VisualElement CreateGUI(SerializedProperty property, PropertyField baseField, Action handleChange) {
+      return new VisualElement();
     }
 
     public virtual void AfterGUI(SerializedProperty property) {
@@ -79,15 +84,29 @@ namespace UdonToolkit{
     public ToggleAttribute(string text) {
       label = text;
     }
-
-    public override void OnGUI(SerializedProperty property) {
+    
+    public override VisualElement CreateGUI(SerializedProperty property, PropertyField baseField, Action handleChange) {
       var text = String.IsNullOrWhiteSpace(label) ? property.displayName : label;
       if (property.type != "bool") {
-        EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
-        return;
+        return baseField;
       }
-      
-      property.boolValue = GUILayout.Toggle(property.boolValue, text, "Button");
+
+      var toggle = new Button {
+        text = text
+      };
+      toggle.AddToClassList("button");
+      if (property.boolValue) {
+        toggle.AddToClassList("active");
+      }
+      baseField.RegisterCallback<ChangeEvent<bool>>(evt => {
+        toggle.EnableInClassList("active", evt.newValue);
+      });
+      toggle.clicked += () => {
+        var prop = property.serializedObject.FindProperty(property.name);
+        prop.boolValue = !prop.boolValue;
+        handleChange();
+      };
+      return toggle;
     }
   }
 
@@ -243,7 +262,7 @@ namespace UdonToolkit{
   /// </summary>
   public class HorizontalAttribute : UTPropertyAttribute {
     public readonly string name;
-    public readonly bool showHeader;
+    public readonly bool hideHeader;
 
     /// <summary>
     /// Combines fields into a horizontal group
@@ -257,10 +276,10 @@ namespace UdonToolkit{
     /// Combines fields into a horizontal group
     /// </summary>
     /// <param name="name">Name of the group (must be unique)</param>
-    /// <param name="showHeader">Whether to show the header with the name of the group</param>
-    public HorizontalAttribute(string name, bool showHeader) {
+    /// <param name="hideHeader">Whether to show the header with the name of the group</param>
+    public HorizontalAttribute(string name, bool hideHeader) {
       this.name = name;
-      this.showHeader = showHeader;
+      this.hideHeader = hideHeader;
     }
   }
 

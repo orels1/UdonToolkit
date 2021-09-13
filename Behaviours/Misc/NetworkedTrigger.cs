@@ -17,12 +17,14 @@ namespace UdonToolkit {
       public bool oneShot;
       
       [SectionHeader("Access")]
-      [Horizontal("Access")]
+      [Horizontal("Access", true)]
       [Toggle]
+      [ShowLabel]
       [OnValueChanged("SelectAccessLevel")]
       public bool masterOnly;
-      [Toggle]
       [Horizontal("Access")]
+      [Toggle]
+      [ShowLabel]
       [OnValueChanged("SelectAccessLevel")]
       public bool ownerOnly;
 

@@ -285,28 +285,33 @@ namespace UdonToolkit {
             break;
           }
           case UTEditor.UTFieldType.Foldout: {
+            DrawFoldout(fieldEntry.Key, ref c);
             break;
           }
           case UTEditor.UTFieldType.ListView: {
+            DrawListView(fieldEntry.Key, ref c);
             break;
           }
           case UTEditor.UTFieldType.Horizontal: {
+            DrawHorizontalGroup(fieldEntry.Key, ref c);
             break;
           }
         }
       }
     }
 
-    private void DrawField(string propName, ref VisualElement c) {
+    private void DrawField(string propName, ref VisualElement c, bool hideLabel = false) {
       var prop = serializedObject.FindProperty(propName);
       var field = fieldCache[propName];
-      var propType = prop.propertyType;
       var fieldEl = new VisualElement {
         name = $"utFieldContainer_{propName}"
       };
       var el = new PropertyField();
       el.BindProperty(prop);
       el.name = $"utField_{propName}";
+      if (hideLabel) {
+        el.Q<Label>(null, "unity-label")?.AddToClassList("hidden");
+      }
       
       // GetVisible
       var isVisible = true;
@@ -322,148 +327,49 @@ namespace UdonToolkit {
       }
 
       // BeforeGUI
-      foreach (var uiAttr in field.uiAttrs) {
-        if (uiAttr.GetType().GetMethod("BeforeGUI")?.DeclaringType == uiAttr.GetType()) {
-          var imgC = new IMGUIContainer();
-          imgC.onGUIHandler = () => {uiAttr.BeforeGUI(prop);};
-          fieldEl.Add(imgC);
-        }
-        if (uiAttr.GetType().GetMethod("CreateBeforeGUI")?.DeclaringType == uiAttr.GetType()) {
-          fieldEl.Add(uiAttr.CreateBeforeGUI(prop));
-        }
+      if (!field.isInHorizontal && !field.isInListView) {
+        DrawGUIStep(GUIStep.Before, field.uiAttrs, prop, ref fieldEl);
       }
-      
-      switch (propType) {
-        case SerializedPropertyType.Boolean: {
-          el.RegisterCallback<ChangeEvent<bool>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
+
+      BindChangeEvents(prop, el, o => {
+        HandleFieldChange(field);
+      });
+      // OnGUI
+      // we keep the original field to handle the change events, but hide it visually in favor of the custom UI
+      foreach (var uiAttr in field.uiAttrs) {
+        if (uiAttr.GetType().GetMethod("OnGUI")?.DeclaringType == uiAttr.GetType()) {
+          var imgC = new IMGUIContainer();
+          imgC.onGUIHandler = () => {uiAttr.OnGUI(prop);};
+          c.Add(imgC);
+          fieldEl.AddToClassList("hidden");
           break;
         }
-        case SerializedPropertyType.Bounds: {
-          el.RegisterCallback<ChangeEvent<Bounds>>(evt => {
+        if (uiAttr.GetType().GetMethod("CreateGUI")?.DeclaringType == uiAttr.GetType()) {
+          c.Add(uiAttr.CreateGUI(prop, el, () => {
+            serializedObject.ApplyModifiedProperties();
             UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Character: {
-          el.RegisterCallback<ChangeEvent<char>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Color: {
-          el.RegisterCallback<ChangeEvent<Color>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Enum: {
-          el.RegisterCallback<ChangeEvent<string>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Float: {
-          el.RegisterCallback<ChangeEvent<float>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Gradient: {
-          el.RegisterCallback<ChangeEvent<Gradient>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Integer: {
-          el.RegisterCallback<ChangeEvent<int>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Quaternion: {
-          el.RegisterCallback<ChangeEvent<Quaternion>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Rect: {
-          el.RegisterCallback<ChangeEvent<Rect>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.String: {
-          el.RegisterCallback<ChangeEvent<string>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Vector2: {
-          el.RegisterCallback<ChangeEvent<Vector2>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Vector3: {
-          el.RegisterCallback<ChangeEvent<Vector3>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.Vector4: {
-          el.RegisterCallback<ChangeEvent<Vector4>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.AnimationCurve: {
-          el.RegisterCallback<ChangeEvent<AnimationCurve>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.BoundsInt: {
-          el.RegisterCallback<ChangeEvent<BoundsInt>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.LayerMask: {
-          el.RegisterCallback<ChangeEvent<LayerMask>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        case SerializedPropertyType.RectInt: {
-          el.RegisterCallback<ChangeEvent<RectInt>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
-          break;
-        }
-        default: {
-          el.RegisterCallback<ChangeEvent<Object>>(evt => {
-            UdonSharpEditorUtility.CopyProxyToUdon(t);
-          });
+          }));
+          fieldEl.AddToClassList("hidden");
           break;
         }
       }
       fieldEl.Add(el);
       
       // AfterGUI
-      foreach (var uiAttr in field.uiAttrs) {
-        if (uiAttr.GetType().GetMethod("AfterGUI")?.DeclaringType == uiAttr.GetType()) {
-          var imgC = new IMGUIContainer();
-          imgC.onGUIHandler = () => {uiAttr.AfterGUI(prop);};
-          fieldEl.Add(imgC);
-        }
-        if (uiAttr.GetType().GetMethod("CreateAfterGUI")?.DeclaringType == uiAttr.GetType()) {
-          fieldEl.Add(uiAttr.CreateAfterGUI(prop));
-        }
+      if (!field.isInHorizontal && !field.isInListView) {
+        DrawGUIStep(GUIStep.After, field.uiAttrs, prop, ref fieldEl);
       }
-      
+
       c.Add(fieldEl);
+    }
+
+    private void HandleFieldChange(UTEditor.UTField field) {
+      if (field.onValueChaged != null) {
+        var prop = serializedObject.FindProperty(field.name);
+        field.onValueChaged.Invoke(t, new object[] { prop });
+        serializedObject.ApplyModifiedProperties();
+      }
+      UdonSharpEditorUtility.CopyProxyToUdon(t);
     }
 
     private void RegisterVisibilityCallbacks() {
@@ -495,6 +401,411 @@ namespace UdonToolkit {
         }
       });
       watcher.Every(250);
+    }
+
+    // Horizontal groups draw their children's Before/After GUI directly in the definition order
+    private void DrawHorizontalGroup(string propName, ref VisualElement c) {
+      var horizontalFields = horizontalViews[propName];
+      var fieldCont = new VisualElement();
+      fieldCont.AddToClassList("col");
+      var row = new VisualElement();
+      row.AddToClassList("row");
+      row.AddToClassList("horizontalGroup__row");
+      var headerAttr = horizontalFields[0].uiAttrs.OfType<HorizontalAttribute>().First();
+
+      if (!headerAttr.hideHeader) {
+        fieldCont.AddToClassList("horizontalGroup");
+        var header = new Label();
+        header.AddToClassList("horizontalGroup__header");
+        header.text = headerAttr.name;
+        fieldCont.Add(header);
+      }
+      fieldCont.Add(row);
+      
+      // BeforeGUI
+      foreach (var field in horizontalFields) {
+        var prop = serializedObject.FindProperty(field.name);
+        DrawGUIStep(GUIStep.Before, field.uiAttrs, prop, ref c);
+      }
+
+      foreach (var field in horizontalFields) {
+        DrawField(field.name, ref row, !field.attributes.OfType<ShowLabelAttribute>().Any());
+      }
+      
+      // AfterGUI
+      foreach (var field in horizontalFields) {
+        var prop = serializedObject.FindProperty(field.name);
+        DrawGUIStep(GUIStep.After, field.uiAttrs, prop, ref c);
+      }
+      c.Add(fieldCont);
+    }
+
+    private void DrawListView(string propName, ref VisualElement c) {
+      var listViewFields = listViews[propName];
+      var propsList = listViewFields.Select(i => serializedObject.FindProperty(i.name)).ToList();
+      var listView = new VisualElement();
+      listView.AddToClassList("listView");
+      listView.EnableInClassList("expanded", propsList[0].isExpanded);
+
+      var header = new VisualElement();
+      header.AddToClassList("header");
+      var foldoutArrow = new VisualElement();
+      foldoutArrow.AddToClassList("foldoutArrow");
+      var headerText = new Label {
+        text = propsList[0].displayName
+      };
+      headerText.AddToClassList("header__text");
+      listView.EnableInClassList("expanded", propsList[0].isExpanded);
+      foldoutArrow.EnableInClassList("rotated", propsList[0].isExpanded);
+      header.RegisterCallback<MouseUpEvent>(evt => {
+        propsList[0].isExpanded = !propsList[0].isExpanded;
+        listView.EnableInClassList("expanded", propsList[0].isExpanded);
+        foldoutArrow.EnableInClassList("rotated", propsList[0].isExpanded);
+        serializedObject.ApplyModifiedProperties();
+        UdonSharpEditorUtility.CopyProxyToUdon(t);
+      });
+
+      header.Add(foldoutArrow);
+      header.Add(headerText);
+      listView.Add(header);
+
+      var body = new VisualElement();
+      body.AddToClassList("listView__body");
+      
+      var arrSizeField = new IntegerField();
+      arrSizeField.bindingPath = $"{propsList[0].name}.Array.size";
+      arrSizeField.Bind(serializedObject);
+      arrSizeField.AddToClassList("hidden");
+      c.Add(arrSizeField);
+      
+      // handle array elements removal / addition
+      arrSizeField.RegisterValueChangedCallback(evt => {
+        var fieldsToRemove = new List<PropertyField>();
+        var fieldsToAdd = new List<int>();
+        var paths = new List<string>();
+        for (int i = 0; i < propsList[0].arraySize; i++) {
+          var elPropPath = propsList[0].GetArrayElementAtIndex(i).propertyPath;
+          paths.Add(elPropPath);
+          if (body.Query<PropertyField>()
+            .Where(f => f.bindingPath == elPropPath).First() == null) {
+            fieldsToAdd.Add(i);
+          }
+        }
+
+        body.Query(null, "row").ForEach(f => {
+          var firstField = f.Q<PropertyField>();
+          if (!paths.Contains(firstField.bindingPath)) {
+            fieldsToRemove.Add(firstField);
+          }
+        });
+
+        foreach (var field in fieldsToRemove) {
+          body.Remove(field.parent);
+        }
+
+        foreach (var field in fieldsToAdd) {
+          var fieldCont = DrawListViewRow(propsList, listViewFields, field, body);
+          body.Add(fieldCont);
+          if (field == 0) {
+            fieldCont.PlaceBehind(body.Children().ToArray()[0]);
+          }
+          else {
+            fieldCont.PlaceInFront(body.Children().ToArray()[field - 1]);
+          }
+        }
+      });
+      
+      // initial field creation
+      var listSize = propsList[0].arraySize;
+      // force the same size for all arrays
+      foreach (var prop in propsList) {
+        prop.arraySize = listSize;
+        serializedObject.ApplyModifiedProperties();
+        UdonSharpEditorUtility.CopyProxyToUdon(t);
+      }
+      for (int i = 0; i < listSize; i++) {
+        var fieldCont = DrawListViewRow(propsList, listViewFields, i, body);
+        body.Add(fieldCont);
+      }
+
+      var addElement = new Button {
+        text = "Add Element",
+        name = $"{propName}_addButton"
+      };
+      addElement.clicked += () => {
+        foreach (var prop in propsList) {
+          prop.arraySize += 1;
+        }
+        serializedObject.ApplyModifiedProperties();
+        HandleFieldChange(listViewFields[0]);
+      };
+      
+      body.Add(addElement);
+      listView.Add(body);
+      
+      for (int i = 0; i < listViewFields.Count; i++) {
+        DrawGUIStep(GUIStep.Before, listViewFields[i].uiAttrs, propsList[i], ref c);
+      }
+      
+      // Inject list view into layout
+      c.Add(listView);
+
+      for (int i = 0; i < listViewFields.Count; i++) {
+        DrawGUIStep(GUIStep.After, listViewFields[i].uiAttrs, propsList[i], ref c);
+      }
+    }
+
+    private VisualElement DrawListViewRow(List<SerializedProperty> propsList, List<UTEditor.UTField> listViewFields, int index, VisualElement body) {
+      var fieldCont = new VisualElement();
+      fieldCont.AddToClassList("row");
+      var j = 0;
+      foreach (var prop in propsList) {
+        var el = new PropertyField(prop.GetArrayElementAtIndex(index));
+        el.AddToClassList("field");
+        el.Bind(serializedObject);
+        el.Q<Label>(null, "unity-label")?.AddToClassList("hidden");
+        var changeIndex = j;
+        BindChangeEvents(prop.GetArrayElementAtIndex(index), el, o => {
+          HandleFieldChange(listViewFields[changeIndex]);
+        });
+        fieldCont.Add(el);
+
+        foreach (var uiAttr in listViewFields[j].uiAttrs) {
+          if (uiAttr.GetType().GetMethod("OnGUI")?.DeclaringType == uiAttr.GetType() && !(uiAttr is PopupAttribute)) {
+            var imgC = new IMGUIContainer();
+            imgC.onGUIHandler = () => {uiAttr.OnGUI(prop);};
+            fieldCont.Add(imgC);
+            el.AddToClassList("hidden");
+            break;
+          }
+          if (uiAttr.GetType().GetMethod("CreateGUI")?.DeclaringType == uiAttr.GetType() && !(uiAttr is PopupAttribute)) {
+            fieldCont.Add(uiAttr.CreateGUI(prop, el, () => {
+              serializedObject.ApplyModifiedProperties();
+              UdonSharpEditorUtility.CopyProxyToUdon(t);
+            }));
+            el.AddToClassList("hidden");
+            break;
+          }
+        }
+        j++;
+      }
+        
+      var removeBtn = new Button {
+        text = ""
+      };
+      removeBtn.AddToClassList("listView__button");
+      removeBtn.AddToClassList("remove");
+      removeBtn.clicked += () => {
+        var removeIndex = removeBtn.parent.parent.IndexOf(removeBtn.parent);
+        foreach (var prop in propsList) {
+          var currLength = prop.arraySize;
+          prop.DeleteArrayElementAtIndex(removeIndex);
+          if (prop.arraySize == currLength) { // if it is an object reference - we have to delete twice!
+            prop.DeleteArrayElementAtIndex(removeIndex);
+          }
+        }
+        body.Remove(removeBtn.parent);
+        serializedObject.ApplyModifiedProperties();
+        HandleFieldChange(listViewFields[0]);
+      };
+      fieldCont.Add(removeBtn);
+      return fieldCont;
+    }
+
+    private void DrawFoldout(string propName, ref VisualElement c) {
+      var foldout = foldouts[propName].First();
+      UTEditor.UTField field;
+      switch (foldout.Value) {
+        case UTEditor.UTFieldType.Horizontal: {
+          field = horizontalViews[foldout.Key].First();
+          break;
+        }
+        case UTEditor.UTFieldType.ListView: {
+          field = listViews[foldout.Key].First();
+          break;
+        }
+        default: {
+          field = fieldCache[foldout.Key];
+          break;
+        }
+      }
+
+      var foldoutCont = new VisualElement {
+        name = $"utFieldContainer_{propName}"
+      };
+      foldoutCont.AddToClassList("foldout");
+      var header = new VisualElement();
+      header.AddToClassList("header");
+      var foldoutArrow = new VisualElement();
+      foldoutArrow.AddToClassList("foldoutArrow");
+      var headerText = new Label {
+        text = field.foldoutName
+      };
+      headerText.AddToClassList("header__text");
+      var prop = serializedObject.FindProperty(field.name);
+      foldoutCont.EnableInClassList("expanded", prop.isExpanded);
+      foldoutArrow.EnableInClassList("rotated",prop.isExpanded);
+      header.RegisterCallback<MouseUpEvent>(evt => {
+        prop.isExpanded = !prop.isExpanded;
+        foldoutCont.EnableInClassList("expanded", prop.isExpanded);
+        foldoutArrow.EnableInClassList("rotated",prop.isExpanded);
+        serializedObject.ApplyModifiedProperties();
+        UdonSharpEditorUtility.CopyProxyToUdon(t);
+      });
+      header.Add(foldoutArrow);
+      header.Add(headerText);
+      foldoutCont.Add(header);
+
+      var foldoutBody = new VisualElement();
+      foldoutBody.AddToClassList("foldout__body");
+      HandleFields(foldouts[propName], ref foldoutBody);
+      foldoutCont.Add(foldoutBody);
+      
+      c.Add(foldoutCont);
+    }
+    
+    private enum GUIStep {
+      Before,
+      After
+    }
+
+    private void DrawGUIStep(GUIStep step, List<UTPropertyAttribute> uiAttrs, SerializedProperty prop, ref VisualElement c) {
+      foreach (var uiAttr in uiAttrs) {
+        if (uiAttr.GetType().GetMethod(step == GUIStep.Before ? "BeforeGUI" : "AfterGUI")?.DeclaringType == uiAttr.GetType()) {
+          var imgC = new IMGUIContainer();
+          imgC.onGUIHandler = () => {
+            if (step == GUIStep.Before) {
+              uiAttr.BeforeGUI(prop);
+            }
+            else {
+              uiAttr.AfterGUI(prop);
+            }
+          };
+          c.Add(imgC);
+        }
+        if (uiAttr.GetType().GetMethod(step == GUIStep.Before ? "CreateBeforeGUI" : "CreateAfterGUI")?.DeclaringType == uiAttr.GetType()) {
+          c.Add(step == GUIStep.Before ? uiAttr.CreateBeforeGUI(prop) : uiAttr.CreateAfterGUI(prop));
+        }
+      }
+    }
+
+    private void BindChangeEvents(SerializedProperty property, PropertyField field, Action<object> handleChange) {
+      switch (property.propertyType) {
+        case SerializedPropertyType.Boolean: {
+          field.RegisterCallback<ChangeEvent<bool>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Bounds: {
+          field.RegisterCallback<ChangeEvent<Bounds>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Character: {
+          field.RegisterCallback<ChangeEvent<char>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Color: {
+          field.RegisterCallback<ChangeEvent<Color>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Enum: {
+          field.RegisterCallback<ChangeEvent<string>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Float: {
+          field.RegisterCallback<ChangeEvent<float>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Gradient: {
+          field.RegisterCallback<ChangeEvent<Gradient>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Integer: {
+          field.RegisterCallback<ChangeEvent<int>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Quaternion: {
+          field.RegisterCallback<ChangeEvent<Quaternion>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Rect: {
+          field.RegisterCallback<ChangeEvent<Rect>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.String: {
+          field.RegisterCallback<ChangeEvent<string>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Vector2: {
+          field.RegisterCallback<ChangeEvent<Vector2>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Vector3: {
+          field.RegisterCallback<ChangeEvent<Vector3>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.Vector4: {
+          field.RegisterCallback<ChangeEvent<Vector4>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.AnimationCurve: {
+          field.RegisterCallback<ChangeEvent<AnimationCurve>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.BoundsInt: {
+          field.RegisterCallback<ChangeEvent<BoundsInt>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.LayerMask: {
+          field.RegisterCallback<ChangeEvent<LayerMask>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        case SerializedPropertyType.RectInt: {
+          field.RegisterCallback<ChangeEvent<RectInt>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+        default: {
+          field.RegisterCallback<ChangeEvent<Object>>(evt => {
+            handleChange(evt.newValue);
+          });
+          break;
+        }
+      }
     }
   }
 }
