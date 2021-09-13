@@ -54,12 +54,8 @@ namespace UdonToolkit {
     private void OnEnable() {
       t = (UdonSharpBehaviour)target;
       rootElement = new VisualElement();
-      visualTree =
-        AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(
-          "Assets/UdonToolkit/Internals/Editor/UTEditorNext/UTEditorNextTemplate.uxml");
-      rootElement.styleSheets.Add(
-        AssetDatabase.LoadAssetAtPath<StyleSheet>(
-          "Assets/UdonToolkit/Internals/Editor/UTEditorNext/UTEditorNextStyles.uss"));
+      visualTree = Resources.Load<VisualTreeAsset>("UTEditorNextTemplate");
+      rootElement.styleSheets.Add(Resources.Load<StyleSheet>("UTEditorNextStyles"));
     }
 
     public override VisualElement CreateInspectorGUI() {
@@ -69,24 +65,7 @@ namespace UdonToolkit {
       HandleUSharpHeader();
       BuildCache();
       c.Bind(serializedObject);
-
-      var toolkitClass = rootElement.Q<Label>("toolkitClassName");
-      if (behInfo.customName != null || behInfo.helpUrl != null) {
-        toolkitClass.text = behInfo.customName ?? behInfo.name;
-        var helpButton = rootElement.Q("toolkitHelpButton");
-        if (behInfo.helpUrl == null) {
-          helpButton.AddToClassList("hidden");
-        }
-        else {
-          helpButton.Q<Button>().clicked += () => {
-            Application.OpenURL(behInfo.helpUrl);
-          };
-        }
-      }
-      else {
-        rootElement.Q("toolkitHeader").AddToClassList("hidden");
-      }
-        
+      HandleUTHeader();
       HandleFields(fieldOrder, ref c);
       RegisterVisibilityCallbacks();
       RegisterVisibilityWatchers();
@@ -120,6 +99,25 @@ namespace UdonToolkit {
       };
     }
 
+    private void HandleUTHeader() {
+      var toolkitClass = rootElement.Q<Label>("toolkitClassName");
+      if (behInfo.customName != null || behInfo.helpUrl != null) {
+        toolkitClass.text = behInfo.customName ?? behInfo.name;
+        var helpButton = rootElement.Q("toolkitHelpButton");
+        if (behInfo.helpUrl == null) {
+          helpButton.AddToClassList("hidden");
+        }
+        else {
+          helpButton.Q<Button>().clicked += () => {
+            Application.OpenURL(behInfo.helpUrl);
+          };
+        }
+      }
+      else {
+        rootElement.Q("toolkitHeader").AddToClassList("hidden");
+      }
+    }
+    
     private void BuildCache() {
       tT = t.GetType();
       programAsset = UdonSharpEditorUtility.GetUdonSharpProgramAsset(t);
