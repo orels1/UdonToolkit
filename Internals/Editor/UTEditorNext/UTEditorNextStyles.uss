@@ -236,6 +236,30 @@
     padding-bottom: 5px;
 }
 
+.listView .field.field__bool {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 20px;
+}
+
+.listView .field.field__bool Toggle {
+    margin-bottom: 0;
+}
+
+.listView .field.field__bool Toggle .unity-toggle__input {
+    height: 18px;
+    background-color: #2A2A2A;
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.listView .field.field__bool.last Toggle .unity-toggle__input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 .listView.expanded .listView__body {
     display: flex;
     background-color: #4b4b4b;
@@ -273,7 +297,7 @@
     margin-right: 0;
 }
 
-.listView .field .unity-property-field__input {
+.listView .field.last .unity-property-field__input {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }

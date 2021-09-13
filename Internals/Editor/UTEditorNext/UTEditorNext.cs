@@ -452,7 +452,7 @@ namespace UdonToolkit {
       var foldoutArrow = new VisualElement();
       foldoutArrow.AddToClassList("foldoutArrow");
       var headerText = new Label {
-        text = propsList[0].displayName
+        text = listViewFields[0].listViewName
       };
       headerText.AddToClassList("header__text");
       listView.EnableInClassList("expanded", propsList[0].isExpanded);
@@ -562,6 +562,13 @@ namespace UdonToolkit {
       foreach (var prop in propsList) {
         var el = new PropertyField(prop.GetArrayElementAtIndex(index));
         el.AddToClassList("field");
+        if (prop.GetArrayElementAtIndex(index).propertyType == SerializedPropertyType.Boolean) {
+          el.AddToClassList("field__bool");
+        }
+
+        if (j == propsList.Count - 1) {
+          el.AddToClassList("last");
+        }
         el.Bind(serializedObject);
         el.Q<Label>(null, "unity-label")?.AddToClassList("hidden");
         var changeIndex = j;
