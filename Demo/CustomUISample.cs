@@ -218,6 +218,11 @@ public class CustomUISample : UdonSharpBehaviour {
 
   [SectionHeader("Non-Tab Members")] public float varOutsideOfTabs;
 
+  [Horizontal("Horizontal Outside Of Tabs")]
+  public string horizontalOutsideA = "Some Val";
+  [Horizontal("Horizontal Outside Of Tabs")]
+  public float horizontalOutsideB;
+
   [Button("Helper Button")]
   public void CustomButton() {
     Debug.Log("Pressed the Helper Button");

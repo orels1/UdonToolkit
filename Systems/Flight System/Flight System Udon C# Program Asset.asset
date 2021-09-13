@@ -1865,7 +1865,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnFlightStart
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -1944,7 +1944,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnFlightStart
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2038,7 +2038,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnFlightEnd
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2117,7 +2117,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnFlightEnd
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2211,7 +2211,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnHoverStart
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2290,7 +2290,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnHoverStart
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2384,7 +2384,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnHoverEnd
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2463,7 +2463,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnHoverEnd
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2557,7 +2557,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnGlideStart
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2636,7 +2636,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnGlideStart
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2730,7 +2730,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnGlideEnd
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -2809,7 +2809,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: OnGlideEnd
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 

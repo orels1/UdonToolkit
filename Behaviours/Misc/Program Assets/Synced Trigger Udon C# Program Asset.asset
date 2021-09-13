@@ -273,7 +273,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Access
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -363,7 +363,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Access
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 

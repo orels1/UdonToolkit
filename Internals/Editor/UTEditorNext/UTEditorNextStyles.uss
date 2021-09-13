@@ -1,5 +1,5 @@
 /*    --white: #fcfcfc;*/
-/*    --color-red: #FF6188;*/
+/*    --red: #FF6188;*/
 /*    --orange: #FC9867;*/
 /*    --yellow: #FFD866;*/
 /*    --green: #A9DC76;*/
@@ -52,6 +52,45 @@
     border-color: #4b4b4b;
     border-width: 1px;
     margin: 4px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__text {
+    margin-left: 4px;
+}
+
+.listView.expanded .header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.listView .header {
+    margin-bottom: 0;
+    padding-left: 4px;
+    border-color: #2A2A2A;
+}
+
+.listView .header:hover {
+    background-color: #424242;
+    border-color: #8c8c8c;
+}
+
+.foldout.expanded > .header {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.foldout > .header {
+    margin-bottom: 0;
+    padding-left: 4px;
+    border-color: #2A2A2A;
+}
+
+.foldout > .header:hover {
+    background-color: #424242;
+    border-color: #8c8c8c;
 }
 
 .componentHeader {
@@ -150,4 +189,130 @@
 
 .uSharpHeaderContainer {
     margin: 0 3px 3px 0;
+}
+
+.horizontalGroup {
+    background-color: #4b4b4b;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+.horizontalGroup__header {
+    background-color: #2A2A2A;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 2px 6px;
+}
+
+.horizontalGroup__row {
+    padding: 2px 2px;
+}
+
+.horizontalGroup__row > VisualElement,
+.horizontalGroup__row > Button {
+    display: flex;
+    flex: 1;
+}
+
+.horizontalGroup__row > VisualElement.hidden ,
+.horizontalGroup__row > Button.hidden {
+    display: none;
+}
+
+.listView {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.listView__body {
+    display: none;
+    padding: 2px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    flex-direction: column;
+    min-height: 20px;
+    border-width: 1px;
+    border-top-width: 0;
+    padding-bottom: 5px;
+}
+
+.listView.expanded .listView__body {
+    display: flex;
+    background-color: #4b4b4b;
+}
+
+.foldoutArrow {
+    background-image: resource('Arrow_R');
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+    cursor: link;
+    opacity: 0.5;
+}
+
+.expanded > VisualElement > .foldoutArrow {
+    background-image: resource('Arrow_D');
+}
+
+.listView .field {
+    display: flex;
+    flex: 1;
+    /*margin-right: 0;*/
+}
+
+.listView .field.hidden {
+    display: none;
+}
+
+.listView .row IMGUIContainer {
+    top: 1px;
+    margin-left: 2px;
+}
+
+.listView .field .unity-base-field {
+    margin-right: 0;
+}
+
+.listView .field .unity-property-field__input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.listView__button {
+    width: 17px;
+    height: 18px;
+    top: 1px;
+    margin: 0;
+    margin-right: 3px;
+}
+
+.listView__button.remove {
+    background-image: resource('Remove');
+    -unity-background-scale-mode: scale-to-fit;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-width: 0;
+    padding-right: 16px;
+    padding-left: 1px;
+}
+
+.listView__button.remove:hover {
+    background-color: #c24956;
+}
+
+.listView__button.remove:active {
+    background-color: #b9b9b9;
+}
+
+.foldout .foldout__body {
+    display: none;
+    padding: 3px;
+    padding-bottom: 5px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.foldout.expanded .foldout__body {
+    display: flex;
+    background-color: #343434;
 }

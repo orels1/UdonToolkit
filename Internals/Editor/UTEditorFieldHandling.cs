@@ -100,7 +100,7 @@ namespace UdonToolkit {
 
             var horizontalAttr =
               horizontalFields[0].attributes.Find(i => i is HorizontalAttribute) as HorizontalAttribute;
-            if (horizontalAttr.showHeader) {
+            if (!horizontalAttr.hideHeader) {
               // header frame and label for the group
               var oldColor = GUI.backgroundColor;
               var headerRect = EditorGUILayout.GetControlRect();

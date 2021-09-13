@@ -98,7 +98,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Jump Impulse
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -188,7 +188,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Jump Impulse
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -263,7 +263,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Jump Impulse
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -332,7 +332,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Walk Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -416,7 +416,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Walk Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -485,7 +485,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Walk Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -554,7 +554,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Run Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -638,7 +638,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Run Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -707,7 +707,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Run Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -776,7 +776,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Strafe Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -860,7 +860,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Strafe Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -929,7 +929,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Strafe Speed
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -998,7 +998,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Gravity Strength
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: true
     - Name: 
@@ -1082,7 +1082,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Gravity Strength
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
@@ -1151,7 +1151,7 @@ MonoBehaviour:
     - Name: name
       Entry: 1
       Data: Gravity Strength
-    - Name: showHeader
+    - Name: hideHeader
       Entry: 5
       Data: false
     - Name: 
