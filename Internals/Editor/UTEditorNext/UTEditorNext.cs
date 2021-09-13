@@ -452,7 +452,7 @@ namespace UdonToolkit {
       var foldoutArrow = new VisualElement();
       foldoutArrow.AddToClassList("foldoutArrow");
       var headerText = new Label {
-        text = listViewFields[0].listViewName
+        text = listViewFields[0].listViewName ?? propsList[0].displayName
       };
       headerText.AddToClassList("header__text");
       listView.EnableInClassList("expanded", propsList[0].isExpanded);
