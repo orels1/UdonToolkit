@@ -4,6 +4,7 @@ using UdonToolkit;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
+using VRC.Udon.Common;
 
 namespace UdonToolkit {
   [CustomName("Personal Screen")]
@@ -31,11 +32,7 @@ namespace UdonToolkit {
       player = Networking.LocalPlayer;
     }
 
-    private int leftTrigCount;
-    private int rightTrigCount;
-    private bool canTrigLeft = true;
-    private bool canTrigRight = true;
-    private float leftTrigTime;
+    private float upHeldTime;
 
     private void Update() {
       if (!isVR && Time.timeSinceLevelLoad < 5) {
@@ -49,46 +46,19 @@ namespace UdonToolkit {
         ToggleDesktopScreen();
       }
 
-      var lTrig = Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger");
-      var rTrig = Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger");
-
-      // if we didn't press within one second - reset the counter
-      if (leftTrigCount == 1 && Time.timeSinceLevelLoad - leftTrigTime > 1) {
-        leftTrigCount = 0;
-        rightTrigCount = 0;
+      if (Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryThumbstickVertical") > 0.7f)
+      {
+        upHeldTime += Time.deltaTime;
+      }
+      else
+      {
+        upHeldTime = 0;
       }
 
-      if (lTrig > 0.7f && canTrigLeft) {
-        leftTrigCount = 1;
-        leftTrigTime = Time.timeSinceLevelLoad;
-        canTrigLeft = false;
-        return;
-      }
-
-      if (!canTrigLeft && lTrig < 0.3) {
-        canTrigLeft = true;
-        leftTrigCount = 0;
-        return;
-      }
-      
-      if (rTrig > 0.7f && canTrigRight) {
-        rightTrigCount = 1;
-        canTrigRight = false;
-        return;
-      }
-
-      if (!canTrigRight && rTrig < 0.3) {
-        canTrigRight = true;
-        rightTrigCount = 0;
-        return;
-      }
-
-      if (leftTrigCount == 1 && rightTrigCount == 1) {
+      if (upHeldTime >= 2f && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.7f)
+      {
         ToggleVRScreen();
-        leftTrigCount = 0;
-        rightTrigCount = 0;
       }
-
     }
 
     private void ToggleDesktopScreen() {

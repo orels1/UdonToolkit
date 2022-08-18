@@ -12,9 +12,10 @@ using VRC.Udon.Common.Interfaces;
 namespace UdonToolkit {
   [CustomName("Presentation Player")]
   [HelpURL("https://ut.orels.sh/systems/presentation-system")]
+  [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
   public class PresentationPlayer : UdonSharpBehaviour {
     [HelpBox(
-      "Clicking this button will populate the list of talks with all the TLXTalk objects that are children of this Presentation Player")]
+      "Clicking this button will populate the list of talks with all the PresentationTalk objects that are children of this Presentation Player")]
     [Toggle("Populate Talks")]
     [OnValueChanged("PopulateTalks")]
     public bool populateTalksBtn;
@@ -242,6 +243,17 @@ namespace UdonToolkit {
       FireCallbacks(takenControlTargets, takenControlEvents, takenControlNetworkTargets);
     }
 
+    public override void OnPlayerJoined(VRCPlayerApi player)
+    {
+      if (!isOwner) return;
+      SendCustomEventDelayedSeconds(nameof(Resync), 2f);
+    }
+
+    public void Resync()
+    {
+      RequestSerialization();
+    }
+
     public void StartTalk() {
       if (!isOwner) return;
       presenting = true;
@@ -249,6 +261,7 @@ namespace UdonToolkit {
       talks[talkIndex].Play();
       Debug.Log("firing start callbacks");
       FireCallbacks(talkStartTargets, talkStartEvents, talkStartNetworkTargets);
+      RequestSerialization();
     }
 
     public void StopTalk() {
@@ -259,6 +272,7 @@ namespace UdonToolkit {
       currSlide = 0;
       localCurrSlide = 0;
       FireCallbacks(talkEndTargets, talkEndEvents, talkEndNetworkTargets);
+      RequestSerialization();
     }
 
     public void PrevSlide() {
@@ -270,6 +284,7 @@ namespace UdonToolkit {
       }
 
       localCurrSlide = currSlide;
+      RequestSerialization();
     }
 
     public void NextSlide() {
@@ -281,6 +296,7 @@ namespace UdonToolkit {
       }
 
       localCurrSlide = currSlide;
+      RequestSerialization();
     }
 
     public void NextTalk() {
@@ -288,6 +304,7 @@ namespace UdonToolkit {
       talkIndex = Mathf.Clamp(talkIndex + 1, 0, talks.Length - 1);
       localTalkIndex = talkIndex;
       PrepareTalk(talkIndex, 0);
+      RequestSerialization();
     }
 
     public void PrevTalk() {
@@ -295,6 +312,7 @@ namespace UdonToolkit {
       talkIndex = Mathf.Clamp(talkIndex - 1, 0, talks.Length - 1);
       localTalkIndex = talkIndex;
       PrepareTalk(talkIndex, 0);
+      RequestSerialization();
     }
 
     public void SelectTalk(int newIndex) {
@@ -302,6 +320,7 @@ namespace UdonToolkit {
       talkIndex = Mathf.Clamp(newIndex, 0, talks.Length - 1);
       localTalkIndex = talkIndex;
       PrepareTalk(talkIndex, 0);
+      RequestSerialization();
     }
 
     // Non-synced play/pause for animated slides

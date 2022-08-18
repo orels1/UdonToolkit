@@ -17,9 +17,7 @@ namespace UdonToolkit {
 
 
     private VRC_Pickup pickup;
-    [UdonSynced]
     private Vector3 startPosition;
-    [UdonSynced]
     private Quaternion startRotation;
     private bool waitingToRespawn;
     private float respawnTime;
