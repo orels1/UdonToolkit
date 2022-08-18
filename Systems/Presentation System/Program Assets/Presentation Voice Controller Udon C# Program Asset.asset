@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Presentation Voice Controller Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: f3c80f8667794a8409db45fa4fcba514,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 3469c3f04f2d68d4097419d9ebb037c9,
     type: 2}
   udonAssembly: 
   assemblyError: 
