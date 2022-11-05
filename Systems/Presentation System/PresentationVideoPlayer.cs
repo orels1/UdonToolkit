@@ -23,10 +23,12 @@ namespace UdonToolkit {
 
     public void Play() {
       vPlayer.Play();
+      Debug.Log($"[PVideoPlayer][{name}] Pause");
     }
 
     public void SetTime(float time) {
       vPlayer.SetTime(time);
+      Debug.Log($"[PVideoPlayer][{name}] SetTime {time.ToString("000.00")}");
     }
 
     public void Pause() {
@@ -83,7 +85,7 @@ namespace UdonToolkit {
       else {
         vPlayer.SetTime(1);
       }
-      vPlayer.Pause();
+      SendCustomEventDelayedFrames(nameof(Pause), 10);
     }
   }
 }

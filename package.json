@@ -11,7 +11,7 @@
   },
   "changelogUrl": "https://github.com/orels1/UdonToolkit/blob/master/CHANGELOG.md",
   "documentationUrl": "https://ut.orels.sh",
-  "hideInEditor": "false",
+  "hideInEditor": false,
   "keywords": ["udon", "attributes", "editor scripts", "ui", "toolkit"],
   "license": "MIT",
   "licensesUrl": "https://github.com/orels1/UdonToolkit/blob/master/LICENSE"

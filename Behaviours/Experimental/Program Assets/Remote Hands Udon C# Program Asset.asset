@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Remote Hands Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 97638753c6527f942bc2e2e661c5003b,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: f147fa09340bfba42b79a3a404562ebb,
     type: 2}
   udonAssembly: 
   assemblyError: 

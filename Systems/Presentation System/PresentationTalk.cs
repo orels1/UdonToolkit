@@ -103,7 +103,7 @@ namespace UdonToolkit {
     public void Play() {
       mainPlayerController.Play();
       mainPlayerController.SetTime(0);
-      mainPlayerController.Pause();
+      mainPlayerController.SendCustomEventDelayedFrames(nameof(lookaheadPlayerController.Pause), 10);
       currSlide = 0;
       if (!isOwner) {
         return;
@@ -118,7 +118,7 @@ namespace UdonToolkit {
         lookaheadPlayerController.SetTime(slideDurations[0] + 0.3f);
       }
 
-      lookaheadPlayerController.Pause();
+      lookaheadPlayerController.SendCustomEventDelayedFrames(nameof(lookaheadPlayerController.Pause), 10);
       Debug.Log("Started slides");
     }
 
@@ -132,14 +132,14 @@ namespace UdonToolkit {
       Debug.Log($"ut: seeked to slide {currSlide}, time {startTime}");
       if (isOwner) {
         if (currSlide + 1 != slideDurations.Length) {
-          lookaheadPlayer.Play();
-          lookaheadPlayer.SetTime(GetNextSlideEnd(startTime));
-          lookaheadPlayer.Pause();
+          lookaheadPlayerController.Play();
+          lookaheadPlayerController.SetTime(GetNextSlideEnd(startTime));
+          lookaheadPlayerController.SendCustomEventDelayedFrames(nameof(lookaheadPlayerController.Pause), 10);
         }
       }
 
       if (!shouldAutoplay[currSlide]) {
-        mainPlayerController.Pause();
+        mainPlayerController.SendCustomEventDelayedFrames(nameof(lookaheadPlayerController.Pause), 10);
       }
       else {
         playingContinuously = true;
@@ -178,12 +178,12 @@ namespace UdonToolkit {
         if (currSlide + 1 != slideDurations.Length) {
           lookaheadPlayerController.Play();
           lookaheadPlayerController.SetTime(GetNextSlideEnd(startTime));
-          lookaheadPlayerController.Pause();
+          lookaheadPlayerController.SendCustomEventDelayedFrames(nameof(lookaheadPlayerController.Pause), 10);
         }
       }
 
       if (!shouldAutoplay[currSlide]) {
-        mainPlayerController.Pause();
+        mainPlayerController.SendCustomEventDelayedFrames(nameof(lookaheadPlayerController.Pause), 10);
       }
       else {
         playingContinuously = true;
@@ -195,7 +195,7 @@ namespace UdonToolkit {
         }
       }
 
-      // Debug.Log($"Next Slide {currSlide} {mainPlayer.GetTime()}");
+      Debug.Log($"Next Slide {currSlide} {mainPlayer.GetTime()}");
     }
 
     public void PrevSlide() {
@@ -208,10 +208,10 @@ namespace UdonToolkit {
       mainPlayerController.SetTime(startTime + 0.3f);
       if (isOwner) {
         lookaheadPlayerController.SetTime(GetNextSlideEnd(startTime));
-        lookaheadPlayerController.Pause();
+        lookaheadPlayerController.SendCustomEventDelayedFrames(nameof(lookaheadPlayerController.Pause), 10);
       }
       if (!shouldAutoplay[currSlide]) {
-        mainPlayerController.Pause();
+        mainPlayerController.SendCustomEventDelayedFrames(nameof(lookaheadPlayerController.Pause), 10);
       }
       else {
         playingContinuously = true;

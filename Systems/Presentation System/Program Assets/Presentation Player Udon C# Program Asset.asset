@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Presentation Player Udon C# Program Asset
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 4a79deb154e09c444a2743c25bf0892d,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: b3aca4b2b6ea4ed4db3cd2202b02bed2,
     type: 2}
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: ff8edaf11cce7214789f4c9b6bf240f3, type: 3}
-  behaviourSyncMode: 0
+  behaviourSyncMode: 4
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
   hasInteractEvent: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
       Data: 6|UdonToolkit.HelpBoxAttribute, UdonToolkitRuntime
     - Name: text
       Entry: 1
-      Data: Clicking this button will populate the list of talks with all the TLXTalk
+      Data: Clicking this button will populate the list of talks with all the PresentationTalk
         objects that are children of this Presentation Player
     - Name: methodName
       Entry: 1
