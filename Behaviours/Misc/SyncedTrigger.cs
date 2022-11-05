@@ -72,6 +72,8 @@ namespace UdonToolkit {
     private void Start() {
       isOwner = Networking.IsOwner(gameObject);
       col = GetComponent<Collider>();
+      // make sure we init local synced value to the initial state
+      localSyncedValue = syncedValue;
       if (col == null) {
         useInteract = false;
         return;
