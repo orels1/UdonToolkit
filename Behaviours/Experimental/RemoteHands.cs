@@ -28,10 +28,8 @@ namespace UdonToolkit {
           nH[i] = hands[i];
         }
 
-        var lHand = VRCInstantiate(leftHand);
-        lHand.transform.SetParent(createUnder);
-        var rHand = VRCInstantiate(rightHand);
-        rHand.transform.SetParent(createUnder);
+        var lHand = Instantiate(leftHand, createUnder, true);
+        var rHand = Instantiate(rightHand, createUnder, true);
         nH[count] = new Rigidbody[2];
         nH[count][0] = lHand.GetComponent<Rigidbody>();
         nH[count][1] = rHand.GetComponent<Rigidbody>();

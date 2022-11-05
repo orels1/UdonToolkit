@@ -62,12 +62,6 @@ namespace UdonToolkit {
         nonUBChecked = true;
       }
 
-      if (!nonUBMode) {
-        if (UdonSharpEditorUtility.GetBackingUdonBehaviour(t).AllowCollisionOwnershipTransfer) {
-          UdonSharpEditorUtility.GetBackingUdonBehaviour(t).AllowCollisionOwnershipTransfer = false;
-        }
-      }
-
       var headerExited = false;
       EditorGUI.BeginChangeCheck();
       showUdonSettings = GUILayout.Toggle(showUdonSettings, "Udon Settings", UTStyles.smallButton);
