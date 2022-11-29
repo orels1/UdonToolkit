@@ -113,8 +113,9 @@ namespace UdonToolkit {
 
         if (!allowed) return;
       }
-      if (!isOwner) {
-        SendCustomNetworkEvent(NetworkEventTarget.Owner, eventName);
+      if (!isOwner)
+      {
+        TakeOwnership();
       }
 
       switch (eventName) {
