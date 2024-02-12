@@ -58,7 +58,7 @@ jobs:
       
       # Build Package Version Listing with Nuke
       - name: Build Package Version Listing
-        run: ${{ env.pathToCi }}/build.cmd BuildRepoListing --root ${{ env.pathToCi }} --list-publish-directory $GITHUB_WORKSPACE/${{ env.listPublishDirectory }} --current-package-name ${{ vars.PACKAGE_NAME }}
+        run: ${{ env.pathToCi }}/build.cmd BuildRepoListing --root ${{ env.pathToCi }} --list-publish-directory $GITHUB_WORKSPACE/${{ env.listPublishDirectory }} --current-package-name sh.orels.udontoolkit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
