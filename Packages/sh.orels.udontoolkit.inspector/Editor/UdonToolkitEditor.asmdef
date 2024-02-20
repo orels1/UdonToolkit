@@ -1,0 +1,22 @@
+﻿{
+  "name": "UdonToolkitEditor",
+  "references": [
+    "VRC.Udon.Editor",
+    "VRC.Udon.Serialization.OdinSerializer",
+    "UdonSharp.Editor",
+    "UdonSharp.Runtime",
+    "UdonToolkitRuntime",
+    "Unity.Postprocessing.Runtime",
+    "VRC.Udon"
+  ],
+  "optionalUnityReferences": [],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": []
+}

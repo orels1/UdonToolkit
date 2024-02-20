@@ -1,0 +1,21 @@
+{
+  "name": "sh.orels.udontoolkit.systems.presentation",
+  "version": "1.2.0",
+  "description": "Presentation System for VRChat Worlds",
+  "displayName": "Udon Toolkit Presentation System",
+  "unity": "2019.4",
+  "author": {
+    "name": "orels1",
+    "email": "ping@orels.sh",
+    "url": "https://orels.sh"
+  },
+  "vpmDependencies":
+  {
+    "sh.orels.udontoolkit": "^1.1.0"
+  },
+  "documentationUrl": "https://ut.orels.sh",
+  "hideInEditor": false,
+  "keywords": ["udon", "vrchat", "presentation", "conference"],
+  "license": "MIT",
+  "licensesUrl": "https://github.com/orels1/UdonToolkit/blob/master/LICENSE"
+}

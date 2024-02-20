@@ -1,0 +1,19 @@
+{
+  "name":"Udon Toolkit",
+  "id":"sh.orels.udontoolkit",
+  "url":"https://orels1.github.io/UdonToolkit/index.json",
+  "author":{
+      "email":"ping@orels.sh",
+      "name":"orels1",
+      "url":"https://github.com/orels1"
+  },
+  "description":"A set of purpose-built Udon Behaviours and tools to make your own",
+  "infoLink":{
+      "url":"http://github.com/orels1/UdonToolkit",
+      "text":"View on GitHub"
+  },
+  "bannerUrl":"banner.png",
+  "githubRepos":[
+      "orels1/UdonToolkit"
+  ]
+}

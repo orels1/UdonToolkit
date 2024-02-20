@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient gradientUnits="objectBoundingBox" cx="21.019596%" cy="20.549026%" fx="21.019596%" fy="20.549026%" r="97.51015%" gradientTransform="translate(0.21019596,0.20549026),rotate(45.912495),translate(-0.21019596,-0.20549026)" id="gradient_1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#686868" />
+    </radialGradient>
+    <path d="M0 0L512 0L512 512L0 512L0 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="PBR" clip-path="url(#clip_1)">
+    <path d="M0 0L512 0L512 512L0 512L0 0Z" id="PBR" fill="none" fill-rule="evenodd" stroke="none" />
+    <path d="M27 256C27 129.527 129.527 27 256 27C382.473 27 485 129.527 485 256C485 382.473 382.473 485 256 485C129.527 485 27 382.473 27 256Z" id="Oval" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M52 256C52 143.334 143.334 52 256 52C368.666 52 460 143.334 460 256C460 368.666 368.666 460 256 460C143.334 460 52 368.666 52 256Z" id="Oval-Copy" fill="url(#gradient_1)" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

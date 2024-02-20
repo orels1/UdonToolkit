@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="511.99988px" height="512px" viewBox="0 0 511.99988 512" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient gradientUnits="objectBoundingBox" cx="0%" cy="0%" fx="0%" fy="0%" r="415.50232%" gradientTransform="translate(0,0),scale(1,0.6442308),rotate(31.149075),translate(-0,-0)" id="gradient_1">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </radialGradient>
+    <radialGradient gradientUnits="objectBoundingBox" cx="0%" cy="0%" fx="0%" fy="0%" r="305.0665%" gradientTransform="translate(0,0),scale(1,0.43209878),rotate(44.905136),translate(-0,-0)" id="gradient_2">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </radialGradient>
+    <radialGradient gradientUnits="objectBoundingBox" cx="0%" cy="0%" fx="0%" fy="0%" r="228.68375%" gradientTransform="translate(0,0),scale(0.48623815,1),rotate(25.930788),translate(-0,-0)" id="gradient_3">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </radialGradient>
+    <path d="M0 0L512 0L512 512L0 512L0 0Z" id="path_1" />
+    <path d="M27 256C27 129.527 129.527 27 256 27C382.473 27 485 129.527 485 256C485 382.473 382.473 485 256 485C129.527 485 27 382.473 27 256Z" id="path_2" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+    <clipPath id="clip_2">
+      <use xlink:href="#path_2" />
+    </clipPath>
+  </defs>
+  <g id="VFX" clip-path="url(#clip_1)">
+    <path d="M0 0L512 0L512 512L0 512L0 0Z" id="VFX" fill="none" fill-rule="evenodd" stroke="none" />
+    <path d="M221 103L276 103L276 406L221 406L221 103Z" id="Building" fill="#F59E0B" fill-rule="evenodd" stroke="none" />
+    <path d="M266 127L345 127L345 433L266 433L266 127Z" id="Building" fill="#F1C478" fill-rule="evenodd" stroke="none" />
+    <path d="M167 195L243 195L243 406L167 406L167 195Z" id="Building" fill="#FDE68A" fill-rule="evenodd" stroke="none" />
+    <path d="M171 216L171 200L238 200L238 216L171 216ZM171 238L171 222L238 222L238 238L171 238ZM171 260L171 244L238 244L238 260L171 260ZM171 282L171 266L238 266L238 282L171 282ZM171 304L171 288L238 288L238 304L171 304Z" id="Windows" fill="url(#gradient_1)" fill-rule="evenodd" stroke="none" />
+    <path d="M271 168L271 132L284 132L284 168L271 168ZM290 168L290 132L303 132L303 168L290 168ZM309 168L309 132L322 132L322 168L309 168ZM328 168L328 132L341 132L341 168L328 168ZM271 210L271 174L284 174L284 210L271 210ZM290 210L290 174L303 174L303 210L290 210ZM309 210L309 174L322 174L322 210L309 210ZM328 210L328 174L341 174L341 210L328 210ZM271 252L271 216L284 216L284 252L271 252ZM290 252L290 216L303 216L303 252L290 252ZM309 252L309 216L322 216L322 252L309 252ZM328 252L328 216L341 216L341 252L328 252ZM271 294L271 258L284 258L284 294L271 294ZM290 294L290 258L303 258L303 294L290 294ZM309 294L309 258L322 258L322 294L309 294ZM328 294L328 258L341 258L341 294L328 294Z" id="Windows" fill="url(#gradient_2)" fill-rule="evenodd" stroke="none" />
+    <path d="M34.9999 281.706C34.9999 281.706 61.9198 254.124 113 256.102C164.08 258.079 198.92 300.035 256 301.13C313.08 302.225 331.92 255.89 390 256.102C448.08 256.314 471 280.823 471 280.823C471 280.823 463.181 320.775 450.681 352.339C438.181 383.903 421.001 407.079 421.001 407.079L302 468L212 468L113 420.323C113 420.323 82.9999 404.615 63.4999 369.96C43.9999 335.306 34.9999 281.706 34.9999 281.706Z" id="Vector" fill="url(#gradient_3)" fill-rule="evenodd" stroke="none" />
+    <g id="Oval">
+      <g clip-path="url(#clip_2)">
+        <use xlink:href="#path_2" fill="none" stroke="#FDE68A" stroke-width="52" />
+      </g>
+    </g>
+  </g>
+</svg>

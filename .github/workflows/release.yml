@@ -1,0 +1,53 @@
+name: Build Release
+
+on: 
+  workflow_dispatch:
+    inputs:
+      package-name:
+        description: 'Name of the package to release'
+        required: true
+        type: choice
+        options:
+          - sh.orels.udontoolkit
+          - sh.orels.udontoolkit.inspector
+          - sh.orels.udontoolkit.systems.flight
+          - sh.orels.udontoolkit.systems.presentation
+
+jobs:
+  pack-version:
+    uses: ./.github/workflows/pack-package.yml
+    with:
+      package-name: ${{inputs.package-name}}
+      
+  build:
+    needs: pack-version
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: get version
+        id: version
+        uses: notiz-dev/github-action-json-property@v0.2.0
+        with: 
+            path: "Packages/${{inputs.package-name}}/package.json"
+            prop_path: "version"
+            
+      - name: Make Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/heads/main')
+        with:
+          tag_name: "${{inputs.package-name}}@v${{ steps.version.outputs.prop }}"
+          generate_release_notes: true
+          draft: true
+
+      - name: Make Pre-Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/heads/dev')
+        with:
+          tag_name: "${{inputs.package-name}}@v${{ steps.version.outputs.prop }}"
+          draft: true
+          prerelease: true
+          generate_release_notes: true
