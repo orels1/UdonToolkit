@@ -11,7 +11,7 @@
   },
   "vpmDependencies":
   {
-    "sh.orels.udontoolkit": "^1.1.0"
+    "sh.orels.udontoolkit": "^1.2.0"
   },
   "documentationUrl": "https://ut.orels.sh",
   "hideInEditor": false,

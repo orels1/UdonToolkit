@@ -1,6 +1,6 @@
 {
   "name": "sh.orels.udontoolkit.inspector",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A collection of C# Attributes to make better custom inspectors",
   "displayName": "Udon Toolkit Inspector",
   "unity": "2019.4",
