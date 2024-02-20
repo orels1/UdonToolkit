@@ -1,6 +1,6 @@
 {
   "name": "sh.orels.udontoolkit",
-  "version": "1.2.0",
+  "version": "2.0.0-dev.1",
   "description": "A set of purpose-built Udon Behaviours",
   "displayName": "Udon Toolkit",
   "unity": "2019.4",
@@ -10,7 +10,7 @@
     "url": "https://orels.sh"
   },
   "vpmDependencies": {
-    "sh.orels.udontoolkit.inspector": "^1.2.0"
+    "sh.orels.udontoolkit.inspector": "2.0.0-dev.1"
   },
   "documentationUrl": "https://ut.orels.sh",
   "hideInEditor": false,

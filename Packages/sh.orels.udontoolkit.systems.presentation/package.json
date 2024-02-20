@@ -1,6 +1,6 @@
 {
   "name": "sh.orels.udontoolkit.systems.presentation",
-  "version": "1.2.0",
+  "version": "2.0.0-dev.1",
   "description": "Presentation System for VRChat Worlds",
   "displayName": "Udon Toolkit Presentation System",
   "unity": "2019.4",
@@ -11,7 +11,7 @@
   },
   "vpmDependencies":
   {
-    "sh.orels.udontoolkit": "^1.2.0"
+    "sh.orels.udontoolkit": "2.0.0-dev.1"
   },
   "documentationUrl": "https://ut.orels.sh",
   "hideInEditor": false,

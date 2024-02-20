@@ -7,7 +7,7 @@ UdonToolkit Changelog
 
 ---
 
-## 1.3.0
+## 2.0.0
 
 ### Summary
 
@@ -113,7 +113,7 @@ Here's how Toolkit looks in 2019. I am working on further UI updates to make ins
 - Almost every attribute got improved, [check out the docs](https://ut.orels.sh/v/v1.x/attributes/attributes-list)
 - `ListView` now supports any number of fields
 - `Popup` now supports all the animation param types and can also cast things to `int` and `int[]`
-- `TabGroup` attribute for even more complicated UIs :P 
+- `TabGroup` attribute for even more complicated UIs :P
 - `FoldoutGroup` attribute for even more nesting!
 - Update loops are gone for delayed Universal Actions (less perf overhead)
 - Many bugfixes related to player colliders/chairs etc etc
