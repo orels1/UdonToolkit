@@ -76,3 +76,8 @@ Assets/UdonSharp
 Assets/UdonSharp.meta
 
 AudioAssets
+
+Assets/Scenes
+Assets/Scenes.meta
+
+UserSettings/**/*
