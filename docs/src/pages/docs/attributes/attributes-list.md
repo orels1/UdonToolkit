@@ -333,6 +333,22 @@ public UdonSharpBehaviour[] foldoutTargets;
 public string[] foldoutEvents;
 ```
 
+### UTSpace
+
+`[UTSpace(float space)]`
+
+Similar to Unity's native `[Space(float space)]` but with explicit support for special layout elements like Foldouts
+
+```csharp
+[Space(10)] // Regular Unity Space, will create space _inside_ the foldout
+[FoldoutGroup("Foldout")]
+public float floatInFoldout;
+
+[UTSpace(10)] // UdonToolkit-compatible Space, will create space _before_ the foldout
+[FoldoutGroup("Foldout")]
+public float floatInFoldout;
+```
+
 ### OnValueChanged
 
 `[OnValueChanged(string methodName)]`
