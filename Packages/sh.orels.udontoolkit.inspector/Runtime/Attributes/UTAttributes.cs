@@ -6,22 +6,28 @@ using UdonSharp;
 using UnityEditor;
 using UnityEngine;
 
-namespace UdonToolkit{
+namespace UdonToolkit
+{
   /// <summary>
   /// These attributes directly affect field drawing using the provided overrides
   /// </summary>
   [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
-  public class UTPropertyAttribute: Attribute {
-    public virtual void BeforeGUI(SerializedProperty property) {
-    }
-    
-    public virtual void OnGUI(SerializedProperty property) {
-    }
-
-    public virtual void AfterGUI(SerializedProperty property) {
+  public class UTPropertyAttribute : Attribute
+  {
+    public virtual void BeforeGUI(SerializedProperty property)
+    {
     }
 
-    public virtual bool GetVisible(SerializedProperty property) {
+    public virtual void OnGUI(SerializedProperty property)
+    {
+    }
+
+    public virtual void AfterGUI(SerializedProperty property)
+    {
+    }
+
+    public virtual bool GetVisible(SerializedProperty property)
+    {
       return true;
     }
   }
@@ -30,10 +36,12 @@ namespace UdonToolkit{
   /// These attributes are used to pass data to custom logic in the UTEditor
   /// </summary>
   [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
-  public class UTVisualAttribute : Attribute {
+  public class UTVisualAttribute : Attribute
+  {
   }
-  
-  public class SectionHeaderAttribute : UTPropertyAttribute {
+
+  public class SectionHeaderAttribute : UTPropertyAttribute
+  {
     public readonly string text;
     private bool isInList;
     private bool savedHeight;
@@ -42,22 +50,26 @@ namespace UdonToolkit{
     /// Draws a Section Header with the provided text
     /// </summary>
     /// <param name="text"></param>
-    public SectionHeaderAttribute(string text) {
+    public SectionHeaderAttribute(string text)
+    {
       this.text = text;
     }
 
-    public override void BeforeGUI(SerializedProperty property) {
+    public override void BeforeGUI(SerializedProperty property)
+    {
       UTStyles.RenderSectionHeader(text);
     }
   }
 
-  public class ToggleAttribute : UTPropertyAttribute {
+  public class ToggleAttribute : UTPropertyAttribute
+  {
     private readonly string label;
 
     /// <summary>
     /// Converts a boolean field checkbox into a toggle-style button
     /// </summary>
-    public ToggleAttribute() {
+    public ToggleAttribute()
+    {
       label = "";
     }
 
@@ -65,22 +77,26 @@ namespace UdonToolkit{
     /// Converts a boolean field checkbox into a toggle-style button with the provided text
     /// </summary>
     /// <param name="text"></param>
-    public ToggleAttribute(string text) {
+    public ToggleAttribute(string text)
+    {
       label = text;
     }
 
-    public override void OnGUI(SerializedProperty property) {
+    public override void OnGUI(SerializedProperty property)
+    {
       var text = String.IsNullOrWhiteSpace(label) ? property.displayName : label;
-      if (property.type != "bool") {
+      if (property.type != "bool")
+      {
         EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
         return;
       }
-      
+
       property.boolValue = GUILayout.Toggle(property.boolValue, text, "Button");
     }
   }
 
-  public class RangeSliderAttribute : UTPropertyAttribute {
+  public class RangeSliderAttribute : UTPropertyAttribute
+  {
     private readonly float min;
     private readonly float max;
     private readonly bool hideLabel;
@@ -90,29 +106,36 @@ namespace UdonToolkit{
     /// </summary>
     /// <param name="min"></param>
     /// <param name="max"></param>
-    public RangeSliderAttribute(float min, float max) {
+    public RangeSliderAttribute(float min, float max)
+    {
       this.min = min;
       this.max = max;
     }
-    
-    public RangeSliderAttribute(float min, float max, bool hideLabel) {
+
+    public RangeSliderAttribute(float min, float max, bool hideLabel)
+    {
       this.min = min;
       this.max = max;
       this.hideLabel = hideLabel;
     }
 
-    public override void OnGUI(SerializedProperty property) {
-      if (min > max) {
+    public override void OnGUI(SerializedProperty property)
+    {
+      if (min > max)
+      {
         EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
         return;
       }
-      switch (property.type) {
+      switch (property.type)
+      {
         case "float":
-          if (property.floatValue < min) {
+          if (property.floatValue < min)
+          {
             property.floatValue = min;
           }
 
-          if (property.floatValue > max) {
+          if (property.floatValue > max)
+          {
             property.floatValue = max;
           }
           EditorGUILayout.Slider(property, min, max, new GUIContent(hideLabel ? "" : property.displayName));
@@ -120,11 +143,13 @@ namespace UdonToolkit{
         case "int":
           var intMin = Convert.ToInt32(Mathf.Round(min));
           var intMax = Convert.ToInt32(Mathf.Round(max));
-          if (property.intValue < intMin) {
+          if (property.intValue < intMin)
+          {
             property.intValue = intMin;
           }
 
-          if (property.intValue > intMax) {
+          if (property.intValue > intMax)
+          {
             property.intValue = intMax;
           }
           EditorGUILayout.IntSlider(property, intMin, intMax, new GUIContent(hideLabel ? "" : property.displayName));
@@ -139,16 +164,19 @@ namespace UdonToolkit{
   /// <summary>
   /// Calls the provided method whenever the value is changed, <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#onvaluechanged">see wiki for more details</a>
   /// </summary>
-  public class OnValueChangedAttribute : UTVisualAttribute {
+  public class OnValueChangedAttribute : UTVisualAttribute
+  {
     public readonly string methodName;
     private object oldValue;
-    
+
     /// <summary>
     /// Calls the provided method whenever the value is changed, <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#onvaluechanged">see wiki for more details</a>
     /// </summary>
     /// <param name="methodName"></param>
-    public OnValueChangedAttribute(string methodName) {
-      if (methodName == null) {
+    public OnValueChangedAttribute(string methodName)
+    {
+      if (methodName == null)
+      {
         this.methodName = "";
         return;
       }
@@ -159,7 +187,8 @@ namespace UdonToolkit{
   /// <summary>
   /// Hides a field based on the provided field or method
   /// </summary>
-  public class HideIfAttribute : UTPropertyAttribute {
+  public class HideIfAttribute : UTPropertyAttribute
+  {
     public readonly string methodName;
     private bool isVisible;
 
@@ -167,11 +196,13 @@ namespace UdonToolkit{
     /// Hides a field based on the provided field or method
     /// </summary>
     /// <param name="methodName"></param>
-    public HideIfAttribute(string methodName) {
+    public HideIfAttribute(string methodName)
+    {
       this.methodName = methodName;
     }
 
-    public override bool GetVisible(SerializedProperty property) {
+    public override bool GetVisible(SerializedProperty property)
+    {
       isVisible = UTUtils.GetVisibleThroughAttribute(property, methodName, true);
       return isVisible;
     }
@@ -181,7 +212,8 @@ namespace UdonToolkit{
   /// Shows a help box under a field
   /// </summary>
   [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
-  public class HelpBoxAttribute : UTPropertyAttribute {
+  public class HelpBoxAttribute : UTPropertyAttribute
+  {
     public readonly string text;
     public readonly string methodName;
     private bool isVisible = true;
@@ -192,7 +224,8 @@ namespace UdonToolkit{
     /// Shows a help box with the provided text
     /// </summary>
     /// <param name="text"></param>
-    public HelpBoxAttribute(string text) {
+    public HelpBoxAttribute(string text)
+    {
       this.text = text;
       methodName = "";
     }
@@ -202,13 +235,16 @@ namespace UdonToolkit{
     /// </summary>
     /// <param name="text"></param>
     /// <param name="methodName"></param>
-    public HelpBoxAttribute(string text, string methodName) {
+    public HelpBoxAttribute(string text, string methodName)
+    {
       this.text = text;
       this.methodName = methodName;
     }
-    
-    public override void AfterGUI(SerializedProperty property) {
-      if (methodName != "") {
+
+    public override void AfterGUI(SerializedProperty property)
+    {
+      if (methodName != "")
+      {
         isVisible = UTUtils.GetVisibleThroughAttribute(property, methodName, false);
       }
 
@@ -220,7 +256,8 @@ namespace UdonToolkit{
   /// <summary>
   /// Combines fields into a horizontal group
   /// </summary>
-  public class HorizontalAttribute : UTPropertyAttribute {
+  public class HorizontalAttribute : UTPropertyAttribute
+  {
     public readonly string name;
     public readonly bool showHeader;
 
@@ -228,7 +265,8 @@ namespace UdonToolkit{
     /// Combines fields into a horizontal group
     /// </summary>
     /// <param name="name">Name of the group (must be unique)</param>
-    public HorizontalAttribute(string name) {
+    public HorizontalAttribute(string name)
+    {
       this.name = name;
     }
 
@@ -237,7 +275,8 @@ namespace UdonToolkit{
     /// </summary>
     /// <param name="name">Name of the group (must be unique)</param>
     /// <param name="showHeader">Whether to show the header with the name of the group</param>
-    public HorizontalAttribute(string name, bool showHeader) {
+    public HorizontalAttribute(string name, bool showHeader)
+    {
       this.name = name;
       this.showHeader = showHeader;
     }
@@ -246,8 +285,10 @@ namespace UdonToolkit{
   /// <summary>
   /// Hides the label of the field
   /// </summary>
-  public class HideLabelAttribute : UTPropertyAttribute {
-    public override void OnGUI(SerializedProperty property) {
+  public class HideLabelAttribute : UTPropertyAttribute
+  {
+    public override void OnGUI(SerializedProperty property)
+    {
       EditorGUILayout.PropertyField(property, new GUIContent());
     }
   }
@@ -256,7 +297,8 @@ namespace UdonToolkit{
   /// Draws a popup for a field with options to choose from
   /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#popup">See More</a>
   /// </summary>
-  public class PopupAttribute : UTPropertyAttribute {
+  public class PopupAttribute : UTPropertyAttribute
+  {
     public readonly string methodName;
     private int selectedIndex;
     private GUIContent[] options;
@@ -281,7 +323,8 @@ namespace UdonToolkit{
       {"all", ShaderPropType.All}
     };
 
-    public enum PopupSource {
+    public enum PopupSource
+    {
       Method,
       AnimatorTrigger,
       AnimatorBool,
@@ -292,7 +335,8 @@ namespace UdonToolkit{
       Shader
     }
 
-    public enum ShaderPropType {
+    public enum ShaderPropType
+    {
       Float,
       Color,
       Vector,
@@ -303,7 +347,8 @@ namespace UdonToolkit{
     /// Draws a popup with options provided by the specified field or method
     /// </summary>
     /// <param name="methodName"></param>
-    public PopupAttribute(string methodName) {
+    public PopupAttribute(string methodName)
+    {
       sourceType = PopupSource.Method;
       this.methodName = methodName;
     }
@@ -313,35 +358,38 @@ namespace UdonToolkit{
     /// </summary>
     /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
     /// <param name="methodName"></param>
-    public PopupAttribute(string sourceType, string methodName) {
+    public PopupAttribute(string sourceType, string methodName)
+    {
       this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
       this.methodName = methodName;
     }
-    
+
     /// <summary>
     /// An alternative [Popup] signature that avoids enums to compile with U#
     /// </summary>
     /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
     /// <param name="methodName"></param>
     /// <param name="shaderPropType">Can be "float", "color" or "vector"</param>
-    public PopupAttribute(string sourceType, string methodName, string shaderPropType) {
+    public PopupAttribute(string sourceType, string methodName, string shaderPropType)
+    {
       this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
       this.shaderPropType = shaderPropsMap.ContainsKey(shaderPropType) ? shaderPropsMap[shaderPropType] : ShaderPropType.Float;
       this.methodName = methodName;
     }
-    
+
     /// <summary>
     /// An alternative [Popup] signature that avoids enums to compile with U#
     /// </summary>
     /// <param name="sourceType">Can be "method", "animator", "behaviour" or "shader"</param>
     /// <param name="methodName"></param>
     /// <param name="hideLabel"></param>
-    public PopupAttribute(string sourceType, string methodName, bool hideLabel) {
+    public PopupAttribute(string sourceType, string methodName, bool hideLabel)
+    {
       this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
       this.hideLabel = hideLabel;
       this.methodName = methodName;
     }
-    
+
     /// <summary>
     /// An alternative [Popup] signature that avoids enums to compile with U#
     /// </summary>
@@ -349,23 +397,28 @@ namespace UdonToolkit{
     /// <param name="methodName"></param>
     /// <param name="hideLabel"></param>
     /// <param name="shaderPropType">Can be "float", "color" or "vector"</param>
-    public PopupAttribute(string sourceType, string methodName, string shaderPropType, bool hideLabel) {
+    public PopupAttribute(string sourceType, string methodName, string shaderPropType, bool hideLabel)
+    {
       this.sourceType = sourcesMap.ContainsKey(sourceType) ? sourcesMap[sourceType] : PopupSource.Method;
       this.shaderPropType = shaderPropsMap.ContainsKey(shaderPropType) ? shaderPropsMap[shaderPropType] : ShaderPropType.Float;
       this.hideLabel = hideLabel;
       this.methodName = methodName;
     }
 
-    public override void OnGUI(SerializedProperty property) {
+    public override void OnGUI(SerializedProperty property)
+    {
       var source = UTUtils.GetValueThroughAttribute(property, methodName, out var sourceValType);
-      if (property.name == "data" && sourceType == PopupSource.Method && property.type != "string" && property.type != "int") {
+      if (property.name == "data" && sourceType == PopupSource.Method && property.type != "string" && property.type != "int")
+      {
         EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
         return;
       }
 
-      if (property.name != "data") {
+      if (property.name != "data")
+      {
         var fieldType = property.serializedObject.targetObject.GetType().GetField(property.name).FieldType;
-        if (sourceType == PopupSource.Method && fieldType != sourceValType && property.type != "string" && property.type != "int") {
+        if (sourceType == PopupSource.Method && fieldType != sourceValType && property.type != "string" && property.type != "int")
+        {
           EditorGUILayout.PropertyField(property, new GUIContent(property.displayName));
           return;
         }
@@ -373,78 +426,106 @@ namespace UdonToolkit{
 
       var numericPopup = property.type == "int" && sourceValType == typeof(int) ||
                          property.type == "float" && sourceValType == typeof(float);
-      
-      if (sourceType == PopupSource.AnimatorTrigger) {
+
+      if (sourceType == PopupSource.AnimatorTrigger)
+      {
         options = UTUtils.GetAnimatorTriggers(source as Animator).Select(o => new GUIContent(o)).ToArray();
       }
-      else if (sourceType == PopupSource.AnimatorBool) {
+      else if (sourceType == PopupSource.AnimatorBool)
+      {
         options = UTUtils.GetAnimatorBools(source as Animator).Select(o => new GUIContent(o)).ToArray();
       }
-      else if (sourceType == PopupSource.AnimatorFloat) {
+      else if (sourceType == PopupSource.AnimatorFloat)
+      {
         options = UTUtils.GetAnimatorFloats(source as Animator).Select(o => new GUIContent(o)).ToArray();
       }
-      else if (sourceType == PopupSource.AnimatorInt) {
+      else if (sourceType == PopupSource.AnimatorInt)
+      {
         options = UTUtils.GetAnimatorInts(source as Animator).Select(o => new GUIContent(o)).ToArray();
       }
-      else if (sourceType == PopupSource.UdonBehaviour) {
+      else if (sourceType == PopupSource.UdonBehaviour)
+      {
         options = UTUtils.GetUdonEvents(source as UdonSharpBehaviour).Select(o => new GUIContent(o)).ToArray();
       }
-      else if (sourceType == PopupSource.UdonProgramVariable) {
+      else if (sourceType == PopupSource.UdonProgramVariable)
+      {
         options = UTUtils.GetUdonVariables(source as UdonSharpBehaviour).Select(o => new GUIContent(o)).ToArray();
       }
-      else if (sourceType == PopupSource.Shader) {
-        if (shaderPropType == ShaderPropType.All) {
-          options = UTUtils.GetAllShaderProperties(source ).Select(o => new GUIContent(o)).ToArray();
+      else if (sourceType == PopupSource.Shader)
+      {
+        if (shaderPropType == ShaderPropType.All)
+        {
+          options = UTUtils.GetAllShaderProperties(source).Select(o => new GUIContent(o)).ToArray();
         }
-        else {
-          options = UTUtils.GetShaderPropertiesByType(source , shaderPropType).Select(o => new GUIContent(o)).ToArray();
+        else
+        {
+          options = UTUtils.GetShaderPropertiesByType(source, shaderPropType).Select(o => new GUIContent(o)).ToArray();
         }
       }
-      else {
-        if (sourceValType == typeof(int)) {
-          options = ((int[]) source).Select(i => new GUIContent(i.ToString())).ToArray();
-        } else if (sourceValType == typeof(float)) {
-          options = ((float[]) source).Select(i => new GUIContent(i.ToString())).ToArray();
+      else
+      {
+        if (sourceValType == typeof(int))
+        {
+          options = ((int[])source).Select(i => new GUIContent(i.ToString())).ToArray();
         }
-        else {
-          options = ((string[]) source).Select(o => new GUIContent(o)).ToArray();
+        else if (sourceValType == typeof(float))
+        {
+          options = ((float[])source).Select(i => new GUIContent(i.ToString())).ToArray();
+        }
+        else
+        {
+          options = ((string[])source).Select(o => new GUIContent(o)).ToArray();
         }
       }
 
       // we want to still support int[] -> int[] and float[] -> float[] mapping
-      if (property.type == "int" && !numericPopup) {
+      if (property.type == "int" && !numericPopup)
+      {
         selectedIndex = property.intValue;
-      } else if (numericPopup) {
-        if (property.type == "int") {
-          selectedIndex = options.ToList().FindIndex(i => i.text == property.intValue.ToString()); 
+      }
+      else if (numericPopup)
+      {
+        if (property.type == "int")
+        {
+          selectedIndex = options.ToList().FindIndex(i => i.text == property.intValue.ToString());
         }
-        else {
-          selectedIndex = options.ToList().FindIndex(i => i.text == property.floatValue.ToString()); 
+        else
+        {
+          selectedIndex = options.ToList().FindIndex(i => i.text == property.floatValue.ToString());
         }
-        if (selectedIndex >= options.Length || selectedIndex < 0) {
+        if (selectedIndex >= options.Length || selectedIndex < 0)
+        {
           selectedIndex = 0;
         }
       }
-      else {
+      else
+      {
         selectedIndex = options.ToList().FindIndex(i => i.text == property.stringValue);
-        if (selectedIndex >= options.Length || selectedIndex < 0) {
+        if (selectedIndex >= options.Length || selectedIndex < 0)
+        {
           selectedIndex = 0;
         }
       }
-      
+
       var finalLabel = hideLabel || property.name == "data" ? new GUIContent() : new GUIContent(property.displayName);
       selectedIndex = EditorGUILayout.Popup(finalLabel, selectedIndex, options);
-      if (property.type == "int" && !numericPopup) {
+      if (property.type == "int" && !numericPopup)
+      {
         property.intValue = selectedIndex;
-      } else if (numericPopup) {
-        if (property.type == "int") {
-          property.intValue = Convert.ToInt32(options[selectedIndex].text);  
+      }
+      else if (numericPopup)
+      {
+        if (property.type == "int")
+        {
+          property.intValue = Convert.ToInt32(options[selectedIndex].text);
         }
-        else {
-          property.floatValue = Convert.ToSingle(options[selectedIndex].text); 
+        else
+        {
+          property.floatValue = Convert.ToSingle(options[selectedIndex].text);
         }
       }
-      else {
+      else
+      {
         property.stringValue = options[selectedIndex].text;
       }
     }
@@ -454,7 +535,8 @@ namespace UdonToolkit{
   /// Draws combined list of two arrays. Helps maintain same length between the two and associate values of one array with another.
   /// <a href="https://ut.orels.sh/attributes/attributes-list#listview">See More</a>
   /// </summary>
-  public class ListViewAttribute : UTVisualAttribute {
+  public class ListViewAttribute : UTVisualAttribute
+  {
     public readonly string name;
     public readonly string addMethodName;
     public string addButtonText = "Add Element";
@@ -464,7 +546,8 @@ namespace UdonToolkit{
     /// <a href="https://github.com/orels1/UdonToolkit/wiki/Attributes#listview">See More</a>
     /// </summary>
     /// <param name="name">Name of the ListView (must be unique)</param>
-    public ListViewAttribute(string name) {
+    public ListViewAttribute(string name)
+    {
       this.name = name;
     }
 
@@ -474,7 +557,8 @@ namespace UdonToolkit{
     /// </summary>
     /// <param name="name">Name of the ListView (must be unique)</param>
     /// <param name="addMethodName">Method to call when user tries to add a new value</param>
-    public ListViewAttribute(string name, string addMethodName) {
+    public ListViewAttribute(string name, string addMethodName)
+    {
       this.name = name;
       this.addMethodName = addMethodName;
     }
@@ -486,7 +570,8 @@ namespace UdonToolkit{
     /// <param name="name">Name of the ListView (must be unique)</param>
     /// <param name="addMethodName">Method to call when user tries to add a new value</param>
     /// <param name="addButtonText">Text to display on the Add button</param>
-    public ListViewAttribute(string name, string addMethodName, string addButtonText) {
+    public ListViewAttribute(string name, string addMethodName, string addButtonText)
+    {
       this.name = name;
       this.addMethodName = addMethodName;
       this.addButtonText = addButtonText;
@@ -497,7 +582,8 @@ namespace UdonToolkit{
   /// Specifies a custom column title for a list view.
   /// Has no effect outside of a listview
   /// </summary>
-  public class LVHeaderAttribute : UTVisualAttribute {
+  public class LVHeaderAttribute : UTVisualAttribute
+  {
     public readonly string title;
 
     /// <summary>
@@ -505,28 +591,32 @@ namespace UdonToolkit{
     /// Has no effect outside of a listview
     /// </summary>
     /// <param name="title">The title to use</param>
-    public LVHeaderAttribute(string title) {
+    public LVHeaderAttribute(string title)
+    {
       this.title = title;
     }
   }
-  
+
   /// <summary>
   /// Makes the fields read only in the inspector
   /// </summary>
   [AttributeUsage(AttributeTargets.Field)]
-  public class DisabledAttribute : UTPropertyAttribute {
+  public class DisabledAttribute : UTPropertyAttribute
+  {
     public readonly string methodName;
     /// <summary>
     /// Makes the fields read only in the inspector
     /// </summary>
-    public DisabledAttribute() {
+    public DisabledAttribute()
+    {
     }
 
     /// <summary>
     /// Makes the fields read only in the inspector if the provided method or value is true
     /// </summary>
     /// <param name="methodName"></param>
-    public DisabledAttribute(string methodName) {
+    public DisabledAttribute(string methodName)
+    {
       this.methodName = methodName;
     }
   }
@@ -535,128 +625,172 @@ namespace UdonToolkit{
   /// Forces the label to display in places where is otherwise hidden
   /// </summary>
   [AttributeUsage(AttributeTargets.Field)]
-  public class ShowLabelAttribute : Attribute {
+  public class ShowLabelAttribute : Attribute
+  {
     public readonly string label;
     /// <summary>
     /// Forces the label to display in places where is otherwise hidden
     /// </summary>
-    public ShowLabelAttribute() {
+    public ShowLabelAttribute()
+    {
     }
 
     /// <summary>
     /// Forces the label to display in places where is otherwise hidden
     /// </summary>
     /// <param name="label">Custom label text</param>
-    public ShowLabelAttribute(string label) {
+    public ShowLabelAttribute(string label)
+    {
       this.label = label;
     }
   }
 
-  public class FoldoutGroupAttribute : UTVisualAttribute {
+  public class FoldoutGroupAttribute : UTVisualAttribute
+  {
     public readonly string name;
 
-    public FoldoutGroupAttribute(string name) {
+    public FoldoutGroupAttribute(string name)
+    {
       this.name = name;
     }
   }
-  
-  public class TabGroupAttribute : UTVisualAttribute {
+
+  public class TabGroupAttribute : UTVisualAttribute
+  {
     public readonly string name;
     public readonly string variableName;
 
-    public TabGroupAttribute(string name) {
+    public TabGroupAttribute(string name)
+    {
       this.name = name;
     }
-    
-    public TabGroupAttribute(string name, string variableName) {
+
+    public TabGroupAttribute(string name, string variableName)
+    {
       this.name = name;
       this.variableName = variableName;
     }
   }
-  
+
   /// <summary>
   /// Legacy attribute you do not need to use since v1.0
   /// </summary>
   [AttributeUsage(AttributeTargets.Field)]
-  public class UTEditorAttribute : Attribute {}
-  
+  public class UTEditorAttribute : Attribute { }
+
+  /// <summary>
+  /// Adds a space before the field. This one is recommended when using UT Visual Attributes like [FoldoutGroup]
+  /// </summary>
+  [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
+  public class UTSpaceAttribute : Attribute
+  {
+    public readonly float space;
+
+    /// <summary>
+    /// Adds a space before the field. This one is recommended when using UT Visual Attributes like [FoldoutGroup]
+    /// </summary>
+    public UTSpaceAttribute()
+    {
+      space = 6f;
+    }
+
+    /// <summary>
+    /// Adds a space before the field. This one is recommended when using UT Visual Attributes like [FoldoutGroup]
+    /// </summary>
+    /// <param name="space">Amount of space to add</param>
+    public UTSpaceAttribute(float space)
+    {
+      this.space = space;
+    }
+  }
+
 
   /// <summary>
   /// Displays a help message above all the fields
   /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
-  public class HelpMessageAttribute : Attribute {
+  public class HelpMessageAttribute : Attribute
+  {
     public readonly string helpMessage;
 
     /// <summary>
     /// Displays a help message above all the fields
     /// </summary>
     /// <param name="message">Text to display</param>
-    public HelpMessageAttribute(string message) {
+    public HelpMessageAttribute(string message)
+    {
       helpMessage = message;
     }
   }
-  
+
   /// <summary>
   /// Draws a custom header above all the fields
   /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
-  public class CustomNameAttribute : Attribute {
+  public class CustomNameAttribute : Attribute
+  {
     public readonly string name;
 
     /// <summary>
     /// Draws a custom header above all the fields
     /// </summary>
     /// <param name="value">Text to display</param>
-    public CustomNameAttribute(string value) {
+    public CustomNameAttribute(string value)
+    {
       name = value;
     }
   }
-  
+
   /// <summary>
   /// Calls the provided method before all the editor code. Runs every editor update
   /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
-  public class OnBeforeEditorAttribute : Attribute {
+  public class OnBeforeEditorAttribute : Attribute
+  {
     public readonly string methodName;
 
     /// <summary>
     /// Calls the provided method before all the editor code. Runs every editor update
     /// </summary>
     /// <param name="methodName"></param>
-    public OnBeforeEditorAttribute(string methodName) {
+    public OnBeforeEditorAttribute(string methodName)
+    {
       this.methodName = methodName;
     }
   }
-  
+
   /// <summary>
   /// Calls the provided method after all the editor code. Runs every editor update
   /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
-  public class OnAfterEditorAttribute : Attribute {
+  public class OnAfterEditorAttribute : Attribute
+  {
     public readonly string methodName;
-    
+
     /// <summary>
     /// Calls the provided method after all the editor code. Runs every editor update
     /// </summary>
     /// <param name="methodName"></param>
-    public OnAfterEditorAttribute(string methodName) {
+    public OnAfterEditorAttribute(string methodName)
+    {
       this.methodName = methodName;
     }
   }
-  
+
   /// <summary>
   /// Calls the provided method if any values were changed in the inspector
   /// </summary>
   [AttributeUsage(AttributeTargets.Class)]
-  public class OnValuesChangedAttribute : Attribute {
+  public class OnValuesChangedAttribute : Attribute
+  {
     public readonly string methodName;
-    
+
     /// <summary>
     /// Calls the provided method if any values were changed in the inspector
     /// </summary>
     /// <param name="methodName"></param>
-    public OnValuesChangedAttribute(string methodName) {
+    public OnValuesChangedAttribute(string methodName)
+    {
       this.methodName = methodName;
     }
   }
@@ -665,7 +799,8 @@ namespace UdonToolkit{
   /// Draws a button below all the fields that calls the method in play mode
   /// </summary>
   [AttributeUsage(AttributeTargets.Method)]
-  public class ButtonAttribute : Attribute {
+  public class ButtonAttribute : Attribute
+  {
     public readonly string text;
     public readonly bool activeInEditMode;
 
@@ -673,7 +808,8 @@ namespace UdonToolkit{
     /// Draws a button below all the fields that calls the method in play mode
     /// </summary>
     /// <param name="text">Text to display</param>
-    public ButtonAttribute(string text) {
+    public ButtonAttribute(string text)
+    {
       this.text = text;
     }
 
@@ -682,7 +818,8 @@ namespace UdonToolkit{
     /// </summary>
     /// <param name="text">Text to display</param>
     /// <param name="activeInEditMode">Specifies if button should be active in edit mode</param>
-    public ButtonAttribute(string text, bool activeInEditMode) {
+    public ButtonAttribute(string text, bool activeInEditMode)
+    {
       this.text = text;
       this.activeInEditMode = activeInEditMode;
     }
@@ -802,6 +939,16 @@ namespace UdonToolkit {
     }
 
     public TabGroupAttribute(object a, object b) {
+    }
+  }
+
+  [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
+  public class UTSpaceAttribute : Attribute
+  {
+    public UTSpaceAttribute() {
+    }
+
+    public UTSpaceAttribute(object a) {
     }
   }
 

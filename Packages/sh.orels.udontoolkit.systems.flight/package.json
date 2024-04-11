@@ -1,6 +1,6 @@
 {
   "name": "sh.orels.udontoolkit.systems.flight",
-  "version": "2.0.0-dev.1",
+  "version": "2.0.0-dev.2",
   "description": "VRChat World Flight System",
   "displayName": "Udon Toolkit Flight System",
   "unity": "2019.4",
@@ -11,7 +11,7 @@
   },
   "vpmDependencies":
   {
-    "sh.orels.udontoolkit": "2.0.0-dev.1"
+    "sh.orels.udontoolkit": "2.0.0-dev.2"
   },
   "documentationUrl": "https://ut.orels.sh",
   "hideInEditor": false,
