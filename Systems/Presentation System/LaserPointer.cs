@@ -15,6 +15,9 @@ namespace UdonToolkit {
     public bool active;
     public LayerMask hitLayers;
 
+    public bool autoRespawn = true;
+    [Min(1f)]
+    public float respawnDelay = 10f;
 
     private VRC_Pickup pickup;
     private Vector3 startPosition;
@@ -32,9 +35,9 @@ namespace UdonToolkit {
 
     public override void OnDrop() {
       SendCustomNetworkEvent(NetworkEventTarget.All, "LaserDisable");
-      if (Networking.IsOwner(gameObject)) {
+      if (Networking.IsOwner(gameObject) && autoRespawn) {
         waitingToRespawn = true;
-        respawnTime = Time.timeSinceLevelLoad + 10;
+        respawnTime = Time.timeSinceLevelLoad + respawnDelay;
       }
     }
 
@@ -61,7 +64,7 @@ namespace UdonToolkit {
     }
 
     private void LateUpdate() {
-      if (waitingToRespawn && Time.timeSinceLevelLoad >= respawnTime) {
+      if (autoRespawn && waitingToRespawn && Time.timeSinceLevelLoad >= respawnTime) {
         if (Networking.IsOwner(gameObject)) {
           transform.SetPositionAndRotation(startPosition, startRotation);
         }
