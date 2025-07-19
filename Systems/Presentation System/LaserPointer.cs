@@ -86,11 +86,5 @@ namespace UdonToolkit {
         laserDot.SetActive(false);
       }
     }
-
-    private void UpdateRespawnTime()
-    {
-      waitingToRespawn = true;
-      respawnTime = Time.timeSinceLevelLoad + respawnDelay;
-    }
   }
 }
