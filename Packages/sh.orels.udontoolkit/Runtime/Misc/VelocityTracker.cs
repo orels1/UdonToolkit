@@ -59,11 +59,11 @@ namespace UdonToolkit {
       var tRot = trackTransform ? sourceTransform.rotation : tData.rotation;
       
       if (trackPosition) {
-        rb.velocity *= 0.65f;
+        rb.SetLinearVelocity(rb.GetLinearVelocity() * 0.65f);
         var posDelta = tPos - rb.worldCenterOfMass;
         var velocity = posDelta / Time.fixedDeltaTime;
         if (!float.IsNaN(velocity.x)) {
-          rb.velocity += velocity;
+          rb.SetLinearVelocity(rb.GetLinearVelocity() + velocity);
         }
       }
 
@@ -80,7 +80,7 @@ namespace UdonToolkit {
         if (Mathf.Abs(angleInDegrees) > Mathf.Epsilon) {
           var angularVelocity = rotationAxis * (angleInDegrees * Mathf.Deg2Rad) / Time.fixedDeltaTime;
           if (!float.IsNaN(angularVelocity.x)) {
-            rb.angularVelocity += angularVelocity * rb.angularDrag;
+            rb.angularVelocity += angularVelocity * rb.GetAngularDamping();
           }
         }
       }
