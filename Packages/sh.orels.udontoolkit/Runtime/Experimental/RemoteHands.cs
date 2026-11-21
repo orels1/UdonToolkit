@@ -73,12 +73,12 @@ namespace UdonToolkit
         private void TrackHands(VRCPlayerApi.TrackingData source, Rigidbody target)
         {
             var tPos = source.position;
-            target.velocity *= 0.65f;
+            target.SetLinearVelocity(target.GetLinearVelocity() * 0.65f);
             var posDelta = tPos - target.worldCenterOfMass;
             var velocity = posDelta / Time.fixedDeltaTime;
             if (!float.IsNaN(velocity.x))
             {
-                target.velocity += velocity;
+                target.SetLinearVelocity(target.GetLinearVelocity() + velocity);
             }
         }
 
